@@ -6,15 +6,19 @@ import ("fmt"
         "encoding/xml")
 
 type SitemapIndex struct {
-  // an array of the Location type and tag that it's under when you go to Uunmarshal it (capitalization is important here):
+  // an array of the Location type and tag that it's under when you go to unmarshal it (capitalization is important here or values won't be exported):
   Locations []Location `xml:"sitemap"`
 }
 
+// Slices vs Arrays
+//  [5 5]int is an array
+//  []int is a slice
+
 type Location struct {
-  Loc string `xml:"sitemap"`
+  Loc string `xml:"loc"`
 }
 
-func (L Location) String() string {
+func (l Location) String() string {
   return fmt.Sprintf(l.Loc)
 }
 
