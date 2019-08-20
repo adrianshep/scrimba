@@ -11,6 +11,12 @@ type NewsAggPage struct {
   News string
 }
 
+func newsAggHandler(w http.ResponseWriter, r *http.Request) {
+  p := NewsAggPage{Title: "Amazing News Aggregator", News: "some news"}
+  t, _ := template.ParseFiles("basictemplating.html")
+  t.execute(w,p)
+}
+
 func indexHandler(w http.ResponseWriter, r *http.Request) {
   fmt.Fprintf(w, "<h1>Whoa, Go is neat!</h1>")
 }
