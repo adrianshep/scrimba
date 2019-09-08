@@ -9,7 +9,7 @@ import (
     "sync"
 )
 
-var wg sync.WaitGroup()
+var wg sync.WaitGroup
 
 type NewsMap struct {
     Keyword string
@@ -37,6 +37,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func newsRoutine(c chan News, Location string) {
+  defer wg.Done()
   var n News
   resp, _ := http.Get(Location)
   bytes, _ := ioutil.ReadAll(resp.Body)
@@ -56,8 +57,12 @@ func newsAggHandler(w http.ResponseWriter, r *http.Request) {
     resp.Body.Close()
     queue := make(chan News, 30)
     for _, Location := range s.Locations {
+        wg.Add(1)
         go newsRoutine(queue, Location)
     }
+
+    wg.Wait()
+    close(queue)
 
     for elem := range queue {
       for idx, _ := range elem.Keywords {
