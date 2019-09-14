@@ -86,7 +86,7 @@ console.log(typeof x);
 /******************************
 * Operator precedence
 */
-
+/*
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -119,3 +119,4 @@ x = x + 1;
 x += 1;
 x++;
 console.log(x);
+*/
