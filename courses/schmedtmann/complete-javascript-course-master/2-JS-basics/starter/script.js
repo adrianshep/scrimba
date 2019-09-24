@@ -293,7 +293,7 @@ yearsUntilRetirement(1969, 'Jane');
 // function whatDoYouDo(job, firstName) {};
 
 // Function expression
-
+/*
 var whatDoYouDo = function(job, firstName) {
     switch(job) {
         case 'teacher':
@@ -314,3 +314,40 @@ console.log(whatDoYouDo('retired', 'Mark'));
 // JavaScript expression returns an immediate value; whenever JavaScript expects a value, we have to write a JavaScript exression.
 
 // JavaScript statements (if/else, while loops, function declarations) do not produce immediate values.
+*/
+
+/******************************
+* Arrays
+*/
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+// names[5] = 'Mary';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+// Array methods
+john.push('blue');
+john.unshift('Mr.');
+console.log(john);
+
+john.pop();
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(1990));
+console.log(john.indexOf(23));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
