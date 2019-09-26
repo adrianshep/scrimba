@@ -1,13 +1,20 @@
 // 124, 48, 268
-
+var tip;
 var tips = [];
 var billsWithTips = [];
 
 function tipCalculator(bill) {
-    var billTip = bill * 0.2;
+    if (bill < 50) {
+        tip = 0.20
+    } else if (bill >= 50 && bill < 200) {
+        tip = 0.15
+    } else {
+        tip = 0.10
+    }
+    var billTip = bill * tip;
     tips.push(billTip);
-    var billTipAndBill = bill * 1.2;
-    billsWithTips.push(billTipAndBill);
+    var billWithTip = bill + billTip;
+    billsWithTips.push(billWithTip);
     console.log(tips, billsWithTips);
 }
 
