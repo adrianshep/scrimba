@@ -337,12 +337,17 @@ console.log(names);
 var john = ['John', 'Smith', 1990, 'designer', false];
 
 // Array methods
+
+// push adds one or more elements to end of array and returns its new length:
 john.push('blue');
+// unshift adds one or more elements to beginning of array and returns its new length:
 john.unshift('Mr.');
 console.log(john);
 
+// pop removes and returns last element in array:
 john.pop();
 john.pop();
+// shift removes and returns first element in array:
 john.shift();
 console.log(john);
 
