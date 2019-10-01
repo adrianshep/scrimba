@@ -20,6 +20,7 @@ var mark = {
 
 console.log(john.fullName + '\'s BMI is ' + john.calcBMI());
 console.log(mark.fullName + '\'s BMI is ' + mark.calcBMI());
+console.log(john, mark);
 
 var highestBMI = function() {
     if (john.bmi > mark.bmi) {
@@ -32,3 +33,16 @@ var highestBMI = function() {
 };
 
 highestBMI();
+
+/*
+Alternative solution:
+var highestBMI = function() {
+    if (john.calcBMI > mark.calcBMI) {
+        console.log(john.fullName + '\'s BMI of ' + john.bmi + ' is higher than  ' + mark.fullName + '\'s BMI of ' + mark.bmi);
+    } else if (mark.bmi > john.bmi) {
+        console.log(mark.fullName + '\'s BMI of ' + mark.bmi + ' is higher than ' + john.fullName + '\'s BMI of ' + john.bmi);
+    } else {
+        console.log(mark.fullName + '\'s and ' + john.fullName + '\'s BMIs are the same: ' + mark.bmi);
+    }
+};
+*/
