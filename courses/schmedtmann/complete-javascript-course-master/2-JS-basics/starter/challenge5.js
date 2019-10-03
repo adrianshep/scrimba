@@ -3,14 +3,17 @@ var johnTipCalculator = {
     tips: [],
     billTips: [],
     calcTip: function() {
-        
-        /* if (bills[i] < 50) {
-            bills[i] * 0.20;
-        } else if (bills[i] >= 50 && bills[i] < 200) {
-            bills[i] * 0.15;
-        } else {
-            bills[i] * 0.10;
-        }
-        */
+        for (var i = 0; i < bills.length - 1; i++) {
+            if (bills[i] < 50) {
+                tips.push(bills[i] * 0.20);
+                billTips.push(bills[i] + tips[i]);
+            } else if (bills[i] >= 50 && bills[i] < 200) {
+                tips.push(bills[i] * 0.15);
+                billTips.push(bills[i] + tips[i]);
+            } else {
+                tips.push(bills[i] * 0.10);
+                billTips.push(bills[i] + tips[i]);
+            }
+        };
     }
 };
