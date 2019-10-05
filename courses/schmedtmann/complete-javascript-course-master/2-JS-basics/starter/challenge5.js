@@ -1,3 +1,23 @@
+var markTipCalculator = {
+    bills: [77, 375, 110, 45],
+    tips: [],
+    billTips: [],
+    calcTips: function() {
+        for (var i = 0; i < this.bills.length; i++) {
+            if (this.bills[i] < 100) {
+                this.tips.push(this.bills[i] * 0.20);
+                this.billTips.push(this.bills[i] + this.tips[i]);
+            } else if (this.bills[i] >= 100 && this.bills[i] < 300) {
+                this.tips.push(this.bills[i] * 0.10);
+                this.billTips.push(this.bills[i] + this.tips[i]);
+            } else {
+                this.tips.push(this.bills[i] * 0.25);
+                this.billTips.push(this.bills[i] + this.tips[i]);
+            }
+        };
+    }
+};
+
 var johnTipCalculator = {
     bills: [124, 48, 268, 180, 42],
     tips: [],
