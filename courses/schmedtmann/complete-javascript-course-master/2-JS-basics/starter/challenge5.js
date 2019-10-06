@@ -39,15 +39,12 @@ var markTipCalculator = {
 };
 
 function calcAveTip(tips) {
+    var totalTips = 0;
     for (var i = 0; i < tips.length; i++) {
-        var totalTips = tips[i] + totalTips;
+        totalTips = tips[i] + totalTips;
     }
     var aveTips = totalTips / tips.length;
     return aveTips;
-}
-
-function highestTippingFamily(aveTips) {
-    
 }
 
 johnTipCalculator.calcTips();
@@ -55,3 +52,14 @@ console.log(johnTipCalculator.tips, johnTipCalculator.billTips);
 
 markTipCalculator.calcTips();
 console.log(markTipCalculator.tips, markTipCalculator.billTips);
+
+var johnAveTip = calcAveTip(johnTipCalculator.tips);
+var markAveTip = calcAveTip(markTipCalculator.tips);
+
+if (johnAveTip > markAveTip) {
+    console.log("John's family's average tip of " + johnAveTip + " is higher than Mark's family's average tip of " + markAveTip + ".");
+} else if (markAveTip > johnAveTip) {
+    console.log("Mark's family's average tip of " + markAveTip + " is higher than John's family's average tip of " + johnAveTip + ".");
+} else {
+    console.log("John's family's average tip of " + johnAveTip + " and Mark's family's average tip of " + markAveTip + " are equal.");
+}
