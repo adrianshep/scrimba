@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, prevRoll;
 
 init();
 
@@ -17,6 +17,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying) {
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
+        console.log('dice: ' + dice);
+        console.log('prevRoll: ' + prevRoll);
 
         // 2. Display the result
         var diceDOM =   document.querySelector('.dice');
@@ -24,14 +26,27 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         diceDOM.src = 'dice-' + dice + '.png';
 
         // 3. Update the round score IF the rolled number is NOT a 1
-        if (dice !== 1) {
-            // add score
+        // 4. CHALLENGE 6 PART 1: Update the player's ENTIRE score to 0 if he rolls two 6's in a row
+
+        if (dice === 6 && prevRoll === 6) {
+            // reduce GLOBAL score to 0
+            scores[activePlayer] = 0;
+
+            // update the UI
+            document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+            // Next player
+            nextPlayer();
+
+        } else if (dice !== 1) {
+            //Add score
             roundScore += dice;
+            prevRoll = dice;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
-            // next player
+            //Next player
             nextPlayer();
-        }
+        } 
     }
 
     
