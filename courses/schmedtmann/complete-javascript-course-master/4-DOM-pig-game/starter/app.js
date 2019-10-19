@@ -113,10 +113,10 @@ function init() {
     document.querySelector('.player-0-panel').classList.add('active');
 }
 
-function setScoreToWin() {
+document.getElementById('form').addEventListener('submit', function() {
     scoreToWin = document.getElementById('setscore').value;
     document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
-}
+})
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
