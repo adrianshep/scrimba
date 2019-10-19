@@ -32,9 +32,10 @@
             <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
             <div class="set-score-to-win">
                 <p class="score-to-win"></p>
-                <label for="tentacles">Change score required to win game:</label>
-                <input type="number" value="submit" id="setscore" name="setscore" min="1">
-                <input type="submit" value="submit">
+                <form id="form">
+                    <label>Change score required to win game: <input type="number" value="submit" id="setscore" min="1"></label>
+                    <button type="submit">submit</button>
+                </form>
             </div>
             <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
