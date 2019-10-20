@@ -9,12 +9,20 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, prevRoll, scoreToWin;
+var scores, roundScore, activePlayer, gamePlaying, prevRoll, setScoreToWin, scoreToWin;
 
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying) {
+
+        document.getElementById('form').addEventListener('submit', function() {
+            console.log('score to win is: ' + setScoreToWin);
+            setScoreToWin = document.getElementById('setscore').value;
+            document.querySelector('.score-to-win').textContent = "Score of " + setScoreToWin + " wins the game.";
+            // scoreToWin = setScoreToWin ? setScoreToWin : 100;
+        });
+
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
         console.log('dice: ' + dice);
@@ -112,11 +120,6 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
 }
-
-document.getElementById('form').addEventListener('submit', function() {
-    scoreToWin = document.getElementById('setscore').value;
-    document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
-})
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
