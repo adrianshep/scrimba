@@ -16,13 +16,6 @@ init();
 document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying) {
 
-        document.getElementById('form').addEventListener('submit', function() {
-            console.log('score to win is: ' + setScoreToWin);
-            setScoreToWin = document.getElementById('setscore').value;
-            document.querySelector('.score-to-win').textContent = "Score of " + setScoreToWin + " wins the game.";
-            // scoreToWin = setScoreToWin ? setScoreToWin : 100;
-        });
-
         // 1. Random number
         var dice = Math.floor(Math.random() * 6) + 1;
         console.log('dice: ' + dice);
@@ -105,6 +98,16 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
+    scoreToWin = 100;
+
+    document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
+
+    document.getElementById('form').addEventListener('submit', function() {
+        console.log('score to win is: ' + scoreToWin);
+        scoreToWin = document.getElementById('setscore').value;
+        // scoreToWin = setScoreToWin ? setScoreToWin : 100;
+    });
+
 
     document.querySelector('.dice').style.display = 'none';
 
