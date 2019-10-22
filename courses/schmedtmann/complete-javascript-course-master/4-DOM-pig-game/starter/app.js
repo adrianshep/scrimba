@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, prevRoll, setScoreToWin, scoreToWin;
+var scores, roundScore, activePlayer, gamePlaying, prevRoll, setScoreToWin;
 
 init();
 
@@ -98,16 +98,9 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-    scoreToWin = 100;
+    var scoreToWin = 100;
 
     document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
-
-    document.getElementById('form').addEventListener('submit', function() {
-        console.log('score to win is: ' + scoreToWin);
-        scoreToWin = document.getElementById('setscore').value;
-        // scoreToWin = setScoreToWin ? setScoreToWin : 100;
-    });
-
 
     document.querySelector('.dice').style.display = 'none';
 
@@ -123,6 +116,12 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
 }
+
+document.getElementById('form').addEventListener('submit', function() {
+    scoreToWin = document.getElementById('setscore').value;
+    console.log('score to win is: ' + scoreToWin);
+    document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
+});
 
 // document.querySelector('#current-' + activePlayer).textContent = dice;
 // document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
