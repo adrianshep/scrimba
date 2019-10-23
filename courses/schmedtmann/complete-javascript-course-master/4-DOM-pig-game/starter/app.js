@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, prevRoll, setScoreToWin;
+var scores, roundScore, activePlayer, gamePlaying, prevRoll, setScoreToWin, scoreToWin;
 
 init();
 
@@ -98,7 +98,7 @@ function init() {
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
-    var scoreToWin = 100;
+    scoreToWin = 100;
 
     document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
 
@@ -118,6 +118,7 @@ function init() {
 }
 
 document.getElementById('form').addEventListener('submit', function() {
+    event.preventDefault();
     scoreToWin = document.getElementById('setscore').value;
     console.log('score to win is: ' + scoreToWin);
     document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
