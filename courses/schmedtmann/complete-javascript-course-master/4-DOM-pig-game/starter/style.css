@@ -45,7 +45,13 @@ body {
     padding: 100px;
 }
 
+.set-score-to-win {
+    text-align: center;
+}
 
+.button-submit {
+    text-align: center;
+}
 
 /**********************************************
 *** PLAYERS
