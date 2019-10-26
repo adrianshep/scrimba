@@ -17,14 +17,22 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     if (gamePlaying) {
 
         // 1. Random number
-        var dice = Math.floor(Math.random() * 6) + 1;
-        console.log('dice: ' + dice);
+        var dice0 = Math.floor(Math.random() * 6) + 1;
+        console.log('dice: ' + dice0);
+        console.log('prevRoll: ' + prevRoll);
+
+        var dice1 = Math.floor(Math.random() * 6) + 1;
+        console.log('dice: ' + dice1);
         console.log('prevRoll: ' + prevRoll);
 
         // 2. Display the result
-        var diceDOM =   document.querySelector('.dice');
-        diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
+        var diceDOM0 =   document.querySelector('.dice-0');
+        diceDOM0.style.display = 'block';
+        diceDOM0.src = 'dice-' + dice0 + '.png';
+
+        var diceDOM1 =   document.querySelector('.dice-1');
+        diceDOM1.style.display = 'block';
+        diceDOM1.src = 'dice-' + dice1 + '.png';
 
         // 3. Update the round score IF the rolled number is NOT a 1
         // 4. CHALLENGE 6 PART 1: Update the player's ENTIRE score to 0 if he rolls two 6's in a row
@@ -102,7 +110,9 @@ function init() {
 
     document.querySelector('.score-to-win').textContent = "Score of " + scoreToWin + " wins the game.";
 
-    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice-0').style.display = 'none';
+
+    document.querySelector('.dice-1').style.display = 'none';
 
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
