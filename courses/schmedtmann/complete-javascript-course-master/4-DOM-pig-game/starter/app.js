@@ -49,7 +49,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 
         } else if (dice0 !== 1 || dice1 !== 1) {
             //Add score
-            roundScore += dice0 + dice1;
+            roundScore = roundScore + dice0 + dice1;
             prevRoll0 = dice0;
             prevRoll1 = dice1;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
