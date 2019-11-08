@@ -201,7 +201,7 @@ game();
 
 ////////////////////////////////////
 // Lecture: Closures
-
+/*
 function retirement(retirementAge) {
     var a = ' years left until retirement.';
     return function(yearOfBirth) {
@@ -219,6 +219,35 @@ retirementUS(1990);
 retirementIceland(1990);
 
 // retirement(66)(1990);
+*/
+
+function interviewQuestion(job) {
+    return function(question, name) {
+        console.log(question);
+    }
+}
+
+var designerQuestion = interviewQuestion('designer')(name + ', can you please explain what UX design is?');
+
+designerQuestion('designer', 'Mark');
+
+/*
+var designerQuestion = interviewQuestion('designer')(function(name) {
+    question = name + ', can you please explain what UX design is?';
+    return question;
+})();
+var teacherQuestion = interviewQuestion('teacher')(function(name) {
+    question = 'What subject do you teach, ' + name + '?';
+    return question;
+})();
+var unknownQuestion = interviewQuestion()(function(name) {
+    question = 'Hello ' + name + ' , what do you do?';
+    return question;
+})();
+*/
+
+
+
 
 /*
 function interviewQuestion(job) {
