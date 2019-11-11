@@ -25,11 +25,23 @@ c) correct answer (I would use a number for this)
 
 */
 
-function Question(question, answers, correct) {
+var Question = function(question, answers, correct) {
     this.question = question;
     this.answers = answers;
     this.correct = correct;
 }
+
+var asteroid = new Question('If you stand on an asteroid and look out, the next asteroid will, on average, be: ', ['1 - in danger of crashing into the one you are on.', '2 - a faint glimmer of light way, way off in the far, far distance.', '3 - 600,000 miles away, so invisible to your naked eye.'], 3);
+
+var jupiter = new Question('A special kind of rain falls on Jupiter made of: ', ['1 - single cell organisms', '2 - diamonds', '3 - marshmallow hearts, moons, stars and clovers ', 2]);
+
+var neptune = new Question('Neptune has a distinctive vivid blue color given it by atmospheric: ', ['1 - ice', '2 - methane', '3 - blueberry Slurpee mix'], 2);
+
+console.log(asteroid.question);
+console.log(asteroid.answers[0]);
+console.log(asteroid.answers[1]);
+console.log(asteroid.answers[2]);
+console.log(asteroid.correct);
 
 /*
 var john = {
