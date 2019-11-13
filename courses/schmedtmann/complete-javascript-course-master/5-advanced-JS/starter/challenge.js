@@ -31,18 +31,17 @@ var Question = function(question, answers, correct) {
     this.correct = correct;
 }
 
-var asteroid = new Question('Q1 - If you stand on an asteroid and look out, the next asteroid will, on average, be: ', ['1 - about to crash into the one you are on.', '2 - a faint glimmer of light way, way off in the far, far distance.', '3 - 600,000 miles away, so invisible to your naked eye.'], 3);
+var asteroid = new Question('Question 1 - If you stand on an asteroid and look out, the next asteroid will on average be: ', ['1 - about to crash into the one you are on.', '2 - a faint glimmer of light way, way off in the far, far distance.', '3 - 600,000 miles away, so invisible to your naked eye.'], 3);
 
-var jupiter = new Question('Q2 - A special kind of rain falls on Jupiter made of: ', ['1 - single cell organisms', '2 - diamonds', '3 - marshmallow hearts, moons, stars and clovers ', 2]);
+var jupiter = new Question('Question 2 - A special kind of rain falls on Jupiter made of: ', ['1 - single cell organisms', '2 - diamonds', '3 - marshmallow hearts, moons, stars and clovers '], 2);
 
-var neptune = new Question('Q3 - Neptune has a distinctive vivid blue color given it by atmospheric: ', ['1 - ice', '2 - methane', '3 - blueberry Slurpee mix'], 2);
-
-console.log(asteroid.question);
-console.log(asteroid.answers[0]);
-console.log(asteroid.answers[1]);
-console.log(asteroid.answers[2]);
-console.log(asteroid.correct);
+var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue color given it by atmospheric: ', ['1 - ice', '2 - methane', '3 - blueberry Slurpee mix'], 2);
 
 var questions = [asteroid, jupiter, neptune];
 
-console.log(questions[2]);
+var random = Math.floor(Math.random() * questions.length);
+
+console.log(questions[random].question);
+console.log(questions[random].answers[0]);
+console.log(questions[random].answers[1]);
+console.log(questions[random].answers[2]);
