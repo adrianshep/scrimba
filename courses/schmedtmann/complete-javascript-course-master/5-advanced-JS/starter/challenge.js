@@ -39,9 +39,21 @@ var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue co
 
 var questions = [asteroid, jupiter, neptune];
 
-var random = Math.floor(Math.random() * questions.length);
+Question.prototype.questionSelect = function() {
+    var random = Math.floor(Math.random() * questions.length);
+    console.log(questions[random].question);
+    console.log(questions[random].answers[0]);
+    console.log(questions[random].answers[1]);
+    console.log(questions[random].answers[2]);
+};
 
-console.log(questions[random].question);
-console.log(questions[random].answers[0]);
-console.log(questions[random].answers[1]);
-console.log(questions[random].answers[2]);
+asteroid.questionSelect();
+
+/*
+Person.prototype.calculateAge = function() {
+    console.log(2016 - this.yearOfBirth);
+};
+
+john.calculateAge();
+
+*/
