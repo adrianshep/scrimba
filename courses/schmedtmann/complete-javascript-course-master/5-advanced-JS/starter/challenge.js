@@ -45,7 +45,7 @@ var next = function() {
     console.log(questions[random].answers[0]);
     console.log(questions[random].answers[1]);
     console.log(questions[random].answers[2]);
-    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit, enter the word 'exit' ");
+    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
     if (user == 'exit') {
         console.log("Game over, man!");
     } else if (user == questions[random].correct) {
@@ -66,8 +66,10 @@ Question.prototype.questionSelect = (function() {
 })();
 
 Question.prototype.answerPrompt = (function() {
-    var user = prompt("Please enter the number of the correct answer here");
-    if (user == questions[random].correct) {
+    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
+    if (user == 'exit') {
+        console.log("Game over, man!");
+    } else if (user == questions[random].correct) {
         console.log("You are correct!", "user's answer: ", user, "correct answer:", questions[random].correct);
     } else {
         console.log("Sorry, that ain't it!", "user's answer:", user, ", correct answer:", questions[random].correct);
