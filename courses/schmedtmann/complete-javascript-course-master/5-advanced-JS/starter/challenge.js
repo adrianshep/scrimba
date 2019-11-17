@@ -39,6 +39,24 @@ var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue co
 
 var questions = [asteroid, jupiter, neptune];
 
+var next = function() {
+    random = Math.floor(Math.random() * questions.length);
+    console.log(questions[random].question);
+    console.log(questions[random].answers[0]);
+    console.log(questions[random].answers[1]);
+    console.log(questions[random].answers[2]);
+    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit, enter the word 'exit' ");
+    if (user == 'exit') {
+        console.log("Game over, man!");
+    } else if (user == questions[random].correct) {
+        console.log("You are correct!", "user's answer: ", user, "correct answer:", questions[random].correct);
+        next();
+    } else {
+        console.log("Sorry, that ain't it!", "user's answer:", user, ", correct answer:", questions[random].correct);
+        next();
+        }
+}
+
 Question.prototype.questionSelect = (function() {
     random = Math.floor(Math.random() * questions.length);
     console.log(questions[random].question);
@@ -54,6 +72,7 @@ Question.prototype.answerPrompt = (function() {
     } else {
         console.log("Sorry, that ain't it!", "user's answer:", user, ", correct answer:", questions[random].correct);
         }
+    next();
 })();
 
 // asteroid.questionSelect();
