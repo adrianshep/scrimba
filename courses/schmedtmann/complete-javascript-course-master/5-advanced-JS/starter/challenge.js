@@ -29,7 +29,7 @@ var Question = function(question, answers, correct) {
     this.question = question;
     this.answers = answers;
     this.correct = correct;
-}
+};
 
 var asteroid = new Question('Question 1 - If you stand on an asteroid and look out, the next asteroid will on average be: ', ['1 - about to crash into the one you are on.', '2 - a faint glimmer of light way, way off in the far, far distance.', '3 - 600,000 miles away, so invisible to your naked eye.'], 3);
 
@@ -39,32 +39,22 @@ var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue co
 
 var questions = [asteroid, jupiter, neptune];
 
-Question.prototype.questionSelect = function() {
+Question.prototype.questionSelect = (function() {
     random = Math.floor(Math.random() * questions.length);
     console.log(questions[random].question);
     console.log(questions[random].answers[0]);
     console.log(questions[random].answers[1]);
     console.log(questions[random].answers[2]);
-};
+})();
 
-Question.prototype.answerPrompt = function() {
+Question.prototype.answerPrompt = (function() {
     var user = prompt("Please enter the number of the correct answer here");
     if (user == questions[random].correct) {
         console.log("You are correct!", "user's answer: ", user, "correct answer:", questions[random].correct);
     } else {
         console.log("Sorry, that ain't it!", "user's answer: ", user, "correct answer:", questions[random].correct);
         }
-};
+})();
 
-asteroid.questionSelect();
-asteroid.answerPrompt();
-
-
-/*
-Person.prototype.calculateAge = function() {
-    console.log(2016 - this.yearOfBirth);
-};
-
-john.calculateAge();
-
-*/
+// asteroid.questionSelect();
+// asteroid.answerPrompt();
