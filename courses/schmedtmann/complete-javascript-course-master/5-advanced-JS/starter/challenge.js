@@ -39,6 +39,8 @@ var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue co
 
 var questions = [asteroid, jupiter, neptune];
 
+var score = 0;
+
 var next = function() {
     random = Math.floor(Math.random() * questions.length);
     console.log(questions[random].question);
@@ -48,11 +50,15 @@ var next = function() {
     var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
     if (user == 'exit') {
         console.log("Game over, man!");
+        console.log("Your total score: " + score);
     } else if (user == questions[random].correct) {
+        score = score + 1;
         console.log("You are correct!", "user's answer: ", user, "correct answer:", questions[random].correct);
+        console.log("Your total score: " + score);
         next();
     } else {
         console.log("Sorry, that ain't it!", "user's answer:", user, ", correct answer:", questions[random].correct);
+        console.log("Your total score: " + score);
         next();
         }
 }
@@ -69,10 +75,14 @@ Question.prototype.answerPrompt = (function() {
     var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
     if (user == 'exit') {
         console.log("Game over, man!");
+        console.log("Your total score: " + score);
     } else if (user == questions[random].correct) {
+        score = score + 1;
         console.log("You are correct!", "user's answer: ", user, "correct answer:", questions[random].correct);
+        console.log("Your total score: " + score);
     } else {
         console.log("Sorry, that ain't it!", "user's answer:", user, ", correct answer:", questions[random].correct);
+        console.log("Your total score: " + score);
         }
     next();
 })();
