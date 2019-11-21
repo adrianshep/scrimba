@@ -39,6 +39,8 @@ var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue co
 
 var questions = [asteroid, jupiter, neptune];
 
+var user;
+
 var score = 0;
 
 var next = function() {
@@ -47,7 +49,7 @@ var next = function() {
     console.log(questions[random].answers[0]);
     console.log(questions[random].answers[1]);
     console.log(questions[random].answers[2]);
-    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
+    user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
     if (user == 'exit') {
         console.log("Game over, man!");
         console.log("Your total score: " + score);
@@ -69,10 +71,11 @@ Question.prototype.questionSelect = (function() {
     console.log(questions[random].answers[0]);
     console.log(questions[random].answers[1]);
     console.log(questions[random].answers[2]);
-    var user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
 })();
 
-Question.prototype.answerPrompt = (function() { if (user == 'exit') {
+Question.prototype.answerCheck = (function() { 
+    user = prompt("Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word 'exit': ");
+    if (user == 'exit') {
         console.log("Game over, man!");
         console.log("Your total score: " + score);
     } else if (user == questions[random].correct) {
