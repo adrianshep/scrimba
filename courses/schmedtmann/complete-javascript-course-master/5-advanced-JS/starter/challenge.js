@@ -105,7 +105,7 @@ Question.prototype.answerCheck = (function() {
 */
 
 // Jonas's solution Part 1
-
+/*
 (function() {
     function Question(question, answers, correct) {
         this.question = question;
@@ -146,4 +146,58 @@ Question.prototype.answerCheck = (function() {
     
     questions[n].checkAnswer(answer);
 })();
+*/
 
+// Jonas's solution Part 2 - Expert Level
+
+(function() {
+    function Question(question, answers, correct) {
+        this.question = question;
+        this.answers = answers;
+        this.correct = correct;
+    }
+    
+    Question.prototype.displayQuestion = function() {
+        console.log(this.question);
+    
+        for (var i = 0; i < this.answers.length; i++) {
+            console.log(i + ': ' + this.answers[i]);
+    
+        }
+    }
+    
+    Question.prototype.checkAnswer = function(ans) {
+        if (ans === this.correct) {
+            console.log('Correct answer!');
+        } else {
+            console.log('Wrong answer. Try again: ')
+        }
+    }
+    
+    var q1 = new Question('Is JavaScript the coolest programming language in the world?', ['Yes', 'No'], 0);
+    
+    var q2 = new Question('What is the name of this course\'s teacher?', ['John', 'Michael', 'Jonas'], 2);
+    
+    var q3 = new Question('What best describes coding?', ['Boring', 'Hard', 'Fun', 'Tedious'], 2);
+
+    var questions = [q1, q2, q3];
+    
+    function nextQuestion() {
+    
+        var n = Math.floor(Math.random() * questions.length);
+    
+        questions[n].displayQuestion();
+    
+        var answer = prompt('Please select the correct answer.');
+
+        if (answer !== 'exit') {
+
+            questions[n].checkAnswer(parseInt(answer));
+
+            nextQuestion();
+        }
+    }
+
+    nextQuestion();
+
+})();
