@@ -147,7 +147,7 @@ Question.prototype.answerCheck = (function() {
     questions[n].checkAnswer(answer);
 })();
 */
-
+/*
 // Jonas's solution Part 2 - Expert Level
 
 (function() {
@@ -223,3 +223,47 @@ Question.prototype.answerCheck = (function() {
     nextQuestion();
 
 })();
+*/
+
+// My solution revised by Jonas's solution
+
+(function() {
+    function Question(question, answers, correct) {
+        this.question = question;
+        this.answers = answers;
+        this.correct = correct;
+    };
+    
+    Question.prototype.questionSelect = function() {
+        console.log(this.question);
+    
+        for (i = 0; i < this.answers.length; i++) {
+            console.log(this.answers[i]);
+        }
+    }
+    
+    Question.prototype.answerCheck = function(ans) { 
+        if (ans === this.correct) {
+            console.log("You are correct!");
+        } else {
+            console.log("Sorry, that ain't it!");
+        }
+    }
+    
+    var asteroid = new Question('Question 1 - If you stand on an asteroid and look out, the next asteroid will on average be: ', ['1 - about to crash into the one you are on.', '2 - a faint glimmer of light way, way off in the far, far distance.', '3 - 600,000 miles away, so invisible to your naked eye.'], 3);
+    
+    var jupiter = new Question('Question 2 - A special kind of rain falls on Jupiter made of: ', ['1 - single cell organisms', '2 - diamonds', '3 - marshmallow hearts, moons, stars and clovers '], 2);
+    
+    var neptune = new Question('Question 3 - Neptune has a distinctive vivid blue color given it by atmospheric: ', ['1 - ice', '2 - methane', '3 - blueberry Slurpee mix'], 2);
+    
+    var questions = [asteroid, jupiter, neptune];
+    
+    var random = Math.floor(Math.random() * questions.length);
+    
+    questions[random].questionSelect();
+    
+    var answer = parseInt(prompt('Please enter the number of the correct answer here, or, if you wish to quit the game, enter the word \'exit\': '));
+        
+    questions[random].answerCheck(answer);
+})();
+
