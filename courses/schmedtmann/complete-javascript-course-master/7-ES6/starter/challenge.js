@@ -22,9 +22,25 @@ const parks = [];
 
 const streets = [];
 
-class TownElements {
+class TownElement {
     constructor (name, buildYear) {
         this.name = name;
         this.buildYear = buildYear;
+    }
+}
+
+class Park extends TownElement {
+    constructor(name, buildYear, numTrees, parkArea) {
+        super(name, buildYear);
+        this.numTrees = numTrees;
+        this.parkArea = parkArea;
+    }
+}
+
+class Street extends TownElement {
+    constructor(name, buildYear, streetLength, streetSize) {
+        super(name, buildYear);
+        this.streetLength = streetLength;
+        this.streetSize = streetSize;
     }
 }
