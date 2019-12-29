@@ -8,7 +8,7 @@ It's a very small town, so right now there are only 3 parks and 4 streets. All p
 
 At an end-of-year meeting, your boss wants a final report with the following:
 1. Tree density of each park in town (formula: number trees/park area)
-2. Average age of each town's park (formula: sume of all ages/number of parks)
+2. Average age of each town's park (formula: sum of all ages/number of parks)
 3. The name of the park that has more than 1000 trees
 4. Total and average length of the town's streets
 5. Size classification of all streets: tiny/small/normal/big/huge. If the size is unknown, the default is normal.
@@ -21,3 +21,10 @@ HINT: Use some of the ES6 features: classes, subclasses, template strings, defau
 const parks = [];
 
 const streets = [];
+
+class TownElements {
+    constructor (name, buildYear) {
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
