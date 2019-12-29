@@ -45,10 +45,16 @@ class Street extends TownElement {
     }
 }
 
-const briarcliffRd = new Street('BriarcliffRd', 1940, 200, 'normal');
+const geneseehillsPark = new Park('Genesee Hills Park', '1957', 69, 10000);
 
-const radcliffeRd = new Street('RadcliffeRd', 1935, 400, 'big');
+const mosesdewittPark = new Park('Moses DeWitt Park', '1931', 75, 8500);
 
-const salemRd = new Street('SalemRd', 1936, 30, 'tiny');
+const eriecanalPark = new Park('Erie Canal Park', '1960', 42, 4000);
 
-const revereRd = new Street('RevereRd', 1938, 300, 'normal');
+const briarcliffRd = new Street('Briarcliff Road', 1940, 200, 'normal');
+
+const radcliffeRd = new Street('Radcliffe Road', 1935, 400, 'big');
+
+const salemRd = new Street('Salem Road', 1936, 30, 'tiny');
+
+const revereRd = new Street('Revere Road', 1938, 300, 'normal');
