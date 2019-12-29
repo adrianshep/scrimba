@@ -44,3 +44,11 @@ class Street extends TownElement {
         this.streetSize = streetSize;
     }
 }
+
+const briarcliffRd = new Street('BriarcliffRd', 1940, 200, 'normal');
+
+const radcliffeRd = new Street('RadcliffeRd', 1935, 400, 'big');
+
+const salemRd = new Street('SalemRd', 1936, 30, 'tiny');
+
+const revereRd = new Street('RevereRd', 1938, 300, 'normal');
