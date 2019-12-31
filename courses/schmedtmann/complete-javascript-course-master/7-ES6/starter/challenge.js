@@ -35,6 +35,11 @@ class Park extends TownElement {
         this.numTrees = numTrees;
         this.parkArea = parkArea;
     }
+
+    calcTreeDensity() {
+        var treeDensity = this.numTrees/this.parkArea;
+        console.log(`Tree density in ${this.name} is: ${treeDensity}`);
+    }
 }
 
 class Street extends TownElement {
@@ -58,3 +63,5 @@ const radcliffeRd = new Street('Radcliffe Road', 1935, 400, 'big');
 const salemRd = new Street('Salem Road', 1936, 30, 'tiny');
 
 const revereRd = new Street('Revere Road', 1938, 300, 'normal');
+
+geneseehillsPark.calcTreeDensity();
