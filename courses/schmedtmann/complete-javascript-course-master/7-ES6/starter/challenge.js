@@ -18,10 +18,6 @@ All the report data should be printed to the console.
 HINT: Use some of the ES6 features: classes, subclasses, template strings, default parameters, maps, arrow functions, destructuring, etc.
 */
 
-const parks = [geneseehillsPark, mosesdewittPark, eriecanalPark];
-
-const streets = [briarcliffRd, radcliffeRd, salemRd, revereRd, falstaffRd];
-
 class TownElement {
     constructor (name, buildYear) {
         this.name = name;
@@ -88,3 +84,16 @@ geneseehillsPark.calcTreeDensity();
 salemRd.classifyStreetSize();
 
 falstaffRd.classifyStreetSize();
+
+const parks = [geneseehillsPark, mosesdewittPark, eriecanalPark];
+
+const streets = [briarcliffRd, radcliffeRd, salemRd, revereRd, falstaffRd];
+
+// find park with more than 1000 trees
+
+for (const cur of parks) {
+    if (cur.numTrees <= 1000) {
+        continue;
+    }
+    console.log(`${cur.name} has ${cur.numTrees} trees.`);
+}
