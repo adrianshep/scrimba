@@ -63,11 +63,11 @@ class Street extends TownElement {
     }
 }
 
-const geneseehillsPark = new Park('Genesee Hills Park', '1957', 1100, 10000);
+const geneseehillsPark = new Park('Genesee Hills Park', 1957, 1100, 10000);
 
-const mosesdewittPark = new Park('Moses DeWitt Park', '1931', 750, 8500);
+const mosesdewittPark = new Park('Moses DeWitt Park', 1931, 750, 8500);
 
-const eriecanalPark = new Park('Erie Canal Park', '1960', 420, 4000);
+const eriecanalPark = new Park('Erie Canal Park', 1960, 420, 4000);
 
 const briarcliffRd = new Street('Briarcliff Road', 1940, 200);
 
@@ -89,6 +89,14 @@ const parks = [geneseehillsPark, mosesdewittPark, eriecanalPark];
 
 const streets = [briarcliffRd, radcliffeRd, salemRd, revereRd, falstaffRd];
 
+// average age of each park
+let totalAge = 0;
+for (const cur of parks) {
+    const age = new Date().getFullYear() - cur.buildYear;
+    totalAge = age + totalAge;
+}
+console.log(`The average age of a park is ${Math.round(totalAge/parks.length)} years.`);
+
 // find park with more than 1000 trees
 
 for (const cur of parks) {
@@ -97,3 +105,4 @@ for (const cur of parks) {
     }
     console.log(`${cur.name} has ${cur.numTrees} trees.`);
 }
+
