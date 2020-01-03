@@ -77,7 +77,7 @@ const salemRd = new Street('Salem Road', 1936, 30);
 
 const revereRd = new Street('Revere Road', 1938, 300);
 
-const falstaffRd = new Street('Falstaff Road', 1938);
+const falstaffRd = new Street('Falstaff Road', 1938, 100);
 
 geneseehillsPark.calcTreeDensity();
 
@@ -106,3 +106,11 @@ for (const cur of parks) {
     console.log(`${cur.name} has ${cur.numTrees} trees.`);
 }
 
+// Total and average length of the town's streets
+
+let totalLengths = 0;
+for (const cur of streets) {
+    totalLengths = cur.streetLength + totalLengths;
+}
+console.log(`Total length of the town's streets is ${totalLengths} meters.`);
+console.log(`Average length of the town's streets is ${totalLengths/streets.length} meters.`);
