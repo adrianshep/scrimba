@@ -114,3 +114,9 @@ for (const cur of streets) {
 }
 console.log(`Total length of the town's streets is ${totalLengths} meters.`);
 console.log(`Average length of the town's streets is ${totalLengths/streets.length} meters.`);
+
+
+// Size classification of all streets
+for (const cur of streets) {
+    cur.classifyStreetSize(cur.streetLength);
+}
