@@ -17,7 +17,7 @@ All the report data should be printed to the console.
 
 HINT: Use some of the ES6 features: classes, subclasses, template strings, default parameters, maps, arrow functions, destructuring, etc.
 */
-
+/*
 class TownElement {
     constructor (name, buildYear) {
         this.name = name;
@@ -120,3 +120,30 @@ console.log(`Average length of the town's streets is ${totalLengths/streets.leng
 for (const cur of streets) {
     cur.classifyStreetSize(cur.streetLength);
 }
+*/
+
+
+
+// Jonas's solutions:
+
+class Element {
+    constructor(name, buildYear) {
+        this.name = name;
+        this.buildYear = buildYear;
+    }
+}
+
+
+class Park extends Element {
+    constructor(name, buildYear, area, numTrees) {
+        super(name, buildYear);
+        this.area = area; // km2
+        this.numTrees = numTrees;
+    }
+
+    treeDensity() {
+        const density = this.numTrees / this.area;
+        console.log(`${this.name} has a tree density of ${density} trees per sqaure km.`);
+    }
+}
+
