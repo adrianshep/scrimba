@@ -143,7 +143,7 @@ class Park extends Element {
 
     treeDensity() {
         const density = this.numTrees / this.area;
-        console.log(`${this.name} has a tree density of ${density} trees per sqaure km.`);
+        console.log(`${this.name} has a tree density of ${density} trees per square km.`);
     }
 }
 
@@ -155,7 +155,7 @@ class Street extends Element {
         this.size = size;
     }
 
-    classifyStreet {
+    classifyStreet () {
         const classification = new Map();
         classification.set(1, 'tiny');
         classification.set(2, 'small');
@@ -175,3 +175,26 @@ const allStreets = [new Street('Ocean Avenue', 1999, 1.1, 4),
     new Street('Evergreen Street', 2008, 2.7, 2),
     new Street('4th Street', 2015, 0.8),
     new Street('Sunset Boulevard', 1992, 2.5, 5)];
+
+
+function reportParks(p) {
+
+    console.log('----PARKS REPORT----')
+
+    // Density
+    p.forEach(el => el.treeDensity());
+
+    // Average age
+
+
+    // Which park has more than 1000 trees
+}
+
+function reportStreets(s) {
+
+
+
+}
+
+reportParks(allParks);
+reportStreets(allStreets);
