@@ -162,7 +162,7 @@ class Street extends Element {
         classification.set(3, 'normal');
         classification.set(4, 'big');
         classification.set(5, 'huge');
-        console.log(`${this.name}, built in ${this.buildYear}, is a ${classification.get(this.size)}`);
+        console.log(`${this.name}, built in ${this.buildYear}, is a ${classification.get(this.size)} street.`);
     }
 }
 
@@ -188,7 +188,7 @@ function calc(arr) {
 
 function reportParks(p) {
 
-    console.log('----PARKS REPORT----')
+    console.log('----PARKS REPORT----');
 
     // Density
     p.forEach(el => el.treeDensity());
@@ -206,8 +206,14 @@ function reportParks(p) {
 
 function reportStreets(s) {
 
+    console.log('----STREETS REPORT----');
 
+    // Total and average length of the town's streets
+    const [totalLength, aveLength] = calc(s.map(el => el.length));
+    console.log(`Our ${s.length} streets have a total length of ${totalLength} km, with an average of ${aveLength} km.`);
 
+    // Classify sizes
+    
 }
 
 reportParks(allParks);
