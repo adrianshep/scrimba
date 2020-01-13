@@ -67,21 +67,35 @@
             }); 
         };
 
-        getIDs
-        .then(IDs => {
+        // getIDs
+        // .then(IDs => {
+        //     console.log(IDs);
+        //     return getRecipe(IDs[2]);
+        // })
+        // .then(recipe => {
+        //     console.log(recipe);
+        //     return getRelated('Jonas Schmedtmann');
+        // })
+        // .then(recipe => {
+        //     console.log(recipe);
+        // })
+        // .catch(error => {
+        //     console.log('Error!!');
+        // });
+
+        async function getRecipesAW() {
+            const IDs = await getIDs;
             console.log(IDs);
-            return getRecipe(IDs[2]);
-        })
-        .then(recipe => {
+            const recipe = await getRecipe(IDs[2]);
             console.log(recipe);
-            return getRelated('Jonas Schmedtmann');
-        })
-        .then(recipe => {
-            console.log(recipe);
-        })
-        .catch(error => {
-            console.log('Error!');
-        });
+            const related = await getRelated('Jonas Schmedtmann');
+            console.log(related);
+
+            return recipe;
+        }
+        getRecipesAW().then(result => console.log(`${result} is the best ever!`));
+
+
 
     </script>
 </body>
