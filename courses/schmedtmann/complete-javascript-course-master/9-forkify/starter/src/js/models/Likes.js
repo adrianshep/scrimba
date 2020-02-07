@@ -1,11 +1,11 @@
-export default class Like {
+export default class Likes {
     constructor() {
         this.likes = [];
     }
 
     addLike(id, title, author, img) {
         const like = { id, title, author, img };
-        this.like.push(like);
+        this.likes.push(like);
         return like;
     }
 
@@ -19,6 +19,6 @@ export default class Like {
     }
 
     getNumLikes() {
-        return this.like.length;
+        return this.likes.length;
     }
 }
