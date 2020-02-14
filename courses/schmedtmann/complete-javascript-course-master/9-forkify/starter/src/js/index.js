@@ -105,6 +105,7 @@ const controlRecipe = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
 
+
 /**
 * LIST CONTROLLER
 */
