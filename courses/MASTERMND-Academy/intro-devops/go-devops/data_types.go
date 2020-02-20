@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// zero values: variables declared without an excplicit initial value are given zero values
+	// Zero Values: variables declared without an excplicit initial value are given zero values
 	// var i int
 	// var f float64
 	// var b bool
@@ -18,9 +18,16 @@ func main() {
 	// name := "Ado"
 	// age := 29
 
-	fmt.Print(5 + 5)
+	// fmt.Print(5 + 5)
 	// has to be Print, not Printf which only formats strings
 
 	// type coercion or type casting
-	fmt.Printf(string(5 + 5))
+	// fmt.Printf(string(5 + 5))
+
+	// Runes
+	// have to be single character
+	letter := 'h'
+	// will return ASCII decimal value of 'h'
+	fmt.Println(letter)
+
 }
