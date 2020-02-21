@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// Zero Values: variables declared without an excplicit initial value are given zero values
 	// var i int
@@ -26,8 +24,9 @@ func main() {
 
 	// Runes
 	// have to be single character
-	letter := 'h'
+	// are an alias for int32
+	// letter := 'h'
 	// will return ASCII decimal value of 'h'
-	fmt.Println(letter)
+	// fmt.Println(letter)
 
 }
