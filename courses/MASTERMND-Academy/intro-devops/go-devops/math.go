@@ -23,4 +23,11 @@ func main() {
 	dec := 10
 	dec--
 	fmt.Println(dec)
+
+	// Constants
+	// cannot declare const and assign its value later
+	// s cannot be changed
+	const s string = "constant"
+
+	fmt.Println(s)
 }
