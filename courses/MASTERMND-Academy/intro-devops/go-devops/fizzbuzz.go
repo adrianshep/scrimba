@@ -9,7 +9,7 @@ import "fmt"
 
 func main() {
 	for num := 0; num <= 100; num++ {
-		if num%3 == 0 && num%5 == 0 {
+		if num%15 == 0 {
 			fmt.Println("FizzBuzz")
 		} else if num%3 == 0 {
 			fmt.Println("Fizz")
