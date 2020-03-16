@@ -62,3 +62,27 @@ print('Division (float) : ', a / b)
 print('Division (floor) : ', a // b)
 print('Modulus : ', a % b)
 print('Exponent : ', a ** b)
+
+##############################
+
+# Strings - Basics - Slicing
+
+msg='welcome to it\'s Python 101: Strings'
+print(msg)
+print(msg.upper())
+print(msg.lower())
+print(msg.capitalize())
+print(msg.title())
+
+print(len(msg))
+# count is case-sensitive:
+print(msg.count('Python'))
+
+# slicing
+print(msg[5])
+# will give last character:
+print(msg[-1])
+# grab everything after 2 (inclusive); exclusive of last index number
+print(msg[2:7])
+# assumes everything from zero up to 7:
+print(msg[:7])
