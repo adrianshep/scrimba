@@ -34,3 +34,17 @@ i = str(22)       # i will be '22'
 j = str(3.01)     # j will be '3.01'
 
 print([a,b,c,c1,d,e,f,g,h,i,j])
+
+##############################
+
+# Variables and Data Types Exercise
+
+print('Variables & Datatypes - Exercise')
+#Create appropriate Variables for Item name, the price 
+#and how many you have in stock
+
+item_name = 'string'
+price = 1.29
+inventory = 28
+is_in_inventory = True
+print(item_name, price, inventory)
