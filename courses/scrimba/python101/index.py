@@ -112,3 +112,12 @@ msg_reverse=msg_complete[::-1]
 
 print(msg_complete)
 print(msg_reverse)
+ 
+# Olof's solution:
+# slicing to include space before or after when available:
+msg1=msg[18]+' '+msg[:8]+msg[25:29]+msg[7:11]+msg[13]+msg[12]+msg[2]+msg[1]+msg[-5]  
+print(msg1.title())
+print(msg1[::-1].title())
+
+##############################
+
