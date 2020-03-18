@@ -86,3 +86,29 @@ print(msg[-1])
 print(msg[2:7])
 # assumes everything from zero up to 7:
 print(msg[:7])
+
+##############################
+
+# Strings - Basics - Slicing - Exercise
+
+# from msg string, extract text and print new string that says "1 Welcome Ring To Tyler" (every first letter in a word should be capitalized in title format)
+# print the same string backwards (look up in documentation)
+
+msg='welcome to Python 101: Strings'
+
+msg_1=msg[-10]
+msg_w=msg[0:7]
+msg_ring=msg[-5:-1]
+msg_to=msg[8:10]
+msg_t=msg[8]
+msg_y=msg[12]
+msg_l=msg[2]
+msg_e=msg[1]
+msg_r=msg[-5]
+msg_tyler=msg_t+msg_y+msg_l+msg_e+msg_r
+msg_complete=msg_1+' '+msg_w+' '+msg_ring+' '+msg_to+' '+msg_tyler
+msg_complete=msg_complete.title()
+msg_reverse=msg_complete[::-1]
+
+print(msg_complete)
+print(msg_reverse)
