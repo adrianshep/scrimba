@@ -130,5 +130,32 @@ tree in the forest with…
 a herring! <3"""
 print(msg)
 
+# find:
+msg='Welcome to Python 101: Strings'
+print(msg.find('h'))
+print(msg.find('Python'))
+# returns index of character (14 and 11 (start position) in these examples)
 
+# replace:
+print(msg.replace('Python','C'))
+msg1=msg.replace('Python','C')
+print(msg1)
+# strings are immutable once created, so must be set to a new variable to be changed
 
+# membership:
+msg='Welcome to Python 101: Strings'
+print('Python' in msg)
+print('Python' not in msg)
+# checks if it exists, returns boolean
+
+# formatting
+name='TERRY'
+color = 'RED'
+msg = '[' + name + '] loves the color ' + color.lower() + '!'
+# easier format to read and follow:
+msg1 = f'[{name}] loves the color {color.lower()}!'
+print(msg)
+print(msg1)
+
+# capitalize name "Terry":
+msg1 = f'[{name.capitalize()}] loves the color {color.lower()}!'
