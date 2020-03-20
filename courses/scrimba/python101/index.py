@@ -121,3 +121,14 @@ print(msg1[::-1].title())
 
 ##############################
 
+# Strings - 2 - Find, Replace, String Formatting
+
+# to get a multiline string:
+msg="""Dear Terry,
+You must cut down the mightiest 
+tree in the forest with…
+a herring! <3"""
+print(msg)
+
+
+
