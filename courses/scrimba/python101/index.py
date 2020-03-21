@@ -157,5 +157,19 @@ msg1 = f'[{name}] loves the color {color.lower()}!'
 print(msg)
 print(msg1)
 
-# capitalize name "Terry":
+# exercise - capitalize name "Terry":
 msg1 = f'[{name.capitalize()}] loves the color {color.lower()}!'
+
+##############################
+
+# User Input
+
+name=input('What is your name?: ')
+age=input('What is your age?: ')
+print('Hello '+ name + '! You are '+ age + ' years old.')
+
+# calculator:
+num1=input('Enter a digit: ')
+num2=input('Enter a second digit: ')
+answer=float(num1)+float(num2)
+print(answer)
