@@ -186,8 +186,17 @@ print(answer)
 # - hint: use correct types for calculating and print
 # - Did you capitalize the name
 
+# my solution:
+
 fname=input('Enter your first name: ')
 kdist=input('Enter your distance in kilometers: ')
-mdist=float(kdist)/1.609
+mdist=(float(kdist)/1.609)
 msg=f'Hi, {fname.capitalize()}, you ran {kdist} kilometers, which is {mdist} miles.'
 print(msg)
+
+# Olof's solution:
+
+name = input ('Enter your name: ')
+distance_km = input('Enter distance in km: ')
+distance_mi = float(distanc_km)/1.609
+print(f'Hi {name.title()}! {distance_km} km is equivalent to {round(distance_mi, 1)} miles.')
