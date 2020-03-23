@@ -200,3 +200,28 @@ name = input ('Enter your name: ')
 distance_km = input('Enter distance in km: ')
 distance_mi = float(distanc_km)/1.609
 print(f'Hi {name.title()}! {distance_km} km is equivalent to {round(distance_mi, 1)} miles.')
+
+##############################
+
+# Lists - Basics
+
+friends = ['John','Michael','Terry','Eric','Graham']
+print(friends)
+# Michael
+print(friends[1])
+# Michael Graham
+print(friends[1],friends[4])
+# Graham
+print(friends[-1])
+# slicing syntax - Terry, Eric
+print(friends[2:4])
+# John, Michael, Terry, Eric
+print(friends[:4])
+# the whole list
+print(friends[:])
+# number of elements in the list
+print(len(friends))
+# index of list item
+print(friends.index('Eric'))
+# count items
+print(friends.count('Eric'))
