@@ -286,3 +286,20 @@ new_friends = friends.copy()
 # third way
 new_friends = list(friends)
 print(new_friends)
+
+##############################
+
+# Lists - Exercise
+# You sell lemonade over two weeks; lists show number of lemonades sold per week
+# Profit from each lemonade sold = $1.50
+# Add another day to week 2 list by capturing numbers as an input
+# Combine the two lists into the list called 'sales'
+# Calculate/print how much you've earned on:
+# Best day
+# Worst day
+# Separately and in total
+# (3 prints in total)
+
+sales_w1 = [7,3,42,19,15,35,9]
+sales_w2 = [12,4,26,10,7,28]
+sales = []
