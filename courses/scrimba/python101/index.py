@@ -292,14 +292,34 @@ print(new_friends)
 # Lists - Exercise
 # You sell lemonade over two weeks; lists show number of lemonades sold per week
 # Profit from each lemonade sold = $1.50
-# Add another day to week 2 list by capturing numbers as an input
-# Combine the two lists into the list called 'sales'
-# Calculate/print how much you've earned on:
-# Best day
-# Worst day
-# Separately and in total
-# (3 prints in total)
 
 sales_w1 = [7,3,42,19,15,35,9]
 sales_w2 = [12,4,26,10,7,28]
 sales = []
+
+# Add another day to week 2 list by capturing numbers as an input
+sales_w2.append(10)
+print(sales_w2)
+# Combine the two lists into the list called 'sales'
+sales_w1.extend(sales_w2)
+print(sales_w1)
+sales = sales_w1
+print(sales)
+# Calculate/print how much you've earned on:
+# Best day
+sales_asc=sales.sort()
+print(sales_asc)
+best_day_sales=sales_asc.pop()
+print(best_day_sales)
+best_day_earn=best_day_sales*1.50
+print(best_day_earn)
+# Worst day
+sales_desc=sales.sort(reverse=True)
+worst_day_sales=sales_desc.pop()
+worst_day_earn=worst_day_sales*1.50
+print(worst_day_earn)
+# Separately and in total
+total_earn=sum(sales)*1.50
+print(total_earn)
+# (3 prints in total)
+
