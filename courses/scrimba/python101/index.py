@@ -225,3 +225,64 @@ print(len(friends))
 print(friends.index('Eric'))
 # count items
 print(friends.count('Eric'))
+
+##############################
+
+# Lists - Continued
+
+friends = ['John','Michael','Terry','Eric','Graham']
+cars = [911,130,328,535,740,308]
+print(friends)
+# sort in ascending alphabetical order:
+friends.sort()
+print(friends)
+cars.sort()
+print(cars)
+# sort in descending alphabetical order; capital T in True needed for it to be read as a boolean:
+friends.sort(reverse=True)
+print(friends)
+# reverse function only reverses original string
+friends.reverse()
+print(friends)
+# minimum, maximum, sum
+# lowest number or word (by letter) in list:
+print(min(cars))
+print(min(friends))
+# highest number or word (by letter) in list:
+print(max(cars))
+print(max(friends))
+# summing
+print(sum(cars))
+
+
+# modifying lists
+# add to list
+friends.append('TerryG')
+# specify position at which to insert
+friends.insert(1,'TerryG')
+# replace 'Terry' with 'TerryG':
+friends[2]='TerryG'
+# add cars list to end of friends list
+friends.extend(cars)
+# remove from list
+friends.remove('Terry')
+# pops last name from the array and into memory:
+friends.pop()
+# pops from index
+friends.pop(2)
+# empties list
+friends.clear()
+# delete list entirely
+del friends
+# delete index 2 in list
+del friends[2]
+print(friends)
+
+# copy lists
+# create a new list
+new_friends = friends[:]
+# will do same thing as above:
+new_friends = friends.copy()
+# third way
+new_friends = list(friends)
+print(new_friends)
