@@ -290,6 +290,9 @@ print(new_friends)
 ##############################
 
 # Lists - Exercise
+
+# my solution
+
 # You sell lemonade over two weeks; lists show number of lemonades sold per week
 # Profit from each lemonade sold = $1.50
 
@@ -314,3 +317,23 @@ print(f'Worst day earnings: ${worst_day_earn:.2f}')
 # Separately and in total
 total_earn = sum(sales)*1.50
 print(f'Total earnings: ${total_earn:.2f}')
+
+# Olof's solution
+
+new_day = input('Enter #of lemonades for new day: ')
+# all input captured is in form of a string, so you have to convert it by using int:
+sales_w2.append(int(new_day))
+sales.extend(sales_w1)
+sales.extend(sales_w2)
+# this method allows all extending on one line, so more efficient:
+# sales = sales_w1 + sales_w2
+#sales.sort()
+worst_day_prof = min(sales) * 1.5
+best_day_prof = max(sales) * 1.5
+# alternative with more steps:
+# sales.sort()
+# worst_day_prof = sales[0] * 1.5
+# best_day_prof = sales[-1] * 1.5
+print(f'Worst day profit:$ {worst_day_prof}')
+print(f'Best day profit:$ {best_day_prof}')
+print(f'Combined profit:$ {worst_day_prof + best_day_prof}')
