@@ -337,3 +337,28 @@ best_day_prof = max(sales) * 1.5
 print(f'Worst day profit:$ {worst_day_prof}')
 print(f'Best day profit:$ {best_day_prof}')
 print(f'Combined profit:$ {worst_day_prof + best_day_prof}')
+
+##############################
+
+# Split and Join
+
+# split
+msg ='Welcome to Python 101: Split and Join'
+csv = 'Eric,John,Michael,Terry,Graham'
+friends_list = ['Eric','John','Michael','Terry','Graham']
+print('Welcome to Python 101: Split and Join')
+# list command breaks apart msg completely, into characters:
+print(list(msg))
+# when you split from a string, you're creating a list
+# split is a method on the string object, breaks message into words:
+print(msg.split())
+# splits csv file into a list
+print(csv.split(','))
+
+# join
+# joins with hyphens
+print('-.join(friends_list')
+# splitting out all spaces in string
+print(''join(msg.split()))
+# do the same thing with this:
+print(msg.replace(' ', ''))
