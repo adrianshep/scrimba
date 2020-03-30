@@ -357,9 +357,9 @@ print(csv.split(','))
 
 # join
 # joins with hyphens
-print('-.join(friends_list')
+print(''-.join(friends_list)
 # splitting out all spaces in string
-print(''join(msg.split()))
+print(''.join(msg.split()))
 # do the same thing with this:
 print(msg.replace(' ', ''))
 
@@ -374,3 +374,22 @@ print(friends_list)
 # with the names of all the friends. One per "slot"
 # you may need to run same command several times
 # use print() statements to work your way through the exercise
+
+# my solution:
+
+friends_list = csv.split(',')
+print(friends_list)
+friends_list_comma = friends_list[0:4]
+print(friends_list_comma)
+friends_list_tail = friends_list[4]
+print(friends_list_tail)
+friends_list_tail = friends_list_tail.split(':')
+print(friends_list_tail)
+friends_list_colon = friends_list_tail[0].split()
+print(friends_list_colon)
+friends_list_semi = friends_list_tail[1]
+print(friends_list_semi)
+friends_list_semi = friends_list_semi.split(';')
+print(friends_list_semi)
+friends_list = friends_list_comma + friends_list_colon + friends_list_semi
+print(friends_list)
