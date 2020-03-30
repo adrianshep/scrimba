@@ -408,3 +408,18 @@ print(friends_list)
 
 # 2nd solution:
 print('replace', csv.replace(';',',').replace(':',',').split(','))
+
+##############################
+
+# Tuples
+
+# tuples are faster Lists you can't change, they're immutable - have to create new one to make any changes
+# come in regular parentheses
+# can't use append, pop, etc. on tuples
+# use tuples when you have data you don't want or need to change
+friends = ['John','Michael','Terry','Eric','Graham']
+friends_tuple = ('John','Michael','Terry','Eric','Graham')
+print(friends)
+print(friends_tuple)
+print(friends[2:4])
+print(friends_tuple[2:4])
