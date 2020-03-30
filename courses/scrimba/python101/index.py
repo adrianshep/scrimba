@@ -405,3 +405,6 @@ print((','.join(','.join(csv.split(';')).split(':'))).split(','))
 # final version of 1st solution:
 friends_list = (','.join(','.join(csv.split(';')).split(':'))).split(',')
 print(friends_list)
+
+# 2nd solution:
+print('replace', csv.replace(';',',').replace(':',',').split(','))
