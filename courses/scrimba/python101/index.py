@@ -393,3 +393,15 @@ friends_list_semi = friends_list_semi.split(';')
 print(friends_list_semi)
 friends_list = friends_list_comma + friends_list_colon + friends_list_semi
 print(friends_list)
+
+# Olof's solution
+
+# 1st solution by stages:
+print(','.join(csv.split(';')))
+print(','.join(csv.split(';')).split(':'))
+print(','.join(','.join(csv.split(';')).split(':')))
+print((','.join(','.join(csv.split(';')).split(':'))).split(','))
+
+# final version of 1st solution:
+friends_list = (','.join(','.join(csv.split(';')).split(':'))).split(',')
+print(friends_list)
