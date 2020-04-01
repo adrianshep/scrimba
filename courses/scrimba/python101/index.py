@@ -451,7 +451,7 @@ print(friends_set.intersection(my_friends_set))
 print(friends_set.difference(my_friends_set))
 
 # prints {'John', 'Michael', 'Terry', 'Eric', 'Graham', 'Reg', 'Loretta', 'Colin'} :
- print(friends_set.union(my_friends_set))
+ print(friends.union(my_friends))
 
 #empty Lists
 empty_list = []
@@ -481,6 +481,13 @@ print('John' in friends)
 print('Eric' in friends and 'John' in friends)
 
 #2. combine or add the two sets 
+# my solution
+print(friends.union(my_friends))
+# Olof's solution
+print(friends.union(my_friends))
+# alternate - single pipe means union
+print(friends | my_friends)
+
 #3. Find names that are in both sets
 #4. find names that are only in friends
 #5. Show only the names who only appear in one of the lists
