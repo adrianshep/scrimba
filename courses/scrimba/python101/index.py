@@ -489,6 +489,13 @@ print(friends.union(my_friends))
 print(friends | my_friends)
 
 #3. Find names that are in both sets
+# my solution
+print(friends.intersection(my_friends))
+# Olof's solution
+print(friends.intersection(my_friends))
+# alternate - single ampersand means intersection
+print(friends & my_friends)
+
 #4. find names that are only in friends
 #5. Show only the names who only appear in one of the lists
 #6. Create a new cars-list without duplicates
