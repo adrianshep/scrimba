@@ -497,5 +497,12 @@ print(friends.intersection(my_friends))
 print(friends & my_friends)
 
 #4. find names that are only in friends
+# my solution
+print(friends.difference(my_friends))
+# Olof's solution
+print(friends.difference(my_friends))
+# alternate - minus sign - subtract second set from first
+print(friends - my_friends)
+
 #5. Show only the names who only appear in one of the lists
 #6. Create a new cars-list without duplicates
