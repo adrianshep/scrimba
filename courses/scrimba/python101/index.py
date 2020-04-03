@@ -505,4 +505,13 @@ print(friends.difference(my_friends))
 print(friends - my_friends)
 
 #5. Show only the names who only appear in one of the lists
+# my solution
+print((friends - my_friends) | (my_friends - friends))
+
+# Olof's solution
+# there's a method for this:
+print(my_friends.symmetric_difference(friends))
+# alternate -
+print(my_friends ^ friends)
+
 #6. Create a new cars-list without duplicates
