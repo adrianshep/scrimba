@@ -511,7 +511,17 @@ print((friends - my_friends) | (my_friends - friends))
 # Olof's solution
 # there's a method for this:
 print(my_friends.symmetric_difference(friends))
-# alternate -
+# alternate - caret sign applies symmetric_difference method
 print(my_friends ^ friends)
 
 #6. Create a new cars-list without duplicates
+# my solution
+cars_nodupes = set(cars)
+print(cars_nodupes)
+
+# Olof's solution
+cars_no_dupl = set(cars)
+print(cars_no_dupl)
+# and to turn it back into a list
+cars_no_dupl = list(set(cars))
+print(cars_no_dupl)
