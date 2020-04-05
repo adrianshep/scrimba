@@ -525,3 +525,29 @@ print(cars_no_dupl)
 # and to turn it back into a list
 cars_no_dupl = list(set(cars))
 print(cars_no_dupl)
+
+##############################
+
+# Comments
+
+print("#Comments")
+#Hiding in the comments
+# more comments
+
+# multiline hack for comments:
+'''
+Nobody expects the 
+spanish inquisition
+'''
+
+#fruits holds the fruits input by user as strings
+fruits = [‘apple’,’orange’,’banana’,’avocado’]
+
+#Entry form for Ministry applications
+# (example of comments used in coding workflow)
+#to-do: fix it! it doesn’t work  
+name = "Default"
+name = input("Enter your silly name: ")
+print("Thank you " + name + "!")
+print("for applying to")
+print("the Minstry of Silly Walks")
