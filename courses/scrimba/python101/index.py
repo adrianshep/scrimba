@@ -153,12 +153,12 @@ name='TERRY'
 color = 'RED'
 msg = '[' + name + '] loves the color ' + color.lower() + '!'
 # easier format to read and follow:
-msg1 = f'[{name}] loves the color {color.lower()}!'
+msg-one = f'[{name}] loves the color {color.lower()}!'
 print(msg)
-print(msg1)
+print(msg-one)
 
 # exercise - capitalize name "Terry":
-msg1 = f'[{name.capitalize()}] loves the color {color.lower()}!'
+msg-one = f'[{name.capitalize()}] loves the color {color.lower()}!'
 
 ##############################
 
@@ -551,3 +551,18 @@ name = input("Enter your silly name: ")
 print("Thank you " + name + "!")
 print("for applying to")
 print("the Minstry of Silly Walks")
+
+##############################
+
+# Functions - Calling, Parameters, Arguments, Defaults
+
+# age is set to a default value of 28
+def greeting(name, age=28):
+    print("Hello " + name + ", you are " + str(age) + "!")
+    # don't have to do a string conversion using formatted strings:
+    print(f"Hello, {name}, you are age {age}!")
+
+name = input("Enter your name: ")
+greeting("Brian", 32)
+greeting("Judith")
+
