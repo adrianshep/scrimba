@@ -570,7 +570,7 @@ greeting("Judith")
 
 # Functions - Exercise
 
-def greeting(name, age=28, color):
+def greeting(name, age=28, color='red'):
     #Greets user with 'name' from 'input box' and 'age', if available, default age is used
     print('Hello, '  +  name + ', you are ' + str(age) +'!')
     print(f'Hello, {name}, you are {age}!')
