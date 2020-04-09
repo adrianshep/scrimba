@@ -576,8 +576,8 @@ def greeting(name, age=28, color='red'):
     print('Hello, '  +  name + ', you will be ' +  str(age + 1) + ' years old next birthday!')
     print(f'Hello, {name}, you are {age}!')
 
-    print('We hear you like the color ' + str(color) + '.')
-    print(f'We hear you like the color {color}.')
+    print('We hear you like the color ' + str(color.lower()) + '.')
+    print(f'We hear you like the color {color.lower()}.')
 
 name = input('Enter your name: ')
 age = input('Enter your age: ')
