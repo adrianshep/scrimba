@@ -573,8 +573,8 @@ greeting("Judith")
 def greeting(name, age=28, color='red'):
     #Greets user with 'name' from 'input box' and 'age', if available, default age is used
     age = int(age) + 1
-    print('Hello, '  +  name + ', you will be ' +  str(age + 1) + ' years old next birthday!')
-    print(f'Hello, {name}, you are {age}!')
+    print('Hello, '  +  name.title() + ', you will be ' +  str(age) + ' years old next birthday!')
+    print(f'Hello, {name.title()}, you will be {age} years old next birthday!')
 
     print('We hear you like the color ' + str(color.lower()) + '.')
     print(f'We hear you like the color {color.lower()}.')
