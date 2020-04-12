@@ -607,3 +607,19 @@ name = input('Enter your name: ')
 age = input('Enter your age: ')
 color = input('Enter favorite color: ')
 greeting(name, int(age), color)
+
+##############################
+
+# Functions - Named Notation
+
+def greeting(name, age=28, color="red"):
+ #Greets user with “name” from “input box” and “age”, if unavailable, default age is used   
+   
+   print(f"Hello {name.capitalize()}, you will be {age+1} next birthday!")
+   print(f"We hear you like the color {color.lower()}!")
+
+# with named notation, order of arguments no longer matters:
+greeting(age=27, name="brian",color="Blue")
+
+# named notation also clarifies to what argument each value attaches:
+Profile(yob=1995,weight=83.5,height=192,eye_color="blue")
