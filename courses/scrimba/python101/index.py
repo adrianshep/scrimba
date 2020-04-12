@@ -623,3 +623,51 @@ greeting(age=27, name="brian",color="Blue")
 
 # named notation also clarifies to what argument each value attaches:
 Profile(yob=1995,weight=83.5,height=192,eye_color="blue")
+
+##############################
+
+# Return Statements
+
+def value_added_tax(amount):
+    tax = amount * 0.25
+    # without return, function will return empty object:
+    return tax
+    
+print(value_added_tax(100))
+
+def value_added_tax(amount):
+    tax = amount * 0.25
+    total_amount = amount * 1.25
+    return tax
+    
+price = value_added_tax(100)    
+print(price)
+
+# what are we getting back?
+
+# type is a float
+print(price, type(price))
+
+# we get back a tuple
+def value_added_tax(amount):
+    tax = amount * 0.25
+    total_amount = amount * 1.25
+    return amount, tax, total_amount
+    
+price = value_added_tax(100)    
+print(price, type(price))
+
+# we can get back part of a list by using square brackets and specifying index of item:
+def value_added_tax(amount):
+    tax = amount * 0.25
+    total_amount = amount * 1.25
+    return [amount, tax, total_amount]
+    
+price = value_added_tax(100)    
+print(price[1], type(price))
+
+# we can get back a set:
+    return {amount, tax, total_amount}
+
+# we can get back a string:
+    return f"{amount}, {tax}, {total_amount}"
