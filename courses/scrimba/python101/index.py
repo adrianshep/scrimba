@@ -671,3 +671,84 @@ print(price[1], type(price))
 
 # we can get back a string:
     return f"{amount}, {tax}, {total_amount}"
+
+##############################
+
+# Comparisons and Booleans
+
+# Comparisons
+
+a = 7
+b = 3
+# asking if a is equal to b
+print(a == b)
+# is a not equal to b?
+print(a != b)
+# is a greater than b?
+print(a > b)
+# is a less than b?
+print(a < b)
+# is a less than or equal to b?
+print(a <= b)
+# is a greater than or equal to b?
+print(a >= b)
+# 'in' operator querying membership
+# does 'o' appear in 'John'?
+print('o' in 'John')
+# does 'o' NOT appear in 'John'?
+print('o' not in 'John')
+
+# identity
+a = [3,7,42]
+b = a
+print(a == b)
+# are they identical objects occupying the same amount of memory space?
+print(a is b)
+# check that with the id statement:
+print(id(a), id(b))
+# if b is rewritten:
+# same in value, but NOT same in memory:
+a = [3,7,42]
+b = [3,7,42]
+print(a == b)
+print(a is b) # is false
+print(id(a), id(b)) # ids are 2 3 and not 2 2
+
+a=7
+b=3
+print('a == b is', a == b)
+print('a != b is', a != b)
+print('a > b is', a > b)
+print('a < b is', a < b)
+print('a >= b is', a >= b)
+print('a <= b is', a <= b)
+print('o in John is ','o' in 'John') #membership
+print('o in John is ','o' not in 'John') #non membership
+print('John is John ','John' is 'John') #identity
+print('John is not John is ','John' is not 'John') # negative identity
+
+# Booleans
+
+# int out of boolean
+print(int(True))  # evaluates to 1
+print(int(False)) # evaluates to 0
+
+# values to booleans
+# strings
+print(bool('Parrot')) # evaluates to True
+print(bool(' ')) # space evaluates to True
+print(bool('')) # empty string evaluates to False
+# numbers
+print(bool(42)) # evaluates to True
+print(bool(1)) # evaluates to True
+print(bool(0)) # evaluates to False
+# empty objects and zeroes evaluate to False
+
+# lists
+print(bool([1,2])) # evaluates to True
+print(bool([0])) # evaluates to False
+# all trivial values evaluate to 0, non-trivial to 1
+
+# booleans can be converted to 1 and 0
+print(42 + True) # evaluates to 43
+print(42 + False) # evaluates to 42
