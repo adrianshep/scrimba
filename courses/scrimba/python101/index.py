@@ -752,3 +752,29 @@ print(bool([0])) # evaluates to False
 # booleans can be converted to 1 and 0
 print(42 + True) # evaluates to 43
 print(42 + False) # evaluates to 42
+
+##############################
+
+# Conditionals - If, Else, Elif
+
+is_raining = False
+is_cold = False
+print("Good Morning")
+if is_raining and is_cold:
+    print("Bring Umbrella and jacket")
+elif is_raining and not(is_cold):
+    print("Bring Umbrella")
+elif not(is_raining) and is_cold:
+    print("Bring Jacket")
+else:
+    print("Shirt is fine!")
+
+# with numbers
+
+amount = 51
+if amount <= 50:
+    print("Purchase approved")
+else:
+    print("Please enter your pin!")
+
+
