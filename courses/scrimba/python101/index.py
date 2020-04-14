@@ -777,4 +777,12 @@ if amount <= 50:
 else:
     print("Please enter your pin!")
 
+##############################
 
+# Conditionals - If, Else, Elif - Exercise
+
+print('if elif else - Exercise')
+# Create a calculator which handles +,-,*,/ and outputs answer based on the mode/ operator used
+# Hint: use 3 separate inputs 
+# Bonus: Extend functionality with extra mode so it also does celsius to fahrenheit conversion
+# formula is: temp in C*9/5 + 32 = temp in f
