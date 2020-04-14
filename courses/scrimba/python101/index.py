@@ -789,14 +789,32 @@ print('if elif else - Exercise')
 
 # my solution:
 
-num1=input('Enter your first number: ')
+num1=input('Enter your first number or celsius temperature: ')
 num2=input('Enter your second number: ')
-operand=input('Enter your operand (+, -, *, /): ')
+operand=input('Enter your operand (+, -, *, /, f): ')
 if (operand == '+'):
   print(int(num1) + int(num2))
 elif (operand == '-'):
   print(int(num1) - int(num2))
 elif (operand == '*'):
   print(int(num1) * int(num2))
+elif (operand == 'f'):
+  print(int(num1) * (9/5) + 32)
+else:
+  print(int(num1) / int(num2))
+
+# my solution to add bonus functionality:
+
+num1=input('Enter your first number: ')
+num2=input('Enter your second number: ')
+operand=input('Enter your operand or f to convert to Fahrenheit (+, -, *, /, f): ')
+if (operand == '+'):
+  print(int(num1) + int(num2))
+elif (operand == '-'):
+  print(int(num1) - int(num2))
+elif (operand == '*'):
+  print(int(num1) * int(num2))
+elif (operand == 'f'):
+  print(num1, 'degrees Celsius converts to ', int(num1) * (9/5) + 32, ' degrees Fahrenheit.')
 else:
   print(int(num1) / int(num2))
