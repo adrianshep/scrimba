@@ -786,3 +786,17 @@ print('if elif else - Exercise')
 # Hint: use 3 separate inputs 
 # Bonus: Extend functionality with extra mode so it also does celsius to fahrenheit conversion
 # formula is: temp in C*9/5 + 32 = temp in f
+
+# my solution:
+
+num1=input('Enter your first number: ')
+num2=input('Enter your second number: ')
+operand=input('Enter your operand (+, -, *, /): ')
+if (operand == '+'):
+  print(int(num1) + int(num2))
+elif (operand == '-'):
+  print(int(num1) - int(num2))
+elif (operand == '*'):
+  print(int(num1) * int(num2))
+else:
+  print(int(num1) / int(num2))
