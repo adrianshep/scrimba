@@ -818,3 +818,26 @@ elif (operand == 'f'):
   print(num1, 'degrees Celsius converts to ', int(num1) * (9/5) + 32, ' degrees Fahrenheit.')
 else:
   print(int(num1) / int(num2))
+
+  # Olof's solution:
+
+  # using elifs, program only checks until it finds something correct at which point it exits
+
+mode = input('Enter math operation(+,-,*,/) or f for Celsius to Fahrenheit conversion: ')
+num1 = float(input('Enter first number: '))
+# the below if statement prevents num2 input appearing if user only wants C to F conversion:
+if mode.lower() == 'f':
+    print(f'{num1} Celsius is equivalent to {(num1*9/5)+32 } fahrenheit')
+else:
+    num2 = float(input('Enter second number: '))
+
+    if mode == '+':
+        print(f'Answer is: {num1 + num2}')
+    elif mode == '-':
+        print(f'Answer is: {num1 - num2}')
+    elif mode == '*':
+        print(f'Answer is: {num1 * num2}')
+    elif mode == '/':
+        print(f'Answer is: {num1 / num2}')
+    else:
+        print('Input error!')
