@@ -873,3 +873,17 @@ def num_days(month):
     elif month == 'dec':
         print('number of days in',month,'is',31)
 
+num_days('oct')
+# optimize/shorten the code in the function
+# try to reduce the number of conditionals 
+
+my solution:
+
+def num_days(month):
+
+  if month == 'feb':
+      print('number of days in',month,'is',28)
+  elif month in {'apr', 'jun', 'sep', 'nov'}:
+      print('number of days in',month,'is',30)
+  else:
+      print('number of days in',month,'is',31)
