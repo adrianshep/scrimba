@@ -887,3 +887,36 @@ def num_days(month):
       print('number of days in',month,'is',30)
   else:
       print('number of days in',month,'is',31)
+
+# Olof's solution:
+
+# shorter code:
+def num_days(month):
+
+    if month == 'jan' or month == 'mar' or month == 'may' or month == 'jul' or month == 'aug' or month == 'oct' or month == 'dec':
+        print('number of days in',month,'is',31)
+    elif month == 'feb':
+        print('number of days in',month,'is',28)
+    elif month == 'apr' or month == 'jun' or month == 'sep' or month == 'nov':
+        print('number of days in',month,'is',30)
+
+# shorter still:
+def num_days(month):
+    days = 31
+    if month == 'apr' or month =='jun' or month =='sep' or month =='nov':
+        days = 30
+    elif month == 'feb':
+        days = 28
+    # only single print statement: 
+    print('number of days in',month,'is',days)
+
+# shorter and faster:
+# using set works 5-6 x faster than list or tuple:
+def num_days(month):
+    days = 31
+    if month in {'apr','jun','sep','nov'}:
+    #if month == 'apr' or month =='jun' or month =='sep' or month =='nov':
+        days = 30
+    elif month == 'feb':
+        days = 28
+    print('number of days in',month,'is',days)
