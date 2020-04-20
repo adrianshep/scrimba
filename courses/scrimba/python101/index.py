@@ -951,7 +951,7 @@ print('Guessing game')
 # Tip:( remember you won’t see  print statements during execution, so if you want to see prints during whle loop, then print to the input box
 
 # Modification 1: number 1-100, tell user if guess is too high/low, and let them have 5-10 guesses.
-# Tip:( remember you won’t see  print statements during execution, so If you want to see prints during whle loop, print to the input box (This is specific to this platform)
+# Tip:( remember you won’t see print statements during execution, so if you want to see prints during whle loop, print to the input box (This is specific to this platform)
 
 # Three Loop Questions:
 #1. What do I want to repeat?
@@ -960,3 +960,21 @@ print('Guessing game')
 #  -> 
 #3. How long should we repeat?
 #  -> 
+
+# my solution:
+
+from random import randrange
+answer = randrange(11)
+i = 0
+guesses = 3
+while i < guesses: 
+    i += 1
+    guess = int(input('Enter your guess as to what the number is: '))
+    if answer != guess:
+      if 3-i == 0:
+        print('Game over, man!')
+      else:
+        print(guess, 'isn\'t the number. You have this many guesses left:', 3-i)
+    else:
+      print('You guessed it!', answer, 'is the number!')
+      i = guesses
