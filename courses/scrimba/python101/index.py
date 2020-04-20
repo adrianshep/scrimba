@@ -981,21 +981,20 @@ while i < guesses:
 
 # my modification solution:
 
-from random import randrange
-answer = randrange(11)
+answer = randrange(101)
 i = 0
-guesses = 3
+guesses = 5
 while i < guesses: 
     i += 1
     guess = int(input('Enter your guess as to what the number is: '))
     if answer != guess:
-      if 3-i == 0:
+      if guesses-i == 0:
         print('Game over, man! The number was:', answer)
       else:
         if answer > guess:
-          print(guess, 'isn\'t the number. Your guess is too low! You have this many guesses left:', 3-i)
+          print(guess, 'isn\'t the number. Your guess is too low! You have this many guesses left:', guesses-i)
         else:
-          print(guess, 'isn\'t the number. Your guess is too high! You have this many guesses left:', 3-i)
+          print(guess, 'isn\'t the number. Your guess is too high! You have this many guesses left:', guesses-i)
     else:
       print('You guessed it!', answer, 'is the number!')
       i = guesses
