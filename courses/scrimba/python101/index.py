@@ -1047,3 +1047,100 @@ while guess_number < guess_limit:
     
 if guess != num:
     print(f'Sorry you lose! It was {num}')
+
+##############################
+
+# For Loops and Nesting
+
+# For Loops:
+
+for letter in 'Norwegian blue':
+    print(letter)
+
+print("For Loop done!")
+
+# letter can be replaced with any name:
+
+for furgle in 'Norwegian blue':
+    print(furgle)
+
+print("For Loop done!")
+
+for furgle in range(8):
+    print(furgle)
+
+print("For Loop done!") # prints 0 through 7
+
+# inclusive of 2 at start:
+
+for furgle in range(2,8):
+    print(furgle)
+
+print("For Loop done!")
+
+# in steps of 3:
+
+for furgle in range(1,15,3):
+    print(furgle)
+
+print("For Loop done!")
+
+for name in ['John','Terry','Eric','Michael','George']:
+    print(name)
+
+print("For Loop done!")
+
+# same output:
+friends = ['John','Terry','Eric','Michael','George']
+for friend in friends:
+    print(friend)
+
+print("For Loop done!")
+
+# or:
+
+friends = ['John','Terry','Eric','Michael','George']
+for index in range(len(friends)):
+   print(friends[index])
+
+print("For Loop done!")
+
+# break in loop:
+friends = ['John','Terry','Eric','Michael','George']
+for friend in friends:
+    if friend == 'Eric':
+        print('Found ' + friend + '!')
+        break
+    print(friend)
+
+print("For Loop done!")
+
+# continue goes back up to the top of the loop:
+friends = ['John','Terry','Eric','Michael','George']
+for friend in friends:
+    if friend == 'Eric':
+        print('Found ' + friend + '!')
+        continue
+    print(friend)
+
+print("For Loop done!")
+
+# no break or continue:
+friends = ['John','Terry','Eric','Michael','George']
+for friend in friends:
+    if friend == 'Eric':
+        print('Found ' + friend + '!')
+        
+    print(friend)
+
+print("For Loop done!") # will print 'Eric' twice
+
+# Nested Loops:
+
+friends = ['John','Terry','Eric']
+for friend in friends:
+    for number in [1,2,3]:
+        print(friend, number)
+
+print("For Loop done!")
+# will print John 1, John 2, John 3, Terry 1 ...
