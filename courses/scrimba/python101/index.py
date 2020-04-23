@@ -1144,3 +1144,16 @@ for friend in friends:
 
 print("For Loop done!")
 # will print John 1, John 2, John 3, Terry 1 ...
+
+##############################
+
+# For Loops - Exercise
+# - You're having a party and want to invite your friends.
+# - print out an invitation for each friend using for loops
+# - the names are in two lists, 'names' and 'names1'
+# - you also need to add two extra names to the list using an input box when the code is run
+# - names should be properly capitalized
+# - Example of printout:
+# John Cleese! You are invited to the party on Saturday.
+# Eric Idle! You are invited to the party on Saturday.
+# - Hint: you may need two for loops to solve this exercise.
