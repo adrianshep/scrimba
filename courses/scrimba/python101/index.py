@@ -1157,3 +1157,9 @@ print("For Loop done!")
 # John Cleese! You are invited to the party on Saturday.
 # Eric Idle! You are invited to the party on Saturday.
 # - Hint: you may need two for loops to solve this exercise.
+
+names = ['john ClEEse','Eric IDLE','michael']
+names1 = ['graHam chapman',
+ 'TERRY', 'terry jones']
+
+ 
