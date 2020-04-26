@@ -1162,4 +1162,12 @@ names = ['john ClEEse','Eric IDLE','michael']
 names1 = ['graHam chapman',
  'TERRY', 'terry jones']
 
- 
+#  my solution:
+
+names.extend(names1)
+newname1 = str(input('Name someone to invite to your party: '))
+names.append(newname1)
+newname2 = str(input('Name another someone to invite to your party: '))
+names.append(newname2)
+for name in names:
+  print(f'{name.lower().title()}! You are invited to the party on Saturday.')
