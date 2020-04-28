@@ -1279,3 +1279,140 @@ print(sorted(my_llist, key = lambda item :item[0]))
 my_list = [1,5,-3,7,-2]
 my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
 print(sorted(my_llist, key = lambda item :item[2]))
+
+##############################
+
+# Dictionaries
+
+# store key-value pairs
+
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+print(movie)
+print(movie['title']) # returns 'Life of Brian'
+
+print(movie['budget']) # not in dictionary results in error
+# instead, run
+print(movie.get('budget'))
+# get returns 'None' as an empty object which is preferable
+
+print(movie.get('budget','not found')) # will set the default value
+
+# changing value
+movie['title'] = 'The Holy Grail'
+# creating new key-value pair
+movie['budget'] = 250000
+print(movie.get('title'))
+
+# change title
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+movie['title'] = 'The Holy Grail'
+print(movie.get('title'))
+
+# create new key 'year' and value
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+movie.update({'title' : 'The Holy Grail','year':1975,'cast':['John','Eric','Michael','George','Terry']})
+movie['budget'] = 250000
+print(movie)
+
+# using update command
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+movie.update({'title' : 'The Holy Grail','year':1975,'cast':['John','Eric','Michael','George','Terry']})
+movie['budget'] = 250000
+print(movie)
+
+# delete entries
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+movie.update({'title' : 'The Holy Grail','year':1975,'cast':['John','Eric','Michael','George','Terry']})
+movie['budget'] = 250000
+del movie['year']
+print(movie)
+
+# more commonly used pop command which saves popped item to variable
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+movie.update({'title' : 'The Holy Grail','year':1975,'cast':['John','Eric','Michael','George','Terry']})
+movie['budget'] = 250000
+year = movie.pop('year')
+print(movie)
+print(year)
+
+# get length of dictionary
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+
+print(len(movie))
+
+# print keys or values
+# keys
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+
+print(movie.keys())
+
+# values
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+
+print(movie.values())
+
+# items, print out as tuples
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+
+print(movie.items())
+
+# looping through dictionary
+# keys
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+for key in movie:
+    print(key)
+
+# keys and values uses .items() syntax
+movie = {
+    'title' : 'Life of Brian',
+    'year' : 1979,
+    'cast' : ['John','Eric','Michael','George','Terry']
+}
+for key, value in movie.items():
+    print(key, value)
+
+    
