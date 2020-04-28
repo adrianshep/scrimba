@@ -1184,3 +1184,98 @@ for name in names:
     #msg1 = f'{name.title()}! {msg}'
     msg1 = name.title() + '! ' + msg
     print(msg1)
+
+##############################
+
+# Sort() and Sorted()
+
+my_list = [1,5,3,7,2]
+my_dict = {'car':4,'dog':2,'add':3,'bee':1}
+my_tuple = ('d','c','e','a','b')
+my_string = 'python'
+print(my_list,'original')
+# can't print, nothing is being delivered:
+print(my_list.sort())
+# renaming list as 'new' will allow it to be printed sorted
+print(my_list,'new')
+
+# same is true with reverse
+print(my_list.reverse())
+print(my_list,'new')
+
+# sorted function yields new list
+print(sorted(my_list))
+print(my_list,'new')
+
+# yields same thing as
+my_list1 = sorted(my_list)
+print(my_list1)
+
+# when we sort the tuple we actually get a list
+print(my_tuple,'original')
+print(sorted(my_tuple))
+print(my_tuple,'new')
+
+# get a list that's sorted
+print(my_string,'original')
+print(sorted(my_string))
+print(my_string,'new')
+
+# with dictionary only sorts key values in ascending order
+print(my_dict,'original')
+print(sorted(my_dict))
+print(my_dict,'new')
+
+# get results of dictionary as tuples inside the list sorted on the key
+print(my_dict,'original')
+print(sorted(my_dict.items()))
+print(my_dict,'new')
+
+# get values in ascending order
+print(my_dict,'original')
+print(sorted(my_dict.values()))
+print(my_dict,'new')
+
+# syntax on both functions is the same
+print(my_dict,'original')
+print(sorted(my_dict.values(), reverse=True))
+print(my_dict,'new')
+
+# with reversed get reversed object
+print(my_list,'original')
+print(reversed(my_list))
+print(my_list,'new')
+
+# to see above need to do it as list
+print(my_list,'original')
+print(list(reversed(my_list)))
+print(my_list,'new')
+
+# special case, slicing syntax reverses list, same as above
+print(my_list,'original')
+print(my_list[::-1])
+
+# get order we expect
+my_list = [1,5,-3,7,-2]
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_list))
+
+# sort by absolute values
+my_list = [1,5,-3,7,-2]
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_list, key = abs))
+
+# sorted by first element
+my_list = [1,5,-3,7,-2]
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_llist))
+
+# sorts same way
+my_list = [1,5,-3,7,-2]
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_llist, key = lambda item :item[0]))
+
+# sorts on last item
+my_list = [1,5,-3,7,-2]
+my_llist=[['car',4,65],['dog',2,30],['add',3,10],['bee',1,24]]
+print(sorted(my_llist, key = lambda item :item[2]))
