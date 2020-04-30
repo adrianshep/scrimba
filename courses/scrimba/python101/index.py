@@ -1415,4 +1415,44 @@ movie = {
 for key, value in movie.items():
     print(key, value)
 
-    
+##############################
+
+# Dictionaries II
+
+# keys must be unique, values not
+python = {'John':35,'Eric':36,'Michael':35,'Terry':38,'Graham':37,'TerryG':34}
+holy_grail = {'Arthur':40,'Galahad':35,'Lancelot':39,'Knight of NI':40, 'Zoot':17}
+life_of_brian = {'Brian':33,'Reg':35,'Stan/Loretta':32,'Biccus Diccus':45}
+
+# membership test
+print('arthur' in holy_grail) # case sensitive, won't find 'arthur'
+
+# escape quotation marks and other special characters
+print('Arthur' in holy_grail)
+if 'Arthur' not in python:
+    print('He\'s not here')
+
+# concatenating dictionaries
+people = {}
+people1 = {}
+people2 = {}
+
+#method 1 update
+people.update(python)
+people.update(holy_grail)
+people.update(life_of_brian)
+print(people)
+
+# if you have more than two dictionaries, these methods work best:
+
+#method 2 comprehension
+for groups in (python,holy_grail,life_of_brian) : people1.update(groups)
+print(sorted(people1.items()))
+
+#method 3 unpacking Python 3.5 and later
+people2 = {**python,**holy_grail,**life_of_brian}
+print(sorted(people2.items()))
+
+# sum over a dictionary
+# if any values aren't numbers but are say a string, sum will crash and not give any answer
+print('The sum of the ages: ', sum(people.values()))
