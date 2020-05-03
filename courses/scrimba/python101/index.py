@@ -1489,7 +1489,10 @@ antiques = {'name':'Antique Shop','french castle':400, 'wooden grail':3, 'scythe
 pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
 
 # my solution:
-cart = {}
-shops = {**freelancers, **antiques, **pet_shop}
-print(shops)
-
+freelancers = {'name':'Freelancing Shop','brian': 70, 'black knight':20, 'biccus diccus':100, 'grim reaper':500, 'minstrel':-15}
+antiques = {'name':'Antique Shop','french castle':400, 'wooden grail':3, 'scythe':150, 'catapult':75, 'german joke':5}
+pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
+mall = {}
+for shops in (freelancers, antiques, pet_shop):
+  mall.update(shops)
+  print('Welcome to the ' + mall['name'] + '!')
