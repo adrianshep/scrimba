@@ -1490,9 +1490,6 @@ pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
 
 # my solution:
 cart = {}
-all_shops = {}
-for shops in (freelancers, antiques, pet_shop):
-  all_shops.update(shops)
-for shop in all_shops:
-  print(shop)
+shops = {**freelancers, **antiques, **pet_shop}
+print(shops)
 
