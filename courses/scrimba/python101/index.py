@@ -1495,4 +1495,6 @@ pet_shop = {'name':'Pet Shop','blue parrot':10, 'white rabbit':5, 'newt': 2}
 mall = {}
 for shops in (freelancers, antiques, pet_shop):
   mall.update(shops)
-  print('Welcome to the ' + mall['name'] + '!')
+  print('Welcome to the ' + mall['name'] + '! We carry: ')
+  for key in shops:
+    print(key)
