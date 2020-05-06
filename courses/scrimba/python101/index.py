@@ -1498,3 +1498,8 @@ for shops in (freelancers, antiques, pet_shop):
   print('Welcome to the ' + mall['name'] + '! We carry: ')
   for key in shops:
     print(key)
+
+# test value for int to print key:
+    for key, value in shops:
+        if type(value) == int:
+        print(key)
