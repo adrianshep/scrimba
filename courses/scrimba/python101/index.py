@@ -1503,3 +1503,16 @@ for shops in (freelancers, antiques, pet_shop):
     for key, value in shops:
         if type(value) == int:
         print(key)
+
+# Olof's solution:
+
+# create an empty shopping cart
+cart = {}
+# loop through stores/dicts
+for shop in (freelancers,antiques,pet_shop) :
+    #inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
+    buy_item = input(f'Welcome to {shop["name"]}! what do you want to buy: {shop}').lower()
+    #update the cart
+    cart.update({buy_item:shop.pop(buy_item)}) # use pop...
+    buy_items = ", ".join(list(cart.keys()))
+print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
