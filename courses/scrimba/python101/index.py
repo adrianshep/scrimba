@@ -1516,3 +1516,12 @@ for shop in (freelancers,antiques,pet_shop) :
     cart.update({buy_item:shop.pop(buy_item)}) # use pop...
     buy_items = ", ".join(list(cart.keys()))
 print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
+
+##############################
+
+# Dictionaries Exercise 1.2
+
+#ver 1.2 add ability to exit a store without buying and go to next by typing 'exit', and to exit if a nonexistant item is bought(typed)
+#Add purse with 1000 gold pieces and payment for the items during or at end of code and show a message about total cost and how much gold you have left
+
+
