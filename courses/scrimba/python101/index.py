@@ -1525,3 +1525,14 @@ print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayh
 #Add purse with 1000 gold pieces and payment for the items during or at end of code and show a message about total cost and how much gold you have left
 
 
+cart = {}
+for shop in (freelancers,antiques,pet_shop) :
+    buy_item = input(f'Welcome to {shop["name"]}! what do you want to buy: {shop}').lower()
+    if buy_item not in shop['name']:
+        print(f'{buy_item} not found.')
+        break
+    elif buy_item == 'exit':
+        break
+    else:
+        buy_items = ", ".join(list(cart.keys()))
+print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
