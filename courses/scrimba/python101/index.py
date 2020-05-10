@@ -1538,3 +1538,22 @@ for shop in (freelancers,antiques,pet_shop) :
         buy_items = ", ".join(list(cart.keys()))
         purse = purse - buy_item
 print(f'You Purchased {buy_item}. It is costing you {buy_item.value()} gold pieces. You have a total of {purse - sum(cart.values())} gold pieces left in your purse.')
+
+# Olof's solution:
+
+#create an dempty shopping cart
+cart = {}
+#loop through stores/dicts
+for shop in (freelancers,antiques,pet_shop) :
+    #inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
+    buy_item = input(f'Welcome to {shop["name"]}! what do you want to buy: {shop}').lower()
+    #exit on exit typed or buying nonexistant item
+    if buy_item == 'exit':
+        continue
+    if buy_item not in shop:
+        continue
+        
+    #update the cart
+    cart.update({buy_item:shop.pop(buy_item)}) # use pop...
+    buy_items = ", ".join(list(cart.keys()))
+print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
