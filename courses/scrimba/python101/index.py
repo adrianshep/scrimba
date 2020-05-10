@@ -1543,17 +1543,23 @@ print(f'You Purchased {buy_item}. It is costing you {buy_item.value()} gold piec
 
 #create an dempty shopping cart
 cart = {}
+#create purse with 100Gp
+purse = 1000
+buy_items1 = ''
 #loop through stores/dicts
 for shop in (freelancers,antiques,pet_shop) :
     #inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
-    buy_item = input(f'Welcome to {shop["name"]}! what do you want to buy: {shop}').lower()
+    buy_item = input(f'Welcome to {shop["name"]}! (type exit to exit store) what do you want to buy: {shop}').lower()
     #exit on exit typed or buying nonexistant item
     if buy_item == 'exit':
         continue
     if buy_item not in shop:
         continue
-        
+    #update string
+    buy_items1 = buy_items1 + f'{buy_item}:{shop[buy_item]} Gp, '    
     #update the cart
     cart.update({buy_item:shop.pop(buy_item)}) # use pop...
     buy_items = ", ".join(list(cart.keys()))
-print(f'You Purchased {buy_items}. Today it is all free. Have a nice day of mayhem!')
+    total_sum = sum(cart.values())
+print(f'You Purchased {buy_items}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
+print(f'You Purchased {buy_items1}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
