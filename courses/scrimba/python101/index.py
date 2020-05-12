@@ -1570,3 +1570,28 @@ print(f'You Purchased {buy_items1}. Your total is {total_sum} Gp. Your change is
 
 #ver 1.4 random bug fix, ' browser compatability', refactoring code... basically being lazy ..stop scrolling TikTok/Facebook! ;-)
 #Ver 1.5 print inventory before and after purchases as one department_store of stuff(combine inventories from all stores into one...pretend Big Biz bought all the local stores, and want constant reporting for inventory management...)
+
+# my solution:
+
+#create an empty shopping cart
+cart = {}
+# create an empty department store
+store = {}
+#create purse with 100Gp
+purse = 1000
+buy_items1 = ''
+# consolidate shops into department store
+for shops in (freelancers, antiques, pet_shop): store.update(shops)
+print(store)
+#inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
+buy_item = input(f'What do you want to buy: {store}').lower()
+    if buy_item not in store:
+        continue
+#update string
+buy_items1 = buy_items1 + f'{buy_item}:{store[buy_item]} Gp, '    
+#update the cart
+cart.update({buy_item:store.pop(buy_item)}) # use pop...
+buy_items = ", ".join(list(cart.keys()))
+total_sum = sum(cart.values())
+print(f'You Purchased {buy_items}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
+print(f'You Purchased {buy_items1}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
