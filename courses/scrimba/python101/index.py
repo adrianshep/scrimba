@@ -1586,12 +1586,13 @@ print(store)
 #inputbox  to show what you can buy...capture textstring of what was bought...make lowercase
 buy_item = input(f'What do you want to buy: {store}').lower()
     if buy_item not in store:
-        continue
-#update string
-buy_items1 = buy_items1 + f'{buy_item}:{store[buy_item]} Gp, '    
-#update the cart
-cart.update({buy_item:store.pop(buy_item)}) # use pop...
-buy_items = ", ".join(list(cart.keys()))
-total_sum = sum(cart.values())
-print(f'You Purchased {buy_items}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
-print(f'You Purchased {buy_items1}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
+        print(store.get(buy_item,'is not found in our inventory'))
+    else:
+        #update string
+        buy_items1 = buy_items1 + f'{buy_item}:{store[buy_item]} Gp, '    
+    #update the cart
+    cart.update({buy_item:store.pop(buy_item)}) # use pop...
+    buy_items = ", ".join(list(cart.keys()))
+    total_sum = sum(cart.values())
+    print(f'You Purchased {buy_items}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
+    print(f'You Purchased {buy_items1}. Your total is {total_sum} Gp. Your change is {purse - total_sum} Gp. Have a nice day of mayhem!')
