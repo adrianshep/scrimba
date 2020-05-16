@@ -1702,3 +1702,49 @@ films[0].nice_print()
 #Objects are the actual things you built
 #variables => attributes
 #functions => methods
+
+
+##############################
+
+# Inheritance
+
+class Person:
+    def move(self):
+        print("Moves 4 paces")
+    def rest(self):
+        print("Gains 4 health points")
+class Doctor(Person):
+    pass # this means that Python skips empty code and makes Doctor the same as Person
+    # otherwise, below code adds additional method to Person methods:
+    def heal(self):
+    print("Heals 10 health points")
+
+class Fighter(Person):
+    def fight(self):
+        print("Do 10 health points of damage")
+    def move(self):
+        print("Moves 6 paces")
+
+class Wizard(Doctor,Fighter):
+# if Doctor and Fighter methods come into conflict, Python will choose Doctor as it's first in the list
+    def cast_spell(self):
+        print("Turns invisble")
+    def heal(self):
+        print("Heals 15 health points")
+
+character1=Person()
+character1.move()
+
+character1=Doctor()
+character1.heal()
+
+character1=Fighter()
+character1.heal() # throws error as Fighter doesn't have heal method
+character1.move()
+# Fighter's move method supercedes move method inherited from Person
+
+character1=Wizard()
+character1.heal()
+# Wizard's heal method overrides heal method inherited from Doctor
+character1.move()
+# Python will take move method from closest Class above Wizard, so in this case, Fighter
