@@ -1748,3 +1748,45 @@ character1.heal()
 # Wizard's heal method overrides heal method inherited from Doctor
 character1.move()
 # Python will take move method from closest Class above Wizard, so in this case, Fighter
+
+
+##############################
+
+# Modules
+
+# examples of Python modules: datetime random string os math browser
+
+# https://docs.python.org/3/py-modindex.html
+
+# how to import module:
+import platform
+
+# below dir command shows what the module does by listing the methods found in it:
+print(dir(platform))
+
+# importing more than one module by separating with a comma:
+
+import platform, string, os
+# to access functions inside a specific module, prefix with module name
+
+# checks which version of Python is running:
+print(platform.python_version())
+
+# to reduce typing, you can use an alias:
+
+import platform as pl
+
+print(pl.python_version())
+# platform comman instead of pl will now throw an error
+
+# importing just Python version and system
+from platform import python_version, system
+
+print(python_version())
+print(system())
+
+# reduce above import of Python version by using alias:
+
+from platform import python_version as pv
+
+print(pv())
