@@ -1862,3 +1862,67 @@ print(en,sv)
 en1,sv1 = zip(*en_sv_dict.items())
 print(en1,sv1)
 ('this', 'parrot', 'is', 'deceased') ('denna', 'papegojan', 'är', 'avliden')
+
+
+##############################
+
+# Lambda Functions Part 1
+# anonymous functions, single line
+
+print(' Lambda Functions')
+def square(x):
+    return x*x
+print(square(3))
+
+# rewritten as a lambda
+#name = lambda parameter(s): expression
+square1 = lambda x: x*x
+# return value is always implicit in a lambda, whereas a function doesn't have to return a value
+# as long as it's on the one line, you can also right the above as a function
+def square2(x):return x*x
+
+# sticking to lambdas
+double_mult = lambda x,y: 2*x*y
+
+print(double_mult(2,3))
+
+# user name and alias from an input box
+def name_and_alias(name,alias):
+    return name.strip().title() + ':' + alias.strip().title()
+name_an
+print(name_and_alias(' john  ClEEse  ','HECKLER'))
+# returns > John Cleese:Heckler
+
+# written as a lambda
+def name_and_alias(name,alias):
+    return name.strip().title() + ':' + alias.strip().title()
+name_and_alias1 = lambda name,alias:name.strip().title() + ':' + alias.strip().title()
+def name_and_alias2(name,alias):return name.strip().title() + ':' + alias.strip().title()
+
+print(name_and_alias2(' john  ClEEse  ','HECKLER'))
+print(name_and_alias(' john  ClEEse  ','HECKLER'))
+# all three methods above do the same thing
+
+# order by first name
+
+monty_python = ['John Marwood Cleese','Eric Idle','Michael Edward Palin','Terrence Vance Gilliam','Terry Graham Perry Jones', 'Graham Arthur Chapman']
+
+monty_python.sort(key = lambda name:name.split(' '))
+print(monty_python)
+# returns > ['Eric Idle', 'Graham Arthur Chapman', 'John Marwood Cleese', 'Michael Edward Palin', 'Terrence Vance Gilliam', 'Terry Graham Perry Jones']
+
+# order by last name
+monty_python = ['John Marwood Cleese','Eric Idle','Michael Edward Palin','Terrence Vance Gilliam','Terry Graham Perry Jones', 'Graham Arthur Chapman']
+
+monty_python.sort(key = lambda name:name.split(' ')[-1])
+print(monty_python)
+# returns > ['Graham Arthur Chapman', 'John Marwood Cleese', 'Terrence Vance Gilliam', 'Eric Idle', 'Terry Graham Perry Jones', 'Michael Edward Palin']
+
+# last name sort followed by first name sort
+monty_python = ['John Marwood Cleese','Eric Idle','Michael Edward Palin','Terrence Vance Gilliam','Terry Graham Perry Jones', 'Graham Arthur Chapman']
+def sort_names(name):
+    return name.split(' ')
+monty_python.sort(key = lambda name:name.split(' ')[-1])
+print(monty_python)
+monty_python.sort(key= sort_names)
+print(monty_python)
