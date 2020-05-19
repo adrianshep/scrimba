@@ -1790,3 +1790,75 @@ print(system())
 from platform import python_version as pv
 
 print(pv())
+
+
+##############################
+
+# Zip and Unzip
+
+# combining different iterables: strings, tuples, lists
+
+nums = [1,2,3,4] 
+letters = ['a','b','c','d']
+names =['John','Eric','Michael','Graham','Joe']
+combo = list(zip(nums, letters)) # creates list of tuples matched by index number
+# will match two iterables of same length
+print(combo)
+# will return >[(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd')]
+
+# run the above using:
+nums = '1234'
+# returns lists of tuples with strings in them: >[('1', 'a'), ('2', 'b'), ('3', 'c'), ('4', 'd')]
+
+nums = '1234' 
+letters = ['a','b','c','d']
+names =['John','Eric','Michael','Graham','Joe']
+combo = dict(zip(nums,letters))
+print(combo)
+# returns a dictionary:
+# > {'1': 'a', '2': 'b', '3': 'c', '4': 'd'}
+
+# adding third list to zip
+nums = '1234' 
+letters = ['a','b','c','d']
+names =['John','Eric','Michael','Graham','Joe']
+combo = list(zip(nums,letters,names))
+print(combo)
+# returns >[('1', 'a', 'John'), ('2', 'b', 'Eric'), ('3', 'c', 'Michael'), ('4', 'd', 'Graham')]
+# list of tuples with strings in them
+
+# unzip
+nums = '1234' 
+letters = ['a','b','c','d']
+names =['John','Eric','Michael','Graham','Joe']
+combo = list(zip(nums,letters,names))
+print(combo)
+# unpacking - assigning results of unzip into three different variables
+num,let,nam =zip(*combo)
+# returns 
+> [('1', 'a', 'John'), ('2', 'b', 'Eric'), ('3', 'c', 'Michael'), ('4', 'd', 'Graham')]
+print(num, let, nam)
+# returns tuples > ('1', '2', '3', '4') ('a', 'b', 'c', 'd') ('John', 'Eric', 'Michael', 'Graham')
+
+# special case with dictionaries
+keys = 'this parrot is deceased'
+values = 'denna papegojan är avliden'
+keys = keys.split()
+values = values.split()
+print(keys,values)
+# returns ['this', 'parrot', 'is', 'deceased'] ['denna', 'papegojan', 'är', 'avliden']
+en_sv_dict = dict(zip(keys,values))
+print(en_sv_dict)
+# returns {'this': 'denna', 'parrot': 'papegojan', 'is': 'är', 'deceased': 'avliden'}
+# same result can be arrived at this way:
+new_dict = {key:value for key,value in zip(keys,values)}
+print(new_dict)
+
+en,sv = list(en_sv_dict.keys()),list(en_sv_dict.values())
+print(en,sv)
+# breaks it apart again ['this', 'parrot', 'is', 'deceased'] ['denna', 'papegojan', 'är', 'avliden']
+
+# same result but with tuples instead
+en1,sv1 = zip(*en_sv_dict.items())
+print(en1,sv1)
+('this', 'parrot', 'is', 'deceased') ('denna', 'papegojan', 'är', 'avliden')
