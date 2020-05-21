@@ -1968,3 +1968,14 @@ print((lambda a,b,c: a+b+c)(2,3,4))
 print((lambda a,b,c=2: a+b+c)(2,3,4))
 print((lambda a,b,c=2: a+b+c)(2,c=3,b=4))
 print((lambda *args: sum(args))(2,3,4,50))
+
+
+##############################
+
+# Lambda Functions - Exercise
+
+print('Lambdas Exercise')
+
+def f(x): return x + 5
+f = #insert equivalent lambda here
+print(f(2))
