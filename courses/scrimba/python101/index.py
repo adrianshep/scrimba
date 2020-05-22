@@ -1977,5 +1977,6 @@ print((lambda *args: sum(args))(2,3,4,50))
 print('Lambdas Exercise')
 
 def f(x): return x + 5
-f = #insert equivalent lambda here
+#insert equivalent lambda here
+f = lambda x : x + 5
 print(f(2))
