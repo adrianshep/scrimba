@@ -1978,5 +1978,11 @@ print('Lambdas Exercise')
 
 def f(x): return x + 5
 #insert equivalent lambda here
+
+# my solution:
 f = lambda x : x + 5
+
+# Olof's solution:
+f = lambda x: x + 5
+
 print(f(2))
