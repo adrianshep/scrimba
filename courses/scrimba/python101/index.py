@@ -1999,3 +1999,6 @@ print(strip_spaces('Monty Pythons Flying Circus'))
 
 # my solution:
 strip_spaces1 = lambda str : ''.join(str.split(' '))
+
+# Olof's solution:
+strip_spaces1 = lambda str:''.join(str.split(' '))  
