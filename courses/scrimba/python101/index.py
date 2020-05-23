@@ -1976,6 +1976,8 @@ print((lambda *args: sum(args))(2,3,4,50))
 
 print('Lambdas Exercise')
 
+# First Exercise:
+
 def f(x): return x + 5
 #insert equivalent lambda here
 
@@ -1986,3 +1988,14 @@ f = lambda x : x + 5
 f = lambda x: x + 5
 
 print(f(2))
+
+# Second Exercise:
+
+def strip_spaces(str):
+   return ''.join(str.split(' '))
+#write equivalent lambda and insert Lambda here
+strip_spaces1 = ...   
+print(strip_spaces('Monty Pythons Flying Circus')) 
+
+# my solution:
+strip_spaces1 = lambda str : ''.join(str.split(' '))
