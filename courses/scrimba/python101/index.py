@@ -2012,3 +2012,6 @@ list_b = [3,4,5,6,7]
 #write lambda below 
 join_list_no_duplicates1 = ...
 print(join_list_no_duplicates(list_a,list_b))
+
+# my solution:
+join_list_no_duplicates1 = lambda list_a, list_b : list(set(list_a + list_b))
