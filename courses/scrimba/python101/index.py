@@ -2002,3 +2002,13 @@ strip_spaces1 = lambda str : ''.join(str.split(' '))
 
 # Olof's solution:
 strip_spaces1 = lambda str:''.join(str.split(' '))  
+
+# Third Exercise:
+
+def join_list_no_duplicates(list_a,list_b):
+   return list(set(list_a + list_b))
+list_a = [1,2,3,4]
+list_b = [3,4,5,6,7]
+#write lambda below 
+join_list_no_duplicates1 = ...
+print(join_list_no_duplicates(list_a,list_b))
