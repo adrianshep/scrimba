@@ -2015,3 +2015,6 @@ print(join_list_no_duplicates(list_a,list_b))
 
 # my solution:
 join_list_no_duplicates1 = lambda list_a, list_b : list(set(list_a + list_b))
+
+# Olof's solution:
+join_list_no_duplicates1 = lambda list_a,list_b:list(set(list_a + list_b))
