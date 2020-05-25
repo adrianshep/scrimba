@@ -2018,3 +2018,14 @@ join_list_no_duplicates1 = lambda list_a, list_b : list(set(list_a + list_b))
 
 # Olof's solution:
 join_list_no_duplicates1 = lambda list_a,list_b:list(set(list_a + list_b))
+
+# Fourth Exercise:
+
+#Complete the function so it returns a function
+def create_quad_func(a,b,c):
+    '''return function f(x) = ax^2 + bx + c'''
+    return lambda x:...
+f = create_quad_func(2,4,6)
+g = 
+print(f(2))
+print(g(2))
