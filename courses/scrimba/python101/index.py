@@ -2035,3 +2035,9 @@ def create_quad_func(a,b,c):
     '''return lambda g(x) : ax^2 + bx + c'''
 g = create_quad_func(2, 4, 6)
 print(g(2))
+
+# Olof's solution:
+def create_quad_func(a,b,c):
+    return lambda x : a*x**2 + b*x + c
+g = create_quad_func(1,2,3)
+print(g(2))
