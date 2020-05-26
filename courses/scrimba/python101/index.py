@@ -2049,5 +2049,8 @@ signups = ['MPF104', 'MPF20', 'MPF2', 'MPF17', 'MPF3', 'MPF45']
 print(sorted(signups)) # Lexicographic sort
 #write sorting by integer
 
-my solution:
-print(sorted(signups, key = lambda x : int(x[3:]))
+# my solution:
+print(sorted(signups, key = lambda x : int(x[3:])))
+
+# Olof's solution:
+print(sorted(signups,key = lambda id:int(id[3:])))
