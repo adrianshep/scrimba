@@ -2041,3 +2041,11 @@ def create_quad_func(a,b,c):
     return lambda x : a*x**2 + b*x + c
 g = create_quad_func(1,2,3)
 print(g(2))
+
+
+# Fifth Exercise:
+
+signups = ['MPF104', 'MPF20', 'MPF2', 'MPF17', 'MPF3', 'MPF45']
+print(sorted(signups)) # Lexicographic sort
+#write sorting by integer
+print(sorted(...) # Integer sort
