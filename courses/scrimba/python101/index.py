@@ -2054,3 +2054,21 @@ print(sorted(signups, key = lambda x : int(x[3:])))
 
 # Olof's solution:
 print(sorted(signups,key = lambda id:int(id[3:])))
+
+
+# Sixth Exercise:
+
+class Player:
+   def __init__(self, name, score):
+       self.name = name
+       self.score =  score
+
+Eric = Player('Eric', 116700)
+John = Player('John', 24327)
+Terry = Player('Terry', 150000)
+player_list = [Eric, John, Terry]
+
+
+# Exercise: Sort this by score using lambda!
+# write code here
+print([player.name for player in player_list])
