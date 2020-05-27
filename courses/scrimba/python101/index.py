@@ -2072,7 +2072,10 @@ player_list = [Eric, John, Terry]
 # Exercise: Sort this by score using lambda!
 # write code here
 
-my solution:
+# my solution:
 sorted(player_list, key = lambda x : x[1])
+
+# Olof's solution:
+player_list.sort(key = lambda player: player.score)
 
 print([player.name for player in player_list])
