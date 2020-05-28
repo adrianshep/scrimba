@@ -2079,3 +2079,51 @@ sorted(player_list, key = lambda x : x[1])
 player_list.sort(key = lambda player: player.score)
 
 print([player.name for player in player_list])
+
+
+##############################
+
+# Comprehensions - Lists
+
+numbers = [1,2,3,4,5,6,7,8,9]
+
+new_list = []
+for num in numbers:
+    new_list.append(num*num)
+print(new_list)
+
+# returns: [1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# above code verbally: give me a list with num squared for each num in numbers
+
+# comprehension:
+
+new_list = [num * num for num in numbers]
+# returns same
+
+# give me a list with num for each num in numbers if num is even 
+new_list = [num for num in numbers if num % 2 == 0]
+
+# returns: [2, 4, 6, 8]
+
+# using filter and lambda
+new_list = filter(lambda num: num % 2 ==0,numbers)
+# has to be turned into list form filter object:
+print(list(new_list))
+
+# returns: [2, 4, 6, 8]
+
+# I want a (letter, num) pair for each letter in 'spam' and each number in '0123'
+new_list = []
+for letter in 'spam':
+   for num in range(4):
+       new_list.append((letter,num))
+print(new_list)
+
+# returns list of tuples: [('s', 0), ('s', 1), ('s', 2), ('s', 3), ('p', 0), ('p', 1), ('p', 2), ('p', 3), ('a', 0), ('a', 1), ('a', 2), ('a', 3), ('m', 0), ('m', 1), ('m', 2), ('m', 3)]
+
+# as a list comprehension:
+new_list = [(letter, num) for letter in 'spam' for num in range(4)]
+print(new_list)
+# returns same as above
+
