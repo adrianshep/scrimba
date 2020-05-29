@@ -2127,3 +2127,46 @@ new_list = [(letter, num) for letter in 'spam' for num in range(4)]
 print(new_list)
 # returns same as above
 
+
+##############################
+
+# Comprehensions - Dictionary
+
+# Dictionary comprehensions
+movies = ["And Now for Something Completely Different","Monty Python and the Holy Grail",
+"Monty Python's Life of Brian","Monty Python Live at the Hollywood Bowl","Monty Python's The Meaning of Life","Monty Python Live (Mostly)"]
+year =[1971,1975,1979,1982,1983,2014]
+names = ['John','Eric','Michael','Graham','Terry','TerryG']
+print(list(zip(movies, year)))
+# returns list of tuples
+
+# give me a dict('movies': year) for each movies, year in zip(movies, year)
+
+new_dict = dict()
+for movie, yr in zip(movies,year):
+    new_dict[movie] = yr
+print(new_dict)
+# returns a dictionary
+
+# as a comprehension
+new_dict = {movie:yr for movie,yr in zip(movies,year)}
+print(new_dict)
+# returns same as above for loop
+
+# adding if conditional
+new_dict = {movie:yr for movie,yr in zip(movies,year) if yr < 1983}
+print(new_dict)
+
+# adding second conditional
+new_dict = {movie:yr for movie,yr in zip(movies,year) if yr < 1983 and movie.startswith('Monty')}
+print(new_dict)
+
+# print out movies each person liked
+n1 =[(name,movie,yr) for name,movie,yr in zip(names,movies,year) if yr < 1981 ]
+print(n1)
+
+# make it more readable
+# integer for yr has to be typecast to str to be included in list
+n1 =[[name + "s favorite movie was " + movie + " from " + str(yr)] for name,movie,yr in zip(names,movies,year) if yr < 1981 ]
+print(n1)
+
