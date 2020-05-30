@@ -2170,3 +2170,70 @@ print(n1)
 n1 =[[name + "s favorite movie was " + movie + " from " + str(yr)] for name,movie,yr in zip(names,movies,year) if yr < 1981 ]
 print(n1)
 
+
+##############################
+
+# Randomness
+
+import random
+# generates number between 0 and <1
+print(random.random())
+
+# generate five random numbers
+for i in range(5):
+    print(random.random())
+
+# generate five random numbers up to 6
+for i in range(5):
+    print(random.random()*6)
+
+# generate five random numbers between 1 and 6 (these are all floats)
+for i in range(5):
+    print(random.uniform(1, 6))
+
+# generate five random integers between 1 and 6
+for i in range(5):
+    print(random.randint(1,6))
+    # returns 2, 3, 5, 5, 5
+
+# randrange allows for step
+for i in range(5):
+    print(random.randrange(1, 100, 2))
+    # selects random numbers from 1, 3, 5, 7, etc. up to, but not including, 100)
+
+# choose and item from list randomly
+friends_list =  ['John', 'Eric', 'Michael', 'Terry', 'Graham']
+print(random.choice(friends_list))
+
+# draw multiple names, but same value only once -- no duplicates
+friends_list =  ['John', 'Eric', 'Michael', 'Terry', 'Graham']
+print(random.sample(friends_list,3))
+
+# shuffle the list
+friends_list =  ['John', 'Eric', 'Michael', 'Terry', 'Graham']
+print(random.sample(friends_list,5))
+random.shuffle(friends_list)
+print(friends_list)
+
+# 
+import random, string 
+#  import of string gives access to constants string.ascii_letters, string.digits below
+
+smallcaps = 'abcdefghijklmnopqrstuvwxyz'
+largecaps = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+digits = '0123456789'
+letters_numbers = string.ascii_letters + string.digits
+# can specify string.ascii_lowercase or string.ascii_uppercase; no specification means you get a mix of both
+#print(friends_list)
+
+# expanding on above
+for i in range(7):
+    word += random.choice(letters_numbers)
+# for non-repeating, no duplicates
+word1 = ''.join(random.sample(letters_numbers,7))
+
+# fix value
+word = random.choices(letter_numbers, k=7)
+# strings can be duplicated
+
+
