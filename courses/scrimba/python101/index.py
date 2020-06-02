@@ -2314,6 +2314,9 @@ def enigma_light()
 # create two dictionaries, one to encode and one to decode
     dict_e = dict(zip(keys,values))
     dict_d = dict(zip(values,keys)) 
+    # OR create one and then flip it to create the other
+    dict_e = dict(zip(keys,values))
+    dict_d = {value:key for key, value in dict_e.items()}
 # user input 'the message' and mode
 # run encode or decode
 # return result
