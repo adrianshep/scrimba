@@ -2312,6 +2312,8 @@ def enigma_light()
 # autogenerate the values string by offsetting original string
     values = keys[-1] + keys[0:-1]
 # create two dictionaries, one to encode and one to decode
+    dict_e = dict(zip(keys,values))
+    dict_d = dict(zip(values,keys)) 
 # user input 'the message' and mode
 # run encode or decode
 # return result
