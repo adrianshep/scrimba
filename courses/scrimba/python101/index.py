@@ -2310,6 +2310,7 @@ def enigma_light()
 # create keys string
     keys = 'abcdefghijklmnopqrstuvwxyz !'
 # autogenerate the values string by offsetting original string
+    values = keys[-1] + keys[0:-1]
 # create two dictionaries, one to encode and one to decode
 # user input 'the message' and mode
 # run encode or decode
