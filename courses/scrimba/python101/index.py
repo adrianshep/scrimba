@@ -2318,6 +2318,8 @@ def enigma_light()
     dict_e = dict(zip(keys,values))
     dict_d = {value:key for key, value in dict_e.items()}
 # user input 'the message' and mode
+    msg = input('Enter your secret message quietly: ')
+    mode = input('Crypto mode: encode (e) OR decode (d): ')
 # run encode or decode
 # return result
 # clean and beautify the code 
