@@ -2299,3 +2299,17 @@ print(timeit.timeit('test3()', globals=globals(), number=10))
 # >3.819000005722046
 # >3.441999912261963
 # >0.17100000381469727
+
+
+##############################
+
+# Project - Crypto
+
+print('Project -  Crypto')
+# create keys string
+# autogenerate the values string by offsetting original string
+# create two dictionaries, one to encode and one to decode
+# user input 'the message' and mode
+# run encode or decode
+# return result
+# clean and beautify the code 
