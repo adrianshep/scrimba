@@ -2306,7 +2306,9 @@ print(timeit.timeit('test3()', globals=globals(), number=10))
 # Project - Crypto
 
 print('Project -  Crypto')
+def enigma_light()
 # create keys string
+    keys = 'abcdefghijklmnopqrstuvwxyz !'
 # autogenerate the values string by offsetting original string
 # create two dictionaries, one to encode and one to decode
 # user input 'the message' and mode
