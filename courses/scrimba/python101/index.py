@@ -2349,6 +2349,8 @@ def enigma_light()
 from random import randrange as r
 
 # ask how many questions user wants
+no_questions = int(input('How many questions would you like to try?: '))
+
 # set score start at zero
 # loop through number of questions
 # create two random numbers and calc answer
