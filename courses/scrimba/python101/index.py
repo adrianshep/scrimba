@@ -2346,6 +2346,8 @@ def enigma_light()
 # remember line break (\n) and triple quotes (''') don't work properly with Brython
 
 # import modules
+from random import randrange as r
+
 # ask how many questions user wants
 # set score start at zero
 # loop through number of questions
