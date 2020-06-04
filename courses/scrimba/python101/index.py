@@ -2329,3 +2329,27 @@ def enigma_light()
     return new_msg.capitalize()
 # return result
 # clean and beautify the code 
+
+
+##############################
+
+# Project - Math Tutor
+
+# objective: create application to practice multiplication tables
+# - user specifies number of random practice questions
+#  - user is presented with a prompt, e.g., 5 x 5, and inputs answer for each question
+#  - when all questions have been answered, print out:
+#  - - a. some form of 'thanks for playing' greeting
+#  - - b. number of correct answers
+#  - - c. percentage of correct answers
+# can use different rows
+# remember line break (\n) and triple quotes (''') don't work properly with Brython
+
+# import modules
+# ask how many questions user wants
+# set score start at zero
+# loop through number of questions
+# create two random numbers and calc answer
+# show user the question
+# capture answer and modify user score
+# output final score
