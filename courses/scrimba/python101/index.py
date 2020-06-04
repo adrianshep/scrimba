@@ -2318,14 +2318,14 @@ def enigma_light()
     dict_e = dict(zip(keys,values))
     dict_d = {value:key for key, value in dict_e.items()}
 # user input 'the message' and mode
-    msg = input('Enter your secret message quietly: ')
-    mode = input('Crypto mode: encode (e) OR decode (d): ')
+     msg = input('Enter your secret message quietly: ')
+    mode = input('Crypto mode: encode (e) OR decrypt as default: ')
 # run encode or decode
- if mode == 'e':
-        new_msg = ''.join([dict_e[letter] for letter in msg])
-    elif mode == 'd':
-        new_msg = ''.join([dict_d[letter] for letter in msg])
+    if mode.lower() == 'e':
+        new_msg = ''.join([dict_e[letter] for letter in msg.lower()])
+    else:
+        new_msg = ''.join([dict_d[letter] for letter in msg.lower()])
     
-    return new_msg
+    return new_msg.capitalize()
 # return result
 # clean and beautify the code 
