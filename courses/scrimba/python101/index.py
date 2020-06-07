@@ -2351,6 +2351,7 @@ from time import time as t
 
 # ask how many questions user wants
 no_questions = int(input('How many questions would you like to try?: '))
+max_num =int(input('Highest number you want to use in practice?: '))
 
 # set score start at zero
 score = 0
@@ -2358,7 +2359,7 @@ score = 0
 # loop through number of questions
 start = t()
 for q in range(no_questions):
-    num1,num2 = r(1, 11), r(1, 11)
+    num1,num2 = r(1, max_num+1), r(1, max_num+1)
     ans = num1 * num2
     u_ans = int(input(f'{num1} X {num2} = '))
     if u_ans == ans:
