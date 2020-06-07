@@ -2369,5 +2369,6 @@ print(f'Thank you for playing! \nYou got {score} out of {no_questions} ({round(s
 # create two random numbers and calc answer
 # show user the question
 # capture answer and modify user score
-# bonus 1: measure & present time taken to answer, in total and per question
 # output final score
+# bonus 1: measure & present time taken to answer, in total and per question
+# bonus 2: let user specify how high numbers used should be
