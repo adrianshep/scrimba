@@ -2373,3 +2373,4 @@ print(f'Thank you for playing! \nYou got {score} out of {no_questions} ({round(s
 # output final score
 # bonus 1: measure & present time taken to answer, in total and per question
 # bonus 2: let user specify how high numbers used should be
+# bonus 3: show all questions and answers at end
