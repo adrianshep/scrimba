@@ -2378,3 +2378,24 @@ for a in answer_list:
 # bonus 1: measure & present time taken to answer, in total and per question
 # bonus 2: let user specify how high numbers used should be
 # bonus 3: show all questions and answers at end
+
+
+##############################
+
+# Project - Marble Trading Game
+
+# create a marble betting game:
+# player draws a random marble from a bag
+# a bag has 10 marbles: 6 green and 4 red
+# if player draws a green marble, player wins same amount player bet; draws a red, loses the same amount
+# marbles are replaced into bag after each round
+# before each draw, player enters amount of bet
+# player starts game with 1000 gold pieces or $, £, €
+# number of rounds should be variable
+# if player loses half of money, the game is over
+# print data as player goes along
+
+# bonus: replace green marble with a black 10x winner marble, red with 5x loser marble
+
+
+
