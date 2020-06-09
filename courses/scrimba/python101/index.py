@@ -2398,8 +2398,12 @@ for a in answer_list:
 # bonus: replace green marble with a black 10x winner marble, red with 5x loser marble
 
 import random
+
 ## pseudocode:
+
 # create a bag with 10 marbles
+bag = ('green','green','green','green','green','green','red','red','red','red')
+
 # starting amount of money
 # current amount of money
 # result of last round
