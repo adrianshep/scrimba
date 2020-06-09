@@ -2397,5 +2397,23 @@ for a in answer_list:
 
 # bonus: replace green marble with a black 10x winner marble, red with 5x loser marble
 
+import random
+## pseudocode:
+# create a bag with 10 marbles
+# starting amount of money
+# current amount of money
+# result of last round
+# how many rounds will be played
+# what last marble was
+# welcome user to game
+# loop drawing marbles
+    # how much was bet
+    # draw marble
+    # win or loss
+    # calculate win or loss and new amount
+    # lose game if half of money lost
+    # print results
+# print final results
+
 
 
