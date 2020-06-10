@@ -2414,6 +2414,8 @@ purse = start_purse
 result = 0
 
 # how many rounds will be played
+rounds = 3
+
 # what last marble was
 # welcome user to game
 # loop drawing marbles
