@@ -2408,6 +2408,8 @@ bag = ('green','green','green','green','green','green','red','red','red','red')
 start_purse = 1000
 
 # current amount of money
+purse = start_purse
+
 # result of last round
 # how many rounds will be played
 # what last marble was
