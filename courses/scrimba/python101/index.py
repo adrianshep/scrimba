@@ -2420,6 +2420,8 @@ rounds = 3
 marble = 'none'
 
 # welcome user to game
+print(f'You start the game with {start_purse} gold pieces')
+
 # loop drawing marbles
     # how much was bet
     # draw marble
