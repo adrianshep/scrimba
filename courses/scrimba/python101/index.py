@@ -2445,6 +2445,9 @@ for draw in range (1, rounds + 1):
         break
 
     # print results
+    print(f'purse: {purse}, last result: ({marble}): {result}')
+    print('')
+
 # print final results
 
 
