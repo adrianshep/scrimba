@@ -2404,6 +2404,9 @@ import random
 # create a bag with 10 marbles
 bag = ('green','green','green','green','green','green','red','red','red','red')
 
+# bonus: replace a red and a green marble with a black and a white one
+# bag = ('green','green','green','green','green','black','red','red','red','white')
+
 # starting amount of money
 start_purse = 1000
 
@@ -2435,6 +2438,16 @@ for draw in range (1, rounds + 1):
         result = bet
     else:
         result = -bet
+
+    # bonus: win or loss
+    # if marble == 'green':
+    #     result = bet
+    # elif marble == 'black':
+    #     result = 10 * bet
+    # elif marble == 'white':
+    #     result = -5 * bet
+    # else:
+    #     result = -bet
 
     # calculate win or loss and new amount
     purse += result
