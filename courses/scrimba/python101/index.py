@@ -2449,6 +2449,7 @@ for draw in range (1, rounds + 1):
     print('')
 
 # print final results
-
+print('starting/ending purse: ', start_purse, '/', purse)
+print('gain/loss: ', ((purse-start_purse)/start_purse * 100),'%')
 
 
