@@ -2437,6 +2437,8 @@ for draw in range (1, rounds + 1):
         result = -bet
 
     # calculate win or loss and new amount
+    purse += result
+
     # lose game if half of money lost
     # print results
 # print final results
