@@ -2473,6 +2473,17 @@ print('gain/loss: ', ((purse-start_purse)/start_purse * 100),'%')
 # largest palindrome of two numbers with three digits each
 # a palindrome is a number that is the same backwards and forwards, like 101 or 990099
 
+import time
 
+def is_palindrome(val):
+    val = str(val)
+    if val == val[::-1]
+        return(True)
+    else:
+        return(False)
+
+# alternative set-up:
+# def is_palindrome(val):
+    # return str(val) == str(val)[::-1]
 
 
