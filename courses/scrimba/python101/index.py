@@ -2466,3 +2466,13 @@ print('starting/ending purse: ', start_purse, '/', purse)
 print('gain/loss: ', ((purse-start_purse)/start_purse * 100),'%')
 
 
+##############################
+
+# Project - Euler Problem 4
+
+# largest palindrome of two numbers with three digits each
+# a palindrome is a number that is the same backwards and forwards, like 101 or 990099
+
+
+
+
