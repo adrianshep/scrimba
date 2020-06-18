@@ -2532,7 +2532,7 @@ def palindrome_back():
             if is_palindrome(num1*num2):
                 palindromes_list.append(num1*num2)
                 low_val = max((num1*num2)/high_val,low_val)
-                
+                low_num2_val = num2
                 debug_list.append([num1,num2,(num1*num2)/high_val,low_val])
             if num1 == num2:
                 break
