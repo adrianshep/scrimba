@@ -2573,6 +2573,11 @@ def palindrome_create():
                        
                         return 'palindrome:', palindrome, 'digit:',digit, 'palindrome/digit:', palindrome/digit ,'iterations:',iterations #gives nicer close out of loops
 
-palindrome()
-palindrome_back()
-palindrome_create()
+#palindrome()
+#palindrome_back()
+runs = 10 
+start = time.time()
+for run in range(runs):
+    return_value = palindrome_create()
+    end =time.time()
+print(return_value, 'Average run-time:', (end-start)/runs)
