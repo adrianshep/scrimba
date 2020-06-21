@@ -2573,6 +2573,28 @@ def palindrome_create():
                        
                         return 'palindrome:', palindrome, 'digit:',digit, 'palindrome/digit:', palindrome/digit ,'iterations:',iterations #gives nicer close out of loops
 
+
+def palindrome_create2():
+    
+    iterations = 0 # our trusty iterator
+    
+    for dig1 in range(9,1,-1):
+        for dig2 in range(9,-1,-1):
+            for dig3 in range(9,-1,-1):
+                # we create the -palindromes by adding the 'placevalues', 
+                # example step 999999 -> 998899 -> 997799 etc but only to 100001 
+                palindrome = dig1*100000 + dig2*10000 + dig3*1000 + dig3*100 + dig2*10 + dig1
+                #print(palindrome) #debug
+                
+                low_val = int(palindrome/999) # or low_val = palindrome//999 
+                high_val = int(palindrome**0.5)+1
+                for digit in range(low_val,high_val):
+                    iterations += 1
+                    if palindrome % digit == 0:
+                        
+                        return 'palindrome:',palindrome, 'digit:',digit, 'palindrome/digit:', palindrome/digit ,'iterations:',iterations
+
+
 #palindrome()
 #palindrome_back()
 runs = 10 
