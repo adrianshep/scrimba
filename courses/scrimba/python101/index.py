@@ -2578,7 +2578,7 @@ def palindrome_create2():
     
     iterations = 0 # our trusty iterator
     
-    for dig1 in range(9,1,-1):
+    for dig1 in range(9,0,-1):
         for dig2 in range(9,-1,-1):
             for dig3 in range(9,-1,-1):
                 # we create the -palindromes by adding the 'placevalues', 
@@ -2597,9 +2597,16 @@ def palindrome_create2():
 
 #palindrome()
 #palindrome_back()
-runs = 10 
-start = time.time()
-for run in range(runs):
-    return_value = palindrome_create()
-    end =time.time()
-print(return_value, 'Average run-time:', (end-start)/runs)
+for func in ['palindrome_create','palindrome_create2']:
+    runs = 10 
+    start = time.time()
+    for run in range(runs):
+        #print(locals()[func])
+        return_value = locals()[func]()
+        end = time.time()
+    print(return_value, 'Average run-time:', (end-start)/runs)
+    
+# 1st method                110    sec - 1x         general purpose
+# 1st with half search       55    sec - 2x         general purpose
+# 2nd backwards with limit    0.6  sec - ~150-180x   general purpose
+# 3rd, 4th backwards create   0.06 sec - ~1500-1800x numbers hardcoded, can be generalized
