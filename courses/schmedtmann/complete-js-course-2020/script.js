@@ -22,3 +22,8 @@ console.log(isIsland);
 console.log(population);
 console.log(country);
 console.log(language);
+
+// let, const and var
+language = 'English';
+const isIsland;
+const language;
