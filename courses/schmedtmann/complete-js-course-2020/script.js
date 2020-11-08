@@ -27,3 +27,11 @@ console.log(language);
 language = 'English';
 const isIsland;
 const language;
+
+// Basic Operators
+//  population of each half of the country:
+let half = population/2;
+console.log(population + 1)
+population > 6;
+population < 33;
+let description = country + ' is in ' + continent + ', ' + 'and its ' + population + ' million people speak ' + language;
