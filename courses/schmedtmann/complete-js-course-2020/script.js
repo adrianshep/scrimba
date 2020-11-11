@@ -49,6 +49,8 @@ if (population > 33) {
 
 // Lesson: Type Conversion and Type Coercion
 
+// Type Conversion
+
 const inputYear = '1991';
 console.log(input + 18);
 // returns 199118 -- concatenates the two strings
@@ -61,3 +63,29 @@ console.log(Number(inputYear) + 18);
 console.log(String(23), 23);
 // returns 23 as a string and 23 as a number
 
+// Type Coercion
+// happens whenever an operator is dealing with values of two different types; JS will behind the scenes convert one of the values so the operation can be executed
+
+console.log('I am ' + 23 + ' years old.')
+// returns entirely as a string
+
+console.log('23' - '10' - 3);
+// returns number 10
+// minus operator converts strings to numbers as opposed to plus operator converting numbers to strings
+
+// all below convert strings to numbers
+console.log('23' * '2');
+console.log('23' / '2');
+console.log('23' > '18');
+
+let n = '1' + 1;
+// returns '11' (string)
+n = n - 1;
+// minus operator converts '11' to 11
+console.log(n);
+// result is 10
+
+2 + 3 + 4 + '5'
+// '95'
+'10' - '4' - '3' - 2 + '5'
+// '15' 
