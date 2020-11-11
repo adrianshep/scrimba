@@ -46,3 +46,18 @@ if (population > 33) {
 } else {
     console.log(`${country}'s population is ${33 - population} million below average.`)
 }
+
+// Lesson: Type Conversion and Type Coercion
+
+const inputYear = '1991';
+console.log(input + 18);
+// returns 199118 -- concatenates the two strings
+console.log(Number(inputYear));
+// will return string as a number
+// inputYear value is still a string, though; it isn't converted
+console.log(Number(inputYear) + 18);
+// will return 2009, 1991 + 18
+
+console.log(String(23), 23);
+// returns 23 as a string and 23 as a number
+
