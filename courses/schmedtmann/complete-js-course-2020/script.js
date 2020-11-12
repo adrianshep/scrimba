@@ -102,3 +102,46 @@ console.log(n);
 // false
 5 + 6 + '4' + 9 - 4 - 2;
 // 1143
+
+//  Lesson: Truthy and Falsy Values
+
+// 5 falsy values: 0, '', undefined, null, Nan
+// become false when converted to a boolean
+
+console.log(Boolean(0)); 
+// false
+console.log(Boolean(undefined));
+// false
+console.log(Boolean('Jonas'));
+// true
+console.log(Boolean({}));
+// true
+console.log('');
+// false
+
+// conversion happens when using:
+// 1. logical operators
+// 2. condition of an if/else statement
+
+// in if/else statement
+const money = 0;
+if (money) {
+    console.log("Don't spend it all");
+} else {
+    console.log("You should get a job!")
+}
+// JS will try to convert money in condition into a boolean
+// if money is 0, then condition is falsy
+// if money is 100, then condition is truthy
+
+// checking if variable is defined or not (does it exist or not)
+let height;
+if (height) {
+    console.log('Yay! Height is defined!');
+} else {
+    console.log('Height is UNDEFINED');
+}
+// let height; is undefined
+// let height = value; is defined
+// unless let height = 0; will be undefined
+// can fix the height = 0 problem using logical operators
