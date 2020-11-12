@@ -193,3 +193,8 @@ if (favorite === 23) {
 } else {
     console.log('Number is not 23 nor 7 nor 9');
 }
+
+// Inequality Operators
+
+if (favorite !== 23) console.log('Why not 23?');
+// !== is strick inequality operator; make sure to use it instead of loose != ;
