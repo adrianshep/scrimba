@@ -145,3 +145,51 @@ if (height) {
 // let height = value; is defined
 // unless let height = 0; will be undefined
 // can fix the height = 0 problem using logical operators
+
+// Lesson: Equality Operators:
+//  == vs. ===
+
+const age = 18;
+if (age === 18) console.log('You just became an adult :D');
+// single line of code means you can omit {}
+
+18 === 18
+// true
+18 === 19
+// false
+
+// === is strict equality operator; does NOT do type coercion
+// == is loose equality operator; does type coercion
+
+'18' == 18
+// true
+'18' === 18
+// false
+
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)');
+
+if (age == 18) console.log('You just became an adult :D (loose)');
+// BEST PRACTICE: always default to strict triple equality operator
+// if you need type coercion, always better to do it manually before the comparison than rely on loose double equality operator
+
+const favorite = prompt("What's your favorite number?");
+console.log(favorite);
+console.log(typeof favorite);
+// prompt returns a string, not a number
+
+if (favorite == 23) {
+    console.log('Cool! 23 is an amazing number!');
+// loose equality operator will allow string '23' to convert to number 23
+
+const favorite = Number(prompt("What's your favorite number?"));
+
+if (favorite === 23) {
+    console.log('Cool! 23 is an amazing number!');
+} else if (favorite === 7) {
+    console.log('7 is also a cool number')
+} else if (favorite === 9) {
+    console.log('9 is also a cool number')
+} else {
+    console.log('Number is not 23 nor 7 nor 9');
+}
