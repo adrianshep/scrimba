@@ -219,3 +219,43 @@ if (numNeighbors === 1) {
 } else {
     console.log('No borders.');
 }
+
+// Lesson: Logical Operators
+
+const hasDriversLicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriversLicense && hasGoodVision);
+// true
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+// false
+
+console.log(hasDriversLicense || hasGoodVision);
+// true
+
+console.log(!hasDriversLicense);
+
+if (hasDriversLicense && hasGoodVision) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+
+const isTired = true;
+console.log(hasDriversLicense || hasGoodVision || isTired);
+// true
+console.log(hasDriversLicense && hasGoodVision && isTired);
+// true
+
+const isTired = true;
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+// false
