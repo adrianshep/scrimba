@@ -197,4 +197,16 @@ if (favorite === 23) {
 // Inequality Operators
 
 if (favorite !== 23) console.log('Why not 23?');
-// !== is strick inequality operator; make sure to use it instead of loose != ;
+// !== is strick inequality operator; make sure to use it instead of loose != 
+
+// Assignment: Equality Operators
+
+let numNeighbors = prompt('How many neighbor countries does your country have?');
+if (numNeighbors == 1) {
+    console.log('Only 1 border!');
+} else if (numNeighbors > 1) {
+    console.log('More than 1 border.');
+} else {
+    console.log('No borders.');
+}
+
