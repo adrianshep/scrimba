@@ -269,7 +269,7 @@ switch(day) {
         // day === 'monday'
         console.log('Plan course structure');
         console.log('Go to coding meetup');
-        // break;
+        break;
     case 'tuesday':
         console.log('Prepare theory videos');
         break;
@@ -289,3 +289,20 @@ switch(day) {
 }
 
 // without break command, code continues executing until next break command
+
+// switch statement in if/else statements
+
+if (day === 'monday') {
+    console.log('Plan course structure');
+    console.log('Go to coding meetup');
+} else if (day === 'tuesday') {
+    console.log('Prepare theory videos');
+} else if (day === 'wednesday' || day === 'thursday') {
+    console.log('Write code examples');
+} else if (day === 'friday') {
+    console.log('Record videos');
+} else if (day === 'saturday' || day === 'sunday') {
+    console.log('Enjoy the weekend :D');
+} else {
+    console.log('Not a valid day!');
+}
