@@ -269,7 +269,7 @@ switch(day) {
         // day === 'monday'
         console.log('Plan course structure');
         console.log('Go to coding meetup');
-        break;
+        // break;
     case 'tuesday':
         console.log('Prepare theory videos');
         break;
@@ -287,3 +287,5 @@ switch(day) {
     default:
         console.log('Not a valid day!');
 }
+
+// without break command, code continues executing until next break command
