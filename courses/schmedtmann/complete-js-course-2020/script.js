@@ -312,7 +312,7 @@ if (day === 'monday') {
 
 const language = 'spanish';
 
-switch(language) {
+switch (language) {
     case 'chinese':
     case 'mandarin':
         console.log('MOST number of native speakers!');
@@ -332,3 +332,22 @@ switch(language) {
     default:
         console.log('Great language too :D');
 }
+
+// Lesson: Statements and Expressions
+
+// Expression:
+// a piece of code that produces a value
+//  3 + 4 is an expression
+// 1991 is, too
+// true && false && !false
+
+// Statement:
+// a bigger piece of code that is executed that does not produce a value in itself
+// this is a statement and it doesn't produce a value
+if (23 > 10) {
+    const str = '23 is bigger';
+}
+// '23 is bigger' is an expression; anything that ends in a semicolon is a statement
+
+// in a template literal you can only insert an expression, not a statement
+console.log(`I'm ${2037-1991} years old`);
