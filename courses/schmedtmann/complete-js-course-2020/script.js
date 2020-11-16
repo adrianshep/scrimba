@@ -351,3 +351,17 @@ if (23 > 10) {
 
 // in a template literal you can only insert an expression, not a statement
 console.log(`I'm ${2037-1991} years old`);
+
+// Lesson: Conditional or Ternary Operator
+// ternary because it has three parts:
+// condition, if, else
+
+const age = 23;
+// age >= 18 ? console.log('I like to drink wine') : console.log('I like to drink water')
+// if age is >= to 18, 
+
+// an operator always produces a value
+// in other words, an operators is always an expression
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
