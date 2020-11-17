@@ -393,3 +393,8 @@ let population = 330;
 const country = "America";
 const myCountryPopulation = population > 33 ? 'above' : 'below';
 console.log(`${country}'s population is ${population} average`);
+
+// Jonas's solution:
+console.log(
+    `${country}'s population is ${population > 33 ? 'above' :
+    'below'} average`);
