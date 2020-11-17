@@ -385,3 +385,11 @@ one word changes between these two sentences!
 2. After checking the result, change the population temporarily to 13 and then to
 130. See the different results, and set the population back to original
 */
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let population = 330;
+const country = "America";
+const myCountryPopulation = population > 33 ? 'above' : 'below';
+console.log(`${country}'s population is ${population} average`);
