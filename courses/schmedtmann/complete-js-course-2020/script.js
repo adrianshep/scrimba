@@ -398,3 +398,14 @@ console.log(`${country}'s population is ${population} average`);
 console.log(
     `${country}'s population is ${population > 33 ? 'above' :
     'below'} average`);
+
+// Lesson: Functions
+
+function logger() {
+    console.log('My name is Ado');
+}
+
+// calling / running / invokine the function
+logger();
+logger();
+logger();
