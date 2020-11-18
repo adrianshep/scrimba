@@ -416,4 +416,5 @@ function fruitProcessor(apples, oranges) {
     return juice;
 }
 
-fruitProcessor(5, 0);
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
