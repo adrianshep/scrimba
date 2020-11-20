@@ -421,3 +421,21 @@ console.log(appleJuice);
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+
+// Lesson: Function Declarations vs Expressions
+
+// function declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+// the parameter is the placeholder for the argument in the function; the argument itself is the actual value invoked for use in the function
+const age1 = calcAge1(1991);
+console.log(age1);
+
+// function expression
+const calcAge2 = function(birthYear) {
+    return 2037 - birthYear;
+}
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
