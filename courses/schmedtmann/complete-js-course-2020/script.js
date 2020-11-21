@@ -442,3 +442,9 @@ const age2 = calcAge2(1991);
 
 console.log(age1, age2);
 
+// a function declaration can be called in code before they're defined
+const age1 = calcAge1(1991);
+
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
