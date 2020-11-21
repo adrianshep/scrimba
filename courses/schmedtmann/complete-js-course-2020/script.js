@@ -448,3 +448,11 @@ const age1 = calcAge1(1991);
 function calcAge1(birthYear) {
     return 2037 - birthYear;
 }
+
+// function expression cannot be called before it is defined due to hoisting
+// below won't work
+const age2 = calcAge2(1991);
+
+const calcAge2 = function(birthYear) {
+    return 2037 - birthYear;
+}
