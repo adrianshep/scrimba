@@ -459,6 +459,7 @@ const calcAge2 = function(birthYear) {
 
 // Lesson: Arrow Functions
 // a special form of function expression
+// implicit return
 
 // function expression
 const calcAge2 = function( birthYear) {
@@ -466,4 +467,6 @@ const calcAge2 = function( birthYear) {
 }
 
 // arrow function
-birthYear => 2037 - birthYear;
+const calcAge3 = birthYear => 2037 - birthYear;
+const calcAge3 = calcAge3(1991);
+console.log(age3);
