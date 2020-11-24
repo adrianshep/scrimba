@@ -495,3 +495,14 @@ function fruitProcessor(apples, oranges) {
     return juice;
 }
 fruitProcessor(2, 3);
+
+// Lesson: Reviewing Functions
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearsUntilRetirement = function(birthYear, firstName) {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName} retires in ${retirement} years`;
+}
