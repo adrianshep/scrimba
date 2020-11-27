@@ -529,3 +529,10 @@ console.log(friends);
 
 // creating with an Array function
 const years = new Array(1978, 1979, 1980);
+
+// retrieving elements from arrays
+// arrays are zero-based
+console.log(friends[0]);
+// 'Adam'
+console.log(friends[2]);
+// 'Dennis'
