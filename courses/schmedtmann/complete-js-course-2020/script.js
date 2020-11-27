@@ -516,3 +516,14 @@ const yearsUntilRetirement = function(birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1970, 'Mike'));
+
+// Lesson: Introduction to Arrays
+
+const friend1 = 'Adam';
+const friend2 = 'Brad';
+const friend3 = 'Dennis';
+
+// creating an array
+const friends = ['Adam', 'Brad', 'Dennis'];
+console.log(friends);
+
