@@ -527,3 +527,5 @@ const friend3 = 'Dennis';
 const friends = ['Adam', 'Brad', 'Dennis'];
 console.log(friends);
 
+// creating with an Array function
+const years = new Array(1978, 1979, 1980);
