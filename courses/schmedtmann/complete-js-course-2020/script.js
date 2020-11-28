@@ -536,3 +536,6 @@ console.log(friends[0]);
 // 'Adam'
 console.log(friends[2]);
 // 'Dennis'
+
+// .length is an object property 
+console.log(friends.length);
