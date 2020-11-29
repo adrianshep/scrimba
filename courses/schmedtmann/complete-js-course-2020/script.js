@@ -539,3 +539,5 @@ console.log(friends[2]);
 
 // .length is an object property 
 console.log(friends.length);
+// use it to retrieve last element in the array
+console.log(friends[friends.length - 1]);
