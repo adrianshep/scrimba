@@ -548,3 +548,9 @@ console.log(friends[friends.length - 1]);
 friends[1] = 'Tom';
 console.log(friends);
 // 'Tom' takes place of 'Brad' in the array
+
+// array can hold values of different types at the same time
+const firstName = 'Adam';
+const adam = [firstName, 'Jura', 1982 - 1963, friends];
+console.log(adam);
+console.log(adam.length);
