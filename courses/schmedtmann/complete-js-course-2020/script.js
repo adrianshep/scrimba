@@ -528,7 +528,7 @@ const friends = ['Adam', 'Brad', 'Dennis'];
 console.log(friends);
 
 // creating with an Array function
-const years = new Array(1978, 1979, 1980);
+const yrs = new Array(1978, 1979, 1980);
 
 // retrieving elements from arrays
 // arrays are zero-based
@@ -554,3 +554,26 @@ const firstName = 'Adam';
 const adam = [firstName, 'Jura', 1982 - 1963, friends];
 console.log(adam);
 console.log(adam.length);
+
+// Exercise
+const calcAge = function(birthYear) {
+    return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+// illegal:
+calcAge(years);
+
+console.log(calcAge(years));
+// years + 10
+// returns values as strings
+// years - 10
+// returns NaN
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
