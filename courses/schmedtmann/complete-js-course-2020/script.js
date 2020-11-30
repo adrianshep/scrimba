@@ -541,3 +541,10 @@ console.log(friends[2]);
 console.log(friends.length);
 // use it to retrieve last element in the array
 console.log(friends[friends.length - 1]);
+
+// add elements to the array
+// "change" or "mutate" the array
+// can't change the entire array, though -- that's illegal
+friends[1] = 'Tom';
+console.log(friends);
+// 'Tom' takes place of 'Brad' in the array
