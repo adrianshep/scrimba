@@ -589,3 +589,7 @@ console.log(friends);
 const newLength = friends.push('Danny X');
 console.log(friends);
 console.log(newLength);
+
+// unshift method adds elements to the beginning of the array
+friends.unshift('Tom');
+console.log(friends);
