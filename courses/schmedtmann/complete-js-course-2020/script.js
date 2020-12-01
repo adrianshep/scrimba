@@ -580,7 +580,12 @@ console.log(ages);
 
 // Lesson: Basic Array Operations (Methods)
 
-// push method
+// push method adds elements to the end of the array
 const friends = ['Adam', 'Brad', 'Dennis'];
 friends.push('Danny X');
 console.log(friends);
+
+// push function returns a value: the length of the new (mutated) array
+const newLength = friends.push('Danny X');
+console.log(friends);
+console.log(newLength);
