@@ -597,8 +597,10 @@ friends.unshift('Tom');
 console.log(friends);
 
 // Remove elements
-// pop method removes last element in array
+// pop method removes last element from array
 friends.pop();
+
+// pop returns the removed element
 const popped = friends.pop();
 console.log(popped);
-// friends less 'Danny X'
+// returns 'Danny X'
