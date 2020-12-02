@@ -604,3 +604,7 @@ friends.pop();
 const popped = friends.pop();
 console.log(popped);
 // returns 'Danny X'
+
+// shift removes first element from array
+friends.shift();
+console.log(friends);
