@@ -580,6 +580,8 @@ console.log(ages);
 
 // Lesson: Basic Array Operations (Methods)
 
+// Add elements
+
 // push method adds elements to the end of the array
 const friends = ['Adam', 'Brad', 'Dennis'];
 friends.push('Danny X');
@@ -593,3 +595,10 @@ console.log(newLength);
 // unshift method adds elements to the beginning of the array
 friends.unshift('Tom');
 console.log(friends);
+
+// Remove elements
+// pop method removes last element in array
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+// friends less 'Danny X'
