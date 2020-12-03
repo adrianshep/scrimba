@@ -615,3 +615,9 @@ console.log(friends.indexOf('Brad'));
 // if element is there, it will return its index
 // if it isn't, it will return -1
 console.log(friends.indexOf('Coach Lee'));
+
+// ES6 method includes
+console.log(friends.includes('Brad'));
+console.log(friends.includes('Coach Lee'));
+// method uses strict equality to test
+// returns true or false
