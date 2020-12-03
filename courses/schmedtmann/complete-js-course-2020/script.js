@@ -621,3 +621,8 @@ console.log(friends.includes('Brad'));
 console.log(friends.includes('Coach Lee'));
 // method uses strict equality to test
 // returns true or false
+
+// can use includes as a conditional
+if (friends.includes('Brad')) {
+    console.log('You have a friend called Brad')
+}
