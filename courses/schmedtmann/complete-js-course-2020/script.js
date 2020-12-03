@@ -608,3 +608,10 @@ console.log(popped);
 // shift removes first element from array
 friends.shift();
 console.log(friends);
+
+// indexOf
+
+console.log(friends.indexOf('Brad'));
+// if element is there, it will return its index
+// if it isn't, it will return -1
+console.log(friends.indexOf('Coach Lee'));
