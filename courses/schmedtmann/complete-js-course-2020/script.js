@@ -626,3 +626,24 @@ console.log(friends.includes('Coach Lee'));
 if (friends.includes('Brad')) {
     console.log('You have a friend called Brad')
 }
+
+// Lesson: Introduction to Objects
+
+// imagine an array of elements and arrays
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher', 
+    ['Michael', 'Peter', 'Steven']
+];
+
+// translate the above into its own data structure with curly braces instead of square brackets and you have an object
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
