@@ -640,6 +640,8 @@ const jonasArray = [
 
 // translate the above into its own data structure with curly braces instead of square brackets and you have an object
 
+// object literal syntax:
+
 const jonas = {
     firstName: 'Jonas',
     lastName: 'Schmedtmann',
@@ -647,3 +649,7 @@ const jonas = {
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
 };
+
+// big difference between objects and arrays is that order of elements matters a lot in arrays
+// arrays should be used for more ordered data
+// for situations where data is unstructured, objects should be used
