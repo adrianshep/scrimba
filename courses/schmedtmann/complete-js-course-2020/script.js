@@ -653,3 +653,25 @@ const jonas = {
 // big difference between objects and arrays is that order of elements matters a lot in arrays
 // arrays should be used for more ordered data
 // for situations where data is unstructured, objects should be used
+
+// Lesson: Dot vs Bracket Notation
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(jonas);
+console.log(jonas.lastName);
+// dot below is an operator which will go to jonas object to retrieve lastName
+
+console.log(jonas['lastName']);
+
+// square brackets are good for using any expression
+// wouldn't work in dot notation
+const nameKey = 'Name';
+console.log(joans['first' + nameKey]);
+console.log(joans['last' + nameKey]);
