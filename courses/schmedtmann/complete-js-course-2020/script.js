@@ -675,3 +675,9 @@ console.log(jonas['lastName']);
 const nameKey = 'Name';
 console.log(joans['first' + nameKey]);
 console.log(joans['last' + nameKey]);
+
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job and friends');
+console.log(jonas[interestedIn]);
+// using dot notation in prompt field returns undefined
+// have to use brackets notation
+// e.g., when term job is entered, 'teacher' is returned
