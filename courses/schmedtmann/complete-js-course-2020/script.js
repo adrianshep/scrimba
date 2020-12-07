@@ -681,3 +681,10 @@ console.log(jonas[interestedIn]);
 // using dot notation in prompt field returns undefined
 // have to use brackets notation
 // e.g., when term job is entered, 'teacher' is returned
+
+if (jonas[interestedIn]) {
+    console.log(jonas[interestedIn]);
+} else {
+    console.log('Wrong request! Choose between firstName, lastName, age, job and friends');
+}
+
