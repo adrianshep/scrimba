@@ -699,3 +699,19 @@ console.log(jonas.firstName + ' has ' + jonas.friends.length + ' friends, and hi
 
 // Jonas's solution:
 console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+// Lesson: Object Methods
+// any function attached to an object is called a method
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    calcAge: function(birthYear) {
+        return 2037 - birthYear;
+    }
+};
