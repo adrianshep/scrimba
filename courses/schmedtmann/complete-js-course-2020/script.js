@@ -722,10 +722,27 @@ const jonas = {
 
     // use of THIS
     // 'this' is equal to the object that is calling the method
+
+    // calcAge: function(birthYear) {
+    //     console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
     calcAge: function(birthYear) {
-        console.log(this);
-        return 2037 - this.birthYear;
+        this.age = 2037 - this.birthYear;
+        return this.age;
     }
 };
 
 console.log(jonas.calcAge());
+
+// needing to access age in multiple places:
+console.log(jonas.calcAge());
+console.log(jonas.calcAge());
+console.log(jonas.calcAge());
+
+// best practice is to calcAge once and store it in the object 
+// replaces calls with
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
