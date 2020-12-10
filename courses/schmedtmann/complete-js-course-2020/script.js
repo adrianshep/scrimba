@@ -711,11 +711,21 @@ const jonas = {
     friends: ['Michael', 'Peter', 'Steven'],
     hasDriversLicense: true,
 
+    // calcAge: function(birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // calcAge an example of the object holding a function value 
+
+// console.log(jonas.calcAge(1991));
+// console.log(jonas['calcAge'](1991));
+
+    // use of THIS
+    // 'this' is equal to the object that is calling the method
     calcAge: function(birthYear) {
-        return 2037 - birthYear;
+        console.log(this);
+        return 2037 - this.birthYear;
     }
 };
-// calcAge an example of the object holding a function value 
 
-console.log(jonas.calcAge(1991));
-console.log(jonas['calcAge'](1991));
+console.log(jonas.calcAge());
