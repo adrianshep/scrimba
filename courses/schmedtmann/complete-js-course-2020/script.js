@@ -715,3 +715,7 @@ const jonas = {
         return 2037 - birthYear;
     }
 };
+// calcAge an example of the object holding a function value 
+
+console.log(jonas.calcAge(1991));
+console.log(jonas['calcAge'](1991));
