@@ -764,18 +764,4 @@ const jonas = {
         return this.age;
     },
 
-    if (hasDriversLicense) {
-        const driversLicencse = 'has a driver\'s license';
-    } else {
-        const driversLicense = 'doesn\'t have a driver\'s license';
-    }
-};
-
-console.log(`Jonas is a ${age}-year-old ${job}, and he `);
-
-// Jonas's solution:
-    getSummary: function() {
-        return `${this.firstName} is a ${this.calcAge()}-year-old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`
-    }
-
-    console.log(jonas.getSummary());
+    
