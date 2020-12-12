@@ -788,6 +788,7 @@ for (let rep = 1; rep <= 10; rep++) {
 
 // Lesson: Looping Arrays, Breaking and Continuing
 
+// reading array
 const jonas = [
     'Jonas',
     'Schmedtmann',
@@ -800,3 +801,15 @@ const jonas = [
 for (let i = 0; i < jonas.length; i++) {
     console.log(jonas[i], typeof jonas[i]);
 }
+
+// filling array with types of variables
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+    console.log(jonas[i], typeof jonas[i]);
+
+    types[i] = typeof jonas[i];
+}
+
+console.log(types);
