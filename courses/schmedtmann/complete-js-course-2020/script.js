@@ -813,3 +813,8 @@ for (let i = 0; i < jonas.length; i++) {
 }
 
 console.log(types);
+
+// another way of adding elements to array
+// this approach is cleaner
+
+types.push(typeof jonas[i]);
