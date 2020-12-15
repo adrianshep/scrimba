@@ -845,3 +845,18 @@ for (let i = 0; i < jonas.length; i++) {
     // after the first number is found, the loop is terminated completely
     console.log(jonas[i], typeof jonas[i]);
 }
+
+
+// Lesson: Looping Backwards and Loops in Loops
+
+const jonas = [
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven']
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
