@@ -829,8 +829,19 @@ for (let i = 0; i < years.length; i++) {
 console.log(ages);
 
 // continue and break
+
+// continue
 for (let i = 0; i < jonas.length; i++) {
     if (typeof jonas[i] !== 'string') continue;
 
+    // if above condition isn't met, below code won't be reached:
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+// break
+for (let i = 0; i < jonas.length; i++) {
+    if (typeof jonas[i] === 'number') break;
+
+    // after the first number is found, the loop is terminated completely
     console.log(jonas[i], typeof jonas[i]);
 }
