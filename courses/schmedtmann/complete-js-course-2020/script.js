@@ -850,11 +850,12 @@ for (let i = 0; i < jonas.length; i++) {
 // Lesson: Looping Backwards and Loops in Loops
 
 const jonas = [
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
 ];
 
 for (let i = jonas.length - 1; i >= 0; i--) {
