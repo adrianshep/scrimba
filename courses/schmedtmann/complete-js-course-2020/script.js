@@ -871,3 +871,16 @@ for (let exercise = 1; exercise < 4; exercise++) {
         console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
     }
 }
+
+// Lesson: The While Loop
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+// while loop only needs the condition, not the counter
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weights repetition ${rep}`);
+    rep++;
+}
