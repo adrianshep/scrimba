@@ -21,7 +21,7 @@ const [x, y, z] = arr;
 console.log(x, y, z);
 
 // skip element in the middle
-const [main, , secondary] = restaurant.categories;
+let [main, , secondary] = restaurant.categories;
 console.log(main, secondary);
 
 // without destructuring
@@ -29,3 +29,5 @@ const temp = main;
 main = secondary;
 secondary = temp;
 
+// with destructuring
+[main, secondary] = [secondary, main];
