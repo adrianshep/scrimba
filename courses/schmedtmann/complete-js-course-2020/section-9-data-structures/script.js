@@ -5,7 +5,11 @@ const restaurant = {
     location: 'Via Angelo Tavanti 23, Firenze, Italy',
     categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
     starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-    mainMenu: ['Pizza', 'Pasta', 'Risotto']
+    mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+    order: function(starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    }
 };
 
 // Lesson: Destructuring Arrays
@@ -31,3 +35,7 @@ secondary = temp;
 
 // with destructuring
 [main, secondary] = [secondary, main];
+
+// received two return values from a function
+const [starter, mainCourse] = restaurant.order[2, 0];
+console.log(starter, mainCourse);
