@@ -67,4 +67,10 @@ const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
 
 // Lesson: Destructuring Objects
+// use curly braces providing variable names that exactly match
+// order DOESN'T matter in objects
+// very useful for dealing with API calls, allowing for a lot less code
+
+const {name, openingHours, categories} = restaurant;
+console.log(name, openingHours, categories);
 
