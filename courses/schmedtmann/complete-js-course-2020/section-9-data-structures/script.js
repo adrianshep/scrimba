@@ -76,3 +76,10 @@ console.log(name, openingHours, categories);
 
 const {name: restaurantName, openingHours: hours, categories: tags} = restaurant;
 console.log(restaurantName, hours, tags);
+
+// useful feature for dealing with API third party data
+// undefined:
+restaurant.menu
+// set default values
+const { menu = [], starterMenu: starters = []} = restaurant;
+console.log(menu, starters);
