@@ -71,6 +71,8 @@ console.log(p, q, r);
 // order DOESN'T matter in objects
 // very useful for dealing with API calls, allowing for a lot less code
 
-const {name, openingHours, categories} = restaurant;
+const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 
+const {name: restaurantName, openingHours: hours, categories: tags} = restaurant;
+console.log(restaurantName, hours, tags);
