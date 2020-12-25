@@ -83,3 +83,10 @@ restaurant.menu
 // set default values
 const { menu = [], starterMenu: starters = []} = restaurant;
 console.log(menu, starters);
+
+// mutating variables
+let a = 111;
+let b = 999;
+const obj = {a: 23, b: 7, c: 14};
+// for below to be valid, it must be wrapped in parentheses
+({ a, b } = obj);
