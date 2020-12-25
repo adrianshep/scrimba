@@ -90,3 +90,7 @@ let b = 999;
 const obj = {a: 23, b: 7, c: 14};
 // for below to be valid, it must be wrapped in parentheses
 ({ a, b } = obj);
+
+// nested objects
+const { fri: { open: o, close: c }} = openingHours;
+console.log(open, close);
