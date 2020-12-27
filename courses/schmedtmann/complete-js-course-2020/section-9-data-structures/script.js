@@ -112,3 +112,12 @@ const obj = {a: 23, b: 7, c: 14};
 const { fri: { open: o, close: c }} = openingHours;
 console.log(open, close);
 
+// Lesson: The Spread Operator
+// the problem:
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+// the solution of the spread operator
+const newArr = [1, 2, ...arr];
+console.log(newArr);
