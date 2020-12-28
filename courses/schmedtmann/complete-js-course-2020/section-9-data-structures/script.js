@@ -121,3 +121,9 @@ console.log(badNewArr);
 // the solution of the spread operator
 const newArr = [1, 2, ...arr];
 console.log(newArr);
+
+// logs individual elements of the array
+console.log(...newArr);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
+console.log(newMenu);
