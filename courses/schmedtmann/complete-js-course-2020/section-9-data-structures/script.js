@@ -127,3 +127,6 @@ console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
 console.log(newMenu);
+
+// spread operator doesn't create new variables
+// can only use it in places where you would otherwise write values separated by commas
