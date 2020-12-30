@@ -137,3 +137,6 @@ const mainMenuCopy = [...restaurant.mainMenu];
 // Challenge: join 2 arrays
 // my solution
 const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// Jonas's solution
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
