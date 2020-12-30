@@ -130,3 +130,6 @@ console.log(newMenu);
 
 // spread operator doesn't create new variables
 // can only use it in places where you would otherwise write values separated by commas
+
+// Spread Operator Use Case: Copy array (shallow copy)
+const mainMenuCopy = [...restaurant.mainMenu];
