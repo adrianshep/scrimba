@@ -140,3 +140,12 @@ const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 // Jonas's solution
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
+
+// spread operator works on iterables: arrays, strings, maps, sets, NOT objects
+
+// spread operator on strings
+const str = 'Jonas';
+const letters = [...str, ' ', '5.'];
+console.log(letters);
+console.log(...str);
+// same as console.log('j', 'o', etc.);
