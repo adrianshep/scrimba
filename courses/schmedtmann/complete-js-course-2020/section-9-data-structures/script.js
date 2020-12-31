@@ -149,3 +149,6 @@ const letters = [...str, ' ', '5.'];
 console.log(letters);
 console.log(...str);
 // same as console.log('j', 'o', etc.);
+// this won't work:
+console.log(`${...str} Schmedtmann`);
+// multiple values separated by comma are only expected with arguments going into a function or when building an array
