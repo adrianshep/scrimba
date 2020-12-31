@@ -28,6 +28,10 @@ const restaurant = {
 
     orderDelivery: function({starterIndex = 1, mainIndex = 0, time = '20:00', address}) {
         console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+    },
+
+    orderPasta: function(ing1, ing2, ing3) {
+        console.log(`Here is our delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
     }
 };
 
@@ -152,3 +156,11 @@ console.log(...str);
 // this won't work:
 console.log(`${...str} Schmedtmann`);
 // multiple values separated by comma are only expected with arguments going into a function or when building an array
+
+const ingredients = [prompt('Let\'s make pasta! Ingredient 1?'),
+prompt('Ingredient 2?'),
+prompt('Ingredient 3?')
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
