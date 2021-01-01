@@ -168,3 +168,8 @@ restaurant.orderPasta(...ingredients);
 // Objects (since ES2018)
 const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Giuseppe'};
 console.log(newRestaurant);
+
+const restaurantCopy = {...restaurant};
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
