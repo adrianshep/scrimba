@@ -164,3 +164,7 @@ prompt('Ingredient 3?')
 console.log(ingredients);
 
 restaurant.orderPasta(...ingredients);
+
+// Objects (since ES2018)
+const newRestaurant = {foundedIn: 1998, ...restaurant, founder: 'Giuseppe'};
+console.log(newRestaurant);
