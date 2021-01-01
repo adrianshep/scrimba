@@ -173,3 +173,16 @@ const restaurantCopy = {...restaurant};
 restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
+
+// Lesson: Rest Patterns and Parameters
+// same syntax (...)
+// but opposite of spread operator
+
+// spread operator, because it's on the right side of the =
+const arr = [1, 2, ...[3, 4]];
+
+// REST, because on left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+// result:
+// 1 2 [3, 4, 5]
+console.log(a, b, others);
