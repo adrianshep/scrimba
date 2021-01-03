@@ -216,3 +216,5 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 // will log: mushrooms ["onion," "olives", "spinach"]
+restaurant.orderPizza('mushrooms');
+// will log: mushrooms []
