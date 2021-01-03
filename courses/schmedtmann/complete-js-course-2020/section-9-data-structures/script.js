@@ -32,6 +32,11 @@ const restaurant = {
 
     orderPasta: function(ing1, ing2, ing3) {
         console.log(`Here is our delicious pasta with ${ing1}, ${ing2} and ${ing3}`);
+    },
+
+    orderPizza: function(mainIngredient, ...otherIngredients) {
+        console.log(mainIngredient);
+        console.log(otherIngredients);
     }
 };
 
@@ -208,3 +213,6 @@ add(8, 2, 5, 3, 2, 1, 4);
 
 const x = [23, 5, 7];
 add(...x);
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// will log: mushrooms ["onion," "olives", "spinach"]
