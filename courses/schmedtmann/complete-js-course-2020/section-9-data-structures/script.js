@@ -229,3 +229,6 @@ console.log('' || 'Jonas');
 console.log(true || 0);
 console.log(undefined || null);
 // undefined is falsey, so null is returned, even though null is falsey
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// because 'Hello' is first truthy value, it triggers the short circuit
