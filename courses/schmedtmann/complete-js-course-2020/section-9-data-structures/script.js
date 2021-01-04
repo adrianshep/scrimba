@@ -224,3 +224,8 @@ restaurant.orderPizza('mushrooms');
 // if first operand is truthy, second operand won't even be looked at
 console.log(3 || 'Jonas');
 // returns 3
+console.log('' || 'Jonas');
+// returns 'Jonas,' the truthy value
+console.log(true || 0);
+console.log(undefined || null);
+// undefined is falsey, so null is returned, even though null is falsey
