@@ -218,3 +218,9 @@ restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 // will log: mushrooms ["onion," "olives", "spinach"]
 restaurant.orderPizza('mushrooms');
 // will log: mushrooms []
+
+// Lesson: Short Circuiting (&& and ||)
+// Use ANY data type, return ANY data type, short-circuiting
+// if first operand is truthy, second operand won't even be looked at
+console.log(3 || 'Jonas');
+// returns 3
