@@ -231,4 +231,12 @@ console.log(undefined || null);
 // undefined is falsey, so null is returned, even though null is falsey
 
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
-// because 'Hello' is first truthy value, it triggers the short circuit, as the OR statement will be true no matter what follows
+// because 'Hello' is first truthy value, it triggers the short circuit, as the OR statement will be true no matter what value(s) follow(s)
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+// shorter method by short circuit
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
