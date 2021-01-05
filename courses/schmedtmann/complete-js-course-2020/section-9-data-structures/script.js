@@ -240,3 +240,8 @@ console.log(guests1);
 // shorter method by short circuit
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
+
+// won't work when value is 0, due to falsy
+
+
+
