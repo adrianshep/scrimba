@@ -249,3 +249,6 @@ console.log(0 && 'Jonas');
 // result is 0; doesn't evaluate second operand
 console.log(7 && 'Jonas');
 // result is 'Jonas'; as first value is truthy, last value is then returned
+
+console.log('Hello' && 23 && null 'jonas');
+// null is falsy and stops the evaluation; null is therefore the returned value
