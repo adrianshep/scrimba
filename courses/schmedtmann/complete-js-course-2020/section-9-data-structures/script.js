@@ -261,3 +261,16 @@ if (restaurant.orderPizza) {
 // simpler way:
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 // if first value doesn't exist, it short circuits the rest
+
+
+// Lesson: Nullish Coalescing Operator (??)
+// restaurant.numGuests = 0;
+// JS will interpret 0 as falsy and got to the value of 10 as the value of guests
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish values: null and undefined (NOT 0 or '') 
+// as interpreted by ??, 0 is not a nullish value but a falsy one and will short circuit the evaluation returning the correct 0 guests rather than 10
+const guestCorrect = restaurant.numGuests ?? 10; 
+console.log(guestCorrect);
