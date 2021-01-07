@@ -252,3 +252,12 @@ console.log(7 && 'Jonas');
 
 console.log('Hello' && 23 && null 'jonas');
 // null is falsy and stops the evaluation; null is therefore the returned value
+
+// Practical example
+if (restaurant.orderPizza) {
+    restaurant.orderPizza('mushroom', 'spinach')
+}
+
+// simpler way:
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+// if first value doesn't exist, it short circuits the rest
