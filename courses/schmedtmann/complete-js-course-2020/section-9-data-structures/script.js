@@ -243,5 +243,9 @@ console.log(guests2);
 
 // won't work when value is 0, due to falsy
 
+// short circuiting with AND operator
 
-
+console.log(0 && 'Jonas');
+// result is 0; doesn't evaluate second operand
+console.log(7 && 'Jonas');
+// result is 'Jonas'; as first value is truthy, last value is then returned
