@@ -274,3 +274,11 @@ console.log(guests);
 // as interpreted by ??, 0 is not a nullish value but a falsy one and will short circuit the evaluation returning the correct 0 guests rather than 10
 const guestCorrect = restaurant.numGuests ?? 10; 
 console.log(guestCorrect);
+
+
+// Lesson: For-Of Loop
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const item of menu) console.log(item);
+// moves over entire array and gives access to each item
