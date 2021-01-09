@@ -281,4 +281,5 @@ console.log(guestCorrect);
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
-// moves over entire array and gives access to each item
+// moves over entire array and gives access to each item without worrying about counters and conditions
+// can still use continue and break keywords
