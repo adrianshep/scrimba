@@ -297,3 +297,13 @@ for (const [i, el] of menu.entries()) {
 
 
 // Lesson: Enhanced Object Literals
+
+
+// Lesson: Optional Chaining (?.)
+// below checking can get out of hand
+
+if (restaurant.openingHours && restaurant.openingHours.mon)
+console.log(restaurant.openingHours.mon.open);
+
+// with optional chaining, undefined rather than error shows up, which is preferable
+console.log(restaurant.openinHours.mon?.open);
