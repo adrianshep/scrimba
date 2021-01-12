@@ -306,4 +306,5 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
 console.log(restaurant.openingHours.mon.open);
 
 // with optional chaining, undefined rather than error shows up, which is preferable
-console.log(restaurant.openinHours.mon?.open);
+// operation of trying to read open only happens if restaurant.openingHours.mon exists; if it doesn't exist, result will be undefined immediately
+console.log(restaurant.openingHours.mon?.open);
