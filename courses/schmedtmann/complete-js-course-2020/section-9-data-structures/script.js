@@ -308,3 +308,5 @@ console.log(restaurant.openingHours.mon.open);
 // with optional chaining, undefined rather than error shows up, which is preferable
 // operation of trying to read open only happens if restaurant.openingHours.mon exists; if it doesn't exist, result will be undefined immediately
 console.log(restaurant.openingHours.mon?.open);
+// can have multiple optional chainings
+console.log(restaurant.openingHours?.mon?.open);
