@@ -318,3 +318,9 @@ for(const day of days) {
     const open = restaurant.openingHours[day]?.open ?? 'closed';
     console.log(`On ${day}, we open at ${open}`);
 }
+
+// Methods
+// we can check if a method exists before we call it
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// orderRisotto doesn't exist
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
