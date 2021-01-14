@@ -324,3 +324,12 @@ for(const day of days) {
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 // orderRisotto doesn't exist
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Arrays
+const users = [
+    {name: 'Jonas', email: 'hello@jonas.io'}];
+
+console.log(users[0]?.name ?? 'User array empty');
+
+// above is easier than old approach below
+if (users.length > 0) console.log(users[0].name); else console.log('user array empty');
