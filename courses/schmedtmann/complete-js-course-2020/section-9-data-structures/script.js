@@ -333,3 +333,18 @@ console.log(users[0]?.name ?? 'User array empty');
 
 // above is easier than old approach below
 if (users.length > 0) console.log(users[0].name); else console.log('user array empty');
+
+
+// Lesson: Looping Objects: Keys, Values, Entries
+
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+    openStr += `${day}, `;
+}
+
+console.log(openStr);
