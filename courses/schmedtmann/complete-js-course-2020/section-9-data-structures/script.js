@@ -361,3 +361,15 @@ console.log(entries);
 for (const [key, { open, close }] of entries) {
     console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+
+
+// Lesson: Sets
+// ES6 introduced Sets and Maps
+// set is a collection of unique values (no duplicates)
+// order of elements in set is irrelevant
+
+const ordersSet = new Set([
+    'Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza'
+]);
+console.log(ordersSet);
+// returns 'Pasta', 'Pizza', 'Risotto'
