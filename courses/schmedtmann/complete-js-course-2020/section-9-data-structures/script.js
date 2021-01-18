@@ -378,3 +378,6 @@ console.log(ordersSet);
 // strings are also iterables
 console.log(new Set('Jonas'));
 // returns {'J', 'o', 'n', 'a', 's'}
+
+console.log(ordersSet.size);
+// returns 3 for Pasta, Pizza, Risotto
