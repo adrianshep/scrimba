@@ -381,3 +381,8 @@ console.log(new Set('Jonas'));
 
 console.log(ordersSet.size);
 // returns 3 for Pasta, Pizza, Risotto
+// note difference: called "size" and not "length" as with arrays
+
+// .has
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
