@@ -386,3 +386,6 @@ console.log(ordersSet.size);
 // .has
 console.log(ordersSet.has('Pizza'));
 console.log(ordersSet.has('Bread'));
+
+// .delete
+ordersSet.delete('Risotto');
