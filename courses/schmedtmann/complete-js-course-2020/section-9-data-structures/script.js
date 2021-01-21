@@ -389,3 +389,8 @@ console.log(ordersSet.has('Bread'));
 
 // .delete
 ordersSet.delete('Risotto');
+
+// retrieving values from sets
+// no way of getting values out
+// no need to - if all values are unique and order doesn't matter, no point in retrieving
+// use the .has method
