@@ -397,3 +397,13 @@ ordersSet.delete('Risotto');
 
 // .clear
 ordersSet.clear();
+
+// Main use case of sets is to remove duplicates
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = new Set(staff);
+console.log(staffUnique);
+// Set(3) {"Waiter", "Chef", "Manager"}
+const staffUnique = [...new Set(staff)];
+// spread operator takes all elements out of iterable and writes them comma separated:
+// (3) ["Waiter", "Chef", "Manager"]
