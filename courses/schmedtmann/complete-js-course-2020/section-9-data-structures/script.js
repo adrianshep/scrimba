@@ -407,3 +407,9 @@ console.log(staffUnique);
 const staffUnique = [...new Set(staff)];
 // spread operator takes all elements out of iterable and writes them comma separated:
 // (3) ["Waiter", "Chef", "Manager"]
+
+// .size
+console.log(
+    new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+    );
+    // returns 3 for how many unique positions there are
