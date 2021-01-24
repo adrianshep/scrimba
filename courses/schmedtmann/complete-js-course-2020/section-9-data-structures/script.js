@@ -417,3 +417,17 @@ console.log(
 // as string is an interable, .size may be used to count how many letters are in a word
 console.log(new Set('jonasschmedtmann').size);
 // returns 11 unique values
+
+
+// Lesson: Maps: Fundamentals
+// in JS, a data structure used to map values to keys
+// keys can have any type: objects, arrays, other maps
+// to create new map, use constructor:
+
+const rest = new Map();
+// set key name and value
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+// returns:
+// Map(3) {"name" => "Classico Italiano", 1 => "Firenze, Italy", 2 => "Lisbon, Portugal"}
