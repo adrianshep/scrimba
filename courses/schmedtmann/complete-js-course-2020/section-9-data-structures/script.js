@@ -413,3 +413,7 @@ console.log(
     new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
     );
     // returns 3 for how many unique positions there are
+
+// as string is an interable, .size may be used to count how many letters are in a word
+console.log(new Set('jonasschmedtmann').size);
+// returns 11 unique values
