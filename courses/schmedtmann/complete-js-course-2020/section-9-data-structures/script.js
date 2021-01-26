@@ -438,3 +438,8 @@ rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
 .set('close', 23)
 .set(true, 'We are open :D')
 .set(false, 'We are closed :(');
+
+// to read data from map use get method, just pass in name of the key:
+console.log(rest.get('name'));
+console.log(rest.get(true));
+console.log(rest.get(1));
