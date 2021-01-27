@@ -443,3 +443,7 @@ rest.set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
 console.log(rest.get('name'));
 console.log(rest.get(true));
 console.log(rest.get(1));
+
+// using the Booleans as map keys
+cons time = 21;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
