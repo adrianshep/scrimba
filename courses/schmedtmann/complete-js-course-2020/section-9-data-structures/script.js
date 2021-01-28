@@ -447,3 +447,7 @@ console.log(rest.get(1));
 // using the Booleans as map keys
 cons time = 21;
 console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// .has in maps
+console.log(rest.has('categories'));
+
