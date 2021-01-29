@@ -453,3 +453,6 @@ console.log(rest.has('categories'));
 
 // .delete in maps
 rest.delete(2);
+
+// .size in maps
+console.log(rest.size);
