@@ -451,3 +451,5 @@ console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 // .has in maps
 console.log(rest.has('categories'));
 
+// .delete in maps
+rest.delete(2);
