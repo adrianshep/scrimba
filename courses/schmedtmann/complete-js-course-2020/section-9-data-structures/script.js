@@ -456,3 +456,6 @@ rest.delete(2);
 
 // .size in maps
 console.log(rest.size);
+
+// .clear in maps
+// rest.clear();
