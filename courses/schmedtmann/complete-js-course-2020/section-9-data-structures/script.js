@@ -459,3 +459,16 @@ console.log(rest.size);
 
 // .clear in maps
 // rest.clear();
+
+// using arrays and objects as map keys
+rest.set([1, 2], 'Test');
+console.log(rest);
+console.log(rest.size);
+
+// below won't work:
+console.log(rest.get[1, 2]);
+// [1, 2] and [1, 2] are not the same objects in memory
+// to make it work:
+const arr = [1, 2];
+rest.set(arr, 'Test');
+console.log(rest.get(arr));
