@@ -471,4 +471,5 @@ console.log(rest.get[1, 2]);
 // to make it work:
 const arr = [1, 2];
 rest.set(arr, 'Test');
+rest.set(document.querySelector('h1'), 'Heading');
 console.log(rest.get(arr));
