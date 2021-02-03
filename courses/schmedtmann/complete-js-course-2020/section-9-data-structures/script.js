@@ -473,3 +473,16 @@ const arr = [1, 2];
 rest.set(arr, 'Test');
 rest.set(document.querySelector('h1'), 'Heading');
 console.log(rest.get(arr));
+
+// Lesson: Maps: Iteration
+// preferable method for creating map fom scratch:
+const question = new Map([
+    ['question', 'What is the best programming language in the world?'],
+    [1, 'C'],
+    [2, 'Java'],
+    [3, 'JavaScript'],
+    ['correct', 3],
+    [true, 'Correct'],
+    [false, 'Try again!'],
+]);
+console.log(question);
