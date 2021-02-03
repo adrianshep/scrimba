@@ -486,3 +486,8 @@ const question = new Map([
     [false, 'Try again!'],
 ]);
 console.log(question);
+// above array of arrays structure exactly same as returned from calling Object.entries(openingHours)
+// Convert object to map
+console.log(Object.entries(openingHours));
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
