@@ -508,3 +508,10 @@ console.log([...question]);
 // console.log(question.entries);
 console.log([...question.keys()]);
 console.log([...question.values()]);
+
+
+// Lesson: Which Data Structure to Use?
+// Three sources of data:
+// 1. written directly in source code (e.g., status messages)
+// 2. From the UI: data input from user or written in DOM (e.g., tasks in todo app)
+// From external source: data fetched, for example, from web API (Application Programming Interface)(e.g., recipe objects)
