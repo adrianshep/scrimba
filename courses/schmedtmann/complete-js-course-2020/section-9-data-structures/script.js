@@ -515,3 +515,9 @@ console.log([...question.values()]);
 // 1. written directly in source code (e.g., status messages)
 // 2. From the UI: data input from user or written in DOM (e.g., tasks in todo app)
 // From external source: data fetched, for example, from web API (Application Programming Interface)(e.g., recipe objects)
+// --> collection of data
+// --> data structure
+// --> what do we need?
+// if simple list of values, then Arrays or Sets
+// if key/value pairs, then Objects or Maps
+// keys allows you to describe the values
