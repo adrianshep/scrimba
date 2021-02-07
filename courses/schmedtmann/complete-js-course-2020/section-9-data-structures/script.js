@@ -521,3 +521,10 @@ console.log([...question.values()]);
 // if simple list of values, then Arrays or Sets
 // if key/value pairs, then Objects or Maps
 // keys allows you to describe the values
+
+// In modern JS applications, Web APIs are the most common source of data
+// comes in JSON format:
+// text, a long string, that can easily be converted to JS objects because it uses same formatting as JS objects and arrays
+// values are described by keys; without keys, we wouldn't know what the values represent
+// that's why the data is stored in an object and not an array
+// creating an array of objects is very common in JS
