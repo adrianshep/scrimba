@@ -528,3 +528,16 @@ console.log([...question.values()]);
 // values are described by keys; without keys, we wouldn't know what the values represent
 // that's why the data is stored in an object and not an array
 // creating an array of objects is very common in JS
+
+// built-in data structures:
+
+// Arrays vs Sets
+
+// Arrays
+// use wen you need ordered list of values (might contain duplicates)
+// use when you need to manipulate data
+
+// Sets
+// use when you need to work with unique values
+// use when high-performance is really important
+// use to remove duplicates from arrays
