@@ -541,3 +541,20 @@ console.log([...question.values()]);
 // use when you need to work with unique values
 // use when high-performance is really important
 // use to remove duplicates from arrays
+
+// Objects vs Maps
+
+// Objects
+// traditional key/value data structure before maps were around, although considered by some to have been "abused"
+// biggest advantage: easier to write and access values with . and [] operators
+// use when you need objects (methods) as values
+// use with JSON data
+
+// Maps
+// offer better performance
+// keys can have any data type
+// easy to iterate
+// easy to compute size
+// use when you need keys that aren't strings
+
+
