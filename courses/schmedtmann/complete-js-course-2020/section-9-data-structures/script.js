@@ -557,4 +557,15 @@ console.log([...question.values()]);
 // easy to compute size
 // use when you need keys that aren't strings
 
+// Lesson: Working With Strings - Part 1
 
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
