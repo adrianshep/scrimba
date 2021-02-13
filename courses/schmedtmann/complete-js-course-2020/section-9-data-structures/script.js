@@ -574,3 +574,5 @@ console.log('B737'.length);
 console.log(airline.indexOf('r'));
 // last occurrence of:
 console.log(airline.lastIndexOf('r'));
+// entire word, case sensitiveive:
+console.log(airline.indexOf('Portugal'));
