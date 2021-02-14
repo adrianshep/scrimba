@@ -576,3 +576,10 @@ console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 // entire word, case sensitiveive:
 console.log(airline.indexOf('Portugal'));
+
+// .slice method
+// first index is where slice begins to extract
+// stops extracting right before second index
+// strings are primitive, therefore can't be mutated
+// have to save string to value to mutate
+console.log(airline.slice(4, 7));
