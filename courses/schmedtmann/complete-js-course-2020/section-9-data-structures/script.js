@@ -591,3 +591,13 @@ console.log(airline.lastIndexOf(' ') + 1));
 // define negative begin argument for .slice
 console.log(airline.slice(-2));
 console.log(airline.slice(1, -1));
+
+// check seat function
+const checkMiddleSeat = function(seat) {
+    // B and E are middle seats
+    // checking if string has a B or E in it
+}
+
+checkMiddleSeat('11B');
+checkMiddleSeat('11B');
+checkMiddleSeat('11B');
