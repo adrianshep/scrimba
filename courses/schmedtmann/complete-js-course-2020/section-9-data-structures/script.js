@@ -587,3 +587,7 @@ console.log(airline.slice(4, 7));
 console.log(airline.slice(0, airline.indexOf(' ')));
 // + 1 will advance to first letter after the space and then return every letter to the end of the string:
 console.log(airline.lastIndexOf(' ') + 1));
+
+// define negative begin argument for .slice
+console.log(airline.slice(-2));
+console.log(airline.slice(1, -1));
