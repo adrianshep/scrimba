@@ -583,3 +583,7 @@ console.log(airline.indexOf('Portugal'));
 // strings are primitive, therefore can't be mutated
 // have to save string to value to mutate
 console.log(airline.slice(4, 7));
+
+console.log(airline.slice(0, airline.indexOf(' ')));
+// + 1 will advance to first letter after the space and then return every letter to the end of the string:
+console.log(airline.lastIndexOf(' ') + 1));
