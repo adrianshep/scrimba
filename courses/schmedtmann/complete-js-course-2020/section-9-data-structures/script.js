@@ -605,3 +605,8 @@ const checkMiddleSeat = function(seat) {
 checkMiddleSeat('11B');
 checkMiddleSeat('23C');
 checkMiddleSeat('3E');
+
+// whenever we call a method on a string, JavaScript is very smart and will convert that string primitive to a string object with the same content, a process called "boxing"
+// JS calls this String function which looks more like an object:
+
+console.log(new String('jonas'));
