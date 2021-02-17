@@ -610,3 +610,9 @@ checkMiddleSeat('3E');
 // JS calls this String function which looks more like an object:
 
 console.log(new String('jonas'));
+console.log(typeof new String('jonas'));
+
+// when the operation is done, the object is converted back to a regular string primitive
+// all string methods return primitives, even when called on a string object
+
+console.log(typeof new String('jonas').slice(1));
