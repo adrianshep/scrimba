@@ -626,3 +626,6 @@ const airline = 'TAP Air Portugal';
 console.log(airline.toLowerCase());
 console.log(airline.toUpperCase());
 
+// can also be applied directly to a string:
+console.log('jonas'.toUpperCase());
+
