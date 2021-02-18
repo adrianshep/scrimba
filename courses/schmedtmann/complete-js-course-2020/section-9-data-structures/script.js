@@ -616,3 +616,13 @@ console.log(typeof new String('jonas'));
 // all string methods return primitives, even when called on a string object
 
 console.log(typeof new String('jonas').slice(1));
+
+// Lesson: Working With Strings - Part 2
+// Simple String Methods
+// Changing Case of String
+
+const airline = 'TAP Air Portugal';
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
