@@ -640,3 +640,4 @@ const email = 'hello@jonas.io';
 const loginEmail = '  Hello@Jona.Io \n';
 
 const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
