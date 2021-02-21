@@ -651,3 +651,9 @@ const priceGB = '288,97£';
 // below returns a string
 const priceUS = priceGB.replace('£', '$').replace(',', '.');
 console.log(priceUS);
+
+// replace also creates a brand new string
+const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replace('door', 'gate'));
+console.log(announcement.replaceAll('door', 'gate'));
