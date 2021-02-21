@@ -645,3 +645,9 @@ const loginEmail = '  Hello@Jona.Io \n';
 const normalizedEmail = loginEmail.toLowerCase().trim();
 console.log(normalizedEmail);
 console.log(email === normalizedEmail);
+
+// replacing
+const priceGB = '288,97£';
+// below returns a string
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS);
