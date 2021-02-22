@@ -662,3 +662,10 @@ console.log(announcement.replaceAll('door', 'gate'));
 // regex
 // "g" stands for global
 console.log(announcement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'A320neo';
+console.log(plane.includes('A320'));
+// returns true
+console.log(plane.includes('Boeing'));
+// returns false
