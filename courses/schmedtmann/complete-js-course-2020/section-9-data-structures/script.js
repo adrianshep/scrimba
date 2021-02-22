@@ -669,3 +669,6 @@ console.log(plane.includes('A320'));
 // returns true
 console.log(plane.includes('Boeing'));
 // returns false
+
+// .startsWith
+console.log(plane.startsWith('Airb'));
