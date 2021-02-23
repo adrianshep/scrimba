@@ -672,3 +672,7 @@ console.log(plane.includes('Boeing'));
 
 // .startsWith
 console.log(plane.startsWith('Airb'));
+
+if (plane.startWith('Airbus') && plane.endsWith('neo')) {
+    console.log('Part of the NEW Airbus family');
+}
