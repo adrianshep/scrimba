@@ -676,3 +676,11 @@ console.log(plane.startsWith('Airb'));
 if (plane.startWith('Airbus') && plane.endsWith('neo')) {
     console.log('Part of the NEW Airbus family');
 }
+
+// Practice exercise
+const checkBaggage = function(items) {
+    const baggage = items.toLowerCase();
+}
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Got some snacks and a gun for protection');
