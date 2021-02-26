@@ -690,3 +690,8 @@ const checkBaggage = function(items) {
 checkBaggage('I have a laptop, some Food and a pocket Knife');
 checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
+
+// Lesson: .split method
+
+console.log('a+very+nice+string' .split('+'));
+// returns ["a", "very", "nice", "string"]
