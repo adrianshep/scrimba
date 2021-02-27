@@ -695,3 +695,8 @@ checkBaggage('Got some snacks and a gun for protection');
 
 console.log('a+very+nice+string' .split('+'));
 // returns ["a", "very", "nice", "string"]
+
+console.log('Jonas Schmedtmann'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+// returns ["Jonas", "Schmedtmann"]
