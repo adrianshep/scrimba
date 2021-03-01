@@ -692,7 +692,7 @@ checkBaggage('Socks and camera');
 checkBaggage('Got some snacks and a gun for protection');
 
 // Lesson: .split method
-
+// Split and join
 console.log('a+very+nice+string' .split('+'));
 // returns ["a", "very", "nice", "string"]
 
@@ -704,3 +704,16 @@ const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
 console.log(newName);
 // returns Mr. Jonas SCHMEDTMANN
+
+const capitalizeName = function(name){
+    const names = name.split(' ');
+    const namesUpper = [];
+
+    for(const n of names) {
+        namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    }
+    console.log(namesUpper.join(' '));
+}
+
+capitalizeName('jessica ann smith davis');
+capitalizeName('jonas schmedtmann');
