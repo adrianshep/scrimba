@@ -700,3 +700,7 @@ console.log('Jonas Schmedtmann'.split(' '));
 
 const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
 // returns ["Jonas", "Schmedtmann"]
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+// returns Mr. Jonas SCHMEDTMANN
