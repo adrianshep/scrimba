@@ -720,3 +720,9 @@ const capitalizeName = function(name){
 capitalizeName('jessica ann smith davis');
 capitalizeName('jonas schmedtmann');
 
+// Padding
+const message = 'Go to Gate 23!';
+console.log(message.padStart(25, '+');)
+// returns string of 25 total characters
+console.log('Jonas'.padStart(25, '+');)
+// will have 25 total characters, too, same length as message
