@@ -727,3 +727,15 @@ console.log(message.padStart(20, '+').padEnd(30, '+'));
 console.log('Jonas'.padStart(20, '+')).padEnd(30, '+'));
 // will have 25 total characters, too, same length as message
 
+// padding used to mask credit card number
+const maskCreditCard = function(number) {
+    // quick way of converting a number to a string:
+    const str = number + '';
+    const last = str.slice(-4);
+    return last.padStart(str.length, '*');
+}
+
+console.log(maskCreditCard(43378463864647384));
+console.log(maskCreditCard('334859493847755774747'));
+// returns *************7384 and
+// *****************4747
