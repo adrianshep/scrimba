@@ -722,7 +722,8 @@ capitalizeName('jonas schmedtmann');
 
 // Padding
 const message = 'Go to Gate 23!';
-console.log(message.padStart(25, '+');)
+console.log(message.padStart(20, '+').padEnd(30, '+'));
 // returns string of 25 total characters
-console.log('Jonas'.padStart(25, '+');)
+console.log('Jonas'.padStart(20, '+')).padEnd(30, '+'));
 // will have 25 total characters, too, same length as message
+
