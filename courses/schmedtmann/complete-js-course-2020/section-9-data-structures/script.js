@@ -739,3 +739,7 @@ console.log(maskCreditCard(43378463864647384));
 console.log(maskCreditCard('334859493847755774747'));
 // returns *************7384 and
 // *****************4747
+
+// Repeat method
+const message2 = 'Bad weather... All departures delayed... ';
+console.log(message2.repeat(5));
