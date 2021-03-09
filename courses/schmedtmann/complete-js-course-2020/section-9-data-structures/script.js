@@ -750,3 +750,6 @@ const planesInLine = function(n) {
 planesInLine(5);
 planesInLine(3);
 planesInLine(12);
+
+// search "mdn string replace" takes you to MDN page of all String methods to use
+// check out .concat
