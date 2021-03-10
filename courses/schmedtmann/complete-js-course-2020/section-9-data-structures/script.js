@@ -753,3 +753,20 @@ planesInLine(12);
 
 // search "mdn string replace" takes you to MDN page of all String methods to use
 // check out .concat
+
+// Coding Challenge #4
+/* 
+Write a program that receives a list of variable names written in underscore_case and covert the to camelCase.
+
+The input will come from a textarea inserted into the DOM and converstion will happen when the button is pressed.
+
+THIS TEST DATA (pasted to textarea)
+underscore_case
+first_name
+Some_Variable
+calculate_AGE
+delayed_departure
+
+HINT 1: Remember which character defines a new line in the textarea
+HINT 2: The solution only needs to work for a variable made out of 2 ords, like a_b
+*/
