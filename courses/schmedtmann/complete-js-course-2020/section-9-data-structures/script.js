@@ -768,5 +768,14 @@ calculate_AGE
 delayed_departure
 
 HINT 1: Remember which character defines a new line in the textarea
-HINT 2: The solution only needs to work for a variable made out of 2 ords, like a_b
+HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
 */
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const text = document.querySelector('textarea').value;
+
+document.querySelector('button').addEventListener('click', function() {
+
+});
