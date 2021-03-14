@@ -778,4 +778,18 @@ const text = document.querySelector('textarea').value;
 
 document.querySelector('button').addEventListener('click', function() {
     const text = document.querySelector('textarea').value;const rows = text.split('\n');
+    // should return an array with five rows:
+    console.log(rows);
+
+    for(const row in rows) {
+        row.toLowerCase().trim().split('_');
+    }
 });
+
+
+// THIS TEST DATA (pasted to textarea)
+// underscore_case
+// first_name
+// Some_Variable
+// calculate_AGE
+// delayed_departure
