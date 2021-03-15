@@ -782,7 +782,7 @@ document.querySelector('button').addEventListener('click', function() {
     console.log(rows);
 
     for(const row in rows) {
-        row.toLowerCase().trim().split('_');
+        const [first, second] = row.toLowerCase().trim().split('_');
     }
 });
 
