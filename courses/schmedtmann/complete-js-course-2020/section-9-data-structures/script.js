@@ -787,9 +787,11 @@ document.querySelector('button').addEventListener('click', function() {
             second[0], 
             second[0].toUpperCase()
             )}`;
-        console.log(output);
+        // (20) is the same as (20, ' ') -- blank spacing is the default
+        console.log(`${output.padEnd(20)}✅`);
     }
 });
+
 
 
 // THIS TEST DATA (pasted to textarea)
