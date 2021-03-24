@@ -815,3 +815,6 @@ const flights =
 
 console.log(flights.split('+'));
 
+for (const flight of flight.split('+')) {
+    console.log(flight);
+}
