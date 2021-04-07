@@ -2,6 +2,7 @@
 
 const bookings = [];
     // create default values ES6 way
+    // default values can contain any expression
 const createBooking = function(flightNumber, numPassengers = 1, price = 199) {
     // create default values ES5 way
     // numPassengers == numPassengers || 1;
@@ -19,5 +20,5 @@ const createBooking = function(flightNumber, numPassengers = 1, price = 199) {
 createBooking('LH123');
 // numPassengers and price are undefined
 
-// override defaults
-createbook
+// overriding the defaults
+createbook('LH123', 2, 800);
