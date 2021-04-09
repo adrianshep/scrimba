@@ -28,3 +28,11 @@ createBooking('LH123');
 createBooking('LH123', 2, 800);
 createBooking('LH123', 2);
 createBooking('LH123', 5);
+
+// with ES6 approach, we cannot skip arguments
+// below, second argument will always be mapped to the second parameter
+// below will not be interpreted as price being 1000, but number of passengers being 1000: 
+createBooking('LH123', 1000);
+
+// to avoid this, set the parameter to be skipped as undefined:
+createBooking('LH123', undefined, 1000);
