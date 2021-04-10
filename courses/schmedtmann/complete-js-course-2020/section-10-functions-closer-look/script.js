@@ -36,3 +36,33 @@ createBooking('LH123', 1000);
 
 // to avoid this, set the parameter to be skipped as undefined:
 createBooking('LH123', undefined, 1000);
+
+
+// How Passing Arguments Works: Value vs. Reference
+const flight = 'LH234';
+const jonas = {
+    name: 'Jonas Schmedtmann',
+    passport: 24739479284
+}
+
+const checkIn = function(flightNum, passenger) {
+    // not a good practice to change default here, only for illustration:
+    flightNum = 'LH999';
+    passenger.name = 'Mr. ' + passenger.name;
+
+    if(passenger.passport === 24739479284) {
+        alert('Check in')
+    } else {
+        alert('Wrong passport!')
+    }
+}
+
+checkIn(flight, jonas);
+console.log(flight);
+// flightNum doesn't change
+console.log(jonas);
+// name IS changed, to Mr. Jonas Schmedtmann
+// flight is primitive type, flightNum is a copy of original value
+// same as writing:
+// flightNum = flight;
+//  change did not get reflected in outside variable
