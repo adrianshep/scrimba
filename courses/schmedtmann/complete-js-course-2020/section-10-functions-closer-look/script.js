@@ -48,6 +48,7 @@ const jonas = {
 const checkIn = function(flightNum, passenger) {
     // not a good practice to change default here, only for illustration:
     flightNum = 'LH999';
+    // same as manipulating the jonas object in the memory heap:
     passenger.name = 'Mr. ' + passenger.name;
 
     if(passenger.passport === 24739479284) {
@@ -58,11 +59,20 @@ const checkIn = function(flightNum, passenger) {
 }
 
 checkIn(flight, jonas);
-console.log(flight);
+// console.log(flight);
 // flightNum doesn't change
-console.log(jonas);
+// console.log(jonas);
 // name IS changed, to Mr. Jonas Schmedtmann
-// flight is primitive type, flightNum is a copy of original value
-// same as writing:
-// flightNum = flight;
+// flight is primitive type, flightNum is a copy of original value; what is copied is just a reference to the object in the memory heap
+// is the same as doing:
+// const flightNum = flight;
+// const passenger = jonas;
 //  change did not get reflected in outside variable
+
+const newPassport = function(person) {
+    person.passport = Math.trunc(Math.random() = * 10000000000000);
+}
+
+newPassport(jonas);
+checkIn(flight, jonas);
+// now have TWO functions manipulating the SAME object -- major problem
