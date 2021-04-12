@@ -76,3 +76,9 @@ const newPassport = function(person) {
 newPassport(jonas);
 checkIn(flight, jonas);
 // now have TWO functions manipulating the SAME object -- major problem
+
+// passing by value vs passing by reference
+// C++, among other programming languages, allows for passing by reference
+// JavaScript ONLY passes by value, NOT by reference
+// confusion about this comes from the fact that, in JavaScript, for objects, we do in fact pass in a reference, the memory address of the object
+// it is still a value, though, the value being that memory address
