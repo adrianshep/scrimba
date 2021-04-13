@@ -82,3 +82,10 @@ checkIn(flight, jonas);
 // JavaScript ONLY passes by value, NOT by reference
 // confusion about this comes from the fact that, in JavaScript, for objects, we do in fact pass in a reference, the memory address of the object
 // it is still a value, though, the value being that memory address
+
+
+// First-Class vs. Higher-Order Functions
+
+// JavaScript treats functions as first-class citizens
+// This means functionsa are simply values
+// Functions are just another "type" of object
