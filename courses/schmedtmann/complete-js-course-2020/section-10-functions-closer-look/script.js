@@ -87,5 +87,13 @@ checkIn(flight, jonas);
 // First-Class vs. Higher-Order Functions
 
 // JavaScript treats functions as first-class citizens
-// This means functionsa are simply values
+// This means functions are simply values
 // Functions are just another "type" of object
+
+// store functions in variables or properties
+// below, (a, b) => a + b; and function() { this.value++; } are both function values we can store wherever we like
+// const add = (a, b) => a + b;
+// const counter = {
+    // value: 23, 
+    // inc: function() { this.value++; }
+// }
