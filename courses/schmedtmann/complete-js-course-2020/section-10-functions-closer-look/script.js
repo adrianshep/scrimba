@@ -90,10 +90,14 @@ checkIn(flight, jonas);
 // This means functions are simply values
 // Functions are just another "type" of object
 
-// store functions in variables or properties
+// Store functions in variables or properties
 // below, (a, b) => a + b; and function() { this.value++; } are both function values we can store wherever we like
 // const add = (a, b) => a + b;
 // const counter = {
     // value: 23, 
     // inc: function() { this.value++; }
 // }
+
+// Pass functions to other functions as arguments
+const greet = () => console.log('Hey, Jonas');
+btnClose.addEventListener('click', greet);
