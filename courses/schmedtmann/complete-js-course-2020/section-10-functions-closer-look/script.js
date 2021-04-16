@@ -101,3 +101,12 @@ checkIn(flight, jonas);
 // Pass functions to other functions as arguments
 const greet = () => console.log('Hey, Jonas');
 btnClose.addEventListener('click', greet);
+
+// Return functions FROM functions
+// (example from MDN)
+function magic() {
+    return function calc(x) { return x * 42; };
+  }
+  
+  var answer = magic();
+  answer(1337); // 56154
