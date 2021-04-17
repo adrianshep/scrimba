@@ -115,7 +115,16 @@ function magic() {
 counter.inc.bind(someOtherObject);
 
 // Higher-Order Functions
+
 // a function that receives another functions as an argument, 
 // that returns a new function,
 // or both.
 // This is only possible because of JavaScript's treatments of functions as first-class citizens
+
+// Function that receives another function
+
+const greet = () => console.log('Hey Jonas');
+btnClose.addEventListener('click', greet)
+// Higher-order function: addEventListener
+// Callback function: greet (as argument after 'click')
+// "callbac" because the function will be called back when the click event happens
