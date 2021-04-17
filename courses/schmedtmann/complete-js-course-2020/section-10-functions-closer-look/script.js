@@ -110,3 +110,6 @@ function magic() {
   
   var answer = magic();
   answer(1337); // 56154
+
+// Functions are objects and therefore have methods which can be called on them
+counter.inc.bind(someOtherObject);
