@@ -113,3 +113,9 @@ function magic() {
 
 // Functions are objects and therefore have methods which can be called on them
 counter.inc.bind(someOtherObject);
+
+// Higher-Order Functions
+// a function that receives another functions as an argument, 
+// that returns a new function,
+// or both.
+// This is only possible because of JavaScript's treatments of functions as first-class citizens
