@@ -127,4 +127,15 @@ const greet = () => console.log('Hey Jonas');
 btnClose.addEventListener('click', greet)
 // Higher-order function: addEventListener
 // Callback function: greet (as argument after 'click')
-// "callbac" because the function will be called back when the click event happens
+// "callback" because the function will be called back when the click event happens
+
+// Function that returns new function
+
+function count() {
+    Let counter = 0;
+    return function() {
+        counter++;
+    };
+}
+// Higher-order function: function count() {}
+// Returned function: function() {}
