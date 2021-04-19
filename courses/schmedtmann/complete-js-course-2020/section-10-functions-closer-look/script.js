@@ -139,3 +139,6 @@ function count() {
 }
 // Higher-order function: function count() {}
 // Returned function: function() {}
+
+// "First-class functions" means that all functions are values; there are no first-class functions in practice
+// In practice, higher-order functions are possible because JavaScript supports first-class functions
