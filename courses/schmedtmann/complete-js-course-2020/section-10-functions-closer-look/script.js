@@ -142,3 +142,22 @@ function count() {
 
 // "First-class functions" means that all functions are values; there are no first-class functions in practice
 // In practice, higher-order functions are possible because JavaScript supports first-class functions
+
+
+// Functions Accepting Callback Functions
+
+const oneWord = function(str) {
+    return str.replace(/ /g, '').toLowerCase();    
+}
+
+const upperFirstWord = function(str) {
+    const [first, ...others] = str.split(' ');
+    return [first.toUpperCase(), ...others].join(' ');
+}
+
+// Higher-order function
+const transformer = function(str, fn) {
+
+}
+
+transformer('JavaScript is the best!', upperFirstWord);
