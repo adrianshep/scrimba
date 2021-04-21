@@ -157,7 +157,13 @@ const upperFirstWord = function(str) {
 
 // Higher-order function
 const transformer = function(str, fn) {
-
+    console.log(`Original string: ${str}`);
+    // JavaScript is the best!
+    console.log(`Transformed string: ${fn(str)}`);
+    // JAVASCRIPT is the best!
+    console.log(`Tranformed by: ${fn.name}`);
+    // Transformed by: upperFirstWord
 }
 
 transformer('JavaScript is the best!', upperFirstWord);
+// only passing in the value of upperFirstWord function, NOT calling it
