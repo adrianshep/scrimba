@@ -167,3 +167,8 @@ const transformer = function(str, fn) {
 
 transformer('JavaScript is the best!', upperFirstWord);
 // only passing in the value of upperFirstWord function, NOT calling it
+
+transformer('JavaScript is the best!', oneWord);
+// Original string: JavaScript is the best!
+// Transformed string: javascriptisthebest!
+// Transformed by: oneWord
