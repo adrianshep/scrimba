@@ -172,3 +172,9 @@ transformer('JavaScript is the best!', oneWord);
 // Original string: JavaScript is the best!
 // Transformed string: javascriptisthebest!
 // Transformed by: oneWord
+
+const high5 = function() {
+    console.log('wave emoji');
+}
+document.body.addEventListener('click', high5);
+// 'high5' is the callback function JavaScript will call as soon as we click on the addEventListener
