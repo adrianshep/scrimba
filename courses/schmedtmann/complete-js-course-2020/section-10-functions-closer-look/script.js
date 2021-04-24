@@ -181,3 +181,8 @@ document.body.addEventListener('click', high5);
 
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 // wave emoji is called for each of the three array elements
+
+// Why are callbacks so helpful in JavaScript?
+// 1) useful to split up code into discrete functions
+// 2) even more importantly, callback allows creation of a level of abstraction, hiding detail of code implementation to thing about problems on a higher, abstract level
+// in example, string transformation delegated to lower-level functions, while main transformer function is only concerned with transforming the input string itself
