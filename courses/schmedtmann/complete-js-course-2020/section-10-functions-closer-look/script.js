@@ -178,3 +178,6 @@ const high5 = function() {
 }
 document.body.addEventListener('click', high5);
 // 'high5' is the callback function JavaScript will call as soon as we click on the addEventListener
+
+['Jonas', 'Martha', 'Adam'].forEach(high5);
+// wave emoji is called for each of the three array elements
