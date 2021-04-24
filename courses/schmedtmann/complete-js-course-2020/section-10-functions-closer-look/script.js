@@ -186,3 +186,4 @@ document.body.addEventListener('click', high5);
 // 1) useful to split up code into discrete functions
 // 2) even more importantly, callback allows creation of a level of abstraction, hiding detail of code implementation to thing about problems on a higher, abstract level
 // in example, string transformation delegated to lower-level functions, while main transformer function is only concerned with transforming the input string itself
+// main transformer function is therefore the higher-order function, delegating tasks to broken-out, lower-level code
