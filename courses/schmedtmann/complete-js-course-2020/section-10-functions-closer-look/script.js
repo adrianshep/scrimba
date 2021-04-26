@@ -201,3 +201,6 @@ const greeterHey = greet('Hey');
 // function greet returned a new function which we stored in new function greeterHey
 greeterHey('Jonas');
 greeterHey('Stefan');
+
+greet('Hello')('Jonas');
+// you can even do all the above in one go by immediately calling the function with the name
