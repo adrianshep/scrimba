@@ -204,3 +204,9 @@ greeterHey('Stefan');
 
 greet('Hello')('Jonas');
 // you can even do all the above in one go by immediately calling the function with the name
+
+// greet function rewritten with arrow functions
+// one arrow function returning another arrow function:
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArr('Hi')('Jonas');
