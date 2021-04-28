@@ -210,3 +210,23 @@ greet('Hello')('Jonas');
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArr('Hi')('Jonas');
+
+
+// Call and Apply Methods
+
+const lufthansa = {
+    airline: 'Lufthansa',
+    iataCode: 'LH',
+    booking: [],
+    book(flightNum, name) {
+        console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+    }
+    // above: 'this.' points to the lufthansa object
+    // old syntax:
+    // book: function() {}
+};
+
+lufthansa.book(239, 'Jonas Schmedtmann');
+// Jonas Schmedtmann booke a seat on Lufthansa flight LH239
+lufthansa.book(635, 'John Smith');
+// John Smith booke a seat on Lufthansa flight LH635
