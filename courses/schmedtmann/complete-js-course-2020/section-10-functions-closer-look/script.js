@@ -220,6 +220,7 @@ const lufthansa = {
     booking: [],
     book(flightNum, name) {
         console.log(`${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`);
+        this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
     }
     // above: 'this.' points to the lufthansa object
     // old syntax:
@@ -230,3 +231,6 @@ lufthansa.book(239, 'Jonas Schmedtmann');
 // Jonas Schmedtmann booke a seat on Lufthansa flight LH239
 lufthansa.book(635, 'John Smith');
 // John Smith booke a seat on Lufthansa flight LH635
+console.log(lufthansa);
+// now will return above two bookings as arrays
+
