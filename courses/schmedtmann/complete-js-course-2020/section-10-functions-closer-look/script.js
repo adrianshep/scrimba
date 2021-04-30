@@ -234,3 +234,18 @@ lufthansa.book(635, 'John Smith');
 console.log(lufthansa);
 // now will return above two bookings as arrays
 
+// Lufthansa group creates a new airline
+
+const eurowings = {
+    name: 'Eurowings',
+    iataCode: 'EW',
+    bookings: [],
+};
+
+const book = lufthansa.book;
+
+book(23, 'Sarah Williams');
+// cannot read property 'airline' of undefined
+// because book function is no longer the book method, it's now a function, so this keyword inside of it points to undefined
+// to fix:
+
