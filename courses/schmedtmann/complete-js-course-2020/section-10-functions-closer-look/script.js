@@ -247,5 +247,8 @@ const book = lufthansa.book;
 book(23, 'Sarah Williams');
 // cannot read property 'airline' of undefined
 // because book function is no longer the book method, it's now a function, so this keyword inside of it points to undefined
-// to fix:
-
+// to fix, use call method:
+// allows us to set this manually
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+// returns object with "EW23" and "Sarah Williams" in the array
