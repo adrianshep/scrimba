@@ -237,7 +237,7 @@ console.log(lufthansa);
 // Lufthansa group creates a new airline
 
 const eurowings = {
-    name: 'Eurowings',
+    airline: 'Eurowings',
     iataCode: 'EW',
     bookings: [],
 };
@@ -256,3 +256,6 @@ console.log(eurowings);
 book.call(lufthansa, 239, 'Mary Cooper');
 console.log(lufthansa);
 // returns correct booking in the array
+
+
+
