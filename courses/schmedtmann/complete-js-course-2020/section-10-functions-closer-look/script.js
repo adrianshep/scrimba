@@ -252,3 +252,7 @@ book(23, 'Sarah Williams');
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
 // returns object with "EW23" and "Sarah Williams" in the array
+
+book.call(lufthansa, 239, 'Mary Cooper');
+console.log(lufthansa);
+// returns correct booking in the array
