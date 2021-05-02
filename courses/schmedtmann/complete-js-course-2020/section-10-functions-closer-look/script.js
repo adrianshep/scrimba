@@ -247,7 +247,7 @@ const book = lufthansa.book;
 book(23, 'Sarah Williams');
 // cannot read property 'airline' of undefined
 // because book function is no longer the book method, it's now a function, so this keyword inside of it points to undefined
-// to fix, use call method:
+// to fix, use Call Method:
 // allows us to set this manually
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
@@ -257,5 +257,14 @@ book.call(lufthansa, 239, 'Mary Cooper');
 console.log(lufthansa);
 // returns correct booking in the array
 
+const swiss = {
+    airline: 'Swiss Air Lines',
+    iataCode: 'LX',
+    bookings: [],
+};
 
-
+// Apply Method
+const flightData = [583, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+// in place of individual arguments, Apply Method takes an array of arguments
