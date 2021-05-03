@@ -268,3 +268,7 @@ const flightData = [583, 'George Cooper'];
 book.apply(swiss, flightData);
 console.log(swiss);
 // in place of individual arguments, Apply Method takes an array of arguments
+// Apply Method not used as much anymore.
+// Instead, use spread operator with call() method:
+
+book.call(swiss, ...flightData);
