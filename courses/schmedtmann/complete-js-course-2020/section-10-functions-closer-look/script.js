@@ -272,3 +272,13 @@ console.log(swiss);
 // Instead, use spread operator with call() method:
 
 book.call(swiss, ...flightData);
+
+
+// Bind Method
+
+// bind also allows us to manually set this keyword for any function call
+// the difference: bind doesn't immediately call the function
+// instead it returns a new function where the this keyword is bound
+
+const bookEW = book.bind(eurowings);
+bookEW(23, 'Steven Williams');
