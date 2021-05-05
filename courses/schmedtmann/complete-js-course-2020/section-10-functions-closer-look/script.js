@@ -281,4 +281,8 @@ book.call(swiss, ...flightData);
 // instead it returns a new function where the this keyword is bound
 
 const bookEW = book.bind(eurowings);
+// now we can create one booking function for each of the airlines:
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
 bookEW(23, 'Steven Williams');
