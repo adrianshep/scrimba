@@ -291,3 +291,5 @@ bookEW(23, 'Steven Williams');
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Jonas Schmedtmann');
 bookEW23('Martha Cooper');
+// The bookEW23 function is a commonly used pattern called a partial application where some of the arguments of the original function are already applied or set. 
+// In this case, the airline and flight number, 'eurowings' and 23.
