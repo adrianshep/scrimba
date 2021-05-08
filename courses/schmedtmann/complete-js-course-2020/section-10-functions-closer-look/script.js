@@ -302,5 +302,8 @@ lufthansa.buyPlane = function() {
     this.planes++;
     console.log(this.planes);
 };
+lufthansa.buyPlane();
+
 document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane);
 // returns NaN because event handler points to the button
+// solution: call the method right after the function 
