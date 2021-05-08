@@ -293,3 +293,14 @@ bookEW23('Jonas Schmedtmann');
 bookEW23('Martha Cooper');
 // The bookEW23 function is a commonly used pattern called a partial application where some of the arguments of the original function are already applied or set. 
 // In this case, the airline and flight number, 'eurowings' and 23.
+
+// Partial Application with Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function() {
+    console.log(this);
+    
+    this.planes++;
+    console.log(this.planes);
+};
+document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane);
+// returns NaN because event handler points to the button
