@@ -310,3 +310,17 @@ document
 // returns NaN because event handler points to the button
 // solution: call the method right after the function 
 // better solution: use bind() as above
+
+// Partial Application
+// another big use case for the bind method in which many times we're not even interested in the this keyword, but where preset parameters are useful:
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+// we don't care about this keyword, so use null intead:
+const addVAT = addTax.bind(null, 0.23);
+// same as:
+// addVAT = value => value + value * 0.23;
+// remember order of arguments is crucial here
+
+console.log(addVAT(100));
+console.log(addVAT(23));
