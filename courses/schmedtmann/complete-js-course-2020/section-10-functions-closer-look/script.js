@@ -380,5 +380,6 @@ const poll = {
         );
 
         // Register answer
+        typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
     }
 };
