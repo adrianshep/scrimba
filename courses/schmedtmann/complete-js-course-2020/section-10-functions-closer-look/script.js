@@ -381,9 +381,20 @@ const poll = {
 
         // Register answer
         typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
+
+        this.displayResults();
+        this.displayResults('string');
+    },
+    displayResults(type = 'array'){
+        if(type === 'array'){
+            console.log(this.answers);
+        } else is {
+            console.log(`Poll results are ${this.answers.join(', ')}`);
+        }
     }
 };
 
 document
     .querySelector('.poll')
     .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
