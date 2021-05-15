@@ -383,3 +383,7 @@ const poll = {
         typeof answer === 'number' && answer < this.answers.length && this.answers[answer]++;
     }
 };
+
+document
+    .querySelector('.poll')
+    .addEventListener('click', poll.registerNewAnswer.bind(poll));
