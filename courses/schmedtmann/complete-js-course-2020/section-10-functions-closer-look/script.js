@@ -404,3 +404,17 @@ poll.displayResults.call({answers: [1, 5, 3, 9, 6, 1] });
 
     // [5, 2, 3]
     // [1, 5, 3, 9, 6, 1]
+
+
+// Immediately Invoked Function Expressions
+const runOnce = function () {
+    console.log('This will never run again');
+};
+runOnce();
+// nothing stopping us from running this again:
+// runOnce();
+
+// to run only once, wrap function in parentheses to creat a function exression, or IIFE:
+(function() {
+    console.log('This will never run again');
+})();
