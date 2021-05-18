@@ -417,7 +417,16 @@ runOnce();
 // to run only once, wrap function in parentheses to creat a function exression, or IIFE:
 (function() {
     console.log('This will never run again');
+    const isPrivate = 23;
 })();
+
+console.log(isPrivate);
 
 // IIFE as an arrow function:
 (() => console.log('This will ALSO never run again'))();
+
+// Why was IIFE invented?
+// functions create scopes
+// therefore, console.log of isPrivate is inaccessible, being encapsulated as it is in the function sccope
+// IIFE is a pattern developers came up with to get around this
+
