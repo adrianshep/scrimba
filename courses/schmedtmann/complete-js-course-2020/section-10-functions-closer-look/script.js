@@ -430,3 +430,14 @@ console.log(isPrivate);
 // therefore, console.log of isPrivate is inaccessible, being encapsulated as it is in the function sccope
 // IIFE is a pattern developers came up with to get around this
 
+
+// variables declared with let or const create their own scope inside a block:
+
+{
+    const isPrivate = 23;
+    var notPrivate = 46;
+}
+// inaccessible:
+console.log(isPrivate);
+// accessible:
+console.log(notPrivate);
