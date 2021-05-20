@@ -441,3 +441,17 @@ console.log(isPrivate);
 console.log(isPrivate);
 // accessible:
 console.log(notPrivate);
+
+
+// Closures
+// a closure happens automatically in certain situations
+const secureBooking = function() {
+    let passengerCount = 0;
+
+    return function() {
+        passengerCount++;
+        console.log(`${passengerCount} passengers`);
+    }
+}
+
+const booker = secureBooking();
