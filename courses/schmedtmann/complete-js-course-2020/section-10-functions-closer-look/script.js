@@ -455,3 +455,18 @@ const secureBooking = function() {
 }
 
 const booker = secureBooking();
+
+// In the global execution context, only 
+//      secureBooking = <f>
+// is running.
+// Global scope then contains secureBooking = <f>
+// When secureBooking = <f> is executed, a new execution context is put on top of the stack:
+//     secureBooking() EC
+//      passengerCount = 0
+//     Global EC
+//      secureBooking = <f>
+
+// each execution context contains its own variable environment
+// when secureBooking() EC is executed, it pops off the call stack and disappear
+// secureBooking() scope has access to passengerCount = 0, which is local and 
+// secureBooking = <f>, which is global and comes from the parent
