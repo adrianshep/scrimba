@@ -485,3 +485,4 @@ booker();
 // calling booker() puts it on top of the call stack
 // its variable environment is empty as there are no arguments
 // secret revealed: booker function will have access to the expired secureBooking's variable environment (passengerCount = 0) 
+// a closure then, is this variable environment attached to the function
