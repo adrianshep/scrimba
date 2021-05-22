@@ -470,3 +470,13 @@ const booker = secureBooking();
 // when secureBooking() EC is executed, it pops off the call stack and disappear
 // secureBooking() scope has access to passengerCount = 0, which is local and 
 // secureBooking = <f>, which is global and comes from the parent
+
+// doesn't need arguments to run as there's no list of parameters:
+
+booker();
+booker();
+booker();
+// passenger count is incremented to 1, then 2, then 3 total
+// closure is what makes this possible
+// booker function exists in the global scope while local scope is gone
+// closure makes a function remember all the variables that existed at the function's time and place of birth
