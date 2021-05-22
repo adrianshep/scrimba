@@ -480,3 +480,8 @@ booker();
 // closure is what makes this possible
 // booker function exists in the global scope while local scope is gone
 // closure makes a function remember all the variables that existed at the function's time and place of birth
+// how it works:
+// secureBooking() is off of the call stack
+// calling booker() puts it on top of the call stack
+// its variable environment is empty as there are no arguments
+// secret revealed: booker function will have access to the expired secureBooking's variable environment (passengerCount = 0) 
