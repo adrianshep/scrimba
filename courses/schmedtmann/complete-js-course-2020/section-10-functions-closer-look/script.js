@@ -486,3 +486,4 @@ booker();
 // its variable environment is empty as there are no arguments
 // secret revealed: booker function will have access to the expired secureBooking's variable environment (passengerCount = 0) 
 // a closure then, is this variable environment attached to the function
+// we can say that the booker function "closed over" its parent scope, that is, its parent's variable environment and that environment stays with the function forever
