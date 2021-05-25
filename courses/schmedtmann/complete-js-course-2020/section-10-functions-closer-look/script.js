@@ -490,3 +490,12 @@ booker();
 // The Booker function attempts to increase the passengerCount variable. However, this variable is not in the current scope.
 // so JavaScript will immediately look into the closure and see if it can find the variable there. And it does this even before looking at the scope chain.
 // For example, if there was a global passengerCount variable  set to 10, it would still first use the one in the closure. So the closure basically has priority over the scope chain.
+
+// More definitions of closure:
+// More formal:
+// A closure is the closed-over variable environment of the execution context in which a function was created, ever after that execution context is gone;
+// Less formal:
+// A closure gives a function access to all the variables of its parent function, even after that parent function has returned. The function keeps a reference ot its outer scope, which preserve the scope chain throughout time.
+// A closure makes sure that a functino doesn't lose connection to variables that existed at the function's birthplace.
+// A closure is like a backpack that a function carries with it wherever it goes. This backpack has all the variables that were present in the environment where the function was created.
+// Finally, we do NOT have to manually create closures; this is a JavaScript feature that happens automatically. We can't even access closed-over variables explicitly. A closure is NOT a tangible JavaScript object.
