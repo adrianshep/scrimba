@@ -487,3 +487,6 @@ booker();
 // secret revealed: booker function will have access to the expired secureBooking's variable environment (passengerCount = 0) 
 // a closure then, is this variable environment attached to the function
 // we can say that the booker function "closed over" its parent scope, that is, its parent's variable environment and that environment stays with the function forever
+// The Booker function attempts to increase the passengerCount variable. However, this variable is not in the current scope.
+// so JavaScript will immediately look into the closure and see if it can find the variable there. And it does this even before looking at the scope chain.
+// For example, if there was a global passengerCount variable  set to 10, it would still first use the one in the closure. So the closure basically has priority over the scope chain.
