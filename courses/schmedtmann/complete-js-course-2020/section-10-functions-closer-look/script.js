@@ -499,3 +499,9 @@ booker();
 // A closure makes sure that a functino doesn't lose connection to variables that existed at the function's birthplace.
 // A closure is like a backpack that a function carries with it wherever it goes. This backpack has all the variables that were present in the environment where the function was created.
 // Finally, we do NOT have to manually create closures; this is a JavaScript feature that happens automatically. We can't even access closed-over variables explicitly. A closure is NOT a tangible JavaScript object.
+
+console.dir(booker);
+// console.dir() is the way to see all the properties of a specified JavaScript object in console by which the developer can easily get the properties of the object.
+// it shows in the console the [[Scopes]] property
+//  where at 0: Closure (secureBooking)
+//   passengerCount: 3
