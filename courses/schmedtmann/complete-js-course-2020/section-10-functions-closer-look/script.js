@@ -505,3 +505,36 @@ console.dir(booker);
 // it shows in the console the [[Scopes]] property
 //  where at 0: Closure (secureBooking)
 //   passengerCount: 3
+
+
+// More Closure Examples
+
+let f;
+// f variable was defined outside, in the global scope 
+
+const g = function() {
+    const a = 23;
+    f = function() {
+        console.log(a * 2);
+     }
+    //  above function closed over the variable environment
+ }
+
+//  next level:
+
+const h = function() {
+    const b = 777;
+    f= function() {
+        console.log(b * 2);
+    };
+};
+
+ g();
+ f();
+ console.dir(f);
+
+// re-assigning f function
+h();
+f();
+console.dir(f);
+// console shows that in the closure b replaces a, as it was "born" in const g and then "reborn" in const h
