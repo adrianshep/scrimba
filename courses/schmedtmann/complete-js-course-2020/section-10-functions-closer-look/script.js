@@ -551,4 +551,6 @@ const boardPassengers = function(n, wait) {
     console.log(`Will start boarding in ${wait} seconds`);
 };
 
+// callback function closes over above perGroup value and prevents below assignment happening:
+const perGroup = 1000;
 boardPassengers(180, 3);
