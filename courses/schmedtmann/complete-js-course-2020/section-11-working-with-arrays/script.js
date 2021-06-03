@@ -74,3 +74,13 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// Simple Array Methods
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// Slice
+// returns new array, doesn't mutate original array arr object
+console.log(arr.slice(2));
+// returns ["c", "d", "e"]
+
