@@ -83,4 +83,6 @@ let arr = ['a', 'b', 'c', 'd', 'e'];
 // returns new array, doesn't mutate original array arr object
 console.log(arr.slice(2));
 // returns ["c", "d", "e"]
-
+console.log(arr.slice(2, 4));
+// returns ["c", "d"]
+// output is end parameter (4) minus the beginning one (2)
