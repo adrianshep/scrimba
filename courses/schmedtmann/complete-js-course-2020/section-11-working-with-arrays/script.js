@@ -86,3 +86,6 @@ console.log(arr.slice(2));
 console.log(arr.slice(2, 4));
 // returns ["c", "d"]
 // output is end parameter (4) minus the beginning one (2)
+console.log(arr.slice(-2));
+// returns ["d", "e"]
+// negative sign means it begins slice from end of array
