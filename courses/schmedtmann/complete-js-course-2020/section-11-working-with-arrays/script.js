@@ -89,3 +89,5 @@ console.log(arr.slice(2, 4));
 console.log(arr.slice(-2));
 // returns ["d", "e"]
 // negative sign means it begins slice from end of array
+console.log(arr.slice(-1));
+// (-1) is always the very last element in an array
