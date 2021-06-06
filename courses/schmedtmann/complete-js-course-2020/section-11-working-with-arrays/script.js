@@ -94,3 +94,7 @@ console.log(arr.slice(-1));
 console.log(arr.slice(1, -2));
 // returns ["b", "c"]
 // every value except last two elements
+
+// slice method may be used to create a shallow copy of any array by calling it without any arguments:
+console.log(arr.slice());
+// returns ["a", "b", "c", "d", "e"]
