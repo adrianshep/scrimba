@@ -98,3 +98,5 @@ console.log(arr.slice(1, -2));
 // slice method may be used to create a shallow copy of any array by calling it without any arguments:
 console.log(arr.slice());
 // returns ["a", "b", "c", "d", "e"]
+// another way of creating a shallow copy of an array using the spread operator:
+console.log([...arr]);
