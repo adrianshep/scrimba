@@ -100,3 +100,4 @@ console.log(arr.slice());
 // returns ["a", "b", "c", "d", "e"]
 // another way of creating a shallow copy of an array using the spread operator:
 console.log([...arr]);
+// the only time you HAVE TO use the slice method specifically is when you need to chain is when you want to chain multiple methods together, calling one after the other.
