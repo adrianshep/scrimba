@@ -101,3 +101,12 @@ console.log(arr.slice());
 // another way of creating a shallow copy of an array using the spread operator:
 console.log([...arr]);
 // the only time you HAVE TO use the slice method specifically is when you need to chain is when you want to chain multiple methods together, calling one after the other.
+
+
+// Splice
+// mutates array
+console.log(arr.splice(2));
+// returns ["c", "d", "e"]
+console.log(arr);
+// returns ["a", "b"]
+// original array has been mutated
