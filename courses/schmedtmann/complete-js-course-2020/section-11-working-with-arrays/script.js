@@ -110,3 +110,10 @@ console.log(arr.splice(2));
 console.log(arr);
 // returns ["a", "b"]
 // original array has been mutated
+
+// in practice, most of the time the value the splice method returns doesn't interest us
+// usually our interest using it is to delete one or more elements from an array
+// a common use case is to remove the last element of an array:
+arr.splice(-1);
+console.log(arr);
+// returns  ["a", "b", "c", "d"], all but last element
