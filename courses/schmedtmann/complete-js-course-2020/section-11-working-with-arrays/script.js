@@ -117,3 +117,8 @@ console.log(arr);
 arr.splice(-1);
 console.log(arr);
 // returns  ["a", "b", "c", "d"], all but last element
+// splice second parameter is deleteCount
+// the number of elements we want to delete
+arr.splice(1, 2);
+// returns ["a", "d"]
+// first parameter says go to position 1 and, according to second parameter, and delete two elements
