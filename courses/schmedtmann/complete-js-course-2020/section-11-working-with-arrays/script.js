@@ -79,7 +79,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
-// Slice
+// SLICE
 // returns new array, doesn't mutate original array arr object
 console.log(arr.slice(2));
 // returns ["c", "d", "e"]
@@ -103,7 +103,7 @@ console.log([...arr]);
 // the only time you HAVE TO use the slice method specifically is when you need to chain is when you want to chain multiple methods together, calling one after the other.
 
 
-// Splice
+// SPLICE
 // mutates array
 console.log(arr.splice(2));
 // returns ["c", "d", "e"]
@@ -122,3 +122,8 @@ console.log(arr);
 arr.splice(1, 2);
 // returns ["a", "d"]
 // first parameter says go to position 1 and, according to second parameter, and delete two elements
+
+
+// REVERSE
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
