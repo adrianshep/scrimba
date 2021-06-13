@@ -132,3 +132,8 @@ console.log(arr2.reverse());
 console.log(arr2);
 // returns ["f", "g", "h", "i", "j"]
 // reverse method mutates the original array
+
+// CONCAT
+const letters = arr.concat(arr2);
+console.log(letters);
+// returns  ["a", "b", "c", "d", "f", "g", "h", "i", "j"]
