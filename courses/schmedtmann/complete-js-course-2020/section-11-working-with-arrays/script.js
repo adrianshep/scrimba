@@ -137,3 +137,6 @@ console.log(arr2);
 const letters = arr.concat(arr2);
 console.log(letters);
 // returns  ["a", "b", "c", "d", "f", "g", "h", "i", "j"]
+// does NOT mutate original array
+// same result as:
+console.log([...arr, ...arr2]);
