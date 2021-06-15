@@ -140,3 +140,7 @@ console.log(letters);
 // does NOT mutate original array
 // same result as:
 console.log([...arr, ...arr2]);
+
+// JOIN
+console.log(letters.join(' - '));
+// returns a - b - c - d - e - f - g - h - i - j
