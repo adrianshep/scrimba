@@ -158,3 +158,17 @@ for (const movement of movements) {
     console.log(`You withdrew ${Math.abs(movement)}`);
   }
 }
+
+console.log('---- FOREACH ----');
+
+// forEach method:
+
+movements.forEach(function(movement) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
+});
+
+// the forEach method loops over the array and in each iteration it executes the callback function, passing in the current element of the array ("movement") as an argument
