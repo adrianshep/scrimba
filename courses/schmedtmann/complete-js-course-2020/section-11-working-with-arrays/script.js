@@ -176,3 +176,5 @@ movements.forEach(function(mov, i, arr) {
 });
 
 // the forEach method loops over the array and in each iteration it executes the callback function, passing in the current element of the array ("movement") as an argument
+// when to use for of versus forEach?
+// if you really need to break out of the loop, only for of will allow that, not forEach
