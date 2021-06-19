@@ -167,11 +167,11 @@ console.log('---- FOREACH ----');
 
 // forEach method:
 
-movements.forEach(function(movement) {
-  if (movement > 0) {
-    console.log(`You deposited ${movement}`);
+movements.forEach(function(mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
   } else {
-    console.log(`You withdrew ${Math.abs(movement)}`);
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
   }
 });
 
