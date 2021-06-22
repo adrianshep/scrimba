@@ -190,6 +190,7 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
+// Map
 currencies.forEach(function(value, key, map) {
   console.log(`${key}: ${value}`);
 });
@@ -198,3 +199,14 @@ currencies.forEach(function(value, key, map) {
 // EUR: Euro
 // GBP: Pound sterling
 
+// Set
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+// underscore parameter below is throwaway placeholder shorthand in JavaScript -- in this case, sets don't use key
+currenciesUnique.forEach(function(value, _, map) {
+  console.log(`${value}: ${value}`);
+});
+// returns:
+// USD: USD
+// EUR: EUR
+// GBP: GBP
