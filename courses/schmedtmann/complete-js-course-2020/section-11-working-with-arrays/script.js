@@ -228,6 +228,8 @@ const displayMovements = function(movements) {
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
 
+  // 'beforeend' would invert the order of movements, each new element would be added AFTER the previous one; that's why it has to be the other way around, 'afterbegin' 
+
   });
 };
 displayMovements(account1.movements);
