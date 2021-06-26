@@ -215,6 +215,8 @@ currenciesUnique.forEach(function(value, _, map) {
 // CREATING DOM ELEMENTS
 
 const displayMovements = function(movements) {
+  containerMovements.innerHTML = '';
+
   movements.forEach(funciton(mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal'
 
