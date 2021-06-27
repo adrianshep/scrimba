@@ -229,6 +229,7 @@ const displayMovements = function(movements) {
     containerMovements.insertAdjacentHTML('afterbegin', html);
 
   // 'beforeend' would invert the order of movements, each new element would be added AFTER the previous one; that's why it has to be the other way around, 'afterbegin' 
+  // using 'afterbegin,' any new child elements will appear BEFORE all the child elements that came before it
 
   });
 };
