@@ -257,5 +257,8 @@ const checkDogs = function(dogsJulia, dogsKate) {
   dogsJuliaCorrected.splice(0, 1);
   dogsJuliaCorrected.splice(-2);
   // return [5, 2]
+  // another solution using slice only:
+  // dogsJulia.slice(1, 3);
+
 }
 checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
