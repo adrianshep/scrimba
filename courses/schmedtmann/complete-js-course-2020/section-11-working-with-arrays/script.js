@@ -267,7 +267,7 @@ const checkDogs = function(dogsJulia, dogsKate) {
     if (dog >= 3) {
       console.log(`Dog number ${i + 1} is an adult, and is ${dog} old`);
     } else {
-      console.log(`Dog number 2 is still a puppy 🐶`);
+      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
     }
   });
 }
