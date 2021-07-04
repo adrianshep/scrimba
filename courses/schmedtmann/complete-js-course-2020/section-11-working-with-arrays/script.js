@@ -276,3 +276,11 @@ const checkDogs = function(dogsJulia, dogsKate) {
 // Test Data 2:
 checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 
+
+// DATA TRANSFORMATIONS: MAP, FILTER, REDUCE
+// MAP
+// is similar to the forEach method except that map creates a brand new array based on the original array
+// the map method takes an array, loops over that array and in each iteration, it applies a callback function that we specify in our code to the current array element.
+// original array: [3, 1, 4, 3, 2]
+// MAP: current * 2
+// returns  a brand new array [6, 2, 8, 6, 4]
