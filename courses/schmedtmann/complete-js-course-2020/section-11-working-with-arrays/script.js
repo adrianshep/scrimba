@@ -292,3 +292,10 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // FILTER: current > 2
 // returns  a brand new array [3, 4, 3]
 
+// REDUCE
+// reduces all array elements down to one single value
+// e.g., adding all the elements together
+// original array: [3, 1, 4, 3, 2]
+// REDUCE: acc (accumulator) + current
+// returns 13
+// array has been reduces to one single value
