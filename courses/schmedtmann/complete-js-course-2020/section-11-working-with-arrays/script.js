@@ -299,3 +299,17 @@ checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
 // REDUCE: acc (accumulator) + current
 // returns 13
 // array has been reduces to one single value
+
+
+// THE MAP METHOD
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const eurToUsd = 1.1;
+
+const movementsUSD = movements.map(function(mov) {
+  return mov * eurToUsd;
+});
+console.log(movements);
+console.log(movementsUSD);
+// returns [220, 495, -440, 3300, -715, -143, 77, 1430]
