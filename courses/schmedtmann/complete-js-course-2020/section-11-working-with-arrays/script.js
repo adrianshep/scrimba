@@ -313,3 +313,10 @@ const movementsUSD = movements.map(function(mov) {
 console.log(movements);
 console.log(movementsUSD);
 // returns [220, 495, -440, 3300, -715, -143, 77, 1430]
+
+// same as above, but using a forOf loop:
+const movementsUSDfor = [];
+for(const mov of movements) movementsUSDfor.push(move * eurToUsd);
+console.log(movementsUSDfor);
+// map method uses a function -- in line with the  functional programming paradigm -- to solve the problem of creating a new array 
+// forOf loop simply loops over one array and manually creates a new one
