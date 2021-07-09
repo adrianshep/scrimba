@@ -320,3 +320,20 @@ for(const mov of movements) movementsUSDfor.push(move * eurToUsd);
 console.log(movementsUSDfor);
 // map method uses a function -- in line with the  functional programming paradigm -- to solve the problem of creating a new array 
 // forOf loop simply loops over one array and manually creates a new one
+
+// simplifying above callback function into an arrow function
+const movementsUSD = movements.map(function(mov) {
+  return mov * eurToUsd;
+});
+// step 1 - remove function kw and replace it with an arrow:
+const movementsUSD = movements.map((mov) => {
+  return mov * eurToUsd;
+});
+// step 2 - remove parens around mov as there is only one argument:
+const movementsUSD = movements.map(mov => {
+  return mov * eurToUsd;
+});
+// step 3 - since we have only one line of code, we can remove the {} and even the return statement:
+const movementsUSD = movements.map(mov => 
+mov * eurToUsd);
+// remember, that we are returning mov * eurToUsd
