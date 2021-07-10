@@ -339,9 +339,9 @@ mov * eurToUsd);
 // remember, that we are returning mov * eurToUsd
 
 const movementsDescriptions = movements.map((move, i, arr) => {
-  if (movt > 0) {
-    // console.log(`You deposited ${movement}`);
-    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  if (mov > 0) {
+    // two or even more return statements are acceptable within a function as long as only one is ever executed
+    return(`Movement ${i + 1}: You deposited ${mov}`);
   } else {
-    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+    return(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
 });
