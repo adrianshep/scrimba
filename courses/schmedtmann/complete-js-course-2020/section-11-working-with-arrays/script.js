@@ -338,10 +338,13 @@ const movementsUSD = movements.map(mov =>
 mov * eurToUsd);
 // remember, that we are returning mov * eurToUsd
 
-const movementsDescriptions = movements.map((move, i, arr) => {
-  if (mov > 0) {
     // two or even more return statements are acceptable within a function as long as only one is ever executed
-    return(`Movement ${i + 1}: You deposited ${mov}`);
-  } else {
-    return(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
-});
+  // if (mov > 0) {
+  //   return(`Movement ${i + 1}: You deposited ${mov}`);
+  // } else {
+  //   return(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+  // simplify above with a ternary operator:
+
+  const movementsDescriptions = movements.map((mov, i) => 
+    `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
+  );
