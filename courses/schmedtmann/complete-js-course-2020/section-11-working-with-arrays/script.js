@@ -337,3 +337,11 @@ const movementsUSD = movements.map(mov => {
 const movementsUSD = movements.map(mov => 
 mov * eurToUsd);
 // remember, that we are returning mov * eurToUsd
+
+const movementsDescriptions = movements.map((move, i, arr) => {
+  if (movt > 0) {
+    // console.log(`You deposited ${movement}`);
+    console.log(`Movement ${i + 1}: You deposited ${movement}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${Math.abs(mov)}`);
+});
