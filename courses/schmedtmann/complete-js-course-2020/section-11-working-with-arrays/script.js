@@ -348,3 +348,6 @@ mov * eurToUsd);
   const movementsDescriptions = movements.map((mov, i) => 
     `Movement ${i + 1}: You ${mov > 0 ? 'deposited' : 'withdrew'} ${Math.abs(mov)}`
   );
+// there is a big difference between the above forEach and map methods:
+// forEach: in each iteration we performed some action that was then visible in the console -- a side effect
+// map: we returned each of the strings from the callback, adding them to a new array, then logged the entire array to the console and not the the elements one by one. Map method did not create a side effect with each iteration.
