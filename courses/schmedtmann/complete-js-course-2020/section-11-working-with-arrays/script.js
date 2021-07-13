@@ -355,3 +355,6 @@ mov * eurToUsd);
 
 // COMPUTING USERNAMES
 const user = 'Steven Thomas Williams';
+// 'Steven Thomas Williams' becomes stw
+const username = user.toLowerCase().split(' ');
+// returns ["steve", "thomas", "williams"]
