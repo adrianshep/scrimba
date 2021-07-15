@@ -367,4 +367,6 @@ const username = user
   .map(function(name) {
     return name[0];
     // returns ["s", "t", "w"]
+  .join('');
 });
+
