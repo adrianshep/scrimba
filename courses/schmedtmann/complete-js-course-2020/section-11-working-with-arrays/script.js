@@ -364,9 +364,11 @@ const username = user.toLowerCase().split(' ');
 const username = user
   .toLowerCase()
   .split(' ')
-  .map(function(name) {
-    return name[0];
-    // returns ["s", "t", "w"]
+  // .map(function(name) {
+  //   return name[0];
+  //   // returns ["s", "t", "w"]
+  // turn .map() into arrow function:
+  .map(name => name[0])
   .join('');
-});
+
 
