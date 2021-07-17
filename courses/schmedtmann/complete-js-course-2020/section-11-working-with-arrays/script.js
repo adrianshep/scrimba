@@ -354,21 +354,29 @@ mov * eurToUsd);
 
 
 // COMPUTING USERNAMES
-const user = 'Steven Thomas Williams';
+// const user = 'Steven Thomas Williams';
 // 'Steven Thomas Williams' becomes stw
-const username = user.toLowerCase().split(' ');
+// const username = user.toLowerCase().split(' ');
 // returns ["steve", "thomas", "williams"]
 
 // looping over array, taking first letter and putting it to into a new array
 // this is exactly what the map method does
-const username = user
-  .toLowerCase()
-  .split(' ')
-  // .map(function(name) {
-  //   return name[0];
-  //   // returns ["s", "t", "w"]
-  // turn .map() into arrow function:
-  .map(name => name[0])
-  .join('');
+// const username = user
+//   .toLowerCase()
+//   .split(' ')
+//   // .map(function(name) {
+//   //   return name[0];
+//   //   // returns ["s", "t", "w"]
+//   // turn .map() into arrow function:
+//   .map(name => name[0])
+//   .join('');
 
+// taking above into a function:
+const creatUsernames = function (user) {
+  const username = user
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
+}
 
