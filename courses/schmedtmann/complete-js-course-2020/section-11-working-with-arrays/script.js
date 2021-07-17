@@ -379,4 +379,4 @@ const creatUsernames = function (user) {
     .map(name => name[0])
     .join('');
 }
-
+creatUsernames('Steven Thomas Williams');
