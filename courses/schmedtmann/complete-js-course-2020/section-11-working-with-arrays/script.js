@@ -378,5 +378,6 @@ const creatUsernames = function (user) {
     .split(' ')
     .map(name => name[0])
     .join('');
+  return username;
 }
-creatUsernames('Steven Thomas Williams');
+console.log(creatUsernames('Steven Thomas Williams'));
