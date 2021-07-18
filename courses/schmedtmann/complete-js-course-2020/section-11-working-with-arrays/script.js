@@ -381,3 +381,20 @@ const creatUsernames = function (user) {
   return username;
 }
 console.log(creatUsernames('Steven Thomas Williams'));
+
+// compute one username for each of the account holder in our accounts array
+// we do not want to create a new array; we want to modify the object, the elements already existing in the accounts array
+
+const creatUsernames = function(accs) {
+  accs.forEach(function(acc) {
+
+  })
+
+  const username = user
+    .toLowerCase()
+    .split(' ')
+    .map(name => name[0])
+    .join('');
+  return username;
+};
+creatUsernames(accounts);
