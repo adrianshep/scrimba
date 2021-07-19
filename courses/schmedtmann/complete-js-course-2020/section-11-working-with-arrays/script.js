@@ -387,14 +387,11 @@ console.log(creatUsernames('Steven Thomas Williams'));
 
 const creatUsernames = function(accs) {
   accs.forEach(function(acc) {
-
-  })
-
-  const username = user
+    acc.username = acc.owner
     .toLowerCase()
     .split(' ')
     .map(name => name[0])
     .join('');
-  return username;
+  })
 };
 creatUsernames(accounts);
