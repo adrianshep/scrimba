@@ -395,3 +395,5 @@ const creatUsernames = function(accs) {
   })
 };
 creatUsernames(accounts);
+// to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
+console.log(accounts);
