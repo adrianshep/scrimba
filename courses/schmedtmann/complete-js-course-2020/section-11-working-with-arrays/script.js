@@ -397,3 +397,11 @@ const creatUsernames = function(accs) {
 creatUsernames(accounts);
 // to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
 console.log(accounts);
+
+// FILTER METHOD
+
+const deposits = movements.filter(function(mov) {
+  
+});
+console.log(movements);
+// as deposits are only those movements that have a value of zero or greater, we want to filter out those movements with a negative value
