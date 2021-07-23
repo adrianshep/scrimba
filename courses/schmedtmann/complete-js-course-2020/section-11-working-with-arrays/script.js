@@ -401,7 +401,9 @@ console.log(accounts);
 // FILTER METHOD
 
 const deposits = movements.filter(function(mov) {
-  
+  return mov > 0;
 });
 console.log(movements);
 // as deposits are only those movements that have a value of zero or greater, we want to filter out those movements with a negative value
+// use a boolean to filter the deposits array
+console.log(deposits);
