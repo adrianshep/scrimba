@@ -407,3 +407,9 @@ console.log(movements);
 // as deposits are only those movements that have a value of zero or greater, we want to filter out those movements with a negative value
 // use a boolean to filter the deposits array
 console.log(deposits);
+
+// comparison with for loop:
+const depositsFor = [];
+for (const mov of movements) if (mov > 0) depositsFor.push(mov);
+console.log(depositsFor);
+// array methods are superior to for loops in that array methods can be chained together and for loops cannot
