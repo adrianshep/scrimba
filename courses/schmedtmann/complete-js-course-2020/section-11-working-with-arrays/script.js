@@ -414,4 +414,7 @@ for (const mov of movements) if (mov > 0) depositsFor.push(mov);
 console.log(depositsFor);
 // array methods are superior to for loops in that array methods can be chained together and for loops cannot
 // Challenge:
-const withdrawals
+// My solution:
+const withdrawals = movements.filter(function(mov) {
+  return mov < 0;
+});
