@@ -400,7 +400,7 @@ console.log(accounts);
 
 // FILTER METHOD
 
-const deposits = movements.filter(function(mov) {
+const deposits = movements.filter(function(mov, i, arr) {
   return mov > 0;
 });
 console.log(movements);
@@ -418,3 +418,6 @@ console.log(depositsFor);
 const withdrawals = movements.filter(function(mov) {
   return mov < 0;
 });
+
+// Jonas's solution:
+const withdrawals = movements.filter(mov => move < 0);
