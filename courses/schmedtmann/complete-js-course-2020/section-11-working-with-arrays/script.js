@@ -421,3 +421,12 @@ const withdrawals = movements.filter(function(mov) {
 
 // Jonas's solution:
 const withdrawals = movements.filter(mov => move < 0);
+
+// REDUCE METHOD
+// boils down all elements in an array to one single value
+// acc = accumulator -> SNOWBALL
+// cur = current value
+const balance = movements.reduce(function(acc, cur, i, arr) {
+  return acc + cur
+})
+// in each loop, we return the updated accumulator plus the new current value so we can keep adding to it in the next iteration
