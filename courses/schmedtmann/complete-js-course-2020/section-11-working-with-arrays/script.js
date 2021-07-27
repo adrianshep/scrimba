@@ -428,5 +428,6 @@ const withdrawals = movements.filter(mov => move < 0);
 // cur = current value
 const balance = movements.reduce(function(acc, cur, i, arr) {
   return acc + cur
-})
+// the 0 below is initial value of accumulator
+}, 0);
 // in each loop, we return the updated accumulator plus the new current value so we can keep adding to it in the next iteration
