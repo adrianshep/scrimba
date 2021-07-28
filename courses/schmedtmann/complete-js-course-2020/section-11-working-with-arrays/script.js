@@ -427,6 +427,8 @@ const withdrawals = movements.filter(mov => move < 0);
 // acc = accumulator -> SNOWBALL
 // cur = current value
 const balance = movements.reduce(function(acc, cur, i, arr) {
+  // to see the snowball effect of accumulator:
+  console.log(`Iteration ${i}: ${acc}`);
   return acc + cur
 // the 0 below is initial value of accumulator
 }, 0);
