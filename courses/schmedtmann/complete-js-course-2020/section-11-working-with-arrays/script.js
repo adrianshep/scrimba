@@ -433,3 +433,9 @@ const balance = movements.reduce(function(acc, cur, i, arr) {
 // the 0 below is initial value of accumulator
 }, 0);
 // in each loop, we return the updated accumulator plus the new current value so we can keep adding to it in the next iteration
+
+// same as above with a for loop:
+// with for loop, always need to have an external variable:
+let balance2 = 0;
+for(const mov of movements) balance2 += mov;
+console.log(balance2);
