@@ -426,13 +426,17 @@ const withdrawals = movements.filter(mov => move < 0);
 // boils down all elements in an array to one single value
 // acc = accumulator -> SNOWBALL
 // cur = current value
-const balance = movements.reduce(function(acc, cur, i, arr) {
+// const balance = movements.reduce(function(acc, cur, i, arr) {
   // to see the snowball effect of accumulator:
-  console.log(`Iteration ${i}: ${acc}`);
-  return acc + cur
+  // console.log(`Iteration ${i}: ${acc}`);
+  // return acc + cur
 // the 0 below is initial value of accumulator
-}, 0);
+// }, 0);
 // in each loop, we return the updated accumulator plus the new current value so we can keep adding to it in the next iteration
+
+// written even more simply with an arrow function:
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance);
 
 // same as above with a for loop:
 // with for loop, always need to have an external variable:
