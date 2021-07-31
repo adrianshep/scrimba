@@ -398,6 +398,10 @@ creatUsernames(accounts);
 // to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
 console.log(accounts);
 
+const calcPrintBalance = function(movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+}
+
 // FILTER METHOD
 
 const deposits = movements.filter(function(mov, i, arr) {
@@ -443,3 +447,4 @@ console.log(balance);
 let balance2 = 0;
 for(const mov of movements) balance2 += mov;
 console.log(balance2);
+
