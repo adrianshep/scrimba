@@ -398,9 +398,10 @@ creatUsernames(accounts);
 // to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
 console.log(accounts);
 
-const calcPrintBalance = function(movements) {
+const calcDisplayBalance = function(movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
-}
+  labelBalance.textContent = `${balance} EUR`;
+};
 
 // FILTER METHOD
 
