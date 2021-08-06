@@ -493,10 +493,14 @@ const calcAverageHumanAge = ages.map(function(dogAge) {
 // 2. Exclude all dogs that are less than 18 human years old (which is the same as keeping dogs that are at least 18 years old)
 const calcAverageHumanAge = function(ages) {
   const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + age * 4);
-  // my solution
-  const dogsUnderHuman18 = humanAges.filter(function(age, i, arr) {
-    return age > 17;
-  });
+  // my solution:
+  // const dogsUnderHuman18 = humanAges.filter(function(age, i, arr) {
+  //   return age > 17;
+  // });
+  // console.log(humanAges);
+  // Jonas's solution:
+  const adults = humanAges.filter(age => age >= 18);
   console.log(humanAges);
+  console.log(adults);
 };
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
