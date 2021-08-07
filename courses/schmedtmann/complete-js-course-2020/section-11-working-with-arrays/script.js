@@ -217,7 +217,7 @@ currenciesUnique.forEach(function(value, _, map) {
 const displayMovements = function(movements) {
   containerMovements.innerHTML = '';
 
-  movements.forEach(funciton(mov, i) {
+  movements.forEach(function(mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal'
 
     const html = `
@@ -500,6 +500,11 @@ const calcAverageHumanAge = function(ages) {
   // console.log(humanAges);
   // Jonas's solution:
   const adults = humanAges.filter(age => age >= 18);
+  // 3. Calculate the average human age of all adult dogs
+  // my solutions
+  const numAdultDogs = adults.length;
+  const totalAdultAges = humanAges.reduce((acc, cur) => acc + cur, 0);
+  const aveAdultDogHumanAge = totalAdultAges/numAdultDogs;
   console.log(humanAges);
   console.log(adults);
 };
