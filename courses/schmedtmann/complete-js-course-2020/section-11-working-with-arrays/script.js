@@ -501,11 +501,14 @@ const calcAverageHumanAge = function(ages) {
   // Jonas's solution:
   const adults = humanAges.filter(age => age >= 18);
   // 3. Calculate the average human age of all adult dogs
-  // my solutions
-  const numAdultDogs = adults.length;
-  const totalAdultAges = humanAges.reduce((acc, cur) => acc + cur, 0);
-  const aveAdultDogHumanAge = totalAdultAges/numAdultDogs;
-  console.log(humanAges);
-  console.log(adults);
+  // my solution:
+  // const numAdultDogs = adults.length;
+  // const totalAdultAges = humanAges.reduce((acc, cur) => acc + cur, 0);
+  // const aveAdultDogHumanAge = totalAdultAges/numAdultDogs;
+  // console.log(humanAges);
+  // console.log(adults);
+
+  // Jonas's solution:
+  const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
 };
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
