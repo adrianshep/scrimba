@@ -526,4 +526,5 @@ console.log(avg1, avg2);
 const eurToUsd = 1.1;
 const totalDepositsUSD = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc, mov) => acc + mov, 0);
 // can keep chaining methods as long as they return new arrays
+// .filter and .map return arrays, so methods can be chained after them, but .reduce returns a value and therefore no method can be after it
 console.log(totalDepositsUSD);
