@@ -521,10 +521,18 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg1, avg2);
 
+// PIPELINE
 // THE MAGIC OF CHAINING METHODS
-
 const eurToUsd = 1.1;
-const totalDepositsUSD = movements.filter(mov => mov > 0).map(mov => mov * eurToUsd).reduce((acc, mov) => acc + mov, 0);
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0) 
+  .map((mov, i, arr) => {
+    // arr is the result of the previous operation -- .filter -- so logging it will show what happened as a result of movements.filter
+    console.log(arr);
+    return mov * eurToUsd;
+  })
+  // .map(mov => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
 // can keep chaining methods as long as they return new arrays
 // .filter and .map return arrays, so methods can be chained after them, but .reduce returns a value and therefore no method can be after it
 console.log(totalDepositsUSD);
