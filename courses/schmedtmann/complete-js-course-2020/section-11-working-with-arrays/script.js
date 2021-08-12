@@ -404,6 +404,15 @@ const calcDisplayBalance = function(movements) {
 };
 calcDisplayBalance(account1.movements);
 
+const calcDisplaySummary = function(movements) {
+  const incomes = movements
+    .filter(mov => 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}EUR`
+};
+calcDisplayBalance(account1.movements);
+
+
 // FILTER METHOD
 
 const deposits = movements.filter(function(mov, i, arr) {
@@ -528,7 +537,7 @@ const totalDepositsUSD = movements
   .filter(mov => mov > 0) 
   .map((mov, i, arr) => {
     // arr is the result of the previous operation -- .filter -- so logging it will show what happened as a result of movements.filter
-    console.log(arr);
+    // console.log(arr);
     return mov * eurToUsd;
   })
   // .map(mov => mov * eurToUsd)
