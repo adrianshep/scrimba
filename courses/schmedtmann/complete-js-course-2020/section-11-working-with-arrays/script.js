@@ -410,7 +410,7 @@ const calcDisplaySummary = function(movements) {
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`
 };
-calcDisplayBalance(account1.movements);
+calcDisplaySummary(account1.movements);
 
 
 // FILTER METHOD
