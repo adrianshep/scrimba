@@ -546,6 +546,12 @@ console.log(avg1, avg2);
 
 // PIPELINE
 // THE MAGIC OF CHAINING METHODS
+
+// remarks on chaining:
+// do not overuse, as it can cause performance issues if chain is long and you have huge arrays
+// should try to compress as much functionality into as few methods as possible
+// bad practice in JS to chain methods that mutate the original array -- splice or reverse, for instance
+
 const eurToUsd = 1.1;
 const totalDepositsUSD = movements
   .filter(mov => mov > 0) 
