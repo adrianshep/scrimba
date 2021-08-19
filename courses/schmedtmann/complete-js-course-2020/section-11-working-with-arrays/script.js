@@ -565,3 +565,14 @@ const totalDepositsUSD = movements
 // can keep chaining methods as long as they return new arrays
 // .filter and .map return arrays, so methods can be chained after them, but .reduce returns a value and therefore no method can be after it
 console.log(totalDepositsUSD);
+
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+Rewrite the 'calcAverageHumanAge' function from the previous challenge, but this time as an arrow function, and using chaining!
+TEST DATA 1: [5, 2, 4, 1, 15, 8, 3]
+TEST DATA 2: [16, 6, 10, 5, 6, 1, 4]
+GOOD LUCK 😀
+*/
