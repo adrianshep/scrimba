@@ -578,14 +578,16 @@ GOOD LUCK 😀
 */
 
 // my solution:
-const calcAverageHumanAge = ages
-  .filter(const humanAges = ages
-    .map(age => age <= 2 ? 2 * age : 16 + age * 4);)
-    .reduce()
+// const calcAverageHumanAge = ages
+//   .filter(const humanAges = ages
+//     .map(age => age <= 2 ? 2 * age : 16 + age * 4);)
+//     .reduce()
 
-// const calcAverageHumanAge = function(ages) {
-//   const humanAges = ages.map(age => age <= 2 ? 2 * age : 16 + age * 4);
-// };
+// Jonas's solution:
+const calcAverageHumanAge = age => ages
+  .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+  .filter(age => age >= 18);
+
 // calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 
 // const adults = humanAges.filter(age => age >= 18);
