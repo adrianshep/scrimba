@@ -601,3 +601,11 @@ console.log(movements);
 console.log(firstWithdrawal);
 // find method only returns first element that matches the condition
 // find only returns the element itself and not the array it's in
+
+console.log(accounts);
+// this array contains four objects each of which is an account
+// this is a common data structure
+// using find we can find an object in the array based on a property of that object
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
