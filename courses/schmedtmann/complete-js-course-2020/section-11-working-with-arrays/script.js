@@ -609,3 +609,7 @@ console.log(accounts);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
+
+// usually, goal of find method is to find one element
+// therefore, conditional uses strict equality operator (===), assuming that account owner names are unique, to return the only matching element in the array
+
