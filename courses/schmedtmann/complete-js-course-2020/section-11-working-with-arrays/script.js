@@ -352,6 +352,33 @@ mov * eurToUsd);
 // forEach: in each iteration we performed some action that was then visible in the console -- a side effect
 // map: we returned each of the strings from the callback, adding them to a new array, then logged the entire array to the console and not the the elements one by one. Map method did not create a side effect with each iteration.
 
+const calcDisplayBalance = function(movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}€`;
+};
+calcDisplayBalance(account1.movements);
+
+const calcDisplaySummary = function(movements) {
+  const incomes = movements
+    .filter(mov => 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements.filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0)
+    labelSumOut.textContent = `${Math.abs(out)}€`;
+
+    const interest = movements
+      .filter(mov => mov > 0)
+      .map(deposit => (deposit * 1.2) / 100)
+      .filter((int, i, arr) => {
+        console.log(arr);
+        return int >= 1;
+      })
+      .reduce((acc, int) => acc + int, 0);
+      labelSumInterest.textContent = `${interest}€`;
+};
+calcDisplaySummary(account1.movements);
 
 // COMPUTING USERNAMES
 // const user = 'Steven Thomas Williams';
@@ -398,34 +425,11 @@ creatUsernames(accounts);
 // to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
 console.log(accounts);
 
-const calcDisplayBalance = function(movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance}€`;
-};
-calcDisplayBalance(account1.movements);
-
-const calcDisplaySummary = function(movements) {
-  const incomes = movements
-    .filter(mov => 0)
-    .reduce((acc, mov) => acc + mov, 0);
-  labelSumIn.textContent = `${incomes}€`;
-
-  const out = movements.filter(mov => mov > 0)
-    .reduce((acc, mov) => acc + mov, 0)
-    labelSumOut.textContent = `${Math.abs(out)}€`;
-
-    const interest = movements
-      .filter(mov => mov > 0)
-      .map(deposit => (deposit * 1.2) / 100)
-      .filter((int, i, arr) => {
-        console.log(arr);
-        return int >= 1;
-      })
-      .reduce((acc, int) => acc + int, 0);
-      labelSumInterest.textContent = `${interest}€`;
-};
-calcDisplaySummary(account1.movements);
-
+// IMPLEMENTING LOGIN
+// Event handler
+btnLogin.addEventListener('click', function() {
+  console.log('LOGIN');
+});
 
 // FILTER METHOD
 
