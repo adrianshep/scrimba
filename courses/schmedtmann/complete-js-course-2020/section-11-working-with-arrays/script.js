@@ -427,7 +427,10 @@ console.log(accounts);
 
 // IMPLEMENTING LOGIN
 // Event handler
-btnLogin.addEventListener('click', function() {
+btnLogin.addEventListener('click', function(e) {
+  // Prevent form from submitting
+  e.preventDefault();
+  
   console.log('LOGIN');
 });
 
