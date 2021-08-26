@@ -427,11 +427,19 @@ console.log(accounts);
 
 // IMPLEMENTING LOGIN
 // Event handler
+let currentAccount;
+
 btnLogin.addEventListener('click', function(e) {
   // Prevent form from submitting
   e.preventDefault();
   
+currentAccount = accounts.find(
+  acc => acc.owner === inputLoginUsername.value);
+console.log(currentAccount);
+
+if(currentAccount.pin === Number(inputLoginPin.value)) {
   console.log('LOGIN');
+}
 });
 
 // FILTER METHOD
