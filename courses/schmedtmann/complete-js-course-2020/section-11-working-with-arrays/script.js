@@ -436,8 +436,10 @@ btnLogin.addEventListener('click', function(e) {
 currentAccount = accounts.find(
   acc => acc.owner === inputLoginUsername.value);
 console.log(currentAccount);
-
-if(currentAccount.pin === Number(inputLoginPin.value)) {
+// if no element matches below condition, the find method will return an error
+// to avoid that, you could check if currentAccount exists first if(currentAccount && urrentAccount.pin)
+// but an easier solution is optional chaining, using currentAccount?.pin instead
+if (currentAccount?.pin === Number(inputLoginPin.value)) {
   console.log('LOGIN');
 }
 });
