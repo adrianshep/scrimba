@@ -440,6 +440,15 @@ console.log(currentAccount);
 // to avoid that, you could check if currentAccount exists first if(currentAccount && urrentAccount.pin)
 // but an easier solution is optional chaining, using currentAccount?.pin instead
 if (currentAccount?.pin === Number(inputLoginPin.value)) {
+  // Display UI and welcome message
+
+  // Display movements
+
+  // Display balance
+
+  // Display summary
+
+
   console.log('LOGIN');
 }
 });
