@@ -442,6 +442,7 @@ console.log(currentAccount);
 if (currentAccount?.pin === Number(inputLoginPin.value)) {
   // Display UI and welcome message
   labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+  containerApp.getElementsByClassName.opacity = 100;
 
   // Display movements
 
