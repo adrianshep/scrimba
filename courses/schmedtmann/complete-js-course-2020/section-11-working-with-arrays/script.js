@@ -441,6 +441,7 @@ console.log(currentAccount);
 // but an easier solution is optional chaining, using currentAccount?.pin instead
 if (currentAccount?.pin === Number(inputLoginPin.value)) {
   // Display UI and welcome message
+  labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
 
   // Display movements
 
