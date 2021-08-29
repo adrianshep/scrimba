@@ -233,7 +233,6 @@ const displayMovements = function(movements) {
 
   });
 };
-displayMovements(account1.movements);
 
 
 ///////////////////////////////////////
@@ -356,7 +355,6 @@ const calcDisplayBalance = function(movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance}€`;
 };
-calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = function(movements) {
   const incomes = movements
@@ -378,7 +376,6 @@ const calcDisplaySummary = function(movements) {
       .reduce((acc, int) => acc + int, 0);
       labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
 
 // COMPUTING USERNAMES
 // const user = 'Steven Thomas Williams';
@@ -445,11 +442,13 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   containerApp.getElementsByClassName.opacity = 100;
 
   // Display movements
+  displayMovements(currentAccount.movements);
 
   // Display balance
+  calcDisplayBalance(currentAccount.movements);
 
   // Display summary
-
+  calcDisplaySummary(currentAccount.movements);
 
   console.log('LOGIN');
 }
