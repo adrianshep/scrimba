@@ -441,6 +441,10 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   containerApp.getElementsByClassName.opacity = 100;
 
+  // Clear input fields
+  // because assignment operator works right to left, can assign '' sequentially in that direction:
+  inputLoginUsername = inputLoginPin.value = '';
+
   // Display movements
   displayMovements(currentAccount.movements);
 
