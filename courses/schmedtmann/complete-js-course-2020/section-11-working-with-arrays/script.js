@@ -444,6 +444,8 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   // Clear input fields
   // because assignment operator works right to left, can assign '' sequentially in that direction:
   inputLoginUsername = inputLoginPin.value = '';
+  // this will remove focus from input:
+  inputLoginPin.blur();
 
   // Display movements
   displayMovements(currentAccount.movements);
