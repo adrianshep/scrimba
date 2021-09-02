@@ -455,7 +455,7 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   calcDisplayBalance(currentAccount.movements);
 
   // Display summary
-  calcDisplaySummary(currentAccount.movements);
+  calcDisplaySummary(currentAccount);
 
   console.log('LOGIN');
 }
