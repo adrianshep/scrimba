@@ -456,10 +456,12 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
 
   // Display summary
   calcDisplaySummary(currentAccount);
-
-  console.log('LOGIN');
 }
 });
+
+btnTransfer.addEventListener('click', function(e) {
+  e.preventDefault();
+})
 
 // FILTER METHOD
 
