@@ -351,9 +351,9 @@ mov * eurToUsd);
 // forEach: in each iteration we performed some action that was then visible in the console -- a side effect
 // map: we returned each of the strings from the callback, adding them to a new array, then logged the entire array to the console and not the the elements one by one. Map method did not create a side effect with each iteration.
 
-const calcDisplayBalance = function(movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
-  labelBalance.textContent = `${balance}€`;
+const calcDisplayBalance = function(acc) {
+  acc.balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${acc.balance}€`;
 };
 
 const calcDisplaySummary = function(acc) {
@@ -452,7 +452,7 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   displayMovements(currentAccount.movements);
 
   // Display balance
-  calcDisplayBalance(currentAccount.movements);
+  calcDisplayBalance(currentAccount);
 
   // Display summary
   calcDisplaySummary(currentAccount);
@@ -464,6 +464,8 @@ btnTransfer.addEventListener('click', function(e) {
   const amount = Number(inputTransferAmount.value);
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value);
+
+    if (amount > 0 && )
 });
 
 // FILTER METHOD
