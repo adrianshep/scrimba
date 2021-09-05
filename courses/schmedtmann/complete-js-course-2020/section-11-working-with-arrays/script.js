@@ -465,7 +465,14 @@ btnTransfer.addEventListener('click', function(e) {
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value);
 
-    if (amount > 0 && )
+    if (
+      amount > 0 && 
+      receiverAcc &&
+      currentAccount.balance >= amount && 
+      // optional chaining to check if username exists:
+      receiverAcc?.username !== currentAccount.username) {
+        console.log('Transfer valid');
+      }
 });
 
 // FILTER METHOD
