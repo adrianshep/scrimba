@@ -471,7 +471,9 @@ btnTransfer.addEventListener('click', function(e) {
       currentAccount.balance >= amount && 
       // optional chaining to check if username exists:
       receiverAcc?.username !== currentAccount.username) {
-        console.log('Transfer valid');
+        // Doing the transfer
+        currentAccount.movements.push(-amount);
+        receiverAcc.movements.push(amount);
       }
 });
 
