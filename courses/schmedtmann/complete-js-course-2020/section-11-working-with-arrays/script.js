@@ -423,6 +423,17 @@ creatUsernames(accounts);
 // to check this worked, we can log accounts objects and see new property of "username" and corresponding value for each:
 console.log(accounts);
 
+const updateUI = function() {
+    // Display movements
+    displayMovements(currentAccount.movements);
+
+    // Display balance
+    calcDisplayBalance(currentAccount);
+  
+    // Display summary
+    calcDisplaySummary(currentAccount);
+}
+
 // IMPLEMENTING LOGIN
 // Event handler
 let currentAccount;
@@ -448,14 +459,7 @@ if (currentAccount?.pin === Number(inputLoginPin.value)) {
   // this will remove focus from input:
   inputLoginPin.blur();
 
-  // Display movements
-  displayMovements(currentAccount.movements);
-
-  // Display balance
-  calcDisplayBalance(currentAccount);
-
-  // Display summary
-  calcDisplaySummary(currentAccount);
+  updateUI(currentAccount);
 }
 });
 
