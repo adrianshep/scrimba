@@ -470,7 +470,7 @@ btnTransfer.addEventListener('click', function(e) {
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value);
     // clear out the input fields
-    inputTransferAmount.value = inputTransferTo = '';
+    inputTransferAmount.value = inputTransferTo.value = '';
 
     if (
       amount > 0 && 
