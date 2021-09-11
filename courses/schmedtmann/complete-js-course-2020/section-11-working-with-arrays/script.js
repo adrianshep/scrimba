@@ -490,10 +490,15 @@ btnTransfer.addEventListener('click', function(e) {
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
   // challenge - my solution:
-  if(currentAccount.username && currentAccount.pin) {
+  // if(currentAccount.username && currentAccount.pin) {}
+  // challenge - Jonas's solution:
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value === currentAccount.pin
+      ) {
 
-  }
-})
+      }
+});
 
 // FILTER METHOD
 
