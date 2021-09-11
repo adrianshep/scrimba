@@ -487,6 +487,11 @@ btnTransfer.addEventListener('click', function(e) {
       }
 });
 
+btnClose.addEventListener('click', function(e) {
+  e.preventDefault();
+  console.log('Delete');
+})
+
 // FILTER METHOD
 
 const deposits = movements.filter(function(mov, i, arr) {
@@ -673,3 +678,4 @@ console.log(account);
 // usually, goal of find method is to find one element
 // therefore, conditional uses strict equality operator (===), assuming that account owner names are unique, to return the only matching element in the array
 
+// FINDINDEX METHOD
