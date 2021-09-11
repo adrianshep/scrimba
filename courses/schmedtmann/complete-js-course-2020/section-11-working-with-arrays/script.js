@@ -489,7 +489,10 @@ btnTransfer.addEventListener('click', function(e) {
 
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
-  console.log('Delete');
+  // challenge - my solution:
+  if(currentAccount.username && currentAccount.pin) {
+
+  }
 })
 
 // FILTER METHOD
