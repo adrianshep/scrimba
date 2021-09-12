@@ -497,6 +497,8 @@ btnClose.addEventListener('click', function(e) {
     Number(inputClosePin.value === currentAccount.pin
       ) {
 
+        // because the splice method mutates the underlying array, there's no need to save the result anywhere:
+        accounts.splice(index, 1);
       }
 });
 
