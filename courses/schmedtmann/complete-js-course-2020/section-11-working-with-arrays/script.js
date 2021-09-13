@@ -496,6 +496,9 @@ btnClose.addEventListener('click', function(e) {
     inputCloseUsername.value === currentAccount.username &&
     Number(inputClosePin.value === currentAccount.pin
       ) {
+        const index = accounts.findIndex(
+          acc => acc.username === currentAccount.username
+        );
 
         // because the splice method mutates the underlying array, there's no need to save the result anywhere:
         accounts.splice(index, 1);
