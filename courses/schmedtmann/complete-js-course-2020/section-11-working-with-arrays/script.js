@@ -499,9 +499,12 @@ btnClose.addEventListener('click', function(e) {
         const index = accounts.findIndex(
           acc => acc.username === currentAccount.username
         );
-
+        // Delete account
         // because the splice method mutates the underlying array, there's no need to save the result anywhere:
         accounts.splice(index, 1);
+
+        // Hide UI
+        containerApp.style.opacity = 0;
       }
 });
 
