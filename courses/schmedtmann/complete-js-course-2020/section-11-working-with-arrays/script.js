@@ -489,6 +489,8 @@ btnTransfer.addEventListener('click', function(e) {
 
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
+  // clear out the input fields
+  inputCloseUsername.value = inputClosePin.value = '';
   // challenge - my solution:
   // if(currentAccount.username && currentAccount.pin) {}
   // challenge - Jonas's solution:
