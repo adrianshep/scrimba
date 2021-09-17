@@ -698,3 +698,9 @@ console.log(account);
 // therefore, conditional uses strict equality operator (===), assuming that account owner names are unique, to return the only matching element in the array
 
 // FINDINDEX METHOD
+
+// SOME AND EVERY
+console.log(movements);
+console.log(movements.includes(-130));
+// essentially only tests for equality
+// only that value returns boolean
