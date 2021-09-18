@@ -700,7 +700,13 @@ console.log(account);
 // FINDINDEX METHOD
 
 // SOME AND EVERY
+
 console.log(movements);
 console.log(movements.includes(-130));
-// essentially only tests for equality
-// only that value returns boolean
+// .includes() can only really test for EQUALITY
+// only whether that value exists in the array
+
+// to test if there's any positive movement in the array, use .some()
+// test for a CONDITION
+const anyDeposits = movements.some(move => mov > 1500);
+console.log(anyDeposits);
