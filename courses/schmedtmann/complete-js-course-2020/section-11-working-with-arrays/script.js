@@ -487,10 +487,15 @@ btnTransfer.addEventListener('click', function(e) {
       }
 });
 
+// loan is only granted if there is any deposit > than or = to 10% of the requested amount of loan
 btnLoan.addEventListener('click', function(e) {
   e.preventDefault();
 
   const amount = Number(inputLoanAmount.value);
+
+  if(amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    
+  }
 })
 
 
