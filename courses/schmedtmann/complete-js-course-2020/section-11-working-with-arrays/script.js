@@ -487,6 +487,13 @@ btnTransfer.addEventListener('click', function(e) {
       }
 });
 
+btnLoan.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+})
+
+
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
   // challenge - my solution:
@@ -708,5 +715,6 @@ console.log(movements.includes(-130));
 
 // to test if there's any positive movement in the array, use .some()
 // test for a CONDITION
-const anyDeposits = movements.some(move => mov > 1500);
+const anyDeposits = movements.some(move => mov > 0);
 console.log(anyDeposits);
+
