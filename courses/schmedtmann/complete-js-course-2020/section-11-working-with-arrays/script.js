@@ -497,6 +497,8 @@ btnLoan.addEventListener('click', function(e) {
     // Add movement
     currentAccount.movements.push(amount);
 
+    // Update UI
+    updateUI(currentAccount);
   }
 })
 
