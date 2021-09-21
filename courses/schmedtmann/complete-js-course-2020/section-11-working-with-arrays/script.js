@@ -501,6 +501,7 @@ btnLoan.addEventListener('click', function(e) {
     updateUI(currentAccount);
   }
   inputLoanAmount.value = '';
+  
 })
 
 
