@@ -501,7 +501,7 @@ btnLoan.addEventListener('click', function(e) {
     updateUI(currentAccount);
   }
   inputLoanAmount.value = '';
-  
+
 })
 
 
@@ -717,7 +717,14 @@ console.log(account);
 
 // FINDINDEX METHOD
 
-// SOME AND EVERY
+// SOME 
+
+// EVERY
+// only returns true if all of the elements in the array satisfy the condition we pass in
+console.log(movements.every(mov => mov > 0));
+// returns false because not all movements are deposits
+console.log(account4.movements.every(mov => mov > 0));
+// returns true because all movements in Account 4 are deposits
 
 console.log(movements);
 console.log(movements.includes(-130));
