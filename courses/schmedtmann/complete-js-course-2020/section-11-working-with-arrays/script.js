@@ -725,6 +725,16 @@ console.log(movements.every(mov => mov > 0));
 // returns false because not all movements are deposits
 console.log(account4.movements.every(mov => mov > 0));
 // returns true because all movements in Account 4 are deposits
+console.log(account4.movements.every(mov => mov > 0));
+
+// Separate callback
+// can write the function we need separately and pass it in as a callback:
+// reuse it for other methods requiring callbacks with a true/false condition
+const deposit = mov => mov > 0;
+// if function above needs changing, you only do it in one place; better for the DRY principle
+console.log(movements.some(deposit));
+console.log(movements.every(deposit));
+console.log(movements.filter(deposit));
 
 console.log(movements);
 console.log(movements.includes(-130));
