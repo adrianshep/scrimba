@@ -746,3 +746,8 @@ console.log(movements.includes(-130));
 const anyDeposits = movements.some(move => mov > 0);
 console.log(anyDeposits);
 
+// FLAT
+
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+// returns [1, 2, 3, 4, 5, 6, 7, 8]
