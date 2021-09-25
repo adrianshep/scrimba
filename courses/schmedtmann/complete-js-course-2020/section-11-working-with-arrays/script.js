@@ -753,5 +753,10 @@ console.log(arr.flat());
 // returns flattened arr [1, 2, 3, 4, 5, 6, 7, 8]
 
 const arrDeep =  [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arr.flat());
 // returns flattened arr [[1, 2], 3, 4, [5, 6], 7, 8]
 // only one level of arrays flattened
+
+const arrDeep =  [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arr.flat(2));
+// setting depth to 2 returns arrDeep flattened two levels deep: [1, 2, 3, 4, 5, 6, 7, 8]
