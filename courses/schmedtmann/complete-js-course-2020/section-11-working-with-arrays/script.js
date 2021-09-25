@@ -760,3 +760,8 @@ console.log(arr.flat());
 const arrDeep =  [[[1, 2], 3], [4, [5, 6]], 7, 8];
 console.log(arr.flat(2));
 // setting depth to 2 returns arrDeep flattened two levels deep: [1, 2, 3, 4, 5, 6, 7, 8]
+
+// creating single array out of arrays in accounts individual account objects
+const accountMovements = accounts.map(acc => acc.movements);
+// creates a nested structure of arrays:
+console.log(accountMovements);
