@@ -763,5 +763,8 @@ console.log(arr.flat(2));
 
 // creating single array out of arrays in accounts individual account objects
 const accountMovements = accounts.map(acc => acc.movements);
-// creates a nested structure of arrays:
+// creates a nested structure of arrays containing all the movements:
 console.log(accountMovements);
+// flatten
+const allMovements = accountMovements.flat();
+console.log(allMovement);
