@@ -767,4 +767,7 @@ const accountMovements = accounts.map(acc => acc.movements);
 console.log(accountMovements);
 // flatten
 const allMovements = accountMovements.flat();
-console.log(allMovement);
+console.log(allMovements);
+// adding up all the values for the account balance:
+const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
