@@ -771,3 +771,7 @@ console.log(allMovements);
 // adding up all the values for the account balance:
 const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance);
+
+// use chaining to beautify it:
+const overallBalance = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance);
