@@ -773,5 +773,22 @@ const overallBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance);
 
 // use chaining to beautify it:
-const overallBalance = accounts.map(acc => acc.movements).flat().reduce((acc, mov) => acc + mov, 0);
+const overallBalance = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
 console.log(overallBalance);
+
+
+// FLATMAP
+
+// mapping then flattening the result as above is a common operation
+// only goes to one level to flatten
+// still have to use .flat() to go additional levels lower
+const overallBalance2 = accounts
+  .map(acc => acc.movements)
+  .flatMap()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overallBalance2);
+
+
