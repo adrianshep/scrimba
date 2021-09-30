@@ -792,3 +792,11 @@ const overallBalance2 = accounts
 console.log(overallBalance2);
 
 
+// SORTING ARRAYS
+
+const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
+console.log(owners.sort());
+// returns ['Adam', 'Jonas', 'Martha', 'Zach']
+console.log(owners);
+// now returns ['Adam', 'Jonas', 'Martha', 'Zach']
+// sort mutates the array, so you have to be very careful using it
