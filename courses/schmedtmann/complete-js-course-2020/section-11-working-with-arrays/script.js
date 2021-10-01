@@ -794,9 +794,19 @@ console.log(overallBalance2);
 
 // SORTING ARRAYS
 
+// Strings
 const owners = ['Jonas', 'Zach', 'Adam', 'Martha'];
 console.log(owners.sort());
 // returns ['Adam', 'Jonas', 'Martha', 'Zach']
 console.log(owners);
 // now returns ['Adam', 'Jonas', 'Martha', 'Zach']
 // sort mutates the array, so you have to be very careful using it
+
+// Numbers
+console.log(movements);
+// returns [200, 450, -400, 3000, -650, -130, 70, 1300]
+console.log(movements.sort());
+// returns [-130, -400, -650, 1300, 200, 3000, 450, 70]
+// sort returns numbers by strings rules, alphabetically, so it doesn't work
+// sort of numbers therefore requires a callback function
+
