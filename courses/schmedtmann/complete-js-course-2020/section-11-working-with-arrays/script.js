@@ -813,5 +813,8 @@ console.log(movements.sort());
 // a and b are consecutive numbers in the array
 // in callback function, if we return < 0, value a will be sorted before value b; if we return a positive value, then value a will be sorted after value b
 movements.sort((a, b) => {
-  
+  if (a > b)
+    return 1;
+  if (b > a)
+    return -1;
 });
