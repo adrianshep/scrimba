@@ -818,3 +818,5 @@ movements.sort((a, b) => {
   if (b > a)
     return -1;
 });
+console.log(movements);
+// now returns [-650, -400, -130, 70, 200, 450, 1300, 3000], all values in array in ascending order
