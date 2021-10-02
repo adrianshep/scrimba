@@ -809,4 +809,9 @@ console.log(movements.sort());
 // returns [-130, -400, -650, 1300, 200, 3000, 450, 70]
 // sort returns numbers by strings rules, alphabetically, so it doesn't work
 // sort of numbers therefore requires a callback function
-
+// a is current value, b is the following value
+// a and b are consecutive numbers in the array
+// in callback function, if we return < 0, value a will be sorted before value b; if we return a positive value, then value a will be sorted after value b
+movements.sort((a, b) => {
+  
+});
