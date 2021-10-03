@@ -812,11 +812,28 @@ console.log(movements.sort());
 // a is current value, b is the following value
 // a and b are consecutive numbers in the array
 // in callback function, if we return < 0, value a will be sorted before value b; if we return a positive value, then value a will be sorted after value b
+
+// return < 0, A, B (keep the present order)
+// return > 0, B, A (reverse the present order)
+
+// Ascending order
 movements.sort((a, b) => {
   if (a > b)
+    // number only has to be greater than 0
     return 1;
   if (b > a)
+    // number only has to be lesser than 0
     return -1;
 });
 console.log(movements);
 // now returns [-650, -400, -130, 70, 200, 450, 1300, 3000], all values in array in ascending order
+
+// Descending order
+movements.sort((a, b) => {
+  if (a > b)
+    // number only has to be greater than 0
+    return 1;
+  if (b > a)
+    // number only has to be lesser than 0
+    return -1;
+});
