@@ -817,6 +817,19 @@ console.log(movements.sort());
 // return > 0, B, A (reverse the present order)
 
 // Ascending order
+// movements.sort((a, b) => {
+//   if (a > b)
+//     // number only has to be greater than 0
+//     return 1;
+//   if (b > a)
+//     // number only has to be lesser than 0
+//     return -1;
+// });
+
+// simplifying the code
+movements.sort((a, b) => a - b);
+console.log(movements);
+
 movements.sort((a, b) => {
   if (a > b)
     // number only has to be greater than 0
@@ -825,6 +838,7 @@ movements.sort((a, b) => {
     // number only has to be lesser than 0
     return -1;
 });
+
 console.log(movements);
 // now returns [-650, -400, -130, 70, 200, 450, 1300, 3000], all values in array in ascending order
 
