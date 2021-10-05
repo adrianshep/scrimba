@@ -851,3 +851,7 @@ movements.sort((a, b) => {
     // number only has to be lesser than 0
     return -1;
 });
+
+// simplifying the code
+movements.sort((a, b) => b - a);
+console.log(movements);
