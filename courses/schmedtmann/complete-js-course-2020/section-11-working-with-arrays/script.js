@@ -855,3 +855,6 @@ movements.sort((a, b) => {
 // simplifying the code
 movements.sort((a, b) => b - a);
 console.log(movements);
+
+// DON'T use .sort() for arrays with mixed elements of strings and numbers
+
