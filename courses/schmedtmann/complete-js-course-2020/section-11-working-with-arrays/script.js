@@ -534,7 +534,9 @@ btnClose.addEventListener('click', function(e) {
 let sorted = false;
 btnSort.addEventListener('click', function(e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, true)
+  displayMovements(currentAccount.movements, !sorted);
+  // flipping the state variable back again:
+  sorted = !sorted;
 });
 
 // FILTER METHOD
