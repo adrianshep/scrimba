@@ -537,6 +537,7 @@ btnSort.addEventListener('click', function(e) {
   displayMovements(currentAccount.movements, !sorted);
   // flipping the state variable back again:
   sorted = !sorted;
+  
 });
 
 // FILTER METHOD
