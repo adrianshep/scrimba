@@ -537,7 +537,6 @@ btnSort.addEventListener('click', function(e) {
   displayMovements(currentAccount.movements, !sorted);
   // flipping the state variable back again:
   sorted = !sorted;
-  
 });
 
 // FILTER METHOD
@@ -869,3 +868,15 @@ console.log(movements);
 
 // DON'T use .sort() for arrays with mixed elements of strings and numbers
 
+
+// MORE WAYS OF CREATING AND FILLING ARRAYS
+
+// Manual ways:
+// console.log([1, 2, 3, 4, 5, 6, 7]);
+// console.log(new Array(1, 2, 3, 4, 5, 6, 7));
+
+const x = new Array(7);
+console.log(x);
+// creates [empty x 7]
+// an array with seven empty elements containing nothing
+// this array function creates a new empty argument with the passed-in length
