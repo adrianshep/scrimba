@@ -880,3 +880,6 @@ console.log(x);
 // creates [empty x 7]
 // an array with seven empty elements containing nothing
 // this array function creates a new empty argument with the passed-in length
+// Array() constructor function has a special particularity to it:
+// cannot really use the arrays it creates for much of anything:
+// cannot, for example, call the map method on its arrays to fill them up
