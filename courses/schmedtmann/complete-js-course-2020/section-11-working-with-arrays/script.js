@@ -883,3 +883,10 @@ console.log(x);
 // Array() constructor function has a special particularity to it:
 // cannot really use the arrays it creates for much of anything:
 // cannot, for example, call the map method on its arrays to fill them up
+
+// one method we can call on this array:
+// FILL
+x.fill(1);
+console.log(x);
+// returns an array of seven 1s:
+// [1, 1, 1, 1, 1, 1, 1]
