@@ -886,7 +886,16 @@ console.log(x);
 
 // one method we can call on this array:
 // FILL
-x.fill(1);
-console.log(x);
+// x.fill(1);
+// console.log(x);
 // returns an array of seven 1s:
 // [1, 1, 1, 1, 1, 1, 1]
+
+x.fill(1, 3, 5);
+// mutates the original array
+// similar to .slice() method
+// 1 is the value with which to fill the array
+// 3 is the start index for filling
+// 5 is the final index, like in .slice(), it is not included in the array
+console.log(x);
+// returns [empty x 3, 1, 1, empty x 2]
