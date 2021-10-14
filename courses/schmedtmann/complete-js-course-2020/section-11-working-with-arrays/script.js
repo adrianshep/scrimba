@@ -899,3 +899,8 @@ x.fill(1, 3, 5);
 // 5 is the final index, like in .slice(), it is not included in the array
 console.log(x);
 // returns [empty x 3, 1, 1, empty x 2]
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+arr.fill(23, 2, 6);
+console.log(arr);
+// returns [1, 2, 23, 23, 23, 23, 7]
