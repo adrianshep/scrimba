@@ -904,3 +904,10 @@ const arr = [1, 2, 3, 4, 5, 6, 7];
 arr.fill(23, 2, 6);
 console.log(arr);
 // returns [1, 2, 23, 23, 23, 23, 7]
+
+// Array.from
+// to programatically recreate cont arr = [1, 2, 3, 4, 5, 6, 7]
+// callback arrow function returns 1 in each iteration
+const y = Array.from({length: 7}, () => 1);
+console.log(y);
+// returns [1, 2, 3, 4, 5, 6, 7]
