@@ -913,5 +913,7 @@ console.log(y);
 // returns [1, 1, 1, 1, 1, 1, 1]
 
 // to programatically recreate cont arr = [1, 2, 3, 4, 5, 6, 7
-const z = Array.com({ length: 7 }, (cur, i) => i + 1);
+// cur can be replace by _ (underscore), a throwaway variable -- don't need the value, but need to define something as the first parameter
+// const z = Array.com({ length: 7 }, (cur, i) => i + 1);
+const z = Array.com({ length: 7 }, (_, i) => i + 1);
 console.log(z);
