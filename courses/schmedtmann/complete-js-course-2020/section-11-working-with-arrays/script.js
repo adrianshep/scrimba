@@ -917,3 +917,8 @@ console.log(y);
 // const z = Array.com({ length: 7 }, (cur, i) => i + 1);
 const z = Array.com({ length: 7 }, (_, i) => i + 1);
 console.log(z);
+
+// Array.from() created to turns array-like structures into arrays
+// strings, maps, sets are all iterables in JS that can be turned into real arrays through Array.from()
+
+
