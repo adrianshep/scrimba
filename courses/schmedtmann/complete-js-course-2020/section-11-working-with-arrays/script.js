@@ -921,4 +921,13 @@ console.log(z);
 // Array.from() created to turns array-like structures into arrays
 // strings, maps, sets are all iterables in JS that can be turned into real arrays through Array.from()
 
+// another example of this is .querySelectorAll 
+// retrieve values from UI that are not in an array and then convert them to an array
+
+labelBalance.addEventListener('click', function() {
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value')
+  );
+  // can now read the seven movements from the UI
+});
+
 
