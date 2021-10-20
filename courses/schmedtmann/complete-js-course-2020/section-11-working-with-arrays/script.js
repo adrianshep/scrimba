@@ -928,6 +928,13 @@ labelBalance.addEventListener('click', function() {
   const movementsUI = Array.from(document.querySelectorAll('.movements__value')
   );
   // can now read the seven movements from the UI
+  console.log(movementsUI);
+
+  // mapping wouldn't work directly on the result of the querySelectorAll
+  // mapping will work after Array.from applied to result:
+
+  console.log(movementsUI.map(el => el.textContent.replace('€', '')));
+
 });
 
 
