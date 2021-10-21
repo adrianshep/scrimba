@@ -925,7 +925,7 @@ console.log(z);
 // retrieve values from UI that are not in an array and then convert them to an array
 
 labelBalance.addEventListener('click', function() {
-  const movementsUI = Array.from(document.querySelectorAll('.movements__value')
+  const movementsUI = Array.from(document.querySelectorAll('.movements__value'), el => Number(el.textContent.replace('€', ''))
   );
   // can now read the seven movements from the UI
   console.log(movementsUI);
@@ -933,7 +933,8 @@ labelBalance.addEventListener('click', function() {
   // mapping wouldn't work directly on the result of the querySelectorAll
   // mapping will work after Array.from applied to result:
 
-  console.log(movementsUI.map(el => el.textContent.replace('€', '')));
+  // this can be improved more by moving callback function up to being second argument above: 
+  // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
 
 });
 
