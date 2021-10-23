@@ -942,4 +942,14 @@ labelBalance.addEventListener('click', function() {
   const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
 
+// WHICH ARRAY METHOD TO USE?
+// how to choose from the twenty-three available?
+// first, determine the what you actually want from the method:
+// 1. to mutate the original array
+// 2. a new array
+// 3. an array index
+// 4. know if array includes
+// 5. to transform to value
+// 6. an array element
+// 7. a new string
 
