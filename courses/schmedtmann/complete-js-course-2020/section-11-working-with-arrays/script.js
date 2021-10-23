@@ -936,6 +936,10 @@ labelBalance.addEventListener('click', function() {
   // this can be improved more by moving callback function up to being second argument above: 
   // console.log(movementsUI.map(el => Number(el.textContent.replace('€', ''))));
 
+  // another way of converting document.querySelectorAll('.movements__value') to an array is by using the spread operator
+  // but mapping would then have to be done separately
+
+  const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
 
 
