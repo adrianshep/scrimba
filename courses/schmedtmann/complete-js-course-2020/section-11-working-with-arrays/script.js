@@ -945,7 +945,14 @@ labelBalance.addEventListener('click', function() {
 // WHICH ARRAY METHOD TO USE?
 // how to choose from the twenty-three available?
 // first, determine the what you actually want from the method:
-// 1. to mutate the original array
+// 1. to mutate the original 
+//    - add to original
+//      .push
+//      .unshift
+//    - remove from original
+//      .pop
+//      .shift
+//      .splice
 // 2. a new array
 // 3. an array index
 // 4. know if array includes
