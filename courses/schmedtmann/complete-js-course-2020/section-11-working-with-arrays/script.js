@@ -954,6 +954,17 @@ labelBalance.addEventListener('click', function() {
 //      .shift
 //      .splice
 // 2. a new array
+//    - computed from original
+//      .map
+//    -filtered using condition
+//      .filter
+//    - portion of original
+//      .slice
+//    - adding original to other
+//      .concat
+//    - flattening the original
+//      .flat
+//      .flatMap
 // 3. an array index
 // 4. know if array includes
 // 5. to transform to value
