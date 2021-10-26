@@ -966,6 +966,10 @@ labelBalance.addEventListener('click', function() {
 //      .flat
 //      .flatMap
 // 3. an array index
+//    - based on value
+//      .indexOf
+//    - based on test condition
+//      .findIndex
 // 4. know if array includes
 // 5. to transform to value
 // 6. an array element
