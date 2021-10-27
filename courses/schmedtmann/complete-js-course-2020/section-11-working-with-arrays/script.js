@@ -970,7 +970,9 @@ labelBalance.addEventListener('click', function() {
 //      .indexOf
 //    - based on test condition
 //      .findIndex
-// 4. know if array includes
+// 4. know if array includes an array element
+//    - based on test condition
+//      .find
 // 5. to transform to value
 // 6. an array element
 // 7. a new string
