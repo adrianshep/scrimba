@@ -979,7 +979,9 @@ labelBalance.addEventListener('click', function() {
 //    - based on test condition
 //      .some
 //      .every
-// 6. to transform to value
-// 7. an array element
-// 8. a new string
+// 6. a new string
+//    - based on separator string
+//      .join
+// 7. transform to value
+// 8. to loop array
 
