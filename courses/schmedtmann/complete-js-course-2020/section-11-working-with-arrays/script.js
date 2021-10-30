@@ -983,5 +983,7 @@ labelBalance.addEventListener('click', function() {
 //    - based on separator string
 //      .join
 // 7. transform to value
+//    - based on accumulator
+//      .reduce
 // 8. to loop array
 
