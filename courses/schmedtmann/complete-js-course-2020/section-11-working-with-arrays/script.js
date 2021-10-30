@@ -985,5 +985,9 @@ labelBalance.addEventListener('click', function() {
 // 7. transform to value
 //    - based on accumulator
 //      .reduce
+//    (boil down array to single value of any 
+//     type: number, string, boolean or even 
+//     a new array or object) 
 // 8. to loop array
+// 
 
