@@ -989,5 +989,8 @@ labelBalance.addEventListener('click', function() {
 //     type: number, string, boolean or even 
 //     a new array or object) 
 // 8. to loop array
-// 
+//    - based on callback
+//      .forEach
+//    (does not create a new array;
+//     loops over original)
 
