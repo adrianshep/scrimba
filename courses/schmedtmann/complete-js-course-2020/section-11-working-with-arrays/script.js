@@ -994,3 +994,10 @@ labelBalance.addEventListener('click', function() {
 //    (does not create a new array;
 //     loops over original)
 
+
+// ARRAY METHODS PRACTICE
+
+const bankDepositSum = accounts.map(acc => acc.movements);
+
+console.log(bankDepositSum);
+
