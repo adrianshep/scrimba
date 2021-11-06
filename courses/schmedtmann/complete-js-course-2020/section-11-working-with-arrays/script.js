@@ -1009,6 +1009,6 @@ console.log(bankDepositSum);
 // Easier Solution
 const numDeposits1000 = accounts
   .flatMap(acc => acc.movements)
-  .filter(mov => mov >= 1000);
+  .filter(mov => mov >= 1000).length;
 
 console.log(numDeposits1000);
