@@ -1015,5 +1015,9 @@ console.log(bankDepositSum);
 const numDeposits1000 = accounts
   .flatMap(acc => acc.movements)
   .reduce((count, cur) = (cur >= 1000 ? count + 1 : count), 0);
+  // count++ won't work here
+  // let a = 10;
+  // console.log(a++); returns previous value, 10
+  // console.log(a); now this returns 11
 
 console.log(numDeposits1000);
