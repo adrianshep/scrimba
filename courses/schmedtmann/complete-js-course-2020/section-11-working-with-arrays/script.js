@@ -1028,13 +1028,18 @@ console.log(numDeposits1000);
 // Exercise 3
 // .reduce is like the Swiss Army knife of methods
 
-const sums = accounts
+const { deposits, withdrawals } = accounts
   .flatMap(acc => acc.movements)
   .reduce((sums, cur) => {
-    cur > 0 ? (sum.deposits += cur) : s(ums.withdrawals += cur); 
+    // cur > 0 ? (sum.deposits += cur) : s(ums.withdrawals += cur); 
+    // less repetition and cleaner:
+    sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
     return sums;
   }, 
   {deposits: 0, withdrawals: 0 }
   );
+
+  console.log(deposits, withdrawals);
+
   // {deposits: 0, withdrawals: 0} is the initial value of the accumulator, in this case, (sums,)
   // because we're using {}, sums has to be returned explicitly
