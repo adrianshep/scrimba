@@ -1043,3 +1043,11 @@ const { deposits, withdrawals } = accounts
 
   // {deposits: 0, withdrawals: 0} is the initial value of the accumulator, in this case, (sums,)
   // because we're using {}, sums has to be returned explicitly
+
+  // Exercise 4
+  // String Conversion to Title Case
+  // this is a nice title -> This Is a Nice Title
+  const convertTitleCase = function(title) {
+
+  }
+  console.log(convertTitleCase);
