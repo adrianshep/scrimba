@@ -1053,6 +1053,8 @@ const { deposits, withdrawals } = accounts
     const titleCase = title
     .toLowerCase()
     .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1));
+    return titleCase;
   };
   console.log(convertTitleCase('this is a nice title'));
   console.log(convertTitleCase('this is LONG title but not too long'));
