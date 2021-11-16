@@ -1051,9 +1051,11 @@ const { deposits, withdrawals } = accounts
     const exceptions = ['a', 'an', 'the', 'but', 'or', 'on', 'in', 'with'];
 
     const titleCase = title
-    .toLowerCase()
-    .split(' ')
-    .map(word => word[0].toUpperCase() + word.slice(1));
+      .toLowerCase()
+      .split(' ')
+      .map(word => 
+        exceptions.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+      );
     return titleCase;
   };
   console.log(convertTitleCase('this is a nice title'));
