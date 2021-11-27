@@ -1121,3 +1121,8 @@ const ownersEatTooMuch = dogs
   .flatMap(dog => dog.owners)
   // .flat();
 console.log(ownersEatTooMuch);
+
+const ownersEatTooLittle = dogs
+  .filter(dog => dog.curFood < dog.recFood)
+  .flatMap(dog => dog.owners)
+console.log(ownersEatTooMuch);
