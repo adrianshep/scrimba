@@ -1138,8 +1138,9 @@ console.log(dogs.some(dog => dog.curFood === dog.recFood));
 
 // 6.
 // current > (recommended * 0.90) && current < (recommended * 1.10)
-console.log(
-    dogs.some(
-      dog => dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1
-    )
-);
+const checkEatingOkay = dog => 
+  dog.curFood > dog.recFood * 0.9 && dog.curFood < dog.recFood * 1.1;
+
+console.log(dogs.some(checkEatingOkay));
+
+// 7.
