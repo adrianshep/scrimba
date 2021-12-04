@@ -251,3 +251,24 @@ btnSort.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
+
+// CONVERTING AND CHECKING NUMBERS
+
+console.log(23 === 23.0);
+// one data type for all numbers
+// Base 10 is 0 to 9
+// Binary Base 2 is 0 1
+// just as in Base 10, where 3/10 = 3.3333 (to infinity)
+// in Base 2, 1/10 also results in an infinite number
+// which is why in Base 2, 
+// 0.1 + 0.2 = 3.0000000000000004
+// JavaScript tries to round behind the scenes, but some cases, like the above, escape that
+// as a result, you cannot do precise scientific or financial calculations in JS, as you run into this problem:
+// 0.1 + 0.2 === 0.3
+// will return false, because 0.3 is really 3.0000000000000004
+
+// Conversion
+console.log(Number('23'));
+console.log('23');
+// easier:
+console.log(+'23');
