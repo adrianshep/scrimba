@@ -272,3 +272,11 @@ console.log(Number('23'));
 console.log('23');
 // easier:
 console.log(+'23');
+
+// Parsing
+console.log(Number.parseInt('30px', 10));
+// returns the number 30
+// always indicate base in which you are working (base 10 in the example)
+// for .parseInt to work, the string has to begin with a number
+// console.log(Number.parseInt('e23', 10)), for example, will return NaN
+// useful for where a unit from CSS must be gotten rid of
