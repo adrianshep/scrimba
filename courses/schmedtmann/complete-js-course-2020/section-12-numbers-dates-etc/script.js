@@ -280,3 +280,10 @@ console.log(Number.parseInt('30px', 10));
 // for .parseInt to work, the string has to begin with a number
 // console.log(Number.parseInt('e23', 10)), for example, will return NaN
 // useful for where a unit from CSS must be gotten rid of
+
+console.log(Number.parseInt('2.5rem'));
+// returns 2, stopping at decimal point
+console.log(Number.parseFloat('2.5rem'));
+// returns 2.5
+// not affected by white space
+
