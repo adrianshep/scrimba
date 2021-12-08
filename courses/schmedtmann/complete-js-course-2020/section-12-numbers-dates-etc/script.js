@@ -287,3 +287,21 @@ console.log(Number.parseFloat('2.5rem'));
 // returns 2.5
 // not affected by white space
 
+console.log(Number.isNaN(20));
+// returns false, it is a number
+console.log(Number.isNaN('20'));
+// also returns false because it is a regular value
+console.log(Number.isNaN(+'20'));
+// if we try to convert the above string into a number, it returns true because it is NaN
+console.log(Number.isNaN(23 / 0));
+// returns false; dividing by 0 gives us infinity; infinity is also not NaN
+
+// ultimate method to use to check if value is a number
+console.log(Number.isFinite(20));
+// returns true
+console.log(Number.isFinite('20'));
+// returns false
+console.log(Number.isFinite(+'20'));
+// returns false
+console.log(Number.isFinite(23 / 0));
+// returns false
