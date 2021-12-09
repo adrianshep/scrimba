@@ -305,3 +305,10 @@ console.log(Number.isFinite(+'20'));
 // returns false
 console.log(Number.isFinite(23 / 0));
 // returns false
+
+// if using integers:
+console.log(Number.isInteger(23));
+console.log(Number.isInteger(23.0));
+// both return true
+console.log(Number.isInteger(23 / 0));
+// returns false
