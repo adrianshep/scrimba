@@ -312,3 +312,17 @@ console.log(Number.isInteger(23.0));
 // both return true
 console.log(Number.isInteger(23 / 0));
 // returns false
+
+// Math and Rounding
+
+// square root
+console.log(Math.sqrt(25));
+// or using exponentiation:
+console.log(25 ** (1 / 2));
+// both return 5
+
+// cubic root
+console.log(8 ** (1 / 3));
+// returns 3
+
+
