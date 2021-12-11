@@ -325,4 +325,13 @@ console.log(25 ** (1 / 2));
 console.log(8 ** (1 / 3));
 // returns 3
 
+// getting maximum value
+console.log(Math.max(5, 8, 23, 11, 2));
+// returns 23
+// .max will do type coercion:
+console.log(Math.max(5, 8, '23', 11, 2));
+// still returns 23
+// however, .max will not do parsing:
+console.log(Math.max(5, 8, '23px', 11, 2));
+// returns NaN
 
