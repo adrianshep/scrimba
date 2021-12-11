@@ -341,3 +341,8 @@ console.log(Math.max(5, 8, '23px', 11, 2));
 console.log(Math.min(5, 8, 23, 11, 2));
 // returns 2
 
+
+// constants on the Math. namespace
+
+console.log(Math.PI);
+// returns 3.141592653589793
