@@ -346,3 +346,6 @@ console.log(Math.min(5, 8, 23, 11, 2));
 
 console.log(Math.PI);
 // returns 3.141592653589793
+// calculate area of a circle with radius of 10px:
+console.log(Math.PI * Number.parseFloat('10px') ** 2);
+// returns 314.1592653589793
