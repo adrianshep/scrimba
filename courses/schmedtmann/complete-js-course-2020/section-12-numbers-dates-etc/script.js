@@ -349,3 +349,10 @@ console.log(Math.PI);
 // calculate area of a circle with radius of 10px:
 console.log(Math.PI * Number.parseFloat('10px') ** 2);
 // returns 314.1592653589793
+
+// generating random numbers
+// remove decimal with .trunc
+// .trunc reduces upper number to one lower, so offset with + 1:
+console.log(Math.trunc(Math.random() * 6) + 1);
+// now generates random values between 1 and 6
+
