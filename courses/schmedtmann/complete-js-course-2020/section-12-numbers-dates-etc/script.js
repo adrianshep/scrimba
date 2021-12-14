@@ -356,3 +356,7 @@ console.log(Math.PI * Number.parseFloat('10px') ** 2);
 console.log(Math.trunc(Math.random() * 6) + 1);
 // now generates random values between 1 and 6
 
+// Formula for generating random integers between two values (min and max):
+const randomInt = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
+
+console.log(randomInt(10,20));
