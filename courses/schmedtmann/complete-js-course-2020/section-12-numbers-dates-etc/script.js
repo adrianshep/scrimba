@@ -360,3 +360,32 @@ console.log(Math.trunc(Math.random() * 6) + 1);
 const randomInt = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
 
 console.log(randomInt(10,20));
+
+// Rounding integers
+// .trunc
+// removes decimal and everything after it
+console.log(Math.trunc(23.3));
+// returns 23
+
+// .round
+// always rounds to the nearest integer
+console.log(Math.round(23.3));
+// returns 23
+console.log(Math.round(23.9));
+// returns 24
+
+// .ceil
+// always round up
+console.log(Math.ceil(23.3));
+console.log(Math.ceil(23.9));
+// both return 24
+
+// .floor
+// always round down
+console.log(Math.round(23.3));
+console.log(Math.round(23.9));
+// both return 23
+
+// all the above methods do type coercion
+// console.log(Math.round('23.9')) is the same as
+// console.log(Math.round(23.9));
