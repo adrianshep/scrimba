@@ -389,3 +389,10 @@ console.log(Math.round(23.9));
 // all the above methods do type coercion
 // console.log(Math.round('23.9')) is the same as
 // console.log(Math.round(23.9));
+
+// Negative numbers
+console.log(Math.trunc(-23.3));
+// returns -23
+console.log(Math.floor(-23.3));
+// returns -24
+
