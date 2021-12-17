@@ -357,7 +357,9 @@ console.log(Math.trunc(Math.random() * 6) + 1);
 // now generates random values between 1 and 6
 
 // Formula for generating random integers between two values (min and max):
-const randomInt = (min, max) => Math.trunc(Math.random() * (max - min) + 1) + min;
+// .floor generalizes this function better than .trunc so that it works with positive and negative numbers
+const randomInt = (min, max) => 
+  Math.floor(Math.random() * (max - min) + 1) + min;
 
 console.log(randomInt(10,20));
 
@@ -395,4 +397,6 @@ console.log(Math.trunc(-23.3));
 // returns -23
 console.log(Math.floor(-23.3));
 // returns -24
+// with negative numbers, .floor works in the other direction
+// .floor works in more situations than .trunc does, with positive and negative numbers
 
