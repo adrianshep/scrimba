@@ -410,3 +410,4 @@ console.log((2.345).toFixed(2));
 // 2.345 is returned as 2.35, out to the 2 indicated decimal places and the 5 rounded up
 console.log(+(2.345).toFixed(2));
 // also returns 2.35
+// since a number is a primitive and primitives don't have methods, JS does "boxing," transforming the number into a number object, calling the method on it, then converting the result back into a primitive
