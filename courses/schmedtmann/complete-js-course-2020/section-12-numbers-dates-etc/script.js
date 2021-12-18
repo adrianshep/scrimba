@@ -400,3 +400,13 @@ console.log(Math.floor(-23.3));
 // with negative numbers, .floor works in the other direction
 // .floor works in more situations than .trunc does, with positive and negative numbers
 
+// Rounding decimals
+console.log((2.7).toFixed(0));
+// .toFixed will always return a string, not a number
+// 2.7 is returned as 3
+console.log((2.7).toFixed(3));
+// 2.7 is returned as 2.700, out to the 3 indicated decimal places
+console.log((2.345).toFixed(2));
+// 2.345 is returned as 2.35, out to the 2 indicated decimal places and the 5 rounded up
+console.log(+(2.345).toFixed(2));
+// also returns 2.35
