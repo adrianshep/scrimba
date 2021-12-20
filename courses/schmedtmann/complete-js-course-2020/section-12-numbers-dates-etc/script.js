@@ -411,3 +411,14 @@ console.log((2.345).toFixed(2));
 console.log(+(2.345).toFixed(2));
 // also returns 2.35
 // since a number is a primitive and primitives don't have methods, JS does "boxing," transforming the number into a number object, calling the method on it, then converting the result back into a primitive
+
+// Remainder Operator
+console.log(5 % 2);
+// returns 1
+console.log(5 / 2);
+// 5 = 2 * 2 + 1
+
+console.log(8 % 3);
+// returns 2
+console.log(8 / 3);
+// 8 = 2 * 3 + 2
