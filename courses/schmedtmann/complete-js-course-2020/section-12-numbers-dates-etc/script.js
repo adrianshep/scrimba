@@ -422,3 +422,19 @@ console.log(8 % 3);
 // returns 2
 console.log(8 / 3);
 // 8 = 2 * 3 + 2
+
+// Even or Odd
+// a number is even when its remainder is 0
+console.log(6 % 2);
+// returns 0
+// a number is odd when its remainder is 1
+console.log(7 % 2);
+// returns 1
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+// returns true
+console.log(isEven(23));
+// returns false
+console.log(isEven(514));
+// returns true
