@@ -438,3 +438,14 @@ console.log(isEven(23));
 // returns false
 console.log(isEven(514));
 // returns true
+
+// Bankist app even or odd row coloring
+
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    // 0, 2, 4, 6
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered';
+    // 0, 3, 6, 9
+    if (i % 3 === 0) row.style.backgroundColor = 'blue';
+  });
+});
