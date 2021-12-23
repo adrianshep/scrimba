@@ -449,3 +449,18 @@ labelBalance.addEventListener('click', function () {
     if (i % 3 === 0) row.style.backgroundColor = 'blue';
   });
 });
+
+// Numeric Separators
+
+// formatting large numbers
+// diameter of our solar system
+// const diameter = 287460000000
+// normally we'd write it 287,460,000,000
+// numeric separators are underscores _
+const diameter = 287_460_000_000
+console.log(diameter);
+// returns 287460000000
+// JS removes the separators
+const price = 345_99;
+console.log(price);
+// returns 34599
