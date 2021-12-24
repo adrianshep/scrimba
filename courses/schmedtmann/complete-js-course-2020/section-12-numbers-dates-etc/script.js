@@ -464,3 +464,11 @@ console.log(diameter);
 const price = 345_99;
 console.log(price);
 // returns 34599
+
+const transferFee1 = 15_00;
+// meaning $15.00
+const transferFee2 = 1_500;
+// meaning 1,500
+// placement of underscore in above examples makes a huge difference in meaning
+// JS, however, interprets both as the same, returning 1500
+
