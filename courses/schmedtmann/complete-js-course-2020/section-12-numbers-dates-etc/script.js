@@ -472,3 +472,13 @@ const transferFee2 = 1_500;
 // placement of underscore in above examples makes a huge difference in meaning
 // JS, however, interprets both as the same, returning 1500
 
+// restrictions on where underscores can be placed
+// can only be placed between numbers
+const PI = 3.14_15;
+// returns 3.1415
+// these return errors as they're not allowed:
+// const PI = 3._1415;
+// const PI = 3_.1415;
+// const PI = _3.1415;
+// const PI = 3.1415_;
+
