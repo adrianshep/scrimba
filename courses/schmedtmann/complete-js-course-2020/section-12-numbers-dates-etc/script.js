@@ -487,3 +487,6 @@ console.log(Number('230000'));
 // returns 230000
 console.log(Number('230_000'));
 // returns NaN
+
+console.log(parseInt('230_000'));
+// returns 230 -- everything preceding underscore
