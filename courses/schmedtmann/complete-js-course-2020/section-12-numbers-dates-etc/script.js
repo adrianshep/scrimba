@@ -482,3 +482,8 @@ const PI = 3.14_15;
 // const PI = _3.1415;
 // const PI = 3.1415_;
 
+// converting strings that contain underscores won't work
+console.log(Number('230000'));
+// returns 230000
+console.log(Number('230_000'));
+// returns NaN
