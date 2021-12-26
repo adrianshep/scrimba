@@ -490,3 +490,11 @@ console.log(Number('230_000'));
 
 console.log(parseInt('230_000'));
 // returns 230 -- everything preceding underscore
+
+
+// Working with BigInt
+// the biggest number that can be worked with in JS is:
+console.log(2 ** 53 - 1);
+// JS cannot work with numbers larger than that accurately
+// it is so important that it's also stored in the number namespace as:
+console.log(Number.MAX_SAFE_INTEGER);
