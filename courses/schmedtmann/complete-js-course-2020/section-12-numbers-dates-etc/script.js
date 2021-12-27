@@ -498,3 +498,13 @@ console.log(2 ** 53 - 1);
 // JS cannot work with numbers larger than that accurately
 // it is so important that it's also stored in the number namespace as:
 console.log(Number.MAX_SAFE_INTEGER);
+// sometimes numbers larger than above will show up and work and in other they won't
+
+// ES2020 a new primitive was added, BigInt or Big Integer
+// can be used to store numbers as large as we want
+// (large numbers may come from an API, for instance)
+console.log(4838430248342043823408394839483204);
+// returns 4.8384302483420437e+33
+console.log(4838430248342043823408394839483204n);
+// returns 4838430248342043823408394839483204n
+// allows JS to display very large number accurately
