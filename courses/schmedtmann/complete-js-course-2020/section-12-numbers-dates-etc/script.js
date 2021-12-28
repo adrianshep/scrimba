@@ -508,3 +508,10 @@ console.log(4838430248342043823408394839483204);
 console.log(4838430248342043823408394839483204n);
 // returns 4838430248342043823408394839483204n
 // allows JS to display very large number accurately
+
+// Creating BigInt with BigInt function
+console.log(BigInt(4838430248342043823408394839483204));
+// returns a different number than 4838430248342043823408394839483204n, likely because JS still has to approximate the oversized input value first
+// BigInt best used with smaller numbers:
+console.log(BigInt(48384302));
+// returns 48384302n
