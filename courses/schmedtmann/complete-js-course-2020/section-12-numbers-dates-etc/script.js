@@ -515,3 +515,14 @@ console.log(BigInt(4838430248342043823408394839483204));
 // BigInt best used with smaller numbers:
 console.log(BigInt(48384302));
 // returns 48384302n
+
+
+// Operations
+
+console.log(10000n + 100000n);
+// returns 20000n
+
+console.log(362863726372637623726372637263762372637263n * 10000000n);
+// returns 628637263726376237263726372637623726372630000000n
+
+
