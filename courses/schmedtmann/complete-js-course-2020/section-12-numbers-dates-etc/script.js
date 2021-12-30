@@ -525,4 +525,11 @@ console.log(10000n + 100000n);
 console.log(362863726372637623726372637263762372637263n * 10000000n);
 // returns 628637263726376237263726372637623726372630000000n
 
-
+// Mixing BigInt and other types not allowed
+const huge = 20289830237283728378237n;
+const num = 23;
+console.log(huge * num);
+// returns "Uncaught TypeError: Cannot mix BigInt and other types...""
+// num has to be converted to BigInt
+console.log(huge * BigInt(num));
+// now the product of the huge and num can be returned
