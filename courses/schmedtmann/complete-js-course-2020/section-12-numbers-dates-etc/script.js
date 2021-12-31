@@ -533,3 +533,17 @@ console.log(huge * num);
 // num has to be converted to BigInt
 console.log(huge * BigInt(num));
 // now the product of the huge and num can be returned
+
+// Two exceptions:
+// comparison operators
+// addition operators working with strings
+
+console.log(20n > 15);
+// returns true
+console.log(20n === 20);
+// however, returns false
+// makes sense as JS doesn't do type coercion for === operator
+// 20 is a regular number
+// while console.log(typeof 20n);
+// returns bigint
+
