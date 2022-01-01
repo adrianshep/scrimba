@@ -549,5 +549,7 @@ console.log(20n == 20);
 console.log(20n == '20');
 // return true
 
-
+console.log(huge + ' is REALLY big!!!')
+// returns 20289830237283728378237 is REALLY big!!!
+// even the bigint number isn't converted into a string
 
