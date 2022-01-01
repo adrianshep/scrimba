@@ -534,9 +534,7 @@ console.log(huge * num);
 console.log(huge * BigInt(num));
 // now the product of the huge and num can be returned
 
-// Two exceptions:
-// comparison operators
-// addition operators working with strings
+// Exceptions:
 
 console.log(20n > 15);
 // returns true
@@ -546,4 +544,10 @@ console.log(20n === 20);
 // 20 is a regular number
 // while console.log(typeof 20n);
 // returns bigint
+
+console.log(20n == 20);
+console.log(20n == '20');
+// return true
+
+
 
