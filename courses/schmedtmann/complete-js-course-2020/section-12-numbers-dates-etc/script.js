@@ -553,3 +553,6 @@ console.log(huge + ' is REALLY big!!!')
 // returns 20289830237283728378237 is REALLY big!!!
 // even the bigint number isn't converted into a string
 
+console.log(Math.sqrt(16n));
+// returns TypeError: Cannot convert a BigInt value into a number
+
