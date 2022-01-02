@@ -556,3 +556,11 @@ console.log(huge + ' is REALLY big!!!')
 console.log(Math.sqrt(16n));
 // returns TypeError: Cannot convert a BigInt value into a number
 
+// Divisions
+console.log(10 / 3);
+// returns 3.3333333333333335
+
+console.log(11n / 3n);
+// returns nearest bigint, so here it's 3n
+console.log(12n / 3n);
+// returns 4n, cuts off everything past the decimal
