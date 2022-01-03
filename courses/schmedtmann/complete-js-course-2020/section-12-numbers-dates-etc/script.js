@@ -564,3 +564,19 @@ console.log(11n / 3n);
 // returns nearest bigint, so here it's 3n
 console.log(12n / 3n);
 // returns 4n, cuts off everything past the decimal
+
+
+// Creating Dates
+
+// Create a date
+// 1. using Date constructor
+const now = new Date();
+console.log(now);
+// returns current date and time
+
+// 2. giving JS a date inside a string
+console.log(new Date('Jan 03 2022 08:35:40'));
+// JS can parse a given date
+console.log(new Date('December 24, 2015'));
+// returns Thu Dec 24 2015 00:00:00 GMT+0000
+
