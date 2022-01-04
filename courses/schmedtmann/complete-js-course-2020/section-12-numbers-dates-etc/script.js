@@ -579,4 +579,6 @@ console.log(new Date('Jan 03 2022 08:35:40'));
 // JS can parse a given date
 console.log(new Date('December 24, 2015'));
 // returns Thu Dec 24 2015 00:00:00 GMT+0000
-
+console.log(new Date(account1.movementsDates[0]));
+// parses "2019-11-18T21:31:17.178Z" -- Z means the coordinated UTC (Universal Time) in Greenwich without time zones or Daylight Savings
+// returns Mon Nov 18 2019 21:31:17 GMT+0000 (Western European Standard Time)
