@@ -582,3 +582,8 @@ console.log(new Date('December 24, 2015'));
 console.log(new Date(account1.movementsDates[0]));
 // parses "2019-11-18T21:31:17.178Z" -- Z means the coordinated UTC (Universal Time) in Greenwich without time zones or Daylight Savings
 // returns Mon Nov 18 2019 21:31:17 GMT+0000 (Western European Standard Time)
+
+// can pass various date and time element values into constructor:
+console.log(new Date(2037, 10, 19, 15, 23, 5));
+// returns Mon Nov 18 2019 15:23:05 GMT+0000 (Western European Standard Time)
+// month value 10 becoming November means that month is zero-based in JS constructor
