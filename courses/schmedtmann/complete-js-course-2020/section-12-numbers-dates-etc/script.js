@@ -585,5 +585,13 @@ console.log(new Date(account1.movementsDates[0]));
 
 // can pass various date and time element values into constructor:
 console.log(new Date(2037, 10, 19, 15, 23, 5));
-// returns Mon Nov 18 2019 15:23:05 GMT+0000 (Western European Standard Time)
+// returns Mon Nov 18 2037 15:23:05 GMT+0000 (Western European Standard Time)
 // month value 10 becoming November means that month is zero-based in JS constructor
+
+// JS autocorrects the date:
+console.log(new Date(2037, 10, 31));
+// as there aren't 31 days in November, JS returns: 
+// Tue Dec 1 2037 00:00:00 GMT+0000 (Western European Standard Time)
+console.log(new Date(2037, 10, 33));
+// returns autocorrected:
+// Tue Dec 3 2037 00:00:00 GMT+0000 (Western European Standard Time)
