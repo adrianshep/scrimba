@@ -595,3 +595,12 @@ console.log(new Date(2037, 10, 31));
 console.log(new Date(2037, 10, 33));
 // returns autocorrected:
 // Tue Dec 3 2037 00:00:00 GMT+0000 (Western European Standard Time)
+
+// can also pass into the Date constructor function the number of milliseconds that have passed since the beginning of Unix Time (January 1 1970):
+console.log(new Date(0));
+// returns Tue Jan 1 1970 01:00:00 GMT+0100 (Western European Standard Time)
+// calculate date three days later:
+console.log(new Date(3 * 24 * 60 * 60 * 1000));
+// 3 days 24 hours 60 minutes 60 seconds 1000 milliseconds (259200000 milliseconds total)
+// returns Tue Jan 4 1970 01:00:00 GMT+0100 (Western European Standard Time)
+// 259200000 is the number of milliseconds as of Jan 4 1970 since the beginning of Unix Time and is also the Time Stamp of Jan 4 1970 in Unix Time
