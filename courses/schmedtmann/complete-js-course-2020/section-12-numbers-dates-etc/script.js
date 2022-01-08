@@ -607,4 +607,8 @@ console.log(new Date(3 * 24 * 60 * 60 * 1000));
 
 // Working with Dates
 const future = new Date(2037, 10, 19, 15, 23);
+console.log(future);
 // returns Thu Nov 19 2037 15:23:00 GMT+0000 (Western European Standard Time)
+console.log(future.getFullYear());
+// returns 2037
+// don't mistake with .getYear(); only use .getFullYear();
