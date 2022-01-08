@@ -603,4 +603,8 @@ console.log(new Date(0));
 console.log(new Date(3 * 24 * 60 * 60 * 1000));
 // 3 days 24 hours 60 minutes 60 seconds 1000 milliseconds (259200000 milliseconds total)
 // returns Tue Jan 4 1970 01:00:00 GMT+0100 (Western European Standard Time)
-// 259200000 is the number of milliseconds as of Jan 4 1970 since the beginning of Unix Time and is also the Time Stamp of Jan 4 1970 in Unix Time
+// 259200000 is the number of milliseconds as of Jan 4 1970 since the beginning of Unix Time and is also the Time Stamp of Jan 4 1970 (Day 3) in Unix Time
+
+// Working with Dates
+const future = new Date(2037, 10, 19, 15, 23);
+// returns Thu Nov 19 2037 15:23:00 GMT+0000 (Western European Standard Time)
