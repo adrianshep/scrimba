@@ -612,3 +612,5 @@ console.log(future);
 console.log(future.getFullYear());
 // returns 2037
 // don't mistake with .getYear(); only use .getFullYear();
+console.log(future.getMonth());
+// returns 10 -- zero-based, so 10 is Month 11, November
