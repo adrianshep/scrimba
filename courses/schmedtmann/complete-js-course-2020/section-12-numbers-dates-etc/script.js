@@ -614,3 +614,5 @@ console.log(future.getFullYear());
 // don't mistake with .getYear(); only use .getFullYear();
 console.log(future.getMonth());
 // returns 10 -- zero-based, so 10 is Month 11, November
+console.log(future.getDate());
+// returns 19
