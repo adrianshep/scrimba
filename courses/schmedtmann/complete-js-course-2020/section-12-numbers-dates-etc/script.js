@@ -616,3 +616,5 @@ console.log(future.getMonth());
 // returns 10 -- zero-based, so 10 is Month 11, November
 console.log(future.getDate());
 // returns 19
+console.log(future.getDay());
+// returns 4, for the 4th day of the week, Thursday
