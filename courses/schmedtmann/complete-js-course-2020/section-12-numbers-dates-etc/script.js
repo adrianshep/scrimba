@@ -618,3 +618,9 @@ console.log(future.getDate());
 // returns 19
 console.log(future.getDay());
 // returns 4, for the 4th day of the week, Thursday
+console.log(future.getHours());
+// returns 15
+console.log(future.getMinutes());
+// returns 23
+console.log(future.getSeconds());
+// returns 0
