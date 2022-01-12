@@ -624,3 +624,7 @@ console.log(future.getMinutes());
 // returns 23
 console.log(future.getSeconds());
 // returns 0
+// to get a nicely formatted international standard string:
+console.log(future.toISOString());
+// returns 2037-11-19T15:23:00.000Z
+
