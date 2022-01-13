@@ -627,4 +627,6 @@ console.log(future.getSeconds());
 // to get a nicely formatted international standard string:
 console.log(future.toISOString());
 // returns 2037-11-19T15:23:00.000Z
-
+// get time stamp for the date:
+console.log(future.getTime());
+// returns 2142256980000, the milliseconds between the date and dawn of Unix Time
