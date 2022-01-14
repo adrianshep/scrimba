@@ -630,3 +630,9 @@ console.log(future.toISOString());
 // get time stamp for the date:
 console.log(future.getTime());
 // returns 2142256980000, the milliseconds between the date and dawn of Unix Time
+// can also reverse this process, using lapsed milliseconds to arrive at date
+console.log(new Date(2142256980000));
+
+// for time stamp of this exact moment:
+console.log(new Date.now());
+// returns current Unix Time stamp in milliseconds
