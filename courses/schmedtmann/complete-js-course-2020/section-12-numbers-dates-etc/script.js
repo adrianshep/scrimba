@@ -160,6 +160,19 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
+const now = new Date();
+const day = now.getDate();
+const month = now.getMonth() + 1;
+// add 1 because getMonth is zero-baseds
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMonth();
+// labelDate.textContent = now;
+// format we want above is day/month/year, not full date time stamp
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+// displays:
+// As of 15/1/2022, 08:11
+
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
