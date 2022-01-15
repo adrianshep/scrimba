@@ -636,3 +636,10 @@ console.log(new Date(2142256980000));
 // for time stamp of this exact moment:
 console.log(new Date.now());
 // returns current Unix Time stamp in milliseconds
+
+// Set versions of methods
+future.setFullYear(2040);
+console.log(future);
+// returns Mon Nov 19 2040 15:23:00 GMT+0000 (Western European Standard Time)
+// set version for each get method above
+// all have autocorrect
