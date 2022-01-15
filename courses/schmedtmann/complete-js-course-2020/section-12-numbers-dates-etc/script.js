@@ -155,6 +155,11 @@ const updateUI = function (acc) {
 // Event handlers
 let currentAccount;
 
+// FAKE ALWAYS LOGGED IN
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
@@ -643,3 +648,6 @@ console.log(future);
 // returns Mon Nov 19 2040 15:23:00 GMT+0000 (Western European Standard Time)
 // set version for each get method above
 // all have autocorrect
+
+
+// Adding Dates to Bankist App
