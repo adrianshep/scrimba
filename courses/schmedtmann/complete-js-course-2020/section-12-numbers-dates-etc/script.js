@@ -161,8 +161,9 @@ updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
 const now = new Date();
-const day = now.getDate();
-const month = now.getMonth() + 1;
+const day = `${now.getDate()}`.padStart(2, 0);
+// precedes date with a zero if only one digit long
+const month = `${now.getMonth() + 1}`.padStart(2, 0);
 // add 1 because getMonth is zero-baseds
 const year = now.getFullYear();
 const hour = now.getHours();
