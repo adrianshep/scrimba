@@ -88,8 +88,12 @@ const displayMovements = function (acc, sort = false) {
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
-
+     // date strings need to be converted back into a JS object so data can be worked with:
     const date = new Date(acc.movementsDates[i]);
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getFullYear();
+    const displayDate = `${day}/${month}/${year}`;
 
     const html = `
       <div class="movements__row">
@@ -167,7 +171,7 @@ const now = new Date();
 const day = `${now.getDate()}`.padStart(2, 0);
 // precedes date with a zero if only one digit long
 const month = `${now.getMonth() + 1}`.padStart(2, 0);
-// add 1 because getMonth is zero-baseds
+// add 1 because getMonth is zero-based
 const year = now.getFullYear();
 const hour = now.getHours();
 const min = now.getMonth();
