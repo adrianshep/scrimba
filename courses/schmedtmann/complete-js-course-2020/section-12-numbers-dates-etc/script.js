@@ -190,8 +190,8 @@ btnLogin.addEventListener('click', function (e) {
     const month = `${now.getMonth() + 1}`.padStart(2, 0);
     // add 1 because getMonth is zero-based
     const year = now.getFullYear();
-    const hour = now.getHours();
-    const min = now.getMonth();
+    const hour = `${now.getHours() + 1}`.padStart(2, 0);
+    const min = `${now.getMinutes() + 1}`.padStart(2, 0);
     // labelDate.textContent = now;
     // format we want above is day/month/year, not full date time stamp
     labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
