@@ -680,3 +680,13 @@ console.log(future);
 
 
 // Adding Dates to Bankist App
+
+
+// Operations with Dates
+// calculating dates
+const future = new Date(2037, 10, 19, 15, 23);
+// convert to a number, time stamp in milliseconds:
+console.log(Number(future));
+// or
+console.log(+future);
+// returns 2142256980000
