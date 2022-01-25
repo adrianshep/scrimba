@@ -685,8 +685,16 @@ console.log(future);
 // Operations with Dates
 // calculating dates
 const future = new Date(2037, 10, 19, 15, 23);
-// convert to a number, time stamp in milliseconds:
+// convert to a number, a time stamp in milliseconds:
 console.log(Number(future));
 // or
 console.log(+future);
 // returns 2142256980000
+
+const calcDaysPassed = (date1, date2) => Math.abs(date2 - date1) / (1000 * 60 * 60 *24);
+// using Math.abs will allow the date values to be entered in any order and still produce the same result
+
+const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
+console.log(days1);
+// returns 10, regardless of order of dates
+
