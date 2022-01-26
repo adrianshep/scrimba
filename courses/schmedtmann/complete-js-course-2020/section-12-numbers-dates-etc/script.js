@@ -694,7 +694,12 @@ console.log(+future);
 const calcDaysPassed = (date1, date2) => Math.abs(date2 - date1) / (1000 * 60 * 60 *24);
 // using Math.abs will allow the date values to be entered in any order and still produce the same result
 
-const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 24));
+const days1 = calcDaysPassed(
+  new Date(2037, 3, 14), 
+  new Date(2037, 3, 24));
 console.log(days1);
 // returns 10, regardless of order of dates
+// new Date(2037, 3, 14, 10, 8));
+// returns 10.422 as hours and minutes were added
+
 
