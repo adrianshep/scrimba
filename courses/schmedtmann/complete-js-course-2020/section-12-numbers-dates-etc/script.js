@@ -82,14 +82,18 @@ const inputClosePin = document.querySelector('.form__input--pin');
 // Functions
 
 const formatMovementDate = function(date) {
-  const calcDaysPassed = (date1, date2) => Math.abs(date2 - date1) / (1000 * 60 * 60 *24);
+  const calcDaysPassed = (date1, date2) => 
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 *24));
+    
+    const daysPassed = calcDaysPassed(new Date(), date);
+    console.log(daysPassed);
+    // returns numbers of days passed between dates
+
     const day = `${date.getDate()}`.padStart(2, 0);
     const month = `${date.getMonth() + 1}`.padStart(2, 0);
     const year = date.getFullYear();
     return `${day}/${month}/${year}`;
-
-    
-}
+};
 
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = '';
