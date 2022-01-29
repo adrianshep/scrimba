@@ -187,6 +187,7 @@ containerApp.style.opacity = 100;
 const now = new Date();
 labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);
 // 'en-US' is English language used in the country of United States
+// returns dates mm/dd/yyyy as in US, so 01/29/2022
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
