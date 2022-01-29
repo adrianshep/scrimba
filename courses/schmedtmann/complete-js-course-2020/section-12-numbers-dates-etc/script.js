@@ -21,9 +21,9 @@ const account1 = {
     '2020-01-28T09:15:04.904Z',
     '2020-04-01T10:17:24.185Z',
     '2020-05-08T14:11:59.604Z',
-    '2020-05-27T17:01:17.194Z',
-    '2020-07-11T23:36:17.929Z',
-    '2020-07-12T10:51:36.790Z',
+    '2020-07-26T17:01:17.194Z',
+    '2020-07-28T23:36:17.929Z',
+    '2020-08-01T10:51:36.790Z',
   ],
   currency: 'EUR',
   locale: 'pt-PT', // de-DE
@@ -89,6 +89,10 @@ const formatMovementDate = function(date) {
     console.log(daysPassed);
     // returns numbers of days passed between dates
 
+    if(daysPassed === 0) return 'Today';
+    // if condition met, return stops code execution, so does not reach any lines below it
+    if(daysPassed === 1) return 'Yesterday';
+    if(daysPassed <= 7) return `${daysPassed} days ago`;
     const day = `${date.getDate()}`.padStart(2, 0);
     const month = `${date.getMonth() + 1}`.padStart(2, 0);
     const year = date.getFullYear();
