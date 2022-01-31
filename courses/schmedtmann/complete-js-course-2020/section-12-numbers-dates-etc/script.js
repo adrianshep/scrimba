@@ -185,7 +185,13 @@ containerApp.style.opacity = 100;
 
 // Experimenting with internationalization API
 const now = new Date();
-labelDate.textContent = new Intl.DateTimeFormat('en-US').format(now);
+const options = {
+  hour: 'numeric',
+  minute: 'numeric'
+  // now returns only time in hours and minutes, no date
+}
+
+labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
 // 'en-US' is English language used in the country of United States
 // returns dates mm/dd/yyyy as in US, so 01/29/2022
 // en-GB' is English language used in Great Britain
