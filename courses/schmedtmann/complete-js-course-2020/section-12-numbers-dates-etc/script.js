@@ -187,15 +187,25 @@ containerApp.style.opacity = 100;
 const now = new Date();
 const options = {
   hour: 'numeric',
-  minute: 'numeric'
+  minute: 'numeric',
   // now returns only time in hours and minutes, no date
+  day: 'numeric',
+  month: 'long',
+  // will return month name
+  // month: 'numeric', will return month as number
+  // month: '2-digit', will return single digit month number preceded by 0
+  year: 'numeric',
+  // returns 4 digit year, '2-digit' will reduce to 2 digits
+  weekday: 'long',
+  // will return weekday name spelled out, e.g., Tuesday
+  // 'short' and 'narrow' are other options
 }
 
 labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
 // 'en-US' is English language used in the country of United States
 // returns dates mm/dd/yyyy as in US, so 01/29/2022
 // en-GB' is English language used in Great Britain
-// returns dates dd/mm/yyyy as in US, so 29/01/2022
+// returns dates dd/mm/yyyy as in UK, so 29/01/2022
 // ISO Language Code Table (www.lingoes.net)
 
 btnLogin.addEventListener('click', function (e) {
