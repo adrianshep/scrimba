@@ -207,6 +207,7 @@ labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
 // en-GB' is English language used in Great Britain
 // returns dates dd/mm/yyyy as in UK, so 29/01/2022
 // ISO Language Code Table (www.lingoes.net)
+// labelDate.textContent = new Intl.DateTimeFormat('pt-PT', options).format(now); will return weekday and other text in Portugeuse
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
