@@ -184,30 +184,30 @@ updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
 // Experimenting with internationalization API
-const now = new Date();
-const options = {
-  hour: 'numeric',
-  minute: 'numeric',
-  // now returns only time in hours and minutes, no date
-  day: 'numeric',
-  month: 'long',
-  // will return month name
-  // month: 'numeric', will return month as number
-  // month: '2-digit', will return single digit month number preceded by 0
-  year: 'numeric',
-  // returns 4 digit year, '2-digit' will reduce to 2 digits
-  weekday: 'long',
-  // will return weekday name spelled out, e.g., Tuesday
-  // 'short' and 'narrow' are other options
-}
+// const now = new Date();
+// const options = {
+//   hour: 'numeric',
+//   minute: 'numeric',
+//   // now returns only time in hours and minutes, no date
+//   day: 'numeric',
+//   month: 'long',
+//   // will return month name
+//   // month: 'numeric', will return month as number
+//   // month: '2-digit', will return single digit month number preceded by 0
+//   year: 'numeric',
+//   // returns 4 digit year, '2-digit' will reduce to 2 digits
+//   weekday: 'long',
+//   // will return weekday name spelled out, e.g., Tuesday
+//   // 'short' and 'narrow' are other options
+// }
 
-labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
+// labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
 // 'en-US' is English language used in the country of United States
 // returns dates mm/dd/yyyy as in US, so 01/29/2022
 // en-GB' is English language used in Great Britain
 // returns dates dd/mm/yyyy as in UK, so 29/01/2022
 // ISO Language Code Table (www.lingoes.net)
-// labelDate.textContent = new Intl.DateTimeFormat('pt-PT', options).format(now); will return weekday and other text in Portugeuse
+// labelDate.textContent = new Intl.DateTimeFormat('pt-PT', options).format(now); will return weekday and other text in Portuguese
 
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
@@ -225,20 +225,21 @@ btnLogin.addEventListener('click', function (e) {
     }`;
     containerApp.style.opacity = 100;
 
-    // Create current date and time
-    const now = new Date();
-    const day = `${now.getDate()}`.padStart(2, 0);
-    // precedes date with a zero if only one digit long
-    const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    // add 1 because getMonth is zero-based
-    const year = now.getFullYear();
-    const hour = `${now.getHours() + 1}`.padStart(2, 0);
-    const min = `${now.getMinutes() + 1}`.padStart(2, 0);
-    // labelDate.textContent = now;
-    // format we want above is day/month/year, not full date time stamp
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
-    // displays:
-    // As of 15/1/2022, 08:11
+// Create current date and time
+const now = new Date();
+const options = {
+  hour: 'numeric',
+  minute: 'numeric',
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  weekday: 'long',
+};
+
+const locale = navigator.language;
+console.log(locale);
+
+labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
