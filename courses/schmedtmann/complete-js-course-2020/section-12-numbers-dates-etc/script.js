@@ -236,10 +236,15 @@ const options = {
   weekday: 'long',
 };
 
-const locale = navigator.language;
-console.log(locale);
+// locale coming from the browser:
+// const locale = navigator.language;
+// console.log(locale);
 
-labelDate.textContent = new Intl.DateTimeFormat('en-US', options).format(now);
+labelDate.textContent = new Intl.DateTimeFormat(
+  currentAccount.locale,
+  // instead of 'en-US', 
+  options
+  ).format(now);
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
