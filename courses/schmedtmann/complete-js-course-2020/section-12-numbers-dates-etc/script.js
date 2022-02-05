@@ -98,7 +98,7 @@ const formatMovementDate = function(date, locale) {
     // const month = `${date.getMonth() + 1}`.padStart(2, 0);
     // const year = date.getFullYear();
     // return `${day}/${month}/${year}`;
-    
+    return new Intl.DateTimeFormat()
 };
 
 const displayMovements = function (acc, sort = false) {
@@ -111,7 +111,7 @@ const displayMovements = function (acc, sort = false) {
      // date strings need to be converted back into a JS object so data can be worked with:
     
     const date = new Date(acc.movementsDates[i]);
-    const displayDate = formatMovementDate(date);
+    const displayDate = formatMovementDate(date, acc.locale);
 
     const html = `
       <div class="movements__row">
