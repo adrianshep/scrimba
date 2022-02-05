@@ -231,9 +231,10 @@ const options = {
   hour: 'numeric',
   minute: 'numeric',
   day: 'numeric',
-  month: 'long',
+  month: 'numeric',
   year: 'numeric',
-  weekday: 'long',
+  // weekday: 'long',
+  // remove to keep month and weekday from appearing in locale language
 };
 
 // locale coming from the browser:
