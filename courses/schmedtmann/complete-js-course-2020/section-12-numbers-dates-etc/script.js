@@ -753,4 +753,9 @@ console.log(days1);
 // new Date(2037, 3, 14, 10, 8));
 // returns 10.422 as hours and minutes were added
 
+// Internationalizing Numbers (Intl)
 
+const num = 3884764.23;
+
+console.log('US: ', new Intl.NumberFormat('en-US').format(num));
+// returns US format: 3,884,764.23
