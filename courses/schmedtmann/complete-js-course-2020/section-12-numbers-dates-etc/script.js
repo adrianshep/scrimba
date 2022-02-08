@@ -759,3 +759,7 @@ const num = 3884764.23;
 
 console.log('US: ', new Intl.NumberFormat('en-US').format(num));
 // returns US format: 3,884,764.23
+console.log('US: ', new Intl.NumberFormat('de-DE').format(num));
+// returns European format: 3.884.764,23
+console.log('US: ', new Intl.NumberFormat('ar-SY').format(num));
+// returns Arabic format with Arabic numbers and letters
