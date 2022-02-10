@@ -757,11 +757,21 @@ console.log(days1);
 
 const num = 3884764.23;
 
-console.log('US: ', new Intl.NumberFormat('en-US').format(num));
+const options = {
+  style: "unit",
+  unit: 'mile-per-hour',
+};
+
+console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
 // returns US format: 3,884,764.23
-console.log('Germany: ', new Intl.NumberFormat('de-DE').format(num));
+// with options, returns 3,884,764.23 mph
+console.log('Great Britain: ', new Intl.NumberFormat('en-GB', options).format(num));
+// returns UK format: 3,884,764.23
+// with options, returns 3,884,764.23 mph
+console.log('Germany: ', new Intl.NumberFormat('de-DE', options).format(num));
 // returns European format: 3.884.764,23
-console.log('Syria: ', new Intl.NumberFormat('ar-SY').format(num));
+// with options, returns 
+console.log('Syria: ', new Intl.NumberFormat('ar-SY', options).format(num));
 // returns Arabic format with Arabic numbers and letters
 
 // getting locale from browser:
