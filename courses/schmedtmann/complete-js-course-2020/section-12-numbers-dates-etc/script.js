@@ -758,8 +758,17 @@ console.log(days1);
 const num = 3884764.23;
 
 const options = {
-  style: "unit",
+  // style offers three options:s
+  style: 'unit',
+  // style: 'percent',
+  // returns values with percentage sign styled as per locale country
+  // style: 'currency',
+  // then have to define, as currency is NOT set by the locale:
+  // currency: 'EUR', for Euro
   unit: 'mile-per-hour',
+  // unit: 'celsius',
+  // returns values in degrees Celsius
+  
 };
 
 console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
