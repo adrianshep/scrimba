@@ -768,7 +768,7 @@ const options = {
   unit: 'mile-per-hour',
   // unit: 'celsius',
   // returns values in degrees Celsius
-  
+  // useGrouping: false, returns value without separators (commas, periods, etc.)
 };
 
 console.log('US: ', new Intl.NumberFormat('en-US', options).format(num));
