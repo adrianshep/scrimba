@@ -803,5 +803,6 @@ console.log(
   setTimeout(() => console.log('Here is your pizza 🍕 '), 3000);
   // to call this function after 3 seconds, pass in 3000 milliseconds
   // after 3 seconds, 🍕 is logged to the console
-
-  
+  // to prove code execution continues while 3 seconds is counting down:
+  console.log('Waiting...');
+  // will log to console right away, before the 3 seconds are up, preceding that log
