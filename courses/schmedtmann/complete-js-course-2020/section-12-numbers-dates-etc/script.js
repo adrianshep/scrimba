@@ -797,3 +797,11 @@ console.log(
   navigator.language,
   new Intl.NumberFormat(navigator.language).format(num)
   );
+
+
+  // Timers: setTimeout and setInterval
+  setTimeout(() => console.log('Here is your pizza 🍕 '), 3000);
+  // to call this function after 3 seconds, pass in 3000 milliseconds
+  // after 3 seconds, 🍕 is logged to the console
+
+  
