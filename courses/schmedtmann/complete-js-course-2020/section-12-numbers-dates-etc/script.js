@@ -800,9 +800,20 @@ console.log(
 
 
   // Timers: setTimeout and setInterval
+
+  // setTimeout
+  // asynchronous JS
   setTimeout(() => console.log('Here is your pizza 🍕 '), 3000);
   // to call this function after 3 seconds, pass in 3000 milliseconds
   // after 3 seconds, 🍕 is logged to the console
   // to prove code execution continues while 3 seconds is counting down:
   console.log('Waiting...');
   // will log to console right away, before the 3 seconds are up, preceding that log
+  // all the arguments passed after the delay are passed to the function:
+  setTimeout(
+    (ingredient1, ingredient2) => console.log(`Here is your pizza with ${ingredient1} and ${ingredient2} 🍕 `), 
+    3000,
+    'olives',
+    'spinach'
+  );
+  console.log('Waiting...');
