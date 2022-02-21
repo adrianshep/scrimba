@@ -817,3 +817,15 @@ console.log(
     'spinach'
   );
   console.log('Waiting...');
+
+  // cancelling a setTimeout
+  const ingredients = ['olives', 'spinach'];
+  const pizzaTimer = setTimeout(
+    (ingredient1, ingredient2) => console.log(`Here is your pizza with ${ingredient1} and ${ingredient2} 🍕 `), 
+    3000,
+    ...ingredients
+    // spread operator will place ingredients elements here comma-separated
+  );
+  console.log('Waiting...');
+
+  if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
