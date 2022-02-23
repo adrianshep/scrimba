@@ -803,8 +803,9 @@ console.log(
 
   // Timers: setTimeout and setInterval
 
-  // setTimeout
-  // asynchronous JS
+// setTimeout
+
+// asynchronous JS
   setTimeout(() => console.log('Here is your pizza 🍕 '), 3000);
   // to call this function after 3 seconds, pass in 3000 milliseconds
   // after 3 seconds, 🍕 is logged to the console
@@ -831,3 +832,12 @@ console.log(
   console.log('Waiting...');
 
   if (ingredients.includes('spinach')) clearTimeout(pizzaTimer)
+
+// setInterval
+// if we want to run a function over and over again
+
+setInterval(function() {
+  const now = new Date();
+  console.log(now);
+}, 1000);
+// every second (1000 milliseconds), a new date and time stamp is being logged to the console
