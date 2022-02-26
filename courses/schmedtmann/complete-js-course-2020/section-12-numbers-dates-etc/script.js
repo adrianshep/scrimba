@@ -200,7 +200,7 @@ const startLogOutTimer = function() {
 
   // When 0 seconds, stop timer and log out user
   }, 1000);
-}
+};
 
 ///////////////////////////////////////
 // Event handlers
@@ -278,6 +278,8 @@ labelDate.textContent = new Intl.DateTimeFormat(
     // Clear input fields
     inputLoginUsername.value = inputLoginPin.value = '';
     inputLoginPin.blur();
+
+    startLogOutTimer();
 
     // Update UI
     updateUI(currentAccount);
