@@ -194,11 +194,6 @@ const startLogOutTimer = function() {
 
   let time = 120;
 
-  // Call the timer every second
-  tick();
-  const timer = setInterval(tick, 1000);
-  
-
   // In each call, print the remaining time to the UI
     labelTimer.textContent = `${min}:${sec}`;
 
@@ -212,11 +207,20 @@ const startLogOutTimer = function() {
   // Decrease by 1s
   time--;
 
+  // Call the timer every second
+  tick();
+  const timer = setInterval(tick, 1000);
+
+  return timer;
 };
 
 ///////////////////////////////////////
 // Event handlers
-let currentAccount;
+
+let currentAccount, timer;
+// need timer variable to persist between different logins
+// both variables need to be in the parent scope of the btnLogin function below
+
 
 // FAKE ALWAYS LOGGED IN
 // currentAccount = account1;
