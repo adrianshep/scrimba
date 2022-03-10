@@ -36,3 +36,9 @@ document.addEventListener('keydown', function (e) {
 // we can write JS to create, modify and delete HTML elements
 // DOM tree is generated from an HTML document, which we can then interact with programmatically
 // DOM is a very complex API (Application Programming Interface) that contains a lot of methods and properties for interacting with the DOM tree
+
+// in the DOM are different types of nodes: some are HMTL elements, some are just text
+// different DOM methods and properties are organized into different types of DOM objects
+
+// every single node in the DOM tree is of the type "node" and is represented by a JS object
+// object gets access to special node methods and properties: .textContent, .childNodes, .parentNode, .cloneNode() among many others
