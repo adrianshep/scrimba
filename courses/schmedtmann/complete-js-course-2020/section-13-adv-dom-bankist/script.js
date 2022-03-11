@@ -42,3 +42,14 @@ document.addEventListener('keydown', function (e) {
 
 // every single node in the DOM tree is of the type "node" and is represented by a JS object
 // object gets access to special node methods and properties: .textContent, .childNodes, .parentNode, .cloneNode() among many others
+
+// Node type has 4 child types:
+// 1. Element
+// Element type node gives each element access to many useful properties, e.g., .innerHTML, .classList, .children, .parentElement, .append(), .remove(), .insertAdjacentHTML(), .querySelector(), .closest(), .matches(), .scrollIntoView(), .setAttribute()
+// 2. Text
+//   - if there's any text inside an element (e.g., <p>), it gets its own node of the type Text
+// 3. Comment
+//    - any comment (<!--comment-->) gets its own node of type Comment
+// (the rule is that everything that is in the HTML has to go into the DOM as well)
+// 4. Document
+
