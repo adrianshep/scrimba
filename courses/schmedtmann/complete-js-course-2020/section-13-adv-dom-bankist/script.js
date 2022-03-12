@@ -56,6 +56,9 @@ document.addEventListener('keydown', function (e) {
 //    - any comment (<!--comment-->) gets its own node of type Comment
 // (the rule is that everything that is in the HTML has to go into the DOM as well)
 // 4. Document
+// use all the time in the DOM manipulation
+// just another node type
+// .querySelector() (also available to Element types), .createElement(), .getElementById()
 
 // inheritance is what makes all of this work
 // means that all child types have access to the methods and properties of their parent node types AND ancestor element types
