@@ -57,3 +57,6 @@ document.addEventListener('keydown', function (e) {
 // (the rule is that everything that is in the HTML has to go into the DOM as well)
 // 4. Document
 
+// inheritance is what makes all of this work
+// means that all child types have access to the methods and properties of their parent node types AND ancestor element types
+
