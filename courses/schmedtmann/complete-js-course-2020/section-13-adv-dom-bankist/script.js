@@ -46,6 +46,10 @@ document.addEventListener('keydown', function (e) {
 // Node type has 4 child types:
 // 1. Element
 // Element type node gives each element access to many useful properties, e.g., .innerHTML, .classList, .children, .parentElement, .append(), .remove(), .insertAdjacentHTML(), .querySelector(), .closest(), .matches(), .scrollIntoView(), .setAttribute()
+// Element has an HTMLElement childtype
+// in turn, the HTMLElement type has one childtype for each HTML element that exists
+// e.g., HTMLButtonElement, HTMLDivElement
+// HTML element types have unique attributes for each: img has a source attribute, for example; anchor has an href attribute
 // 2. Text
 //   - if there's any text inside an element (e.g., <p>), it gets its own node of the type Text
 // 3. Comment
