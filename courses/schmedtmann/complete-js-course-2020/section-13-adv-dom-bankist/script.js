@@ -63,3 +63,8 @@ document.addEventListener('keydown', function (e) {
 // inheritance is what makes all of this work
 // means that all child types have access to the methods and properties of their parent node types AND ancestor element types
 
+// EventTarget
+// DOM API needs a way for all the node types to listen to events
+// special node type EventTarget
+// parent of both the Node Type and the Window Node Type
+// as a result, we can call .addEventListener() and .removeEventListener() on every single type of node in the API
