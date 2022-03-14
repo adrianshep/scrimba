@@ -68,3 +68,15 @@ document.addEventListener('keydown', function (e) {
 // special node type EventTarget
 // parent of both the Node Type and the Window Node Type
 // as a result, we can call .addEventListener() and .removeEventListener() on every single type of node in the API
+
+
+// Selecting, Creating, and Deleting Elements
+
+// special way of selecting the entire document 
+console.log(document.documentElement);
+// use documentElement
+// document alone isn't the actual DOM element
+console.log(document.head);
+// selects only head
+console.log(document.body);
+// selects only body
