@@ -80,3 +80,9 @@ console.log(document.head);
 // selects only head
 console.log(document.body);
 // selects only body
+
+document.querySelector('.header');
+// to select multiple elements:
+const allSections = document.querySelectorAll('.section');
+console.log(allSections);
+// will return a node list
