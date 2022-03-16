@@ -72,6 +72,8 @@ document.addEventListener('keydown', function (e) {
 
 // Selecting, Creating, and Deleting Elements
 
+// Selecting elements
+
 // special way of selecting the entire document 
 console.log(document.documentElement);
 // use documentElement
@@ -86,3 +88,15 @@ document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 console.log(allSections);
 // will return a node list
+
+document.getElementById('section--1');
+// don't need selector (#) preceding the id here; that's only for querySelector methods
+const allButtons = document.getElementsByTagName('button');
+console.log(allButtons);
+// returns HTML collection, different than a node list
+// is a "live" collection -- if the DOM changes, it too gets updated immediately
+// the same does NOT happen with a node list because the variable was created while original list existed and wasn't updated
+
+document.getElementsByClassName('btn');
+// also returns a live HTML collection
+
