@@ -83,7 +83,7 @@ console.log(document.head);
 console.log(document.body);
 // selects only body
 
-document.querySelector('.header');
+const header = document.querySelector('.header');
 // to select multiple elements:
 const allSections = document.querySelectorAll('.section');
 console.log(allSections);
@@ -98,5 +98,20 @@ console.log(allButtons);
 // the same does NOT happen with a node list because the variable was created while original list existed and wasn't updated
 
 document.getElementsByClassName('btn');
+// doesn't need a selector
 // also returns a live HTML collection
 
+// Creating and inserting elements
+
+// .insertAdjacentHTML
+// look back in Bankist to see this method works
+
+const message = document.createElement('div');
+// a DOM object but not to be found in DOM itself yet
+message.classList.add('cookie-message');
+message.textContent = 'We use cookies for improved functionality and analytics.';
+message.innerHTML = 'We use cookies for improved functionality and analytics. <button class="btn btn--close-cookie">Got it!</button>';
+
+header.prepend(message);
+header.append(message);
+// moves element from being first child of header to being last child
