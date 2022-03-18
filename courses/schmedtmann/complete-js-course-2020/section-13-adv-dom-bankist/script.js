@@ -115,3 +115,10 @@ message.innerHTML = 'We use cookies for improved functionality and analytics. <b
 header.prepend(message);
 header.append(message);
 // moves element from being first child of header to being last child
+// .prepend() and .append() can be used to move elements, because every DOM element is unique -- it can only exist at one place at a time
+
+// how, then, do you insert multiple copies of the same element?
+// have to copy the element:
+// header.append(message.cloneNode(true))
+// (true) means all the child elements will be copied also
+
