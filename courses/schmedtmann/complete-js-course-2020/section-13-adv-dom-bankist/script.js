@@ -124,3 +124,8 @@ header.append(message);
 
 header.before(message);
 header.after(message);
+
+// Delete elements
+document.querySelector('.btn--close--cookie').addEventListener('click', function() {
+    message.remove();
+});
