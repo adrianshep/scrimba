@@ -122,3 +122,5 @@ header.append(message);
 // header.append(message.cloneNode(true))
 // (true) means all the child elements will be copied also
 
+header.before(message);
+header.after(message);
