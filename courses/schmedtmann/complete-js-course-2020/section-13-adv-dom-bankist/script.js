@@ -128,4 +128,7 @@ header.after(message);
 // Delete elements
 document.querySelector('.btn--close--cookie').addEventListener('click', function() {
     message.remove();
+    // .remove() is a recent development
+    // previous method for removing elements:
+    // message.parentsElement.removeChild(message);
 });
