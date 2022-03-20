@@ -132,3 +132,13 @@ document.querySelector('.btn--close--cookie').addEventListener('click', function
     // previous method for removing elements:
     // message.parentsElement.removeChild(message);
 });
+
+
+// Styles, Attributes and Classes
+
+// Styles
+message.styles.backgroundColor = '#37383d';
+message.style.width = '120%';
+
+console.log(message.style.color);
+console.log(message.style.backgroundColor);
