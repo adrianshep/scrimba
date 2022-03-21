@@ -142,3 +142,13 @@ message.style.width = '120%';
 
 console.log(message.style.color);
 console.log(message.style.backgroundColor);
+// can get inline style set manually, as above
+// cannot get style hidden in a class or that does not exist:
+console.log(message.style.color);
+// nothing returned
+
+// can get the styles this way
+// "computed" means the style as it appears on the page, regardless of whether it's declared or not in the CSS or calculated by the browser
+console.log(getComputedStyle(message).color);
+// returns rgb(187, 187, 187)
+console.log(getComputedStyle(message).height);
