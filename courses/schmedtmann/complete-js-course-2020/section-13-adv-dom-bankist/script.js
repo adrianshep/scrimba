@@ -152,3 +152,9 @@ console.log(message.style.color);
 console.log(getComputedStyle(message).color);
 // returns rgb(187, 187, 187)
 console.log(getComputedStyle(message).height);
+// returns 43.6667px
+
+// message.style.height = getComputedStyle(message).height + 40 + 'px';
+// above won't work as it's trying to add a string and a number
+// instead:
+message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
