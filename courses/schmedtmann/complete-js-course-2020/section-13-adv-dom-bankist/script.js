@@ -158,3 +158,6 @@ console.log(getComputedStyle(message).height);
 // above won't work as it's trying to add a string and a number
 // instead:
 message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 40 + 'px';
+
+// to make changes to a property everywhere in the code:
+document.documentElement.style.setProperty('--color-primary', 'orangered');
