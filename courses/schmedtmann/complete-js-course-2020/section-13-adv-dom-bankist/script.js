@@ -161,3 +161,10 @@ message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) +
 
 // to make changes to a property everywhere in the code:
 document.documentElement.style.setProperty('--color-primary', 'orangered');
+
+// Attributes
+// in HTML, src, alt, class, id are all attributes
+// in JavaScript we can access and change these
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt);
+console.log(logo.src);
