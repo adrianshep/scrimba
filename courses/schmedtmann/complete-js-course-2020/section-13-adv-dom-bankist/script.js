@@ -168,3 +168,5 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 const logo = document.querySelector('.nav__logo');
 console.log(logo.alt);
 console.log(logo.src);
+// only works for standard properties expected to be on those types of elements
+// if you were to add logo.designer('name') to the CSS and then run logo.designer, you'd get "undefined" as it's not a standard property
