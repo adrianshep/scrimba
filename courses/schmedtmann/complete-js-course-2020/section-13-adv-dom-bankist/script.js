@@ -180,3 +180,10 @@ console.log(logo.designer);
 console.log(logo.getAttribute('designer'));
 
 logo.setAttribute('company', 'Bankist');
+
+console.log(logo.src);
+// returns absolute version:
+// http://127.0.0.1:8080/img/logo.png
+console.log(logo.getAttribute('src'));
+// returns relative version:
+// img/logo.png
