@@ -166,6 +166,7 @@ document.documentElement.style.setProperty('--color-primary', 'orangered');
 // in HTML, src, alt, class, id are all attributes
 // in JavaScript we can access and change these
 const logo = document.querySelector('.nav__logo');
+logo.alt = 'Beautiful minimalist logo';
 console.log(logo.alt);
 console.log(logo.src);
 console.log(logo.className);
@@ -177,3 +178,5 @@ console.log(logo.className);
 console.log(logo.designer);
 // to read the non-standard, added value from the DOM:
 console.log(logo.getAttribute('designer'));
+
+logo.setAttribute('company', 'Bankist');
