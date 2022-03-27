@@ -187,3 +187,12 @@ console.log(logo.src);
 console.log(logo.getAttribute('src'));
 // returns relative version:
 // img/logo.png
+
+// same is true for href on links
+const link = document.querySelector('.nav__link--btn');
+console.log(link.href);
+// returns absolute version of link:
+// http://127.0.0.1:8080/#
+console.log(logo.getAttribute('href'));
+// returns relative version as was written in the code manually:
+// #
