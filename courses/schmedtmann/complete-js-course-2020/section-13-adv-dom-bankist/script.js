@@ -196,3 +196,13 @@ console.log(link.href);
 console.log(logo.getAttribute('href'));
 // returns relative version as was written in the code manually:
 // #
+
+// Data attributes
+// special attributes that start with word "data"
+// under index.html, as an example:
+//   <img
+//      data-version-number="3.0"
+//   />
+// 
+console.log(logo.dataset.versionNumber);
+// returns 3.0
