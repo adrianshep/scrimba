@@ -206,3 +206,4 @@ console.log(logo.getAttribute('href'));
 // 
 console.log(logo.dataset.versionNumber);
 // returns 3.0
+// practice is to take "version-number" and transform it to camel case: .versionNumber
