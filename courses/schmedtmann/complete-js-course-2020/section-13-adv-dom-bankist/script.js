@@ -207,3 +207,9 @@ console.log(logo.getAttribute('href'));
 console.log(logo.dataset.versionNumber);
 // returns 3.0
 // practice is to take "version-number" and transform it to camel case: .versionNumber
+
+// Classes
+logo.classList.add('c', 'j');
+logo.classList.remove('c', 'j');
+logo.classList.toggle('c');
+logo.classList.contains('c');
