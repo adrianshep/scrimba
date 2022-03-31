@@ -209,7 +209,13 @@ console.log(logo.dataset.versionNumber);
 // practice is to take "version-number" and transform it to camel case: .versionNumber
 
 // Classes
+// can add multiple classes by passing in multiple values as in .add() and .remove() examples:
 logo.classList.add('c', 'j');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
 logo.classList.contains('c');
+
+// Don't use
+// will override all existing classes
+// restricts us to putting only one class on any element
+logo.className = 'jonas'
