@@ -213,9 +213,22 @@ console.log(logo.dataset.versionNumber);
 logo.classList.add('c', 'j');
 logo.classList.remove('c', 'j');
 logo.classList.toggle('c');
-logo.classList.contains('c');
+logo.classList.contains('c'); 
+// .contains() is not includes as with arrays
 
 // Don't use
 // will override all existing classes
 // restricts us to putting only one class on any element
-logo.className = 'jonas'
+logo.className = 'jonas';
+
+// Implementing Smooth Scrolling
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function(e) {
+    const s1coords = section1.getBoundingClientRect();
+    console.log(s1coords);
+    // return DOM rectangle:
+    //  DOMRect {x: 0, y: 641.3373, width: , height: , top }
+});
