@@ -235,4 +235,7 @@ btnScrollTo.addEventListener('click', function(e) {
     console.log(e.target.getBoundingClientRect());
     // returns DOM rectangle:
     // all dimensions returned are relative to the visible viewport
+
+    console.log('Current scroll (x/y)', window.pageXOffset, pageYOffset);
+    // will get you the current scroll position in terms of distance from x and y of the set point
 });
