@@ -229,6 +229,10 @@ const section1 = document.querySelector('#section--1');
 btnScrollTo.addEventListener('click', function(e) {
     const s1coords = section1.getBoundingClientRect();
     console.log(s1coords);
-    // return DOM rectangle:
+    // returns DOM rectangle:
     //  DOMRect {x: 0, y: 641.3373, width: , height: , top }
+
+    console.log(e.target.getBoundingClientRect());
+    // returns DOM rectangle:
+    // all dimensions returned are relative to the visible viewport
 });
