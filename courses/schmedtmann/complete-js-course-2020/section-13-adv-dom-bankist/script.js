@@ -236,9 +236,17 @@ btnScrollTo.addEventListener('click', function(e) {
     // returns DOM rectangle:
     // all dimensions returned are relative to the visible viewport
 
-    console.log('Current scroll (x/y)', window.pageXOffset, pageYOffset);
+    console.log('Current scroll (x/y)', window.pageXOffset, window.pageYOffset);
     // will get you the current scroll position in terms of distance from x and y of the set point
 
     console.log('height/width of viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
     // returns height and width of viewport
+    // these coordinates are necessary for the implementation of smooth scrolling
 });
+// Scrolling
+window.scrollTo(
+  s1coords.left + window.pageXOffset, 
+  s1coords.top + window.pageYOffset
+  );
+// .top alone, though, is relative to the viewport
+// solution is to add current scroll position to .top
