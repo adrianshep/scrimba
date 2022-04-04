@@ -242,11 +242,20 @@ btnScrollTo.addEventListener('click', function(e) {
     console.log('height/width of viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
     // returns height and width of viewport
     // these coordinates are necessary for the implementation of smooth scrolling
-});
+
 // Scrolling
-window.scrollTo(
-  s1coords.left + window.pageXOffset, 
-  s1coords.top + window.pageYOffset
-  );
+// window.scrollTo(
+//   s1coords.left + window.pageXOffset, 
+//   s1coords.top + window.pageYOffset
+//   );
 // .top alone, though, is relative to the viewport
 // solution is to add current scroll position to .top
+
+// to make the above animation nice and smooth, pass in an object instead of just one argument
+// old school way, manually calculating all the values:
+  window.scrollTo({
+    left: s1coords.left + window.pageXOffset, 
+    top: s1coords.top + window.pageYOffset,
+    behavior: 'smooth'
+  });
+});
