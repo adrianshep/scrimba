@@ -253,9 +253,13 @@ btnScrollTo.addEventListener('click', function(e) {
 
 // to make the above animation nice and smooth, pass in an object instead of just one argument
 // old school way, manually calculating all the values:
-  window.scrollTo({
-    left: s1coords.left + window.pageXOffset, 
-    top: s1coords.top + window.pageYOffset,
-    behavior: 'smooth'
-  });
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset, 
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // });
+
+// more modern way and simpler way:
+// only works in modern browsers
+  section1.scrollIntoView({behavior: 'smooth'});
 });
