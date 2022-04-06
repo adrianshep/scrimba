@@ -259,7 +259,18 @@ btnScrollTo.addEventListener('click', function(e) {
   //   behavior: 'smooth'
   // });
 
-// more modern way and simpler way:
+// more modern and simpler way:
 // only works in modern browsers
   section1.scrollIntoView({behavior: 'smooth'});
+});
+
+
+// Types of Events and Event Handlers
+
+// keyboard and mouse events are most common ones
+
+const h1 = document.querySelector('h1');
+
+h1.addEventListener('mouseenter', function(e) {
+  alert('addEventListener: Great! You are reading the heading :D');
 });
