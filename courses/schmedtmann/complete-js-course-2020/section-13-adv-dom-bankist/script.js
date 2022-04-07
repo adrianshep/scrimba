@@ -274,3 +274,8 @@ const h1 = document.querySelector('h1');
 h1.addEventListener('mouseenter', function(e) {
   alert('addEventListener: Great! You are reading the heading :D');
 });
+
+// another way of attaching an event listener to an element:
+h1.onmouseenter = function(e) {
+  alert('onmouseenter: Great! You are reading the heading :D');
+};
