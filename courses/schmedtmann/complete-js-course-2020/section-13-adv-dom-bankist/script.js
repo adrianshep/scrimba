@@ -279,3 +279,15 @@ h1.addEventListener('mouseenter', function(e) {
 h1.onmouseenter = function(e) {
   alert('onmouseenter: Great! You are reading the heading :D');
 };
+
+// two reasons why .addEventListener is better than .onevent:
+// 1. allows us to add multiple event listeners to the same event
+// 2. can remove event handler in case we don't need it anymore
+// need to export function into a named one
+const alertH1 = function(e) {
+  alert('addEventListener: Great! You are reading the heading :D');
+// then remove:
+  h1.removeEventListener('mouseenter', alertH1);
+};
+// with removal, you can only listen to that remoteEventListener once
+h1.addEventListener('mouseenter', alertH1);
