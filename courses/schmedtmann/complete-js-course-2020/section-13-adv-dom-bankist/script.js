@@ -300,3 +300,11 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // in html code:
 <h1 onclick="alert('HTML alert')"></h1>
 
+
+// Event Propagation: Bubbling and Capturing
+
+// click happens on a link (<a> element) -- the very bottom of the DOM tree
+// event isn't generated there but at the root level -- the very top of the DOM tree
+// Capturing Phase - click travels all the way from the root level down to the target element
+// as the element passes down the tree it will pass through every single parent element of the target element
+// e.g., <html> -> <body> -> <section> -> <p> -> <a>
