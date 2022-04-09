@@ -291,3 +291,7 @@ const alertH1 = function(e) {
 };
 // with removal, you can only listen to that remoteEventListener once
 h1.addEventListener('mouseenter', alertH1);
+
+// remove after certain amount of time has passed
+setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
+// set for 3 seconds
