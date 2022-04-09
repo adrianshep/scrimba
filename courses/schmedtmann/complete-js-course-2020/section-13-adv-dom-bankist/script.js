@@ -295,3 +295,8 @@ h1.addEventListener('mouseenter', alertH1);
 // remove after certain amount of time has passed
 setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // set for 3 seconds
+
+// handle events using HTML attribute
+// in html code:
+<h1 onclick="alert('HTML alert')"></h1>
+
