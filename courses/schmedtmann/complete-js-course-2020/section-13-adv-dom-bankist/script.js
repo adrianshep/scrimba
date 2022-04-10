@@ -305,6 +305,11 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 // click happens on a link (<a> element) -- the very bottom of the DOM tree
 // event isn't generated there but at the root level -- the very top of the DOM tree
-// Capturing Phase - click travels all the way from the root level down to the target element
+
+// 1. Capturing Phase - click travels all the way from the root level down to the target element
 // as the element passes down the tree it will pass through every single parent element of the target element
 // e.g., <html> -> <body> -> <section> -> <p> -> <a>
+
+// 2. Target Phase - begins as soon as the event reaches the target where events can be handled right at the target
+// do that with event listeners, which wait for a certain event to happen on a certain element
+// as soon as that event occurs, the listener runs the attached callback function
