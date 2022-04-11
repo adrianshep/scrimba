@@ -313,3 +313,12 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // 2. Target Phase - begins as soon as the event reaches the target where events can be handled right at the target
 // do that with event listeners, which wait for a certain event to happen on a certain element
 // as soon as that event occurs, the listener runs the attached callback function
+
+// 3. Bubbling Phase - after reaching the target, the event then travels back up the DOM tree to the root again
+// the event passes through each parent element on way up, but not through any sibling elements
+// it is as if the event has happened in each of the parent elements
+// if you were to attach the same event listener to any of the parent elements, you would get the same exact alert as you'd received at the target element
+// this behavior will allow us to implement very powerful patterns
+
+// with some exceptions, most events to capture and bubble
+// events capturing and bubbling is propagation -- events propagating from one place to another
