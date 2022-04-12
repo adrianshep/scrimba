@@ -322,3 +322,16 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 
 // with some exceptions, most events to capture and bubble
 // events capturing and bubbling is propagation -- events propagating from one place to another
+
+
+// Event Propagation in Practice
+
+// rgb(255,255,255)
+// random color generator:
+const randomInt = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () => 
+  `rgb(${randomINt(0, 255)}, ${randomINt(0, 255)}, ${randomINt(0, 255)})`;
+console.log(randomColor(0, 255));
+// returns random colors
+// e.g., rbg(225, 238, 117)
