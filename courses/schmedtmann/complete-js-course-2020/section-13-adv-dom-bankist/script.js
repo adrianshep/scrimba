@@ -337,13 +337,15 @@ console.log(randomColor(0, 255));
 // e.g., rbg(225, 238, 117)
 
 document.querySelector('.nav__link').addEventListener('click', function(e) {
-  console.log('LINK');
+  this.style.backgroundColor = randomColor();
+  // .this points to element to which even handler is attached
+  // while clicked, background color will keep changing
 });
 
 document.querySelector('.nav__links').addEventListener('click', function(e) {
-  console.log('LINK');
+  this.style.backgroundColor = randomColor();
 });
 
 document.querySelector('.nav').addEventListener('click', function(e) {
-  console.log('LINK');
+  this.style.backgroundColor = randomColor();
 });
