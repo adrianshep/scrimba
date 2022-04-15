@@ -340,12 +340,21 @@ document.querySelector('.nav__link').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
   // .this points to element to which even handler is attached
   // while clicked, background color will keep changing
+  console.log('LINK', e.target);
+  // in this case, e.target is where the event happened, NOT the element upon which the event handler is attached
 });
 
 document.querySelector('.nav__links').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
+  console.log('CONTAINER', e.target);
 });
 
 document.querySelector('.nav').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
+  console.log('NAV', e.target);
 });
+
+// for all three, a click:
+// 1. produces a random-color background, and
+// 2. logs <a class="nav__link" etc. ></a> for each of the three above elements as the target element, that is where the click happened
+// because of event bubbling, the event (e) each element receives is the same one
