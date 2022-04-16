@@ -340,19 +340,26 @@ document.querySelector('.nav__link').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
   // .this points to element to which even handler is attached
   // while clicked, background color will keep changing
-  console.log('LINK', e.target);
+  console.log('LINK', e.target, e.currentTarget);
   // in this case, e.target is where the event happened, NOT the element upon which the event handler is attached
+  // e.target and e.currentTarget are not the same:
+  // e.target returns <a class="nav__link"
+  // e.currentTarget returns nav class="nav__link"
 });
 
 document.querySelector('.nav__links').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
-  console.log('CONTAINER', e.target);
+  console.log('CONTAINER', e.target, e.currentTarget);
 });
+  // e.target returns <a class="nav__link"
+  // e.currentTarget returns nav class="nav__link"
 
 document.querySelector('.nav').addEventListener('click', function(e) {
   this.style.backgroundColor = randomColor();
-  console.log('NAV', e.target);
+  console.log('NAV', e.target, e.currentTarget);
 });
+// e.target returns <a class="nav__link"
+// e.currentTarget returns nav class="nav"
 
 // for all three, a click:
 // 1. produces a random-color background, and
