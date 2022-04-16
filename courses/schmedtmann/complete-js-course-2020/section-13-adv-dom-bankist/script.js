@@ -347,6 +347,12 @@ document.querySelector('.nav__link').addEventListener('click', function(e) {
   // e.currentTarget returns nav class="nav__link"
   console.log(e.currentTarget === this);
   // returns true; current target is the same as this
+
+  // Stop propagation
+  e.stopPropagation();
+  // stops propagation phase for this event
+  // event never arrives at parent elements
+  // in general, not a good idea to stop propagation of events
 });
 
 document.querySelector('.nav__links').addEventListener('click', function(e) {
