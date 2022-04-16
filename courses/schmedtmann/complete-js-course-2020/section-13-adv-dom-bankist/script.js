@@ -345,6 +345,8 @@ document.querySelector('.nav__link').addEventListener('click', function(e) {
   // e.target and e.currentTarget are not the same:
   // e.target returns <a class="nav__link"
   // e.currentTarget returns nav class="nav__link"
+  console.log(e.currentTarget === this);
+  // returns true; current target is the same as this
 });
 
 document.querySelector('.nav__links').addEventListener('click', function(e) {
