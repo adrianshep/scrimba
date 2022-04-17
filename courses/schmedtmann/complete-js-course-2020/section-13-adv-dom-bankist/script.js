@@ -373,3 +373,16 @@ document.querySelector('.nav').addEventListener('click', function(e) {
 // 1. produces a random-color background, and
 // 2. logs <a class="nav__link" etc. ></a> for each of the three above elements as the target element, that is where the click happened
 // because of event bubbling, the event (e) each element receives is the same one
+
+// capturing phase tends to not be very useful
+
+// document.querySelector('.nav').addEventListener('click', function(e) {
+  // this.style.backgroundColor = randomColor();
+  // console.log('NAV', e.target, e.currentTarget);
+// }, 
+// true);
+
+// even so, event handler has a use capture parameter that can be set; as true above
+// set to true, event handler will no longer listen for bubbling events but for capture events
+// NAV is the first element to be logged before LINK and CONTAINER because, set to true, it is listening for the event as it is captured, traveling down from the root level of the DOM.
+// LINK and CONTAINER are listening for the event bubbling, as it travels back up
