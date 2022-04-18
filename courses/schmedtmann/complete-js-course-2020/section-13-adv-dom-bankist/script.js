@@ -1,12 +1,16 @@
 'use strict';
 
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+///////////////////////////////////////
+// Modal window
+
+
 
 const openModal = function (e) {
     e.preventDefault();
@@ -29,6 +33,50 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+
+
+
+// Button scrolling
+btnScrollTo.addEventListener('click', function(e) {
+    const s1coords = section1.getBoundingClientRect();
+    console.log(s1coords);
+    // returns DOM rectangle:
+    //  DOMRect {x: 0, y: 641.3373, width: , height: , top }
+
+    console.log(e.target.getBoundingClientRect());
+    // returns DOM rectangle:
+    // all dimensions returned are relative to the visible viewport
+
+    console.log('Current scroll (x/y)', window.pageXOffset, window.pageYOffset);
+    // will get you the current scroll position in terms of distance from x and y of the set point
+
+    console.log('height/width of viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
+    // returns height and width of viewport
+    // these coordinates are necessary for the implementation of smooth scrolling
+
+// Scrolling
+// window.scrollTo(
+//   s1coords.left + window.pageXOffset, 
+//   s1coords.top + window.pageYOffset
+//   );
+// .top alone, though, is relative to the viewport
+// solution is to add current scroll position to .top
+
+// to make the above animation nice and smooth, pass in an object instead of just one argument
+// old school way, manually calculating all the values:
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset, 
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // });
+
+// more modern and simpler way:
+// only works in modern browsers
+  section1.scrollIntoView({behavior: 'smooth'});
+});
+
+
 
 // How the DOM Really Works
 
@@ -386,3 +434,6 @@ document.querySelector('.nav').addEventListener('click', function(e) {
 // set to true, event handler will no longer listen for bubbling events but for capture events
 // NAV is the first element to be logged before LINK and CONTAINER because, set to true, it is listening for the event as it is captured, traveling down from the root level of the DOM.
 // LINK and CONTAINER are listening for the event bubbling, as it travels back up
+
+
+// Event Delegation: Implementing Page Delegation
