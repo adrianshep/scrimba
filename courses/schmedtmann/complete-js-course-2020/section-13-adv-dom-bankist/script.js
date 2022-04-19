@@ -76,6 +76,22 @@ btnScrollTo.addEventListener('click', function(e) {
   section1.scrollIntoView({behavior: 'smooth'});
 });
 
+////////////////////////////////////////////////
+// Page navigation
+
+document.querySelectorAll('.nav__link').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log('LINK');
+  });
+});
+// .querySelectorAll returns node list
+// can now use forEach to attach event handler to every element in the node list
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
 
 
 // How the DOM Really Works
@@ -271,23 +287,23 @@ logo.className = 'jonas';
 
 // Implementing Smooth Scrolling
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+// const btnScrollTo = document.querySelector('.btn--scroll-to');
+// const section1 = document.querySelector('#section--1');
 
-btnScrollTo.addEventListener('click', function(e) {
-    const s1coords = section1.getBoundingClientRect();
-    console.log(s1coords);
+// btnScrollTo.addEventListener('click', function(e) {
+    // const s1coords = section1.getBoundingClientRect();
+    // console.log(s1coords);
     // returns DOM rectangle:
     //  DOMRect {x: 0, y: 641.3373, width: , height: , top }
 
-    console.log(e.target.getBoundingClientRect());
+    // console.log(e.target.getBoundingClientRect());
     // returns DOM rectangle:
     // all dimensions returned are relative to the visible viewport
 
-    console.log('Current scroll (x/y)', window.pageXOffset, window.pageYOffset);
+    // console.log('Current scroll (x/y)', window.pageXOffset, window.pageYOffset);
     // will get you the current scroll position in terms of distance from x and y of the set point
 
-    console.log('height/width of viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
+    // console.log('height/width of viewport', document.documentElement.clientHeight, document.documentElement.clientWidth);
     // returns height and width of viewport
     // these coordinates are necessary for the implementation of smooth scrolling
 
@@ -309,7 +325,7 @@ btnScrollTo.addEventListener('click', function(e) {
 
 // more modern and simpler way:
 // only works in modern browsers
-  section1.scrollIntoView({behavior: 'smooth'});
+  // section1.scrollIntoView({behavior: 'smooth'});
 });
 
 
