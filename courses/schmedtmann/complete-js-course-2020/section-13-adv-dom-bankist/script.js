@@ -82,7 +82,9 @@ btnScrollTo.addEventListener('click', function(e) {
 document.querySelectorAll('.nav__link').forEach(function(el) {
   el.addEventListener('click', function(e) {
     e.preventDefault();
-    console.log('LINK');
+    const id = this.getAttribute('href');
+    // because we DON'T want the absolute URL, we don't write this.href
+    // as we want "#section--1", we grab it with this.getAttribute('href')
   });
 });
 // .querySelectorAll returns node list
