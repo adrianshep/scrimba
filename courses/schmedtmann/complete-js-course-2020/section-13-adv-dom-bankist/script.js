@@ -85,6 +85,7 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
     const id = this.getAttribute('href');
     // because we DON'T want the absolute URL, we don't write this.href
     // as we want "#section--1", we grab it with this.getAttribute('href')
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   });
 });
 // .querySelectorAll returns node list
