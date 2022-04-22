@@ -91,6 +91,18 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
 // .querySelectorAll returns node list
 // can now use forEach to attach event handler to every element in the node list
 
+// however, above is incredibly inefficient and not at all holding to DRY philosophy
+// the better solution is:
+
+// Event Delegation
+// uses the fact that events bubble up
+// put the event listener on a common parent of all the elements in which we're interested
+// in the bankist app, that common parent will be the <ul class="nav__links"> element
+// we can catch the event in that common parent element and handle it there, because we know where the event originated by looking at the event.target property
+
+
+
+
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
