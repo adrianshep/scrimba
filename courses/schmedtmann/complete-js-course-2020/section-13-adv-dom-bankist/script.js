@@ -100,8 +100,12 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
 // in the bankist app, that common parent will be the <ul class="nav__links"> element
 // we can catch the event in that common parent element and handle it there, because we know where the event originated by looking at the event.target property
 
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
 
+document.querySelector('nav__links').addEventListener('click', function(e) {
 
+});
 
 
 ////////////////////////////////////////////////
