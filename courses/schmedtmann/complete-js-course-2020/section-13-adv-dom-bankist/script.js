@@ -106,6 +106,12 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
 document.querySelector('nav__links').addEventListener('click', function(e) {
   console.log(e.target);
   // returns <a class="nav__link"> as event-originating element
+
+  // Matching strategy
+  if(e.target.classList.contains('nav__link')) {
+    console.log('LINK');
+    // returns 'LINK' if target class contains 'nav__link'
+  }
 });
 
 
