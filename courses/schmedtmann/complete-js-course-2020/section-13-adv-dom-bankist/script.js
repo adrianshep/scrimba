@@ -104,7 +104,8 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
 // 2. Determine what element originated the event
 
 document.querySelector('nav__links').addEventListener('click', function(e) {
-
+  console.log(e.target);
+  // returns <a class="nav__link"> as event-originating element
 });
 
 
