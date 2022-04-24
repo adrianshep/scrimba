@@ -104,13 +104,19 @@ document.querySelectorAll('.nav__link').forEach(function(el) {
 // 2. Determine what element originated the event
 
 document.querySelector('nav__links').addEventListener('click', function(e) {
-  console.log(e.target);
+  // console.log(e.target);
   // returns <a class="nav__link"> as event-originating element
+  e.preventDefault();
 
   // Matching strategy
   if(e.target.classList.contains('nav__link')) {
-    console.log('LINK');
+    // console.log('LINK');
     // returns 'LINK' if target class contains 'nav__link'
+    const id = this.getAttribute('href');
+    console.log(id);
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 });
 
