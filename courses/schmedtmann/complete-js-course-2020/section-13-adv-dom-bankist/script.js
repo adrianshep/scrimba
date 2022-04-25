@@ -112,7 +112,7 @@ document.querySelector('nav__links').addEventListener('click', function(e) {
   if(e.target.classList.contains('nav__link')) {
     // console.log('LINK');
     // returns 'LINK' if target class contains 'nav__link'
-    const id = this.getAttribute('href');
+    const id = e.target.getAttribute('href');
     console.log(id);
     document.querySelector(id).scrollIntoView({
       behavior: 'smooth'
