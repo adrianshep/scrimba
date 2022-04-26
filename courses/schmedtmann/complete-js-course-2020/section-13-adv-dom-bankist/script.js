@@ -485,3 +485,11 @@ document.querySelector('.nav').addEventListener('click', function(e) {
 
 
 // Event Delegation: Implementing Page Delegation
+
+
+// DOM Traversing
+
+// walking through the DOM 
+// sometimes we need to select an element relative to another element
+// a direct parent or a direct child element, for example
+// sometimes we don't even know the structure of the DOM at runtime
