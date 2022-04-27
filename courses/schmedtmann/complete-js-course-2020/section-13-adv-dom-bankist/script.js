@@ -493,3 +493,10 @@ document.querySelector('.nav').addEventListener('click', function(e) {
 // sometimes we need to select an element relative to another element
 // a direct parent or a direct child element, for example
 // sometimes we don't even know the structure of the DOM at runtime
+
+const h1 = document.querySelector('h1');
+
+// Going downwards: child
+console.log(h1.querySelectorAll('.highlight'));
+// use .querySelectorAll because there is more than one element to grab under h1
+// log returns NodeList(2) [span.highlight, span.highlight]
