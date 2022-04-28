@@ -500,3 +500,11 @@ const h1 = document.querySelector('h1');
 console.log(h1.querySelectorAll('.highlight'));
 // use .querySelectorAll because there is more than one element to grab under h1
 // log returns NodeList(2) [span.highlight, span.highlight]
+
+// if we need direct children:
+console.log(h1.childNodes);
+// returns every single node of every single type that exists
+// if we're interested in the elements themselves:
+console.log(h1.children);
+// returns HTML collection, which is live
+// only works for direct children
