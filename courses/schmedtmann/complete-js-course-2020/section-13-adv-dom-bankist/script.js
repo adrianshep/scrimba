@@ -508,3 +508,8 @@ console.log(h1.childNodes);
 console.log(h1.children);
 // returns HTML collection, which is live
 // only works for direct children
+h1.firstElementChild.style.color = 'white';
+// only first element of the child get the color
+h1.lastElementChild.style.color = 'orangered';
+// only last element of the child get the color
+
