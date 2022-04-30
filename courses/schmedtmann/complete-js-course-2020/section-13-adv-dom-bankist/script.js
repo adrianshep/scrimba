@@ -513,3 +513,6 @@ h1.firstElementChild.style.color = 'white';
 h1.lastElementChild.style.color = 'orangered';
 // only last element of the child get the color
 
+// Going upwards: parents
+console.log(h1.parentNode);
+// returns <div class="header__title"> which contains the h1 element
