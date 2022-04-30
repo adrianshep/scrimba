@@ -516,3 +516,6 @@ h1.lastElementChild.style.color = 'orangered';
 // Going upwards: parents
 console.log(h1.parentNode);
 // returns <div class="header__title"> which contains the h1 element
+console.log(h1.parentElement);
+// this is usually the one in which we're interested
+// in this case, it's the same as the .parentNode
