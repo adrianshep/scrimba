@@ -523,3 +523,6 @@ console.log(h1.parentElement);
 // most of the time we'll need to find a parent element no matter how far away it is in the DOM tree
 // we'll use this all the time, especially for event delegation
 h1.closest('.header').style.background = 'var(--gradient-secondary)';
+
+h1.closest('h1').style.background = 'var(--gradient-primary)';
+// where .querySelectorAll() finds children, .closest() finds parents
