@@ -526,3 +526,11 @@ h1.closest('.header').style.background = 'var(--gradient-secondary)';
 
 h1.closest('h1').style.background = 'var(--gradient-primary)';
 // where .querySelectorAll() finds children, .closest() finds parents
+
+// Going sideways: siblings
+// in JS we can only access direct siblings:
+// only the previous sibling and the next one
+console.log(h1.previousElementSibling);
+// returns null as there is no previous element there; the h1 is the first element
+console.log(h1.nextElementSibling);
+// returns <h4>A simpler banking experience for a simpler life.</h4>
