@@ -534,3 +534,7 @@ console.log(h1.previousElementSibling);
 // returns null as there is no previous element there; the h1 is the first element
 console.log(h1.nextElementSibling);
 // returns <h4>A simpler banking experience for a simpler life.</h4>
+
+// have the same properties for nodes:
+console.log(h1.previousSibling);
+console.log(h1.nextSibling);
