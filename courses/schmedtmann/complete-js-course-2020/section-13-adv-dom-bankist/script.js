@@ -538,3 +538,14 @@ console.log(h1.nextElementSibling);
 // have the same properties for nodes:
 console.log(h1.previousSibling);
 console.log(h1.nextSibling);
+
+// if we need all the siblings and not just the previous or next, then we use this trick:
+// move up to the parent element and read all the children from there
+console.log(h1.parentElement.children);
+// returns itself (h1) plus all the siblings
+// returns an HTML collection which is an iterable
+// use spread operator to turn it into an array:
+[...h1.parentElement.children].forEach(function(el) {
+  if(el !== h1) el.style.transform = 'scale(0.5)';
+  // all the siblings are now 50% smaller
+});
