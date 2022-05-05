@@ -120,6 +120,11 @@ document.querySelector('nav__links').addEventListener('click', function(e) {
   }
 });
 
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -549,3 +554,8 @@ console.log(h1.parentElement.children);
   if(el !== h1) el.style.transform = 'scale(0.5)';
   // all the siblings are now 50% smaller
 });
+
+
+// Building a Tabbed Component
+// clicking on each tab displays content unique to it
+// accomplished by hiding content of every other tab
