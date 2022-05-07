@@ -133,7 +133,10 @@ const tabsContent = document.querySelectorAll('.operations__content');
 // for which we need to attach the event handler on the common parent element of all the elements in shich we're interested
 
 tabsContainer.addEventListener('click', function(e) {
-
+  // bad matching strategy:
+  const clicked = e.target;
+  console.log(clicked);
+  // can return the btn element we want, but can also return a span element we don't want as it is inside the btn element
 });
 
 ////////////////////////////////////////////////
