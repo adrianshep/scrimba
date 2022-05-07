@@ -126,10 +126,15 @@ const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
 // bad practice for adding event listeners:
-tabs.forEach(t => t.addEventListener('click', () => console.log('TAB')));
+// tabs.forEach(t => t.addEventListener('click', () => console.log('TAB')));
 // isn't scalable -- consider having to add hundreds or thousands of event listeners
 
+// better practice is to use event delegation instead
+// for which we need to attach the event handler on the common parent element of all the elements in shich we're interested
 
+tabsContainer.addEventListener('click', function(e) {
+
+});
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
