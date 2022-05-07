@@ -134,9 +134,12 @@ const tabsContent = document.querySelectorAll('.operations__content');
 
 tabsContainer.addEventListener('click', function(e) {
   // bad matching strategy:
-  const clicked = e.target;
-  console.log(clicked);
-  // can return the btn element we want, but can also return a span element we don't want as it is inside the btn element
+  // const clicked = e.target;
+  // console.log(clicked);
+  // click can return the btn element we want, but can also return a span element we don't want as it is inside the btn element
+  // another bad matching strategy:
+  // const clicked = e.target.parentElement;
+  // click on span element will return btn (parent) element, but click on btn element will return its parent, operations tab-container
 });
 
 ////////////////////////////////////////////////
