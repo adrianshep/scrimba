@@ -140,6 +140,11 @@ tabsContainer.addEventListener('click', function(e) {
   // another bad matching strategy:
   // const clicked = e.target.parentElement;
   // click on span element will return btn (parent) element, but click on btn element will return its parent, operations tab-container
+  // what is needed is a way of selecting a parent element that is always a tab:
+  const clicked = e.target.closest('.operations__tab');
+  console.log('clicked');
+  // clicking on btn or the span returns the same parent element:
+  // <button class="button operations__tab operations__tab--1 operations__tab--active" data-tab="1">
 });
 
 ////////////////////////////////////////////////
