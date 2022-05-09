@@ -145,6 +145,8 @@ tabsContainer.addEventListener('click', function(e) {
   console.log('clicked');
   // clicking on btn or the span returns the same parent element:
   // <button class="button operations__tab operations__tab--1 operations__tab--active" data-tab="1">
+  clicked.classList.add('operations__tab--active');
+  // for the element that is clicked we are adding "operations__tab--active" to its class
 });
 
 ////////////////////////////////////////////////
