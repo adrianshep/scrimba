@@ -145,6 +145,18 @@ tabsContainer.addEventListener('click', function(e) {
   console.log('clicked');
   // clicking on btn or the span returns the same parent element:
   // <button class="button operations__tab operations__tab--1 operations__tab--active" data-tab="1">
+  // clicking in tabs container but not on any element inside it returns null
+  // result of .closest() method when no matching parent element is to be found
+
+  // Guard clause
+  if(!clicked) return;
+  
+  // more modern and less cluttered than:
+  // if (clicked) {
+    // clicked.classList.add('operations__tab--activve');
+  // }
+  // also cleaner to return a function immediately if a certain condition is met
+  // .add() below won't be executed if (!clicked) condition is met
   clicked.classList.add('operations__tab--active');
   // for the element that is clicked we are adding "operations__tab--active" to its class
 });
