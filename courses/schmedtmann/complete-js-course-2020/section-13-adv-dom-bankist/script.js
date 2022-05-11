@@ -149,11 +149,14 @@ tabsContainer.addEventListener('click', function(e) {
   // result of .closest() method when no matching parent element is to be found
 
   // Guard clause
-  if(!clicked) return;
+  if (!clicked) return;
+  // Active tab
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  // clears all tabs; active tab will be added below
   
   // more modern and less cluttered than:
   // if (clicked) {
-    // clicked.classList.add('operations__tab--activve');
+    // clicked.classList.add('operations__tab--active');
   // }
   // also cleaner to return a function immediately if a certain condition is met
   // .add() below won't be executed if (!clicked) condition is met
