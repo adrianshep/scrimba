@@ -150,10 +150,11 @@ tabsContainer.addEventListener('click', function(e) {
 
   // Guard clause
   if (!clicked) return;
+
   // Active tab
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
   // clears all tabs; active tab will be added below
-  
+
   // more modern and less cluttered than:
   // if (clicked) {
     // clicked.classList.add('operations__tab--active');
@@ -162,6 +163,11 @@ tabsContainer.addEventListener('click', function(e) {
   // .add() below won't be executed if (!clicked) condition is met
   clicked.classList.add('operations__tab--active');
   // for the element that is clicked we are adding "operations__tab--active" to its class
+
+  // Activate content area
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
 });
 
 ////////////////////////////////////////////////
