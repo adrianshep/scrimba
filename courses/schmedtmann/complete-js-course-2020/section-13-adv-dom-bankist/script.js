@@ -151,9 +151,10 @@ tabsContainer.addEventListener('click', function(e) {
   // Guard clause
   if (!clicked) return;
 
-  // Active tab
+  // Remove active classes for tab and tab content
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
-  // clears all tabs; active tab will be added below
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+  // clears all tabs and tabs content; active tab will be added below
 
   // more modern and less cluttered than:
   // if (clicked) {
@@ -161,6 +162,8 @@ tabsContainer.addEventListener('click', function(e) {
   // }
   // also cleaner to return a function immediately if a certain condition is met
   // .add() below won't be executed if (!clicked) condition is met
+
+  // Activate tab
   clicked.classList.add('operations__tab--active');
   // for the element that is clicked we are adding "operations__tab--active" to its class
 
