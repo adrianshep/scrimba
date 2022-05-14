@@ -6,6 +6,7 @@ const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
+const nav = document.querySelector('.nav');
 
 ///////////////////////////////////////
 // Modal window
@@ -151,7 +152,7 @@ tabsContainer.addEventListener('click', function(e) {
   // Guard clause
   if (!clicked) return;
 
-  // Remove active classes for tab and tab content
+  // Remove active classes for tab and tab content areas
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
   tabsContent.forEach(c => c.classList.remove('operations__content--active'));
   // clears all tabs and tabs content; active tab will be added below
@@ -172,6 +173,12 @@ tabsContainer.addEventListener('click', function(e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
+
+
+// Passing Arguments into Event Handlers
+
+// Menu fade animation
+const nav = document.querySelector('.nav');
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
