@@ -181,7 +181,15 @@ tabsContainer.addEventListener('click', function(e) {
 // Passing Arguments into Event Handlers
 
 // Menu fade animation
-const nav = document.querySelector('.nav');
+nav.addEventListener('mouseover', function(e) {
+
+});
+// mouseover event will bubble, unlike mouseenter, which we need to happen
+
+nav.addEventListener('mouseout', function(e) {
+
+});
+// mouseout undoes mouseover
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
