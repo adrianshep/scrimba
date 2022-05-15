@@ -182,7 +182,9 @@ tabsContainer.addEventListener('click', function(e) {
 
 // Menu fade animation
 nav.addEventListener('mouseover', function(e) {
-
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+  }
 });
 // mouseover event will bubble, unlike mouseenter, which we need to happen
 
