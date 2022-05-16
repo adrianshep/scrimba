@@ -184,6 +184,8 @@ tabsContainer.addEventListener('click', function(e) {
 nav.addEventListener('mouseover', function(e) {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
+    const siblings = link.closest('.nav').querySelector('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
   }
 });
 // mouseover event will bubble, unlike mouseenter, which we need to happen
