@@ -206,6 +206,8 @@ const handleHover = function(e, opacity) {
 // improve the above even more:
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
+// "this" variable now will be set to either 0.5 or 1
+// console.log(this);
 
 // nav.addEventListener('mouseover', function(e) {
   // if (e.target.classList.contains('nav__link')) {
