@@ -196,12 +196,16 @@ const handleHover = function(e, opacity) {
 }
 
 // addEventListener expects a function to be passed in:
-nav.addEventListener('mouseover', function(e) {
-  handleHover(e, 0.5);
-});
-nav.addEventListener('mouseout', function(e) {
-  handleHover(e, 1);
-});
+// nav.addEventListener('mouseover', function(e) {
+//   handleHover(e, 0.5);
+// });
+// nav.addEventListener('mouseout', function(e) {
+//   handleHover(e, 1);
+// });
+
+// improve the above even more:
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+nav.addEventListener('mouseout', handleHover.bind(1));
 
 // nav.addEventListener('mouseover', function(e) {
   // if (e.target.classList.contains('nav__link')) {
