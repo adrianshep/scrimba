@@ -204,7 +204,9 @@ const handleHover = function(e, opacity) {
 //   handleHover(e, 1);
 // });
 
+// Passing "argument" into handler
 // improve the above even more:
+// (if we need multiple values, we can pass in an array or an object)
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 // "this" variable now will be set to either 0.5 or 1
