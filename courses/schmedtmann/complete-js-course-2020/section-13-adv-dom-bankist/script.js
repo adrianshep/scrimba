@@ -223,7 +223,7 @@ nav.addEventListener('mouseout', handleHover.bind(1));
   //   });
   //   logo.style.opacity = 0.5;
   // }
-});
+// });
 // mouseover event will bubble, unlike mouseenter, which we need to happen
 
 // nav.addEventListener('mouseout', function(e) {
@@ -283,6 +283,16 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 // special node type EventTarget
 // parent of both the Node Type and the Window Node Type
 // as a result, we can call .addEventListener() and .removeEventListener() on every single type of node in the API
+
+
+// Sticky navigation
+window.addEventListener('scroll', function(e) {
+  console.log(e);
+});
+// scroll event will be fired off each time we scroll on the page
+// scroll event is not really efficient and should usually be avoided
+// being used here for purposes of example
+
 
 
 // Selecting, Creating, and Deleting Elements
