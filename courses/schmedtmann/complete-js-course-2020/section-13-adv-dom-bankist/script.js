@@ -286,9 +286,14 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 
 // Sticky navigation
+const initialCoords = section1.getBoundingClientRect();
+console.log(initialCoords);
+
 window.addEventListener('scroll', function(e) {
   console.log(window.scrollY);
   // gives current scroll position from POV of viewport when the scroll event has fired
+
+  // calculate value dynamically
 });
 // scroll event will be fired off each time we scroll on the page
 // scroll event is not really efficient and should be avoided
