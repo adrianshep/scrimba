@@ -294,6 +294,8 @@ window.addEventListener('scroll', function(e) {
   // gives current scroll position from POV of viewport when the scroll event has fired
 
   // calculate value dynamically
+  if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
 });
 // scroll event will be fired off each time we scroll on the page
 // scroll event is not really efficient and should be avoided
