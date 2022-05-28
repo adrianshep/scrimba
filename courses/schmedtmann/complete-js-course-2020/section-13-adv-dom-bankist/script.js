@@ -306,15 +306,17 @@ window.addEventListener('scroll', function(e) {
 
 // this API allows our code to observe changes to the way a certain target element intersects another or the viewport
 
-const obsCallback = function() {
-
+const obsCallback = function (entries, observer) {
+  entries.forEach(entry => {
+    console.log(entry);
+  });
 };
 
 const obsOptions = {
   root: null, 
   threshold: 0.1
 };
-// target element is intersecting the root elements at the threshold we define (0.1 = 10%)
+// target element is intersecting the root elements at the threshold we define (0.1 = 10%) then obsCallback will get called, regardless of whether we're going up or down
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1);
