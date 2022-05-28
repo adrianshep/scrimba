@@ -306,9 +306,15 @@ window.addEventListener('scroll', function(e) {
 
 // this API allows our code to observe changes to the way a certain target element intersects another or the viewport
 
-const obsCallback = function() {};
+const obsCallback = function() {
 
-const obsOptions = {};
+};
+
+const obsOptions = {
+  root: null, 
+  threshold: 0.1
+};
+// target element is intersecting the root elements at the threshold we define (0.1 = 10%)
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1);
