@@ -314,9 +314,14 @@ const obsCallback = function (entries, observer) {
 
 const obsOptions = {
   root: null, 
-  threshold: 0.1
+  // threshold: 0.1
+  // target element is intersecting the root elements at the threshold we define (0.1 = 10%) then obsCallback will get called, regardless of whether we're going up or down
+  // isIntersecting of IntersectionObserverEntery will return FALSE so long as less than 10% of the target is intersecting the viewport
+  threshold: [0, 0.2]
+  // 0% means callback will trigger everytime target element moves completely out of view and as soon as it enters the view
+  
 };
-// target element is intersecting the root elements at the threshold we define (0.1 = 10%) then obsCallback will get called, regardless of whether we're going up or down
+
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(section1);
