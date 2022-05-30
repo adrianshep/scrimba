@@ -306,26 +306,41 @@ window.addEventListener('scroll', function(e) {
 
 // this API allows our code to observe changes to the way a certain target element intersects another or the viewport
 
-const obsCallback = function (entries, observer) {
-  entries.forEach(entry => {
-    console.log(entry);
-  });
-};
+// const obsCallback = function (entries, observer) {
+//   entries.forEach(entry => {
+//     console.log(entry);
+//   });
+// };
 
-const obsOptions = {
-  root: null, 
+// const obsOptions = {
+//   root: null, 
   // threshold: 0.1
   // target element is intersecting the root elements at the threshold we define (0.1 = 10%) then obsCallback will get called, regardless of whether we're going up or down
   // isIntersecting of IntersectionObserverEntery will return FALSE so long as less than 10% of the target is intersecting the viewport
   threshold: [0, 0.2]
   // 0% means callback will trigger everytime target element moves completely out of view and as soon as it enters the view
   
-};
+// };
 
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(section1);
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
+// we want navigation to display -- to "stick" -- only when the header moves completely out of view
 
+const header = document.querySelector('.header');
+
+const stickyNav = function(entries) {
+  const [entry] = entries;
+  // destructuring; same as writine entries[0]
+  console.log(entry);
+}
+
+const headerObserver = new IntersectionObserver(stickyNav, 
+  {
+    root: null,
+    threshold: 0
+  });
+headerObserver.observe(header);
 
 // Selecting, Creating, and Deleting Elements
 
