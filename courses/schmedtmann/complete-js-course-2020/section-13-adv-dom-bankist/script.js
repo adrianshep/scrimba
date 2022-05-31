@@ -333,7 +333,10 @@ const stickyNav = function(entries) {
   const [entry] = entries;
   // destructuring; same as writine entries[0]
   console.log(entry);
-}
+
+  if(!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.add('sticky');
+};
 
 const headerObserver = new IntersectionObserver(stickyNav, 
   {
