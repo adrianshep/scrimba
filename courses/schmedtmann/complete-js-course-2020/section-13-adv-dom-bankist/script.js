@@ -328,6 +328,8 @@ window.addEventListener('scroll', function(e) {
 // we want navigation to display -- to "stick" -- only when the header moves completely out of view
 
 const header = document.querySelector('.header');
+const newHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
 
 const stickyNav = function(entries) {
   const [entry] = entries;
@@ -342,7 +344,9 @@ const headerObserver = new IntersectionObserver(stickyNav,
   {
     root: null,
     threshold: 0,
-    rootMargin: '-90px'
+    rootMargin: `-${navHeight}px`
+    // calculate dynamically
+    // rootMargin: '-90px'
     // % won't work here
     // establishes margin which will be taken up by the nav element
   });
