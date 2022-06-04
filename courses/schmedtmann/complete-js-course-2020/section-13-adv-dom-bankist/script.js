@@ -334,7 +334,7 @@ console.log(navHeight);
 const stickyNav = function(entries) {
   const [entry] = entries;
   // destructuring; same as writine entries[0]
-  console.log(entry);
+  // console.log(entry);
 
   if(!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.add('sticky');
@@ -350,7 +350,16 @@ const headerObserver = new IntersectionObserver(stickyNav,
     // % won't work here
     // establishes margin which will be taken up by the nav element
   });
+
 headerObserver.observe(header);
+
+// Reveal sections
+const revealSection = function(entries, observer) {
+
+}
+
+const sectionObserver = new IntersectionObserver(revealSection, {})
+
 
 // Selecting, Creating, and Deleting Elements
 
