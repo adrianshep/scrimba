@@ -328,8 +328,7 @@ window.addEventListener('scroll', function(e) {
 // we want navigation to display -- to "stick" -- only when the header moves completely out of view
 
 const header = document.querySelector('.header');
-const newHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function(entries) {
   const [entry] = entries;
@@ -357,10 +356,16 @@ headerObserver.observe(header);
 const allSections = document.querySelectorAll('.section');
 
 const revealSection = function(entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
 
-}
+  entry.target.classList.remove('section--hidden')
+};
 
-const sectionObserver = new IntersectionObserver(revealSection, {})
+const sectionObserver = new IntersectionObserver(revealSection, {
+
+});
+
 allSections.forEach(function(section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
