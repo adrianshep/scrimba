@@ -360,8 +360,10 @@ const revealSection = function(entries, observer) {
   console.log(entry);
 
   if(!entry.isIntersecting) return;
-  
-  entry.target.classList.remove('section--hidden')
+
+  entry.target.classList.remove('section--hidden');
+  // remove no longer needed observer:
+  observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
