@@ -387,7 +387,7 @@ const loadImg = function (entries, observer) {
   entry.target.src = entry.target.dataset.src;
 
   entry.target.addEventListener('load', function() {
-    
+    entry.target.classList.remove('lazy-img');
   });
 };
 
