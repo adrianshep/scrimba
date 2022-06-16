@@ -397,8 +397,9 @@ const imgObserver = new IntersectionObserver(loadImg,
   {
     root: null,
     threshold: 0,
-    rootMargin: '-200px',
+    rootMargin: '200px',
     // remove image loading delay when scrolling page
+    // '-200px' created the opposite effect of what was needed; changed to '200px';
   });
 
 imgTargets.forEach(img => imgObserver.observe(img));
