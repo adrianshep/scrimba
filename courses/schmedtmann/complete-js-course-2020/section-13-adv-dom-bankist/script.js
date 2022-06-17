@@ -404,6 +404,12 @@ const imgObserver = new IntersectionObserver(loadImg,
 
 imgTargets.forEach(img => imgObserver.observe(img));
 
+
+// Building a Slider Component: Part 1
+// Slider
+const slides = document.querySelectorAll('slide');
+
+
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
