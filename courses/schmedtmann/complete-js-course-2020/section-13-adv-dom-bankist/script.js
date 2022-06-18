@@ -409,6 +409,8 @@ imgTargets.forEach(img => imgObserver.observe(img));
 // Slider
 const slides = document.querySelectorAll('slide');
 
+// slides should be set to positions:
+// 0%, 100%, 200%, 300%
 
 // Selecting, Creating, and Deleting Elements
 
