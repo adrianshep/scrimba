@@ -409,6 +409,8 @@ imgTargets.forEach(img => imgObserver.observe(img));
 // Slider
 const slides = document.querySelectorAll('slide');
 
+slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+// multiply current index by 100%
 // slides should be set to positions:
 // 0%, 100%, 200%, 300%
 
