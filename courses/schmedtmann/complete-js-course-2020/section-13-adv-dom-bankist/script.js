@@ -410,7 +410,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = document.querySelectorAll('slide');
 // temporarily scale down the entire slider to be able to see all the images at once:
 const slider = document.querySelector('.slider');
-slider.style.tranform = 'scale(0.2)';
+slider.style.tranform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
