@@ -406,8 +406,12 @@ imgTargets.forEach(img => imgObserver.observe(img));
 
 
 // Building a Slider Component: Part 1
+
 // Slider
 const slides = document.querySelectorAll('slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+
 // temporarily scale down the entire slider to be able to see all the images at once:
 const slider = document.querySelector('.slider');
 slider.style.tranform = 'scale(0.4) translateX(-800px)';
