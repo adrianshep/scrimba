@@ -422,6 +422,12 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 // slides should be set to positions:
 // 0%, 100%, 200%, 300%
 
+// Next slide
+btnRight.addEventListener('click', function() {
+  
+});
+
+
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
