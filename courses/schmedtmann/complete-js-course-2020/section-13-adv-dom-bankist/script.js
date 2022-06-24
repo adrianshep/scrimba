@@ -412,6 +412,8 @@ const slides = document.querySelectorAll('slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 
+let curSlide = 0;
+
 // temporarily scale down the entire slider to be able to see all the images at once:
 const slider = document.querySelector('.slider');
 slider.style.tranform = 'scale(0.4) translateX(-800px)';
@@ -424,9 +426,12 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 // Next slide
 btnRight.addEventListener('click', function() {
-  
-});
+  curSlide++;
 
+  slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
+  // subtract current slide from current index
+});
+// if curSlide = 1, then: -100%, 0%, 100%, 200%, 300%
 
 // Selecting, Creating, and Deleting Elements
 
