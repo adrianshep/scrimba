@@ -413,6 +413,8 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 
 let curSlide = 0;
+const maxSlide = slides.length;
+// defines the number of slides
 
 // temporarily scale down the entire slider to be able to see all the images at once:
 const slider = document.querySelector('.slider');
