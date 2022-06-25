@@ -428,7 +428,12 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 // Next slide
 btnRight.addEventListener('click', function() {
-  curSlide++;
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  // return to the beginning of the slides
 
   slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
   // subtract current slide from current index
