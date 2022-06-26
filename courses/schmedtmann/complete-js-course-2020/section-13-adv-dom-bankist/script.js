@@ -426,6 +426,11 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 // slides should be set to positions:
 // 0%, 100%, 200%, 300%
 
+const goToSlide = function(slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`));
+};
+
 // Next slide
 btnRight.addEventListener('click', function() {
   if (curSlide === maxSlide - 1) {
@@ -436,7 +441,9 @@ btnRight.addEventListener('click', function() {
   }
   // return to the beginning of the slides
 
-  slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
+  goToSlide(curSlide)
+
+  // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
   // subtract current slide from current index
 });
 // if curSlide = 1, then: -100%, 0%, 100%, 200%, 300%
