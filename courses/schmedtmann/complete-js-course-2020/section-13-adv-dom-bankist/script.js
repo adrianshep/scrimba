@@ -421,15 +421,18 @@ const slider = document.querySelector('.slider');
 slider.style.tranform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
-slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+// slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+// above can me commented out on acount of goToSlide(0) below
 // multiply current index by 100%
 // slides should be set to positions:
 // 0%, 100%, 200%, 300%
 
 const goToSlide = function(slide) {
   slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`));
-};
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+    );
+}
+goToSlide(0)
 
 // Next slide
 btnRight.addEventListener('click', function() {
