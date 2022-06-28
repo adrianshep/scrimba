@@ -432,10 +432,10 @@ const goToSlide = function(slide) {
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
 }
-goToSlide(0)
+goToSlide(0);
 
 // Next slide
-btnRight.addEventListener('click', function() {
+const nextSlide = function() {
   if (curSlide === maxSlide - 1) {
     // make slider zero-based
     curSlide = 0;
@@ -445,10 +445,13 @@ btnRight.addEventListener('click', function() {
   // return to the beginning of the slides
 
   goToSlide(curSlide)
+};
+
+btnRight.addEventListener('click', nextSlide);
 
   // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
   // subtract current slide from current index
-});
+
 // if curSlide = 1, then: -100%, 0%, 100%, 200%, 300%
 
 // Selecting, Creating, and Deleting Elements
