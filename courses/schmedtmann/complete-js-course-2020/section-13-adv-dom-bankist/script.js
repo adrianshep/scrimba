@@ -448,6 +448,7 @@ const nextSlide = function() {
 };
 
 btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
 
   // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
   // subtract current slide from current index
