@@ -417,9 +417,9 @@ const maxSlide = slides.length;
 // defines the number of slides
 
 // temporarily scale down the entire slider to be able to see all the images at once:
-const slider = document.querySelector('.slider');
-slider.style.tranform = 'scale(0.4) translateX(-800px)';
-slider.style.overflow = 'visible';
+// const slider = document.querySelector('.slider');
+// slider.style.tranform = 'scale(0.4) translateX(-800px)';
+// slider.style.overflow = 'visible';
 
 // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 // above can me commented out on acount of goToSlide(0) below
@@ -454,7 +454,7 @@ const prevSlide = function() {
     curSlide--;
   }
   goToSlide(curSlide);
-}
+};
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
