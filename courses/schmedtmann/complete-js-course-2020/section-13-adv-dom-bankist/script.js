@@ -459,6 +459,10 @@ const prevSlide = function() {
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
 
+document.addEventListener('keydown', function(e) {
+  console.log(e);
+})
+
   // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
   // subtract current slide from current index
 
