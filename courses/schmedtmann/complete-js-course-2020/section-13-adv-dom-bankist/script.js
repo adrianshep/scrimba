@@ -462,6 +462,7 @@ btnLeft.addEventListener('click', prevSlide);
 document.addEventListener('keydown', function(e) {
   console.log(e);
   if (e.key === 'ArrowLeft') prevSlide();
+  e.key === 'ArrowRight' && nextSlide();
 });
 
   // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
