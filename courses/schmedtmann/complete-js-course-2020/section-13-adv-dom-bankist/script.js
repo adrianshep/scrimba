@@ -411,6 +411,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 const slides = document.querySelectorAll('slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
+const dotContainer = document.querySelector('.dots');
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -462,7 +463,8 @@ btnLeft.addEventListener('click', prevSlide);
 document.addEventListener('keydown', function(e) {
   console.log(e);
   if (e.key === 'ArrowLeft') prevSlide();
-  e.key === 'ArrowRight' && nextSlide();
+  // alternate way:
+  // e.key === 'ArrowRight' && nextSlide();
 });
 
   // slides.forEach((s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`));
