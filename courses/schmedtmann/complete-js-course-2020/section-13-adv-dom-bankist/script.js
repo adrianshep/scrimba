@@ -428,6 +428,10 @@ const maxSlide = slides.length;
 // slides should be set to positions:
 // 0%, 100%, 200%, 300%
 
+const createDots = function() {
+  
+};
+
 const goToSlide = function(slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
