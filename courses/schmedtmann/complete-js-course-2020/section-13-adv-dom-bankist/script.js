@@ -429,7 +429,12 @@ const maxSlide = slides.length;
 // 0%, 100%, 200%, 300%
 
 const createDots = function() {
-  
+  slides.forEach(function(_, i) {
+    // _ is conventional for a throwaway variable, in this case s for slide, which we won't need
+    dotContainer.insertAdjacentHTML(
+      'beforeend', 
+      '<button class="dots__dot" data-slide="${i}"></button>')
+  });
 };
 
 const goToSlide = function(slide) {
