@@ -433,9 +433,11 @@ const createDots = function() {
     // _ is conventional for a throwaway variable, in this case s for slide, which we won't need
     dotContainer.insertAdjacentHTML(
       'beforeend', 
-      '<button class="dots__dot" data-slide="${i}"></button>')
+      '<button class="dots__dot" data-slide="${i}"></button>'
+      );
   });
 };
+createDots();
 
 const goToSlide = function(slide) {
   slides.forEach(
