@@ -483,6 +483,12 @@ document.addEventListener('keydown', function(e) {
 
 // if curSlide = 1, then: -100%, 0%, 100%, 200%, 300%
 
+dotContainer.addEventListener('click', function(e) {
+  if (e.target.classList.contains('dots__dot')) {
+    console.log('DOT');
+  }
+});
+
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
