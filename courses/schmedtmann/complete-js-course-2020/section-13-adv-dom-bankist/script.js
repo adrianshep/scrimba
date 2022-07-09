@@ -488,6 +488,8 @@ dotContainer.addEventListener('click', function(e) {
   if (e.target.classList.contains('dots__dot')) {
     // console.log('DOT');
     const slide = e.target.dataset.slide;
+    // because above slide value is the same as .slide value, can use destructuring:
+    const {slide} = e.target.dataset;
   }
 });
 
