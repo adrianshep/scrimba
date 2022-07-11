@@ -444,6 +444,12 @@ const activateDot = function(slide) {
     .querySelectorAll('.dots__dot')
     .forEach(dot => dot.classList
     .remove('dots__dot--active'));
+
+    // select wanted slide by data attribute:
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add('dots__dot--active');
+
 };
 
 const goToSlide = function(slide) {
@@ -463,7 +469,7 @@ const nextSlide = function() {
   }
   // return to the beginning of the slides
 
-  goToSlide(curSlide)
+  goToSlide(curSlide);
 };
 
 const prevSlide = function() {
