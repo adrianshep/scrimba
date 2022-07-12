@@ -470,6 +470,7 @@ const nextSlide = function() {
   // return to the beginning of the slides
 
   goToSlide(curSlide);
+  activateDot(curSlide);
 };
 
 const prevSlide = function() {
@@ -479,6 +480,7 @@ const prevSlide = function() {
     curSlide--;
   }
   goToSlide(curSlide);
+  activateDot(curSlide);
 };
 
 btnRight.addEventListener('click', nextSlide);
@@ -504,6 +506,7 @@ dotContainer.addEventListener('click', function(e) {
     // because above slide value is the same as .slide value, can use destructuring:
     const {slide} = e.target.dataset;
     goToSlide(slide);
+    activateDot(slide);
   }
 });
 
