@@ -437,7 +437,7 @@ const createDots = function() {
       );
   });
 };
-createDots();
+// createDots(); move to init function
 
 const activateDot = function(slide) {
   document
@@ -450,14 +450,14 @@ const activateDot = function(slide) {
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
     .classList.add('dots__dot--active');
 };
-activateDot(0);
+// activateDot(0); move to init function
 
 const goToSlide = function(slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
     );
 }
-goToSlide(0);
+// goToSlide(0); move to init function
 
 // Next slide
 const nextSlide = function() {
@@ -483,6 +483,15 @@ const prevSlide = function() {
   activateDot(curSlide);
 };
 
+// Initialization function
+const init = function() {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+}
+init()
+
+// Event handlers
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
 
