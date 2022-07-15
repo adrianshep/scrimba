@@ -408,6 +408,8 @@ imgTargets.forEach(img => imgObserver.observe(img));
 // Building a Slider Component: Part 1
 
 // Slider
+// put all slider code into a function so as to not pollute the global namespace:
+const slider = function() {
 const slides = document.querySelectorAll('slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
@@ -518,7 +520,7 @@ dotContainer.addEventListener('click', function(e) {
     activateDot(slide);
   }
 });
-
+}
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
