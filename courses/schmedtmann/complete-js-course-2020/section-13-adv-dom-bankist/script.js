@@ -522,6 +522,8 @@ dotContainer.addEventListener('click', function(e) {
 });
 }
 slider();
+// options can be passed into slider
+
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
