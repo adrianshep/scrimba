@@ -521,6 +521,7 @@ dotContainer.addEventListener('click', function(e) {
   }
 });
 }
+slider();
 // Selecting, Creating, and Deleting Elements
 
 // Selecting elements
