@@ -912,3 +912,9 @@ console.log(h1.parentElement.children);
 // Building a Tabbed Component
 // clicking on each tab displays content unique to it
 // accomplished by hiding content of every other tab
+
+// Lifecycle DOM Events
+
+document.addEventListener('DOMContentLoaded', function(e) {
+  console.log('HTML parsed and DOM tree built!', e)
+});
