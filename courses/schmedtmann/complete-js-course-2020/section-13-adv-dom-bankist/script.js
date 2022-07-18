@@ -918,3 +918,4 @@ console.log(h1.parentElement.children);
 document.addEventListener('DOMContentLoaded', function(e) {
   console.log('HTML parsed and DOM tree built!', e)
 });
+// because the <script src="script.js"></script> tag appears at the very bottom of the HTML file, we do not need to listen for the HTML to have finished parsing to know when to run our code; the tag's placement does that for us
