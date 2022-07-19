@@ -919,3 +919,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
   console.log('HTML parsed and DOM tree built!', e)
 });
 // because the <script src="script.js"></script> tag appears at the very bottom of the HTML file, we do not need to listen for the HTML to have finished parsing to know when to run our code; the tag's placement does that for us
+
+window.addEventListener('load', function(e) {
+  console.log('Page fully loaded', e);
+})
+// load event is fired by window as soon as HTML is parsed and all the images and exeternal resources (e.g., CSS files) are loaded
+// when the complete page has finished loading, the load event is fired
