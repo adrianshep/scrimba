@@ -925,3 +925,10 @@ window.addEventListener('load', function(e) {
 })
 // load event is fired by window as soon as HTML is parsed and all the images and exeternal resources (e.g., CSS files) are loaded
 // when the complete page has finished loading, the load event is fired
+
+// window.addEventListener('beforeunload', function(e) {
+  // e.preventDefault();
+  // Chrome doesn't need this, but other browsers do
+  // e.returnValue = '';
+// });
+// used to ask user if they're sure they want to leave the page
