@@ -932,3 +932,17 @@ window.addEventListener('load', function(e) {
   // e.returnValue = '';
 // });
 // used to ask user if they're sure they want to leave the page
+
+
+// Efficient Script Loading: defer and async
+
+// Regular way of including JS files in HTML:
+// <script src="script.js">
+
+// async and defer will affect the way JS files are fetched/downloaded and executed:
+
+// async
+// <script async src="script.js">
+
+// defer
+// <script defer src="script.js">
