@@ -938,6 +938,8 @@ window.addEventListener('load', function(e) {
 
 // Regular way of including JS files in HTML:
 // <script src="script.js">
+// when we include a script without any attribute in the head, the page loading process will look like this over time:
+// as user loads the page and receives the HTML, the HTML will start being parsed by the browser, meaning building the DOM tree from the HTML elements
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
