@@ -940,6 +940,9 @@ window.addEventListener('load', function(e) {
 // <script src="script.js">
 // when we include a script without any attribute in the head, the page loading process will look like this over time:
 // as user loads the page and receives the HTML, the HTML will start being parsed by the browser, meaning building the DOM tree from the HTML elements
+// at a certain point, the browser will find the script tag, fetch the script and execute it
+// during that time, the HTML parsing will stop, waiting for the script to be fetched and executed
+
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
