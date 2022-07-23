@@ -942,7 +942,7 @@ window.addEventListener('load', function(e) {
 // as user loads the page and receives the HTML, the HTML will start being parsed by the browser, meaning building the DOM tree from the HTML elements
 // at a certain point, the browser will find the script tag, fetch the script and execute it
 // during that time, the HTML parsing will stop, waiting for the script to be fetched and executed
-
+// only after that can the rest of the HTML be parsed
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
