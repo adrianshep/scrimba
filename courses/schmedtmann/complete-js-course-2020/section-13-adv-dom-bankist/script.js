@@ -943,6 +943,7 @@ window.addEventListener('load', function(e) {
 // at a certain point, the browser will find the script tag, fetch the script and execute it
 // during that time, the HTML parsing will stop, waiting for the script to be fetched and executed
 // only after that can the rest of the HTML be parsed
+// at end of HTML parsing, DOM content loaded event will be fired
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
