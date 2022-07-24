@@ -944,6 +944,11 @@ window.addEventListener('load', function(e) {
 // during that time, the HTML parsing will stop, waiting for the script to be fetched and executed
 // only after that can the rest of the HTML be parsed
 // at end of HTML parsing, DOM content loaded event will be fired
+// This is not ideal:
+// browser sitting doing nothing
+// huge negative impact on the page's performance
+// plus, in this case, the script will be executed before the DOM is ready
+// this is the reason why the script tag is never put in the head, but at the end of the body, so that all the HTML will have been parsed when the browser reaches the script tag
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
