@@ -949,6 +949,10 @@ window.addEventListener('load', function(e) {
 // huge negative impact on the page's performance
 // plus, in this case, the script will be executed before the DOM is ready
 // this is the reason why the script tag is never put in the head, but at the end of the body, so that all the HTML will have been parsed when the browser reaches the script tag
+// preferred order of events:
+// 1) parsing HTML
+// 2) fetch script
+// 3) execute script
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
