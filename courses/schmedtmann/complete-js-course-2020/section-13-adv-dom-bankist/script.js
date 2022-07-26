@@ -953,11 +953,15 @@ window.addEventListener('load', function(e) {
 // 1) parsing HTML
 // 2) fetch script
 // 3) execute script
+// Still not perfect: the script could have been downloaded while the HTML was being still being parsed
 
 // async and defer will affect the way JS files are fetched/downloaded and executed:
 
 // async
 // <script async src="script.js">
+// 1) fetch script AND parse HTML
+// 2) execute script while HOWEVER parsing of HTML is paused
+// 3) finish parsing HTML
 
 // defer
 // <script defer src="script.js">
