@@ -962,6 +962,7 @@ window.addEventListener('load', function(e) {
 // 1) fetch script AND parse HTML
 // 2) execute script while HOWEVER parsing of HTML is paused
 // 3) finish parsing HTML
+// however, HTML parsing still stops for the execution of the script, so the script download is asynchronous but the execution is synchronous
 
 // defer
 // <script defer src="script.js">
