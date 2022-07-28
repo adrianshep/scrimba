@@ -963,6 +963,10 @@ window.addEventListener('load', function(e) {
 // 2) execute script while HOWEVER parsing of HTML is paused
 // 3) finish parsing HTML
 // however, HTML parsing still stops for the execution of the script, so the script download is asynchronous but the execution is synchronous
+// still makes page loading time shorter
 
 // defer
 // <script defer src="script.js">
+// script is still loaded asynchronously, but execution of it is deferred until the end of the HTML parsing
+// in practice, loading time is similar to async attribute, but with the key difference that the HTML parsing is never interrupted as the script is executed only at the end
+// many times this is exactly what we want
