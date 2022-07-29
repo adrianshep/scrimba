@@ -970,3 +970,7 @@ window.addEventListener('load', function(e) {
 // script is still loaded asynchronously, but execution of it is deferred until the end of the HTML parsing
 // in practice, loading time is similar to async attribute, but with the key difference that the HTML parsing is never interrupted as the script is executed only at the end
 // many times this is exactly what we want
+
+// neither async nor defer make sense in the body
+// in the body, fetching and executing the script always happens after parsing the HTML anyway
+// async and defer would have no practical effect there
