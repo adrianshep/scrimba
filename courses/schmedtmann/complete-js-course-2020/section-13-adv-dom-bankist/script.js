@@ -979,3 +979,7 @@ window.addEventListener('load', function(e) {
 // async: 
 // usually, the DOMContentLoaded event waits for ALL scripts to execute, EXCEPT async scripts
 // DOMContentLoaded does NOT wait for async script
+// defer:
+// scripts are fetched asynchronously and executed AFTER the HTML is completely parsed
+// defer forces the DOMContentLoaded event to fire only AFTER the whole script has been downloaded and executed
+// the more traditional way the DOMContentLoaded event works
