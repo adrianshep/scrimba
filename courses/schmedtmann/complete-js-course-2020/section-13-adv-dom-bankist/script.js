@@ -974,3 +974,8 @@ window.addEventListener('load', function(e) {
 // neither async nor defer make sense in the body
 // in the body, fetching and executing the script always happens after parsing the HTML anyway
 // async and defer would have no practical effect there
+
+// async in head versus defer in head
+// async: 
+// usually, the DOMContentLoaded event waits for ALL scripts to execute, EXCEPT async scripts
+// DOMContentLoaded does NOT wait for async script
