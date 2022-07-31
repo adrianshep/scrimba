@@ -982,6 +982,8 @@ window.addEventListener('load', function(e) {
 // DOMContentLoaded does NOT wait for async script
 // async scripts are NOT guaranteed to be executed in the exact order in which they are declared in the code:
 // the script that arrives first gets executed first
+// Best Use Case:
+// for 3rd party scripts where order doesn't matter, e.g., Google Analytics
 
 // defer:
 // scripts are fetched asynchronously and executed AFTER the HTML is completely parsed
