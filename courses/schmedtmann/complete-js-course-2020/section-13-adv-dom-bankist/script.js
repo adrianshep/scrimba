@@ -990,3 +990,8 @@ window.addEventListener('load', function(e) {
 // defer forces the DOMContentLoaded event to fire only AFTER the whole script has been downloaded and executed
 // the more traditional way the DOMContentLoaded event works
 // using defer guarantees that the scripts are executed in the order in which they are declared, which is usually what we want to happen
+// Best Use Case:
+// the overall best solution
+// use for your own scripts and when order matters, including any library that your scripts rely upon
+// defer MUST be used in the case of a library
+// the library should be included before your own script
