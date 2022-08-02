@@ -984,6 +984,7 @@ window.addEventListener('load', function(e) {
 // the script that arrives first gets executed first
 // Best Use Case:
 // for 3rd party scripts where order doesn't matter, e.g., Google Analytics
+// for any 3rd party script with which your own script WON'T have to interact 
 
 // defer:
 // scripts are fetched asynchronously and executed AFTER the HTML is completely parsed
