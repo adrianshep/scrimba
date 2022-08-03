@@ -996,3 +996,5 @@ window.addEventListener('load', function(e) {
 // use for your own scripts and when order matters, including any library that your scripts rely upon
 // defer MUST be used in the case of a library
 // the library should be included before your own script
+
+// use different loading strategies for different scripts in your web application or website 
