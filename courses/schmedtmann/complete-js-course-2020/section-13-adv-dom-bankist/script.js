@@ -998,3 +998,9 @@ window.addEventListener('load', function(e) {
 // the library should be included before your own script
 
 // use different loading strategies for different scripts in your web application or website 
+
+// Modern vs Older Browsers
+// only modern browsers support async and defer
+// async and defer get ignored by older browsers
+// if you need to support all browsers, then you need to put the script tag at the end of the body and not in the head
+// because this isn't a JavaScript feature but rather an HTML5 feature
