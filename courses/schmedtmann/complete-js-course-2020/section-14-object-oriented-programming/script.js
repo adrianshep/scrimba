@@ -14,6 +14,7 @@
 // Functional Programming is another popular programming paradigm that we will focus on later
 
 // Classes and Instances (Traditional OOP)
+
 // Classes
 // like a blueprint from which we can create new objects
 // (below is a representation only -- JS does NOT support real classes as represented here)
@@ -31,3 +32,20 @@
     // Sending logic
 // }
 
+// Instances
+// real object we can use in our code created from a Class
+// Class itself is not an object
+// {
+    // user = 'jonas'
+    // password = 'dk23s'
+    // email = 'hello@jonas.io'
+
+    // login(password) {
+        // Login logic
+    // }
+    // 
+    // sendMessage(str) {
+        // Sending logic
+    // }
+// }
+// Instances all have different data in them but share the same functionality, like houses all built from the same blueprint
