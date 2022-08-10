@@ -49,3 +49,11 @@
     // }
 // }
 // Instances all have different data in them but share the same functionality, like houses all built from the same blueprint
+
+// How do we model real world data into classes?
+// 4 Fundamental Principles of Object-Oriented Programming
+// 1. Abstraction
+// 2. Encapsulation
+// 3. Inheritance
+// 4. Polymorphism
+
