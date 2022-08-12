@@ -53,7 +53,40 @@
 // How do we model real world data into classes?
 // 4 Fundamental Principles of Object-Oriented Programming
 // 1. Abstraction
-// Ignoring or hiding, and therefore not getting dragged down by, details that don't matter, allowing us to get an overview perspective of what we're implementing
+// Ignoring or hiding, and therefore not getting dragged down by, details that don't matter to our implementation, allowing us to get an overview perspective of what we're implementing
+// 
+// example: mobile phone
+// real phone
+// Phone {
+    // charge  
+    // volume
+    // voltage
+    // temperature
+    // 
+    // homeBtn() {}
+    // volumeBtn() {}
+    // screen() {}
+    // verifyVolt() {}
+    // verifyTemp() {}
+    // vibrate() {}
+    // soundSpeaker() {}
+    // soundEar() {}
+    // frontCamOn() {}
+    // frontCamOff() {}
+    // rearCamOn() {}
+    // rearCamOff() {}
+// }
+
+// abstracted phone
+// Phone {
+    // charge  
+    // volume
+    // 
+    // homeBtn() {}
+    // volumeBtn() {}
+    // screen() {}
+// }
+
 // 2. Encapsulation
 // 3. Inheritance
 // 4. Polymorphism
