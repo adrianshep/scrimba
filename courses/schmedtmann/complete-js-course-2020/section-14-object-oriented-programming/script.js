@@ -90,6 +90,25 @@
 
 // 2. Encapsulation
 // Keeping properties and methods private inside the class so they are not accessible from outside the class. Some methods can be expose as a public interface (API).
+// 
+// example:
+// User {
+    // user
+    // (private) password
+    // (private) email
+    // 
+    // login(word) {
+    // this.password === word
+    // }
+    // 
+    // comment(text) {
+        // this.checkSPAM(text)
+    // }
+    // (private) checkSPAM(text) {
+        // verify logic
+    // }
+// }
+
 // 3. Inheritance
 // 4. Polymorphism
 
