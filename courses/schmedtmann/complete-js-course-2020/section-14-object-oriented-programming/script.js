@@ -78,6 +78,7 @@
 // }
 
 // abstracted phone
+// this phone is like a black box
 // Phone {
     // charge  
     // volume
@@ -88,6 +89,7 @@
 // }
 
 // 2. Encapsulation
+// Keeping properties and methods private inside the class so they are not accessible from outside the class. Some methods can be expose as a public interface (API).
 // 3. Inheritance
 // 4. Polymorphism
 
