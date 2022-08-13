@@ -90,7 +90,8 @@
 
 // 2. Encapsulation
 // Keeping properties and methods private inside the class so they are not accessible from outside the class. Some methods can be expose as a public interface (API).
-// 
+// Why?
+// By having critical properties encapsulated, external code is prevented from accidentally manipulating internal properties/state
 // example:
 // User {
     // user
