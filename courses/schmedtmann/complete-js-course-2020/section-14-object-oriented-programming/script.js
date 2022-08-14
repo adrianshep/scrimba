@@ -91,7 +91,7 @@
 // 2. Encapsulation
 // Keeping properties and methods private inside the class so they are not accessible from outside the class. Some methods can be expose as a public interface (API).
 // Why?
-// By having critical properties encapsulated, external code is prevented from accidentally manipulating internal properties/state
+// By having critical properties encapsulated, external code is prevented from accidentally manipulating internal properties/state (data) and creating bugs/breaking code.
 // example:
 // User {
     // user
@@ -111,5 +111,44 @@
 // }
 
 // 3. Inheritance
+// example:
+// Parent Class
+// User {
+//  user
+//  password
+//  email
+
+// login(password) {
+    // Login logic
+    // }
+// sendMessage(str) {
+    // Sending logic
+    // }
+// }
+
+// Child Class
+// Admin {
+// (inherited from Parent Class:)
+//  user
+//  password
+//  email
+
+//  permissions
+
+// Inheritance:
+// Child Class extends Parent Class
+
+// (inherited from Parent Class:)
+// login(password) {
+    // Login logic
+    // }
+// sendMessage(str) {
+    // Sending logic
+    // }
+
+// deleteUser(user) {
+    // Deleting logic
+    // }
+// }
 // 4. Polymorphism
 
