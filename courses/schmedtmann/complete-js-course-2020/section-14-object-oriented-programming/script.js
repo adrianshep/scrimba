@@ -111,6 +111,8 @@
 // }
 
 // 3. Inheritance
+// Making all properties and methods of a certain class available to a child class, forming a hierarchical relationship between the classes. This allows us to reuse common logic and to model real-world relationships.
+// Child Class can have its own methods and properties; it may have a mix of those and a some inherited from its parent.
 // example:
 // Parent Class
 // User {
