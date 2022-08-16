@@ -153,4 +153,4 @@
     // }
 // }
 // 4. Polymorphism
-
+// A Child Class can overwrite a method it inherited from a Parent Class. (It's more complex than that, but close enough for our purposes.)
