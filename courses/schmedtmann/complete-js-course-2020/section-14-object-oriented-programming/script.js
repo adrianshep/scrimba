@@ -154,3 +154,54 @@
 // }
 // 4. Polymorphism
 // A Child Class can overwrite a method it inherited from a Parent Class. (It's more complex than that, but close enough for our purposes.)
+
+// example:
+// Parent Class
+// User {
+//  user
+//  password
+//  email
+
+// login(password) {
+    // Login logic
+    // }
+// sendMessage(str) {
+    // Sending logic
+    // }
+// }
+
+// Child Class
+// Admin {
+// (inherited from Parent Class:)
+//  user
+//  password
+//  email
+
+//  permissions
+
+// (inherited from Parent Class:)
+// login(password, key) {
+    // DIFFERENT LOGIN
+    // }
+// deleteUser(user) {
+    // Deleting logic
+    // }
+// }
+
+// Child Class
+// Author {
+// (inherited from Parent Class:)
+//  user
+//  password
+//  email
+
+// posts
+
+// (inherited from Parent Class:)
+// login(password) {
+    // MORE DIFFERENT LOGIN
+    // }
+// writePost() {
+    // Writing logic
+    // }
+// }
