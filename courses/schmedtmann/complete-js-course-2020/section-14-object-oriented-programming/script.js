@@ -182,6 +182,7 @@
 // (inherited from Parent Class:)
 // login(password, key) {
     // DIFFERENT LOGIN
+    // this different login method overwrites the one inherited from the parent class User above
     // }
 // deleteUser(user) {
     // Deleting logic
@@ -200,6 +201,7 @@
 // (inherited from Parent Class:)
 // login(password) {
     // MORE DIFFERENT LOGIN
+    // this more different login method overwrites the one inherited from the parent class User above
     // }
 // writePost() {
     // Writing logic
