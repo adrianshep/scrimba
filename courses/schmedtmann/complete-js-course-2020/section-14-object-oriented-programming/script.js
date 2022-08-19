@@ -207,3 +207,15 @@
     // Writing logic
     // }
 // }
+
+
+// OOP in JavaScript
+
+// Prototypes
+// "Classical OOP"
+// Class
+//  |
+//  V
+// Instance
+// objects (instances) are instantiated from a class, which functions like a blueprint;
+
