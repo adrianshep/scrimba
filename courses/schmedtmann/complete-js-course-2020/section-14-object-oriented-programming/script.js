@@ -232,3 +232,6 @@
 // objects are linked to a prototype object
 // Prototypal inheritance:
 // the prototype contains methods (behavior) that are accessible to all objects linked to that prototype;
+// this inheritance differs from the other kind of inheritance:
+// previous inheritance was about a class inheriting from another class
+// this is an instance inheriting from a class
