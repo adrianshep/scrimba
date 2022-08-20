@@ -219,7 +219,7 @@
 //  V
 // Instance
 // objects (instances) are instantiated from a class, which functions like a blueprint;
-
+// behavior (method) is copied from class to all instances
 
 // OOP in JS: Prototypes
 
@@ -235,3 +235,5 @@
 // this inheritance differs from the other kind of inheritance:
 // previous inheritance was about a class inheriting from another class
 // this is an instance inheriting from a class
+
+// Behavior (method) is delegated to the linked prototype object
