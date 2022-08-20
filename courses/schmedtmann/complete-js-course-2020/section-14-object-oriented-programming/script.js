@@ -212,6 +212,7 @@
 // OOP in JavaScript
 
 // Prototypes
+
 // "Classical OOP"
 // Class
 //  |
@@ -219,3 +220,15 @@
 // Instance
 // objects (instances) are instantiated from a class, which functions like a blueprint;
 
+
+// OOP in JS: Prototypes
+
+// Prototype
+// contains methods
+//      ^
+//      |
+// Object
+// can access methods
+// objects are linked to a prototype object
+// Prototypal inheritance:
+// the prototype contains methods (behavior) that are accessible to all objects linked to that prototype;
