@@ -237,3 +237,13 @@
 // this is an instance inheriting from a class
 
 // Behavior (method) is delegated to the linked prototype object
+
+// Example: Array
+// const num = [1, 2, 3];
+// num.map(v => v * 2);
+// 
+// MDN web docs
+// Array.prototype.map()
+// is the prototype of all array objects we create in JavaScript
+// therefore, all JS arrays have access to the map method
+// we can say the array delegated the behavior of mapping to its prototype
