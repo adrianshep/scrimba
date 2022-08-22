@@ -247,3 +247,9 @@
 // is the prototype of all array objects we create in JavaScript
 // therefore, all JS arrays have access to the map method
 // we can say the array delegated the behavior of mapping to its prototype
+
+// 3 Ways of Implementing Prototypal Inheritance in JavaScript
+// 1. Constructor functions
+// -- Technique to create objects from a function;
+// -- This is how built-in objects like Arrays, Maps or Sets are implemented
+// -- How OOP has been done since the beginning.
