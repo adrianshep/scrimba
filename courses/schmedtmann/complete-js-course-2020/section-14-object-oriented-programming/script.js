@@ -248,8 +248,15 @@
 // therefore, all JS arrays have access to the map method
 // we can say the array delegated the behavior of mapping to its prototype
 
-// 3 Ways of Implementing Prototypal Inheritance in JavaScript
+// 3 Ways of Implementing Prototypal Inheritance in JavaScript:
+
 // 1. Constructor functions
 // -- Technique to create objects from a function;
 // -- This is how built-in objects like Arrays, Maps or Sets are implemented
 // -- How OOP has been done since the beginning.
+
+// 2. ES6 Classes
+// -- ES6 release introduced classes into JS
+// -- Modern alternative to constructor function syntax
+// -- "Syntactic sugar": behind the scenes, ES6 classes work exactly like constructor functions
+// -- ES6 classes do NOT behave like classes in "classical OOP" (last lecture)
