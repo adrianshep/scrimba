@@ -253,10 +253,13 @@
 // 1. Constructor functions
 // -- Technique to create objects from a function;
 // -- This is how built-in objects like Arrays, Maps or Sets are implemented
-// -- How OOP has been done since the beginning.
+// -- How OOP has been done since the beginning
 
 // 2. ES6 Classes
 // -- ES6 release introduced classes into JS
 // -- Modern alternative to constructor function syntax
 // -- "Syntactic sugar": behind the scenes, ES6 classes work exactly like constructor functions
 // -- ES6 classes do NOT behave like classes in "classical OOP" (last lecture)
+
+// 3. Object.create()
+// -- The easiest and most straightforward way of linking an object to a prototype object
