@@ -263,3 +263,9 @@
 
 // 3. Object.create()
 // -- The easiest and most straightforward way of linking an object to a prototype object
+
+// With prototypal inheritance the 4 pillars of OOP are still valid!
+// 1. Abstraction
+// 2. Encapsulation
+// 3. Inheritance
+// 4. Polymorphism
