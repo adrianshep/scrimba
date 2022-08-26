@@ -269,3 +269,19 @@
 // 2. Encapsulation
 // 3. Inheritance
 // 4. Polymorphism
+
+
+// Constructor Functions and the New Operator
+
+// constructor function for a person
+
+// OOP convention is to capitalize first letter of constructor functions
+// function expression is used here
+// function declaration will also work
+// arrow function will NOT work as a function constructor, as it doesn't have its own "this" keyword which we need
+
+const Person = function(firstName, birthYear) {
+
+};
+// constructor function is called using the "new" keyword
+new Person('Jonas', 1991);
