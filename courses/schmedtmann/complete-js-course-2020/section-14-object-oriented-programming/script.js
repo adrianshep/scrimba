@@ -285,3 +285,6 @@ const Person = function(firstName, birthYear) {
 };
 // constructor function is called using the "new" keyword
 new Person('Jonas', 1991);
+// when new Person is called, four steps are executed behind the scenes:
+// 1. New {} (empty object) is created
+// 2. 
