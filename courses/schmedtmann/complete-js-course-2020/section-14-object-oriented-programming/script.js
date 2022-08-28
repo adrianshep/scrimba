@@ -289,3 +289,4 @@ new Person('Jonas', 1991);
 // 1. New {} (empty object) is created
 // 2. function is called and in it the this keyword will be set to this newly created object
 // 3. newly created {} object is linked to a prototype
+// 4. newly created {} object is automatically returned from the constructor function
