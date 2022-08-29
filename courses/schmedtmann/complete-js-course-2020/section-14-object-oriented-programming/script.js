@@ -281,10 +281,17 @@
 // arrow function will NOT work as a function constructor, as it doesn't have its own "this" keyword which we need
 
 const Person = function(firstName, birthYear) {
-
+    this.firstName = firstName;
+    this.birthYear = birthYear;
 };
+
+const jonas = new Person('Jonas', 1991);
+console.log(jonas);
+// returns 
+// Person {firstName: "Jonas", birthYear: 1991}
+
 // constructor function is called using the "new" operator
-new Person('Jonas', 1991);
+// new Person('Jonas', 1991);
 // when new Person is called, four steps are executed behind the scenes:
 // 1. New {} (empty object) is created
 // 2. function is called and in it the this keyword will be set to this newly created object
