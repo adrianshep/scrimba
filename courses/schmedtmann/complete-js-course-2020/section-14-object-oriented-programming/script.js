@@ -297,3 +297,7 @@ console.log(jonas);
 // 2. function is called and in it the this keyword will be set to this newly created object
 // 3. newly created {} object is linked to a prototype
 // 4. newly created {} object is automatically returned from the constructor function
+
+// can now use this constructor function to create as many different objects as we want
+const matilda = new Person('Matilda', 2017);
+const jack = new Person('Jack', 1975);
