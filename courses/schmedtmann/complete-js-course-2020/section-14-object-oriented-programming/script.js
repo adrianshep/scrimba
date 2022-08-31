@@ -301,3 +301,12 @@ console.log(jonas);
 // can now use this constructor function to create as many different objects as we want
 const matilda = new Person('Matilda', 2017);
 const jack = new Person('Jack', 1975);
+
+// operator to test for instanceof
+console.log(jonas instanceof Person);
+// because jonas is an instance of Person, returns true
+
+const jay = 'Jay';
+
+console.log(jay instanceof Person);
+// because jay is not an instance of Person, returns false
