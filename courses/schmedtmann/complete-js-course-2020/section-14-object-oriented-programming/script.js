@@ -281,6 +281,7 @@
 // arrow function will NOT work as a function constructor, as it doesn't have its own "this" keyword which we need
 
 const Person = function(firstName, birthYear) {
+    // Instance properties, available for all the instances created by this constructor function:
     this.firstName = firstName;
     this.birthYear = birthYear;
 };
