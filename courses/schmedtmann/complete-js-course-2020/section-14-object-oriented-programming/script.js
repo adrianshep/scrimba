@@ -284,6 +284,15 @@ const Person = function(firstName, birthYear) {
     // Instance properties, available for all the instances created by this constructor function:
     this.firstName = firstName;
     this.birthYear = birthYear;
+
+    // NEVER create a method inside of a constructor function
+    // imagine adding hundreds, thousands, tens of thousands of Person objects, creating that number of copies of this function -- terrible for the performance of this code:
+
+    // this.calcAge = function() {
+        // console.log(2037 - this.birthYear);
+    // };
+    
+    // instead, we will use prototypes and prototype inheritance to add methods to constructor functions
 };
 
 const jonas = new Person('Jonas', 1991);
