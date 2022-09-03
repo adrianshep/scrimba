@@ -325,7 +325,14 @@ console.log(jay instanceof Person);
 // Prototypes
 // every function in JS has a property called prototype, including constructor functions
 // every object created by a constructor function will have access to all the methods and properties we define on that constructor's prototype property
-// example:
+
+console.log(Person.prototype);
+// logs calcAge method already in there:
+// {constructor: f}
+// calcAge: f ()
+// constructor: f (firstName, birthYear)
+// __proto__: Object
+
 Person.prototype.calcAge = function() {
     console.log(2037 - this.birthYear);
 };
