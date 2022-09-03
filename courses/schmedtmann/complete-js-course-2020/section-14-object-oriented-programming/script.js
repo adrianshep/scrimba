@@ -291,7 +291,7 @@ const Person = function(firstName, birthYear) {
     // this.calcAge = function() {
         // console.log(2037 - this.birthYear);
     // };
-    
+
     // instead, we will use prototypes and prototype inheritance to add methods to constructor functions
 };
 
@@ -320,3 +320,9 @@ const jay = 'Jay';
 
 console.log(jay instanceof Person);
 // because jay is not an instance of Person, returns false
+
+
+// Prototypes
+// every function in JS has a property called prototype, including constructor functions
+// every object created by a constructor function will have access to all the methods and properties we define on the constructor's prototype property
+Person.prototype
