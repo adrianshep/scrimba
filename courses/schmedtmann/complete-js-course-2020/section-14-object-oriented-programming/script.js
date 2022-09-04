@@ -327,7 +327,7 @@ console.log(jay instanceof Person);
 // every object created by a constructor function will have access to all the methods and properties we define on that constructor's prototype property
 
 console.log(Person.prototype);
-// logs calcAge method already in there:
+// log shows calcAge method already in there:
 // {constructor: f}
 // calcAge: f ()
 // constructor: f (firstName, birthYear)
@@ -336,3 +336,11 @@ console.log(Person.prototype);
 Person.prototype.calcAge = function() {
     console.log(2037 - this.birthYear);
 };
+
+jonas.calcAge();
+// returns 46, which is correct
+// we can use the calcAge method even though it doesn't appear on the jonas object itself:
+// the jonas object in the console returns:
+// birthYear: 1991;
+// firstName: "Jonas"
+// but no calcAge method, to which we have access through prototypal inheritance from the Person constructor function
