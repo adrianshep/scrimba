@@ -344,3 +344,18 @@ jonas.calcAge();
 // birthYear: 1991;
 // firstName: "Jonas"
 // but no calcAge method, to which we have access through prototypal inheritance from the Person constructor function
+// works for all objects constructed from Person function:
+matilda.calcAge();
+jack.calcAge();
+// only one copy of the Person constructor function exists but it can be used over and over and over
+// "this" keyword is set to the object that is calling the method, e.g., jonas, matilda, jack
+
+// __proto__
+console.log(jonas.__proto__);
+// returns the prototype of jonas:
+// calcAge: f ()
+// constructor: f (firstName, birthYear)
+// __proto__: Object
+// the prototype of the jonas function is essentially the prototype property of the Person constructor function
+console.log(jonas.__proto__ === Person.prototype);
+// return true
