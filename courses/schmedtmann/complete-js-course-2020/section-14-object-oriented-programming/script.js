@@ -356,6 +356,13 @@ console.log(jonas.__proto__);
 // calcAge: f ()
 // constructor: f (firstName, birthYear)
 // __proto__: Object
-// the prototype of the jonas function is essentially the prototype property of the Person constructor function
+// the prototype of the jonas function is essentially the prototype property of the Person constructor function:
 console.log(jonas.__proto__ === Person.prototype);
-// return true
+// returns true
+
+// isPrototypeOf()
+// use on any object to test if it is a prototype of another object
+console.log(Person.prototype.isPrototypeOf(jonas));
+// returns true
+console.log(Person.prototype.isPrototypeOf(Person));
+// returns false
