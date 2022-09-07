@@ -366,3 +366,22 @@ console.log(Person.prototype.isPrototypeOf(jonas));
 // returns true
 console.log(Person.prototype.isPrototypeOf(Person));
 // returns false
+
+Person.prototype.species = 'Homo sapiens';
+console.log(jonas, matilda);
+// now return:
+// Person
+//  ...
+//  ...
+// __proto__:
+//  calcAge: f ()
+//  species: "Homo sapiens"
+//  ...
+console.log(jonas.species, matilda.species);
+// now return:
+// Homo sapiens Homo sapiens
+
+console.log(jonas.hasOwnProperty('firstName'));
+// returns true, since jonas object has a firstName property
+console.log(jonas.hasOwnProperty('species'));
+// returns false, since species property is not really inside of the jonas object; jonas only has access to it because of its prototype inherited from Person constructor
