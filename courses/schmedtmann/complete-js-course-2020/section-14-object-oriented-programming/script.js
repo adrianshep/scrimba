@@ -385,3 +385,14 @@ console.log(jonas.hasOwnProperty('firstName'));
 // returns true, since jonas object has a firstName property
 console.log(jonas.hasOwnProperty('species'));
 // returns false, since species property is not really inside of the jonas object; jonas only has access to it because of its prototype inherited from Person constructor
+
+
+// Prototypal Inheritance and the Prototype Chain
+const jonas = new Person('Jonas', 1991);
+jonas.calcAge();
+// when above is called, JS goes looking for the calcAge()
+// JS cannot find it directly in the jonas object
+// if a property or method cannot be found in an object, JS will go look for it in its prototype, in this case, Person.prototype
+// finding it there, JS can run the jonas.calcAge() call and return the correct result
+// this is prototypal inheritance or delegation:
+// the jonas object delegated the calcAge() function to its prototype
