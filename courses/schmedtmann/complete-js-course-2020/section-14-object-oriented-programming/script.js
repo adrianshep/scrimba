@@ -396,3 +396,30 @@ jonas.calcAge();
 // finding it there, JS can run the jonas.calcAge() call and return the correct result
 // this is prototypal inheritance or delegation:
 // the jonas object delegated the calcAge() function to its prototype
+
+// The Prototype Chain
+
+// Prototype
+// [Object.prototype]
+
+//    ^
+//    | .__proto__
+
+// Protytype              Constructor function
+// [Person.prototype] <-- [Person()]
+// __proto__: Object.prototype
+
+//    ^
+//    | .__proto__
+
+// Object
+// [jonas]
+// __proto__:
+// Person.prototype
+
+// since every object in JS has a prototype, Person.prototype has one, too: Object.prototype
+// Person.prototype is a simple object 
+// which means it's been built by the built-in object Constructor function 
+// this is used when we write an object literal:
+// {...} === new Object(...)
+// curly braces {} are like a short cut to writing "new Object"
