@@ -426,3 +426,5 @@ jonas.calcAge();
 
 // prototype chain defined:
 // series of links between objects linked through prototypes (similar to the scope chain)
+
+// Object.prototype is usually the top of the prototype chain which means that its prototype is null
