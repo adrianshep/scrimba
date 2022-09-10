@@ -399,8 +399,12 @@ jonas.calcAge();
 
 // The Prototype Chain
 
-// Prototype
-// [Object.prototype]
+//  null                 
+//    ^             
+//    | 
+// Prototype              Constructor function
+// [Object.prototype] <-- [Object()]
+// __proto__: null
 
 //    ^
 //    | .__proto__
@@ -425,6 +429,8 @@ jonas.calcAge();
 // curly braces {} are like a short cut to writing "new Object"
 
 // prototype chain defined:
-// series of links between objects linked through prototypes (similar to the scope chain)
-
+// series of links between objects linked through prototypes 
+// similar to the scope chain:
+// whenever JS can't find a certain variable, it looks up into the next scope in the scope chain for it
+// likewise, whenever JS can't find a property or method, it looks up into the next prototype in the prototype chain for it
 // Object.prototype is usually the top of the prototype chain which means that its prototype is null
