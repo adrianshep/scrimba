@@ -423,3 +423,6 @@ jonas.calcAge();
 // this is used when we write an object literal:
 // {...} === new Object(...)
 // curly braces {} are like a short cut to writing "new Object"
+
+// prototype chain defined:
+// series of links between objects linked through prototypes (similar to the scope chain)
