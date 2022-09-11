@@ -434,3 +434,10 @@ jonas.calcAge();
 // whenever JS can't find a certain variable, it looks up into the next scope in the scope chain for it
 // likewise, whenever JS can't find a property or method, it looks up into the next prototype in the prototype chain for it
 // Object.prototype is usually the top of the prototype chain which means that its prototype is null
+
+// example:
+jonas.hasOwnProperty('name');
+// returns true
+// JS starts by looking for .hasOwnProperty() method in the jonas object
+// not finding it there, JS looks for it the next step up the prototype chain in Person.prototype
+// not finding it there either, JS looks for it one more step up in the Object.prototype, where it's finally located
