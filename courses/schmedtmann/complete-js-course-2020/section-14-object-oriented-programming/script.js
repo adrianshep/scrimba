@@ -441,3 +441,18 @@ jonas.hasOwnProperty('name');
 // JS starts by looking for .hasOwnProperty() method in the jonas object
 // not finding it there, JS looks for it the next step up the prototype chain in Person.prototype
 // not finding it there either, JS looks for it one more step up in the Object.prototype, where it's finally located
+
+
+// Prototypal Inheritance on Built-in Objects
+
+console.log(jonas.__proto__);
+console.log(jonas.__proto__.__proto__);
+// returns prototype property of Object
+// and, among others:
+// constructor: f Object()
+// hasOwnProperty: f hasOwnProperty()
+// isPrototypeOf: f isPrototypeOf()
+
+// this is what allows
+//      jonas.hasOwnProperty('firstName');
+// to work
