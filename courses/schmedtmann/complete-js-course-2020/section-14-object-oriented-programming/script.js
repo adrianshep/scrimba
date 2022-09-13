@@ -449,10 +449,13 @@ console.log(jonas.__proto__);
 console.log(jonas.__proto__.__proto__);
 // returns prototype property of Object
 // and, among others:
-// constructor: f Object()
-// hasOwnProperty: f hasOwnProperty()
-// isPrototypeOf: f isPrototypeOf()
-
+//      constructor: f Object()
+//      hasOwnProperty: f hasOwnProperty()
+//      isPrototypeOf: f isPrototypeOf()
 // this is what allows
 //      jonas.hasOwnProperty('firstName');
 // to work
+
+console.log(jonas.__proto__.__proto__.__proto);
+// returns null
+// Object.prototype, top of the prototype chain
