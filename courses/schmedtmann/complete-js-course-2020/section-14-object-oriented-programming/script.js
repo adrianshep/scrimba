@@ -459,3 +459,11 @@ console.log(jonas.__proto__.__proto__);
 console.log(jonas.__proto__.__proto__.__proto);
 // returns null
 // Object.prototype, top of the prototype chain
+
+console.log(Person.prototype.constructor);
+// returns the function itself:
+// f (firstName, birthYear) {}
+
+// if we want to inspect that function, we hae to use:
+console.dir(Person.prototype.constructor);
+// constructor property now points back at Person
