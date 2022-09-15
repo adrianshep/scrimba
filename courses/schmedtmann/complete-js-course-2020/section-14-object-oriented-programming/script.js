@@ -467,3 +467,14 @@ console.log(Person.prototype.constructor);
 // if we want to inspect that function, we hae to use:
 console.dir(Person.prototype.constructor);
 // constructor property now points back at Person
+
+// Prototype of Arrays
+
+const arr = [3, 6, 4, 5, 6, 9, 3];
+// sames as new Array === []
+// created by array constructor
+console.log(arr.__proto__);
+// returns prototype of array and all methods tied to it
+// each array will inherit these from its prototype
+console.log(arr.__proto__ === Array.prototype);
+// returns true
