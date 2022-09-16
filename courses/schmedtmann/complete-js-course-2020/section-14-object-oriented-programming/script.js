@@ -478,3 +478,11 @@ console.log(arr.__proto__);
 // each array will inherit these from its prototype
 console.log(arr.__proto__ === Array.prototype);
 // returns true
+// can do the same in the console:
+// entering arr
+//  returns its prototype property
+//  clicking that returns all the array methods
+//  if you look up the filter method, its name is:
+//      Array.prototype.filter()
+//  because the method lives in the prototype property of the array constructor
+// prototypal inheritance is really a mechanism for reusing code
