@@ -470,7 +470,7 @@ console.dir(Person.prototype.constructor);
 
 // Prototype of Arrays
 
-const arr = [3, 6, 4, 5, 6, 9, 3];
+const arr = [3, 6, 6, 5, 6, 9, 9];
 // sames as new Array === []
 // created by array constructor
 console.log(arr.__proto__);
@@ -486,3 +486,11 @@ console.log(arr.__proto__ === Array.prototype);
 //      Array.prototype.filter()
 //  because the method lives in the prototype property of the array constructor
 // prototypal inheritance is really a mechanism for reusing code
+
+// Adding a new method to the prototype property of the Array constructor
+Array.prototype.unique = function() {
+    return [...new Set(this)];
+};
+
+console.log(arr.unique());
+// returns [3, 6, 5, 9]
