@@ -488,9 +488,14 @@ console.log(arr.__proto__ === Array.prototype);
 // prototypal inheritance is really a mechanism for reusing code
 
 // Adding a new method to the prototype property of the Array constructor
+// now all arrays will inherit this method
 Array.prototype.unique = function() {
     return [...new Set(this)];
 };
 
 console.log(arr.unique());
 // returns [3, 6, 5, 9]
+
+// however, extending the prototype of a built-in object is generally not a good idea
+// next version of JS might have a method with the same name but working in a different way which will probably break your code
+// on a team, members can name same method differently creating bugs
