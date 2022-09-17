@@ -499,3 +499,14 @@ console.log(arr.unique());
 // however, extending the prototype of a built-in object is generally not a good idea
 // next version of JS might have a method with the same name but working in a different way which will probably break your code
 // on a team, members can name same method differently creating bugs
+
+// some more built-in objects
+const h1 = document.querySelector('h1');
+//console.dir() returns  
+// __proto__: HTMLHeadingElement
+//   __proto__: HTMLElement (sames as DOM)
+//     __proto__: Element
+//       __proto__: Node
+//         __proto__: EventTarget
+//           __proto__: Object
+
