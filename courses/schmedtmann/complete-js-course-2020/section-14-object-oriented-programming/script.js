@@ -510,3 +510,9 @@ const h1 = document.querySelector('h1');
 //         __proto__: EventTarget
 //           __proto__: Object
 
+// console.dir(a random function)
+console.dir(x => x + 1);
+// returns anonymous function
+// __proto__: will contain methods we have used previously on functions
+// this is the reason why we can call methods on functions -- they are objects and objects have prototypes
+// (and, in this case, a function prototype) 
