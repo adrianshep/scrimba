@@ -526,8 +526,13 @@ console.dir(x => x + 1);
 const Car = function(make, speedKmh) {
     this.make = make;
     this.speedKmh = speedKmh;
-}
+};
 
+// solution:
+// const Car = function(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+// };
 
 /*
 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
