@@ -536,6 +536,13 @@ const Car = function(make, speedKmh) {
 
 /*
 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
+*/
+
+Car.prototype.accelerate = function() {
+    console.log(10 + this.speedKmh);
+};
+
+/*
 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
 4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
 
