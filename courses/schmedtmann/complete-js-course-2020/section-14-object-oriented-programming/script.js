@@ -567,8 +567,16 @@ Car.prototype.brake = function() {
 4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
 
 DATA CAR 1: 'BMW' going at 120 km/h
+*/
 
+const bmw = new Car('BMW', 120);
+
+/*
 DATA CAR 2: 'Mercedes' going at 95 km/h
+*/
 
+const mercedes = new Car('Mercedes', 95);
+
+/*
 GOOD LUCK 😀
 */
