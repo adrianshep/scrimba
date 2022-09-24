@@ -550,6 +550,14 @@ Car.prototype.accelerate = function() {
 
 /*
 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
+*/
+
+Car.prototype.brake = function() {
+    this.speed -= 5;
+    console.log(`${this.make} is going at ${this.speedKmh} km/h`);
+};
+
+/*
 4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
 
 DATA CAR 1: 'BMW' going at 120 km/h
