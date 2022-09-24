@@ -557,6 +557,12 @@ Car.prototype.brake = function() {
     console.log(`${this.make} is going at ${this.speedKmh} km/h`);
 };
 
+// solution:
+// Car.prototype.brake = function() {
+    // this.speed -= 5;
+    // console.log(`${this.make} is going at ${this.speed} km/h`);
+// };
+
 /*
 4. Create 2 car objects and experiment with calling 'accelerate' and 'brake' multiple times on each of them.
 
