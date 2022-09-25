@@ -572,10 +572,22 @@ DATA CAR 1: 'BMW' going at 120 km/h
 const bmw = new Car('BMW', 120);
 
 /*
+
+solution:
+const bmw = new Car('BMW', 120);
+
+/*
 DATA CAR 2: 'Mercedes' going at 95 km/h
 */
 
 const mercedes = new Car('Mercedes', 95);
+
+/*
+
+solution:
+const mercedes = new Car('Mercedes', 95);
+
+/*
 
 /*
 GOOD LUCK 😀
