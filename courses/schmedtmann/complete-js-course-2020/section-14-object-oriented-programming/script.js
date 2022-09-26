@@ -587,7 +587,17 @@ const mercedes = new Car('Mercedes', 95);
 solution:
 const mercedes = new Car('Mercedes', 95);
 
-/*
+*/
+
+bmw.accelerate();
+bmw.accelerate();
+bmw.brake();
+bmw.accelerate();
+
+mercedes.accelerate();
+mercedes.accelerate();
+mercedes.brake();
+mercedes.accelerate();
 
 /*
 GOOD LUCK 😀
