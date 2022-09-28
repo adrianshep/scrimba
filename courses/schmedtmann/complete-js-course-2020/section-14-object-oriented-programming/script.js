@@ -615,3 +615,15 @@ mercedes.accelerate();
 /*
 GOOD LUCK 😀
 */
+
+
+// ES6 Classes
+
+// behind the scenes, classes are still functions:
+// class expression
+const PersonCl = class {}
+
+// class declaration
+class PersonCl {
+
+};
