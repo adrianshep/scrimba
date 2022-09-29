@@ -621,9 +621,18 @@ GOOD LUCK 😀
 
 // behind the scenes, classes are still functions:
 // class expression
-const PersonCl = class {}
+// const PersonCl = class {}
 
-// class declaration
+// class declaration 
+// (Jonas prefers)
 class PersonCl {
-
+    constructor(firstName, birthYear) {
+    // first thing we need to do is add a constructor method
+    // works in a pretty similar way to a constructor function
+    // constructor is a method of this class
+    // needs to be called "constructor"
+    };
 };
+
+// use "new" operator
+const jessica = new PersonCl('Jessica', 1996);
