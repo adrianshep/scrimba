@@ -631,8 +631,12 @@ class PersonCl {
     // works in a pretty similar way to a constructor function
     // constructor is a method of this class
     // needs to be called "constructor"
+    // just as before, the "this" kw will be set to the newly created empty object:
+        this.firstName = firstName;
+        this.birthYear = birthYear;
     };
 };
 
 // use "new" operator
 const jessica = new PersonCl('Jessica', 1996);
+
