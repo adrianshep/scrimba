@@ -639,4 +639,6 @@ class PersonCl {
 
 // use "new" operator
 const jessica = new PersonCl('Jessica', 1996);
-
+console.log(jessica);
+// returns just as before:
+// PersonCl {firstName: "Jessica", birthYear: 1996}
