@@ -635,6 +635,11 @@ class PersonCl {
         this.firstName = firstName;
         this.birthYear = birthYear;
     };
+
+    // methods are simply written in here:
+    calcAge() {
+        console.log(2037 - this.birthYear);
+    }
 };
 
 // use "new" operator
