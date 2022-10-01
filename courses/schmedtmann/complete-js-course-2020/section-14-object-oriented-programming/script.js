@@ -640,6 +640,8 @@ class PersonCl {
     calcAge() {
         console.log(2037 - this.birthYear);
     }
+    // methods written in the class outside of the constructor are on the prototype of the object and not on the object itself
+    // prototypal inheritance, just as before
 };
 
 // use "new" operator
