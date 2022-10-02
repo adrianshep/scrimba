@@ -649,3 +649,9 @@ const jessica = new PersonCl('Jessica', 1996);
 console.log(jessica);
 // returns just as before:
 // PersonCl {firstName: "Jessica", birthYear: 1996}
+//  birthYear: 1996
+//  firstName: "Jessica"
+//  __proto__:
+//  calcAge: f calcAge()
+//  constructor: class PersonCl
+//  __proto__: Object
