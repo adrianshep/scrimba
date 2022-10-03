@@ -656,4 +656,9 @@ console.log(jessica);
 //  constructor: class PersonCl
 //  __proto__: Object
 
-// test
+// another proof:
+console.log(jessica.__proto__ === PersonCl.prototype);
+// returns true
+// PersonCl acts just like any other function constructor
+// with class declaration we don't have to manually mess with the prototype property
+// much neater syntactically
