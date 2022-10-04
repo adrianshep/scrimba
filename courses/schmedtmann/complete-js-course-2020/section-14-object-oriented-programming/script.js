@@ -662,3 +662,10 @@ console.log(jessica.__proto__ === PersonCl.prototype);
 // PersonCl acts just like any other function constructor
 // with class declaration we don't have to manually mess with the prototype property
 // much neater syntactically
+
+// adding a method manually via the prototype
+PersonCl.prototype.greet = function() {
+    console.log(`Hey, ${this.firstName}`);
+};
+jessica.greet();
+// returns Hey, Jessica
