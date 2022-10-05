@@ -642,6 +642,12 @@ class PersonCl {
     }
     // methods written in the class outside of the constructor are on the prototype of the object and not on the object itself
     // prototypal inheritance, just as before
+
+    // can do the same with greet method up here as with the PersonCl.prototype below:
+    greet() {
+        console.log(`Hey, ${this.firstName}`);
+    }
+    // also returns Hey, Jessica
 };
 
 // use "new" operator
@@ -664,8 +670,8 @@ console.log(jessica.__proto__ === PersonCl.prototype);
 // much neater syntactically
 
 // adding a method manually via the prototype
-PersonCl.prototype.greet = function() {
-    console.log(`Hey, ${this.firstName}`);
+// PersonCl.prototype.greet = function() {
+    // console.log(`Hey, ${this.firstName}`);
 };
 jessica.greet();
 // returns Hey, Jessica
