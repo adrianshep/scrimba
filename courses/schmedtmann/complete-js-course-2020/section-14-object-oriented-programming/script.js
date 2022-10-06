@@ -675,3 +675,10 @@ console.log(jessica.__proto__ === PersonCl.prototype);
 };
 jessica.greet();
 // returns Hey, Jessica
+
+// important to keep in mind about classes
+// 1. Classes are NOT hoisted
+//   - even if they are class declarations they are not hoisted, whereas function declarations are hoisted
+// 2. Classes are first-class citizens:
+//  - can be passed into functions and can be returned from functions (because classes are really just a special type of function)
+// 3. Classes are executed in strict mode (even if strict not activated for the script)
