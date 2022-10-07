@@ -682,3 +682,16 @@ jessica.greet();
 // 2. Classes are first-class citizens:
 //  - can be passed into functions and can be returned from functions (because classes are really just a special type of function)
 // 3. Classes are executed in strict mode (even if strict not activated for the script)
+
+// better to use constructor functions or classes?
+// understand about constructor functions:
+// they are not old or deprecated syntax
+// so it's 100% fine to keep using them
+// more a question of personal preference
+// some say that classes should never be used by anyone as they hide the true nature of JS
+// Jonas: okay to use classes, so long as you understand the prototype and prototypal inheritance
+// you want to be comfortable writing your code and for Jonas that means understanding what it is your code does
+// Jonas likes that classes organize code into blocks tied together 
+// with constructor functions, Jonas feels the code is messier and, as it grows, can get out of hand
+
+
