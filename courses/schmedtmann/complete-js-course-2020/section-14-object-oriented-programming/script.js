@@ -706,8 +706,19 @@ const account = {
     // getter
     get latest() {
         return this.movements.slice(-1).pop();
+    },
+
+    // setter
+    // any setter method has to have exactly one parameter:
+    set latest(mov) {
+        this.movements.push(mov);
     }
 };
 
 console.log(account.latest);
 // returns 300
+
+// now like a property and not a method:
+account.latest = 50;
+console.log(account.movements);
+// returns [200, 350, 120, 300, 50]
