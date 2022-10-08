@@ -695,3 +695,7 @@ jessica.greet();
 // with constructor functions, Jonas feels the code is messier and, as it grows, can get out of hand
 
 
+// Setters and Getters
+// assessor properties
+// set and get a value
+
