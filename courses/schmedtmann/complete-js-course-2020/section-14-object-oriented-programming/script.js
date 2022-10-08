@@ -699,3 +699,15 @@ jessica.greet();
 // assessor properties
 // set and get a value
 
+const account = {
+    owner: 'jonas',
+    movements: [200, 350, 120, 300],
+
+    // getter
+    get latest() {
+        return this.movements.slice(-1).pop();
+    }
+};
+
+console.log(account.latest);
+// returns 300
