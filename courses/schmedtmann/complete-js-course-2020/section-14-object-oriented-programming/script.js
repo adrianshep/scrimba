@@ -648,6 +648,11 @@ class PersonCl {
         console.log(`Hey, ${this.firstName}`);
     }
     // also returns Hey, Jessica
+
+    // add getter for the age property:
+    get age() {
+        return 2037 - this.birthYear;
+    }
 };
 
 // use "new" operator
@@ -672,7 +677,13 @@ console.log(jessica.__proto__ === PersonCl.prototype);
 // adding a method manually via the prototype
 // PersonCl.prototype.greet = function() {
     // console.log(`Hey, ${this.firstName}`);
-};
+// };
+
+jessica.calcAge();
+console.log(jessica.age);
+// both return 41
+// getter is like any other method we set on the prototype
+
 jessica.greet();
 // returns Hey, Jessica
 
