@@ -733,3 +733,7 @@ console.log(account.latest);
 account.latest = 50;
 console.log(account.movements);
 // returns [200, 350, 120, 300, 50]
+// if we check out jessica in the console, we see:
+// in the prototype, age (...) appears (three dots indicate it's only calculated after being clicked)
+// once clicked, age is calculated
+// age then appears looking more as a property than a method
