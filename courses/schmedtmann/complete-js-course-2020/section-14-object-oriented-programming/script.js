@@ -737,3 +737,31 @@ console.log(account.movements);
 // in the prototype, age (...) appears (three dots indicate it's only calculated after being clicked)
 // once clicked, age is calculated
 // age then appears looking more as a property than a method
+
+// setters and getter can be useful for data validation
+class PersonCl {
+    constructor(fullName, birthYear) {
+        this.fullName = fullName;
+        this.birthYear = birthYear;
+    };
+
+    calcAge() {
+        console.log(2037 - this.birthYear);
+    }
+
+    greet() {
+        console.log(`Hey, ${this.firstName}`);
+    }
+
+    get age() {
+        return 2037 - this.birthYear;
+    }
+
+    set fullName(name) {
+        console.log(name);
+        if(name.includes(' ')) this.fullName = name;
+        else alert(`${name} is not a full name!`)
+    }
+};
+
+const jessica = new PersonCl('Jessica Davis', 1996);
