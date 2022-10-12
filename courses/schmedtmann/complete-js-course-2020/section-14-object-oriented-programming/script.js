@@ -759,9 +759,14 @@ class PersonCl {
 
     set fullName(name) {
         console.log(name);
-        if(name.includes(' ')) this.fullName = name;
+        // to avoid conflict in setting the exact same property name as the constructor function, an underscore should be added following this.
+        // this.fullName should be changed to this._fullName
+        if(name.includes(' ')) this._fullName = name;
         else alert(`${name} is not a full name!`)
     }
 };
 
 const jessica = new PersonCl('Jessica Davis', 1996);
+
+// Uncaught RangeError: Maximum call stack size exceeded
+// conflict between the setter function and the constructor function trying to set the exact same property name
