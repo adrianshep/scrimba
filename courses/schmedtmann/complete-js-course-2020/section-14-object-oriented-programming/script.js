@@ -764,6 +764,15 @@ class PersonCl {
         if(name.includes(' ')) this._fullName = name;
         else alert(`${name} is not a full name!`)
     }
+
+    // now need to create a getter for the new _fullName property:
+    get fullName() {
+        return this._fullName;
+    }
+    // jessica.fullName in console returns "Jessica Davis"
+    // jessica returns:
+    // _fullName: "Jessica Davis"
+    // and fullName: (...) which also computes "Jessica Davis"
 };
 
 const jessica = new PersonCl('Jessica Davis', 1996);
