@@ -757,6 +757,7 @@ class PersonCl {
         return 2037 - this.birthYear;
     }
 
+    // Set a property that already exists
     set fullName(name) {
         console.log(name);
         // to avoid conflict in setting the exact same property name as the constructor function, an underscore should be added following this.
@@ -779,3 +780,11 @@ const jessica = new PersonCl('Jessica Davis', 1996);
 
 // Uncaught RangeError: Maximum call stack size exceeded
 // conflict between the setter function and the constructor function trying to set the exact same property name
+
+const walter = new PersonCl('Walter', 1965);
+// returns PersonCL {birthYear: 1965}
+// walter has no name
+
+const walter = new PersonCl('Walter White', 1965);
+// returns PersonCL {_fullName: "Walter White", birthYear: 1965}
+// walter.fullName returns "Walter White"
