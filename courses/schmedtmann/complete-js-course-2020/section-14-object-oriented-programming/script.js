@@ -788,3 +788,11 @@ const walter = new PersonCl('Walter', 1965);
 const walter = new PersonCl('Walter White', 1965);
 // returns PersonCL {_fullName: "Walter White", birthYear: 1965}
 // walter.fullName returns "Walter White"
+
+
+// Static Methods
+// built-in Array.from method is a good example
+// converts any array-like structure into a real array
+// Array.from(document.querySelectorAll('h1')) in console
+// returns an array:
+// [h1]
