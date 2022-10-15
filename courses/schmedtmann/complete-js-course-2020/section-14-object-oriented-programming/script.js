@@ -796,5 +796,8 @@ const walter = new PersonCl('Walter White', 1965);
 // Array.from(document.querySelectorAll('h1')) in console
 // returns an array:
 // [h1]
-// the point is that the .from method is attached to the Array constructor
+// the point is that the .from method is attached to the entire Array constructor, and NOT to the prototype property of the constructor
+// CANNOT use it on an actual array:
+// [1, 2, 3].from() will not work
+// returns .from is not a function
 
