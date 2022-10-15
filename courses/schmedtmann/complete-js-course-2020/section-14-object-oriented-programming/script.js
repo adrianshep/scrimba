@@ -796,3 +796,5 @@ const walter = new PersonCl('Walter White', 1965);
 // Array.from(document.querySelectorAll('h1')) in console
 // returns an array:
 // [h1]
+// the point is that the .from method is attached to the Array constructor
+
