@@ -801,3 +801,6 @@ const walter = new PersonCl('Walter White', 1965);
 // [1, 2, 3].from() will not work
 // returns .from is not a function
 
+// Number.parseFloat() is another example
+// .parseFloat() is a method that is static on the Number constructor
+
