@@ -804,3 +804,10 @@ const walter = new PersonCl('Walter White', 1965);
 // Number.parseFloat() is another example
 // .parseFloat() is a method that is static on the Number constructor
 
+// to add a static method:
+Person.hey = function() {
+    console.log('Hey there')
+};
+
+Person.hey();
+// returns "Hey there"
