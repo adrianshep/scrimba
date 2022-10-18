@@ -806,8 +806,11 @@ const walter = new PersonCl('Walter White', 1965);
 
 // to add a static method:
 Person.hey = function() {
-    console.log('Hey there')
+    console.log('Hey there  👋');
+    console.log(this);
+    // the entire constructor function is calling the method
+    // therefore, this kw is that entire constructor function
 };
 
 Person.hey();
-// returns "Hey there"
+// returns "Hey there 👋"
