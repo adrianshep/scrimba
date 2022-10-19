@@ -744,7 +744,7 @@ class PersonCl {
         this.fullName = fullName;
         this.birthYear = birthYear;
     };
-
+// Instance methods
     calcAge() {
         console.log(2037 - this.birthYear);
     }
@@ -774,6 +774,12 @@ class PersonCl {
     // jessica returns:
     // _fullName: "Jessica Davis"
     // and fullName: (...) which also computes "Jessica Davis"
+    
+// Static method
+    static hey() {
+        console.log('Hey there  👋');
+        console.log(this);
+    }
 };
 
 const jessica = new PersonCl('Jessica Davis', 1996);
