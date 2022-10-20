@@ -795,6 +795,8 @@ const walter = new PersonCl('Walter White', 1965);
 // returns PersonCL {_fullName: "Walter White", birthYear: 1965}
 // walter.fullName returns "Walter White"
 
+PersonCl.hey();
+// this time, the this kw points to the entire class
 
 // Static Methods
 // built-in Array.from method is a good example
