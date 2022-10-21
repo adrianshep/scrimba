@@ -822,3 +822,19 @@ Person.hey = function() {
 
 Person.hey();
 // returns "Hey there 👋"
+
+
+// Object.create
+// third way of implementing prototypal inheritance/delegation
+// no prototype properties involved
+// no constructor function
+// no new operator
+// use Object.create to manually set the prototype of an object to any other object that we want
+
+// desired prototype
+// a simple object literal:
+const PersonProto = {
+    calcAge() {
+        console.log(2037 - this.birthYear);
+    }
+}
