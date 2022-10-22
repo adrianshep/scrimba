@@ -842,3 +842,7 @@ const PersonProto = {
 const steven = Object.create(PersonProto);
 console.log(steven);
 // returns empty object {} with __proto__ containing calcAge() method
+steven.name = 'Steven';
+steven.birthYear = 2004;
+steven.calcAge();
+// when above sets properties on steven object, calcAge() returns 33
