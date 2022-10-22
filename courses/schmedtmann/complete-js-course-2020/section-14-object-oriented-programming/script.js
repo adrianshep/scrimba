@@ -840,3 +840,5 @@ const PersonProto = {
 };
 // create person object with PersonProto as the prototype
 const steven = Object.create(PersonProto);
+console.log(steven);
+// returns empty object {} with __proto__ containing calcAge() method
