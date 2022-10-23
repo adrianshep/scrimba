@@ -846,3 +846,12 @@ steven.name = 'Steven';
 steven.birthYear = 2004;
 steven.calcAge();
 // when above sets properties on steven object, calcAge() returns 33
+
+// Constructor Functions or Classes
+// use of the new operator automatically sets the prototype of the instances to the constructor's prototype property
+
+// Object.create
+// sets the prototype of objects manually to any object we want
+// no constructor function and no prototype property need to be dealt with at all to achieve the same thing
+// more straightforward and easier to understand
+// however, in practice, this is the least used way to implement prototypal inheritance
