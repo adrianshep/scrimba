@@ -852,6 +852,16 @@ steven.calcAge();
 
 // Object.create
 // sets the prototype of objects manually to any object we want
-// no constructor function and no prototype property need to be dealt with at all to achieve the same thing
+// the prototype chain looks exactly the same here
+// but no constructor function and no prototype property need to be dealt with at all to achieve the same thing
 // more straightforward and easier to understand
 // however, in practice, this is the least used way to implement prototypal inheritance
+
+console.log(steven.__proto__);
+// returns exactly PersonProto:
+// calcAge: f calcAge()
+// __proto__: Object
+console.log(steven.__proto__ === PersonProto);
+// returns true
+
+
