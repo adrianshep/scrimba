@@ -871,4 +871,5 @@ console.log(steven.__proto__ === PersonProto);
 
 const sarah = Object.create(PersonProto);
 sarah.init('Sarah', 1979);
+// because init was explicitly called on sarah, this keyword will no point to sarah object (nothing to do with constructor function or ES6 classes constructor method)
 sarah.calcAge();
