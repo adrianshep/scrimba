@@ -911,6 +911,10 @@ accelerate = function() {
      console.log(`${this.make} is going at ${this.speed} km/h`);
 };
 
+/* solution:
+accelerate = function() {
+    this.speed += 10;
+    console.log(`${this.make} is going at ${this.speed} km/h`);
 /*
 
 2. Add a getter called 'speedUS' which returns the current speed in mi/h (divide by 1.6);
