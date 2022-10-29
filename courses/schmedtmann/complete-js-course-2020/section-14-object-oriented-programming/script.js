@@ -892,6 +892,14 @@ const CarProto = {
     }
 };
 
+// // solution:
+// // class CarCl {
+//         constructor (make, speed) {
+//             this.make = make;
+//             this.speed = speed;
+//         }
+// }
+
 /*
 
 2. Add a getter called 'speedUS' which returns the current speed in mi/h (divide by 1.6);
