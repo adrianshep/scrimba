@@ -952,6 +952,10 @@ get speedUS() {
 set speedUS(speed) {
         this.speed = speed * 1.6;
     }
+// solution:
+// set speedUS(speed) {
+    // this.speed = speed * 1.6;
+// }
 
 /*
 4. Create a new car and experiment with the accelerate and brake methods, and with the getter and setter.
