@@ -958,8 +958,11 @@ set speedUS(speed) {
 // }
 
 /*
-4. Create a new car and experiment with the accelerate and brake methods, and with the getter and setter.
+(4) Create a new car and experiment with the accelerate and brake methods, and with the getter and setter.
 DATA CAR 1: 'Ford' going at 120 km/h
 GOOD LUCK 😀
 */
+
+const ford = new CarCl('Ford', 120);
+
 
