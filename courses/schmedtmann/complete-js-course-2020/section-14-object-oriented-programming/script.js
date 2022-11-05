@@ -965,4 +965,4 @@ GOOD LUCK 😀
 
 const ford = new CarCl('Ford', 120);
 ford.accelerate();
-
+ford.brake();
