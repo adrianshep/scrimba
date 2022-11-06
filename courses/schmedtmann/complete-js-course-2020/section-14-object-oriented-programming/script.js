@@ -966,3 +966,13 @@ GOOD LUCK 😀
 const ford = new CarCl('Ford', 120);
 ford.accelerate();
 ford.brake();
+
+/*
+solution:
+console.log(ford.speedUS);
+returns 75 (miles per hour)
+ford.accelerate();
+returns 130 km/h
+ford.accelerate();
+returns 140 km/h
+*/
