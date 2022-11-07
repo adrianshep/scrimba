@@ -975,4 +975,9 @@ ford.accelerate();
 returns 130 km/h
 ford.accelerate();
 returns 140 km/h
+
+ford.speedUS = 50;
+console.log(ford);
+returns CarCl {make: "Ford", speed: 80}
+50 is in miles per hour; returned 80 is in kilometers per hour
 */
