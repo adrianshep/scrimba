@@ -975,6 +975,8 @@ ford.accelerate();
 returns 130 km/h
 ford.accelerate();
 returns 140 km/h
+ford.brake();
+returns 135 km/h
 
 ford.speedUS = 50;
 console.log(ford);
