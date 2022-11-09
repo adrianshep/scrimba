@@ -970,6 +970,7 @@ ford.brake();
 /*
 solution:
 console.log(ford.speedUS);
+use getter to read the method we've transformed into a property
 returns 75 (miles per hour)
 ford.accelerate();
 returns 130 km/h
