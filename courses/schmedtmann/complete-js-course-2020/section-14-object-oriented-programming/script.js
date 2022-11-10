@@ -984,3 +984,15 @@ console.log(ford);
 returns CarCl {make: "Ford", speed: 80}
 50 is in miles per hour; returned 80 is in kilometers per hour
 */
+
+
+// Inheritance Between "Classes": Constructor Functions
+
+const Person = function (firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+};
+
+Person.prototype.calcAge = function() {
+    console.log(2037 - this.birthYear);
+};
