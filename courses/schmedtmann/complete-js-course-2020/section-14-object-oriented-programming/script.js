@@ -988,6 +988,7 @@ returns CarCl {make: "Ford", speed: 80}
 
 // Inheritance Between "Classes": Constructor Functions
 
+
 const Person = function (firstName, birthYear) {
     this.firstName = firstName;
     this.birthYear = birthYear;
