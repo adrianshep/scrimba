@@ -988,6 +988,12 @@ returns CarCl {make: "Ford", speed: 80}
 
 // Inheritance Between "Classes": Constructor Functions
 
+// up to this point, techniques have allowed objects to inherit methods from their prototypes 
+// "real" inheritance between classes is more common
+// (real classes don't exist in JS; "class" terminology just makes it easier to understand concept of inheritance)
+// we'll create a new Student (child) class and make it inherit from the Person (parent) class we've been using so far
+// allows Student class to have own specific methods but still use Person class methods
+// in this lesson, we'll inherit between classes using constructor functions
 
 const Person = function (firstName, birthYear) {
     this.firstName = firstName;
