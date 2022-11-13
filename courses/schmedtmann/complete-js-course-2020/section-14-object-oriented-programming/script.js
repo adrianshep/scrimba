@@ -1006,8 +1006,14 @@ Person.prototype.calcAge = function() {
 
 // child class function should follow parent class with some additional functionality
 const Student = function(firstName, birthYear, course) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
+    // to improve and DRY:
+    // this.firstName = firstName;
+    // this.birthYear = birthYear;
+    // instead:
+    // Person(firstName, birthYear);
+        // won't work because in a regular function call, this kw is set to undefined
+        // need to manually set the this kw as well:
+    Person.call(this, firstName, birthYear);
     this.course = course;
 };
 
