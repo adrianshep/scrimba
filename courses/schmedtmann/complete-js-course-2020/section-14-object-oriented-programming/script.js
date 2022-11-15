@@ -1020,6 +1020,9 @@ const Student = function(firstName, birthYear, course) {
 // manually set
 Student.prototype = Object.create(Person.prototype);
 // Student.prototype object now inherits from Person.prototype
+// have to create this connection here, before adding any methods to the Student prototype object
+// Object.create() will return an empty (Person.prototype) object
+// any methods added to Student.prototype object before will be overwritten by Object.create() 
 
 Student.prototype.introduce = function() {
     console.log(`My name is ${this.firstName} and I study ${this.course}`);
