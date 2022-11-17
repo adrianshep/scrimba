@@ -1036,3 +1036,7 @@ Student.prototype.introduce = function() {
 }
 
 const mike = new Student('Mike', 2020, 'Computer Science');
+mike.introducce();
+// returns "My name is Mike and I study Computer Science"
+mike.calcAge();
+// returns 17
