@@ -1040,3 +1040,8 @@ mike.introducce();
 // returns "My name is Mike and I study Computer Science"
 mike.calcAge();
 // returns 17
+// how is this happening?
+// when we execute mike.calcAge(), we are effectively doing a lookup of a property for a method -- JS trying to find the requested property for a method
+// calcAge() method is not directly on the mike object
+// it's also not in the mike object's prototype (the introduce() method is there, though)
+// not finding the method in either the mike object or its protototype, JS then looks higher up the chain for it, locating it finally in the Person prototype
