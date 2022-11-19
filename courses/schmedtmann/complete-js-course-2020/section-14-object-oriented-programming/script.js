@@ -1059,3 +1059,9 @@ console.log(mike.__proto__.__proto__);
 // constructor: f (firstName birthYear)
 // __proto__: Object
 
+// we need to fix:
+console.dir(Student.prototype.constructor);
+// returns:
+// f Person(firstName, birthYear)
+// to get it to point back to Student instead:
+Student.prototype.constructor = Student;
