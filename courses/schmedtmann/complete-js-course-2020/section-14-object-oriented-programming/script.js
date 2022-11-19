@@ -1045,3 +1045,10 @@ mike.calcAge();
 // calcAge() method is not directly on the mike object
 // it's also not in the mike object's prototype (the introduce() method is there, though)
 // not finding the method in either the mike object or its protototype, JS then looks higher up the chain for it, locating it finally in the Person prototype
+
+console.log(mike.__proto__);
+// returns:
+// Person {introduce: f}
+//  introduce: f ()
+//  __proto__: Object
+    // mike.__proto__ has a prototype too
