@@ -1052,3 +1052,10 @@ console.log(mike.__proto__);
 //  introduce: f ()
 //  __proto__: Object
     // mike.__proto__ has a prototype too
+
+console.log(mike.__proto__.__proto__);
+// returns:
+// calcAge: f ()
+// constructor: f (firstName birthYear)
+// __proto__: Object
+
