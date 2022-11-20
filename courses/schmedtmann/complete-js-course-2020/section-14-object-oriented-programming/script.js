@@ -1065,3 +1065,8 @@ console.dir(Student.prototype.constructor);
 // f Person(firstName, birthYear)
 // to get it to point back to Student instead:
 Student.prototype.constructor = Student;
+
+console.log(mike instanceof Student);
+// returns true
+console.log(mike instanceof Person);
+// returns true
