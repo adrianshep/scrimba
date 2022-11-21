@@ -1070,3 +1070,6 @@ console.log(mike instanceof Student);
 // returns true
 console.log(mike instanceof Person);
 // returns true
+console.log(mike instanceof Object);
+// returns true
+// mike is also an instance of Object as it is also in the mike object's prototype chain
