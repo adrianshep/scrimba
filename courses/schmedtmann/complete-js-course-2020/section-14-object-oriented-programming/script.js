@@ -1090,6 +1090,12 @@ const EVCl = function(make, speed, charge) {
 
 EVCl.prototype = Object.create(CarCl.prototype);
 
+// solution:
+// const EV = function(make, speed, charge) {
+//  Car.call(this, make, speed);
+//  this.speed = speed;
+// }
+
 /*
 2. Implement a 'chargeBattery' method which takes an argument 'chargeTo' and sets the battery charge to 'chargeTo';
 3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
