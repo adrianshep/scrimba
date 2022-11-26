@@ -1107,7 +1107,9 @@ EV.prototype.chargeBattery = function(chargeTo) {
 // EV.prototype.chargeBattery = function(chargeTo) {
 // this.charge = chargeTo;
 // 
-// 
+// const tesla = new EV('Tesla', 120, 23);
+// returns:
+// EV {make: "Tesla", speed: 120, charge: 23}
 
 /*
 3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
