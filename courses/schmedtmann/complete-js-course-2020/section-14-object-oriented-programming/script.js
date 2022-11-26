@@ -1103,6 +1103,10 @@ EVCl.prototype = Object.create(CarCl.prototype);
 EV.prototype.chargeBattery = function(chargeTo) {
     this.charge = chargeTo;
 
+// solution:
+// EV.prototype.chargeBattery = function(chargeTo) {
+// this.charge = chargeTo;
+
 /*
 3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
 4. Create an electric car object and experiment with calling 'accelerate', 'brake' and 'chargeBattery' (charge to 90%). Notice what happens when you 'accelerate'! HINT: Review the definiton of polymorphism 😉
