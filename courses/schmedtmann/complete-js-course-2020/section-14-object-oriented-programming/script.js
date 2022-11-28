@@ -1118,7 +1118,15 @@ EV.prototype.chargeBattery = function(chargeTo) {
 EV.accelerate(speed, charge) {
     this.speed = speed + 20;
     this.charge = charge * 0.99;
-}
+};
+
+// solution:
+// EV.prototype.accelerate = function() {
+//  this.speed += 20;
+//  this.charge--;
+//  console.log(`${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`);
+// }
+// 
 
 /*
 4. Create an electric car object and experiment with calling 'accelerate', 'brake' and 'chargeBattery' (charge to 90%). Notice what happens when you 'accelerate'! HINT: Review the definiton of polymorphism 😉
