@@ -1133,3 +1133,8 @@ EV.accelerate(speed, charge) {
 DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 */
+
+const tesla = new EV('Tesla', 120, 23);
+tesla.accelerate(140);
+tesla.brake();
+tesla.chargeBattery(90);
