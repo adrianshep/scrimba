@@ -1141,7 +1141,10 @@ tesla.chargeBattery(90);
 
 // solution:
 // const tesla = new EV('Tesla', 120, 23);
+//  tesla object in console returns:
+//      EV {make: "Tesla", speed: 120, charge: 23}
 // tesla.chargeBattery(90);
 // console.log(tesla);
 // tesla.brake();
 // tesla.accelerate(140);
+
