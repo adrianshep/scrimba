@@ -1144,6 +1144,8 @@ tesla.chargeBattery(90);
 //  tesla object in console returns:
 //      EV {make: "Tesla", speed: 120, charge: 23}
 // tesla.chargeBattery(90);
+//  tesla object in console returns:
+//      EV {make: "Tesla", speed: 120, charge: 90}
 // console.log(tesla);
 // tesla.brake();
 // tesla.accelerate(140);
