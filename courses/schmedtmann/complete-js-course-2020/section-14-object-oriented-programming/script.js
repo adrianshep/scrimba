@@ -1149,5 +1149,6 @@ tesla.chargeBattery(90);
 // console.log(tesla);
 // tesla.brake();
 //  returns Tesla is going at 115 km/h
-// tesla.accelerate(140);
+// tesla.accelerate();
+//  returns Tesla is going at 135 km/h, with a charge of 89
 
