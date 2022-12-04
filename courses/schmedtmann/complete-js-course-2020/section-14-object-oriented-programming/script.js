@@ -1151,4 +1151,4 @@ tesla.chargeBattery(90);
 //  returns Tesla is going at 115 km/h
 // tesla.accelerate();
 //  returns Tesla is going at 135 km/h, with a charge of 89
-
+// EV.accelerate() method overrides any parent class accelerate() methods
