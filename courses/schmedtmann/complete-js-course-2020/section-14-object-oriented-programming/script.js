@@ -1148,5 +1148,6 @@ tesla.chargeBattery(90);
 //      EV {make: "Tesla", speed: 120, charge: 90}
 // console.log(tesla);
 // tesla.brake();
+//  returns Tesla is going at 115 km/h
 // tesla.accelerate(140);
 
