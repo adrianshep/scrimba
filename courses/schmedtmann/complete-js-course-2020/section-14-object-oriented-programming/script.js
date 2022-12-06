@@ -1188,3 +1188,16 @@ class PersonCl {
         console.log('Hey there  👋');
     }
 };
+
+// classes in JS are a layer of abstraction over constructor functions
+// for inheritance between classes in ES6 we only need:
+// the extend keyword
+// the super function, which is basically the constructor function of the parent class
+
+class StudentCl extends PersonCl {
+    constructor(fullName, birthYear, course) {
+        // always needs to happen first!
+        super(fullName, birthYear);
+        this.course = course;
+    }
+}
