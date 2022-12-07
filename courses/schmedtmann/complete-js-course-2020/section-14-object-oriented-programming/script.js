@@ -1198,6 +1198,12 @@ class StudentCl extends PersonCl {
     constructor(fullName, birthYear, course) {
         // always needs to happen first!
         super(fullName, birthYear);
+        // the call to the super enables the this kw to be accessed (although accessing the this kw isn't mandatory):
         this.course = course;
     }
 }
+
+const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+// if we do not need any new properties and everything inside class StudentCl extends PersonCl -- constructor() {super()} etc. -- is commented out, martha entered in the console will still return: 
+// StudentCl {_fullName: "Martha Jones", birthYear: 2012}
+// no need to bother writing a constructor in the child class
