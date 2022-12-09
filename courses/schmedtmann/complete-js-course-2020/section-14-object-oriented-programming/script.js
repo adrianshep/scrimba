@@ -1213,3 +1213,10 @@ const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
 // no need to bother writing a constructor in the child class
 martha.introduce();
 // returns My name is Martha Jones and I study Computer Science
+martha.calcAge();
+// returns 25
+// martha object prototype chain in console:
+// introduce() method is inherited from PersonCl
+// in the __proto__ of the prototype we have:
+// calcAge(), greet, get and set fullName methods
+// all proof that the prototype chain was set up automatically by the extends kw above
