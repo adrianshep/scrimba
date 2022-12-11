@@ -1227,3 +1227,19 @@ martha.calcAge();
 // in the __proto__ of the prototype we have:
 // calcAge(), greet, get and set fullName methods
 // all proof that the prototype chain was set up automatically by the extends kw above
+
+
+
+// Inheritance Between "Classes": Object.create
+
+const PersonProto = {
+    calcAge() {
+      console.log(2037 - this.birthYear);
+    },
+    init(firstName, birthYear) {
+      this.firstName = firstName;
+      this.birthYear = birthYear;
+    },
+  };
+
+  const steven = Object.create(PersonProto);
