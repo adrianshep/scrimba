@@ -1242,4 +1242,8 @@ const PersonProto = {
     },
   };
 
-  const steven = Object.create(PersonProto);
+const steven = Object.create(PersonProto);
+
+// we want to add another prototype in the middle of the chain, between Person and steven
+
+const StudentProto = Object.create(PersonProto);
