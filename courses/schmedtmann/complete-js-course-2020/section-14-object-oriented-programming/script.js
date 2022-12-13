@@ -1247,3 +1247,12 @@ const steven = Object.create(PersonProto);
 // we want to add another prototype in the middle of the chain, between Person and steven
 
 const StudentProto = Object.create(PersonProto);
+const jay = Object.create(StudentProto);
+
+// Object.create allows for the creation of a simple prototype chain:
+// Prototype [PersonProto]
+// calcAge: function
+//  ^ .__proto__
+// Prototype [StudentProto] proto: PersonProto
+//  ^ .__proto__
+// Object [jay] proto: StudentProto
