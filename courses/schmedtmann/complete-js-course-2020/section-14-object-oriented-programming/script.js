@@ -1262,3 +1262,8 @@ const jay = Object.create(StudentProto);
 // Prototype [StudentProto] proto: PersonProto
 //  ^ .__proto__
 // Object [jay] proto: StudentProto
+
+
+jay.init('Jay', 2010, 'Computer Science');
+// returns My name is undefined and I study Computer Science
+// name is undefined because value required is fullName and not firstName
