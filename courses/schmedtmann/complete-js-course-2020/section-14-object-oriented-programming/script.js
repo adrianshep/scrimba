@@ -1251,7 +1251,11 @@ const StudentProto = Object.create(PersonProto);
 StudentProto.init = function(firstName, birthYear, course) {
     PersonProto.init.call(this, firstName, birthYear);
     this.course = course;
-}
+};
+
+StudentProto.introduce = function() {
+    console.log(`My name is ${this.fullName} and I study ${this.course}`);
+};
 
 const jay = Object.create(StudentProto);
 
@@ -1263,7 +1267,9 @@ const jay = Object.create(StudentProto);
 //  ^ .__proto__
 // Object [jay] proto: StudentProto
 
-
 jay.init('Jay', 2010, 'Computer Science');
 // returns My name is undefined and I study Computer Science
 // name is undefined because value required is fullName and not firstName
+
+jay.introduce();
+// returns My name is undefined and I study Computer Science
