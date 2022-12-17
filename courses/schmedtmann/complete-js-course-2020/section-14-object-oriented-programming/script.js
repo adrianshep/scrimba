@@ -1276,3 +1276,4 @@ jay.introduce();
 
 jay.calcAge();
 // returns 27
+// jay in console shows that calcAge come from Person object __proto__
