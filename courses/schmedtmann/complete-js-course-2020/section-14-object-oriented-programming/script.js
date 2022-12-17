@@ -1273,3 +1273,6 @@ jay.init('Jay', 2010, 'Computer Science');
 
 jay.introduce();
 // returns My name is undefined and I study Computer Science
+
+jay.calcAge();
+// returns 27
