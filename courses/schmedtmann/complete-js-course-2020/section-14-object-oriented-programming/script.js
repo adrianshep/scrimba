@@ -1277,3 +1277,8 @@ jay.introduce();
 jay.calcAge();
 // returns 27
 // jay in console shows that calcAge come from Person object __proto__
+
+// to summarize inheritance with Object.create():
+// don't worry about constructors, prototype properties and the new operator
+// just objects linked to other objects, really simple and beautiful
+// better than faking classes in the way they exist on Jave or C++ languages
