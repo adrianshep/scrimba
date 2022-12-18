@@ -1282,3 +1282,24 @@ jay.calcAge();
 // don't worry about constructors, prototype properties and the new operator
 // just objects linked to other objects, really simple and beautiful
 // better than faking classes in the way they exist on Jave or C++ languages
+
+
+// Another Class Example
+
+// create a new class
+class Account {
+    constructor(owner, currency, pin) {
+        this.owner = owner;
+        this.currency = currency;
+        this.pin = pin;
+    }
+}
+
+const acc1 = new Account('Jonas', 'EUR', 1111);
+console.log(acc1);
+// returns
+// Account {owner: "Jonas", currency: "EUR", pin: 1111}
+//  currency: "EUR"
+//  owner: "Jonas"
+//  pin: 1111
+//  __proto__: Object
