@@ -1284,16 +1284,24 @@ jay.calcAge();
 // better than faking classes in the way they exist on Jave or C++ languages
 
 
-// Another Class Example
 
-// create a new class
-class Account {
-    constructor(owner, currency, pin) {
-        this.owner = owner;
-        this.currency = currency;
-        this.pin = pin;
+// how should movements be added?
+/* like this: 
+    class Account {
+        constructor(owner, currency, pin, movements) {
+            this.owner = owner;
+            this.currency = currency;
+            this.pin = pin;
+            this.movements = movements;
+        }
     }
-}
+
+    const acc1 = new Account('Jonas', 'EUR', 1111, []);
+    console.log(acc1);
+    returns Account {owner: "Jonas", currency: "EUR", pin: 1111, movements: Array(0)}
+
+    // however, it doesn't make any sense to add an empty array to all the new accounts we want to create
+*/
 
 const acc1 = new Account('Jonas', 'EUR', 1111);
 console.log(acc1);
