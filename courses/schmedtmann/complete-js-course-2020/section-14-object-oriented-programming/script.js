@@ -1322,6 +1322,17 @@ class Account {
     }
 
     const acc1 = new Account('Jonas', 'EUR', 1111);
+
+// to add locale:
+class Account {
+        constructor(owner, currency, pin, movements) {
+            this.owner = owner;
+            this.currency = currency;
+            this.pin = pin;
+            this.movements = [];
+            this.locale = navigator.language;
+        }
+    }
     
 */
 
