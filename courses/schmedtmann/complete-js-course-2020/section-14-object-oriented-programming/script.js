@@ -1331,6 +1331,11 @@ class Account {
             this.pin = pin;
             this.movements = [];
             this.locale = navigator.language;
+
+            // in fact, we can execute any code we want in this constructor:
+            
+            console.log(`Thanks for opening an account, ${owner}`);
+            // when a user opens a new account, they are greeted with the above message coming right from the constructor
         }
     }
     
