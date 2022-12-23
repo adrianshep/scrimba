@@ -1333,7 +1333,7 @@ class Account {
             this.locale = navigator.language;
 
             // in fact, we can execute any code we want in this constructor:
-            
+
             console.log(`Thanks for opening an account, ${owner}`);
             // when a user opens a new account, they are greeted with the above message coming right from the constructor
         }
@@ -1349,3 +1349,12 @@ console.log(acc1);
 //  owner: "Jonas"
 //  pin: 1111
 //  __proto__: Object
+
+// what about withdrawals and deposits, that is movements?
+// to deposit:
+acc1.movements.push(250);
+// to withdraw:
+acc1.movements.push(-140);
+console.log(acc1);
+// logs:
+// movemens: (2) [250, -140]
