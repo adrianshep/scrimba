@@ -1377,4 +1377,10 @@ class Account {
     deposit(val) {
         this.movements.push(val)
     }
+    
+    
+    // can call other methods inside of a certain method:
+    withdraw(val) {
+        this.deposit(-val)
+    }
 }
