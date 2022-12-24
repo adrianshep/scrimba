@@ -1358,3 +1358,8 @@ acc1.movements.push(-140);
 console.log(acc1);
 // logs:
 // movemens: (2) [250, -140]
+
+// not a good idea at all to interact with a property as above
+// much better to create methods to interact with these properties to avoid bugs in future as the application grows
+// especially true for important properties such as movements in the Bankist app
+
