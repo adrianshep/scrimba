@@ -1363,3 +1363,18 @@ console.log(acc1);
 // much better to create methods to interact with these properties to avoid bugs in future as the application grows
 // especially true for important properties such as movements in the Bankist app
 
+// better approach:
+
+class Account {
+    constructor(owner, currency, pin, movements) {
+        this.owner = owner;
+        this.currency = currency;
+        this.pin = pin;
+        this.movements = [];
+        this.locale = navigator.language;
+    }
+
+    deposit(val) {
+        this.movements.push(val)
+    }
+}
