@@ -1352,12 +1352,12 @@ console.log(acc1);
 
 // what about withdrawals and deposits, that is movements?
 // to deposit:
-acc1.movements.push(250);
+// acc1.movements.push(250);
 // to withdraw:
-acc1.movements.push(-140);
-console.log(acc1);
+// acc1.movements.push(-140);
+// console.log(acc1);
 // logs:
-// movemens: (2) [250, -140]
+// movements: (2) [250, -140]
 
 // not a good idea at all to interact with a property as above
 // much better to create methods to interact with these properties to avoid bugs in future as the application grows
@@ -1377,10 +1377,20 @@ class Account {
     deposit(val) {
         this.movements.push(val)
     }
-    
-    
+
     // can call other methods inside of a certain method:
     withdraw(val) {
         this.deposit(-val)
     }
 }
+
+acc1.deposit(250);
+acc1.withdraw(140);
+
+console.log(acc1);
+// also logs:
+// movements: (2) [250, -140]
+// but uses the public interface instead
+// these methods are the interface to our objects
+// also called the API -- the application programming interface
+// a lot better than having to manually manipulate those properties outside of the object
