@@ -1382,6 +1382,10 @@ class Account {
     withdraw(val) {
         this.deposit(-val)
     }
+    // this method abstracts away the fact that a withdrawal is a negative movement
+    // the minus before the value of a withdrawal is something the user of the object shouldn't have to care about
+    // all the user has to do is enter value itself
+    
 }
 
 acc1.deposit(250);
