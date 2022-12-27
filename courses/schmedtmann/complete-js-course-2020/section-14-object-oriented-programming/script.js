@@ -1398,3 +1398,8 @@ console.log(acc1);
 // these methods are the interface to our objects
 // also called the API -- the application programming interface
 // a lot better than having to manually manipulate those properties outside of the object
+
+console.log(acc1.pin);
+// returns 1111
+// PIN is accessible from outside the account and class
+// this is a very real and important security concern
