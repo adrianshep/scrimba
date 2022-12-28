@@ -1403,3 +1403,25 @@ console.log(acc1.pin);
 // returns 1111
 // PIN is accessible from outside the account and class
 // this is a very real and important security concern
+
+// the same goes for methods:
+approveLoan(val) {
+    return true;
+}
+
+requestLoan(val) {
+    if(this.approveLoan(val)) {
+        this.deposit(val);
+        console.log(`Loan approved`);
+    }
+}
+
+acc1.requestLoan(1000);
+// logs "Loan approved"
+// and the value has been pushed into the array
+
+// however, we are also able to do this:
+acc1.approveLoan(1000);
+// we should not even be allowed to access this kind of method
+// this is an internal method that only the requestLoan method should be able to use
+// makes the case of the need for data encapsulation and data privacy
