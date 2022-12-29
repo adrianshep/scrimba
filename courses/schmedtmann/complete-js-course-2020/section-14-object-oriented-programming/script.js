@@ -1425,3 +1425,15 @@ acc1.approveLoan(1000);
 // we should not even be allowed to access this kind of method
 // this is an internal method that only the requestLoan method should be able to use
 // makes the case of the need for data encapsulation and data privacy
+
+
+// Encapsulation: Protected Properties and Methods
+
+// encapsulation keeps some properties and methods private inside the class so they're not accessible from outside of it
+// the rest of the methods are exposed as a public interface, which is called an API
+
+// two reasons why we need encapsulation and data privacy:
+// 1) to prevent code from outside of a class accidentally manipulating data inside the class
+// this is why we implement a public interface.
+// we are not supposed to manually mess with this property and therefore should encapsulate it
+// 2) when we expose only a small interface -- a small API consisting only of a few public methods -- we can change all the other internal methods with more confidence. We can be sure the code doesn't rely on the private methods and won't break when we make internal changes
