@@ -1370,12 +1370,13 @@ class Account {
         this.owner = owner;
         this.currency = currency;
         this.pin = pin;
-        this.movements = [];
+        // Protected property:
+        this._movements = [];
         this.locale = navigator.language;
     }
-
+    // Public interface:
     deposit(val) {
-        this.movements.push(val)
+        this._movements.push(val)
     }
 
     // can call other methods inside of a certain method:
@@ -1385,7 +1386,7 @@ class Account {
     // this method abstracts away the fact that a withdrawal is a negative movement
     // the minus before the value of a withdrawal is something the user of the object shouldn't have to care about
     // all the user has to do is enter value itself
-    
+
 }
 
 acc1.deposit(250);
@@ -1437,3 +1438,7 @@ acc1.approveLoan(1000);
 // this is why we implement a public interface.
 // we are not supposed to manually mess with this property and therefore should encapsulate it
 // 2) when we expose only a small interface -- a small API consisting only of a few public methods -- we can change all the other internal methods with more confidence. We can be sure the code doesn't rely on the private methods and won't break when we make internal changes
+
+// in this lecture, we will fake encapsulation by use of a convention developers agree to use
+// movements array will be protected by addition of an underscore preceding it
+// since this is not truly private we will call this a protected property
