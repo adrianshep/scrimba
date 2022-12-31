@@ -1379,7 +1379,7 @@ class Account {
     // all this will do is return this.movements which will be the correct way to get them
     // everyone can still access the movements but can't override them
     getMovements() {
-
+        return this._movements;
     }
 
     deposit(val) {
