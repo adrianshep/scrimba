@@ -1375,6 +1375,13 @@ class Account {
         this.locale = navigator.language;
     }
     // Public interface:
+    // common to have a method called get or set instead of using a real getter or setter
+    // all this will do is return this.movements which will be the correct way to get them
+    // everyone can still access the movements but can't override them
+    getMovements() {
+
+    }
+
     deposit(val) {
         this._movements.push(val)
     }
