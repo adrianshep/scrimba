@@ -1413,12 +1413,12 @@ console.log(acc1.pin);
 // this is a very real and important security concern
 
 // the same goes for methods:
-approveLoan(val) {
+_approveLoan(val) {
     return true;
 }
 
 requestLoan(val) {
-    if(this.approveLoan(val)) {
+    if(this._approveLoan(val)) {
         this.deposit(val);
         console.log(`Loan approved`);
     }
