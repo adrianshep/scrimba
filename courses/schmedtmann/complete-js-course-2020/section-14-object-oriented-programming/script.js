@@ -1449,3 +1449,11 @@ acc1.approveLoan(1000);
 // in this lecture, we will fake encapsulation by use of a convention developers agree to use
 // movements array will be protected by addition of an underscore preceding it
 // since this is not truly private we will call this a protected property
+
+
+// Encapsulation: Private Class Fields and Methods
+
+// private class fields and methods are part of a bigger proposal for improving and JavaScript classes which is simply called Class fields
+// in traditional OOP languages like Java and C++, properties are usually called fields
+// with this new proposal, JavaScript is moving away from the idea that classes are just syntactic sugar over constructor functions
+// this new class features classes that have abilities that haven't been present in constructor functions
