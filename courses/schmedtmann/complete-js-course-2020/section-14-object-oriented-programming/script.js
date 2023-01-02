@@ -1454,6 +1454,13 @@ acc1.approveLoan(1000);
 // Encapsulation: Private Class Fields and Methods
 
 // private class fields and methods are part of a bigger proposal for improving and JavaScript classes which is simply called Class fields
+// parts of this proposal already work in Google Chrome, others don't
 // in traditional OOP languages like Java and C++, properties are usually called fields
 // with this new proposal, JavaScript is moving away from the idea that classes are just syntactic sugar over constructor functions
 // this new class features classes that have abilities that haven't been present in constructor functions
+
+// 4 kinds of fields and methods
+// Public fields
+// Private fields
+// Public methods
+// Private methods
