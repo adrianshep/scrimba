@@ -1464,3 +1464,18 @@ acc1.approveLoan(1000);
 // Private fields
 // Public methods
 // Private methods
+
+class Account {
+    // how we define a public field:
+    locale = navigator.language;
+    _movements = [];
+
+    constructor(owner, currency, pin, movements) {
+        this.owner = owner;
+        this.currency = currency;
+        this.pin = pin;
+        // Protected property:
+        // this._movements = [];
+        // this.locale = navigator.language;
+    }
+}
