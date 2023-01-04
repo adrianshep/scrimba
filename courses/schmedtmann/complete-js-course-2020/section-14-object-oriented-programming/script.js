@@ -1479,3 +1479,9 @@ class Account {
         // this.locale = navigator.language;
     }
 }
+
+// the public fields above will be present on all the instances that we will be creating through the class
+// they are not on the prototype unlike the methods
+// having _movements = [] where it is essentially the same as:
+// this._movements = [];
+// this.locale = navigator.language;
