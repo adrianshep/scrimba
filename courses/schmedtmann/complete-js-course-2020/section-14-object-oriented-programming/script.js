@@ -1459,16 +1459,18 @@ acc1.approveLoan(1000);
 // with this new proposal, JavaScript is moving away from the idea that classes are just syntactic sugar over constructor functions
 // this new class features classes that have abilities that haven't been present in constructor functions
 
-// 4 kinds of fields and methods
-// Public fields
-// Private fields
-// Public methods
-// Private methods
+// Four kinds of fields and methods
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
 
 class Account {
-    // how we define a public field:
+    // 1) Public fields
+    // defined on instances:
     locale = navigator.language;
     _movements = [];
+    // also referencable by the this kw
 
     constructor(owner, currency, pin, movements) {
         this.owner = owner;
