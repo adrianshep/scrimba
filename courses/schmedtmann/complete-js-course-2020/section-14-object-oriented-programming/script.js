@@ -1472,6 +1472,10 @@ class Account {
     _movements = [];
     // also referencable by the this kw
 
+    // 2) Private fields
+    // #name is the syntax that makes the field private in the new class proposal
+    #movements = [];
+
     constructor(owner, currency, pin, movements) {
         this.owner = owner;
         this.currency = currency;
@@ -1479,6 +1483,14 @@ class Account {
         // Protected property:
         // this._movements = [];
         // this.locale = navigator.language;
+    }
+
+    getMovements() {
+        return this.#movements;
+    }
+
+    deposit(val) {
+        this.#movements.push(val);
     }
 }
 
