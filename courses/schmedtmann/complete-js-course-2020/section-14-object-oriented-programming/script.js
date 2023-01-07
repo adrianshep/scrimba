@@ -1475,7 +1475,9 @@ class Account {
     // 2) Private fields
     // #name is the syntax that makes the field private in the new class proposal
     #movements = [];
-
+    // Account now logs:
+    // #movements: Array(3)
+    
     constructor(owner, currency, pin, movements) {
         this.owner = owner;
         this.currency = currency;
