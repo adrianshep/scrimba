@@ -1501,3 +1501,9 @@ class Account {
 // having _movements = [] where it is essentially the same as:
 // this._movements = [];
 // this.locale = navigator.language;
+
+console.log(acc1);
+console.log(acc1.#movements);
+// returns:
+// Uncaught SyntaxError: Private field
+// '#movements' must be declared in an enclosing class
