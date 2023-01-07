@@ -1507,3 +1507,5 @@ console.log(acc1.#movements);
 // returns:
 // Uncaught SyntaxError: Private field
 // '#movements' must be declared in an enclosing class
+// JavaScript thinks a private class is attempting to be implemented, hence the error message
+// we cannot access this variable outside here and the movement property from before no longer exists, so we get an undefined error
