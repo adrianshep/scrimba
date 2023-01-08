@@ -1470,18 +1470,24 @@ class Account {
     // defined on instances:
     locale = navigator.language;
     _movements = [];
-    // also referencable by the this kw
+    // also referenceable by the this kw
 
     // 2) Private fields
     // #name is the syntax that makes the field private in the new class proposal
     #movements = [];
     // Account now logs:
     // #movements: Array(3)
-    
+    #pin;
+    // we are setting the pin based on the input value to the constructor 
+    // we cannot define a field in the constructor
+    // the field has to be created here, outside any method
+    // create with # and don't set to anything
+
     constructor(owner, currency, pin, movements) {
         this.owner = owner;
         this.currency = currency;
-        this.pin = pin;
+        // this.pin = pin now becomes:
+        this.#pin = pin;
         // Protected property:
         // this._movements = [];
         // this.locale = navigator.language;
@@ -1509,3 +1515,6 @@ console.log(acc1.#movements);
 // '#movements' must be declared in an enclosing class
 // JavaScript thinks a private class is attempting to be implemented, hence the error message
 // we cannot access this variable outside here and the movement property from before no longer exists, so we get an undefined error
+console.log(acc1.#pin);
+// now also returns:
+// Uncaught SyntaxError: Private field
