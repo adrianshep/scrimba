@@ -1492,7 +1492,8 @@ class Account {
         // this._movements = [];
         // this.locale = navigator.language;
     }
-
+    
+    // 3) Public methods
     getMovements() {
         return this.#movements;
     }
