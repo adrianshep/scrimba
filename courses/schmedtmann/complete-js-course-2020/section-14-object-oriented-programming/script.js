@@ -1464,6 +1464,7 @@ acc1.approveLoan(1000);
 // 2) Private fields
 // 3) Public methods
 // 4) Private methods
+// (there are also static versions of all of these; they are less important)
 
 class Account {
     // 1) Public fields
@@ -1492,7 +1493,7 @@ class Account {
         // this._movements = [];
         // this.locale = navigator.language;
     }
-    
+
     // 3) Public methods
     getMovements() {
         return this.#movements;
@@ -1501,8 +1502,14 @@ class Account {
     deposit(val) {
         this.#movements.push(val);
     }
-    
-    
+
+    // static methods will not be available on instances, only on the class itself
+    static helper() {
+        console.log('Helper');
+    // only works like this:
+    // Account.helper();
+    }
+
     requestLoan(val) {
         if (this.#approveLoan(val)) {
             this.deposit(val);
@@ -1516,25 +1523,6 @@ class Account {
     }
     // not currently supported by any browser
     // Google Chrome sees this as a private field and not a method, so will log the objet but will give an error if it is run with a value
-}
-
-// the public fields above will be present on all the instances that we will be creating through the class
-// they are not on the prototype unlike the methods
-// having _movements = [] where it is essentially the same as:
-// this._movements = [];
-// this.locale = navigator.language;
-
-console.log(acc1);
-console.log(acc1.#movements);
-// returns:
-// Uncaught SyntaxError: Private field
-// '#movements' must be declared in an enclosing class
-// JavaScript thinks a private class is attempting to be implemented, hence the error message
-// we cannot access this variable outside here and the movement property from before no longer exists, so we get an undefined error
-console.log(acc1.#pin);
-// now also returns:
-// Uncaught SyntaxError: Private field
-
 }
 
 // the public fields above will be present on all the instances that we will be creating through the class
