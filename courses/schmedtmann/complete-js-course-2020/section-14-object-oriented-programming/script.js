@@ -1541,3 +1541,9 @@ console.log(acc1.#movements);
 console.log(acc1.#pin);
 // now also returns:
 // Uncaught SyntaxError: Private field
+
+
+// Chaining Methods
+// chaining the methods of our class
+// return the object itself at the end of a method that we want to be chainable
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
