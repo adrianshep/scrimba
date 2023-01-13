@@ -1546,4 +1546,7 @@ console.log(acc1.#pin);
 // Chaining Methods
 // chaining the methods of our class
 // return the object itself at the end of a method that we want to be chainable
-acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+// acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+// above results in an error message:
+// Uncaught TypeError: Cannot read property 'deposit' of undefined at...
+// we are trying to call a method on an account that is undefined
