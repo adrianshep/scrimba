@@ -1550,3 +1550,6 @@ console.log(acc1.#pin);
 // above results in an error message:
 // Uncaught TypeError: Cannot read property 'deposit' of undefined at...
 // we are trying to call a method on an account that is undefined
+// we need to call deposit on an account 
+// we want the result of acc1.deposit(300) to be the account
+// solution: return this, since this is the current object
