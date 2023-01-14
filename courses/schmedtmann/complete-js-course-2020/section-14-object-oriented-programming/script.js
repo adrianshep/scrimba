@@ -1560,3 +1560,7 @@ console.log(acc1.#pin);
 // we need to call deposit on an account 
 // we want the result of acc1.deposit(300) to be the account
 // solution: return this, since this is the current object
+// returning this makes the method chainable
+// makes most sense in methods that set a property
+// all three of the methods above do that
+// it becomes very useful then to make them chainable
