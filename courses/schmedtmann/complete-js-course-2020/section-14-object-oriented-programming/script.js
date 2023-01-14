@@ -1501,6 +1501,12 @@ class Account {
 
     deposit(val) {
         this.#movements.push(val);
+        return this;
+    }
+
+    withdraw(val) {
+        this.deposit(-val);
+        return this;
     }
 
     // static methods will not be available on instances, only on the class itself
@@ -1514,6 +1520,7 @@ class Account {
         if (this.#approveLoan(val)) {
             this.deposit(val);
             console.log(`Loan approved`);
+            return this;
         }
     }
 
