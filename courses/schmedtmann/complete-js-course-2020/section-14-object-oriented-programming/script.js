@@ -1562,5 +1562,8 @@ console.log(acc1.#pin);
 // solution: return this, since this is the current object
 // returning this makes the method chainable
 // makes most sense in methods that set a property
-// all three of the methods above do that
+// all three of the methods above do that: all make changes to the movements array
 // it becomes very useful then to make them chainable
+// Uncaught TypeError goes away and "Loan approved" gets logged
+// console.log(acc1.getMovements()) returns all the deposits and withdrawals we did:
+// (8) [250, -140, 1000, 300, 500, -35, 25000, -4000]
