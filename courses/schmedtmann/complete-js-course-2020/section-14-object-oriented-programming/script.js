@@ -1567,3 +1567,13 @@ console.log(acc1.#pin);
 // Uncaught TypeError goes away and "Loan approved" gets logged
 // console.log(acc1.getMovements()) returns all the deposits and withdrawals we did:
 // (8) [250, -140, 1000, 300, 500, -35, 25000, -4000]
+
+
+// ES6 Classes Summary
+
+class Student extends Person {
+    university = 'University of Lisbon';
+    #studyHours = 0;
+    #course;
+    static numSubjects = 10;
+}
