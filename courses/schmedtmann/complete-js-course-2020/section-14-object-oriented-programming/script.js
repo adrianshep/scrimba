@@ -1571,9 +1571,15 @@ console.log(acc1.#pin);
 
 // ES6 Classes Summary
 
+// how we define a class:
 class Student extends Person {
     university = 'University of Lisbon';
     #studyHours = 0;
     #course;
     static numSubjects = 10;
 }
+// in this case, a child class
+// a Student is a child class of the parent class Person
+// because we are using the extends kw to set up inheritance between these two classes
+// extends kw will also automatically set up the prototype chain for us
+
