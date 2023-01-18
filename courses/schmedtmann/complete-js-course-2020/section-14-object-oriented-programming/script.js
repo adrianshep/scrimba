@@ -1573,6 +1573,7 @@ console.log(acc1.#pin);
 
 // how we define a class:
 class Student extends Person {
+    // Public field
     university = 'University of Lisbon';
     #studyHours = 0;
     #course;
@@ -1583,3 +1584,5 @@ class Student extends Person {
 // because we are using the extends kw to set up inheritance between these two classes
 // extends kw will also automatically set up the prototype chain for us
 
+// a public field is very similar to a property we defined in a constructor
+// available on every object or instance created by this class
