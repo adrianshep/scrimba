@@ -1575,6 +1575,7 @@ console.log(acc1.#pin);
 class Student extends Person {
     // Public field
     university = 'University of Lisbon';
+    // Private field
     #studyHours = 0;
     #course;
     static numSubjects = 10;
@@ -1586,3 +1587,7 @@ class Student extends Person {
 
 // a public field is very similar to a property we defined in a constructor
 // available on every object or instance created by this class
+
+// private fields are almost the same as public fields
+// however, are not accessible outside of the class
+// therefore, they are perfect for implementing data privacy and encapsulation
