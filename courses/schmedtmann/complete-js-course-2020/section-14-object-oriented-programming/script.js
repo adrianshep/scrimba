@@ -1575,9 +1575,10 @@ console.log(acc1.#pin);
 class Student extends Person {
     // Public field
     university = 'University of Lisbon';
-    // Private field
+    // Private fields
     #studyHours = 0;
     #course;
+    // Static public field
     static numSubjects = 10;
 }
 // in this case, a child class
@@ -1591,3 +1592,7 @@ class Student extends Person {
 // private fields are almost the same as public fields
 // however, are not accessible outside of the class
 // therefore, they are perfect for implementing data privacy and encapsulation
+
+// static public fields
+// like properties that are available only on the class
+// like static methods, use the static kw to make any field static
