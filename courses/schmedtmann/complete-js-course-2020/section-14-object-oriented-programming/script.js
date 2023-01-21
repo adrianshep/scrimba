@@ -1580,10 +1580,12 @@ class Student extends Person {
     #course;
     // Static public field
     static numSubjects = 10;
-
+    
+    // constructor method
     constructor(fullName, birthYear, startYear, course) {
+        // super is call to parent class
         super(fullName, birthYear);
-
+        // super kw must precede this kw
         this.startYear = startYear;
 
         this.#course = course;
@@ -1608,3 +1610,6 @@ class Student extends Person {
 // constructor method
 // automatically called by the new operator whenever we create a new instance of the class, that is, a new object
 // mandatory in a regular class; may be omitted in a child class if we want it to have the same number and names of parameters
+// inside the constructor is a call to the parent class which is the super kw
+// only necessary when we are writing a child class
+// super kw needs to be used before we access the this kw in the constructor
