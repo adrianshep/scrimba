@@ -1613,3 +1613,54 @@ class Student extends Person {
 // inside the constructor is a call to the parent class which is the super kw
 // only necessary when we are writing a child class
 // super kw needs to be used before we access the this kw in the constructor
+// ES6 Classes Summary
+
+// how we define a class:
+class Student extends Person {
+    // Public field
+    university = 'University of Lisbon';
+    // Private fields
+    #studyHours = 0;
+    #course;
+    // Static public field
+    static numSubjects = 10;
+    
+    // constructor method
+    constructor(fullName, birthYear, startYear, course) {
+        // super is call to parent class
+        super(fullName, birthYear);
+        // super kw must precede this kw
+        // instance property available on each created object:
+        this.startYear = startYear;
+
+        this.#course = course;
+    }
+}
+// in this case, a child class
+// a Student is a child class of the parent class Person
+// because we are using the extends kw to set up inheritance between these two classes
+// extends kw will also automatically set up the prototype chain for us
+
+// a public field is very similar to a property we defined in a constructor
+// available on every object or instance created by this class
+
+// private fields are almost the same as public fields
+// however, are not accessible outside of the class
+// therefore, they are perfect for implementing data privacy and encapsulation
+
+// static public fields
+// like properties that are available only on the class
+// like static methods, use the static kw to make any field static as well
+
+// constructor method
+// automatically called by the new operator whenever we create a new instance of the class, that is, a new object
+// mandatory in a regular class; may be omitted in a child class if we want it to have the same number and names of parameters
+// inside the constructor is a call to the parent class which is the super kw
+// only necessary when we are writing a child class
+// super kw needs to be used before we access the this kw in the constructor
+
+// instance property
+// like public fields, property is also available on each created object
+// difference between the two is that instance properties are set based on the input data of the constructor and unique for each boject
+// fields are for that whih is common to all the objects
+// in the example, the university for all the students is the University of Lisbon, which is not unique to each object
