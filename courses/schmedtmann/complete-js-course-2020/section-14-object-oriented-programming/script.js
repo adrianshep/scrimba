@@ -1580,6 +1580,14 @@ class Student extends Person {
     #course;
     // Static public field
     static numSubjects = 10;
+
+    constructor(fullName, birthYear, startYear, course) {
+        super(fullName, birthYear);
+
+        this.startYear = startYear;
+
+        this.#course = course;
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1595,4 +1603,8 @@ class Student extends Person {
 
 // static public fields
 // like properties that are available only on the class
-// like static methods, use the static kw to make any field static
+// like static methods, use the static kw to make any field static as well
+
+// constructor method
+// automatically called by the new operator whenever we create a new instance of the class, that is, a new object
+// mandatory in a regular class; may be omitted in a child class if we want it to have the same number and names of parameters
