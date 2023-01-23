@@ -1591,6 +1591,11 @@ class Student extends Person {
 
         this.#course = course;
     }
+
+    // Public method referencing private field and private method
+    introduce() {
+        console.log(`I study ${this.#course} at ${this.university}`);
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1625,4 +1630,7 @@ class Student extends Person {
 // not accessible outside of class
 // should be unique to each student in this example
 // created without any value
-// then redefined with a value
+// then redefined with the value coming into the constructor
+
+// normal public method
+// referencing a private field and a private method in the example above
