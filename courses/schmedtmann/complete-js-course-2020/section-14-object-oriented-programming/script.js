@@ -1596,6 +1596,17 @@ class Student extends Person {
     introduce() {
         console.log(`I study ${this.#course} at ${this.university}`);
     }
+
+
+    // referencing private field and method
+    study(h) {
+        this.makeCoffee();
+        this.#studyHours += h;
+    }
+
+    #makeCoffee() {
+        return `Here is a coffee for you`;
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1633,4 +1644,8 @@ class Student extends Person {
 // then redefined with the value coming into the constructor
 
 // normal public method
+
 // referencing a private field and a private method in the example above
+
+// Private method
+// if not working yet in your browser version, you can fake it by using the underscore convention instead of the hash
