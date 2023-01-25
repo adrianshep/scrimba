@@ -1607,6 +1607,11 @@ class Student extends Person {
     #makeCoffee() {
         return `Here is a coffee for you`;
     }
+
+    // getter method
+    get testScore() {
+        return this._testScore;
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1649,3 +1654,7 @@ class Student extends Person {
 
 // Private method
 // if not working yet in your browser version, you can fake it by using the underscore convention instead of the hash
+
+// getter method
+// used to get a value out of an object by simply writing a property instead of writing a method
+// writing student.testScore will run this getter method
