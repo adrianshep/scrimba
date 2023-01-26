@@ -1612,6 +1612,11 @@ class Student extends Person {
     get testScore() {
         return this._testScore;
     }
+
+    // setter method
+    set testScore(score) {
+        this._testScore = score < 20 ? score : 0;
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1658,3 +1663,8 @@ class Student extends Person {
 // getter method
 // used to get a value out of an object by simply writing a property instead of writing a method
 // writing student.testScore will run this getter method
+// need to return the new property
+
+// setter method
+// we can define the test score by setting it to some value instead of calling a test score method
+// remember that if you have a setter for a property already defined in the constructor, you need to create a new property with the underscore in front of it
