@@ -1617,6 +1617,11 @@ class Student extends Person {
     set testScore(score) {
         this._testScore = score < 20 ? score : 0;
     }
+
+    // static method
+    static printCurriculum() {
+        console.log(`There are ${this.numSubjects} subjects`);
+    }
 }
 // in this case, a child class
 // a Student is a child class of the parent class Person
@@ -1668,3 +1673,8 @@ class Student extends Person {
 // setter method
 // we can define the test score by setting it to some value instead of calling a test score method
 // remember that if you have a setter for a property already defined in the constructor, you need to create a new property with the underscore in front of it
+
+// static method
+// available only on class
+// cannot access instance properties or methods, only static ones
+// usually use it as a helper method for the class
