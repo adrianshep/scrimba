@@ -1623,6 +1623,10 @@ class Student extends Person {
         console.log(`There are ${this.numSubjects} subjects`);
     }
 }
+
+// creating new object with new operator
+const student = new Student('Jonas', 2020, 2037, 'Medicine');
+
 // in this case, a child class
 // a Student is a child class of the parent class Person
 // because we are using the extends kw to set up inheritance between these two classes
@@ -1678,3 +1682,5 @@ class Student extends Person {
 // available only on class
 // cannot access instance properties or methods, only static ones
 // usually use it as a helper method for the class
+
+// creating new object with new operator
