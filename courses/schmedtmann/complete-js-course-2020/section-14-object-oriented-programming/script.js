@@ -1687,3 +1687,4 @@ const student = new Student('Jonas', 2020, 2037, 'Medicine');
 
 // keep in mind:
 // Classes are "syntactic sugar" over constructor functions
+// Classes are not hoisted
