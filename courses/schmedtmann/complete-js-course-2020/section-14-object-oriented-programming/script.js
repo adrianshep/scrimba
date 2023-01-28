@@ -1684,3 +1684,6 @@ const student = new Student('Jonas', 2020, 2037, 'Medicine');
 // usually use it as a helper method for the class
 
 // creating new object with new operator
+
+// keep in mind:
+// Classes are "syntactic sugar" over constructor functions
