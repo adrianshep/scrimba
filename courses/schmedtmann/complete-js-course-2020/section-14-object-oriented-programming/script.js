@@ -1689,3 +1689,4 @@ const student = new Student('Jonas', 2020, 2037, 'Medicine');
 // Classes are "syntactic sugar" over constructor functions
 // Classes are not hoisted
 // Classes are first-class citizens
+// Class body is always executed in strict mode
