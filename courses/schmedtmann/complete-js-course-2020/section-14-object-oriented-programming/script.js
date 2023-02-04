@@ -1706,6 +1706,12 @@ class EVCl extends CarCl {
         this.speed = speed;
     }
 
+    // implement ability to chain accelerate method:
+    accelerate() {
+        this.speed += 10;
+        console.log(`${this.make} is going at ${this.speed} km/h`);
+        return this;
+    }
 }
 
 3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. They experiment with chining!
