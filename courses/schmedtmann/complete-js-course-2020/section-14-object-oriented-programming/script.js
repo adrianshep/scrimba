@@ -1716,7 +1716,7 @@ class EVCl extends CarCl {
 
 // implement ability to chain chargeBattery method:
 EV.prototype.chargeBattery = function(chargeTo) {
-    this.charge = chargeTo;
+    this.#charge = chargeTo;
     return this;
 
 3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. They experiment with chining!
