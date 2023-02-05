@@ -1712,6 +1712,12 @@ class EVCl extends CarCl {
         console.log(`${this.make} is going at ${this.speed} km/h`);
         return this;
     }
+    
+    // update the brake method:
+    brake() {
+        this.speed -= 5;
+        console.log(`${this.make} is going at ${this.speed} km/h`);
+    }
 }
 
 // implement ability to chain chargeBattery method:
