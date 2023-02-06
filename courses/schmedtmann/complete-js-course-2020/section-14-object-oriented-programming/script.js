@@ -1725,9 +1725,15 @@ EV.prototype.chargeBattery = function(chargeTo) {
     this.#charge = chargeTo;
     return this;
 
-3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. They experiment with chining!
+3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. Then experiment with chaining!
+
+
 DATA CAR 1: 'Rivian' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
+
+const rivian = new EVCl('Rivian', 120, 23);
+rivian.speed(140).accelerate(10).brake(20).chargeBattery(60);
+
 */
 
 class CarCl {
