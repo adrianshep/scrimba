@@ -1705,6 +1705,15 @@ class EVCl extends CarCl {
         this.make = make;
         this.speed = speed;
     }
+    
+ 
+// Jonas's solution:
+class EVCl extends CarCl {
+    constructor(make, speed, charge) {
+        super(make, speed);
+        this.charge = chargeTo;
+    }
+}
 
     // implement ability to chain accelerate method:
     accelerate() {
