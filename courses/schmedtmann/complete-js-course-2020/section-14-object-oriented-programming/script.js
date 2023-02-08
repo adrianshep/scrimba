@@ -1705,15 +1705,6 @@ class EVCl extends CarCl {
         this.make = make;
         this.speed = speed;
     }
-    
- 
-// Jonas's solution:
-class EVCl extends CarCl {
-    constructor(make, speed, charge) {
-        super(make, speed);
-        this.charge = chargeTo;
-    }
-}
 
     // implement ability to chain accelerate method:
     accelerate() {
@@ -1721,7 +1712,7 @@ class EVCl extends CarCl {
         console.log(`${this.make} is going at ${this.speed} km/h`);
         return this;
     }
-    
+
     // update the brake method:
     brake() {
         this.speed -= 5;
@@ -1729,10 +1720,26 @@ class EVCl extends CarCl {
     }
 }
 
+// Jonas's solution:
+class EVCl extends CarCl {
+    constructor(make, speed, charge) {
+        super(make, speed);
+        this.charge = charge;
+    }
+}
+
 // implement ability to chain chargeBattery method:
+
+// my solution:
 EV.prototype.chargeBattery = function(chargeTo) {
     this.#charge = chargeTo;
     return this;
+
+// Jonas's solution:
+
+    chargeBattery(chargeTo) {
+        this.charge = chargeTo;
+    }
 
 3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. Then experiment with chaining!
 
