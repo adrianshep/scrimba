@@ -1747,8 +1747,12 @@ EV.prototype.chargeBattery = function(chargeTo) {
 DATA CAR 1: 'Rivian' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 
+// my solution:
 const rivian = new EVCl('Rivian', 120, 23);
 rivian.speed(140).accelerate(10).brake(20).chargeBattery(60);
+
+// Jonas's solution:
+const rivian = new EVCl('Rivian', 120, 23);
 
 */
 
