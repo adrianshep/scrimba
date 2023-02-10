@@ -1722,11 +1722,15 @@ class EVCl extends CarCl {
 
 // Jonas's solution:
 class EVCl extends CarCl {
+    // we still need to define all the fields outside of any method
+    // true for public and private fields; private field here:
+    #charge;
     constructor(make, speed, charge) {
         super(make, speed);
         this.charge = charge;
     }
 }
+
 
 // implement ability to chain chargeBattery method:
 
