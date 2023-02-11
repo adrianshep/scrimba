@@ -1801,3 +1801,6 @@ class EVCl extends CarCl {
         console.log(`${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`);
     }
 }
+
+
+const rivian = new EVCl('Rivian', 120, 23);
