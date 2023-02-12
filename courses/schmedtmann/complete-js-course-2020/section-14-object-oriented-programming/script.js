@@ -1805,4 +1805,11 @@ class EVCl extends CarCl {
 }
 
 const rivian = new EVCl('Rivian', 120, 23);
+console.log(rivian);
+console.log(rivian.#charge);
+// logs:
+// Uncaught SyntaxError: Private field '#charge' must be declared in an enclosing class
+// as we try to directly access the charge property outside, it's not going to work -- it's now truly private and encapsulated inside the class
+// no way to change it from the outside except by charging the battery or by accelerating
+// the method is basically a public API
 
