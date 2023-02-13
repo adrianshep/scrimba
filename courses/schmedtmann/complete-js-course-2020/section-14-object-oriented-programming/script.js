@@ -1774,6 +1774,7 @@ class CarCl {
     brake() {
         this.speed -= 5;
         console.log(`${this.make} is going at ${this.speed} km/h`);
+        return this;
     }
 
     get SpeedUS(){
@@ -1794,13 +1795,15 @@ class EVCl extends CarCl {
     }
 
     chargeBattery(chargeTo) {
-        this.charge = chargeTo;
+        this.#charge = chargeTo;
+        return this;
     }
 
     accelerate() {
         this.speed += 20;
         this.#charge--;
         console.log(`${this.make} is going at ${this.speed} km/h, with a charge of ${this.#charge}`);
+        return this;
     }
 }
 
@@ -1812,4 +1815,5 @@ console.log(rivian.#charge);
 // as we try to directly access the charge property outside, it's not going to work -- it's now truly private and encapsulated inside the class
 // no way to change it from the outside except by charging the battery or by accelerating
 // the method is basically a public API
-
+// to implement chaining on brake, chargeBattery and accelerate, we return "this" keyword
+// do this on all methods that set something
