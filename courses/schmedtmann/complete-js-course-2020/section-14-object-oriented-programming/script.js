@@ -1817,3 +1817,15 @@ console.log(rivian.#charge);
 // the method is basically a public API
 // to implement chaining on brake, chargeBattery and accelerate, we return "this" keyword
 // do this on all methods that set something
+// chaining:
+rivian
+    .accelerate()
+    .accelerate()
+    .accelerate()
+    .brake()
+    .chargeBattery(50)
+    .accelerate();
+// accelerate, accelerate again, accelerate yet again
+// then brake, then charge the battery to 50%
+// then accelerate some more
+// end result is 195 km/h converted to mph
