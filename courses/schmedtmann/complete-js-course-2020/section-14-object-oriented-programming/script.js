@@ -1828,4 +1828,10 @@ rivian
 // accelerate, accelerate again, accelerate yet again
 // then brake, then charge the battery to 50%
 // then accelerate some more
-// end result is 195 km/h converted to mph
+// end result is 195 km/h
+
+// the child class also inherits the setters and getters from the parent class
+// allow us to do this:
+console.log(rivian.speedUS);
+// which logs 121.875 which is 195 km/h converted to miles per hour
+
