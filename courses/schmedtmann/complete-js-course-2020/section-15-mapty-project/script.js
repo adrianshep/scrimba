@@ -10,3 +10,11 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
+
+
+/* Project Planning
+
+1. User Stories
+Description of the application's functionality from the user's perspective. All user stories put together describe the entire application.
+
+*/
