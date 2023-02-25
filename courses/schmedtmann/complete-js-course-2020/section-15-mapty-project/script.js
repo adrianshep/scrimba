@@ -17,4 +17,7 @@ const inputElevation = document.querySelector('.form__input--elevation');
 1. User Stories
 Description of the application's functionality from the user's perspective. All user stories put together describe the entire application.
 
+2. Features
+That high level overview allows developers to determine the exact features that need to be implemented in order for the functionalities in the user stories to be realized.
+
 */
