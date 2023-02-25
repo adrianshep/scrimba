@@ -20,4 +20,7 @@ Description of the application's functionality from the user's perspective. All 
 2. Features
 That high level overview allows developers to determine the exact features that need to be implemented in order for the functionalities in the user stories to be realized.
 
+3. Flowchart
+What we're going to build: to visualize the different actions that a user can take and how the program should react to these actions, we usually put all these features into a flow chart.
+
 */
