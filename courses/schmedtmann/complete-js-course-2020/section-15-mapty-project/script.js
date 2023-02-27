@@ -29,4 +29,9 @@ How we're going to build it: how we will organize our code and what JavaScript f
 Development Step
 implement the plan created above using JavaSript code
 
+1. User Story 
+- description of the application's functionality from the user's perspective
+- common format: 
+As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
+
 */
