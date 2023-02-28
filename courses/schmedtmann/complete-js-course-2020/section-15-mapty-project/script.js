@@ -34,4 +34,8 @@ implement the plan created above using JavaSript code
 - common format: 
 As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 
+1) As a user, I want to log my running workouts with location, distance, time, pace, and steps per minute, so I can keep a log of all my running.
+- clearly tells who wants to perform what action and why
+- based on this, we'll be able to plan the application's necessary features so this user story can be satisfied
+
 */
