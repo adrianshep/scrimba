@@ -38,4 +38,6 @@ As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 - clearly tells who wants to perform what action and why
 - based on this, we'll be able to plan the application's necessary features so this user story can be satisfied
 
+2) As a user, I want to log my cycling workouts with location, distance, time, speed, and elevation gain, so I can keep a log of all my cycling.
+
 */
