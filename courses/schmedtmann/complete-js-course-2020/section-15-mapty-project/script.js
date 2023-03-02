@@ -40,4 +40,6 @@ As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 
 2) As a user, I want to log my cycling workouts with location, distance, time, speed, and elevation gain, so I can keep a log of all my cycling.
 
+3) As a user, I want to see all my workouts at a glance so I can easily track my progress.
+
 */
