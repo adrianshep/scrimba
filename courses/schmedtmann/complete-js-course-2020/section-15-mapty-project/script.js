@@ -46,4 +46,17 @@ As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 
 5) As a user, I want to see all my workouts when I leave the app, and come back later, so that I can keep using the app over time.
 
+
+User Stories (summarized)
+
+1) Log my running workouts with location, distance, time, pace and steps per minute
+
+2) Log my cycling workouts with location, distance, time, speed and elevation gain
+
+3) See all my workouts at a glance
+
+4) See my workouts on a map
+
+5) See all my workouts when I leave the app and come back later
+
 */
