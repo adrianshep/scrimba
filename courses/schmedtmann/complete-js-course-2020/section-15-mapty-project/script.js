@@ -44,4 +44,6 @@ As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 
 4) As a user, I also want to see all my workouts on a map so I can easily check where I work out the most.
 
+5) As a user, I want to see all my workouts when I leave the app, and come back later, so that I can keep using the app over time.
+
 */
