@@ -59,4 +59,9 @@ User Stories (summarized)
 
 5) See all my workouts when I leave the app and come back later
 
+
+Features
+
+1) Map where user clicks to add new workout (best way to get location coordinates)
+
 */
