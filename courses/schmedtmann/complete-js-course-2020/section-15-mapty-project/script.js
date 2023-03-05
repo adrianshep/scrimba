@@ -64,4 +64,6 @@ Features
 
 1) Map where user clicks to add new workout (best way to get location coordinates)
 
+2) Geolocation to display map at current location (more user friendly)
+
 */
