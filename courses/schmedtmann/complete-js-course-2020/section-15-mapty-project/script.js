@@ -68,4 +68,6 @@ Features
 -  a lot friendlier than having users scroll to their current loaction on a map
 - all browsers on mobile and desktop now support geolocation
 
+3) Form to input distance, time, pace, steps/minute (cadence)
+
 */
