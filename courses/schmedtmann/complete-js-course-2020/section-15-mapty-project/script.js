@@ -62,12 +62,14 @@ User Stories (summarized)
 
 Features
 
-1) Map where user clicks to add new workout (best way to get location coordinates)
+1) (User Story 1) Map where user clicks to add new workout (best way to get location coordinates)
 
-2) Geolocation to display map at current location (more user friendly)
+2) (User Story 1) Geolocation to display map at current location (more user friendly)
 -  a lot friendlier than having users scroll to their current loaction on a map
 - all browsers on mobile and desktop now support geolocation
 
-3) Form to input distance, time, pace, steps/minute (cadence)
+3) (User Story 2) Form to input distance, time, pace, steps/minute (cadence)
+
+4) (User Story 3) Display all workouts in a list
 
 */
