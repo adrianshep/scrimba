@@ -72,4 +72,6 @@ Features
 
 4) (User Story 3) Display all workouts in a list
 
+5) (User Story 4) Display all workouts in the map
+
 */
