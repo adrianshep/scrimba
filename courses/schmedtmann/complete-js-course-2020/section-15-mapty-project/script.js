@@ -74,4 +74,9 @@ Features
 
 5) (User Story 4) Display all workouts in the map
 
+6) (User Story 5) Store workout data in the browser using local storage API
+- real world applications use data storage accounts
+- since this is a very simple application, we'll store data in the browser
+- whenever the user comes back to the page, we will read the data that was saved in a local storage and then display it both on the map and also on the list
+
 */
