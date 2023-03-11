@@ -79,4 +79,10 @@ Features
 - since this is a very simple application, we'll store data in the browser
 - whenever the user comes back to the page, we will read the data that was saved in a local storage and then display it both on the map and also on the list
 
+
+Flowchart
+- should contain the different features we're going to implement
+- show how the different parts of the app will interact with one another
+- how data flows across the application
+
 */
