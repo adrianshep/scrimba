@@ -85,4 +85,8 @@ Flowchart
 - show how the different parts of the app will interact with one another
 - how data flows across the application
 
+1) Geolocation to display map at current location
+
+2) Map where user click to add new workout
+
 */
