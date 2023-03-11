@@ -89,4 +89,7 @@ Flowchart
 
 2) Map where user click to add new workout
 
+start with Page loads
+- good idea to start flowchart with events
+
 */
