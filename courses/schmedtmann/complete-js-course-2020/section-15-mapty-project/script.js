@@ -93,5 +93,6 @@ start with page loads
 - good idea to start flowchart with events
 - page load is a good event to start with because it's always the first event that occurs on any page
 - page load isn't an event we're going to handle but all the code at the top level will be executed when it happens
+- when page loads, we want to start by getting the user's location coordinates using the geolocation API
 
 */
