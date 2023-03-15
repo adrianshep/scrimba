@@ -96,4 +96,7 @@ start with page loads
 - when page loads, we want to start by getting the user's location coordinates using the geolocation API
 - after geolocation data arrives, we want to rend a map centered on the current location of the user
 
+3) Form to input distance, time, pace, steps per minute
+- render form whenever the user clicks on a certain position on a map
+
 */
