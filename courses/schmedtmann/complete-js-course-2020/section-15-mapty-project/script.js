@@ -97,6 +97,7 @@ start with page loads
 - after geolocation data arrives, we want to rend a map centered on the current location of the user
 
 3) Form to input distance, time, pace, steps per minute
+4) Form to input distance, time, speed, elevation gain
 - render form whenever the user clicks on a certain position on a map
 
 */
