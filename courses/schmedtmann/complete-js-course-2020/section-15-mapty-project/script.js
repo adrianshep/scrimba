@@ -100,4 +100,9 @@ start with page loads
 4) Form to input distance, time, speed, elevation gain
 - render form whenever the user clicks on a certain position on a map
 
+*** Flowchart Color Code ***
+- yellow - actions
+- green - when something is rendered in the user interface
+- red - operations that happen asynchronously
+
 */
