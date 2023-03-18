@@ -110,4 +110,7 @@ start with page loads
 - as in the real world, we don't come up with all the steps in the planning phase
 - perfectly okay to create a rough sketch in the beginning and come up with the exact detail during implementation
 
+5) Display workouts in a list
+6) Display workouts on the map
+
 */
