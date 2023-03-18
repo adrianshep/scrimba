@@ -112,5 +112,8 @@ start with page loads
 
 5) Display workouts in a list
 6) Display workouts on the map
+- form rendered in Steps 3 and 4
+- we'll have an event listener on that form
+- whenever user submits a workout, will be rendered on the map and in the list
 
 */
