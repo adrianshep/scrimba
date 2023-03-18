@@ -105,4 +105,9 @@ start with page loads
 - green - when something is rendered in the user interface
 - red - operations that happen asynchronously
 
+- DO NOT get hung up on building the perfect flowchart!
+- like everything in coding and programming, building a flowchart well is a matter of practice
+- as in the real world, we don't come up with all the steps in the planning phase
+- perfectly okay to create a rough sketch in the beginning and come up with the exact detail during implementation
+
 */
