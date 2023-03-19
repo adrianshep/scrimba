@@ -116,4 +116,7 @@ start with page loads
 - we'll have an event listener on that form
 - whenever user submits a workout, will be rendered on the map and in the list
 
+7) Store workout data in the browser
+8) On page load, read the saved data and display
+
 */
