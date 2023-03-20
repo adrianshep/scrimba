@@ -117,6 +117,11 @@ start with page loads
 - whenever user submits a workout, will be rendered on the map and in the list
 
 7) Store workout data in the browser
+
 8) On page load, read the saved data and display
+- can only happen after current location has been fetched and a map has been displayed
+- meaning, the above is an async process
+- red in the flowchart color code
+- an operation that takes some time and, only after it's completed, can the rest of the operations that depend on it be executed
 
 */
