@@ -124,4 +124,7 @@ start with page loads
 - red in the flowchart color code
 - an operation that takes some time and, only after it's completed, can the rest of the operations that depend on it be executed
 
+9) Move map to workout location on click
+-  whenever the user clicks on a workout in the list, the map will move to that workout's location
+
 */
