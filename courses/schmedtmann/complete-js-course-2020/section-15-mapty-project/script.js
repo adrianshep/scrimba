@@ -126,5 +126,6 @@ start with page loads
 
 9) Move map to workout location on click
 -  whenever the user clicks on a workout in the list, the map will move to that workout's location
+- event handler on the list will trigger this process
 
 */
