@@ -128,4 +128,8 @@ start with page loads
 -  whenever the user clicks on a workout in the list, the map will move to that workout's location
 - event handler on the list will trigger this process
 
+Keep in mind that the flow chart has nothing to do yet with the implementation itself -- this is just how the program is going to work. We might even implement it in some language other than JavaScript.
+
+Only what our program should do, not how it does it -- that's more specific and actually for the architecture.
+
 */
