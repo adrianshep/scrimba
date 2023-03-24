@@ -132,4 +132,12 @@ Keep in mind that the flow chart has nothing to do yet with the implementation i
 
 Only what our program should do, not how it does it -- that's more specific and actually for the architecture.
 
+
+Architecture
+- just like the flow chart, we don't always have to have the perfect final architecture figured out before implementation.
+- we can first do some experiments, play around with the code, and only then think about the architecture for the final project in case.
+- we can do it right in the beginning, but it's not always necessary.
+- to start this project, we will simply start coding, implementing the features according to the flow chart.
+- as we start to need more organization and ways to manage our data, we will come back to thinking about the architecture.
+
 */
