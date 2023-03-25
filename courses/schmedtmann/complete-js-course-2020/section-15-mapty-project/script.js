@@ -149,3 +149,6 @@ Using the Geolocation API
 - on of the modern APIs, like the ability to access a user's camera or make a user's phone vibrate
 
 */
+
+// very easy to use:
+navigator.geolocation.getCurrentPosition()
