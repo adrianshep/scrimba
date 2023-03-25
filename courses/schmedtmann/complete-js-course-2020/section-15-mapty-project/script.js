@@ -141,3 +141,11 @@ Architecture
 - as we start to need more organization and ways to manage our data, we will come back to thinking about the architecture.
 
 */
+
+/*
+
+Using the Geolocation API
+- called an API because it a browser API, just like internationalization or timers or anything else that the browser gives us
+- on of the modern APIs, like the ability to access a user's camera or make a user's phone vibrate
+
+*/
