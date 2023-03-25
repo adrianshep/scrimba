@@ -151,4 +151,9 @@ Using the Geolocation API
 */
 
 // very easy to use:
-navigator.geolocation.getCurrentPosition()
+navigator.geolocation.getCurrentPosition(
+    // success:
+    function() {}, 
+    // error:
+    function() {}
+)
