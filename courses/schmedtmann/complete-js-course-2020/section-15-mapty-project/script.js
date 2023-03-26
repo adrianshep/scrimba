@@ -155,5 +155,7 @@ navigator.geolocation.getCurrentPosition(
     // success:
     function() {}, 
     // error:
-    function() {}
+    function() {
+        alert('Could not get your position')
+              }
 )
