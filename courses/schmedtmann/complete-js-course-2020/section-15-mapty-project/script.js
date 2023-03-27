@@ -153,7 +153,9 @@ Using the Geolocation API
 // very easy to use:
 navigator.geolocation.getCurrentPosition(
     // success:
-    function() {}, 
+    function(position) {
+        console.log(position);
+    }, 
     // error:
     function() {
         alert('Could not get your position')
