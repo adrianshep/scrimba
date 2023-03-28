@@ -151,13 +151,15 @@ Using the Geolocation API
 */
 
 // very easy to use:
-navigator.geolocation.getCurrentPosition(
-    // success:
-    function(position) {
-        console.log(position);
-    }, 
-    // error:
-    function() {
-        alert('Could not get your position')
-              }
-)
+// to make sure that we don't get any errors in an old browser, we can first test if navigator.geolocation exists:
+if (navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(
+        // JS will call this function in case of success:
+        function(position) {
+            console.log(position);
+        }, 
+        // error:
+        function() {
+            alert('Could not get your position')
+        }
+    )
