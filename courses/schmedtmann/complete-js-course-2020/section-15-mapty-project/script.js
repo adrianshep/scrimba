@@ -163,3 +163,4 @@ if (navigator.geolocation)
             alert('Could not get your position')
         }
     )
+// if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
