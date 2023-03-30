@@ -164,3 +164,15 @@ if (navigator.geolocation)
         }
     )
 // if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
+// when location permission popup is clicked 'allow,' a position object is returned:
+/*
+GeolocationPosition
+coords: GeolocationCoordinates
+accuracy: 2646
+altitude: null
+altitudeAccuracy: null
+heading: null
+latitude: 37.0475008
+longitude: -7.8381056
+speed: null
+*/
