@@ -166,6 +166,9 @@ if (navigator.geolocation)
         // console.log(latitude, longitude);
         // returns 37.0475008, -7.8381056
         // not 100% accurate, but we can work with them
+        // ultimately, want to load and center the map on this position
+        // Google Maps for now:
+        // console.log(`https://www.google.com/maps/@${latitude},@${longitude}`);
         }, 
         // error:
         function() {
