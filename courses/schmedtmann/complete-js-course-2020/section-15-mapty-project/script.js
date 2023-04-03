@@ -172,7 +172,9 @@ if (navigator.geolocation)
         },
         
         // Leaflet starter code:
-        var map = L.map('map').setView([51.505, -0.09], 13);
+        // map is id name of HTML element where map will be displayed
+        // whatever id name used in HMTL, must be passed into this function:
+        const map = L.map('map').setView([51.505, -0.09], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
