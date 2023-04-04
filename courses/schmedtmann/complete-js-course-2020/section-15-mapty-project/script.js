@@ -174,6 +174,11 @@ if (navigator.geolocation)
         // Leaflet starter code:
         // map is id name of HTML element where map will be displayed
         // whatever id name used in HMTL, must be passed into this function:
+        // L is main function that Leaflet gives us as an entry point, kind of a namespace
+        // L has a few methods:
+        // map method
+        // tile layer -- define tiles of map
+        // display markers
         const map = L.map('map').setView([51.505, -0.09], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
