@@ -177,8 +177,13 @@ if (navigator.geolocation)
         // L is main function that Leaflet gives us as an entry point, kind of a namespace
         // L has a few methods:
         // map method
-        // tile layer -- define tiles of map
-        // display markers
+        // - map method
+        // - tile layer -- define tiles of map
+        // - display markers
+        // L in console shows we have access to it
+        // - it is a global variable that we can access from all the other scripts
+        // we've never previously worked with multiple scripts
+        
         const map = L.map('map').setView([51.505, -0.09], 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
