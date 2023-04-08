@@ -199,7 +199,12 @@ if (navigator.geolocation)
         function() {
             alert('Could not get your position')
         }
-    )
+    );
+
+// with other.js included as a script in index.html, we should be able to access the firstName variable:
+console.log(firstName);
+// logs 'Jonas'
+
 // if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
 // when location permission popup is clicked 'allow,' a position object is returned:
 /*
