@@ -205,6 +205,7 @@ if (navigator.geolocation)
 console.log(firstName);
 // logs 'Jonas'
 // any variable that is global in any script will be available to other scripts as long as it appears after that script in the index.html inclusion list
+// so script.js has access to all the global variables in other.js and leaflet.js, but other.js, for example, does not have access to anything from script.js because it appears after it in the index.html inclusion list
 
 // if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
 // when location permission popup is clicked 'allow,' a position object is returned:
