@@ -204,6 +204,7 @@ if (navigator.geolocation)
 // with other.js included as a script in index.html, we should be able to access the firstName variable:
 console.log(firstName);
 // logs 'Jonas'
+// any variable that is global in any script will be available to other scripts as long as it appears after that script in the index.html inclusion list
 
 // if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
 // when location permission popup is clicked 'allow,' a position object is returned:
