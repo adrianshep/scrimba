@@ -182,15 +182,18 @@ if (navigator.geolocation)
         // - display markers
         // L in console shows we have access to it
         // - it is a global variable that we can access from all the other scripts
-        // we've never previously worked with multiple scripts
-        
-        const map = L.map('map').setView([51.505, -0.09], 13);
+        // need to replace coordinates in default code:
+
+        const coords = [latitude, longitude];
+
+        const map = L.map('map').setView(coords, 13);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        L.marker([51.5, -0.09]).addTo(map)
+        L.marker(coords)
+            .addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
             .openPopup();
         },
