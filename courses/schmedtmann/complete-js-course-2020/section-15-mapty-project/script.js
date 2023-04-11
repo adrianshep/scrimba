@@ -187,6 +187,8 @@ if (navigator.geolocation)
         const coords = [latitude, longitude];
 
         const map = L.map('map').setView(coords, 13);
+        // the second value -- 13 -- is the zoom level
+        // 13 is a reasonable setting to use
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
