@@ -190,6 +190,11 @@ if (navigator.geolocation)
         // the second value -- 13 -- is the zoom level
         // 13 is a reasonable setting to use
 
+        // Tile Layer
+        // the map we see is made up of small tiles
+        // come from the URL below
+        // in this case, from OpenStreetMap whih is an open source map free for everyone to use
+        // Leaflet works with all other kinds of maps as well, Google Maps, for example
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
