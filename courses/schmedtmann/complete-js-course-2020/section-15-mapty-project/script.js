@@ -195,7 +195,9 @@ if (navigator.geolocation)
         // come from the URL below
         // in this case, from OpenStreetMap whih is an open source map free for everyone to use
         // Leaflet works with all other kinds of maps as well, Google Maps, for example
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // use URL to change appearance of map
+        // changing to a different tile theme (.org/ becomes .fr/hot/):
+        L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
