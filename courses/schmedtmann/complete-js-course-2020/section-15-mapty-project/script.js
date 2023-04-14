@@ -201,6 +201,9 @@ if (navigator.geolocation)
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
+        // Map Marker
+        // bind handler to event so when user clicks on the map we can then display a marker there
+        // later we can replace that with the data coming from the user's workout
         L.marker(coords)
             .addTo(map)
             .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
