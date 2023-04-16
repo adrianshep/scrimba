@@ -187,6 +187,8 @@ if (navigator.geolocation)
         const coords = [latitude, longitude];
 
         const map = L.map('map').setView(coords, 13);
+        // console.log(map);
+        // shows on method we are now using as an event listener
         // the second value -- 13 -- is the zoom level
         // 13 is a reasonable setting to use
 
