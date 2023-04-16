@@ -189,6 +189,11 @@ if (navigator.geolocation)
         const map = L.map('map').setView(coords, 13);
         // console.log(map);
         // shows on method we are now using as an event listener
+        // internals of Leaflet Library show that:
+        // it uses the prototype chain very heavily
+        // it uses underscore convention to make methods and properties protected
+        // indicates to us that we should not manipulate those manually
+
         // the second value -- 13 -- is the zoom level
         // 13 is a reasonable setting to use
 
