@@ -220,8 +220,11 @@ if (navigator.geolocation)
         // we can't simply use the add event listener method we have been previously
         // instead, we use something similar available in the Leaflet Library.
         // this is a method not coming from JavaScript, but from Leaflet
-        map.on();
-        },
+        // add Leaflet event listener
+        map.on('click', function(mapEvent) {
+
+        });
+},
             
         // error:
         function() {
