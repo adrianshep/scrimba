@@ -212,9 +212,10 @@ if (navigator.geolocation)
         // bind handler to event so when user clicks on the map we can then display a marker there
         // later we can replace that with the data coming from the user's workout
 
-        L.marker(coords)
+        // to place pin in map at coords rather than in center:
+        L.marker([lat, lng])
             .addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .bindPopup('workout')
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
         // we can't simply use the add event listener method we have been previously
