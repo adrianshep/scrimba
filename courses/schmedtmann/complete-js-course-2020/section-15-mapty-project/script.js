@@ -211,7 +211,7 @@ if (navigator.geolocation)
         // Map Marker
         // bind handler to event so when user clicks on the map we can then display a marker there
         // later we can replace that with the data coming from the user's workout
-
+        // currently, every new pin placement generates a new popup and closes the previous one
         // to place pin in map at coords rather than in center:
         L.marker([lat, lng])
             .addTo(map)
