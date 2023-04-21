@@ -212,6 +212,7 @@ if (navigator.geolocation)
         // bind handler to event so when user clicks on the map we can then display a marker there
         // later we can replace that with the data coming from the user's workout
         // currently, every new pin placement generates a new popup and closes the previous one
+        // Leaflet allows addition of class names enabling the customization of the popup element; e.g., a green popup border for running exercises sessions and an orange one for cycling
         // to place pin in map at coords rather than in center:
         L.marker([lat, lng])
             .addTo(map)
