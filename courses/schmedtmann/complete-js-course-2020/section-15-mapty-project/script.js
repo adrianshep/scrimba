@@ -214,9 +214,10 @@ if (navigator.geolocation)
         // currently, every new pin placement generates a new popup and closes the previous one
         // Leaflet allows addition of class names enabling the customization of the popup element; e.g., a green popup border for running exercises sessions and an orange one for cycling
         // to place pin in map at coords rather than in center:
-        // .marker creates the marker
         L.marker([lat, lng])
+        // .marker creates the marker
             .addTo(map)
+            // adds the marker to the map
             .bindPopup('workout')
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
