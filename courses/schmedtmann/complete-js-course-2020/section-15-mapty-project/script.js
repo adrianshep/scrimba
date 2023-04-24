@@ -221,7 +221,12 @@ if (navigator.geolocation)
             // .bindPopup('workout')
             // creates a popup and binds it to the marker, passing in string
             // instead, we can pass in L.popup() and pass into that a few options
-            .bindPopup(L.popup())
+            // Leaflet documentation: .popup() allows for optional options object
+            // maxWidth and minWidth allow popup to maintain a nice size
+            .bindPopup(L.popup({
+                maxWidth: 250,
+                minWidth: 100
+            }))
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
         // we can't simply use the add event listener method we have been previously
