@@ -223,9 +223,11 @@ if (navigator.geolocation)
             // instead, we can pass in L.popup() and pass into that a few options
             // Leaflet documentation: .popup() allows for optional options object
             // maxWidth and minWidth allow popup to maintain a nice size
+            // autoClose closes a popup whenever a new one opens; change default true to false to suspend
             .bindPopup(L.popup({
                 maxWidth: 250,
-                minWidth: 100
+                minWidth: 100,
+                autoClose: false
             }))
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
