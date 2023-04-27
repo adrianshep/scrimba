@@ -225,11 +225,13 @@ if (navigator.geolocation)
             // maxWidth and minWidth allow popup to maintain a nice size
             // autoClose closes a popup whenever a new one opens; change default true to false to suspend
             // closeOnClick prevents popups from closing whenever the user clicks on the map
+            // className -- use to assign any CSS class name
             .bindPopup(L.popup({
                 maxWidth: 250,
                 minWidth: 100,
                 autoClose: false,
-                closeOnClick: false
+                closeOnClick: false,
+                className: 'running-popup'
             }))
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
