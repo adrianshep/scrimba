@@ -232,7 +232,10 @@ if (navigator.geolocation)
                 autoClose: false,
                 closeOnClick: false,
                 className: 'running-popup'
-            }))
+                })
+            )
+            // to set text in the popup:
+            .setPopupContent('Workout')
             .openPopup();
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
         // we can't simply use the add event listener method we have been previously
