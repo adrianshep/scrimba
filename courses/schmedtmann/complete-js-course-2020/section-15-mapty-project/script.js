@@ -245,6 +245,9 @@ if (navigator.geolocation)
         // this is a method not coming from JavaScript, but from Leaflet
         // add Leaflet event listener
         map.on('click', function(mapEvent) {
+            // take the form classList and remove the class of 'hidden'
+            form.classList.remove('hidden')
+
             // console.log(map);
             // event object contains latlng which are the coordinates of the point on the map that was clicked
             const { lat, lng } = mapEvent.latlng;            
