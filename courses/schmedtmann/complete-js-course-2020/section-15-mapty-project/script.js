@@ -248,6 +248,8 @@ if (navigator.geolocation)
             // take the form classList and remove the class of 'hidden'
             form.classList.remove('hidden')
             // now user clicking on map can edit form appearing to left of map
+            inputDistance.focus();
+            // to improve user experience, places cursor in distance field
 
             // console.log(map);
             // event object contains latlng which are the coordinates of the point on the map that was clicked
