@@ -263,6 +263,25 @@ if (navigator.geolocation)
         }
     );
 
+    form.addEventListener('submit', function() {
+        // display marker
+        console.log(mapEvent);
+        const { lat, lng } = mapEvent.latlng;
+        L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup(L.popup({
+                maxWidth: 250,
+                minWidth: 100,
+                autoClose: false,
+                closeOnClick: false,
+                className: 'running-popup'
+                })
+            )
+            // to set text in the popup:
+            .setPopupContent('Workout')
+            .openPopup();
+    });
+
 // with other.js included as a script in index.html, we should be able to access the firstName variable:
 console.log(firstName);
 // logs 'Jonas'
