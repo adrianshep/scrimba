@@ -11,6 +11,8 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+// place here to create global variable:
+let map;
 
 /* Project Planning
 
@@ -186,7 +188,8 @@ if (navigator.geolocation)
 
         const coords = [latitude, longitude];
 
-        const map = L.map('map').setView(coords, 13);
+        // remove const from map defining it as let above:
+        map = L.map('map').setView(coords, 13);
         // console.log(map);
         // shows on method we are now using as an event listener
         // internals of Leaflet Library show that:
