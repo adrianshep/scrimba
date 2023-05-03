@@ -12,7 +12,7 @@ const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
 // place here to create global variable:
-let map;
+let map, mapEvent;
 
 /* Project Planning
 
@@ -247,7 +247,10 @@ if (navigator.geolocation)
         // instead, we use something similar available in the Leaflet Library.
         // this is a method not coming from JavaScript, but from Leaflet
         // add Leaflet event listener
-        map.on('click', function(mapEvent) {
+        // handling clicks on map
+        // change mapEvent to mapE
+        map.on('click', function(mapE) {
+            mapEvent = mapE;
             // take the form classList and remove the class of 'hidden'
             form.classList.remove('hidden')
             // now user clicking on map can edit form appearing to left of map
