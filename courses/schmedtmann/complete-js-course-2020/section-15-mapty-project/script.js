@@ -272,6 +272,10 @@ if (navigator.geolocation)
     form.addEventListener('submit', function(e) {
         // to keep page from reloading every time upon form enter
         e.preventDefault();
+        
+        // clear input fields
+        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+
         // display marker
         console.log(mapEvent);
         const { lat, lng } = mapEvent.latlng;
