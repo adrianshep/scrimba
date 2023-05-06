@@ -294,6 +294,10 @@ if (navigator.geolocation)
             .openPopup();
     });
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
+        inputType.addEventListener('change', function() {
+        inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
+        inputCadence.closest('.form__row').classList.toggle('form__row--hidden')
+    });
 
 // with other.js included as a script in index.html, we should be able to access the firstName variable:
 console.log(firstName);
