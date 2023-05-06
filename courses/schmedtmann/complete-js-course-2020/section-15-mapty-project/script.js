@@ -293,6 +293,7 @@ if (navigator.geolocation)
             .setPopupContent('Workout')
             .openPopup();
     });
+        // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
 
 // with other.js included as a script in index.html, we should be able to access the firstName variable:
 console.log(firstName);
