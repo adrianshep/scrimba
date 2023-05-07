@@ -320,3 +320,8 @@ latitude: 37.0475008
 longitude: -7.8381056
 speed: null
 */
+
+
+// Project Architecture
+// one of the most important aspects of any architecture is the decision as to how to store the data
+// data is the most fundamental part of any application -- without data there is no application
