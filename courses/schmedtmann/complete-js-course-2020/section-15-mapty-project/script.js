@@ -325,3 +325,6 @@ speed: null
 // Project Architecture
 // one of the most important aspects of any architecture is the decision as to how to store the data
 // data is the most fundamental part of any application -- without data there is no application
+// in this case, the data we need to store comes from the user stories:
+// log my running workouts story needs to store location, distance, time, pace and steps per minute
+// log my cycling workouts needs to store locaiton, distance, time, speed and elevation gain
