@@ -328,3 +328,6 @@ speed: null
 // in this case, the data we need to store comes from the user stories:
 // log my running workouts story needs to store location, distance, time, pace and steps per minute
 // log my cycling workouts needs to store locaiton, distance, time, speed and elevation gain
+// we will design our classes so they can create objects that will hold this kind of data -- the best way of designing the classes to fit all our user stories
+// big parent class Workout
+// will hold distance, duration (time), coords (location)
