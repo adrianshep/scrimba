@@ -330,4 +330,5 @@ speed: null
 // log my cycling workouts needs to store locaiton, distance, time, speed and elevation gain
 // we will design our classes so they can create objects that will hold this kind of data -- the best way of designing the classes to fit all our user stories
 // big parent class Workout
-// will hold distance, duration (time), coords (location)
+// will hold distance, duration (time), coords (location) as these values are common to both running and cycling activities
+// values specific to running or cycling will be held in smaller child classes: cadence and pace for Running; elevation gain and speed for Cycling
