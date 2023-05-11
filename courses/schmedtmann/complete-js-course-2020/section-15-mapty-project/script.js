@@ -332,3 +332,9 @@ speed: null
 // big parent class Workout
 // will hold distance, duration (time), coords (location) as these values are common to both running and cycling activities
 // values specific to running or cycling will be held in smaller child classes: cadence and pace for Running; elevation gain and speed for Cycling
+// the same will be true for methods
+// diagramming of project architecture is common to object-oriented programming
+// usually, each class is represented by a box
+// in its top part will be the properties
+// in its bottom, the methods
+// each class will have more than just the constructor method
