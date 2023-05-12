@@ -338,3 +338,5 @@ speed: null
 // in its top part will be the properties
 // in its bottom, the methods
 // each class will have more than just the constructor method
+// to structure the code we've created to handle the events so far, we will create a big class called App that will hold all these functions as methods:
+// loading the page, receiving a position from the Geolocation API (not an event in the traditional sense handled by an event listener, but still an event), click on the map, toggling input between Running and Cycling, submitting a form
