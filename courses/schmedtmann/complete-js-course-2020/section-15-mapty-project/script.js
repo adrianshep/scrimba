@@ -343,3 +343,4 @@ speed: null
 
 // Class App
 // loading the page will trigger the constructor of the Class App object
+// we get the current position of the user through the Geolocation API
