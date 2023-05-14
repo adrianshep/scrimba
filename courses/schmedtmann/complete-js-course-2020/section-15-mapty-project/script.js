@@ -342,6 +342,9 @@ speed: null
 // loading the page, receiving a position from the Geolocation API (not an event in the traditional sense handled by an event listener, but still an event), click on the map, toggling input between Running and Cycling, submitting a form
 
 // Class App
+// functions that will be in it as methods:
 // loading the page will trigger the constructor of the Class App object
 // we get the current position of the user through the Geolocation API
 // as soon as we have user's position, we load the map based on it
+// when we click on the map, we will trigger the Show Form method
+
