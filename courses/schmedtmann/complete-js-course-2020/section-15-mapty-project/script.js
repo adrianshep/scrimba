@@ -347,4 +347,4 @@ speed: null
 // we get the current position of the user through the Geolocation API
 // as soon as we have user's position, we load the map based on it
 // when we click on the map, we will trigger the Show Form method
-
+// as we change the input, we want a method called Toggle Elevation Field
