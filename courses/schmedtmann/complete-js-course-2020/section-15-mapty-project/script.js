@@ -348,3 +348,8 @@ speed: null
 // as soon as we have user's position, we load the map based on it
 // when we click on the map, we will trigger the Show Form method
 // as we change the input, we want a method called Toggle Elevation Field
+// most important one will be the event of submitting the form
+// this new workout method will be the heart of the entire class, because it will create new Running or Cycling objects
+// these objects will be built based on the data coming in from the form.
+// as the user keeps adding Running or Cycling workouts, a new object will be created for each of the workouts
+// each of them will then be stored in a Workouts Array
