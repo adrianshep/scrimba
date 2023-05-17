@@ -353,3 +353,5 @@ speed: null
 // these objects will be built based on the data coming in from the form.
 // as the user keeps adding Running or Cycling workouts, a new object will be created for each of the workouts
 // each of them will then be stored in a Workouts Array
+// this structure has everything related to building the application itself, organized into one neat block of data and functionality
+// having a class that contains all the data and methods related to an application is a common thing in simple JS applications like this one
