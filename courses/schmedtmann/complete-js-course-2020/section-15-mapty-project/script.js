@@ -355,3 +355,4 @@ speed: null
 // each of them will then be stored in a Workouts Array
 // this structure has everything related to building the application itself, organized into one neat block of data and functionality
 // having a class that contains all the data and methods related to an application is a common thing in simple JS applications like this one
+// if the application is a bit more complex, we can divide this architecture further and create one class that would only be concerned with the user interface, and one class for the business logic, logic that works only with the underlying data
