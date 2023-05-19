@@ -356,3 +356,7 @@ speed: null
 // this structure has everything related to building the application itself, organized into one neat block of data and functionality
 // having a class that contains all the data and methods related to an application is a common thing in simple JS applications like this one
 // if the application is a bit more complex, we can divide this architecture further and create one class that would only be concerned with the user interface, and one class for the business logic, logic that works only with the underlying data
+// in this case, we can keep things simple, but still separate concerns in a logical way, with the application in one self-contained block and then the classes that are only concerned about the data
+// we will also be able to protect all of these methods so they are nicely encapsulated and inaccessible from anywhere else in the code
+// that's the reason for the underscores preceding all the method names:
+// _getPosition(), _loadMap(position), _showform(), _toggleElevationField(), _newWorkout()
