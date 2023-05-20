@@ -14,6 +14,21 @@ const inputElevation = document.querySelector('.form__input--elevation');
 // place here to create global variable:
 let map, mapEvent;
 
+// implementing Class App
+class App {
+    constructor() {}
+
+    _getPosition() {}
+
+    _loadMap() {}
+
+    _showForm() {}
+
+    _toggleElevationField() {}
+
+    _newWorkout() {}
+}
+
 /* Project Planning
 
 1. User Stories
