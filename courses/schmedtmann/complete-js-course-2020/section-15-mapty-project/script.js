@@ -22,6 +22,12 @@ class App {
     _getPosition() {}
     if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(
+        
+        function() {
+            alert('Could not get your position')
+        }
+    );
+    _loadMap() {
         function(position) {
             console.log(position);
         const { latitude } = position.coords;
@@ -52,12 +58,7 @@ class App {
             const { lat, lng } = mapEvent.latlng;
         });
         }, 
-        function() {
-            alert('Could not get your position')
-        }
-    );
-
-    _loadMap() {}
+    }
 
     _showForm() {}
 
