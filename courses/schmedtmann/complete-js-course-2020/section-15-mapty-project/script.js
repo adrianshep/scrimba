@@ -19,17 +19,14 @@ let map, mapEvent;
 class App {
     constructor() {}
 
-    _getPosition() {}
+     _getPosition() {
     if (navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(
-        
-        function() {
+    navigator.geolocation.getCurrentPosition(this._loadMap, function() {
             alert('Could not get your position')
-        }
-    );
-    _loadMap() {
-        function(position) {
-            console.log(position);
+        });
+    }
+    
+    _loadMap(position) {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         const coords = [latitude, longitude];
