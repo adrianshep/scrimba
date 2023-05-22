@@ -17,9 +17,11 @@ let map, mapEvent;
 // refactoring code to hew to project architecture:
 // implementing Class App
 class App {
-    constructor() {}
+    constructor() {
+        this._getPosition();
+    }
 
-     _getPosition() {
+    _getPosition() {
     if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(this._loadMap, function() {
             alert('Could not get your position')
@@ -63,6 +65,16 @@ class App {
 
     _newWorkout() {}
 }
+
+// all above is but a blueprint
+// to make the application work, we need to create an object:
+
+const app = new App();
+// app._getPosition();
+// so code will get executed right at the point where the application loads
+// but would be a lot cleaner if we could do this inside the class
+// because constructor is also executed immediately as the page loads, we can simply move getPosition into the constructor at the top
+
 
 /* Project Planning
 
