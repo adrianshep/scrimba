@@ -16,7 +16,13 @@ let map, mapEvent;
 
 // refactoring code to hew to project architecture:
 // implementing Class App
+// we want everything related to our application, including the map, right in the App class, so we're going to define the map and map event as properties of the object
+// we will use a private class field
 class App {
+    #map;
+    #mapEvent;
+    // both now become private instance properties that are present in all the instances created through this class
+
     constructor() {
         this._getPosition();
     }
