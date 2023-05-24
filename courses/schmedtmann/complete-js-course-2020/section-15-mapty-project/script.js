@@ -38,31 +38,19 @@ class App {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         const coords = [latitude, longitude];
-        map = L.map('map').setView(coords, 13);
+        this.#map = L.map('map').setView(coords, 13);
+        // now need to use this.#map because this is now like a property that is defined on the object itself
         L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        }).addTo(this.#map);
 
-        L.marker([lat, lng])
-            .addTo(map)
-            .bindPopup(L.popup({
-                maxWidth: 250,
-                minWidth: 100,
-                autoClose: false,
-                closeOnClick: false,
-                className: 'running-popup'
-                })
-            )
-            .setPopupContent('Workout')
-            .openPopup();
-
-        map.on('click', function(mapE) {
-            mapEvent = mapE;
+        // handling clicks on map
+        this.#map.on('click', function(mapE) {
+            this.#mapEvent = mapE;
             form.classList.remove('hidden')
             inputDistance.focus();
             const { lat, lng } = mapEvent.latlng;
         });
-        }, 
     }
 
     _showForm() {}
