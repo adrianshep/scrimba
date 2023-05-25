@@ -29,7 +29,7 @@ class App {
 
     _getPosition() {
     if (navigator.geolocation)
-    navigator.geolocation.getCurrentPosition(this._loadMap, function() {
+    navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function() {
             alert('Could not get your position')
         });
     }
@@ -39,7 +39,11 @@ class App {
         const { longitude } = position.coords;
         const coords = [latitude, longitude];
         this.#map = L.map('map').setView(coords, 13);
-        // now need to use this.#map because this is now like a property that is defined on the object itself
+        // need to use this.#map because this is now like a property that is defined on the object itself
+        // we get error cannot set property #map of undefined
+        // loadMap method treated like regular function call, not a method call, since it is being called by a callback function
+        // in a regular funciton all, this kw is set to undefined
+        // solution is to manually bind the kw to whatever we need: (this._loadMap.bind(this))
         L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.#map);
