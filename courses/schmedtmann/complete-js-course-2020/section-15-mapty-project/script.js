@@ -23,8 +23,41 @@ class App {
     #mapEvent;
     // both now become private instance properties that are present in all the instances created through this class
 
+    // event listeners should be inside the class in the constructor method, which gets called automatically when the script loads
+    // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
         this._getPosition();
+
+        form.addEventListener('submit', function(e) {
+            // to keep page from reloading every time upon form enter
+            e.preventDefault();
+    
+            // clear input fields
+            inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+    
+            // display marker
+            console.log(mapEvent);
+            const { lat, lng } = mapEvent.latlng;
+            L.marker([lat, lng])
+                .addTo(map)
+                .bindPopup(L.popup({
+                    maxWidth: 250,
+                    minWidth: 100,
+                    autoClose: false,
+                    closeOnClick: false,
+                    className: 'running-popup'
+                    })
+                )
+                // to set text in the popup:
+                .setPopupContent('Workout')
+                .openPopup();
+        });
+        // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
+        // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
+        inputType.addEventListener('change', function() {
+            inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
+            inputCadence.closest('.form__row').classList.toggle('form__row--hidden')
+        });
     }
 
     _getPosition() {
@@ -33,7 +66,7 @@ class App {
             alert('Could not get your position')
         });
     }
-    
+
     _loadMap(position) {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
@@ -44,6 +77,7 @@ class App {
         // loadMap method treated like regular function call, not a method call, since it is being called by a callback function
         // in a regular funciton all, this kw is set to undefined
         // solution is to manually bind the kw to whatever we need: (this._loadMap.bind(this))
+        // this kw now points to the current object
         L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(this.#map);
@@ -72,6 +106,7 @@ const app = new App();
 // so code will get executed right at the point where the application loads
 // but would be a lot cleaner if we could do this inside the class
 // because constructor is also executed immediately as the page loads, we can simply move getPosition into the constructor at the top
+
 
 
 /* Project Planning
@@ -106,11 +141,9 @@ As [type of user (who?)], I want [an action (what?)] so that [a benefit (why?)]
 
 4) As a user, I also want to see all my workouts on a map so I can easily check where I work out the most.
 
-5) As a user, I want to see all my workouts when I leave the app, and come back later, so that I can keep using the app over time.
-
+5) As a user, I want to see all my workouts when I leave the app and come back later, so that I can keep using the app over time.
 
 User Stories (summarized)
-
 1) Log my running workouts with location, distance, time, pace and steps per minute
 
 2) Log my cycling workouts with location, distance, time, speed and elevation gain
@@ -136,7 +169,7 @@ Features
 
 5) (User Story 4) Display all workouts in the map
 
-6) (User Story 5) Store workout data in the browser using local storage API
+6) (User Story 5) Store workout data in the browser with an API called local storage
 - real world applications use data storage accounts
 - since this is a very simple application, we'll store data in the browser
 - whenever the user comes back to the page, we will read the data that was saved in a local storage and then display it both on the map and also on the list
@@ -190,7 +223,9 @@ start with page loads
 -  whenever the user clicks on a workout in the list, the map will move to that workout's location
 - event handler on the list will trigger this process
 
-Keep in mind that the flow chart has nothing to do yet with the implementation itself -- this is just how the program is going to work. We might even implement it in some language other than JavaScript.
+Keep in mind that the flow chart has nothing to do yet with the implementation itself -- this is just how the program is going to work. 
+
+We might even implement it in some language other than JavaScript.
 
 Only what our program should do, not how it does it -- that's more specific and actually for the architecture.
 
@@ -230,31 +265,30 @@ if (navigator.geolocation)
         // not 100% accurate, but we can work with them
         // ultimately, want to load and center the map on this position
         // Google Maps for now:
-        // console.log(`https://www.google.com/maps/@${latitude},@${longitude}`);
-        },
+        // console.log(`https://www.google.com/maps/@${latitude},@${longitude}`); 
         
         // Leaflet starter code:
         // map is id name of HTML element where map will be displayed
         // whatever id name used in HMTL, must be passed into this function:
         // L is main function that Leaflet gives us as an entry point, kind of a namespace
         // L has a few methods:
-        // map method
         // - map method
         // - tile layer -- define tiles of map
         // - display markers
         // L in console shows we have access to it
         // - it is a global variable that we can access from all the other scripts
+        // we've never previously worked with multiple scripts
         // need to replace coordinates in default code:
 
         const coords = [latitude, longitude];
-
+        
         // remove const from map defining it as let above:
         map = L.map('map').setView(coords, 13);
         // console.log(map);
         // shows on method we are now using as an event listener
         // internals of Leaflet Library show that:
-        // it uses the prototype chain very heavily
-        // it uses underscore convention to make methods and properties protected
+        // use the prototype chain very heavily
+        // use underscore convention to make methods and properties protected
         // indicates to us that we should not manipulate those manually
 
         // the second value -- 13 -- is the zoom level
@@ -319,53 +353,28 @@ if (navigator.geolocation)
 
             // console.log(map);
             // event object contains latlng which are the coordinates of the point on the map that was clicked
-            const { lat, lng } = mapEvent.latlng;            
+            const { lat, lng } = mapEvent.latlng;
         });
-},
-            
+        }, 
         // error:
         function() {
             alert('Could not get your position')
         }
     );
 
-    form.addEventListener('submit', function(e) {
-        // to keep page from reloading every time upon form enter
-        e.preventDefault();
-        
-        // clear input fields
-        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
 
-        // display marker
-        console.log(mapEvent);
-        const { lat, lng } = mapEvent.latlng;
-        L.marker([lat, lng])
-            .addTo(map)
-            .bindPopup(L.popup({
-                maxWidth: 250,
-                minWidth: 100,
-                autoClose: false,
-                closeOnClick: false,
-                className: 'running-popup'
-                })
-            )
-            // to set text in the popup:
-            .setPopupContent('Workout')
-            .openPopup();
-    });
-        // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
-        // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
-        inputType.addEventListener('change', function() {
-        inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
-        inputCadence.closest('.form__row').classList.toggle('form__row--hidden')
-    });
 
+// two problems:
+// trying to use two variables not existing in currrenty scope -- map and mapEvent
 // with other.js included as a script in index.html, we should be able to access the firstName variable:
 console.log(firstName);
 // logs 'Jonas'
+// firstName is a global variable
 // any variable that is global in any script will be available to other scripts as long as it appears after that script in the index.html inclusion list
 // so script.js has access to all the global variables in other.js and leaflet.js, but other.js, for example, does not have access to anything from script.js because script.js appears after other.js in the index.html inclusion list
 // for example, month is not defined, for the reason that by the time this other.js script is executed, script.js has not yet been loaded. Therefore it doesn't find this month variable anywhere in the global scope.
+
+// ----------
 
 // if browser popup window asking permission to provide location is clicked 'block,' that will trigger the error function and display alert 'Could not get your position'
 // when location permission popup is clicked 'allow,' a position object is returned:
