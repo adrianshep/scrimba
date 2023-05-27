@@ -74,7 +74,8 @@ class App {
 
     _toggleElevationField() {}
 
-    _newWorkout() {
+    _newWorkout(e) {
+        // refactored code should go here because submitting form for newWorkout will create a new workout, which is what method does
                     // to keep page from reloading every time upon form enter
                     e.preventDefault();
     
@@ -82,10 +83,9 @@ class App {
                     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
             
                     // display marker
-                    console.log(mapEvent);
                     const { lat, lng } = mapEvent.latlng;
                     L.marker([lat, lng])
-                        .addTo(map)
+                        .addTo(this.#map)
                         .bindPopup(L.popup({
                             maxWidth: 250,
                             minWidth: 100,
