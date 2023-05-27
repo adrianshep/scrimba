@@ -29,28 +29,7 @@ class App {
         this._getPosition();
 
         form.addEventListener('submit', function(e) {
-            // to keep page from reloading every time upon form enter
-            e.preventDefault();
-    
-            // clear input fields
-            inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
-    
-            // display marker
-            console.log(mapEvent);
-            const { lat, lng } = mapEvent.latlng;
-            L.marker([lat, lng])
-                .addTo(map)
-                .bindPopup(L.popup({
-                    maxWidth: 250,
-                    minWidth: 100,
-                    autoClose: false,
-                    closeOnClick: false,
-                    className: 'running-popup'
-                    })
-                )
-                // to set text in the popup:
-                .setPopupContent('Workout')
-                .openPopup();
+
         });
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
@@ -95,7 +74,30 @@ class App {
 
     _toggleElevationField() {}
 
-    _newWorkout() {}
+    _newWorkout() {
+                    // to keep page from reloading every time upon form enter
+                    e.preventDefault();
+    
+                    // clear input fields
+                    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+            
+                    // display marker
+                    console.log(mapEvent);
+                    const { lat, lng } = mapEvent.latlng;
+                    L.marker([lat, lng])
+                        .addTo(map)
+                        .bindPopup(L.popup({
+                            maxWidth: 250,
+                            minWidth: 100,
+                            autoClose: false,
+                            closeOnClick: false,
+                            className: 'running-popup'
+                            })
+                        )
+                        // to set text in the popup:
+                        .setPopupContent('Workout')
+                        .openPopup();
+    }
 }
 
 // all above is but a blueprint
