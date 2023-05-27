@@ -27,10 +27,7 @@ class App {
     // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
         this._getPosition();
-
-        form.addEventListener('submit', function(e) {
-
-        });
+        form.addEventListener('submit', this._newWorkout);
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
         inputType.addEventListener('change', function() {
