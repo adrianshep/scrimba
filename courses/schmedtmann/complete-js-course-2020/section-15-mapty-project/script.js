@@ -27,7 +27,11 @@ class App {
     // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
         this._getPosition();
-        form.addEventListener('submit', this._newWorkout);
+        // event handler function will always have this kw attached to DOM element
+        // here this will point to form and no longer to the App object
+        // form.addEventListener('submit', this._newWorkout);
+        // fix with bind:
+        form.addEventListener('submit', this._newWorkout.bind(this));
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
         inputType.addEventListener('change', function() {
