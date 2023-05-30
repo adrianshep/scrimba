@@ -64,14 +64,15 @@ class App {
 
         // handling clicks on map
         this.#map.on('click', function(mapE) {
-            this.#mapEvent = mapE;
-            form.classList.remove('hidden')
-            inputDistance.focus();
-            const { lat, lng } = mapEvent.latlng;
+
         });
     }
 
-    _showForm() {}
+    _showForm() {
+        this.#mapEvent = mapE;
+        form.classList.remove('hidden')
+        inputDistance.focus();
+    }
 
     _toggleElevationField() {}
 
