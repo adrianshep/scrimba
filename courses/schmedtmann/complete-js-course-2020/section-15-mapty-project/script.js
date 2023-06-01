@@ -83,7 +83,7 @@ class App {
                     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
             
                     // display marker
-                    const { lat, lng } = mapEvent.latlng;
+                    const { lat, lng } = this.#mapEvent.latlng;
                     L.marker([lat, lng])
                         .addTo(this.#map)
                         .bindPopup(L.popup({
