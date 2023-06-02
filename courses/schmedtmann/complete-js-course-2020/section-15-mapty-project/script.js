@@ -35,8 +35,6 @@ class App {
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
         inputType.addEventListener('change', function() {
-            inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
-            inputCadence.closest('.form__row').classList.toggle('form__row--hidden')
         });
     }
 
@@ -72,7 +70,11 @@ class App {
         inputDistance.focus();
     }
 
-    _toggleElevationField() {}
+    // every small piece of functionality that is in our application we now want to be its own function
+    _toggleElevationField() {
+        inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
+            inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
+    }
 
     _newWorkout(e) {
         // refactored code should go here because submitting form for newWorkout will create a new workout, which is what method does
