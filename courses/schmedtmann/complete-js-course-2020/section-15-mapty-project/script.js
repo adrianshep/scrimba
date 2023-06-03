@@ -34,8 +34,7 @@ class App {
         form.addEventListener('submit', this._newWorkout.bind(this));
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
-        inputType.addEventListener('change', function() {
-        });
+        inputType.addEventListener('change', this._toggleElevationField);
     }
 
     _getPosition() {
