@@ -11,8 +11,10 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
-// place here to create global variable:
-let map, mapEvent;
+// parent class that will take in the data common to both types of workout
+class Workout {
+    constructor()
+}
 
 // refactoring code to hew to project architecture:
 // implementing Class App
