@@ -36,7 +36,8 @@ class App {
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
         inputType.addEventListener('change', this._toggleElevationField);
     }
-
+    // constructor now gets the currentPosition then adds the two event listeners to the form and the input type element
+    
     _getPosition() {
     if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function() {
