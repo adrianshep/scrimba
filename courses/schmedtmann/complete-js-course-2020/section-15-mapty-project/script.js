@@ -13,6 +13,9 @@ const inputElevation = document.querySelector('.form__input--elevation');
 
 // parent class that will take in the data common to both types of workout
 class Workout {
+    // date on which the object was created -- the workout date:
+    date = new Date();
+
     constructor(coords, distance, duration) {
         this.coords = coords;
         this.distance = distance; 
