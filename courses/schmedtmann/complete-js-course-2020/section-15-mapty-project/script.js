@@ -15,6 +15,9 @@ const inputElevation = document.querySelector('.form__input--elevation');
 class Workout {
     // date on which the object was created -- the workout date:
     date = new Date();
+    // best practice to use a library to create a unique identifier for each object in an array
+    // in this case, here is a quick workaround
+    id = (new Date() + '').slice(-10);
 
     constructor(coords, distance, duration) {
         this.coords = coords;
