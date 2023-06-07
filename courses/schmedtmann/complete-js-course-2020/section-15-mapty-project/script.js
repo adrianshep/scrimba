@@ -26,6 +26,12 @@ class Workout {
         this.duration = duration;
         // in minutes
 }
+// we will never directly create a workout
+// instead, we will always create a running or cycling object
+
+class Running extends Workout {}
+
+class Cycling extends Workout {}
 
 // refactoring code to hew to project architecture:
 // implementing Class App
