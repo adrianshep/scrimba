@@ -29,7 +29,10 @@ class Workout {
 // we will never directly create a workout
 // instead, we will always create a running or cycling object
 
-class Running extends Workout {}
+class Running extends Workout {
+    constructor(coords, distance, durations, cadence)
+    // should take in same data as parent class plus additional properties we want to set in running object (cadence)
+}
 
 class Cycling extends Workout {}
 
