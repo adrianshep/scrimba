@@ -37,6 +37,11 @@ class Running extends Workout {
         this.cadence = cadence;
         // the incoming cadence
     }
+    
+    calcPace() {
+        // min/km
+        this.pace = this.duration / this.distance;
+    }
 }
 
 class Cycling extends Workout {
