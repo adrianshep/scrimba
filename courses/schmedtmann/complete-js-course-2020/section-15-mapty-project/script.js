@@ -39,7 +39,12 @@ class Running extends Workout {
     }
 }
 
-class Cycling extends Workout {}
+class Cycling extends Workout {
+    constructor(coords, distance, duration, elevationGain){
+        super(coords, distance, duration);
+        this.elevationGain = elevationGain;
+    }
+}
 
 // refactoring code to hew to project architecture:
 // implementing Class App
