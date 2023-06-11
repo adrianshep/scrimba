@@ -36,13 +36,16 @@ class Running extends Workout {
         // initializes the this kw
         this.cadence = cadence;
         // the incoming cadence
+        // calling this method here instead of returning its data below:
+        this.calcPace();
     }
-    
+
     calcPace() {
         // min/km
         this.pace = this.duration / this.distance;
         // good idea to return this data in case we actually need it
-        return this.pace;
+        // return this.pace;
+        // however, instead of relying on this return, we'll simply call the method above in the constructor
     }
 }
 
