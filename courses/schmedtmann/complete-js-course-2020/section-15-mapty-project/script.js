@@ -53,8 +53,18 @@ class Cycling extends Workout {
     constructor(coords, distance, duration, elevationGain){
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
+        this.calcSpeed();
+    }
+
+    calcSpeed() {
+        // km/h
+        //  convert duration from minutes to hours
+        this.speed = this.distance / (this.duration / 60);
     }
 }
+
+/////////////////////////////////////
+// APPLICATION ARCHITECTURE
 
 // refactoring code to hew to project architecture:
 // implementing Class App
