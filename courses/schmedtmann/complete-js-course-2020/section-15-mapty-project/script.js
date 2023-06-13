@@ -21,6 +21,7 @@ class Workout {
 
     constructor(coords, distance, duration) {
         this.coords = coords;
+        // [lat, lng]        
         this.distance = distance; 
         // in km
         this.duration = duration;
@@ -62,6 +63,9 @@ class Cycling extends Workout {
         this.speed = this.distance / (this.duration / 60);
     }
 }
+
+// testing out classes
+const run1 = new Running([39, -12], 5.2, 24, 178);
 
 /////////////////////////////////////
 // APPLICATION ARCHITECTURE
