@@ -17,7 +17,8 @@ class Workout {
     date = new Date();
     // best practice to use a library to create a unique identifier for each object in an array
     // in this case, here is a quick workaround
-    id = (new Date() + '').slice(-10);
+    // fixing ID:
+    id = (Date.now() + '').slice(-10);
 
     constructor(coords, distance, duration) {
         this.coords = coords;
