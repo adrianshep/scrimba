@@ -19,6 +19,8 @@ class Workout {
     // in this case, here is a quick workaround
     // fixing ID:
     id = (Date.now() + '').slice(-10);
+    // in the real world, many users will mean that two or more of them could create objects at the same time
+    // at that point, relying on the time to create IDs will become a really bad idea
 
     constructor(coords, distance, duration) {
         this.coords = coords;
