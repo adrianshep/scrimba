@@ -161,6 +161,23 @@ class App {
                         .setPopupContent('Workout')
                         .openPopup();
     }
+    
+    // get data from form
+
+    // check if data is valid
+
+    // if workout running, create running object
+
+    // if workout cycling, create cycling object
+
+    // add new object to workout array
+
+    // render workout on map as a marker
+
+    // render workout on list
+
+    // hide form and clear input fields
+    
 }
 
 // all above is but a blueprint
