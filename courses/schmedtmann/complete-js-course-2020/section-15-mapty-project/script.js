@@ -494,3 +494,8 @@ speed: null
 // we will also be able to protect all of these methods so they are nicely encapsulated and inaccessible from anywhere else in the code
 // that's the reason for the underscores preceding all the method names:
 // _getPosition(), _loadMap(position), _showform(), _toggleElevationField(), _newWorkout()
+
+// Architecture vs Flowchart
+// Architecture is about how we implement the project
+// it contains different methods and low level details
+// Flowchart is a high level overview of what we want to implement
