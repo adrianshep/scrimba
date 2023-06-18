@@ -173,10 +173,24 @@ class App {
     // add new object to workout array
 
     // render workout on map as a marker
+    const { lat, lng } = this.#mapEvent.latlng;
+        L.marker([lat, lng])
+            .addTo(map)
+            .bindPopup(L.popup({
+                maxWidth: 250,
+                minWidth: 100,
+                autoClose: false,
+                closeOnClick: false,
+                className: 'running-popup'
+                })
+            )
+            .setPopupContent('Workout')
+            .openPopup();
 
     // render workout on list
 
     // hide form and clear input fields
+    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
     
 }
 
