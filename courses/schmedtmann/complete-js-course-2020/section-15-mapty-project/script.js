@@ -3,14 +3,6 @@
 // prettier-ignore
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-const form = document.querySelector('.form');
-const containerWorkouts = document.querySelector('.workouts');
-const inputType = document.querySelector('.form__input--type');
-const inputDistance = document.querySelector('.form__input--distance');
-const inputDuration = document.querySelector('.form__input--duration');
-const inputCadence = document.querySelector('.form__input--cadence');
-const inputElevation = document.querySelector('.form__input--elevation');
-
 // parent class that will take in the data common to both types of workout
 class Workout {
     // date on which the object was created -- the workout date:
@@ -24,11 +16,12 @@ class Workout {
 
     constructor(coords, distance, duration) {
         this.coords = coords;
-        // [lat, lng]        
+        // [lat, lng]
         this.distance = distance; 
         // in km
         this.duration = duration;
         // in minutes
+    }
 }
 // we will never directly create a workout
 // instead, we will always create a running or cycling object
@@ -75,6 +68,14 @@ class Cycling extends Workout {
 /////////////////////////////////////
 // APPLICATION ARCHITECTURE
 
+const form = document.querySelector('.form');
+const containerWorkouts = document.querySelector('.workouts');
+const inputType = document.querySelector('.form__input--type');
+const inputDistance = document.querySelector('.form__input--distance');
+const inputDuration = document.querySelector('.form__input--duration');
+const inputCadence = document.querySelector('.form__input--cadence');
+const inputElevation = document.querySelector('.form__input--elevation');
+
 // refactoring code to hew to project architecture:
 // implementing Class App
 // we want everything related to our application, including the map, right in the App class, so we're going to define the map and map event as properties of the object
@@ -98,7 +99,7 @@ class App {
         inputType.addEventListener('change', this._toggleElevationField);
     }
     // constructor now gets the currentPosition then adds the two event listeners to the form and the input type element
-    
+
     _getPosition() {
     if (navigator.geolocation)
     navigator.geolocation.getCurrentPosition(this._loadMap.bind(this), function() {
@@ -138,31 +139,11 @@ class App {
     }
 
     _newWorkout(e) {
-        // refactored code should go here because submitting form for newWorkout will create a new workout, which is what method does
-                    // to keep page from reloading every time upon form enter
-                    e.preventDefault();
-    
-                    // clear input fields
-                    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
-            
-                    // display marker
-                    const { lat, lng } = this.#mapEvent.latlng;
-                    L.marker([lat, lng])
-                        .addTo(this.#map)
-                        .bindPopup(L.popup({
-                            maxWidth: 250,
-                            minWidth: 100,
-                            autoClose: false,
-                            closeOnClick: false,
-                            className: 'running-popup'
-                            })
-                        )
-                        // to set text in the popup:
-                        .setPopupContent('Workout')
-                        .openPopup();
+        e.preventDefault();
     }
-    
+
     // get data from form
+    const type = inputType.value;
 
     // check if data is valid
 
@@ -191,7 +172,6 @@ class App {
 
     // hide form and clear input fields
     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
-    
 }
 
 // all above is but a blueprint
@@ -401,36 +381,7 @@ if (navigator.geolocation)
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Map Marker
-        // bind handler to event so when user clicks on the map we can then display a marker there
-        // later we can replace that with the data coming from the user's workout
-        // currently, every new pin placement generates a new popup and closes the previous one
-        // Leaflet allows addition of class names enabling the customization of the popup element; e.g., a green popup border for running exercises sessions and an orange one for cycling
-        // to place pin in map at coords rather than in center:
-        L.marker([lat, lng])
-        // .marker creates the marker
-            .addTo(map)
-            // adds the marker to the map
-            // .bindPopup('workout')
-            // creates a popup and binds it to the marker, passing in string
-            // instead, we can pass in L.popup() and pass into that a few options
-            // Leaflet documentation: .popup() allows for optional options object
-            // maxWidth and minWidth allow popup to maintain a nice size
-            // autoClose closes a popup whenever a new one opens; change default true to false to suspend
-            // closeOnClick prevents popups from closing whenever the user clicks on the map
-            // className -- use to assign any CSS class name
-            .bindPopup(L.popup({
-                maxWidth: 250,
-                minWidth: 100,
-                autoClose: false,
-                closeOnClick: false,
-                className: 'running-popup'
-                })
-            )
-            // to set text in the popup:
-            .setPopupContent('Workout')
-            .openPopup();
-            // at this point, user clicking on map generates popup containing text 'Workout' and popups remain open
+
 
         // do we attach event listener to the whole map element? then we'd have no way of knowing the GPS coordinates of whatever location the user clicked on the map
         // we can't simply use the add event listener method we have been previously
@@ -525,6 +476,7 @@ speed: null
 // we will also be able to protect all of these methods so they are nicely encapsulated and inaccessible from anywhere else in the code
 // that's the reason for the underscores preceding all the method names:
 // _getPosition(), _loadMap(position), _showform(), _toggleElevationField(), _newWorkout()
+
 
 // Architecture vs Flowchart
 // Architecture is about how we implement the project
