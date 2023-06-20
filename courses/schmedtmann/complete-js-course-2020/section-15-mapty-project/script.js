@@ -68,6 +68,7 @@ class Cycling extends Workout {
 /////////////////////////////////////
 // APPLICATION ARCHITECTURE
 
+// moved declarations down from top of file for easier access:
 const form = document.querySelector('.form');
 const containerWorkouts = document.querySelector('.workouts');
 const inputType = document.querySelector('.form__input--type');
