@@ -145,6 +145,8 @@ class App {
 
     // get data from form
     const type = inputType.value;
+    // always comes as a string, so immediately convert that to a number:
+    const distance = +inputDistance.value;
 
     // check if data is valid
 
