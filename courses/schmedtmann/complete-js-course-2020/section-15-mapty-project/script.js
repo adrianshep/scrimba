@@ -147,6 +147,7 @@ class App {
     const type = inputType.value;
     // always comes as a string, so immediately convert that to a number:
     const distance = +inputDistance.value;
+    const duration = +inputDuration.value;
 
     // check if data is valid
 
