@@ -152,7 +152,10 @@ class App {
     // check if data is valid
 
     // if workout running, create running object
-
+    if(type === 'running') {
+        const cadence = +inputCadence.value;
+    }
+    
     // if workout cycling, create cycling object
 
     // add new object to workout array
