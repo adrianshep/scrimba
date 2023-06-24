@@ -148,8 +148,6 @@ class App {
     // always comes as a string, so immediately convert that to a number:
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
-
-    // check if data is valid
     
     // two separate if statements used here instead of an if else statement
     // if else not really used much anymore -- will see more and more of in modern JS
@@ -157,6 +155,8 @@ class App {
     // if workout running, create running object
     if(type === 'running') {
         const cadence = +inputCadence.value;
+        // check if data is valid
+        if(!Number.isFinite(distance)) return alert('Inputs have to be positive numbers!')
     }
     
     // if workout cycling, create cycling object
