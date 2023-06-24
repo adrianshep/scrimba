@@ -150,7 +150,10 @@ class App {
     const duration = +inputDuration.value;
 
     // check if data is valid
-
+    
+    // two separate if statements used here instead of an if else statement
+    // if else not really used much anymore -- will see more and more of in modern JS
+    
     // if workout running, create running object
     if(type === 'running') {
         const cadence = +inputCadence.value;
