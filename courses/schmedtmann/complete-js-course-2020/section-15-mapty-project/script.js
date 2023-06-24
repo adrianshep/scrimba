@@ -157,7 +157,10 @@ class App {
     }
     
     // if workout cycling, create cycling object
-
+    if(type === 'cycling') {
+        const elevation = +inputElevation.value;
+    }
+    
     // add new object to workout array
 
     // render workout on map as a marker
