@@ -161,6 +161,7 @@ class App {
         !Number.isFinite(duration) ||
         !Number.isFinite(cadence)
         return alert('Inputs have to be positive numbers!')
+        // check in block here and not above because above would require checking elevation, and only cadence or elevation can be defined at a particular moment in time
     }
     
     // if workout cycling, create cycling object
