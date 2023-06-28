@@ -138,8 +138,10 @@ class App {
         inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
             inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
     }
-
+    
     _newWorkout(e) {
+        const validInputs = (...inputs) => inputs.every(inp => Number.isFinite(inp));
+        
         e.preventDefault();
     }
 
