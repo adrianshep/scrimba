@@ -155,15 +155,17 @@ class App {
     // if else not really used much anymore -- will see more and more of in modern JS
     
     // if workout running, create running object
-    if(type === 'running') {
+        if(type === 'running') {
         const cadence = +inputCadence.value;
         // check if data is valid
-        if(
-        !Number.isFinite(distance) ||
-        !Number.isFinite(duration) ||
-        !Number.isFinite(cadence)
-        return alert('Inputs have to be positive numbers!')
+        if (
+        // !Number.isFinite(distance) ||
+        // !Number.isFinite(duration) ||
+        // !Number.isFinite(cadence)
         // check in block here and not above because above would require checking elevation, and only cadence or elevation can be defined at a particular moment in time
+        !validInputs(distance, duration, cadence)
+        )
+        return alert('Inputs have to be positive numbers!')
     }
     
     // if workout cycling, create cycling object
