@@ -167,10 +167,13 @@ class App {
         )
         return alert('Inputs have to be positive numbers!')
     }
-    
+
     // if workout cycling, create cycling object
     if(type === 'cycling') {
         const elevation = +inputElevation.value;
+
+    if (!validInputs(distance, duration, cadence))
+    return alert('Inputs have to be positive numbers!')
     }
     
     // add new object to workout array
