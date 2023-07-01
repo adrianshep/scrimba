@@ -164,7 +164,7 @@ class App {
         // !Number.isFinite(duration) ||
         // !Number.isFinite(cadence)
         // check in block here and not above because above would require checking elevation, and only cadence or elevation can be defined at a particular moment in time
-        !validInputs(distance, duration, cadence)
+        !validInputs(distance, duration, cadence) || !allPositive(distance, duration, cadence)
         )
         return alert('Inputs have to be positive numbers!')
     }
