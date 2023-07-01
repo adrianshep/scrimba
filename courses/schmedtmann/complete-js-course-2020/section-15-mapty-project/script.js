@@ -141,6 +141,7 @@ class App {
     
     _newWorkout(e) {
         const validInputs = (...inputs) => inputs.every(inp => Number.isFinite(inp));
+        const allPositive = (...inputs) => inputs.every(imp => inp > 0);
         
         e.preventDefault();
     }
