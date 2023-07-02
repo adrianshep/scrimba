@@ -151,6 +151,7 @@ class App {
     // always comes as a string, so immediately convert that to a number:
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
+    const { lat, lng } = this.#mapEvent.latlng;
     
     // two separate if statements used here instead of an if else statement
     // if else not really used much anymore -- will see more and more of in modern JS
@@ -180,7 +181,7 @@ class App {
     // add new object to workout array
 
     // render workout on map as a marker
-    const { lat, lng } = this.#mapEvent.latlng;
+    
         L.marker([lat, lng])
             .addTo(map)
             .bindPopup(L.popup({
