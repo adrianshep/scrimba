@@ -167,7 +167,9 @@ class App {
         // check in block here and not above because above would require checking elevation, and only cadence or elevation can be defined at a particular moment in time
         !validInputs(distance, duration, cadence) || !allPositive(distance, duration, cadence)
         )
-        return alert('Inputs have to be positive numbers!')
+        return alert('Inputs have to be positive numbers!');
+
+        const workout = new Running([lat, lng], distance, duration, cadence);
     }
     
     // if workout cycling, create cycling object
