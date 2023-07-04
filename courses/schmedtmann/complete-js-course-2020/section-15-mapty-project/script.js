@@ -85,7 +85,9 @@ class App {
     #map;
     #mapEvent;
     // both now become private instance properties that are present in all the instances created through this class
-
+    #workouts = [];
+    // using class fields specification which will become part of standard JS soon
+    
     // event listeners should be inside the class in the constructor method, which gets called automatically when the script loads
     // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
