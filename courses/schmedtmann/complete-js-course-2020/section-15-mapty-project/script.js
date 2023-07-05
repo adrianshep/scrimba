@@ -87,7 +87,7 @@ class App {
     // both now become private instance properties that are present in all the instances created through this class
     #workouts = [];
     // using class fields specification which will become part of standard JS soon
-    
+
     // event listeners should be inside the class in the constructor method, which gets called automatically when the script loads
     // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
@@ -140,11 +140,11 @@ class App {
         inputElevation.closest('.form__row').classList.toggle('form__row--hidden')
             inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
     }
-    
+
     _newWorkout(e) {
         const validInputs = (...inputs) => inputs.every(inp => Number.isFinite(inp));
         const allPositive = (...inputs) => inputs.every(imp => inp > 0);
-        
+
         e.preventDefault();
     }
 
@@ -154,12 +154,13 @@ class App {
     const distance = +inputDistance.value;
     const duration = +inputDuration.value;
     const { lat, lng } = this.#mapEvent.latlng;
-    
+    let workout;
+
     // two separate if statements used here instead of an if else statement
     // if else not really used much anymore -- will see more and more of in modern JS
-    
+
     // if workout running, create running object
-        if(type === 'running') {
+    if(type === 'running') {
         const cadence = +inputCadence.value;
         // check if data is valid
         if (
@@ -171,9 +172,10 @@ class App {
         )
         return alert('Inputs have to be positive numbers!');
 
-        const workout = new Running([lat, lng], distance, duration, cadence);
+        workout = new Running([lat, lng], distance, duration, cadence);
     }
-    
+ 
+    creating new workout duration data validity check
     // if workout cycling, create cycling object
     if(type === 'cycling') {
         const elevation = +inputElevation.value;
@@ -181,11 +183,12 @@ class App {
     if (!validInputs(distance, duration, cadence) || !allPositive(distance, duration))
     return alert('Inputs have to be positive numbers!')
     }
-    
+
     // add new object to workout array
+    this.#workouts.push(workout);
 
     // render workout on map as a marker
-    
+s
         L.marker([lat, lng])
             .addTo(map)
             .bindPopup(L.popup({
