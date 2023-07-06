@@ -174,7 +174,7 @@ class App {
 
         workout = new Running([lat, lng], distance, duration, cadence);
     }
- 
+ creating new workout pushing cycling workouts
     creating new workout duration data validity check
     // if workout cycling, create cycling object
     if(type === 'cycling') {
@@ -182,6 +182,8 @@ class App {
 
     if (!validInputs(distance, duration, cadence) || !allPositive(distance, duration))
     return alert('Inputs have to be positive numbers!')
+    
+    workout = new Cycling([lat, lng], distance, duration, elevation);
     }
 
     // add new object to workout array
