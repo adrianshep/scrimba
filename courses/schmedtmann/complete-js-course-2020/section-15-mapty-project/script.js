@@ -174,7 +174,7 @@ class App {
 
         workout = new Running([lat, lng], distance, duration, cadence);
     }
- creating new workout pushing cycling workouts
+ 
     creating new workout duration data validity check
     // if workout cycling, create cycling object
     if(type === 'cycling') {
@@ -182,7 +182,7 @@ class App {
 
     if (!validInputs(distance, duration, cadence) || !allPositive(distance, duration))
     return alert('Inputs have to be positive numbers!')
-    
+
     workout = new Cycling([lat, lng], distance, duration, elevation);
     }
 
@@ -190,24 +190,26 @@ class App {
     this.#workouts.push(workout);
 
     // render workout on map as a marker
-s
-        L.marker([lat, lng])
-            .addTo(map)
-            .bindPopup(L.popup({
-                maxWidth: 250,
-                minWidth: 100,
-                autoClose: false,
-                closeOnClick: false,
-                className: `${type}-popup`
-                })
-            )
-            .setPopupContent('Workout')
-            .openPopup();
 
     // render workout on list
 
     // hide form and clear input fields
     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+}
+
+renderWorkoutMarker() {
+    L.marker([lat, lng])
+    .addTo(map)
+    .bindPopup(L.popup({
+        maxWidth: 250,
+        minWidth: 100,
+        autoClose: false,
+        closeOnClick: false,
+        className: `${type}-popup`
+        })
+    )
+    .setPopupContent('Workout')
+    .openPopup();
 }
 
 // all above is but a blueprint
