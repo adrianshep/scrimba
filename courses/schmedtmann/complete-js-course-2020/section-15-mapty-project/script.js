@@ -199,7 +199,7 @@ class App {
 
 renderWorkoutMarker() {
     L.marker([lat, lng])
-    .addTo(map)
+    .addTo(this.#map)
     .bindPopup(L.popup({
         maxWidth: 250,
         minWidth: 100,
