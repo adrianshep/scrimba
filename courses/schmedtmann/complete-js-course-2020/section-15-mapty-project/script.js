@@ -190,6 +190,7 @@ class App {
     this.#workouts.push(workout);
 
     // render workout on map as a marker
+    this.renderWorkoutMarker(workout);
 
     // render workout on list
 
@@ -197,7 +198,7 @@ class App {
     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
 }
 
-renderWorkoutMarker() {
+renderWorkoutMarker(workout) {
     L.marker([lat, lng])
     .addTo(this.#map)
     .bindPopup(L.popup({
