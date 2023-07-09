@@ -209,7 +209,7 @@ renderWorkoutMarker(workout) {
         className: `${type}-popup`
         })
     )
-    .setPopupContent('Workout')
+    .setPopupContent(workout.distance)
     .openPopup();
 }
 
