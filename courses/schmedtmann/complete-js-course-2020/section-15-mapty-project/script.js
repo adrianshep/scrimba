@@ -199,7 +199,9 @@ class App {
 }
 
 renderWorkoutMarker(workout) {
-    L.marker([lat, lng])
+    // L.marker([lat, lng]) now throws error
+    // coords data has to come from the workout itself:
+    L.marker(workout.coords)
     .addTo(this.#map)
     .bindPopup(L.popup({
         maxWidth: 250,
