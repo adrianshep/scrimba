@@ -27,6 +27,8 @@ class Workout {
 // instead, we will always create a running or cycling object
 
 class Running extends Workout {
+    type = 'running';
+    
     constructor(coords, distance, duration, cadence){
     // should take in same data as parent class plus additional properties we want to set in running object (cadence)
         super(coords, distance, duration);
@@ -47,6 +49,8 @@ class Running extends Workout {
 }
 
 class Cycling extends Workout {
+    type = 'cycling';
+    
     constructor(coords, distance, duration, elevationGain){
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
