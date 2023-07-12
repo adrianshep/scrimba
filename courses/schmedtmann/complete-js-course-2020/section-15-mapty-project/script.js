@@ -50,7 +50,10 @@ class Running extends Workout {
 
 class Cycling extends Workout {
     type = 'cycling';
-    
+    // value "type" will now be a property available on all instances
+    // same as putting
+    // this.type = 'cycling' in constructor
+
     constructor(coords, distance, duration, elevationGain){
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
