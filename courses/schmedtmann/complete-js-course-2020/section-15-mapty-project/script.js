@@ -197,15 +197,16 @@ class App {
     this.#workouts.push(workout);
 
     // render workout on map as a marker
-    this.renderWorkoutMarker(workout);
+    this._renderWorkoutMarker(workout);
 
     // render workout on list
+    this._renderWorkout(workout);
 
     // hide form and clear input fields
     inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
 }
 
-renderWorkoutMarker(workout) {
+_renderWorkoutMarker(workout) {
     // L.marker([lat, lng]) now throws error
     // coords data has to come from the workout itself:
     L.marker(workout.coords)
@@ -222,6 +223,9 @@ renderWorkoutMarker(workout) {
     .openPopup();
 }
 
+_renderWorkout(workout) {
+
+}
 // all above is but a blueprint
 // to make the application work, we need to create an object:
 
