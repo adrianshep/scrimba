@@ -224,22 +224,20 @@ _renderWorkoutMarker(workout) {
 }
 
 _renderWorkout(workout) {
-
     const html = `
-        <li class="workout workout--running" data-id="1234567890">
+        <li class="workout workout--running" data-id="${workout.id}">
           <h2 class="workout__title">Running on April 14</h2>
           <div class="workout__details">
             <span class="workout__icon">🏃‍♂️</span>
-            <span class="workout__value">5.2</span>
+            <span class="workout__value">${workout.distance}</span>
             <span class="workout__unit">km</span>
           </div>
           <div class="workout__details">
             <span class="workout__icon">⏱</span>
-            <span class="workout__value">24</span>
+            <span class="workout__value">${workout.duration}</span>
             <span class="workout__unit">min</span>
           </div>
     `;
-
 }
 
 
