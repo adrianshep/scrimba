@@ -225,7 +225,24 @@ _renderWorkoutMarker(workout) {
 
 _renderWorkout(workout) {
 
+    const html = `
+        <li class="workout workout--running" data-id="1234567890">
+          <h2 class="workout__title">Running on April 14</h2>
+          <div class="workout__details">
+            <span class="workout__icon">🏃‍♂️</span>
+            <span class="workout__value">5.2</span>
+            <span class="workout__unit">km</span>
+          </div>
+          <div class="workout__details">
+            <span class="workout__icon">⏱</span>
+            <span class="workout__value">24</span>
+            <span class="workout__unit">min</span>
+          </div>
+    `;
+
 }
+
+
 // all above is but a blueprint
 // to make the application work, we need to create an object:
 
