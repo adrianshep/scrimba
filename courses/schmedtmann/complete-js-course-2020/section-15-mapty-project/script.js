@@ -1,8 +1,5 @@
 'use strict';
 
-// prettier-ignore
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
 // parent class that will take in the data common to both types of workout
 class Workout {
     // date on which the object was created -- the workout date:
@@ -21,6 +18,12 @@ class Workout {
         // in km
         this.duration = duration;
         // in minutes
+    }
+    
+    _setDescription() {
+        // prettier-ignore
+        const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
     }
 }
 // we will never directly create a workout
