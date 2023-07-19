@@ -41,7 +41,10 @@ class Running extends Workout {
         this.cadence = cadence;
         // the incoming cadence
         // calling this method here instead of returning its data below:
-        this.calcPace();
+        this.calcPace();        
+        this._setDescription();
+        // has to be here and in Cycling constructor rather than in Workout constructor since the needed type for 'running' or 'cycling' is only defined in each of those two child classes and not in the Workout class
+        
     }
 
     calcPace() {
@@ -63,6 +66,7 @@ class Cycling extends Workout {
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
         this.calcSpeed();
+        this._setDescription();
     }
 
     calcSpeed() {
