@@ -233,7 +233,8 @@ _renderWorkoutMarker(workout) {
 }
 
 _renderWorkout(workout) {
-    const html = `
+    // change const to let variable because otherwise we won't be able to add anything to the string:
+    let html = `
         <li class="workout workout--${workout.type}" data-id="${workout.id}">
           <h2 class="workout__title">${workout.description}</h2>
           <div class="workout__details">
