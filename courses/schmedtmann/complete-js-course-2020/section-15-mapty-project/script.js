@@ -279,7 +279,9 @@ _renderWorkout(workout) {
                 <span class="workout__unit">m</span>
             </div>
         </li>
-        `
+        `;
+    
+        form.insertAdjacentHTML('afterend', html);
     }
 }
 
