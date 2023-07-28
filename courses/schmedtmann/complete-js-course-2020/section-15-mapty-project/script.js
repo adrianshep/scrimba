@@ -150,6 +150,10 @@ class App {
         form.classList.remove('hidden')
         inputDistance.focus();
     }
+    
+    _hideForm() {
+        // empty inputs
+        inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
 
     // every small piece of functionality that is in our application we now want to be its own function
     _toggleElevationField() {
@@ -212,8 +216,7 @@ class App {
     this._renderWorkout(workout);
 
     // hide form and clear input fields
-    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
-}
+    this._hideForm();
 
 _renderWorkoutMarker(workout) {
     // L.marker([lat, lng]) now throws error
