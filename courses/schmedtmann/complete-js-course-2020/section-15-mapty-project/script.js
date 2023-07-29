@@ -160,6 +160,8 @@ class App {
         form.classList.add('hidden');
         // but this triggers slide animation
         // form needs to be immediately hidden before this step
+        // set display to grid after one second
+        setTimeout(() => (form.style.display = 'grid'), 1000);
 
     // every small piece of functionality that is in our application we now want to be its own function
     _toggleElevationField() {
