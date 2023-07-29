@@ -154,6 +154,9 @@ class App {
     _hideForm() {
         // empty inputs
         inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value = '';
+        
+        // add back hidden class
+        form.classList.add('hidden');
 
     // every small piece of functionality that is in our application we now want to be its own function
     _toggleElevationField() {
