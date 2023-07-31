@@ -116,6 +116,11 @@ class App {
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
         // use DOM traversal method .closest to find closest parent element containing 'form__row' class 
         inputType.addEventListener('change', this._toggleElevationField);
+        
+        // starting app with a blank page, there are no workouts on which we could click 
+        // where should we attach the event handler in that case?
+        // event delegation -- add the handler to the parent element, in this case, containerWorkouts
+        containerWorkouts.addEventListener('click', this._moveToPopup);
     }
     // constructor now gets the currentPosition then adds the two event listeners to the form and the input type element
 
