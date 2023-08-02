@@ -300,10 +300,17 @@ _renderWorkout(workout) {
     
         form.insertAdjacentHTML('afterend', html);
     }
-        
-        _moveToPopup(e) {
-            const workoutEl = e.target.closest('.workout')
-        }
+
+_moveToPopup(e) {
+    const workoutEl = e.target.closest('.workout');
+    // closest selects entire nearest element
+    // which contains id we will use to find the workout in the workouts array
+
+    if(!workoutEl) return;
+    // click outside the workout container gets a null
+    // we will have to ignore that
+    // therefore the above guard clause
+    }
 }
 
 
