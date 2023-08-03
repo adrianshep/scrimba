@@ -310,6 +310,8 @@ _moveToPopup(e) {
     // click outside the workout container gets a null
     // we will have to ignore that
     // therefore the above guard clause
+    
+    const workout = this.#workouts.find(work => work.id === workoutEl.dataset.id);
     }
 }
 
