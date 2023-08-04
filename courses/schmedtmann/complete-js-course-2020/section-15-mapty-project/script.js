@@ -120,7 +120,9 @@ class App {
         // starting app with a blank page, there are no workouts on which we could click 
         // where should we attach the event handler in that case?
         // event delegation -- add the handler to the parent element, in this case, containerWorkouts
-        containerWorkouts.addEventListener('click', this._moveToPopup);
+        // because _moveToPopup method way below is called by the addEventListener method, this kw in here isn't the one we want it to be
+        // therefore we bind it up here:
+        containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
     }
     // constructor now gets the currentPosition then adds the two event listeners to the form and the input type element
 
