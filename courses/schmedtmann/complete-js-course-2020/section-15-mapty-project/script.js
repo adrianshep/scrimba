@@ -138,7 +138,7 @@ class App {
         const { latitude } = position.coords;
         const { longitude } = position.coords;
         const coords = [latitude, longitude];
-        this.#map = L.map('map').setView(coords, 13);
+        this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
         // need to use this.#map because this is now like a property that is defined on the object itself
         // we get error cannot set property #map of undefined
         // loadMap method treated like regular function call, not a method call, since it is being called by a callback function
