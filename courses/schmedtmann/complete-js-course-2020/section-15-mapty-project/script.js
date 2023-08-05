@@ -99,6 +99,7 @@ const inputElevation = document.querySelector('.form__input--elevation');
 // we will use a private class field
 class App {
     #map;
+    #mapZoomLevel = 13;
     #mapEvent;
     // both now become private instance properties that are present in all the instances created through this class
     #workouts = [];
