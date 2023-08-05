@@ -315,6 +315,8 @@ _moveToPopup(e) {
     // therefore the above guard clause
     
     const workout = this.#workouts.find(work => work.id === workoutEl.dataset.id);
+
+    this.#map.setView(workout.coords, this.#mapZoomLevel, {});
     }
 }
 
