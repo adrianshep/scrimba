@@ -316,8 +316,14 @@ _moveToPopup(e) {
     
     const workout = this.#workouts.find(work => work.id === workoutEl.dataset.id);
 
-    this.#map.setView(workout.coords, this.#mapZoomLevel, {});
-    }
+    this.#map.setView(workout.coords, 
+    this.#mapZoomLevel, {
+        animate: true,
+        pat: {
+                duration: 1
+        }
+    });
+}
 }
 
 
