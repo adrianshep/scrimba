@@ -10,7 +10,8 @@ class Workout {
     id = (Date.now() + '').slice(-10);
     // in the real world, many users will mean that two or more of them could create objects at the same time
     // at that point, relying on the time to create IDs will become a really bad idea
-
+    clicks = 0;
+    move to marker create public click method
     constructor(coords, distance, duration) {
         this.coords = coords;
         // [lat, lng]
@@ -26,6 +27,10 @@ class Workout {
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${months[this.date.getMonth()]} ${this.date.getDate()}`;
+    }
+
+    click() {
+        this.click++;
     }
 }
 // we will never directly create a workout
