@@ -32,6 +32,8 @@ class Workout {
     click() {
         this.click++;
     }
+    // now every object gets this method
+    // in each workout we can increase that number of clicks
 }
 // we will never directly create a workout
 // instead, we will always create a running or cycling object
@@ -328,6 +330,10 @@ _moveToPopup(e) {
                 duration: 1
         }
     });
+
+// using the public interface
+workout.click(); 
+    }
 }
 }
 
