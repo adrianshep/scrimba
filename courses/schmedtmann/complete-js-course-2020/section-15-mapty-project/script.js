@@ -30,7 +30,7 @@ class Workout {
     }
 
     click() {
-        this.click++;
+        this.clicks++;
     }
     // now every object gets this method
     // in each workout we can increase that number of clicks
