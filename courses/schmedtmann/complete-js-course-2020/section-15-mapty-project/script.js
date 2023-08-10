@@ -241,6 +241,12 @@ class App {
     // hide form and clear input fields
     this._hideForm();
 
+    // use the localStorage API to make workout data (the entire workouts array) persist across multiple page reloads
+    // localStorage is a place in the browser where we can store data that will stay there after close the page
+    // the data is linked to the URL at which we are using the application
+        
+    // set localStorage to all workouts
+        
 _renderWorkoutMarker(workout) {
     // L.marker([lat, lng]) now throws error
     // coords data has to come from the workout itself:
