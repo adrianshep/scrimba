@@ -246,6 +246,7 @@ class App {
     // the data is linked to the URL at which we are using the application
         
     // set localStorage to all workouts
+    this._setLocalStorage();
         
 _renderWorkoutMarker(workout) {
     // L.marker([lat, lng]) now throws error
@@ -340,7 +341,10 @@ _moveToPopup(e) {
 // using the public interface
 workout.click(); 
     }
-}
+        
+_setLocalStorage() {
+            
+    }
 }
 
 
