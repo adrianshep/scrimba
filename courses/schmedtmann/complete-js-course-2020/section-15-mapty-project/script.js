@@ -342,6 +342,7 @@ _moveToPopup(e) {
 workout.click(); 
     }
         
+// doesn't need any parameters -- we'll get workouts from workout property:
 _setLocalStorage() {
             
     }
