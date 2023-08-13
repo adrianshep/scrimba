@@ -341,11 +341,11 @@ _moveToPopup(e) {
 // using the public interface
 workout.click(); 
     }
-
+        
 // localStorage is an API that the browser provides for us to use
 // doesn't need any parameters -- we'll get workouts from workout property:
 _setLocalStorage() {
-        localStorage.setItem('workouts', JSON.stringify());
+        localStorage.setItem('workouts', JSON.stringify(this.#workouts));
     }
 }
 
