@@ -343,6 +343,8 @@ workout.click();
     }
         
 // localStorage is an API that the browser provides for us to use
+// localStorage is a very simple API
+// it is only advised for use with small amounts of data as it is blocking, which is very bad, as it slows down applications storing large amounts of data
 // doesn't need any parameters -- we'll get workouts from workout property:
 _setLocalStorage() {
         localStorage.setItem('workouts', JSON.stringify(this.#workouts));
