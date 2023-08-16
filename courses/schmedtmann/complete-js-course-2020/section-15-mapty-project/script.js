@@ -115,10 +115,16 @@ class App {
     // event listeners should be inside the class in the constructor method, which gets called automatically when the script loads
     // we will attach the event listeners to the DOM elements in the constructor
     constructor() {
+        // Get user's position
         this._getPosition();
         // event handler function will always have this kw attached to DOM element
         // here this will point to form and no longer to the App object
         // form.addEventListener('submit', this._newWorkout);
+
+        // Get data from local storage
+        this._getLocalStorage();
+
+        // Attach event handlers:
         // fix with bind:
         form.addEventListener('submit', this._newWorkout.bind(this));
         // challenge: when type field switches from Running to Cycling, Cadence field should switch to Elev Gain
