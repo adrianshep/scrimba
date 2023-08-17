@@ -354,7 +354,12 @@ workout.click();
 // doesn't need any parameters -- we'll get workouts from workout property
 // a simple key-value store: key is 'workouts' and value is stringified this.#workouts
 _setLocalStorage() {
-        localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    }
+        
+_getLocalStorage(){
+    const data = localStorage.getItem('workout');
+            // pass in the key
     }
 }
 
