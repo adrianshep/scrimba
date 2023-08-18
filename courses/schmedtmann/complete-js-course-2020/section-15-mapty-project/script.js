@@ -359,7 +359,9 @@ _setLocalStorage() {
         
 _getLocalStorage(){
     const data = localStorage.getItem('workout');
-            // pass in the key
+        const data = localStorage.getItem('workouts');
+        // pass in the key
+        // could set multiple items in storage -- just have to define one key for each value for retrieval
     }
 }
 
