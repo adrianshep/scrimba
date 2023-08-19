@@ -363,7 +363,11 @@ _getLocalStorage(){
     // could set multiple items in storage -- just have to define one key for each value for retrieval
     // need to convert string back to object, hence parse
 
+    // no data guard clause
     if (!data) return;
+
+    // restore workouts array
+    this.#workouts = data;
     }
 }
 
