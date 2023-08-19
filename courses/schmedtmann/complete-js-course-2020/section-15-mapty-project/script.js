@@ -362,6 +362,8 @@ _getLocalStorage(){
     // pass in the key
     // could set multiple items in storage -- just have to define one key for each value for retrieval
     // need to convert string back to object, hence parse
+
+    if (!data) return;
     }
 }
 
