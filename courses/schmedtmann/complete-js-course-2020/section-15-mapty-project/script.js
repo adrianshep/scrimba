@@ -368,6 +368,13 @@ _getLocalStorage(){
 
     // restore workouts array
     this.#workouts = data;
+    // method will be executed at the very beginning
+    // at that point, the workouts array will always be empty
+    // but if we already have some data in localStorage, we will be setting the workouts array to that, restoring it across multiple page reloads
+
+    this.#workouts.forEach(work => {
+        this._renderWorkout(work);
+        });
     }
 }
 
