@@ -373,7 +373,10 @@ _getLocalStorage(){
     // but if we already have some data in localStorage, we will be setting the workouts array to that, restoring it across multiple page reloads
 
     this.#workouts.forEach(work => {
-        this._renderWorkout(work);
+        // for rendering on map, this won't work here:
+        // this._renderWorkoutMarker(work);
+        // because the method is executed at the top of the code, right after the page is loaded
+        // at that point, the map has not yet been loaded, so it's trying to add the marker to the map that hasn't yet been defined
         });
     }
 }
