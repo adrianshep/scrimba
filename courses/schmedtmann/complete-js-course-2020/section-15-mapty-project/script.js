@@ -164,6 +164,10 @@ class App {
 
         // handling clicks on map
         this.#map.on('click', this._showForm.bind(this));
+        
+        this.#workouts.forEach(work => {
+            this._renderWorkoutMarker(work);
+        // _loadMap is best place to render markers as map is available
     }
 
     _showForm(mapE) {
@@ -377,6 +381,7 @@ _getLocalStorage(){
         // this._renderWorkoutMarker(work);
         // because the method is executed at the top of the code, right after the page is loaded
         // at that point, the map has not yet been loaded, so it's trying to add the marker to the map that hasn't yet been defined
+        // instead, render markers in load map above using logic
         });
     }
 }
