@@ -350,6 +350,13 @@ _moveToPopup(e) {
 
 // using the public interface
 workout.click(); 
+// problem with localStorage:
+// clicks begin to throw an error message because workout.click is no longer a function
+// in fact, the entire prototype chain we had before is now gone
+// converting our objects to string and back into object lost us the prototype chain
+// new objects recovered from localStorage are now just regular objects
+// no longer have their original prototypes and are unable to inherit any previous object methods
+// workout.click no longer a function at this point
     }
 
 // localStorage is an API that the browser provides for us to use
