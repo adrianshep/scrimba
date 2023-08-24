@@ -391,6 +391,10 @@ _getLocalStorage(){
         // instead, render markers in load map above using logic
         });
     }
+        
+    reset() {
+        localStorage.removeItem('workouts');
+    }
 }
 
 // all above is but a blueprint
