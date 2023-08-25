@@ -395,6 +395,9 @@ _getLocalStorage(){
     reset() {
         localStorage.removeItem('workouts');
     }
+    // in console:
+    // app.reset()
+    // and the application is back to being empty
 }
 
 // all above is but a blueprint
