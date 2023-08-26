@@ -408,7 +408,7 @@ _getLocalStorage(){
 // ability to delete a workout
 // ability to delete all workouts
 // ability to sort workouts by a certain field (e.g., distance)
-
+// rebuild running and cycling objects coming from local storage
 
         
 // all above is but a blueprint
