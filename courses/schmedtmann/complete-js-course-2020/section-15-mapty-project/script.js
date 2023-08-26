@@ -400,6 +400,16 @@ _getLocalStorage(){
     // and the application is back to being empty
 }
 
+
+// Final Considerations:
+
+// additional feature ideas:
+// ability to edit a workout
+// ability to delete a workout
+// ability to delete all workouts
+
+
+        
 // all above is but a blueprint
 // to make the application work, we need to create an object:
 
