@@ -407,6 +407,7 @@ _getLocalStorage(){
 // ability to edit a workout
 // ability to delete a workout
 // ability to delete all workouts
+// ability to sort workouts by a certain field (e.g., distance)
 
 
         
