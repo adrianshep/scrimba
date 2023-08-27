@@ -409,7 +409,8 @@ _getLocalStorage(){
 // ability to delete all workouts
 // ability to sort workouts by a certain field (e.g., distance)
 // rebuild running and cycling objects coming from local storage
-
+// more realistic error and confirmation messages, instead of simple alert window -- messages that fade out, for instance
+        
         
 // all above is but a blueprint
 // to make the application work, we need to create an object:
