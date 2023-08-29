@@ -411,6 +411,7 @@ _getLocalStorage(){
 // rebuild running and cycling objects coming from local storage
 // more realistic error and confirmation messages, instead of simple alert window -- messages that fade out, for instance
 // very difficult: ability to position the map to show all workouts
+// very difficult: ability to draw lines and shapes on the map instead of just points 
         
         
 // all above is but a blueprint
