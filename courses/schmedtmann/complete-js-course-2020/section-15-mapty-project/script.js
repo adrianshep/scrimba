@@ -412,6 +412,7 @@ _getLocalStorage(){
 // more realistic error and confirmation messages, instead of simple alert window -- messages that fade out, for instance
 // very difficult: ability to position the map to show all workouts
 // very difficult: ability to draw lines and shapes on the map instead of just points 
+// after reviewing asynchronous JS section: using third party web API, geocode location of workout from the raw coordinates (e.g., "Run in Faro, Portugal")
         
         
 // all above is but a blueprint
