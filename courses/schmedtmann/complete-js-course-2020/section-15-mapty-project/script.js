@@ -413,7 +413,7 @@ _getLocalStorage(){
 // very difficult: ability to position the map to show all workouts
 // very difficult: ability to draw lines and shapes on the map instead of just points 
 // after reviewing asynchronous JS section: using third party web API, geocode location of workout from the raw coordinates (e.g., "Run in Faro, Portugal")
-        
+// after reviewing asynchronous JS section: display weather data for workout time and place
         
 // all above is but a blueprint
 // to make the application work, we need to create an object:
