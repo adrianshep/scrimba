@@ -26,8 +26,11 @@ setTimeout(function() {
 }, 5000);
 p.style.color = 'red';
 
-// here, the time runs in the background
+// here, the timer runs in the background
 // does not prevent the main code from executing
+// the callback function is asynchronous JS
+// it will not be executed immediately, but only after the timer has finished running in the background -- asynchronously
+// it's non-blocking -- the rest of the code can keep running normally
 
 ///////////////////////////////////////
 
