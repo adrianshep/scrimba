@@ -41,5 +41,25 @@ p.style.color = 'red';
 // for example, the Array map method accepts a callback function, but that doesn't make that code asynchronous
 
 
+// Asynchronous Example
+
+const img = document.querySelector('.dog');
+img.src = 'dog.jpg';
+img.addEventListener('load', function() {
+    img.classList.add('fadeIn';)
+});
+p.style.width = '300px';
+
+// this example is about loading an image
+// first two lines run in a synchronous way, one after the other
+// in the second line, we set the source attribute of the image we selected in the first line
+// this operation is asynchronous -- setting the source attribute of any image is essentially loading an image in the background while the rest of the code keeps running
+// if it is a huge image, we wouldn't want the entire code to wait for it to load
+// once the image has finished loading, a load event will automatically be emitted by JS
+// we can listen for that event in order to act upon it
+// in the code, we use add event listener and provide a callback function that will be executed once the image has been loaded
+// all this code is non-blocking -- execution moves on right to the next line immediately
+// the callback function is finally executd when the image is completely loaded and the load event is admitted
+
 ///////////////////////////////////////
 
