@@ -59,7 +59,12 @@ p.style.width = '300px';
 // we can listen for that event in order to act upon it
 // in the code, we use add event listener and provide a callback function that will be executed once the image has been loaded
 // all this code is non-blocking -- execution moves on right to the next line immediately
-// the callback function is finally executd when the image is completely loaded and the load event is admitted
+// the callback function is finally executed when the image is completely loaded and the load event is admitted
+// event listeners alone do not make code asynchronous
+// an event listener listening for a click on a button is not doing any work in the background
+// waiting for a click is not doing anything
+// so there is no asynchronous behavior involved at all
+
 
 ///////////////////////////////////////
 
