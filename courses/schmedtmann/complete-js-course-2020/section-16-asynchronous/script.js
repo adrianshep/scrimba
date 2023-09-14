@@ -66,5 +66,15 @@ p.style.width = '300px';
 // so there is no asynchronous behavior involved at all
 
 
+
+// What Are Ajax Calls?
+
+// AJAX - Asynchronous JavaScript And XML
+// allows us to communicate with remote web servers in an asynchronous way
+// with AJAX calls, we can request data from web servers dynamically, without reloading the page
+// for example, right in the next video, we're going to make Ajax calls to request data about countries
+// we can then use that data to build a small application that shows us information about the country we're in
+
+
 ///////////////////////////////////////
 
