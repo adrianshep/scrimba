@@ -75,6 +75,12 @@ p.style.width = '300px';
 // for example, right in the next video, we're going to make Ajax calls to request data about countries
 // we can then use that data to build a small application that shows us information about the country we're in
 
+// let's say we have JS application running in the browser, which is called the client
+// we want this application to get some countries data from a web server
+// we send an HTTP request to the server
+// the server will then send back a response containing the data we requested
+// the back and forth between the client and the server happens asynchronously, in the background
+
 
 ///////////////////////////////////////
 
