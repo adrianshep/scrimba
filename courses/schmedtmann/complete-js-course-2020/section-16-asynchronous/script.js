@@ -81,6 +81,9 @@ p.style.width = '300px';
 // the server will then send back a response containing the data we requested
 // the back and forth between the client and the server happens asynchronously, in the background
 
+// when we ask a server to send us data, the server usually contains a web API
+// API = Application Programming Interface
+
 
 ///////////////////////////////////////
 
