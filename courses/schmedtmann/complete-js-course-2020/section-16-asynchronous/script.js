@@ -86,6 +86,7 @@ p.style.width = '300px';
 // An API is basically software that can be used by other software to allow applications to talk to one another and exchange information
 // countless types: DOM API or Geolocation API
 // called APIs because they are self-contained, encapsulated software that allow other software to interact with them
+// we can implement a small and simple API in a class where we make some methods available as a public interface
 
 ///////////////////////////////////////
 
