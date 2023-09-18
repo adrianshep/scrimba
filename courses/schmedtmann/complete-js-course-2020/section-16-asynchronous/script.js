@@ -88,5 +88,11 @@ p.style.width = '300px';
 // called APIs because they are self-contained, encapsulated software that allow other software to interact with them
 // we can implement a small and simple API in a class where we make some methods available as a public interface
 
+// "Online" API
+// others refer to these as web APIs, or simply APIs
+// Jonas uses "Online" API since Web API can refer to other things
+// an application running on a web server which receives requests for data, then retrieves this data from some database and sends it back as a response
+
+
 ///////////////////////////////////////
 
