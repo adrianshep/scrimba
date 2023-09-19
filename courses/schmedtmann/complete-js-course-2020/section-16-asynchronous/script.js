@@ -93,6 +93,16 @@ p.style.width = '300px';
 // Jonas uses "Online" API since Web API can refer to other things
 // an application running on a web server which receives requests for data, then retrieves this data from some database and sends it back as a response
 
+// 3rd Party APIs
+// we're interested in 3rd party APIs, APIs that other developers make available to us most of the time for free
+// imagine we're building a travel application and have a database with different destinations and tours we're offering
+// we could build our own API to receive requests fomr our front end application in JS and send back the results
+// that would be our own API hosted on our own server
+// alone, though, that probably wouldn't be enough to build a complete application
+// we could then use some 3rd party APIs:
+// get data about weather at destinations, the destinations themselves, flights, currency conversion, etc.
+// can even use these APIs to send emails or texts or embed Google Maps into our application
+// APIs make the modern web as we know it possible
 
 ///////////////////////////////////////
 
