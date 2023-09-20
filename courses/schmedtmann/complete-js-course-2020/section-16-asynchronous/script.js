@@ -104,5 +104,13 @@ p.style.width = '300px';
 // can even use these APIs to send emails or texts or embed Google Maps into our application
 // APIs make the modern web as we know it possible
 
+// API Data Formats
+// X in AJAX is for XML, a data format that used to be widely used, but no API uses it anymore
+// most APIs use JSON format these days
+// it's basically just a JavaScript object, but converted to a string
+// therefore, it's very easy to send across the web and also to use in JavaScript once the data arrives
+
+
+
 ///////////////////////////////////////
 
