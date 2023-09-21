@@ -1,8 +1,3 @@
-'use strict';
-
-const btn = document.querySelector('.btn-country');
-const countriesContainer = document.querySelector('.countries');
-
 // Synchronous Code
 
 const p = document.querySelector('.p');
@@ -111,6 +106,14 @@ p.style.width = '300px';
 // therefore, it's very easy to send across the web and also to use in JavaScript once the data arrives
 
 
+https://countries-api-836d.onrender.com/countries/
+
+// first ajax call
+
+'use strict';
+
+const btn = document.querySelector('.btn-country');
+const countriesContainer = document.querySelector('.countries');
 
 ///////////////////////////////////////
 
