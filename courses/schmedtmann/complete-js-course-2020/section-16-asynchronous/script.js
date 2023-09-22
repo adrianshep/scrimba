@@ -108,12 +108,19 @@ p.style.width = '300px';
 
 https://countries-api-836d.onrender.com/countries/
 
-// first ajax call
-
 'use strict';
 
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
+
+// in JS, there are multiple ways of doing AJAX calls:
+
+
+// XML HTTP Request
+// First Step:
+// we call this function then store the result in a new variable
+
+const request = new XMLHttpRequest();
 
 ///////////////////////////////////////
 
