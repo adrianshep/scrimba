@@ -123,5 +123,10 @@ const countriesContainer = document.querySelector('.countries');
 const request = new XMLHttpRequest();
 request.open('GET', '');
 
+// on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
+// we'll be using REST Countries
+// needs no authentication
+
+
 ///////////////////////////////////////
 
