@@ -126,6 +126,9 @@ request.open('GET', '');
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
 // needs no authentication
+// any API you use should always have CORS set to yes or maybe to unknown
+// CORS stands for Cross Origin Resources Sharing
+// without CORS, we cannot access a third party API from our own code
 
 
 ///////////////////////////////////////
