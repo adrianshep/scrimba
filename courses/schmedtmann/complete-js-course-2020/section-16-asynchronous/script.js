@@ -121,6 +121,7 @@ const countriesContainer = document.querySelector('.countries');
 // we call this function then store the result in a new variable
 
 const request = new XMLHttpRequest();
+request.open('GET', '');
 
 ///////////////////////////////////////
 
