@@ -121,7 +121,7 @@ const countriesContainer = document.querySelector('.countries');
 // we call this function then store the result in a new variable
 
 const request = new XMLHttpRequest();
-request.open('GET', '');
+request.open('GET', 'https://restcountries.com/v2/name/portugal');
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
@@ -130,6 +130,8 @@ request.open('GET', '');
 // CORS stands for Cross Origin Resources Sharing
 // without CORS, we cannot access a third party API from our own code
 
+// endpoint (the url we'll be using):
+// https://restcountries.com/v2/name/portugal
 
 ///////////////////////////////////////
 
