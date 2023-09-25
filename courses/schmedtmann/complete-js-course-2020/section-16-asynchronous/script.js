@@ -120,8 +120,12 @@ const countriesContainer = document.querySelector('.countries');
 // First Step:
 // we call this function then store the result in a new variable
 
+// create request
 const request = new XMLHttpRequest();
+// open request
 request.open('GET', 'https://restcountries.com/v2/name/portugal');
+// send request to above URL (endpoint)
+request.send();
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
