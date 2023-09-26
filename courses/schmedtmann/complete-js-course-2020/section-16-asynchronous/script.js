@@ -126,6 +126,11 @@ const request = new XMLHttpRequest();
 request.open('GET', 'https://restcountries.com/v2/name/portugal');
 // send request to above URL (endpoint)
 request.send();
+// in order to get the result, we can't do something like:
+// data = request.send();
+// because the result simply isn't there yet
+// the AJAX call that we send off is being executed in the background while the rest of the code keeps running
+// this is the asychronous, non-blocking behavior
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
