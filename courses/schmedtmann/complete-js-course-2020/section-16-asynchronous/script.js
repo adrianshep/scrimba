@@ -131,6 +131,15 @@ request.send();
 // because the result simply isn't there yet
 // the AJAX call that we send off is being executed in the background while the rest of the code keeps running
 // this is the asychronous, non-blocking behavior
+// instead, we need to register a callback on the request object for the load event
+request.addEventListener('load', function() {
+
+})
+// on the request, we will wait for the load event
+// in the background, that request fetches the data
+// once it is done, it will emit the load event
+// using this event listener, we are waiting for that event
+// as soon as the data arrives, this callback function here will be called
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
