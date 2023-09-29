@@ -134,6 +134,7 @@ request.send();
 // instead, we need to register a callback on the request object for the load event
 request.addEventListener('load', function() {
     console.log(this.responseText);
+    const data = JSON.parse(this.responseText);
 })
 // on the request, we will wait for the load event
 // in the background, that request fetches the data
@@ -141,6 +142,8 @@ request.addEventListener('load', function() {
 // using this event listener, we are waiting for that event
 // as soon as the data arrives, this callback function here will be called
 // this.responseText logs all the data there is about Portugal at the endpoint returned in JSON format -- a long string of text
+// JSON.parse converts that string into an object
+
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
