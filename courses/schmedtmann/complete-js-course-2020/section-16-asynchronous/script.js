@@ -143,6 +143,7 @@ request.addEventListener('load', function() {
 // as soon as the data arrives, this callback function here will be called
 // this.responseText logs all the data there is about Portugal at the endpoint returned in JSON format -- a long string of text
 // JSON.parse converts that string into an object
+// actually an array containing one object
 
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
