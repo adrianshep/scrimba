@@ -137,16 +137,16 @@ request.addEventListener('load', function() {
     const [data] = JSON.parse(this.responseText);
 
     const html = `
-    <article class="country">
-    <img class="country__img" src="" />
-    <div class="country__data">
-      <h3 class="country__name">COUNTRY</h3>
-      <h4 class="country__region">REGION</h4>
-      <p class="country__row"><span>👫</span>POP people</p>
-      <p class="country__row"><span>🗣️</span>LANG</p>
-      <p class="country__row"><span>💰</span>CUR</p>
-    </div>
-  </article>
+        <article class="country">
+            <img class="country__img" src="${data.flag}" />
+            <div class="country__data">
+                <h3 class="country__name">${data.name}</h3>
+                <h4 class="country__region">${data.region}</h4>
+                <p class="country__row"><span>👫</span>${(+data.population / 1000000).toFixed(1)} people</p>
+                <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
+                <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
+            </div>
+        </article>
     `
 })
 // on the request, we will wait for the load event
@@ -160,6 +160,9 @@ request.addEventListener('load', function() {
 // destructure const data by converting it to const [data]
 // same as doing:
 // const data = JSON.parse(this.responseText)[0];
+// build card component html
+// replace the data in the component -- flag, name, region, population, name, currency -- drawing from the API
+// under population, convert data to number by placing + in front of it
 
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that is free to use
