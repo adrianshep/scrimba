@@ -147,7 +147,8 @@ request.addEventListener('load', function() {
                 <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
             </div>
         </article>
-    `
+    `    `;
+    countriesContainer.insertAdjacentHTML('beforeend', html)
 })
 // on the request, we will wait for the load event
 // in the background, that request fetches the data
@@ -160,9 +161,10 @@ request.addEventListener('load', function() {
 // destructure const data by converting it to const [data]
 // same as doing:
 // const data = JSON.parse(this.responseText)[0];
-// build card component html
+// build card component const html
 // replace the data in the component -- flag, name, region, population, name, currency -- drawing from the API
 // under population, convert data to number by placing + in front of it
+// insert HTML using countriesContainer
 
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that is free to use
