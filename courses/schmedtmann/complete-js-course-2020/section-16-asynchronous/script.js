@@ -148,7 +148,8 @@ request.addEventListener('load', function() {
             </div>
         </article>
     `    `;
-    countriesContainer.insertAdjacentHTML('beforeend', html)
+    countriesContainer.insertAdjacentHTML('beforeend', html);
+    countriesContainer.style.opacity = 1;
 })
 // on the request, we will wait for the load event
 // in the background, that request fetches the data
@@ -165,6 +166,7 @@ request.addEventListener('load', function() {
 // replace the data in the component -- flag, name, region, population, name, currency -- drawing from the API
 // under population, convert data to number by placing + in front of it
 // insert HTML using countriesContainer
+// set style of container to opacity one which will generate an animation triggered by the transition
 
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that is free to use
