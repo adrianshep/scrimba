@@ -120,23 +120,25 @@ const countriesContainer = document.querySelector('.countries');
 // First Step:
 // we call this function then store the result in a new variable
 
-// create request
-const request = new XMLHttpRequest();
-// open request
-request.open('GET', 'https://restcountries.com/v2/name/portugal');
-// send request to above URL (endpoint)
-request.send();
+// create request element for multiple countries
+const getCountryData = function (country) {
+    // create request
+    const request = new XMLHttpRequest();
+    // open request
+    request.open('GET', `https://restcountries.com/v2/name/${country}`);
+    // send request to above URL (endpoint)
+    request.send();
 // in order to get the result, we can't do something like:
 // data = request.send();
 // because the result simply isn't there yet
 // the AJAX call that we send off is being executed in the background while the rest of the code keeps running
 // this is the asychronous, non-blocking behavior
-// instead, we need to register a callback on the request object for the load event
-request.addEventListener('load', function() {
-    console.log(this.responseText);
-    const [data] = JSON.parse(this.responseText);
+    // instead, we need to register a callback on the request object for the load event
+    request.addEventListener('load', function() {
+        console.log(this.responseText);
+        const [data] = JSON.parse(this.responseText);
 
-    const html = `
+        const html = `
         <article class="country">
             <img class="country__img" src="${data.flag}" />
             <div class="country__data">
@@ -147,10 +149,12 @@ request.addEventListener('load', function() {
                 <p class="country__row"><span>💰</span>${data.currencies[0].name}</p>
             </div>
         </article>
-    `    `;
-    countriesContainer.insertAdjacentHTML('beforeend', html);
-    countriesContainer.style.opacity = 1;
-})
+        `;
+        countriesContainer.insertAdjacentHTML('beforeend', html);
+        countriesContainer.style.opacity = 1;
+    });
+};
+
 // on the request, we will wait for the load event
 // in the background, that request fetches the data
 // once it is done, it will emit the load event
