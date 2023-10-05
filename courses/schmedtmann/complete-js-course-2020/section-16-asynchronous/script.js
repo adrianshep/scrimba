@@ -171,7 +171,13 @@ const getCountryData = function (country) {
 // under population, convert data to number by placing + in front of it
 // insert HTML using countriesContainer
 // set style of container to opacity one which will generate an animation triggered by the transition
-
+// test multiple country request element:
+getCountryData('portugal');
+getCountryData('usa');
+// data requests for Portugal and USA happen nearly simultaneously
+// data for them is returned asynchronously
+// USA data may appear before Portugal data
+// non-blocking behavior in action
 
 // on GitHub there is a huge Public APIs repository (you can Google it) that is free to use
 // we'll be using REST Countries
