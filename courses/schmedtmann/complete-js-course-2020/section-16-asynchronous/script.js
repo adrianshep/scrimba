@@ -191,3 +191,7 @@ getCountryData('usa');
 
 ///////////////////////////////////////
 
+// Request-Response Model or Client-Server Architecture
+// whenever we try to access a Web server, the browser, which is the client, sends a request to the server and the server will then send back a response that contains the data or Web page we requested
+// this process works the exact same way, no matter if we're accessing an entire Web page or just some data from a Web API
+
