@@ -208,3 +208,9 @@ getCountryData('usa');
 // that happens through DNS -- the domain name server
 // like the phone book of the internet: will match the web address of the URL to the server's real IP address -- this happens through your internet service provider
 // when the real IP address has been sent back to our browser, we can finally call it
+// what the real IP address looks like:
+// https://104.27.142.889:443
+// protocol is https
+// IP address is 104.27.142.889
+// port number is 443 (default for HTTPs and HTTP) -- the port we access on the server identifying a specific service running on it, like a sub-address
+// nothing to do with the /rest/v2 resource we want to access
