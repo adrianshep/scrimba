@@ -194,4 +194,12 @@ getCountryData('usa');
 // Request-Response Model or Client-Server Architecture
 // whenever we try to access a Web server, the browser, which is the client, sends a request to the server and the server will then send back a response that contains the data or Web page we requested
 // this process works the exact same way, no matter if we're accessing an entire Web page or just some data from a Web API
-
+// Request-Response Model or Client-Server Architecture
+// whenever we try to access a Web server, the browser, which is the client, sends a request to the server and the server will then send back a response that contains the data or Web page we requested
+// this process works the exact same way, no matter if we're accessing an entire Web page or just some data from a Web API
+// https://restcountries.eu/rest/v2/alpha/PT
+// http or https is the protocol to be used on this connection
+// /rest/v2... is the resource that we want to access
+// restcountries.eu is the domain name
+// not the real address of the server we're trying to access
+// just a name that's easy for us to memorize
