@@ -203,3 +203,8 @@ getCountryData('usa');
 // restcountries.eu is the domain name
 // not the real address of the server we're trying to access
 // just a name that's easy for us to memorize
+// not the real address of the server we're trying to access
+// this means we need a way of converting the domain name to the real address of the server
+// that happens through DNS -- the domain name server
+// like the phone book of the internet: will match the web address of the URL to the server's real IP address -- this happens through your internet service provider
+// when the real IP address has been sent back to our browser, we can finally call it
