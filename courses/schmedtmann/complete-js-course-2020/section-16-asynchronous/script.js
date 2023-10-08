@@ -214,3 +214,9 @@ getCountryData('usa');
 // IP address is 104.27.142.889
 // port number is 443 (default for HTTPs and HTTP) -- the port we access on the server identifying a specific service running on it, like a sub-address
 // nothing to do with the /rest/v2 resource we want to access
+
+// once we have the real IP address, a TCP socket connection is established between the browser and the server and they are now finally connected
+// this connection will typically be kept alive the entire time it takes to transfer all the request files of the website or the data
+// TCP is Transmission Control Protocol
+// IP is Internet Protocol
+// they are communication protocols that define exactly how data travels across the web -- the internet's fundamental control system, setting the rules for how data moves around the internet
