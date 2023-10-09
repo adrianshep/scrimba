@@ -220,3 +220,10 @@ getCountryData('usa');
 // TCP is Transmission Control Protocol
 // IP is Internet Protocol
 // they are communication protocols that define exactly how data travels across the web -- the internet's fundamental control system, setting the rules for how data moves around the internet
+
+// making our HTTP request
+// HyperText Transfer Protocol
+// a communication protocol is a system of rules that allow two or more parties to communicate
+// HTTP is a protocol that allows clients and web servers to communicate by sending request and response messages from client to server and back
+// beginning of the message is the most important part, called the start line
+// it contains the HTTP method that is used in the request, the request target and the HTTP version
