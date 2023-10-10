@@ -225,5 +225,14 @@ getCountryData('usa');
 // HyperText Transfer Protocol
 // a communication protocol is a system of rules that allow two or more parties to communicate
 // HTTP is a protocol that allows clients and web servers to communicate by sending request and response messages from client to server and back
+// request message format:
+
+//  GET /rest/v2/alpha/PT HTTP/1.1
+//  Host: www.google.com
+//  User-Agent: Mozilla/5.0
+//  Accept-Language: en-US
+// 
+//  <BODY>
+
 // beginning of the message is the most important part, called the start line
 // it contains the HTTP method that is used in the request, the request target and the HTTP version
