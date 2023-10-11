@@ -236,3 +236,8 @@ getCountryData('usa');
 
 // beginning of the message is the most important part, called the start line
 // it contains the HTTP method that is used in the request, the request target and the HTTP version
+// there many available HTTP methods
+// most important ones are:
+// GET for simply requesting data
+// POST for sending data
+// PUT and PATCH for modifying data
