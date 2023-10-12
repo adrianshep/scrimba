@@ -241,3 +241,11 @@ getCountryData('usa');
 // GET for simply requesting data
 // POST for sending data
 // PUT and PATCH for modifying data
+
+// the request target
+// where the server is told that we want to access the rest/v2/alpha resource
+// the server figures out what to do with it
+// if the target is empty -- just a slash -- then we'd be accessing the website's route, restcountries.eu in this example
+// request headers, information we send about hte request itself
+// many different standard headers: what browser is used to make the request, user's language, and many more
+// there is also a request body containing the data we're sending, for example, coming from an HTML form
