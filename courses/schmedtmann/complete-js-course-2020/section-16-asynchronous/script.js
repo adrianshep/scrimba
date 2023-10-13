@@ -249,3 +249,8 @@ getCountryData('usa');
 // request headers, information we send about hte request itself
 // many different standard headers: what browser is used to make the request, user's language, and many more
 // there is also a request body containing the data we're sending, for example, coming from an HTML form
+
+// HTTPS
+// main difference between HTTPS and HTTP is that HTTPS is encrypted
+// TLS or SSL are the protocols which are used to encrypt HTTPS
+// besides that, the logic behind HTTP requests and responses still applies to HTTPS
