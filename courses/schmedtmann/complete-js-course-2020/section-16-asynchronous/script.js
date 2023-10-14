@@ -260,3 +260,12 @@ getCountryData('usa');
 // HTTP response 
 // response message looks similar to request
 // has a start line, headers and a body
+// HTTP response message format:
+// 
+// HTTP/1.1 200 OK
+// 
+// Date: Fri, 18 Jan 2021
+// Content-Type: text/html
+// Transfer-Encoding: chunked
+// 
+// <BODY>
