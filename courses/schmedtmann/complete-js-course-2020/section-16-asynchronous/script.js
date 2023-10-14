@@ -254,3 +254,5 @@ getCountryData('usa');
 // main difference between HTTPS and HTTP is that HTTPS is encrypted
 // TLS or SSL are the protocols which are used to encrypt HTTPS
 // besides that, the logic behind HTTP requests and responses still applies to HTTPS
+
+// formed request now hits the server, which will work on it until it has our data or web page ready to send back
