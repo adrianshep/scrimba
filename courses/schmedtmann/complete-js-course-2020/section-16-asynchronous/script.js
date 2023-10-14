@@ -256,3 +256,7 @@ getCountryData('usa');
 // besides that, the logic behind HTTP requests and responses still applies to HTTPS
 
 // formed request now hits the server, which will work on it until it has our data or web page ready to send back
+
+// HTTP response 
+// response message looks similar to request
+// has a start line, headers and a body
