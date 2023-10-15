@@ -269,3 +269,8 @@ getCountryData('usa');
 // Transfer-Encoding: chunked
 // 
 // <BODY>
+
+// in this example, the start line has, besides the version, a status code and message
+// these are used to let the client know whether the request has been successful or failed
+// 200 means okay
+// 404 means page not found
