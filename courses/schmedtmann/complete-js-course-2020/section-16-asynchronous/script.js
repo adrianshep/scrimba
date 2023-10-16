@@ -274,3 +274,4 @@ getCountryData('usa');
 // these are used to let the client know whether the request has been successful or failed
 // 200 means okay
 // 404 means page not found
+// HTTP response headers: many different possibilities and we can add our own as well
