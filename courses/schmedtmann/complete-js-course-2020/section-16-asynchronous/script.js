@@ -275,3 +275,5 @@ getCountryData('usa');
 // 200 means okay
 // 404 means page not found
 // HTTP response headers: many different possibilities and we can add our own as well
+// last part of the response is the body (present in most responses)
+// contains JSON data coming back from an API or the HTML of a web page we requested
