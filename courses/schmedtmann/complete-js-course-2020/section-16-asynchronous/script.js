@@ -277,3 +277,11 @@ getCountryData('usa');
 // HTTP response headers: many different possibilities and we can add our own as well
 // last part of the response is the body (present in most responses)
 // contains JSON data coming back from an API or the HTML of a web page we requested
+// in our imaginary example, there was one request to restcountries.eu and one response back
+// that's how it will work when all we do is access an API
+// if it's a Web page we're accessing, there will be many more requests and responses
+// because when we do the first request, all we get back is the initial HTML file
+// the HTML file will get scanned by the browser for all the assets it needs to build the entire Web page:cJavaScript, CSS files, image files, or other assets.
+// for each different file, there will be a new HTTP request made to the server
+// this entire back and forth between client and server happens for every single file included in the Web page
+// there can be multiple requests and responses happening at the same time, but the amount is limited lest the connection slow down
