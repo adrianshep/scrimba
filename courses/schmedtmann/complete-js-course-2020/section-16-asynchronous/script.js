@@ -286,3 +286,7 @@ getCountryData('usa');
 // this entire back and forth between client and server happens for every single file included in the Web page
 // there can be multiple requests and responses happening at the same time, but the amount is limited lest the connection slow down
 // when all the files have finally arrived, the Web page can be rendered in the browser according to the HTML, CSS and JavaScript specifications
+
+// TCP/IP
+// how request and response data is sent across the web
+// TCP and IP are the communication protocols that define how data travels across the web
