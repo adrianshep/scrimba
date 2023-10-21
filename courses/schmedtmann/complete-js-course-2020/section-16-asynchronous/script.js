@@ -293,3 +293,7 @@ getCountryData('usa');
 
 // TCP
 // first job: break requests and responses down into small chunks of data called packets, before they're sent
+// second job: once the packets arrive at their final destination, TCP will reassemble all of them back into the original request or response
+// this is necessary so that each packet can take a different route through the internet so the message arrives at its destination as quickly as possible
+// that wouldn't be possible if the entire request or response were sent as a single big chunk of data
+// like trying to get through a traffic jam in the biggest bus imaginable
