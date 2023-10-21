@@ -290,3 +290,6 @@ getCountryData('usa');
 // TCP/IP
 // how request and response data is sent across the web
 // TCP and IP are the communication protocols that define how data travels across the web
+
+// TCP
+// first job: break requests and responses down into small chunks of data called packets, before they're sent
