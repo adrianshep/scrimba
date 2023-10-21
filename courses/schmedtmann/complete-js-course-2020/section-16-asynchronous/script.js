@@ -297,3 +297,7 @@ getCountryData('usa');
 // this is necessary so that each packet can take a different route through the internet so the message arrives at its destination as quickly as possible
 // that wouldn't be possible if the entire request or response were sent as a single big chunk of data
 // like trying to get through a traffic jam in the biggest bus imaginable
+
+// IP 
+// sends and routes the packets through the internet
+// ensures they arrive at the proper destinations using the IP address on each packet
