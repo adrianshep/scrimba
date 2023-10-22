@@ -301,3 +301,11 @@ getCountryData('usa');
 // IP 
 // sends and routes the packets through the internet
 // ensures they arrive at the proper destinations using the IP address on each packet
+
+
+// Asynch JS
+
+// in previous lecture, we did a simple AJAX call to fetch data from a country's API
+// we created a function to do that and called it multiple times
+// those calls ran in parallel and we couldn't control which one finished first
+// in this lecture, we'll create a sequence of AJAX calls so that the second one only runs after the first one has finished
