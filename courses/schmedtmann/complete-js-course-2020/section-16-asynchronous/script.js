@@ -309,3 +309,13 @@ getCountryData('usa');
 // we created a function to do that and called it multiple times
 // those calls ran in parallel and we couldn't control which one finished first
 // in this lecture, we'll create a sequence of AJAX calls so that the second one only runs after the first one has finished
+
+// in the countries data there is a property of bordering countries
+// in the case of Portugal, that property is "ESP," for Spain
+// so, after the first AJAX call is completed, we will get this bordering country value
+// then, based on that code, we'll render the neighboring country right beside the original
+const getCountryAndNeighbour = function(country) {
+    const request = new XMLHttpRequest();
+    request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+    request.send();
+};
