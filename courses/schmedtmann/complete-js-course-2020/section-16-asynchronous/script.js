@@ -340,3 +340,6 @@ const getCountryAndNeighbour = function(country) {
 };
 
 getCountryAndNeighbour('portugal');
+
+        // use optional chaining to account for countries with no borders property (island nations, for instance):
+        const [neighbour] = data.borders?.[0];
