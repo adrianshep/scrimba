@@ -336,10 +336,20 @@ const getCountryAndNeighbour = function(country) {
 
         // Get neighbour country (2)
         const [neighbour] = data.borders;
+
+        // original immediate return solution for countries with no borders property:
+        // if (!neighbour) return;
+
+        // AJAX call country 2
+        // const request = new XMLHttpRequest();
+        // request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+        // request.send();
+        // });
+        // };
+
+        // use optional chaining to account for countries with no borders property (island nations, for instance):
+        const [neighbour] = data.borders?.[0];
     });
 };
 
 getCountryAndNeighbour('portugal');
-
-        // use optional chaining to account for countries with no borders property (island nations, for instance):
-        const [neighbour] = data.borders?.[0];
