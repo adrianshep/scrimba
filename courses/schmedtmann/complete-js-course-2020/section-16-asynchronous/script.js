@@ -344,6 +344,12 @@ const getCountryAndNeighbour = function(country) {
         // const request = new XMLHttpRequest();
         // request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
         // request.send();
+        
+        // searching by code and neighboring country:
+        // const request = new XMLHttpRequest();
+        // request.open('GET', `https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+        // request.send();
+
         // });
         // };
 
