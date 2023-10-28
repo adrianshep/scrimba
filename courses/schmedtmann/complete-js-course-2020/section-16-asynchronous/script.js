@@ -350,6 +350,9 @@ const getCountryAndNeighbour = function(country) {
         // request.open('GET', `https://restcountries.eu/rest/v2/alpha/${neighbour}`);
         // request.send();
 
+        // the firing of the second AJAX call happens inside the callback function of the first one
+        // inside this callback function, we are adding a new event listener for the new request
+        
         // });
         // };
 
