@@ -341,10 +341,10 @@ const getCountryAndNeighbour = function(country) {
         // if (!neighbour) return;
 
         // AJAX call country 2
-        // const request = new XMLHttpRequest();
-        // request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
-        // request.send();
-        
+        // const request2 = new XMLHttpRequest();
+        // request2.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+        // request2.send();
+
         // searching by code and neighboring country:
         // const request = new XMLHttpRequest();
         // request.open('GET', `https://restcountries.eu/rest/v2/alpha/${neighbour}`);
