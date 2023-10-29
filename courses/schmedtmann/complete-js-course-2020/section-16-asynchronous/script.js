@@ -1,3 +1,10 @@
+'use strict';
+
+const btn = document.querySelector('.btn-country');
+const countriesContainer = document.querySelector('.countries');
+
+///////////////////////////////////////
+
 // Synchronous Code
 
 const p = document.querySelector('.p');
@@ -11,6 +18,8 @@ p.style.color = 'red';
 // this can create problems:
 // in example, alert statement will block the rest of the code executing until OK button is clicked
 // most of time, synchronous code is fine and makes perfect sense
+// for example, however, imagine execution waiting for a five second timer to finish
+// nothing on the page would work during those five seconds
 
 
 // Asynchronous Code
@@ -61,21 +70,13 @@ p.style.width = '300px';
 // so there is no asynchronous behavior involved at all
 
 
-
-// What Are Ajax Calls?
-
-// AJAX - Asynchronous JavaScript And XML
-// allows us to communicate with remote web servers in an asynchronous way
-// with AJAX calls, we can request data from web servers dynamically, without reloading the page
-// for example, right in the next video, we're going to make Ajax calls to request data about countries
-// we can then use that data to build a small application that shows us information about the country we're in
+// AJAX
 
 // let's say we have JS application running in the browser, which is called the client
 // we want this application to get some countries data from a web server
 // we send an HTTP request to the server
 // the server will then send back a response containing the data we requested
 // the back and forth between the client and the server happens asynchronously, in the background
-
 // when we ask a server to send us data, the server usually contains a web API
 // API = Application Programming Interface
 // An API is basically software that can be used by other software to allow applications to talk to one another and exchange information
@@ -83,12 +84,6 @@ p.style.width = '300px';
 // called APIs because they are self-contained, encapsulated software that allow other software to interact with them
 // we can implement a small and simple API in a class where we make some methods available as a public interface
 
-// "Online" API
-// others refer to these as web APIs, or simply APIs
-// Jonas uses "Online" API since Web API can refer to other things
-// an application running on a web server which receives requests for data, then retrieves this data from some database and sends it back as a response
-
-// 3rd Party APIs
 // we're interested in 3rd party APIs, APIs that other developers make available to us most of the time for free
 // imagine we're building a travel application and have a database with different destinations and tours we're offering
 // we could build our own API to receive requests fomr our front end application in JS and send back the results
@@ -99,22 +94,7 @@ p.style.width = '300px';
 // can even use these APIs to send emails or texts or embed Google Maps into our application
 // APIs make the modern web as we know it possible
 
-// API Data Formats
-// X in AJAX is for XML, a data format that used to be widely used, but no API uses it anymore
-// most APIs use JSON format these days
-// it's basically just a JavaScript object, but converted to a string
-// therefore, it's very easy to send across the web and also to use in JavaScript once the data arrives
-
-
-https://countries-api-836d.onrender.com/countries/
-
-'use strict';
-
-const btn = document.querySelector('.btn-country');
-const countriesContainer = document.querySelector('.countries');
-
 // in JS, there are multiple ways of doing AJAX calls:
-
 
 // XML HTTP Request
 // First Step:
@@ -138,8 +118,9 @@ const getCountryData = function (country) {
         console.log(this.responseText);
         const [data] = JSON.parse(this.responseText);
 
+    const renderCountry = function(data, className = '') {
         const html = `
-        <article class="country">
+        <article class="country ${className}">
             <img class="country__img" src="${data.flag}" />
             <div class="country__data">
                 <h3 class="country__name">${data.name}</h3>
@@ -179,7 +160,8 @@ getCountryData('usa');
 // USA data may appear before Portugal data
 // non-blocking behavior in action
 
-// on GitHub there is a huge Public APIs repository (you can Google it) that is free to use
+
+// on GitHub there is a huge Public APIs repository (you can Google it) that are free to use
 // we'll be using REST Countries
 // needs no authentication
 // any API you use should always have CORS set to yes or maybe to unknown
@@ -189,11 +171,7 @@ getCountryData('usa');
 // endpoint (the url we'll be using):
 // https://restcountries.com/v2/name/portugal
 
-///////////////////////////////////////
 
-// Request-Response Model or Client-Server Architecture
-// whenever we try to access a Web server, the browser, which is the client, sends a request to the server and the server will then send back a response that contains the data or Web page we requested
-// this process works the exact same way, no matter if we're accessing an entire Web page or just some data from a Web API
 // Request-Response Model or Client-Server Architecture
 // whenever we try to access a Web server, the browser, which is the client, sends a request to the server and the server will then send back a response that contains the data or Web page we requested
 // this process works the exact same way, no matter if we're accessing an entire Web page or just some data from a Web API
@@ -203,7 +181,6 @@ getCountryData('usa');
 // restcountries.eu is the domain name
 // not the real address of the server we're trying to access
 // just a name that's easy for us to memorize
-// not the real address of the server we're trying to access
 // this means we need a way of converting the domain name to the real address of the server
 // that happens through DNS -- the domain name server
 // like the phone book of the internet: will match the web address of the URL to the server's real IP address -- this happens through your internet service provider
@@ -274,51 +251,29 @@ getCountryData('usa');
 // these are used to let the client know whether the request has been successful or failed
 // 200 means okay
 // 404 means page not found
-// HTTP response headers: many different possibilities and we can add our own as well
-// last part of the response is the body (present in most responses)
-// contains JSON data coming back from an API or the HTML of a web page we requested
-// in our imaginary example, there was one request to restcountries.eu and one response back
-// that's how it will work when all we do is access an API
-// if it's a Web page we're accessing, there will be many more requests and responses
-// because when we do the first request, all we get back is the initial HTML file
-// the HTML file will get scanned by the browser for all the assets it needs to build the entire Web page: JavaScript, CSS files, image files, or other assets.
-// for each different file, there will be a new HTTP request made to the server
-// this entire back and forth between client and server happens for every single file included in the Web page
-// there can be multiple requests and responses happening at the same time, but the amount is limited lest the connection slow down
-// when all the files have finally arrived, the Web page can be rendered in the browser according to the HTML, CSS and JavaScript specifications
 
 // TCP/IP
 // how request and response data is sent across the web
 // TCP and IP are the communication protocols that define how data travels across the web
-
 // TCP
 // first job: break requests and responses down into small chunks of data called packets, before they're sent
 // second job: once the packets arrive at their final destination, TCP will reassemble all of them back into the original request or response
 // this is necessary so that each packet can take a different route through the internet so the message arrives at its destination as quickly as possible
 // that wouldn't be possible if the entire request or response were sent as a single big chunk of data
 // like trying to get through a traffic jam in the biggest bus imaginable
-
 // IP 
 // sends and routes the packets through the internet
 // ensures they arrive at the proper destinations using the IP address on each packet
 
-
 // Asynch JS
-
 // in previous lecture, we did a simple AJAX call to fetch data from a country's API
 // we created a function to do that and called it multiple times
 // those calls ran in parallel and we couldn't control which one finished first
 // in this lecture, we'll create a sequence of AJAX calls so that the second one only runs after the first one has finished
-
 // in the countries data there is a property of bordering countries
 // in the case of Portugal, that property is "ESP," for Spain
 // so, after the first AJAX call is completed, we will get this bordering country value
 // then, based on that code, we'll render the neighboring country right beside the original
-const getCountryAndNeighbour = function(country) {
-    const request = new XMLHttpRequest();
-    request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
-    request.send();
-};
 
 const getCountryAndNeighbour = function(country) {
 
@@ -347,6 +302,8 @@ const getCountryAndNeighbour = function(country) {
 
         request2.addEventListener('load', function() {
             console.log(this.responseText);
+
+            renderCountry(data2, 'neighbour')
         });
 
         // searching by code and neighboring country:
@@ -356,7 +313,7 @@ const getCountryAndNeighbour = function(country) {
 
         // the firing of the second AJAX call happens inside the callback function of the first one
         // inside this callback function, we are adding a new event listener for the new request
-        
+
         // });
         // };
 
