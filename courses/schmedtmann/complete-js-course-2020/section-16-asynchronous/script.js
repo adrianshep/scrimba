@@ -323,3 +323,10 @@ const getCountryAndNeighbour = function(country) {
 };
 
 getCountryAndNeighbour('portugal');
+
+// Callback Hell
+// with nested callbacks, doing more such requests in sequence -- the neighbor of the neighbor of the neighbor ten times over -- would be an unmanageable structure
+// this happens for all asynchronous tasks, not just AJAX calls
+// makes code harder to maintain, difficult to understand and reason through
+// code will have more bugs and will be more difficult to add new features and functionality to it
+// since ES6, we can escape callback hell via promises
