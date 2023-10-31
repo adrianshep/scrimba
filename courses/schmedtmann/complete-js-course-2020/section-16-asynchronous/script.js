@@ -330,3 +330,16 @@ getCountryAndNeighbour('portugal');
 // makes code harder to maintain, difficult to understand and reason through
 // code will have more bugs and will be more difficult to add new features and functionality to it
 // since ES6, we can escape callback hell via promises
+
+
+// Promises and Fetch API
+
+// old XML HTTP request function:
+// const getCountryData = function (country) {
+// const request = new XMLHttpRequest();
+// request.open('GET', `https://restcountries.com/v2/name/${country}`);
+// request.send();
+
+// Fetch API
+const request = fetch(https://restcountries.com/v2/name/${country});
+                      
