@@ -341,5 +341,6 @@ getCountryAndNeighbour('portugal');
 // request.send();
 
 // Fetch API
-const request = fetch(https://restcountries.com/v2/name/${country});
-                      
+const request = fetch(https://restcountries.com/v2/name/${country});  
+
+// for more complex AJAX calls, the fetch function can take in an object of options as well
