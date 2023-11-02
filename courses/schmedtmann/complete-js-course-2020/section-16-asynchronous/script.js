@@ -344,3 +344,14 @@ getCountryAndNeighbour('portugal');
 const request = fetch(https://restcountries.com/v2/name/${country});  
 
 // for more complex AJAX calls, the fetch function can take in an object of options as well
+
+// What Are Promises?     
+// formal definition:
+// an object that is used as a placeholder for the future result of an asynchronous operation
+// less formal:
+// a container for an asynchronously delivered value
+// even less formal:
+// a container for a future value
+// perfect example of a future value is the response coming from an AJAX call
+// when we start the AJAX call there is no value yet, but we know there will be a value in the future
+// we use the promise to handle this future value
