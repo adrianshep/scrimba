@@ -355,3 +355,10 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // perfect example of a future value is the response coming from an AJAX call
 // when we start the AJAX call there is no value yet, but we know there will be a value in the future
 // we use the promise to handle this future value
+
+// Lottery Ticket Promise Analogy
+// when you buy a lottery ticket, you're buying the promise that you'll receive an amount of moeny in the future if you guess the correct outcome
+// you buy the ticket now with the prospect of winning money in the future
+// and the lottery draw which determines if you get the money or not happens asynchronously
+// you don't have to drop everything else you're doing and wait until the lottery draw happens
+// in the event you do get the correct outcome, you will then receive your money because you have your lottery ticket, which is the promise that you bought
