@@ -366,3 +366,5 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // Big Advantage of Using Promises
 // 1. no longer need to rely on events and callback functions to handles asynchronous results
 // events and callback functions can sometimes cause unpredictable results
+// 2. even better, we can chain promises for a sequence of asynchronous operations instead of nesting like we did before
+// and with this, we can finally escape callback hell
