@@ -362,3 +362,7 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // and the lottery draw which determines if you get the money or not happens asynchronously
 // you don't have to drop everything else you're doing and wait until the lottery draw happens
 // in the event you do get the correct outcome, you will then receive your money because you have your lottery ticket, which is the promise that you bought
+
+// Big Advantage of Using Promises
+// 1. no longer need to rely on events and callback functions to handles asynchronous results
+// events and callback functions can sometimes cause unpredictable results
