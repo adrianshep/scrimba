@@ -368,3 +368,5 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // events and callback functions can sometimes cause unpredictable results
 // 2. even better, we can chain promises for a sequence of asynchronous operations instead of nesting like we did before
 // and with this, we can finally escape callback hell
+// promises are an ES6 feature
+// they became available in JS in 2015, so are now widely used by everyone
