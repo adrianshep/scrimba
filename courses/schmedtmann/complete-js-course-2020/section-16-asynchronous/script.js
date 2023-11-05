@@ -370,3 +370,7 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // and with this, we can finally escape callback hell
 // promises are an ES6 feature
 // they became available in JS in 2015, so are now widely used by everyone
+
+// Life Cycle of a Promise
+// since promises work with asynchronous operations, they are time sensitive -- they change over time
+// promises can be in different states
