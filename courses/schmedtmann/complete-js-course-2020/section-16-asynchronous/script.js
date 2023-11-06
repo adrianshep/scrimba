@@ -374,3 +374,6 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // Life Cycle of a Promise
 // since promises work with asynchronous operations, they are time sensitive -- they change over time
 // promises can be in different states
+// in the beginning, we say that a promise is pending
+// this is before any value resulting from the asynchronous talk is available
+// during this time, the asynchronous task will be doing its work in the background
