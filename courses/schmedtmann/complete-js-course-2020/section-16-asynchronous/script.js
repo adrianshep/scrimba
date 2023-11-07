@@ -377,3 +377,7 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // in the beginning, we say that a promise is pending
 // this is before any value resulting from the asynchronous talk is available
 // during this time, the asynchronous task will be doing its work in the background
+// when the task finally finishes, the promise is settled
+// two types of settled promises:
+// 1. fulfilled promise - a promise that has successfully resulted in a value, just as we expect it
+// for example, a promise used to fetch data from an API successfully gets that data with it now being available to use
