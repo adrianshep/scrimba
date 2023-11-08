@@ -381,3 +381,5 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // two types of settled promises:
 // 1. fulfilled promise - a promise that has successfully resulted in a value, just as we expect it
 // for example, a promise used to fetch data from an API successfully gets that data with it now being available to use
+// 2. rejected promise - means there has been an error during the asynchronous task
+// for example, in fetching data from API, the user is offline and can't connect to the API server
