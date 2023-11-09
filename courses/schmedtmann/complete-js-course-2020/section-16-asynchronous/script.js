@@ -383,3 +383,9 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // for example, a promise used to fetch data from an API successfully gets that data with it now being available to use
 // 2. rejected promise - means there has been an error during the asynchronous task
 // for example, in fetching data from API, the user is offline and can't connect to the API server
+
+// analogy of the lottery ticket
+// the lottery draw is the asynchronous task which determines the result
+// once the result is available, the ticket is settled
+// if we guessed the correct outcome, the lottery ticket will be redeemed and we will get our money
+// if didn't guess the correct outcome, the ticket gets rejected and we wasted our money
