@@ -389,3 +389,5 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // once the result is available, the ticket is settled
 // if we guessed the correct outcome, the lottery ticket will be redeemed and we will get our money
 // if didn't guess the correct outcome, the ticket gets rejected and we wasted our money
+
+// these different states are important to understand because, when we use promises in our code, we will be able to handle the different states in order to do something as a result of either a successful promise or a rejected one
