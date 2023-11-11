@@ -394,3 +394,6 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 
 // a promise is only settled once -- from then on, that state will remain unchanged forever
 // whether the promise was fulfilled or rejected, it's impossible to change that state
+
+// the different states are relevant and useful when we use a promise to get a result
+// in other words, we consume a promise
