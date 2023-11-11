@@ -397,3 +397,9 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 
 // the different states are relevant and useful when we use a promise to get a result
 // in other words, we consume a promise
+
+// for a promise to exist, it must first be built
+// in case of the fetch API, it's the fetch function that builds the promise and returns it for us to consume
+// in this case, we don't have to build the promise ourselves in order to consume it
+// most of the time we will just consume promises, which is the easier and more useful part
+// sometimes, we'll also need to build a promise
