@@ -391,3 +391,6 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // if didn't guess the correct outcome, the ticket gets rejected and we wasted our money
 
 // these different states are important to understand because, when we use promises in our code, we will be able to handle the different states in order to do something as a result of either a successful promise or a rejected one
+
+// a promise is only settled once -- from then on, that state will remain unchanged forever
+// whether the promise was fulfilled or rejected, it's impossible to change that state
