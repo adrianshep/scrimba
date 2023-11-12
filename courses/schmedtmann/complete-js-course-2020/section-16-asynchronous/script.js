@@ -403,3 +403,12 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // in this case, we don't have to build the promise ourselves in order to consume it
 // most of the time we will just consume promises, which is the easier and more useful part
 // sometimes, we'll also need to build a promise
+
+
+// Consuming Promises
+
+// consume promise returned by the fetch function:
+
+const getCountryData = function(country) {
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+};
