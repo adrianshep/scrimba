@@ -410,5 +410,11 @@ const request = fetch(https://restcountries.com/v2/name/${country});
 // consume promise returned by the fetch function:
 
 const getCountryData = function(country) {
-    fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`).then();
 };
+
+// calling the fetch function will immediately return a promise
+// in the beginning, this promise is still pending because the asynchronous task of getting the data is running in the background
+// at a certain point, the promise will be settled in either a fulfilled or a rejected state
+// assume the promise will be fulfilled and that we have an available value with which to work
+// to handle this fulfilled state, we can use the then method that is available on all promises
