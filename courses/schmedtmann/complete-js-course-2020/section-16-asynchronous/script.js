@@ -432,3 +432,25 @@ const getCountryData = function(country) {
 // to handle this fulfilled state, we can use the then method that is available on all promises
 // into the then method, we need to pass a callback function that we want to be executed as soon as the promise is fulfilled -- as soon as the result is available
 // this function will receive one argument once it's called by JS -- the resulting value of the fulfilled promise
+
+const getCountryData = function(country) {
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`).then(function(
+        response
+        ) {
+            console.log(response);
+    });
+};
+getCountryData('portugal');
+
+// calling the fetch function will immediately return a promise
+// in the beginning, this promise is still pending because the asynchronous task of getting the data is running in the background
+// at a certain point, the promise will be settled in either a fulfilled or a rejected state
+// assume the promise will be fulfilled and that we have an available value with which to work
+// to handle this fulfilled state, we can use the then method that is available on all promises
+// into the then method, we need to pass a callback function that we want to be executed as soon as the promise is fulfilled -- as soon as the result is available
+// this function will receive one argument once it's called by JS -- the resulting value of the fulfilled promise
+
+// Response
+// console log returns object of a type called "Response"
+// (contains status code for the headers, among other things)
+// the data is in the response body itself as a not yet readable stream -- need to call JSON method on response to make it readable
