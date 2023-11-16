@@ -438,6 +438,7 @@ const getCountryData = function(country) {
         response
         ) {
             console.log(response);
+            response.json();
     });
 };
 getCountryData('portugal');
@@ -453,4 +454,5 @@ getCountryData('portugal');
 // Response
 // console log returns object of a type called "Response"
 // (contains status code for the headers, among other things)
-// the data is in the response body itself as a not yet readable stream -- need to call JSON method on response to make it readable
+// the data is in the response body is a ReadableStream, but in order to actually be able to read it, we need to call JSON method on response
+// JSON method is available on all the response objects coming from the fetch function, all the resolved values
