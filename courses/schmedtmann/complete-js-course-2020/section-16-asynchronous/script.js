@@ -465,3 +465,4 @@ getCountryData('portugal');
 // need to return the new promise
 // need to handle the new promise by calling a new then
 // need another callback function we'll call data
+// console.log of data shows that we are back to having the same data as before but this time using two promises
