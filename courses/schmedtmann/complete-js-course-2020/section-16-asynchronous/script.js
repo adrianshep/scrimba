@@ -439,7 +439,9 @@ const getCountryData = function(country) {
         ) {
             console.log(response);
             return response.json();
-        }).then()
+        }).then(function(data) {
+            console.log(data);
+        });
 };
 getCountryData('portugal');
 
@@ -462,3 +464,4 @@ getCountryData('portugal');
 // confusing, but that's just how it works
 // need to return the new promise
 // need to handle the new promise by calling a new then
+// need another callback function we'll call data
