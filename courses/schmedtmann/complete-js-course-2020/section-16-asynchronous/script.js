@@ -441,6 +441,7 @@ const getCountryData = function(country) {
             return response.json();
         }).then(function(data) {
             console.log(data);
+            renderCountry(data[0];)
         });
 };
 getCountryData('portugal');
@@ -466,3 +467,5 @@ getCountryData('portugal');
 // need to handle the new promise by calling a new then
 // need another callback function we'll call data
 // console.log of data shows that we are back to having the same data as before but this time using two promises
+// the resolved value of the promise return response.json() is the data we're looking for itself
+// all that's left to do is render country of data zero
