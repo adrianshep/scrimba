@@ -469,3 +469,15 @@ getCountryData('portugal');
 // console.log of data shows that we are back to having the same data as before but this time using two promises
 // the resolved value of the promise return response.json() is the data we're looking for itself
 // all that's left to do is render country of data zero
+// simplifying the code:
+
+const getCountryData = function(country) {
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+        .then(response => response.json())
+        .then(data) => renderCountry(data[0]));
+};
+getCountryData('portugal');
+
+// getting rid of the console.logs, we can use arrow functions instead
+// this will work because we can now implicitly return the result
+// the code becomes more like a readable sentence and therefore more easily understandable
