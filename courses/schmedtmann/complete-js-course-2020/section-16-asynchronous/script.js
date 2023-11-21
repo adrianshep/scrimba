@@ -481,3 +481,5 @@ getCountryData('portugal');
 // getting rid of the console.logs, we can use arrow functions instead
 // this will work because we can now implicitly return the result
 // the code becomes more like a readable sentence and therefore more easily understandable
+// we're still using callbacks
+// promises do not get rid of callbacks, but they do get rid of callback hell
