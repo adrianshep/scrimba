@@ -483,3 +483,8 @@ getCountryData('portugal');
 // the code becomes more like a readable sentence and therefore more easily understandable
 // we're still using callbacks
 // promises do not get rid of callbacks, but they do get rid of callback hell
+
+
+// Chaining Promises
+// how to chain promises in order, for instance, to also render the neighboring country of the initial country in the function
+// we already have a small chain of promises because of the JSON function: the two .thens that are called in sequence
