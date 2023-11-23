@@ -488,3 +488,15 @@ getCountryData('portugal');
 // Chaining Promises
 // how to chain promises in order, for instance, to also render the neighboring country of the initial country in the function
 // we already have a small chain of promises because of the JSON function: the two .thens that are called in sequence
+
+// chaining together two sequential AJAX calls
+
+const getCountryData = function(country) {
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+        .then(response => response.json())
+        .then(data) => {
+            renderCountry(data[0]);
+            const neighbour = data[0].borders[0];
+        }
+};
+getCountryData('portugal');
