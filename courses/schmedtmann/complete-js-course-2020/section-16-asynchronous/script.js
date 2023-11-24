@@ -497,6 +497,11 @@ const getCountryData = function(country) {
         .then(data) => {
             renderCountry(data[0]);
             const neighbour = data[0].borders[0];
+
+            if(!neighbour) return;
         }
 };
 getCountryData('portugal');
+
+// if there is no neighbor, then return immediately
+// this isn't going to work, but never mind it for now -- will be dealt with in the error-handling section
