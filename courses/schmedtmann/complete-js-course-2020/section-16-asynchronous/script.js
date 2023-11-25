@@ -492,6 +492,7 @@ getCountryData('portugal');
 // chaining together two sequential AJAX calls
 
 const getCountryData = function(country) {
+    // Country 1
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
         .then(response => response.json())
         .then(data) => {
@@ -499,9 +500,13 @@ const getCountryData = function(country) {
             const neighbour = data[0].borders[0];
 
             if(!neighbour) return;
+
+            // Country 2
+            fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
         }
 };
 getCountryData('portugal');
 
 // if there is no neighbor, then return immediately
 // this isn't going to work, but never mind it for now -- will be dealt with in the error-handling section
+// second AJAX call
