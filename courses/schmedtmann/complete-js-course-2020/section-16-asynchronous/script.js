@@ -502,7 +502,7 @@ const getCountryData = function(country) {
             if(!neighbour) return;
 
             // Country 2
-            fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+            return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
         }
 };
 getCountryData('portugal');
@@ -510,3 +510,4 @@ getCountryData('portugal');
 // if there is no neighbor, then return immediately
 // this isn't going to work, but never mind it for now -- will be dealt with in the error-handling section
 // second AJAX call
+// need to return the new promise so we'll be able to chain a new then method on the result of the this then method
