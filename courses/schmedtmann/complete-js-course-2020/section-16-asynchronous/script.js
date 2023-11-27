@@ -510,4 +510,13 @@ getCountryData('portugal');
 // if there is no neighbor, then return immediately
 // this isn't going to work, but never mind it for now -- will be dealt with in the error-handling section
 // second AJAX call
-// need to return the new promise so we'll be able to chain a new then method on the result of the this then method
+// need to return the new promise so we'll be able to chain a new then method on the result of the this then (data) method
+// the then method always returns a promise, no matter whether we actually return anything or not
+// if we do return a value, that value will become the fulfilled value of the return promise
+// to demonstrate, instead of:
+// return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+// we instead:
+//  return 23;
+// });
+// .then(data => alert(23));
+// and 23 comes up in an alert
