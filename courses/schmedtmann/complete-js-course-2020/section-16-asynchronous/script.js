@@ -503,7 +503,9 @@ const getCountryData = function(country) {
 
             // Country 2
             return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
-        }
+        })
+        .then(response => response.json())
+        .then(data => renderCountry(data, 'neighbour'));
 };
 getCountryData('portugal');
 
@@ -520,3 +522,7 @@ getCountryData('portugal');
 // });
 // .then(data => alert(23));
 // and 23 comes up in an alert
+
+// call the JSON method to handle the response
+// render country with data
+// pass in CSS class for the neighbour
