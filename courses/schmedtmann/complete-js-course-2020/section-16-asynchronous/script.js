@@ -526,3 +526,8 @@ getCountryData('portugal');
 // call the JSON method to handle the response
 // render country with data
 // pass in CSS class for the neighbour
+// testing with different countries:
+// getCountryData('portugal');
+// we get Spain
+// getCountryData('germany');
+// we get Austria
