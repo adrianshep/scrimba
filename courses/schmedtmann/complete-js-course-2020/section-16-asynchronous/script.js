@@ -531,3 +531,7 @@ getCountryData('portugal');
 // we get Spain
 // getCountryData('germany');
 // we get Austria
+// promises allow us to handle complex asynchronous operations with as many steps as we want
+// we have four steps in the example above, but we can extend that as much as we want
+// even if we wanted the neighbor of the neighbor of the neighbor -- 10 countries, say -- we could easily get it by chaining all these promises one after another
+// instead of callback hell, we have a flat chain of promises that is very easy to read and understand
