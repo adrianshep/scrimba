@@ -535,3 +535,7 @@ getCountryData('portugal');
 // we have four steps in the example above, but we can extend that as much as we want
 // even if we wanted the neighbor of the neighbor of the neighbor -- 10 countries, say -- we could easily get it by chaining all these promises one after another
 // instead of callback hell, we have a flat chain of promises that is very easy to read and understand
+// common beginner's mistake is chaining the then method directly onto a new nested promise
+// fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`).then(response => response.json());
+// this does work but we are then back in callback hell
+// we have one callback function defined inside of another one, exactly what we're trying to avoid
