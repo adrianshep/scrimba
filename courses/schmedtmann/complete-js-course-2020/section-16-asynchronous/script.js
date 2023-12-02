@@ -539,3 +539,8 @@ getCountryData('portugal');
 // fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`).then(response => response.json());
 // this does work but we are then back in callback hell
 // we have one callback function defined inside of another one, exactly what we're trying to avoid
+
+
+// Handling Rejected Promises
+// a rejected promise is one in which an error has happened
+// how do we handle such rejected promises?
