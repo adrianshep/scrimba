@@ -544,3 +544,31 @@ getCountryData('portugal');
 // Handling Rejected Promises
 // a rejected promise is one in which an error has happened
 // how do we handle such rejected promises?
+// the only in which the fetch promise rejects is when the user loses their internet connection
+// for now, that will be the only error we will be handling
+// we want to simulate that the webpage was loaded but then as the user makes their request without internet connectivity we want to see the error happening
+
+const getCountryData = function(country) {
+    // Country 1
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+        .then(response => response.json())
+        .then(data) => {
+            renderCountry(data[0]);
+            const neighbour = data[0].borders[0];
+
+            if(!neighbour) return;
+
+            // Country 2
+            return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+        })
+        .then(response => response.json())
+        .then(data => renderCountry(data, 'neighbour'));
+};
+
+btn.addEventListener('click', function() {
+    getCountryData('portugal');
+})
+
+// at top of code, we already have:
+// const btn = document.querySelector('.btn-country);
+// in index.html we comment out .btn-country
