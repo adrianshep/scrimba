@@ -572,3 +572,8 @@ btn.addEventListener('click', function() {
 // at top of code, we already have:
 // const btn = document.querySelector('.btn-country);
 // in index.html we comment out .btn-country
+// select Offline under Network and click the "Where am I?" button on the webpage
+// that click/request returns two errors:
+// ERR_INTERNET_DISCONNECTED
+// Uncaught (in promise) TypeError: Failed to fetch
+// for the first time, the promise that's returned from the fetch function has been rejected
