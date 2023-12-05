@@ -577,3 +577,7 @@ btn.addEventListener('click', function() {
 // ERR_INTERNET_DISCONNECTED
 // Uncaught (in promise) TypeError: Failed to fetch
 // for the first time, the promise that's returned from the fetch function has been rejected
+// two ways of handling rejections:
+// 1. pass a second callback function into the then method
+// the first callback function is always going to be called for the fulfilled, that is, successful promise
+// 2. pass a second callback that will be called when the promise is rejected
