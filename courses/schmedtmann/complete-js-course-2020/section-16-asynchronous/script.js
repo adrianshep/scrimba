@@ -551,7 +551,10 @@ getCountryData('portugal');
 const getCountryData = function(country) {
     // Country 1
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
-        .then(response => response.json())
+        .then(
+            response => response.json(),
+            err => alert(err)
+        )
         .then(data) => {
             renderCountry(data[0]);
             const neighbour = data[0].borders[0];
@@ -581,3 +584,5 @@ btn.addEventListener('click', function() {
 // 1. pass a second callback function into the then method
 // the first callback function is always going to be called for the fulfilled, that is, successful promise
 // 2. pass a second callback that will be called when the promise is rejected
+// this callback function will be called with an argument which the error itself
+// we will simply alert the error
