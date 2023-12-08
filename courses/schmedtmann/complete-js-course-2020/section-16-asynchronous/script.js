@@ -588,5 +588,9 @@ btn.addEventListener('click', function() {
 // we will simply alert the error
 // we handle the error by displaying the alert window
 // and, the error we had before, ERR_INTERNET_DISCONNECTED, has disappeared
-// in fact, we no longer have it as an Uncaught error because we did actually catch it right here 
+// in fact, we no longer have it as an Uncaught error because we did catch it right at:
+// err => alert(err)
 // handling an error is also called catching the error
+// in this case, there are no more errors because the chain stops here when the error happens and it's handled
+// what if the first fetch promise was fulfilled but the second fetch promise was rejected?
+// can insert the error handling function after .then of the second promise, but that gets annoying
