@@ -553,7 +553,7 @@ const getCountryData = function(country) {
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
         .then(
             response => response.json(),
-            err => alert(err)
+            // err => alert(err)
         )
         .then(data) => {
             renderCountry(data[0]);
@@ -564,8 +564,12 @@ const getCountryData = function(country) {
             // Country 2
             return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
         })
-        .then(response => response.json())
-        .then(data => renderCountry(data, 'neighbour'));
+        .then(
+            response => response.json(),
+            // err => alert(err)
+        )
+        .then(data => renderCountry(data, 'neighbour'))
+        .catch(err => alert(err))
 };
 
 btn.addEventListener('click', function() {
@@ -594,3 +598,11 @@ btn.addEventListener('click', function() {
 // in this case, there are no more errors because the chain stops here when the error happens and it's handled
 // what if the first fetch promise was fulfilled but the second fetch promise was rejected?
 // can insert the error handling function after .then of the second promise, but that gets annoying
+// there is a better way of handling all these errors globally in one central place
+// instead of having all these callback error functions throughout, delete them
+// nicer having one callback in the then and handling all the errors, no matter where they appear in the chain, right at the end of the chain by adding a catch method
+// then we can use the same callback function here
+// it will also be called with the error object that occurred and then we can handle
+// the catch method at the end of the chain will catch any errors that occur in any place in the whole promise chain, no matter where they are
+// errors propagate down the chain until they ar caught
+// only if they're not caught anywhere do we then get the Uncaught error we saw earlier
