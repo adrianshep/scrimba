@@ -569,7 +569,10 @@ const getCountryData = function(country) {
             // err => alert(err)
         )
         .then(data => renderCountry(data, 'neighbour'))
-        .catch(err => alert(err))
+        // .catch(err => alert(err))
+        .catch(err => {
+            console.error(`${err} 💥💥💥`)
+        });
 };
 
 btn.addEventListener('click', function() {
@@ -606,3 +609,4 @@ btn.addEventListener('click', function() {
 // the catch method at the end of the chain will catch any errors that occur in any place in the whole promise chain, no matter where they are
 // errors propagate down the chain until they ar caught
 // only if they're not caught anywhere do we then get the Uncaught error we saw earlier
+// log error to console again using .error for style and using 💥💥💥 emojis to indicate we printed this
