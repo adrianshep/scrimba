@@ -548,6 +548,10 @@ getCountryData('portugal');
 // for now, that will be the only error we will be handling
 // we want to simulate that the webpage was loaded but then as the user makes their request without internet connectivity we want to see the error happening
 
+const renderError = function(msg) {
+    countriesContainer.insertAdjacentText('beforehand', msg);
+}
+
 const getCountryData = function(country) {
     // Country 1
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
@@ -610,3 +614,7 @@ btn.addEventListener('click', function() {
 // errors propagate down the chain until they ar caught
 // only if they're not caught anywhere do we then get the Uncaught error we saw earlier
 // log error to console again using .error for style and using 💥💥💥 emojis to indicate we printed this
+// usually, simply logging the error to the console is not enough in an application with a user interface
+// let's also, then, display the error message for the user to see
+// so create a renderError function outside and above the code
+// use .insertAdjacentText so it doesn't create any new HTML elements
