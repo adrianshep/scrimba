@@ -550,7 +550,8 @@ getCountryData('portugal');
 
 const renderError = function(msg) {
     countriesContainer.insertAdjacentText('beforehand', msg);
-}
+    countriesContainer.style.opacity = 1;
+};
 
 const getCountryData = function(country) {
     // Country 1
@@ -618,3 +619,4 @@ btn.addEventListener('click', function() {
 // let's also, then, display the error message for the user to see
 // so create a renderError function outside and above the code
 // use .insertAdjacentText so it doesn't create any new HTML elements
+// just as we did in the render countries function, remember that we always have to set the opacity back to 1, because otherwise the container is not going to be visible
