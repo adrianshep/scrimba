@@ -620,3 +620,4 @@ btn.addEventListener('click', function() {
 // so create a renderError function outside and above the code
 // use .insertAdjacentText so it doesn't create any new HTML elements
 // just as we did in the render countries function, remember that we always have to set the opacity back to 1, because otherwise the container is not going to be visible
+// place the render error and render country functions at the top of the file
