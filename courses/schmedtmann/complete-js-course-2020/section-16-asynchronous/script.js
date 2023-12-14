@@ -577,6 +577,7 @@ const getCountryData = function(country) {
         // .catch(err => alert(err))
         .catch(err => {
             console.error(`${err} 💥💥💥`)
+            renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
         });
 };
 
@@ -621,3 +622,4 @@ btn.addEventListener('click', function() {
 // use .insertAdjacentText so it doesn't create any new HTML elements
 // just as we did in the render countries function, remember that we always have to set the opacity back to 1, because otherwise the container is not going to be visible
 // place the render error and render country functions at the top of the file
+// use renderError and print the error
