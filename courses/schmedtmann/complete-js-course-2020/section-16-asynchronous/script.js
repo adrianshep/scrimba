@@ -623,3 +623,5 @@ btn.addEventListener('click', function() {
 // just as we did in the render countries function, remember that we always have to set the opacity back to 1, because otherwise the container is not going to be visible
 // place the render error and render country functions at the top of the file
 // use renderError and print the error
+// any error in JS that was created with a constructor, just like a map or set, contains the message property
+// we can use that to only print the message of that error and not the whole object itself
