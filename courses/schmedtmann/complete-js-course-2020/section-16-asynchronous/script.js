@@ -625,3 +625,9 @@ btn.addEventListener('click', function() {
 // use renderError and print the error
 // any error in JS that was created with a constructor, just like a map or set, contains the message property
 // we can use that to only print the message of that error and not the whole object itself
+/ testing by going Offline:
+// in the HTML we get the error message:
+// Something went wrong 💥💥 Failed to fetch. Try again!
+// in the console we get the entire error:
+// TypeError: Failed to fetch 💥💥💥
+// which includes the stack trace showing us exactly where the error comes from
