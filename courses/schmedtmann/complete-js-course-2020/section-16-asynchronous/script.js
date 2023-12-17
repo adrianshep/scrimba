@@ -578,7 +578,10 @@ const getCountryData = function(country) {
         .catch(err => {
             console.error(`${err} 💥💥💥`)
             renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
-        });
+        })
+        .finally(() => {
+
+        })
 };
 
 btn.addEventListener('click', function() {
@@ -631,3 +634,8 @@ btn.addEventListener('click', function() {
 // in the console we get the entire error:
 // TypeError: Failed to fetch 💥💥💥
 // which includes the stack trace showing us exactly where the error comes from
+
+// Finally Method
+// add .finally at the end of the function
+// the callback function we defined here will always be called, regardless of whether the promise is fulfilled or rejected
+// we use this method for something that needs to happen no matter the outcome of the promise
