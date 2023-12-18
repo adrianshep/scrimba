@@ -639,3 +639,7 @@ btn.addEventListener('click', function() {
 // add .finally at the end of the function
 // the callback function we defined here will always be called, regardless of whether the promise is fulfilled or rejected
 // we use this method for something that needs to happen no matter the outcome of the promise
+// one use case is to hide a loading spinner
+// these are the rotating color wheels that spin onscreen while a web application is loading data
+// the spinner is shown when an asychronous operation starts and is hidden once the operation completes
+// it's hidden regardless of whether the operation was successful or not
