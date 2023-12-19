@@ -132,7 +132,7 @@ const getCountryData = function (country) {
         </article>
         `;
         countriesContainer.insertAdjacentHTML('beforeend', html);
-        countriesContainer.style.opacity = 1;
+        // countriesContainer.style.opacity = 1;
     });
 };
 
@@ -550,7 +550,7 @@ getCountryData('portugal');
 
 const renderError = function(msg) {
     countriesContainer.insertAdjacentText('beforehand', msg);
-    countriesContainer.style.opacity = 1;
+    // countriesContainer.style.opacity = 1;
 };
 
 const getCountryData = function(country) {
@@ -580,7 +580,7 @@ const getCountryData = function(country) {
             renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
         })
         .finally(() => {
-
+            countriesContainer.style.opacity = 1;
         })
 };
 
@@ -643,3 +643,6 @@ btn.addEventListener('click', function() {
 // these are the rotating color wheels that spin onscreen while a web application is loading data
 // the spinner is shown when an asychronous operation starts and is hidden once the operation completes
 // it's hidden regardless of whether the operation was successful or not
+// in our case, we always need to fade-in the countries container -- that always happens, no matter what
+// so we comment-out countriesContainer.style.opacity = 1 in both 
+// and place countriesContainer.style.opacity = 1 in the finally method function
