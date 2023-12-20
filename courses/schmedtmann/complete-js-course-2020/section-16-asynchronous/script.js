@@ -646,3 +646,4 @@ btn.addEventListener('click', function() {
 // in our case, we always need to fade-in the countries container -- that always happens, no matter what
 // so we comment-out countriesContainer.style.opacity = 1 in both 
 // and place countriesContainer.style.opacity = 1 in the finally method function
+// this can only work if catch itself also returns a promise
