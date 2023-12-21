@@ -647,3 +647,8 @@ btn.addEventListener('click', function() {
 // so we comment-out countriesContainer.style.opacity = 1 in both 
 // and place countriesContainer.style.opacity = 1 in the finally method function
 // this can only work if catch itself also returns a promise
+
+// searching for a country that doesn't exist
+// getCountryData('dsfddsfsdf');
+// returns console log:
+// TypeError: Cannot read property 'flag' of undefined
