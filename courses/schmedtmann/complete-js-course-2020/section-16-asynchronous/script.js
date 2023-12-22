@@ -652,3 +652,6 @@ btn.addEventListener('click', function() {
 // getCountryData('dsfddsfsdf');
 // returns console log:
 // TypeError: Cannot read property 'flag' of undefined
+// however, this is not reflective of the true error, which is that the API can't find any country with this name
+// because this is a 404 error, the fetch promise will still get fulfilled
+// there is no rejection so the catch handler cannot pick up on the real error
