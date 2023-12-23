@@ -655,3 +655,9 @@ btn.addEventListener('click', function() {
 // however, this is not reflective of the true error, which is that the API can't find any country with this name
 // because this is a 404 error, the fetch promise will still get fulfilled
 // there is no rejection so the catch handler cannot pick up on the real error
+
+
+// Throwing Errors Manually
+// because the API couldn't find any country with the entered name during the fetch, there was a request 404 error
+// even though there was an obviously big problem with this request, the fetch function did not reject the case
+// we will therefore have to do it manually
