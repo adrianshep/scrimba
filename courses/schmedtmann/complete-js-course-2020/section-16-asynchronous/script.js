@@ -661,3 +661,8 @@ btn.addEventListener('click', function() {
 // because the API couldn't find any country with the entered name during the fetch, there was a request 404 error
 // even though there was an obviously big problem with this request, the fetch function did not reject the case
 // we will therefore have to do it manually
+
+// checking response object:
+// when ok property is set to false, the reason for it is that the status code is 404
+// when ok property is set to true, that's because the status code is 200 -- okay
+// we can use the the fact that the response has the ok property set to false to reject the promise ourselves manually
