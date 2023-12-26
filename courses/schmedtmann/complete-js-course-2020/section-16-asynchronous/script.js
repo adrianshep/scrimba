@@ -556,10 +556,12 @@ const renderError = function(msg) {
 const getCountryData = function(country) {
     // Country 1
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
-        .then(
-            response => response.json(),
-            // err => alert(err)
-        )
+        .then(response => {
+            if(!response.ok)
+                throw new Error(`Country not found (${response.status})`)
+
+                return response.json();
+            })
         .then(data) => {
             renderCountry(data[0]);
             const neighbour = data[0].borders[0];
@@ -665,4 +667,6 @@ btn.addEventListener('click', function() {
 // checking response object:
 // when ok property is set to false, the reason for it is that the status code is 404
 // when ok property is set to true, that's because the status code is 200 -- okay
-// we can use the the fact that the response has the ok property set to false to reject the promise ourselves manually
+// we can use the fact that the response has the ok property set to false to reject the promise ourselves manually
+// we can say, if response.ok is false the we throw a new error and here we can define an error message
+// we can also add the status code to display as well
