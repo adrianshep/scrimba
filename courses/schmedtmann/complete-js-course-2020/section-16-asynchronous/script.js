@@ -670,3 +670,10 @@ btn.addEventListener('click', function() {
 // we can use the fact that the response has the ok property set to false to reject the promise ourselves manually
 // we can say, if response.ok is false the we throw a new error and here we can define an error message
 // we can also add the status code to display as well
+// analysis of what happens here:
+// by using the constructor function, we create a new error
+// we pass in an error message
+// we us the throw keyword which immediately terminates the current function (just like return does)
+// the effect of creating and throwing an error in any of these methods is that the promise will immediately reject
+// the promise returned by this then handler will be a rejected one
+// and that rejection will then propagate all the way down to the catch handler
