@@ -677,3 +677,7 @@ btn.addEventListener('click', function() {
 // the effect of creating and throwing an error in any of these methods is that the promise will immediately reject
 // the promise returned by this then handler will be a rejected one
 // and that rejection will then propagate all the way down to the catch handler
+
+// why bother handling errors?
+// 1. it's the only way we can display an error message on the screen for the user
+// 2. really bad practice to leave rejected promises without handling them
