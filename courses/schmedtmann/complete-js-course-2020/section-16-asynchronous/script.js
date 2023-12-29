@@ -680,4 +680,10 @@ btn.addEventListener('click', function() {
 
 // why bother handling errors?
 // 1. it's the only way we can display an error message on the screen for the user
-// 2. really bad practice to leave rejected promises without handling them
+// 2. really bad practice to leave rejected promises without handling them -- don't do that, always use catch or even finally to handle
+
+// what if there is no error in this promise?
+// what if, for example, there is a nonexistent country neighbour entered in the second promise?
+// the error isn't handled
+// if we copy the previous code into this then handler, we get the error message we want, 400, but then we have a lot of duplicate, repetitive code
+// it's a good time to create a nice helper function
