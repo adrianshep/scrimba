@@ -553,6 +553,8 @@ const renderError = function(msg) {
     // countriesContainer.style.opacity = 1;
 };
 
+const getJSON = function()
+
 const getCountryData = function(country) {
     // Country 1
     fetch(`https://restcountries.eu/rest/v2/name/${country}`)
@@ -686,4 +688,7 @@ btn.addEventListener('click', function() {
 // what if, for example, there is a nonexistent country neighbour entered in the second promise?
 // the error isn't handled
 // if we copy the previous code into this then handler, we get the error message we want, 400, but then we have a lot of duplicate, repetitive code
+
 // it's a good time to create a nice helper function
+// it will wrap up the fetch, the error handling, and also the converstion to JSON
+// getJSON
