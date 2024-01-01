@@ -553,7 +553,13 @@ const renderError = function(msg) {
     // countriesContainer.style.opacity = 1;
 };
 
-const getJSON = function()
+const getJSON = function(url) {
+    fetch(url).then(response => 
+        if(!response.ok) throw new Error(`Country not found (${response.status})`);
+
+        return response.json();
+    });
+};
 
 const getCountryData = function(country) {
     // Country 1
