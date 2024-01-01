@@ -553,9 +553,9 @@ const renderError = function(msg) {
     // countriesContainer.style.opacity = 1;
 };
 
-const getJSON = function(url) {
-    fetch(url).then(response => 
-        if(!response.ok) throw new Error(`Country not found (${response.status})`);
+const getJSON = function(url, errorMsg = 'Something went wrong') {
+    return fetch(url).then(response => 
+        if(!response.ok) throw new Error(`${errorMsg} (${response.status})`);
 
         return response.json();
     });
@@ -698,3 +698,5 @@ btn.addEventListener('click', function() {
 // it's a good time to create a nice helper function
 // it will wrap up the fetch, the error handling, and also the converstion to JSON
 // getJSON
+// to make this function truly generic, we do not want to hard code the error message
+// instead, we want to pass it in along with response.status
