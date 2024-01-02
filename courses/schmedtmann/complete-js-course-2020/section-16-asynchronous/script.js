@@ -563,13 +563,15 @@ const getJSON = function(url, errorMsg = 'Something went wrong') {
 
 const getCountryData = function(country) {
     // Country 1
-    fetch(`https://restcountries.eu/rest/v2/name/${country}`)
-        .then(response => {
-            if(!response.ok)
-                throw new Error(`Country not found (${response.status})`)
+    getJSON(`https://restcountries.eu/rest/v2/name/${country}`, 'Country not found')
+    
+    // fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+    //     .then(response => {
+    //         if(!response.ok)
+    //             throw new Error(`Country not found (${response.status})`)
 
-                return response.json();
-            })
+    //             return response.json();
+    //         })
         .then(data) => {
             renderCountry(data[0]);
             const neighbour = data[0].borders[0];
