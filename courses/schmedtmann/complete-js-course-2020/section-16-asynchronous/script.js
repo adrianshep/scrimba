@@ -579,12 +579,13 @@ const getCountryData = function(country) {
             if(!neighbour) return;
 
             // Country 2
-            return fetch(`https://restcountries.eu/rest/v2/alpha/${neighbour}`);
+            return getJSON(
+                `https://restcountries.eu/rest/v2/alpha/${neighbour}`, 'Country not found');
         })
-        .then(
-            response => response.json(),
-            // err => alert(err)
-        )
+        // .then(
+        //     response => response.json(),
+        //     // err => alert(err)
+        // )
         .then(data => renderCountry(data, 'neighbour'))
         // .catch(err => alert(err))
         .catch(err => {
