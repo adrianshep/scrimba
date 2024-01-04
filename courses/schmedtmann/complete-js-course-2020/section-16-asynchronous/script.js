@@ -576,7 +576,7 @@ const getCountryData = function(country) {
             renderCountry(data[0]);
             const neighbour = data[0].borders[0];
 
-            if(!neighbour) return;
+            if(!neighbour) throw new Error('No neighbor found!');
 
             // Country 2
             return getJSON(
@@ -703,3 +703,4 @@ btn.addEventListener('click', function() {
 // getJSON
 // to make this function truly generic, we do not want to hard code the error message
 // instead, we want to pass it in along with response.status
+// still need to handle the occasions when a country may have no neighbor -- Australia, for example
