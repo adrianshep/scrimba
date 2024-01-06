@@ -731,3 +731,9 @@ TEST COORDINATES 2: -33.933, 18.474
 
 GOOD LUCK 😀
 */
+
+// Jonas's Solution
+
+const whereAmI = function(lat, lng) {
+    fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+}
