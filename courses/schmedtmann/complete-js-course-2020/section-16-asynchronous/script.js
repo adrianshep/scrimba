@@ -736,4 +736,15 @@ GOOD LUCK 😀
 
 const whereAmI = function(lat, lng) {
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+    .then(res => res.json())
+    .then(data => {
+        
+    })
 }
+
+// fetch request to the URL
+// use a template string because we need to pug in latitude (lat) and, after the comma, longitude (lng)
+// call then method and get response (res)
+// immediately return res.json()
+// which will then return a new promise
+// and it is this one which will get us the data, as it's going to be the resolved value of the promise
