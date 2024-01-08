@@ -738,9 +738,11 @@ const whereAmI = function(lat, lng) {
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(res => res.json())
     .then(data => {
-        
-    })
-}
+        console.log(data);
+        console.log(`You are in ${data.city}, ${data.country}`);
+    });
+};
+whereAmI(52.588, 13.381);
 
 // fetch request to the URL
 // use a template string because we need to pug in latitude (lat) and, after the comma, longitude (lng)
@@ -748,3 +750,5 @@ const whereAmI = function(lat, lng) {
 // immediately return res.json()
 // which will then return a new promise
 // and it is this one which will get us the data, as it's going to be the resolved value of the promise
+// testing:
+// coordinates return 'You are in Berlin, Germany'
