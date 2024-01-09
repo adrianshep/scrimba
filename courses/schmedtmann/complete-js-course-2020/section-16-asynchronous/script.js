@@ -752,3 +752,9 @@ whereAmI(52.588, 13.381);
 // and it is this one which will get us the data, as it's going to be the resolved value of the promise
 // testing:
 // coordinates return 'You are in Berlin, Germany'
+// additional test coordinates:
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
+// log to console "undefined"
+// where API only allows 3 requests per second, we get a 403 error
+// the fetch function isn't correctly handling this error -- it isn't rejecting the promise even though this clearly is an error
