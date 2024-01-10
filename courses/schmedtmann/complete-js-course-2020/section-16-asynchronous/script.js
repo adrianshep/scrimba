@@ -736,7 +736,10 @@ GOOD LUCK 😀
 
 const whereAmI = function(lat, lng) {
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
-    .then(res => res.json())
+    .then(res => {
+        console.log(res);
+        return res.json();
+    })
     .then(data => {
         console.log(data);
         console.log(`You are in ${data.city}, ${data.country}`);
@@ -751,10 +754,14 @@ whereAmI(52.588, 13.381);
 // which will then return a new promise
 // and it is this one which will get us the data, as it's going to be the resolved value of the promise
 // testing:
-// coordinates return 'You are in Berlin, Germany'
+// coordinates return "You are in Berlin, Germany"
 // additional test coordinates:
 // whereAmI(19.037, 72.873);
 // whereAmI(-33.933, 18.474);
 // log to console "undefined"
 // where API only allows 3 requests per second, we get a 403 error
-// the fetch function isn't correctly handling this error -- it isn't rejecting the promise even though this clearly is an error
+// the fetch function isn't correctly handling this error -- it isn't rejecting th promise even though this clearly is an error
+// we need to do this manually with a return
+// two test cases now resolve:
+// "You are in Mumbai, India"
+// "You are in Cape Town, South Africa"
