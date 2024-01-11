@@ -737,7 +737,7 @@ GOOD LUCK 😀
 const whereAmI = function(lat, lng) {
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(res => {
-        console.log(res);
+        if(!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
         return res.json();
     })
     .then(data => {
@@ -765,3 +765,5 @@ whereAmI(52.588, 13.381);
 // two test cases now resolve:
 // "You are in Mumbai, India"
 // "You are in Cape Town, South Africa"
+// reloading very fast gets us uncaught promise
+// error message is already the one that we want, but it shouldn't be uncaught
