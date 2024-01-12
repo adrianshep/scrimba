@@ -743,7 +743,8 @@ const whereAmI = function(lat, lng) {
     .then(data => {
         console.log(data);
         console.log(`You are in ${data.city}, ${data.country}`);
-    });
+    })
+    .catch(err => console.error(`${err.message} 💥`));
 };
 whereAmI(52.588, 13.381);
 
@@ -767,3 +768,4 @@ whereAmI(52.588, 13.381);
 // "You are in Cape Town, South Africa"
 // reloading very fast gets us uncaught promise
 // error message is already the one that we want, but it shouldn't be uncaught
+// we need to catch any promise rejection
