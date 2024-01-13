@@ -769,3 +769,6 @@ whereAmI(52.588, 13.381);
 // reloading very fast gets us uncaught promise
 // error message is already the one that we want, but it shouldn't be uncaught
 // we need to catch any promise rejection
+// error message now reads "Problem with geocoding 403 💥"
+// we could now do something more meaningful with our error handling, like displaying some kind of error message
+// or logging this error in an error tracking application
