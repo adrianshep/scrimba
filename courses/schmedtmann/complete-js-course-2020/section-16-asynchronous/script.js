@@ -743,11 +743,19 @@ const whereAmI = function(lat, lng) {
     .then(data => {
         console.log(data);
         console.log(`You are in ${data.city}, ${data.country}`);
+
+        return fetch (`https://restcountries.eu/rest/v2/name/${data.country}`);
     })
+    .then(res => {
+        if (!res.ok)
+            throw new Error(`Country not found (${res.status})`);
+
+        return res.json();
+        })
+        then(data => renderCountry(data[0]))
     .catch(err => console.error(`${err.message} 💥`));
 };
 whereAmI(52.588, 13.381);
-
 // fetch request to the URL
 // use a template string because we need to pug in latitude (lat) and, after the comma, longitude (lng)
 // call then method and get response (res)
@@ -772,3 +780,5 @@ whereAmI(52.588, 13.381);
 // error message now reads "Problem with geocoding 403 💥"
 // we could now do something more meaningful with our error handling, like displaying some kind of error message
 // or logging this error in an error tracking application
+
+// use this data to render a country
