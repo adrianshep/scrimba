@@ -780,5 +780,12 @@ whereAmI(52.588, 13.381);
 // error message now reads "Problem with geocoding 403 💥"
 // we could now do something more meaningful with our error handling, like displaying some kind of error message
 // or logging this error in an error tracking application
-
 // use this data to render a country
+
+
+// Asynchronous Behind the Scenes: The Event Loop
+// JS Runtime in the Browser Review
+// JS runtime is a "container" with all the pieces necessary to execute JS code
+// the heart of every JS runtime is the engine
+// it's where, in the call stack, the code is executed
+// it's also where, in the heap, objects are stored in memory
