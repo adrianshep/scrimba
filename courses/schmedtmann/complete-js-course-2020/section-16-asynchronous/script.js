@@ -789,3 +789,5 @@ whereAmI(52.588, 13.381);
 // the heart of every JS runtime is the engine
 // it's where, in the call stack, the code is executed
 // it's also where, in the heap, objects are stored in memory
+// important to note: JS has only one thread of execution -- it can only do one thing at a time, no multitasking
+// other languages, Java for instance, can execute multiple pieces of code at the same time, but not JS
