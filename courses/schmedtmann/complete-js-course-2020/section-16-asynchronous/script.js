@@ -791,3 +791,6 @@ whereAmI(52.588, 13.381);
 // it's also where, in the heap, objects are stored in memory
 // important to note: JS has only one thread of execution -- it can only do one thing at a time, no multitasking
 // other languages, Java for instance, can execute multiple pieces of code at the same time, but not JS
+// Web APIs environment
+// APIs provided to the engine but not part of the JS language itself
+// the DOM, timers, the fetch API, the geolocation API, etc.
