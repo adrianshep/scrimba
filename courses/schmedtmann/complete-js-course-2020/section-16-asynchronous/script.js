@@ -786,6 +786,7 @@ whereAmI(52.588, 13.381);
 // Asynchronous Behind the Scenes: The Event Loop
 // JS Runtime in the Browser Review
 // JS runtime is a "container" with all the pieces necessary to execute JS code
+// JS Engine
 // the heart of every JS runtime is the engine
 // it's where, in the call stack, the code is executed
 // it's also where, in the heap, objects are stored in memory
@@ -794,3 +795,5 @@ whereAmI(52.588, 13.381);
 // Web APIs environment
 // APIs provided to the engine but not part of the JS language itself
 // the DOM, timers, the fetch API, the geolocation API, etc.
+// Callback Queue
+// data structure that holds all the ready to be executed callback functions that are attached to an event that has occurred
