@@ -797,3 +797,8 @@ whereAmI(52.588, 13.381);
 // the DOM, timers, the fetch API, the geolocation API, etc.
 // Callback Queue
 // data structure that holds all the ready to be executed callback functions that are attached to an event that has occurred
+// data structure that holds all the ready to be executed callback functions that are attached to an event that has occurred
+// whenever the call stack is empty, the event loop takes callback from the callback queue and puts them into the call stack so they can be executed
+// the event loop is the essential piece that makes asynchronous behavior possible in JS
+// it's the reason we can have a non-blocking concurrency model in JS
+// a concurrency model is how a language handles multiple things happening at the same time
