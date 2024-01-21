@@ -802,3 +802,12 @@ whereAmI(52.588, 13.381);
 // the event loop is the essential piece that makes asynchronous behavior possible in JS
 // it's the reason we can have a non-blocking concurrency model in JS
 // a concurrency model is how a language handles multiple things happening at the same time
+
+// How does this nonblocking concurrency work?
+// Why is the event loop so important?
+// If the JS engine is built around the idea of single thread, but there's only one thread of execution in the engine, then how can asynchronous code be executed in a non-blocking way?
+// start by selecting this image element in the code:
+// el = document.querySelector('img');
+// in the Call Stack:
+// Execution context:
+// querySelector()
