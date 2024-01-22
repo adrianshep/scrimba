@@ -814,3 +814,7 @@ whereAmI(52.588, 13.381);
 // in the next line, we set the source attribute of that image to dog.jpg:
 // el.src = 'dog.jpg';
 // this will now start to load the image asynchronously in the background
+// what is this mysterious background?
+// everything related to the DOM isn't part of JS but of the web APIs
+// a web API environment is where the asynchronous tasks related to the DOM will run
+// the same is true for AJAX timers calls and all other asynchronous tasks
