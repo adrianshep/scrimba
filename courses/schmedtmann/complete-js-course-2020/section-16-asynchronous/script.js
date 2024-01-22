@@ -811,3 +811,6 @@ whereAmI(52.588, 13.381);
 // in the Call Stack:
 // Execution context:
 // querySelector()
+// in the next line, we set the source attribute of that image to dog.jpg:
+// el.src = 'dog.jpg';
+// this will now start to load the image asynchronously in the background
