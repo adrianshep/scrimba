@@ -818,3 +818,5 @@ whereAmI(52.588, 13.381);
 // everything related to the DOM isn't part of JS but of the web APIs
 // a web API environment is where the asynchronous tasks related to the DOM will run
 // the same is true for AJAX timers calls and all other asynchronous tasks
+// if the image were to load in a synchronous way, it would be doing so right in the call stack and blocking the rest of the code
+// JS is asynchronous so that it does not happen in the call stack
