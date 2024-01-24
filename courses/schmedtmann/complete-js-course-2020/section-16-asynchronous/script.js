@@ -820,3 +820,8 @@ whereAmI(52.588, 13.381);
 // the same is true for AJAX timers calls and all other asynchronous tasks
 // if the image were to load in a synchronous way, it would be doing so right in the call stack and blocking the rest of the code
 // JS is asynchronous so that it does not happen in the call stack
+// if we want to do something after the image has finished loading then we need to listen to the load event
+// so we attach an event listener to the load event of that image and pass in a callback function, as always
+// el.addEventListener('load', () => {
+//  el.classList.add('fadeIn');
+// });
