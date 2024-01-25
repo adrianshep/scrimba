@@ -825,3 +825,8 @@ whereAmI(52.588, 13.381);
 // el.addEventListener('load', () => {
 //  el.classList.add('fadeIn');
 // });
+// make an AJAX call using the fetch API:
+// fetch('https://someurl.com/api')
+//  .then(res => console.log(res));
+// as always, asynch fetch operation will happen in the web API's environment
+// otherwise, we'd be blocking the call stack and creating a huge lag in our application
