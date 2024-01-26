@@ -830,3 +830,5 @@ whereAmI(52.588, 13.381);
 //  .then(res => console.log(res));
 // as always, asynch fetch operation will happen in the web API's environment
 // otherwise, we'd be blocking the call stack and creating a huge lag in our application
+// finally, we use the then method on the promise returned by the fetch function
+// this will also register a callback in the web API environment so we can react to the future resolved value of the promise
