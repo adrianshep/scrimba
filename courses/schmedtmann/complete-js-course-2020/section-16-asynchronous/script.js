@@ -832,3 +832,5 @@ whereAmI(52.588, 13.381);
 // otherwise, we'd be blocking the call stack and creating a huge lag in our application
 // finally, we use the then method on the promise returned by the fetch function
 // this will also register a callback in the web API environment so we can react to the future resolved value of the promise
+// with this, we've now executed all the top level code -- that is, all the code not inside any callback function -- in a synchronous way
+// we have the image loading in the background and some data being fetched from an API
