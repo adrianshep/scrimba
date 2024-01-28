@@ -834,3 +834,8 @@ whereAmI(52.588, 13.381);
 // this will also register a callback in the web API environment so we can react to the future resolved value of the promise
 // with this, we've now executed all the top level code -- that is, all the code not inside any callback function -- in a synchronous way
 // we have the image loading in the background and some data being fetched from an API
+// let's say the image has finished loading and therefore the load event is emitted on that image
+// then the callback for this event is put into the callback queue
+// callback queue is an ordered list of all the callback functions that are in line to be executed
+// it's like a to-do list you would write for yourself with all the taks you have to completed
+// in this case, it's a list of the tasks the call stack will have to complete
