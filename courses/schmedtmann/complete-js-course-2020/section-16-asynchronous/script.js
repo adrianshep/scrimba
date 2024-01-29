@@ -839,3 +839,10 @@ whereAmI(52.588, 13.381);
 // callback queue is an ordered list of all the callback functions that are in line to be executed
 // it's like a to-do list you would write for yourself with all the taks you have to completed
 // in this case, it's a list of the tasks the call stack will have to complete
+// if there already were other callbacks waiting in this example, then this new callback would go all the way to the back of the queue, where it would patiently wait for its turn to run
+// this has big implications:
+// imagine setting a timer for five seconds
+// after five seconds, that timer's callback will be put in the callback queue
+// if there were already other callbacks waiting and it took one second for all of them to run, the new timer's callback would only run after six seconds rather than five
+// this means that the timer's duration that you define, is not a guarantee
+// the only guarantee is that the timer's callback won't run before five seconds, but very well might run after five seconds have passed -- it all depends on the state of the callback queue
