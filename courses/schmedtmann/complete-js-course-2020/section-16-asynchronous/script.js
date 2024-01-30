@@ -846,3 +846,6 @@ whereAmI(52.588, 13.381);
 // if there were already other callbacks waiting and it took one second for all of them to run, the new timer's callback would only run after six seconds rather than five
 // this means that the timer's duration that you define, is not a guarantee
 // the only guarantee is that the timer's callback won't run before five seconds, but very well might run after five seconds have passed -- it all depends on the state of the callback queue
+// important: callback queue also contains callbacks coming from DOM events like clicks and key presses
+// DOM events aren't asynchronous behavior, but they still use the callback queue to run their attached callbacks
+// if a click happens on a button with an event listener the result will be like the asynchronous load event
