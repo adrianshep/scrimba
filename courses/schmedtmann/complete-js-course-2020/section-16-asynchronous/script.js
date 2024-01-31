@@ -849,3 +849,8 @@ whereAmI(52.588, 13.381);
 // important: callback queue also contains callbacks coming from DOM events like clicks and key presses
 // DOM events aren't asynchronous behavior, but they still use the callback queue to run their attached callbacks
 // if a click happens on a button with an event listener the result will be like the asynchronous load event
+
+// Event Loop
+// looks into the call stack and determines whether it's empty or not (except for the global context)
+// if the stack is empty -- meaning there's no code being executed -- then it will take the first callback from the callback queue and put it on the call stack to be executed
+// this is called an event loop tick
