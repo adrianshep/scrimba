@@ -854,3 +854,6 @@ whereAmI(52.588, 13.381);
 // looks into the call stack and determines whether it's empty or not (except for the global context)
 // if the stack is empty -- meaning there's no code being executed -- then it will take the first callback from the callback queue and put it on the call stack to be executed
 // this is called an event loop tick
+/ the event loop has the critical task of coordinating between the call stack and the callbacks in the queue
+// the event loop decides exactly when each callback gets executed
+// the event loop orchestrates the entire JS runtime
