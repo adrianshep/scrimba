@@ -857,3 +857,8 @@ whereAmI(52.588, 13.381);
 / the event loop has the critical task of coordinating between the call stack and the callbacks in the queue
 // the event loop decides exactly when each callback gets executed
 // the event loop orchestrates the entire JS runtime
+// from all of this it becomes clear that the JS language itself has no sense of time
+// that's because all that is asynchronous does not happen in the enginge
+// it's the runtime that manages all the asynchronous behavior
+// and the event loop determines which code will be executed next
+// while the engine itself simply executes whatever code it is given
