@@ -862,3 +862,13 @@ whereAmI(52.588, 13.381);
 // it's the runtime that manages all the asynchronous behavior
 // and the event loop determines which code will be executed next
 // while the engine itself simply executes whatever code it is given
+// example recap:
+// the image started loading asynchrononously in the web API environment and  not in the call stack
+// we used addEventListener to attach a callback function to the image load event
+// this callback is our asynchronous code -- code we deferred into the future because we only want it to execute once the image has loaded
+// in the meantime, the rest of the code keeps running
+// the addEventListener did not put the callback directly in the callback queue
+// instead, it simply registered the callback which then kept waiting in the web API environment until the load event fired off
+// only then did the environment put the callback in the queue
+// then, while in the queue, the callback kept waiting for the event loop to pick it up and put it on the call stack
+// this happened once the callback was first in line and the calls stack was empty
