@@ -871,4 +871,6 @@ whereAmI(52.588, 13.381);
 // instead, it simply registered the callback which then kept waiting in the web API environment until the load event fired off
 // only then did the environment put the callback in the queue
 // then, while in the queue, the callback kept waiting for the event loop to pick it up and put it on the call stack
-// this happened once the callback was first in line and the calls stack was empty
+// this happened once the callback was first in line and the call stack was empty
+// all this happened so the image would not have to load in the call stack but instead in the background in a non-blocking way
+// the web API environment, the callback queue, and the event loop all together make it possible for asyncrhonous code to be executed in a non-blocking way even wth only one thread of execution in the engine
