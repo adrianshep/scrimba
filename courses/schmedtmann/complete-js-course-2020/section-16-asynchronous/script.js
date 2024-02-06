@@ -880,3 +880,8 @@ whereAmI(52.588, 13.381);
 // let's say the data has finally arrived, so the fetch is done
 // callbacks related to promises like the one we registered with the promises then method do not go into the callback queue
 // instead, callbacks of promises have a special queue for themselves
+// callbacks from promises have a special microtasks queue for themselves
+// it has priority over the callback queue
+// at the end of an event loop tick, after a callback has been taken from the callback queue, the event loop will check if there are any callbacks in the microtasks queue
+// if there are, it will run all of them before it will run any more callbacks from the callback queue
+// these callbacks from promises are called microtasks, hence the microtasks queue
