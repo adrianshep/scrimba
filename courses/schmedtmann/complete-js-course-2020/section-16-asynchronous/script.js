@@ -885,3 +885,10 @@ whereAmI(52.588, 13.381);
 // at the end of an event loop tick, after a callback has been taken from the callback queue, the event loop will check if there are any callbacks in the microtasks queue
 // if there are, it will run all of them before it will run any more callbacks from the callback queue
 // these callbacks from promises are called microtasks, hence the microtasks queue
+// in our example, we have a microtask sitting in the microtasks queue while the call stack is empty
+// therefore, the event loop will take the microtask and put it in the call stack just like it does with callbacks from the callback queue
+// regardless of whether the callback queue is empty or not, the microtask will always be taken first as microtasks have priority over callbacks
+// in practice, microtasks can cut in line before all other regular callbacks
+// if one microtask adds a new microtask then the new microtask is also executed before any callbacks from the callback queue are
+// if we keep adding more and more microtasks, then callbacks in the callback queue can never execute
+// this is never really an occurrence but the possibility exists and may even be a coding interview question
