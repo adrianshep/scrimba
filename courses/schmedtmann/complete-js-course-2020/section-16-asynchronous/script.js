@@ -892,3 +892,11 @@ whereAmI(52.588, 13.381);
 // if one microtask adds a new microtask then the new microtask is also executed before any callbacks from the callback queue are
 // if we keep adding more and more microtasks, then callbacks in the callback queue can never execute
 // this is never really an occurrence but the possibility exists and may even be a coding interview question
+
+
+// Event Loop in Practice
+// extremely simple example:
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0);
+// a timer which should call a timer function exactly after zero seconds
+// meaning, after zero seconds, that callback will be put on the callback queue
