@@ -900,3 +900,11 @@ console.log('Test start');
 setTimeout(() => console.log('0 sec timer'), 0);
 // a timer which should call a timer function exactly after zero seconds
 // meaning, after zero seconds, that callback will be put on the callback queue
+
+// next, we'll build a promise that resolves immediately:
+Promise.resolve('Resolved promise 1')
+	.then(res => console.log(res));
+// Promise.resolve() allows us to build a promise that is immediately resolved, one that immediately has a success value
+// that fulfilled success value is going to be the one we passed in
+// and then we can handle that resolved promise by logging it to the console
+// just like any other promise, we can handle it with a then method and the callback function will get called with the resolved value as an argument
