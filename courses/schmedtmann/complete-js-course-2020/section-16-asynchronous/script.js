@@ -908,3 +908,10 @@ Promise.resolve('Resolved promise 1')
 // that fulfilled success value is going to be the one we passed in
 // and then we can handle that resolved promise by logging it to the console
 // just like any other promise, we can handle it with a then method and the callback function will get called with the resolved value as an argument
+
+// in what order do we think these four messages below will be logged to the console?
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0);
+Promise.resolve('Resolved promise 1')
+	.then(res => console.log(res));
+console.log('Test end');
