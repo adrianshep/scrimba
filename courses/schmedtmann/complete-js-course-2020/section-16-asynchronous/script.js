@@ -915,3 +915,6 @@ setTimeout(() => console.log('0 sec timer'), 0);
 Promise.resolve('Resolved promise 1')
 	.then(res => console.log(res));
 console.log('Test end');
+
+// the first two messages that will be printed should be obvious because we already know that any top-level code -- code outside of any callback -- will run first
+// so of course the first two logs will come from these two synchronous console.logs
