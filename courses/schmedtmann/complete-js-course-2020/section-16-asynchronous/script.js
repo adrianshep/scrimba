@@ -918,3 +918,7 @@ console.log('Test end');
 
 // the first two messages that will be printed should be obvious because we already know that any top-level code -- code outside of any callback -- will run first
 // so of course the first two logs will come from these two synchronous console.logs
+// between the timer and the resolved promise it will be a little tricker to figure which will run first
+// both will finish at the exact same time, right after zero seconds
+// the timer because we told it to finish after zero seconds, and
+// the promise because we told it to resolve immediately
