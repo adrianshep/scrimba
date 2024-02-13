@@ -922,3 +922,7 @@ console.log('Test end');
 // both will finish at the exact same time, right after zero seconds
 // the timer because we told it to finish after zero seconds, and
 // the promise because we told it to resolve immediately
+// which one will be handled first, that is which of these two callbacks will be executed first?
+// the timer appears first in the code and so its callback will be put on the callback queue first
+// but that doesn't mean it will be executed first
+// because the callback of the resolved promise will be put in the microtasks queue, it will have priority over the callback in the callback queue, executing first
