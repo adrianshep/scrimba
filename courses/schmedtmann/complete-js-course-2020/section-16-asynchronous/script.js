@@ -926,3 +926,5 @@ console.log('Test end');
 // the timer appears first in the code and so its callback will be put on the callback queue first
 // but that doesn't mean it will be executed first
 // because the callback of the resolved promise will be put in the microtasks queue, it will have priority over the callback in the callback queue, executing first
+// order in which they will finish:
+// Test start, then Test end, then Promise 1, then finally, the timer
