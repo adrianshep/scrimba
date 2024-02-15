@@ -928,3 +928,18 @@ console.log('Test end');
 // because the callback of the resolved promise will be put in the microtasks queue, it will have priority over the callback in the callback queue, executing first
 // order in which they will finish:
 // Test start, then Test end, then Promise 1, then finally, the timer
+// implication of microtasks having priority over regular callback sis that if a microtask takes a long time to run then the regular callback timer will be delayed
+// it will run a little bit later, just after the microtask is done with its work
+// to simulate that this callback takes a long time to run, loop over a large number with an old school for loop:
+
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0);
+Promise.resolve('Resolved promise 1')
+	.then(res => console.log(res));
+
+Promise.resolve('Resolved promise 2').then(res => {
+for (let i = 0; i < 1000000000; i++){
+console.log(res);
+})
+
+console.log('Test end');
