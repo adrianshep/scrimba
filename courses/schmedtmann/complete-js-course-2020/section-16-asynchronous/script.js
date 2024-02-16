@@ -943,3 +943,8 @@ console.log(res);
 })
 
 console.log('Test end');
+
+// to clarify, it isn't the asynchronous task itself that takes a long time -- the promise itself will be resolved immediately -- but the microtask it contains that is put in the microtasks queue, that's what will take a long time
+// the zero second timer message appears on the screen after taking a lot of time
+// this is proof that the zero seconds timer settings are not a guarantee
+// this means you cannot do high precision things using JS timers
