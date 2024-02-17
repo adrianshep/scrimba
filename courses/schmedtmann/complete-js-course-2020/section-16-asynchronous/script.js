@@ -948,3 +948,18 @@ console.log('Test end');
 // the zero second timer message appears on the screen after taking a lot of time
 // this is proof that the zero seconds timer settings are not a guarantee
 // this means you cannot do high precision things using JS timers
+
+
+// Building a Simple Promise
+
+// lottery simulation using a promise:
+// a fulfilled promise means to win the lottery
+// a rejected promise means to lose the lottery
+// create a new promise using promise constructor
+// promises are a special kind of object in JS
+// takes exactly one argument which is the executor function
+// as soon as the promise constructor runs it will automatically execute the executor function we pass in
+
+new Promise(function() {
+
+})
