@@ -958,8 +958,9 @@ console.log('Test end');
 // create a new promise using promise constructor
 // promises are a special kind of object in JS
 // takes exactly one argument which is the executor function
-// as soon as the promise constructor runs it will automatically execute the executor function we pass in
+// as soon as the promise constructor runs, it will automatically execute the executor function we pass in
+// as it does, it will pass in two other arguments: the resolve and reject functions
 
-new Promise(function() {
+new Promise(function(resolve, reject) {
 
 })
