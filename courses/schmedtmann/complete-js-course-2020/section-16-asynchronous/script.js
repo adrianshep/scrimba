@@ -960,7 +960,11 @@ console.log('Test end');
 // takes exactly one argument which is the executor function
 // as soon as the promise constructor runs, it will automatically execute the executor function we pass in
 // as it does, it will pass in two other arguments: the resolve and reject functions
+// to build the executor function, we will store the result in the variable lotteryPromise
+// like the fetch function, which also creates a new promise
+// the executor function will contain the asynchronous behavior we're trying to handle with the promise
+// so the executor function should eventually produce a result value, the value that going to be the future value of the promise
 
-new Promise(function(resolve, reject) {
+const lotteryPromise = new Promise(function(resolve, reject) {
 
 })
