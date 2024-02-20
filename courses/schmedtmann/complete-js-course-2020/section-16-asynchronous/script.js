@@ -964,7 +964,12 @@ console.log('Test end');
 // like the fetch function, which also creates a new promise
 // the executor function will contain the asynchronous behavior we're trying to handle with the promise
 // so the executor function should eventually produce a result value, the value that going to be the future value of the promise
+// very simplified example: we win 50% of cases and lose 50%
 
 const lotteryPromise = new Promise(function(resolve, reject) {
-
-})
+    if (Math.random() >= 0.5) {
+        resolve('You WIN ');
+    } else {
+        reject('You lost your money')
+    }
+});
