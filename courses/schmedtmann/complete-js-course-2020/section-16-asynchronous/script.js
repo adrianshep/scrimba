@@ -973,3 +973,9 @@ const lotteryPromise = new Promise(function(resolve, reject) {
         reject('You lost your money')
     }
 });
+
+// consuming the promise we just built:
+// logging the resolved value of the promise
+// catching and logging any errors
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.log(err));
