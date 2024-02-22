@@ -979,3 +979,17 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 // catching and logging any errors
 
 lotteryPromise.then(res => console.log(res)).catch(err => console.log(err));
+// every time this runs, it results in a success (lottery win) or an error (lotter loss)
+// to make this example asynchronous, we will add a simple timer set to 2 seconds
+
+const lotteryPromise = new Promise(function(resolve, reject) {
+
+    console.log('Lottery draw is happening');
+    setTimeout(function() {
+        if (Math.random() >= 0.5) {
+            resolve('You WIN ');
+        } else {
+            reject('You lost your money')
+        }
+    }, 2000)
+});
