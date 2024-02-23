@@ -981,6 +981,7 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 lotteryPromise.then(res => console.log(res)).catch(err => console.log(err));
 // every time this runs, it results in a success (lottery win) or an error (lotter loss)
 // to make this example asynchronous, we will add a simple timer set to 2 seconds
+// instead of just passing a string in reject, we can create a new error object
 
 const lotteryPromise = new Promise(function(resolve, reject) {
 
@@ -989,7 +990,7 @@ const lotteryPromise = new Promise(function(resolve, reject) {
         if (Math.random() >= 0.5) {
             resolve('You WIN ');
         } else {
-            reject('You lost your money')
+            reject(new Error('You lost your money'));
         }
     }, 2000)
 });
