@@ -979,9 +979,12 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 // catching and logging any errors
 
 lotteryPromise.then(res => console.log(res)).catch(err => console.log(err));
-// every time this runs, it results in a success (lottery win) or an error (lotter loss)
+// every time this runs, it results in a success (lottery win) or an error (lottery loss)
 // to make this example asynchronous, we will add a simple timer set to 2 seconds
 // instead of just passing a string in reject, we can create a new error object
+// logging results in 'Lottery draw is happening' appearing immediately each time
+// 'You WIN ' or 'You lost your money' appear 2 seconds after the lottery draw console loge
+// and 'You lost your money' appears as an error message, telling where the error originated
 
 const lotteryPromise = new Promise(function(resolve, reject) {
 
