@@ -997,3 +997,7 @@ const lotteryPromise = new Promise(function(resolve, reject) {
         }
     }, 2000)
 });
+
+// in practice, most of the time all we do is consume promises
+// we usually only build promises to wrap old callback-based functions into promises
+// this process is called promisifying -- to convert callback-based asynchronous behavior to promises-based
