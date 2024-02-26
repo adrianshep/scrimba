@@ -1001,3 +1001,15 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 // in practice, most of the time all we do is consume promises
 // we usually only build promises to wrap old callback-based functions into promises
 // this process is called promisifying -- to convert callback-based asynchronous behavior to promises-based
+// to see this in action:
+// we will promisify a set timeout function and create a wait function
+// wait function will take in a number of seconds
+// inside it, we will create and return the promise, encapsulating the asynchronous operation even further -- what a fetch function does
+// in the case below, we don't need the reject function because it's impossible for the timer to fail, so we'll never have to mark this promise as rejected
+
+// Promisifying setTimeout
+const wait = function(seconds) {
+    return new Promise(function(resolve) {
+        
+    })
+}
