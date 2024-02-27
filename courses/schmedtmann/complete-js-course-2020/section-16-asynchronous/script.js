@@ -1006,10 +1006,15 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 // wait function will take in a number of seconds
 // inside it, we will create and return the promise, encapsulating the asynchronous operation even further -- what a fetch function does
 // in the case below, we don't need the reject function because it's impossible for the timer to fail, so we'll never have to mark this promise as rejected
+// similar to array methods such as map which always receives three arguments even though most of the time we use but one or two of them
+// in this case, we're not going to pass any resolved value into the resolve function because that isn't mandatory
+// in the case of this timer, it's also not necessary
+// in this case, all we want to do is make our code wait
+// we want our timer to run for a certain number of seconds so we multiply the value by 1000
 
 // Promisifying setTimeout
 const wait = function(seconds) {
     return new Promise(function(resolve) {
-        
+        setTimeout(resolve, seconds * 1000);
     })
 }
