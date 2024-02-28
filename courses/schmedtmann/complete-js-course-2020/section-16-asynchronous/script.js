@@ -1011,6 +1011,7 @@ const lotteryPromise = new Promise(function(resolve, reject) {
 // in the case of this timer, it's also not necessary
 // in this case, all we want to do is make our code wait
 // we want our timer to run for a certain number of seconds so we multiply the value by 1000
+// can improve this by making it smaller using arrow functions
 
 // Promisifying setTimeout
 const wait = function(seconds) {
@@ -1018,3 +1019,14 @@ const wait = function(seconds) {
         setTimeout(resolve, seconds * 1000);
     })
 }
+
+// calling our wait function:
+// this will create a promise that will wait for two seconds and then resolve
+// receiving no resolved value in our callback function leaving it empty and simply log to the console
+// we could run any code we want executed after two seconds
+// but let's wait one more second by returning a new promise here that waits one second
+
+wait(2).then(() => {
+    console.log('I waited for 2 seconds');
+    return wait(1);
+})
