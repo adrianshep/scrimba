@@ -1025,6 +1025,10 @@ const wait = function(seconds) {
 // receiving no resolved value in our callback function leaving it empty and simply log to the console
 // we could run any code we want executed after two seconds
 // but let's wait one more second by returning a new promise here that waits one second
+// exactly what we did before when we chained two sequential AJAX calls using the fetch funciton
+// the result of the first was that we would create a new fetch and return it -- that's what we're doing here
+// all of this returns a new promise that we can then handle
+// with this, we now have a nice chain of asynchronous behavior that happens in a sequence without descending into callback hell
 
 wait(2).then(() => {
     console.log('I waited for 2 seconds');
