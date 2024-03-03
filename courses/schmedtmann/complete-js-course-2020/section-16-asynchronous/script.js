@@ -1065,3 +1065,10 @@ wait(1)
 //     }, 1000);
 //   }, 1000);
 // }, 1000);
+
+// create a fulfilled or rejected promise immediately
+// static  method on the promise constructor
+// for reject, the .then isn't necessary because there will be no resolved value
+
+Promise.resolve('abc').then(x => console.log(x));
+Promise.reject('abc').catch(x => console.error(x));
