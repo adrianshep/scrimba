@@ -1073,3 +1073,12 @@ wait(1)
 
 Promise.resolve('abc').then(x => console.log(x));
 Promise.reject(new Error('Problem!')).catch(x => console.error(x));
+
+
+// Promisifying the Geolocation API
+
+// geolocation API review
+navigator.geolocation.getCurrentPosition(
+    position => console.log(position),
+    err => console.error(err)
+);
