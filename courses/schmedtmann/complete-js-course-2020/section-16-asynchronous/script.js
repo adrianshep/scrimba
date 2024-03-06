@@ -1078,6 +1078,10 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 // Promisifying the Geolocation API
 
 // geolocation API review
+// a case of an error could be when the user doesn't allow the page to get access to the current location
+// JS asks us for permission and when we allow it, at some point, when JS figures out the location, we get that data back
+// this is asynchronous behavior
+
 navigator.geolocation.getCurrentPosition(
     position => console.log(position),
     err => console.error(err)
