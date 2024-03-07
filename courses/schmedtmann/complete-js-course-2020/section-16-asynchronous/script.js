@@ -1081,8 +1081,12 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 // a case of an error could be when the user doesn't allow the page to get access to the current location
 // JS asks us for permission and when we allow it, at some point, when JS figures out the location, we get that data back
 // this is asynchronous behavior
+// the code is not blocked, which we can check with a console log after the geolocation
+// 'Getting position' logs first in the console because the function above it offloaded its to the background, to the web API environment of the browser, then immediately moved on the the console log in the next line
+// so this is very clearly a callback-based API
 
 navigator.geolocation.getCurrentPosition(
     position => console.log(position),
     err => console.error(err)
 );
+console.log('Getting position');
