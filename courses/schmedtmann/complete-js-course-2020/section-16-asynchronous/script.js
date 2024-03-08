@@ -1084,9 +1084,20 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 // the code is not blocked, which we can check with a console log after the geolocation
 // 'Getting position' logs first in the console because the function above it offloaded its to the background, to the web API environment of the browser, then immediately moved on the the console log in the next line
 // so this is very clearly a callback-based API
+// this is another great opportunity to promisify a callback-based API into a promise-based API
 
-navigator.geolocation.getCurrentPosition(
-    position => console.log(position),
-    err => console.error(err)
-);
-console.log('Getting position');
+// navigator.geolocation.getCurrentPosition(
+//     position => console.log(position),
+//     err => console.error(err)
+// );
+// console.log('Getting position');
+
+const getPosition = function() {
+    return new Promise(function(resolve, reject) {
+        navigator.geolocation.getCurrentPosition(
+            position => console.log(position),
+            err => console.error(err)
+        );
+
+    })
+}
