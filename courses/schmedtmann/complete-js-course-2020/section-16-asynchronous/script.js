@@ -1087,7 +1087,9 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 // this is another great opportunity to promisify a callback-based API into a promise-based API
 // first is the success callback function -- it receives the position
 // when we have success, we want to resolve the promise and mark it as fulfilled
-// we therefore call the resolve function and pass in that position object because it's the fulfilled value we want to get from the promise when it is successful -- the current position
+// we therefore call the resolve function and pass in that position object because it's the fulfilled value we want to get from the promise when it is successful
+// previously, we passed a simple string into resolve for a value
+// in this case, the future value of the promise is this much more meaningful object, the value that is the current position
 
 // navigator.geolocation.getCurrentPosition(
 //     position => console.log(position),
