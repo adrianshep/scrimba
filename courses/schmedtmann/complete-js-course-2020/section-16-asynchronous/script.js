@@ -1090,6 +1090,12 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 // we therefore call the resolve function and pass in that position object because it's the fulfilled value we want to get from the promise when it is successful
 // previously, we passed a simple string into resolve for a value
 // in this case, the future value of the promise is this much more meaningful object, the value that is the current position
+// we do the same with reject, replacing the console log with it
+// we can make this even simpler:
+// if the function automatically calls the callback functions and passes in the position, we can do the below
+// before we specified the callback manually, but all we did was to take the position and pass it down into resolve, which in the simpler version happens automatically
+// resolve itself is now the callback function which will get called with the position
+// and the same with reject
 
 // navigator.geolocation.getCurrentPosition(
 //     position => console.log(position),
@@ -1099,10 +1105,10 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
-        navigator.geolocation.getCurrentPosition(
-            position => resolve(position),
-            err => console.error(err)
-        );
-
-    })
-}
+        // navigator.geolocation.getCurrentPosition(
+        //     position => resolve(position),
+        //     err => reject(err)
+        // );
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+};
