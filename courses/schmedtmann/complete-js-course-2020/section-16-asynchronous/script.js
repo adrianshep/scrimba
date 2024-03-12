@@ -1102,6 +1102,7 @@ Promise.reject(new Error('Problem!')).catch(x => console.error(x));
 //     err => console.error(err)
 // );
 // console.log('Getting position');
+// log this position to the console -- don't need the catch block for now
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
@@ -1112,3 +1113,7 @@ const getPosition = function() {
         navigator.geolocation.getCurrentPosition(resolve, reject);
     });
 };
+
+getPosition().then(pos => console.log(pos));
+// logs in console:
+// GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1598180761035}
