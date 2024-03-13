@@ -1117,3 +1117,29 @@ const getPosition = function() {
 getPosition().then(pos => console.log(pos));
 // logs in console:
 // GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1598180761035}
+
+// in last coding challenge, we built a function which receives GPS coordinates then renders the corresponding country
+// in the original code, we passed in latitude and longitude then reverse geocoded to find the country belonging to those coordinates
+// now we get these coordinates via geolocation so we no longer have to pass them into that function
+
+const whereAmI = function(lat, lng) {
+    fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+    .then(res => {
+        if(!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
+        return res.json();
+    })
+    .then(data => {
+        console.log(data);
+        console.log(`You are in ${data.city}, ${data.country}`);
+
+        return fetch (`https://restcountries.eu/rest/v2/name/${data.country}`);
+    })
+    .then(res => {
+        if (!res.ok)
+            throw new Error(`Country not found (${res.status})`);
+
+        return res.json();
+        })
+        then(data => renderCountry(data[0]))
+    .catch(err => console.error(`${err.message} 💥`));
+};
