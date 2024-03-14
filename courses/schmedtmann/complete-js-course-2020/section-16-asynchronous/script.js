@@ -1121,8 +1121,14 @@ getPosition().then(pos => console.log(pos));
 // in last coding challenge, we built a function which receives GPS coordinates then renders the corresponding country
 // in the original code, we passed in latitude and longitude then reverse geocoded to find the country belonging to those coordinates
 // now we get these coordinates via geolocation so we no longer have to pass them into that function
+// start by getting the position then doing something with it
+// see the latitude and longitude of this coords object
 
-const whereAmI = function(lat, lng) {
+const whereAmI = function() {
+    getPosition().then(pos => {
+        console.log(pos.coords);
+    })
+
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(res => {
         if(!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
@@ -1143,3 +1149,5 @@ const whereAmI = function(lat, lng) {
         then(data => renderCountry(data[0]))
     .catch(err => console.error(`${err.message} 💥`));
 };
+
+btn.addEventListener('click', whereAmI);
