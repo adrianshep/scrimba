@@ -1123,11 +1123,14 @@ getPosition().then(pos => console.log(pos));
 // now we get these coordinates via geolocation so we no longer have to pass them into that function
 // start by getting the position then doing something with it
 // see the latitude and longitude of this coords object
+// destructure object and rename latitude and longitude to lat and lng
 
 const whereAmI = function() {
     getPosition().then(pos => {
-        console.log(pos.coords);
-    })
+        // console.log(pos.coords);
+        const {lat = latitude, lng = longitude} = pos.coords;
+        
+    });
 
     fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(res => {
