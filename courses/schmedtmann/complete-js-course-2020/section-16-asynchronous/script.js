@@ -1124,15 +1124,16 @@ getPosition().then(pos => console.log(pos));
 // start by getting the position then doing something with it
 // see the latitude and longitude of this coords object
 // destructure object and rename latitude and longitude to lat and lng
+// chain the next promise, creating a new promise and returning it
 
 const whereAmI = function() {
     getPosition().then(pos => {
         // console.log(pos.coords);
         const {lat = latitude, lng = longitude} = pos.coords;
         
+        return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     });
 
-    fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     .then(res => {
         if(!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
         return res.json();
