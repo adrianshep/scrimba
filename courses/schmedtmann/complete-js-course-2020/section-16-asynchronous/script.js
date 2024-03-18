@@ -1114,7 +1114,7 @@ const getPosition = function() {
     });
 };
 
-getPosition().then(pos => console.log(pos));
+// getPosition().then(pos => console.log(pos));
 // logs in console:
 // GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1598180761035}
 
@@ -1126,11 +1126,14 @@ getPosition().then(pos => console.log(pos));
 // destructure object and rename latitude and longitude to lat and lng
 // chain the next promise, creating a new promise and returning it
 // chain the then handler
+// error message: latitude is not defined
+// in desctructuring, the equal sign is for setting a default value, which we're not doing here
+// use : instead of = to set value
 
 const whereAmI = function() {
     getPosition().then(pos => {
         // console.log(pos.coords);
-        const {lat = latitude, lng = longitude} = pos.coords;
+        const {latitude: lat, longitude: lng} = pos.coords;
         
         return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
     })
