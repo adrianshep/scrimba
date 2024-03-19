@@ -1127,8 +1127,9 @@ const getPosition = function() {
 // chain the next promise, creating a new promise and returning it
 // chain the then handler
 // error message: latitude is not defined
-// in desctructuring, the equal sign is for setting a default value, which we're not doing here
+// in destructuring, the equal sign is for setting a default value, which we're not doing here
 // use : instead of = to set value
+// now when run, whereAmI identifies the country the user's device is in through geolocation coordinates, then provides data about that country, including displaying its flag
 
 const whereAmI = function() {
     getPosition().then(pos => {
