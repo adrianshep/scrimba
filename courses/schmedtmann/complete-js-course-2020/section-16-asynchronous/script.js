@@ -1130,6 +1130,10 @@ const getPosition = function() {
 // in destructuring, the equal sign is for setting a default value, which we're not doing here
 // use : instead of = to set value
 // now when run, whereAmI identifies the country the user's device is in through geolocation coordinates, then provides data about that country, including displaying its flag
+// instead of a callback hell, we have a nice flat chain of promises that is easy to handle and manage
+// we can promisify all kinds of asynchronous stuff in JS:
+// for example, the old XM HTTP request function we used to make AJAX calls
+// the image loading example
 
 const whereAmI = function() {
     getPosition().then(pos => {
