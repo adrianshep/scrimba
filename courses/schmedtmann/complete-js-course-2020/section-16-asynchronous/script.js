@@ -1189,3 +1189,9 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 
 GOOD LUCK 😀
 */
+
+// me:
+const createImage = function(imgPath) {
+	document.createElement('.img/img-1.jpg')
+        return fetch()
+    })
