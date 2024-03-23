@@ -1195,3 +1195,10 @@ const createImage = function(imgPath) {
 	document.createElement('.img/img-1.jpg')
         return fetch()
     })
+
+// Jonas:
+const createImage = function(imgPath) {
+    return new Promise(function(resolve, reject) {
+
+    })
+}
