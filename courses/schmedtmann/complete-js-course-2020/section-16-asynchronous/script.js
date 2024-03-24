@@ -1197,8 +1197,18 @@ const createImage = function(imgPath) {
     })
 
 // Jonas:
+// create image which will take in an image path
+// return a new promise
+// resolve and reject functions which are received by our executor function
+// create a new image using document.createElement:
+// create a new element of the type image ('img')
+// set the source property to the image path that is received
+
 const createImage = function(imgPath) {
     return new Promise(function(resolve, reject) {
+        const img = document.createElement('img');
+        img src = imgPath;
 
+        img.addEventListener
     })
 }
