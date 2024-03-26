@@ -1204,6 +1204,8 @@ const createImage = function(imgPath) {
 // create a new element of the type image ('img')
 // set the source property to the image path that is received
 // on that image, we can wait for the load event
+// append image to DOM element with images class
+// resolve the promise with the image element
 
 const createImage = function(imgPath) {
     return new Promise(function(resolve, reject) {
@@ -1211,7 +1213,8 @@ const createImage = function(imgPath) {
         img src = imgPath;
 
         img.addEventListener('load', function() {
-            
+            imgContainer.append(img);
+            resolve(img);
         })
     })
 }
