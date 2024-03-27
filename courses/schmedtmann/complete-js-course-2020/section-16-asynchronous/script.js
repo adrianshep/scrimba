@@ -1206,6 +1206,9 @@ const createImage = function(imgPath) {
 // on that image, we can wait for the load event
 // append image to DOM element with images class
 // resolve the promise with the image element
+// we should also listen for the error event
+// in this case, we will reject the promise with a new error:
+// image not found, because that will be the most likely error
 
 const createImage = function(imgPath) {
     return new Promise(function(resolve, reject) {
@@ -1215,6 +1218,10 @@ const createImage = function(imgPath) {
         img.addEventListener('load', function() {
             imgContainer.append(img);
             resolve(img);
+        });
+
+        img.addEventListener('error', function() {
+            reject(new Error('Image not found'));
         })
-    })
-}
+    });
+};
