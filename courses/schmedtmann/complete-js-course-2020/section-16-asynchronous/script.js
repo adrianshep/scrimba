@@ -1230,7 +1230,8 @@ const createImage = function(imgPath) {
 // we received the image as the resolved value
 // we don't need to do anything here because the image is already being appended to the DOM
 // for now, we can log a message to the console and later worry about waiting the two seconds
+// set image path
 
-createImage().then(img => {
+createImage('img/img-1.jpg').then(img => {
     console.log('Image 1 loaded');
-})
+});
