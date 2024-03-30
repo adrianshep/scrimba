@@ -1231,7 +1231,10 @@ const createImage = function(imgPath) {
 // we don't need to do anything here because the image is already being appended to the DOM
 // for now, we can log a message to the console and later worry about waiting the two seconds
 // set image path
+// add the catch handler to log the error
 
-createImage('img/img-1.jpg').then(img => {
+createImage('img/img-1.jpg')
+.then(img => {
     console.log('Image 1 loaded');
-});
+})
+.catch(err => console.error(err));
