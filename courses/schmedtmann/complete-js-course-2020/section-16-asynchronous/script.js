@@ -1210,6 +1210,14 @@ const createImage = function(imgPath) {
 // in this case, we will reject the promise with a new error:
 // image not found, because that will be the most likely error
 
+const wait = function(seconds) {
+    return new Promise(function(resolve) {
+        setTimeout(resolve, seconds * 1000);
+    });
+};
+
+const imgContainer = document.querySelector('.images');
+
 const createImage = function(imgPath) {
     return new Promise(function(resolve, reject) {
         const img = document.createElement('img');
@@ -1232,9 +1240,11 @@ const createImage = function(imgPath) {
 // for now, we can log a message to the console and later worry about waiting the two seconds
 // set image path
 // add the catch handler to log the error
+// pause execution for two seconds using wait function
 
 createImage('img/img-1.jpg')
 .then(img => {
     console.log('Image 1 loaded');
+    wait(2)
 })
 .catch(err => console.error(err));
