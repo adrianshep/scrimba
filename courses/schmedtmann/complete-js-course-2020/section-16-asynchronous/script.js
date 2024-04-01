@@ -1241,10 +1241,15 @@ const createImage = function(imgPath) {
 // set image path
 // add the catch handler to log the error
 // pause execution for two seconds using wait function
+// return that so we can chain the next then handler to it
+// wait doesn't have any resolved value so we don't specify any argument or parameter in this function
 
 createImage('img/img-1.jpg')
 .then(img => {
     console.log('Image 1 loaded');
-    wait(2)
+    return wait(2)
+})
+.then(() => {
+    
 })
 .catch(err => console.error(err));
