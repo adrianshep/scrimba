@@ -1243,13 +1243,20 @@ const createImage = function(imgPath) {
 // pause execution for two seconds using wait function
 // return that so we can chain the next then handler to it
 // wait doesn't have any resolved value so we don't specify any argument or parameter in this function
+// we want to hide the first image
+// however, that image is only defined in the first then function and not the second one
+// we will need a global variable
+// then set current image to the image and current image style display to none
+
+let currentImg;
 
 createImage('img/img-1.jpg')
 .then(img => {
+    currentImg = img;
     console.log('Image 1 loaded');
     return wait(2)
 })
 .then(() => {
-    
+    currentImg.style.display = 'none';
 })
 .catch(err => console.error(err));
