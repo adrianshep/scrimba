@@ -1247,6 +1247,7 @@ const createImage = function(imgPath) {
 // however, that image is only defined in the first then function and not the second one
 // we will need a global variable
 // then set current image to the image and current image style display to none
+// load second image and wait two seconds
 
 let currentImg;
 
@@ -1254,9 +1255,15 @@ createImage('img/img-1.jpg')
 .then(img => {
     currentImg = img;
     console.log('Image 1 loaded');
-    return wait(2)
+    return wait(2);
 })
 .then(() => {
     currentImg.style.display = 'none';
+    return createImage('img/img-2.jpg');
+})
+.then(img => {
+    currentImg = img;
+    console.log('Image 2 loaded');
+    return wait(2);
 })
 .catch(err => console.error(err));
