@@ -1271,3 +1271,8 @@ createImage('img/img-1.jpg')
     currentImg.style.display = 'none';
 })
 .catch(err => console.error(err));
+
+
+// Consuming Promises with Async/Await
+// since ES 2017, there's an even better and easier way to consume promises called async/await
+// start by creating a special kind of function, the async function
