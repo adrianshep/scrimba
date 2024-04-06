@@ -1276,3 +1276,10 @@ createImage('img/img-1.jpg')
 // Consuming Promises with Async/Await
 // since ES 2017, there's an even better and easier way to consume promises called async/await
 // start by creating a special kind of function, the async function
+// start with the whereAmI function then add asynch in front of the function
+// the async function will keep running in the background while executing the code inside of it
+// when it is done executing, the async function will automatically return a promise
+
+const whereAmI = async function(country) {
+
+}
