@@ -1279,7 +1279,10 @@ createImage('img/img-1.jpg')
 // start with the whereAmI function then add asynch in front of the function
 // the async function will keep running in the background while executing the code inside of it
 // when it is done executing, the async function will automatically return a promise
+// inside an async function we can have one or more await statements
+// then we need a promise
+// we can use the promise returned from the fetch function
 
 const whereAmI = async function(country) {
-
+    await fetch();
 }
