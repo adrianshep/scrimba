@@ -1281,8 +1281,8 @@ createImage('img/img-1.jpg')
 // when it is done executing, the async function will automatically return a promise
 // inside an async function we can have one or more await statements
 // then we need a promise
-// we can use the promise returned from the fetch function
+// let's use our API again to search for a country
 
 const whereAmI = async function(country) {
-    await fetch();
+    await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
 }
