@@ -1282,6 +1282,8 @@ createImage('img/img-1.jpg')
 // inside an async function we can have one or more await statements
 // then we need a promise
 // let's use our API again to search for a country
+// this will return a promise, and in an async function like this one, we can use the await kw to wait for the result of this promise
+// await will stop the code execution until the promise is fulfilled
 
 const whereAmI = async function(country) {
     await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
