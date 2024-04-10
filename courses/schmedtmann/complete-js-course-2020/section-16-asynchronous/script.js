@@ -1284,6 +1284,9 @@ createImage('img/img-1.jpg')
 // let's use our API again to search for a country
 // this will return a promise, and in an async function like this one, we can use the await kw to wait for the result of this promise
 // await will stop the code execution until the promise is fulfilled
+// stopping code execution in an async function is not a problem because the rest of the function continues to run asynchronously in the background
+// it isn't blocking the main thread of execution; it isn't blocking the call stack
+// what's so special about async await is that it makes our code look like regular synchronous code, while behind the scenes everything is running asynchronously
 
 const whereAmI = async function(country) {
     await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
