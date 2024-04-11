@@ -1287,7 +1287,12 @@ createImage('img/img-1.jpg')
 // stopping code execution in an async function is not a problem because the rest of the function continues to run asynchronously in the background
 // it isn't blocking the main thread of execution; it isn't blocking the call stack
 // what's so special about async await is that it makes our code look like regular synchronous code, while behind the scenes everything is running asynchronously
+// the value of the whole await expression is going to be the resolved value of the promise
+// store that in a variable named res for response
+// then take a look at that response and prove that the function is asynchronous
 
 const whereAmI = async function(country) {
-    await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+    const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+    console.log(res);
 }
+console.log('FIRST');
