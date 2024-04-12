@@ -1290,9 +1290,15 @@ createImage('img/img-1.jpg')
 // the value of the whole await expression is going to be the resolved value of the promise
 // store that in a variable named res for response
 // then take a look at that response and prove that the function is asynchronous
+// call the whereAmI function first, before the console log FIRST
+// even so, console log FIRST will be displayed first
+// because, once the function is called, it is then loaded off into the background
+// the fetch will be running in the background without blocking our main thread
+// the code will move on to the next line, then, which is the console log FIRST
 
 const whereAmI = async function(country) {
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     console.log(res);
 }
+whereAmI('portugal');
 console.log('FIRST');
