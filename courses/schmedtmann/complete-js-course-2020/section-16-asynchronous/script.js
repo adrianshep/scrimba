@@ -1296,13 +1296,12 @@ createImage('img/img-1.jpg')
 // the fetch will be running in the background without blocking our main thread
 // the code will move on to the next line, then, which is the console log FIRST
 // previously, this was impossible, and promises had to be consumed by the then method
+// it's now easier
+// await and store the results directly into our data variable
 
 const whereAmI = async function(country) {
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
-    console.log(res);
-
-    // same as formerly:
-    // fetch(`https://restcountries.eu/rest/v2/name/${country}`).then(res => console.log(res));
+    const data = await res.jason();
 }
 whereAmI('portugal');
 console.log('FIRST');
