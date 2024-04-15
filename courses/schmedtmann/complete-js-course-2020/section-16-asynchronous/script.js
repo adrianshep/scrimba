@@ -1298,10 +1298,12 @@ createImage('img/img-1.jpg')
 // previously, this was impossible, and promises had to be consumed by the then method
 // it's now easier
 // await and store the results directly into our data variable
+// we then render the data
 
 const whereAmI = async function(country) {
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const data = await res.jason();
+    renderCountry(data[0]);
 }
 whereAmI('portugal');
 console.log('FIRST');
