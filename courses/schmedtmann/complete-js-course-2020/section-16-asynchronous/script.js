@@ -1299,8 +1299,17 @@ createImage('img/img-1.jpg')
 // it's now easier
 // await and store the results directly into our data variable
 // we then render the data
+// now we finish the function with the geolocation and reverse geocoding
+
+const getPosition = function() {
+    return new Promise(function(resolve, reject) {
+        navigator.geolocation.getCurrentPosition(resolve, reject);
+    });
+};
 
 const whereAmI = async function(country) {
+    const await getPosition();
+    
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const data = await res.jason();
     renderCountry(data[0]);
