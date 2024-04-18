@@ -1301,6 +1301,10 @@ createImage('img/img-1.jpg')
 // we then render the data
 // now we finish the function with the geolocation and reverse geocoding
 // destructure getPosition variable to get latitude and longitude from position coordinates
+// we plug these latitude and longitude values into the reverse geocoding API
+// it becomes a lot easier to chain promises because we don't have to return anything
+// we don't have to create new then methods and we don't have to create new callback functions
+// we just await and store the results in a variable
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
@@ -1311,6 +1315,8 @@ const getPosition = function() {
 const whereAmI = async function(country) {
     const pos = await getPosition();
     const { latitude: lat, longitude: lng } = pos.coords;
+
+    return fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
     
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const data = await res.jason();
