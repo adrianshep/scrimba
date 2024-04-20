@@ -1305,6 +1305,7 @@ createImage('img/img-1.jpg')
 // it becomes a lot easier to chain promises because we don't have to return anything
 // we don't have to create new then methods and we don't have to create new callback functions
 // we just await and store the results in a variable
+// handle JSON from geocoding response
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
@@ -1317,6 +1318,7 @@ const whereAmI = async function(country) {
     const { latitude: lat, longitude: lng } = pos.coords;
 
     const resGeo = await fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
+    const dataGeo = await resGeo.json();
     
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const data = await res.jason();
