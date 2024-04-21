@@ -1314,12 +1314,16 @@ const getPosition = function() {
 };
 
 const whereAmI = async function(country) {
+    // Geolocation
     const pos = await getPosition();
     const { latitude: lat, longitude: lng } = pos.coords;
 
+    // Reverse geocoding
     const resGeo = await fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
     const dataGeo = await resGeo.json();
+    console.log(dataGeo);
     
+    // Country data
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const data = await res.jason();
     renderCountry(data[0]);
