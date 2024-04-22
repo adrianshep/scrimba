@@ -1306,6 +1306,8 @@ createImage('img/img-1.jpg')
 // we don't have to create new then methods and we don't have to create new callback functions
 // we just await and store the results in a variable
 // handle JSON from geocoding response
+// we can plug country data in the URL
+// and we can eliminate country parameter from whereAmI async function
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
@@ -1313,7 +1315,7 @@ const getPosition = function() {
     });
 };
 
-const whereAmI = async function(country) {
+const whereAmI = async function() {
     // Geolocation
     const pos = await getPosition();
     const { latitude: lat, longitude: lng } = pos.coords;
@@ -1321,11 +1323,12 @@ const whereAmI = async function(country) {
     // Reverse geocoding
     const resGeo = await fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
     const dataGeo = await resGeo.json();
-    console.log(dataGeo);
+
     
     // Country data
-    const res = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+    const res = await fetch(`https://restcountries.eu/rest/v2/name/${dataGeo.country}`);
     const data = await res.jason();
+    console.lag(data);
     renderCountry(data[0]);
 }
 whereAmI('portugal');
