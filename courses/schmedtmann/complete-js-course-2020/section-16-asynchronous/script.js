@@ -1308,6 +1308,7 @@ createImage('img/img-1.jpg')
 // handle JSON from geocoding response
 // we can plug country data in the URL
 // and we can eliminate country parameter from whereAmI async function
+// no longer need to pass the country name into whereAmI
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
@@ -1331,5 +1332,5 @@ const whereAmI = async function() {
     console.lag(data);
     renderCountry(data[0]);
 }
-whereAmI('portugal');
+whereAmI();
 console.log('FIRST');
