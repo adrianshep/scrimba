@@ -1309,6 +1309,12 @@ createImage('img/img-1.jpg')
 // we can plug country data in the URL
 // and we can eliminate country parameter from whereAmI async function
 // no longer need to pass the country name into whereAmI
+// take a moment and appreciate how beautiful the below data flow is:
+// we have all of it in one nice async function that run behind the scenes until everything is finished
+// we await five promises in a very easy way
+// we have code that looks and feels like normal synchronous code
+// Jonas: async await feature has been a huge, huge addition to the JS langauge
+// remember that async await is syntactic sugar over consuming promises -- a bit like classes in JS, hiding the true nature of how things work behind the scenes
 
 const getPosition = function() {
     return new Promise(function(resolve, reject) {
