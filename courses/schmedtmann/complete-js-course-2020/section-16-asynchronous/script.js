@@ -1340,3 +1340,13 @@ const whereAmI = async function() {
 }
 whereAmI();
 console.log('FIRST');
+
+
+// Error Handling with Try Catch
+
+// how error handling works with async await
+// can't use the catch method because we can't really attach it anywhere
+// instead, we use a try catch statement
+// used in regular JS as well
+// try catch has nothing to do with async await, but we can use it to catch errors in async functions
+error handling try catch
