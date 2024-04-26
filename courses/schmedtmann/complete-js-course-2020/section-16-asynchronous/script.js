@@ -1349,4 +1349,15 @@ console.log('FIRST');
 // instead, we use a try catch statement
 // used in regular JS as well
 // try catch has nothing to do with async await, but we can use it to catch errors in async functions
-error handling try catch
+// we can wrap all our code in a try block
+// JS will then try to execute this code
+// simple example: 
+// create a let and a const variable then accidentally reassigning the const variable which should give us an error because it isn't legal as we can't reassign a constant 
+// (have to do it without the try block)
+// error: assignment to constant variable
+
+try {
+    let y = 1;
+    const x = 2;
+    x = 3;
+}
