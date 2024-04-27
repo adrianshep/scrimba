@@ -1355,9 +1355,13 @@ console.log('FIRST');
 // create a let and a const variable then accidentally reassigning the const variable which should give us an error because it isn't legal as we can't reassign a constant 
 // (have to do it without the try block)
 // error: assignment to constant variable
+// we can now add the catch block
+// it will have access to whatever error occurred in the try block
 
 try {
     let y = 1;
     const x = 2;
     x = 3;
+} catch(err) {
+
 }
