@@ -1357,11 +1357,15 @@ console.log('FIRST');
 // error: assignment to constant variable
 // we can now add the catch block
 // it will have access to whatever error occurred in the try block
+// we can now do something with this error
+// let us alert the the error message
+// (any error has the message property)
+// "Assignment to constant variable." now shows up as alert and no longer in the console
 
 try {
     let y = 1;
     const x = 2;
     x = 3;
 } catch(err) {
-
+    alert(err.message);
 }
