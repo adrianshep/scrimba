@@ -1361,11 +1361,15 @@ console.log('FIRST');
 // let us alert the the error message
 // (any error has the message property)
 // "Assignment to constant variable." now shows up as alert and no longer in the console
+// because of this, the script no longer dies and we can instead catch the error and handle it
+// if we assign the value 3 correctly to y instead of x, then we will get no error from the try catch block
+// this example is a stupid syntax error and we're not going to use try catch to find mistakes we've made in our code
 
 try {
     let y = 1;
     const x = 2;
-    x = 3;
+    // x = 3;
+    y = 3;
 } catch(err) {
     alert(err.message);
 }
