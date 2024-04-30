@@ -1365,11 +1365,38 @@ console.log('FIRST');
 // if we assign the value 3 correctly to y instead of x, then we will get no error from the try catch block
 // this example is a stupid syntax error and we're not going to use try catch to find mistakes we've made in our code
 
-try {
-    let y = 1;
-    const x = 2;
-    // x = 3;
-    y = 3;
-} catch(err) {
-    alert(err.message);
+// try {
+//     let y = 1;
+//     const x = 2;
+//     // x = 3;
+//     y = 3;
+// } catch(err) {
+//     alert(err.message);
+// }
+
+// let's use try catch for something more useful: handling real errors in async functions
+// let's wrap the entire code for this function into a try block
+// after that, we add the catch block, which has access to whatever errors occur in the try block
+
+const whereAmI = async function() {
+    try {
+    // Geolocation
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    // Reverse geocoding
+    const resGeo = await fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
+    const dataGeo = await resGeo.json();
+
+    
+    // Country data
+    const res = await fetch(`https://restcountries.eu/rest/v2/name/${dataGeo.country}`);
+    const data = await res.jason();
+    console.lag(data);
+    renderCountry(data[0]);}
+    catch(err) {
+
+    }
 }
+whereAmI();
+console.log('FIRST');
