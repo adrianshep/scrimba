@@ -1377,6 +1377,10 @@ console.log('FIRST');
 // let's use try catch for something more useful: handling real errors in async functions
 // let's wrap the entire code for this function into a try block
 // after that, we add the catch block, which has access to whatever errors occur in the try block
+// we can then handle the errors just as we did with the catch method
+// let's force an error by reloading really fast
+// easiest way is to call the function multiple times
+// add emoji so that we can see that we are logging the error we've created
 
 const whereAmI = async function() {
     try {
@@ -1393,10 +1397,13 @@ const whereAmI = async function() {
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${dataGeo.country}`);
     const data = await res.jason();
     console.lag(data);
-    renderCountry(data[0]);}
+    renderError(data[0]);}
     catch(err) {
-
+        console.error(`${err} 💥 `);
+        renderCountry(`Something went wrong  💥 ${err.message}`);
     }
 }
+whereAmI();
+whereAmI();
 whereAmI();
 console.log('FIRST');
