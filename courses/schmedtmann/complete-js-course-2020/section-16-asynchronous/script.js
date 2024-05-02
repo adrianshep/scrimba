@@ -1381,6 +1381,10 @@ console.log('FIRST');
 // let's force an error by reloading really fast
 // easiest way is to call the function multiple times
 // add emoji so that we can see that we are logging the error we've created
+// we do have some error handling -- we are able to add the error to the user interface
+// that error isn't really meaningful, because the fetch promise doesn't reject the 404 (country not found) or 403 (too many requests to the reverse geocoding API) errors
+// the solution is simple and the same as before
+// we manually create an error that will be caught in the catch block
 
 const whereAmI = async function() {
     try {
