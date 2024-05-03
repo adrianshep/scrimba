@@ -1385,6 +1385,8 @@ console.log('FIRST');
 // that error isn't really meaningful, because the fetch promise doesn't reject the 404 (country not found) or 403 (too many requests to the reverse geocoding API) errors
 // the solution is simple and the same as before
 // we manually create an error that will be caught in the catch block
+// we do that in reverse geocoding immediately after the fetch for which it will handle errors
+// as before we can test for the okay property
 
 const whereAmI = async function() {
     try {
@@ -1394,6 +1396,7 @@ const whereAmI = async function() {
 
     // Reverse geocoding
     const resGeo = await fetch(`https://geocode.xyz/${lat}, ${lng}?geoit=json`);
+    if(!resGeo.ok) throw new Error('Problem getting location data');
     const dataGeo = await resGeo.json();
 
     
