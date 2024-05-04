@@ -1387,6 +1387,8 @@ console.log('FIRST');
 // we manually create an error that will be caught in the catch block
 // we do that in reverse geocoding immediately after the fetch for which it will handle errors
 // as before we can test for the okay property
+// if ok is not set to true then we want to throw a new error
+// problem getting location data
 
 const whereAmI = async function() {
     try {
