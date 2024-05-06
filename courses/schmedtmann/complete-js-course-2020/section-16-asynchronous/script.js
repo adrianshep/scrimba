@@ -1389,6 +1389,8 @@ console.log('FIRST');
 // as before we can test for the okay property
 // if ok is not set to true then we want to throw a new error
 // problem getting location data
+// now let's say we come back from the fetch with a weird country value 
+// the second API can't find a country for that name, so here we say 'problem getting country'
 
 const whereAmI = async function() {
     try {
@@ -1404,6 +1406,8 @@ const whereAmI = async function() {
     
     // Country data
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${dataGeo.country}`);
+    if(!resGeo.ok) throw new Error('Problem getting country');
+
     const data = await res.jason();
     console.lag(data);
     renderError(data[0]);}
