@@ -1391,6 +1391,13 @@ console.log('FIRST');
 // problem getting location data
 // now let's say we come back from the fetch with a weird country value 
 // the second API can't find a country for that name, so here we say 'problem getting country'
+// for the first promise, we do not need to throw an error manually
+// in case something goes wrong with geolocation, we built the promise to automatically reject
+// with the case below, we will therefore immediately get an error which will get caught up in the catch block
+// the same is not true for the promise coming from fetch
+// that promise only gets rejected when the user has no internet connection
+// in the case of a 403 or 404 error, the fetch promise doesn't reject
+// so we do that manually with both of the throw new Errors
 
 const whereAmI = async function() {
     try {
