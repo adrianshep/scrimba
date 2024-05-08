@@ -1398,7 +1398,8 @@ console.log('FIRST');
 // that promise only gets rejected when the user has no internet connection
 // in the case of a 403 or 404 error, the fetch promise doesn't reject
 // so we do that manually with both of the throw new Errors
-// catch renderCountry we don't need all of the error message, so edit it down to emoji and the actual error message
+// in catch renderCountry, we don't need all of the error message, so edit it down to emoji and the messages tied to the actual errors
+// with that revision, we run it again and trigger an error from the first fetch: 'Problem getting location data'
 
 const whereAmI = async function() {
     try {
