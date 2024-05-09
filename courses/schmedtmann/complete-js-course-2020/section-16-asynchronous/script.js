@@ -1429,3 +1429,16 @@ whereAmI();
 whereAmI();
 whereAmI();
 console.log('FIRST');
+
+console.log(1: Will get location');
+whereAmI();
+console.log('2: Finished getting location');
+
+
+// Returning Values from Async Functions
+
+// to clarify what an asynch function is and how it works:
+// to understand better what is happening here, start by adding more console logs above
+// when run, we immediately get the first log and then the second
+// only after that, do we get all the logs coming from the async function, because it runs in the background
+// JS immediately moves on to the next line
