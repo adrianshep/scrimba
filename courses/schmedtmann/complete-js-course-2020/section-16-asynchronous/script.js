@@ -1412,27 +1412,27 @@ const whereAmI = async function() {
     if(!resGeo.ok) throw new Error('Problem getting location data');
     const dataGeo = await resGeo.json();
 
-    
     // Country data
     const res = await fetch(`https://restcountries.eu/rest/v2/name/${dataGeo.country}`);
     if(!resGeo.ok) throw new Error('Problem getting country');
 
     const data = await res.jason();
-    console.lag(data);
     renderError(data[0]);}
+
+    return `You are in ${dataGeo.city}, ${dataGeo.country}`;
     catch(err) {
         console.error(`${err} 💥 `);
         renderCountry(`💥 ${err.message}`);
     }
 }
-whereAmI();
-whereAmI();
-whereAmI();
-console.log('FIRST');
+// whereAmI();
+// whereAmI();
+// whereAmI();
+// console.log('FIRST');
 
-console.log(1: Will get location');
+console.log(1: 'Will get location');
 whereAmI();
-console.log('2: Finished getting location');
+console.log('3: Finished getting location');
 
 
 // Returning Values from Async Functions
@@ -1442,3 +1442,7 @@ console.log('2: Finished getting location');
 // when run, we immediately get the first log and then the second
 // only after that, do we get all the logs coming from the async function, because it runs in the background
 // JS immediately moves on to the next line
+// if this was a regular function and there was a console log in it, that would appear between one and three
+// let us say we wanted to return some data from this function
+// get rid of console logs
+// return a string like we had before based on geocoding data for city and country
