@@ -1431,7 +1431,9 @@ const whereAmI = async function() {
 // console.log('FIRST');
 
 console.log(1: 'Will get location');
-whereAmI();
+// whereAmI();
+const city = whereAmI();
+console.log(city);
 console.log('3: Finished getting location');
 
 
@@ -1446,3 +1448,10 @@ console.log('3: Finished getting location');
 // let us say we wanted to return some data from this function
 // get rid of console logs
 // return a string like we had before based on geocoding data for city and country
+// now we want to get the data out of that string
+// pretend this is a regular function in which case we would define a variable and store in it the returned value
+// second item logged to the console is a promise
+// remember, an async function always returns a promise -- here is proof of that
+// it makes sense that we get a promise rather than a value:
+// at this point in the code, JS has no way of knowing what value will be returned from this function, so therefore it returns the function
+// the fulfilled value of the promise will be the string because that is the value that will return from the async function
