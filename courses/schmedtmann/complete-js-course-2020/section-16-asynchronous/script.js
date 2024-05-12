@@ -1432,8 +1432,10 @@ const whereAmI = async function() {
 
 console.log(1: 'Will get location');
 // whereAmI();
-const city = whereAmI();
-console.log(city);
+// const city = whereAmI();
+// console.log(city);
+whereAmI().then(city => console.log(city));
+
 console.log('3: Finished getting location');
 
 
@@ -1455,3 +1457,5 @@ console.log('3: Finished getting location');
 // it makes sense that we get a promise rather than a value:
 // at this point in the code, JS has no way of knowing what value will be returned from this function, so therefore it returns the function
 // the fulfilled value of the promise will be the string because that is the value that will return from the async function
+// to get the data we want, we can use the then method on whereAmI to get the fulfilled value of the promise
+// using same variable name as we did before, but that previous use of it didn't work, while here it will work
