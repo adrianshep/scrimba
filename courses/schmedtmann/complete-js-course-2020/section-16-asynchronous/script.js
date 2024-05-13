@@ -1459,3 +1459,8 @@ console.log('3: Finished getting location');
 // the fulfilled value of the promise will be the string because that is the value that will return from the async function
 // to get the data we want, we can use the then method on whereAmI to get the fulfilled value of the promise
 // using same variable name as we did before, but that previous use of it didn't work, while here it will work
+// when we run it, we successfully return a value from the function
+// errors: if any error occurs in the try block, the return will never be reached because the code will immediately jump to the catch block
+// create an error in country data (data.countryggggg)
+// we get undefined in from lines five, four, three in console log, nothing returned from the function
+// what's interesting is that the console log still worked which means that the callback function is still running, the then method was called and the promise was fulfilled and not rejected
