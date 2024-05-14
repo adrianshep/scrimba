@@ -1431,10 +1431,9 @@ const whereAmI = async function() {
 // console.log('FIRST');
 
 console.log(1: 'Will get location');
-// whereAmI();
-// const city = whereAmI();
-// console.log(city);
-whereAmI().then(city => console.log(city));
+whereAmI()
+    .then(city => console.log(`${city})`)
+    .catch(error => (`2: ${err.message} 💥`));
 
 console.log('3: Finished getting location');
 
@@ -1464,3 +1463,6 @@ console.log('3: Finished getting location');
 // create an error in country data (data.countryggggg)
 // we get undefined in from lines five, four, three in console log, nothing returned from the function
 // what's interesting is that the console log still worked which means that the callback function is still running, the then method was called and the promise was fulfilled and not rejected
+// if we add a catch handler, we still get the error from here, but still the callback is executed
+// this is why we get two undefined and not the catch block
+// again, even though there was an error in the async function, the promise it returns is still fulfilled
