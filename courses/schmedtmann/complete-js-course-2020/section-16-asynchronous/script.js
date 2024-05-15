@@ -1423,16 +1423,23 @@ const whereAmI = async function() {
     catch(err) {
         console.error(`${err} 💥 `);
         renderCountry(`💥 ${err.message}`);
+
+        // Reject promise returned from async function
+        throw err;
     }
-}
+};
+
 // whereAmI();
 // whereAmI();
 // whereAmI();
 // console.log('FIRST');
 
 console.log(1: 'Will get location');
+// whereAmI();
+// const city = whereAmI();
+// console.log(city);
 whereAmI()
-    .then(city => console.log(`${city})`)
+    .then(city => console.log(`2: ${city})`)
     .catch(error => (`2: ${err.message} 💥`));
 
 console.log('3: Finished getting location');
@@ -1466,3 +1473,6 @@ console.log('3: Finished getting location');
 // if we add a catch handler, we still get the error from here, but still the callback is executed
 // this is why we get two undefined and not the catch block
 // again, even though there was an error in the async function, the promise it returns is still fulfilled
+// if we want to fix that, if we want to be able to catch that error here as well, we will have to rethrow it
+// rethrowing it means to throw the error again so we can propagate it down
+// with that, we will manually reject a promise that's returned from the async function
