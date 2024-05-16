@@ -1440,7 +1440,8 @@ console.log(1: 'Will get location');
 // console.log(city);
 whereAmI()
     .then(city => console.log(`2: ${city})`)
-    .catch(error => (`2: ${err.message} 💥`));
+    .catch(error => (`2: ${err.message} 💥`))
+    .finally(() => console.log('3: Finished getting location'));
 
 console.log('3: Finished getting location');
 
@@ -1476,3 +1477,6 @@ console.log('3: Finished getting location');
 // if we want to fix that, if we want to be able to catch that error here as well, we will have to rethrow it
 // rethrowing it means to throw the error again so we can propagate it down
 // with that, we will manually reject a promise that's returned from the async function
+// logs to console the error message: "2: Cannot read property 'flag' of undefined" the 2 indicating its origin
+// if we want to fix the 3 printing before the 2, we simply add a finally
+// finally is always going to be executed
