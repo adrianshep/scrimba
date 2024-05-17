@@ -1480,3 +1480,6 @@ console.log('3: Finished getting location');
 // logs to console the error message: "2: Cannot read property 'flag' of undefined" the 2 indicating its origin
 // if we want to fix the 3 printing before the 2, we simply add a finally
 // finally is always going to be executed
+// the above works just fine
+// in Jonas's opinion, doing it this way mixes the concept of async await with handling promises by using then and catch, all in the same code
+// Jonas prefers always using async functions purely rather than mixing them
