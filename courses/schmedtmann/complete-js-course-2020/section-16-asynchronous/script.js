@@ -1446,6 +1446,11 @@ whereAmI()
 console.log('3: Finished getting location');
 
 
+(function() {
+
+})();
+
+
 // Returning Values from Async Functions
 
 // to clarify what an asynch function is and how it works:
@@ -1483,3 +1488,8 @@ console.log('3: Finished getting location');
 // the above works just fine
 // in Jonas's opinion, doing it this way mixes the concept of async await with handling promises by using then and catch, all in the same code
 // Jonas prefers always using async functions purely rather than mixing them
+// it would be great if we could use await without the async function, but for now at least, that doesn't work, although there is a proposal in the work to make it happen
+// we don't really want a new, complete funciton here
+// instead we can use an IIFE
+// immediately-invoked function expression
+// we write the function, then the function body, then call it at the end
