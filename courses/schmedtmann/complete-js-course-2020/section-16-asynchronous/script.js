@@ -1445,9 +1445,13 @@ whereAmI()
 
 console.log('3: Finished getting location');
 
-
-(function() {
-
+(async  function() {
+    try {
+        const city = await whereAmI();
+        console.log(`2: ${city})`)
+    } catch(err) {
+        console.error(`2: ${err.message} 💥`)
+    }
 })();
 
 
@@ -1493,3 +1497,4 @@ console.log('3: Finished getting location');
 // instead we can use an IIFE
 // immediately-invoked function expression
 // we write the function, then the function body, then call it at the end
+// Jonas's solution: store whereAmI promise result in city variable and log to console
