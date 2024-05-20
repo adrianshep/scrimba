@@ -1452,6 +1452,7 @@ console.log('3: Finished getting location');
     } catch(err) {
         console.error(`2: ${err.message} 💥`)
     }
+	console.log('3: Finished getting location')
 })();
 
 
@@ -1498,3 +1499,6 @@ console.log('3: Finished getting location');
 // immediately-invoked function expression
 // we write the function, then the function body, then call it at the end
 // Jonas's solution: store whereAmI promise result in city variable and log to console
+// finally, for the finished getting location last part, we will place it outside the try catch block
+// this will ensure that it will always be executed
+// everything is now converted to async await
