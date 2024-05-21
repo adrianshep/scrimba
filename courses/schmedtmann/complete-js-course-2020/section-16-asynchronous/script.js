@@ -1502,3 +1502,20 @@ console.log('3: Finished getting location');
 // finally, for the finished getting location last part, we will place it outside the try catch block
 // this will ensure that it will always be executed
 // everything is now converted to async await
+
+
+// Running Promises in Parallel
+
+// imagine we want to get data about three countries at the same time but the order in which the data arrives doesn't matter
+// let's implement an async function using everything we've learned to this point
+// this function will take in three countries and will log their capital cities as an array
+// in async function, we always need to wrap our code into a try catch block
+// in real world scenario, you would do real error handling and not just log to console
+
+const get3Countries = async function(c1, c2, c3) {
+    try {
+        await
+    } catch(err) {
+        console.error(err);
+    }
+}
