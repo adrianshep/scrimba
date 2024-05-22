@@ -1511,10 +1511,13 @@ console.log('3: Finished getting location');
 // this function will take in three countries and will log their capital cities as an array
 // in async function, we always need to wrap our code into a try catch block
 // in real world scenario, you would do real error handling and not just log to console
+// for data retrieval and conversion, let's use the getJSON function we coded at the beginning of this section
+// the getJSON function encapsulates the fetch request and error handling, and also immediately converst the response to JSON
+// we will store that data into the variable c1
 
 const get3Countries = async function(c1, c2, c3) {
     try {
-        await
+        const data1 = await getJSON(`https://restcountries.eu/rest/v2/name/${c1}`); 
     } catch(err) {
         console.error(err);
     }
