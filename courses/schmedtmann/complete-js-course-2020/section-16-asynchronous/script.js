@@ -1518,6 +1518,9 @@ console.log('3: Finished getting location');
 // use destructuring to get the first element
 // duplicate this code twice to get three countries data returned
 // console log capitals of each of the three countries
+// test with three countries: Portugal, Canada, Tanzania
+// returns "Lisbon", "Ottawa", "Dodoma"
+// at first sight, seems to make sense
 
 const get3Countries = async function(c1, c2, c3) {
     try {
@@ -1529,4 +1532,5 @@ const get3Countries = async function(c1, c2, c3) {
     } catch(err) {
         console.error(err);
     }
-}
+};
+get3Countries('portugal', 'canada', 'tanzania');
