@@ -1520,7 +1520,10 @@ console.log('3: Finished getting location');
 // console log capitals of each of the three countries
 // test with three countries: Portugal, Canada, Tanzania
 // returns "Lisbon", "Ottawa", "Dodoma"
-// at first sight, seems to make sense
+// if we think about what we did here, it doesn't make much sense
+// we ran all the Ajax calls one after another, even though the result of the second one doesn't depend on the first one, nor does the result of the third one depend on either of the first tow
+// we currently load the data for each country sequentially, when we can run them in parallel, all at the same time
+// if each country takes a half second of loading time, we can save one second by loading them at once, which is a lot of time when loading a website
 
 const get3Countries = async function(c1, c2, c3) {
     try {
