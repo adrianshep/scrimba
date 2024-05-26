@@ -1524,12 +1524,21 @@ console.log('3: Finished getting location');
 // we ran all the Ajax calls one after another, even though the result of the second one doesn't depend on the first one, nor does the result of the third one depend on either of the first tow
 // we currently load the data for each country sequentially, when we can run them in parallel, all at the same time
 // if each country takes a half second of loading time, we can save one second by loading them at once, which is a lot of time when loading a website
+// to do that, we use the Promise.all combinator function
+// which is a helper function and static method on the Promise constructor
+// it takes in an array of promises and returns a new promise, which will then run all the promises in the array at the same time
 
 const get3Countries = async function(c1, c2, c3) {
     try {
-        const [data1] = await getJSON(`https://restcountries.eu/rest/v2/name/${c1}`);
-        const [data2] = await getJSON(`https://restcountries.eu/rest/v2/name/${c2}`);
-        const [data3] = await getJSON(`https://restcountries.eu/rest/v2/name/${c3}`); 
+        // const [data1] = await getJSON(`https://restcountries.eu/rest/v2/name/${c1}`);
+        // const [data2] = await getJSON(`https://restcountries.eu/rest/v2/name/${c2}`);
+        // const [data3] = await getJSON(`https://restcountries.eu/rest/v2/name/${c3}`); 
+
+        Promise.all([
+            getJSON(`https://restcountries.eu/rest/v2/name/${c1}`),
+            getJSON(`https://restcountries.eu/rest/v2/name/${c21}`),
+            getJSON(`https://restcountries.eu/rest/v2/name/${c3}`)
+        ]);
 
         console.log([data1.capital, data2.capital, data3.capital])
     } catch(err) {
