@@ -1529,6 +1529,8 @@ console.log('3: Finished getting location');
 // it takes in an array of promises and returns a new promise, which will then run all the promises in the array at the same time
 // we can then handle that promise the same way we did before
 // call the result data, await it and then log the data to the console
+// to create the same output as before, we have to loop over this data and take out the data that we want
+// from d we want to take element 0 and from that we want the capital city
 
 const get3Countries = async function(c1, c2, c3) {
     try {
@@ -1542,7 +1544,7 @@ const get3Countries = async function(c1, c2, c3) {
             getJSON(`https://restcountries.eu/rest/v2/name/${c21}`),
             getJSON(`https://restcountries.eu/rest/v2/name/${c3}`)
         ]);
-    console.log(data);
+    console.log(data.map(d => d[0].capital));
     } catch(err) {
         console.error(err);
     }
