@@ -1531,6 +1531,11 @@ console.log('3: Finished getting location');
 // call the result data, await it and then log the data to the console
 // to create the same output as before, we have to loop over this data and take out the data that we want
 // from d we want to take element 0 and from that we want the capital city
+// important note: when one of these promises rejects, then the whole Promise.all rejects as well
+// Promise.all short-circuits when even one promise rejects
+// in summary, if you need to run multiple asynchronous operations at the same time and those operations don't depend on one another, you should always run them in parallel, just as we did using Promise.all
+// also, in case you're not using async await, you can take the getJSON result and handle it with the then method
+// Promise.all is called a combinator function because it allows us to combine multiple promises
 
 const get3Countries = async function(c1, c2, c3) {
     try {
