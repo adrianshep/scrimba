@@ -1555,3 +1555,12 @@ const get3Countries = async function(c1, c2, c3) {
     }
 };
 get3Countries('portugal', 'canada', 'tanzania');
+
+
+// Other Promise Combinators: race, allSettled, any
+
+// Promise.race
+// like all other combinators, receives an array of promises and also returns a promise
+// the promise returned is settled as soon as one of the input promises settles
+// settled mean that a value has become available, no matter whether the promise got rejected or fulfilled
+// with Promise.race, the first settled promise wins the race
