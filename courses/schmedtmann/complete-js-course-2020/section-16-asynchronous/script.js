@@ -1564,3 +1564,17 @@ get3Countries('portugal', 'canada', 'tanzania');
 // the promise returned is settled as soon as one of the input promises settles
 // settled mean that a value has become available, no matter whether the promise got rejected or fulfilled
 // with Promise.race, the first settled promise wins the race
+// create an IIFE so that we can use async await without creating a whole new named function
+// use await Promise.race and store it as a response
+// define an array of promises using getJSON function with three countries, Italy, Egypt and Mexico
+// these three promises will race against each other
+// if the winning promise is then a fulfilled promise, the fulfillment value of this whole race promise will be the fulfillment value of that winning promise
+
+// Promise.race
+(async function() {
+    const res = await Promise.race([
+        getJSON(`https://restcountries.eu/rest/v2/name/italy`),
+        getJSON(`https://restcountries.eu/rest/v2/name/egypt`),
+        getJSON(`https://restcountries.eu/rest/v2/name/mexico`)
+    ])
+})();
