@@ -1569,6 +1569,9 @@ get3Countries('portugal', 'canada', 'tanzania');
 // define an array of promises using getJSON function with three countries, Italy, Egypt and Mexico
 // these three promises will race against each other
 // if the winning promise is then a fulfilled promise, the fulfillment value of this whole race promise will be the fulfillment value of that winning promise
+// testing shows Italy, Mexico or Egypt randomly as the result, depending on which promise got settled the fastest
+// a promise that gets rejected can also win this race -- Promise.race short-circuits whenever one of the promises gets settled, either fulfilled or rejected
+// a nonsense name for the country gets rejected quickly and can come in first
 
 // Promise.race
 (async function() {
@@ -1576,5 +1579,6 @@ get3Countries('portugal', 'canada', 'tanzania');
         getJSON(`https://restcountries.eu/rest/v2/name/italy`),
         getJSON(`https://restcountries.eu/rest/v2/name/egypt`),
         getJSON(`https://restcountries.eu/rest/v2/name/mexico`)
-    ])
+    ]);
+    console.log(res[0]);
 })();
