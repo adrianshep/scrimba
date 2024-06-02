@@ -1572,6 +1572,13 @@ get3Countries('portugal', 'canada', 'tanzania');
 // testing shows Italy, Mexico or Egypt randomly as the result, depending on which promise got settled the fastest
 // a promise that gets rejected can also win this race -- Promise.race short-circuits whenever one of the promises gets settled, either fulfilled or rejected
 // a nonsense name for the country gets rejected quickly and can come in first
+// Promise.race is very useful for preventing never-ending or very long-running promises
+// if your user has a bad interent connection, then a fetch request in your application may take too long to be useful
+// we can create a special time-out promise which automatically rejects after a certain amount of time has passed
+// to demonstrate, we'll create a timeout function similar to the wait one we created earlier
+// the difference is that this one will reject and not resolve
+// for the resolve function, which is always the first one, we can use a throw-away variable
+// after certain amount of seconds have paaed we reject the promise with a new error message
 
 // Promise.race
 (async function() {
@@ -1582,3 +1589,11 @@ get3Countries('portugal', 'canada', 'tanzania');
     ]);
     console.log(res[0]);
 })();
+
+const timeout = function(sec) {
+    return new Promise(function(_, reject) {
+        setTimeout(function() {
+            reject(newError('Request took too long!'))
+        }, sec)
+    })
+}
