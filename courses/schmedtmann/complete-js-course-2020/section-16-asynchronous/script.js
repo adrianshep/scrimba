@@ -1578,7 +1578,12 @@ get3Countries('portugal', 'canada', 'tanzania');
 // to demonstrate, we'll create a timeout function similar to the wait one we created earlier
 // the difference is that this one will reject and not resolve
 // for the resolve function, which is always the first one, we can use a throw-away variable
-// after certain amount of seconds have paaed we reject the promise with a new error message
+// after a certain amount of seconds have paaed we reject the promise with a new error message
+// now we can have the Ajax call race against this timeout
+// use Promise.race and, as the first promise, use getJSON with Tanzania as the country
+// the second promise will then be our timeout, waiting for one second
+// these two will then race one another
+// if the timeout happens first, that will then abourt the fetch that is happening in getJSON
 
 // Promise.race
 (async function() {
@@ -1596,4 +1601,9 @@ const timeout = function(sec) {
             reject(newError('Request took too long!'))
         }, sec)
     })
-}
+};
+
+Promise.race{[
+    getJSON(`https://restcountries.eu/rest/v2/name/tanzania`),
+    timeout(1);
+]};
