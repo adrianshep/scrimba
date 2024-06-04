@@ -1583,7 +1583,9 @@ get3Countries('portugal', 'canada', 'tanzania');
 // use Promise.race and, as the first promise, use getJSON with Tanzania as the country
 // the second promise will then be our timeout, waiting for one second
 // these two will then race one another
-// if the timeout happens first, that will then abourt the fetch that is happening in getJSON
+// if the timeout happens first, that will then abort the fetch that is happening in getJSON
+// could have used async await again, but why not use the then method here also
+// log the response (could have called it data) and the error to the console
 
 // Promise.race
 (async function() {
@@ -1607,3 +1609,5 @@ Promise.race{[
     getJSON(`https://restcountries.eu/rest/v2/name/tanzania`),
     timeout(1);
 ]};
+    .then(res => console.log(res[0]))
+    .catch(err => console.error(err));
