@@ -1586,6 +1586,9 @@ get3Countries('portugal', 'canada', 'tanzania');
 // if the timeout happens first, that will then abort the fetch that is happening in getJSON
 // could have used async await again, but why not use the then method here also
 // log the response (could have called it data) and the error to the console
+// multiply sec by 1000 to go from milliseconds to seconds, but Tanzania data returns faster than that
+// try 0.1 seconds instead of 1 in timeout
+// this time the request took too long and generated that error message
 
 // Promise.race
 (async function() {
@@ -1601,13 +1604,13 @@ const timeout = function(sec) {
     return new Promise(function(_, reject) {
         setTimeout(function() {
             reject(newError('Request took too long!'))
-        }, sec)
+        }, sec * 1000);
     })
 };
 
 Promise.race{[
     getJSON(`https://restcountries.eu/rest/v2/name/tanzania`),
-    timeout(1);
+    timeout(0.1);
 ]};
     .then(res => console.log(res[0]))
     .catch(err => console.error(err));
