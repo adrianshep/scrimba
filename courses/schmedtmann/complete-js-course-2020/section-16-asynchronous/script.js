@@ -1589,6 +1589,8 @@ get3Countries('portugal', 'canada', 'tanzania');
 // multiply sec by 1000 to go from milliseconds to seconds, but Tanzania data returns faster than that
 // try 0.1 seconds instead of 1 in timeout
 // this time the request took too long and generated that error message
+// in the real world, you will use a larger amount of time -- more on the order of 5 seconds
+// Promise.race and Promise.all are the two most important promise combinators
 
 // Promise.race
 (async function() {
@@ -1614,3 +1616,11 @@ Promise.race{[
 ]};
     .then(res => console.log(res[0]))
     .catch(err => console.error(err));
+
+
+// Promise.allSettled
+
+// a newer combinator from ES2020 and very simple
+// it takes in an array of promises and returns an array of all the settled promises, whether rejected or not
+// similar to Promise.all, but where Promise.all will short circuit as soon as one promise rejects, Promise.allSettled never short circuits
+// it will return all the results of all the promises
