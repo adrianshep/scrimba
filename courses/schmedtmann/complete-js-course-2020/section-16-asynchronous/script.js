@@ -1624,3 +1624,10 @@ Promise.race{[
 // it takes in an array of promises and returns an array of all the settled promises, whether rejected or not
 // similar to Promise.all, but where Promise.all will short circuit as soon as one promise rejects, Promise.allSettled never short circuits
 // it will return all the results of all the promises
+// test shows we indeed get three results, even though one of them rejected
+
+Promise.allSettled([
+    Promise.resolve('Success'),
+    Promise.reject('ERROR'),
+    Promise.resolve('Another success'),
+]).then(res => console.log(res));
