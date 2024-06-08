@@ -1631,3 +1631,17 @@ Promise.allSettled([
     Promise.reject('ERROR'),
     Promise.resolve('Another success'),
 ]).then(res => console.log(res));
+
+
+// Promise.any
+// ES2021
+// takes in an array of promises and returns the first fulfilled promise and ignores any rejected promises
+// the result of Promise.any will be fulfilled promise unless all the promises reject
+
+Promise.any([
+    Promise.resolve('Success'),
+    Promise.reject('ERROR'),
+    Promise.resolve('Another success'),
+])
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
