@@ -1712,3 +1712,21 @@ createImage('img/img-1.jpg')
     currentImg.style.display = 'none';
 })
 .catch(err => console.error(err));
+
+const loadNPause = async function() {
+    try {
+        // load image 1
+        let img = await createImage('img/img-1.jpg');
+        console.log('Image 1 loaded');
+
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+// Jonas's solution:
+// our loadNPause async function doesn't have any arguments
+// wrap everything in a try block
+// in JS it's now allowed to use catch without the error, but you can use it for consistency
+// await the promise and store the results into image
+// load image to console
