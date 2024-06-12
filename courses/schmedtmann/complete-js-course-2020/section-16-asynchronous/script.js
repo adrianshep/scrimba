@@ -1718,7 +1718,8 @@ const loadNPause = async function() {
         // load image 1
         let img = await createImage('img/img-1.jpg');
         console.log('Image 1 loaded');
-
+        await wait(2);
+        
     } catch(err) {
         console.log(err);
     }
@@ -1730,3 +1731,5 @@ const loadNPause = async function() {
 // in JS it's now allowed to use catch without the error, but you can use it for consistency
 // await the promise and store the results into image
 // load image to console
+// we await for the pause in execution with wait(2)
+// just like before, since the wait promise doesn't have any resolved value, we don't need to save anything to a variable
