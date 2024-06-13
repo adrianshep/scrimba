@@ -1719,7 +1719,8 @@ const loadNPause = async function() {
         let img = await createImage('img/img-1.jpg');
         console.log('Image 1 loaded');
         await wait(2);
-        
+        img.style.display = 'none';
+	
     } catch(err) {
         console.log(err);
     }
@@ -1733,3 +1734,5 @@ const loadNPause = async function() {
 // load image to console
 // we await for the pause in execution with wait(2)
 // just like before, since the wait promise doesn't have any resolved value, we don't need to save anything to a variable
+// instead of currentImg we can use img, because we are still in the same function and  block, and therefore scope
+// previously, we defined the image in one funciton, then set its style in another, so we need a global variable
