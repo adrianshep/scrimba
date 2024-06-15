@@ -1693,26 +1693,27 @@ const createImage = function(imgPath) {
 
 let currentImg;
 
-createImage('img/img-1.jpg')
-.then(img => {
-    currentImg = img;
-    console.log('Image 1 loaded');
-    return wait(2);
-})
-.then(() => {
-    currentImg.style.display = 'none';
-    return createImage('img/img-2.jpg');
-})
-.then(img => {
-    currentImg = img;
-    console.log('Image 2 loaded');
-    return wait(2);
-})
-.then(() => {
-    currentImg.style.display = 'none';
-})
-.catch(err => console.error(err));
+// createImage('img/img-1.jpg')
+// .then(img => {
+//     currentImg = img;
+//     console.log('Image 1 loaded');
+//     return wait(2);
+// })
+// .then(() => {
+//     currentImg.style.display = 'none';
+//     return createImage('img/img-2.jpg');
+// })
+// .then(img => {
+//     currentImg = img;
+//     console.log('Image 2 loaded');
+//     return wait(2);
+// })
+// .then(() => {
+//     currentImg.style.display = 'none';
+// })
+// .catch(err => console.error(err));
 
+// PART 1
 const loadNPause = async function() {
     try {
         // load image 1
@@ -1731,6 +1732,7 @@ const loadNPause = async function() {
         console.log(err);
     }
 }
+loadNPause();
 
 // Jonas's solution:
 // our loadNPause async function doesn't have any arguments
@@ -1744,3 +1746,10 @@ const loadNPause = async function() {
 // previously, we defined the image in one function, then set its style in another, so we need a global variable
 // next we do the same for Image 2
 // we don't need the external variable, we can simply reassign img
+// loadNPause()
+// comment out previous logic so that it doesn't run twice
+// in console, set network to Fast 3G
+// we see an image loading with a wait time of two seconds
+// image 1 loaded during all this time, then we had a two second waiting time
+// then the next image loaded and finished in that two second waiting time
+// lots of interesting information to be found here if you want to to dig deeply into it
