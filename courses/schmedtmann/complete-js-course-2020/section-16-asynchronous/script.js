@@ -1734,6 +1734,15 @@ const loadNPause = async function() {
 }
 loadNPause();
 
+// PART 2
+const loadAll = async function(imgArr) {
+    try {
+        const imgs = imgArr.map()
+    } catch(err) {
+        console.error(err);
+    }
+}
+
 // Jonas's solution:
 // our loadNPause async function doesn't have any arguments
 // wrap everything in a try block
@@ -1753,3 +1762,7 @@ loadNPause();
 // image 1 loaded during all this time, then we had a two second waiting time
 // then the next image loaded and finished in that two second waiting time
 // lots of interesting information to be found here if you want to to dig deeply into it
+// for Part 2 of the challenge, we need to create an async function loadAll which receives an image array imgArr
+// we then need to loop over the array and create an array of images
+// add try catch block
+// create images array resulting from imgArr.map()
