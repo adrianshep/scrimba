@@ -1737,7 +1737,7 @@ loadNPause();
 // PART 2
 const loadAll = async function(imgArr) {
     try {
-        const imgs = imgArr.map()
+        const imgs = imgArr.map(async img => await createImage(img))
     } catch(err) {
         console.error(err);
     }
@@ -1766,3 +1766,6 @@ const loadAll = async function(imgArr) {
 // we then need to loop over the array and create an array of images
 // add try catch block
 // create images array resulting from imgArr.map()
+// for the callback function here, in each iteration of the array, we have one image and we want the createImage function to laod that image
+// this function returns a promise, so we should await that promise, otherwise nothing will happen
+// we need to make this an async function so we can use await
