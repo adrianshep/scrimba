@@ -1732,16 +1732,18 @@ const loadNPause = async function() {
         console.log(err);
     }
 }
-loadNPause();
+// loadNPause();
 
 // PART 2
 const loadAll = async function(imgArr) {
     try {
-        const imgs = imgArr.map(async img => await createImage(img))
+        const imgs = imgArr.map(async img => await createImage(img));
+        console.log(imgs);
     } catch(err) {
         console.error(err);
     }
-}
+};
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 
 // Jonas's solution:
 // our loadNPause async function doesn't have any arguments
@@ -1769,3 +1771,5 @@ const loadAll = async function(imgArr) {
 // for the callback function here, in each iteration of the array, we have one image and we want the createImage function to laod that image
 // this function returns a promise, so we should await that promise, otherwise nothing will happen
 // we need to make this an async function so we can use await
+// as instructed, pause loadNPause and instead call loadAll with the given test array
+// check out the images array in console
