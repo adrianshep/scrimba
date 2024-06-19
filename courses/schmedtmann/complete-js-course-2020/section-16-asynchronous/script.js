@@ -1772,4 +1772,11 @@ loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 // this function returns a promise, so we should await that promise, otherwise nothing will happen
 // we need to make this an async function so we can use await
 // as instructed, pause loadNPause and instead call loadAll with the given test array
-// check out the images array in console
+// check out the images array in console:
+// what we have are not an array of images themselves, but an array of promises
+// we have an async function
+// an arrow function, so an implicit return -- so this is returning something from the callback function in each iteration
+// an async function aways returns a promise and not the value we want to return
+// instead, the value we want to return will be returned by the async function as the fulfilled value of the promise
+// in this example, we are returning three times from our async function, each one a promise
+// behind the scenes, the images are already being loaded
