@@ -1739,6 +1739,8 @@ const loadAll = async function(imgArr) {
     try {
         const imgs = imgArr.map(async img => await createImage(img));
         console.log(imgs);
+
+        const imgsEl = await Promise.all(imgs);
     } catch(err) {
         console.error(err);
     }
@@ -1780,3 +1782,8 @@ loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 // instead, the value we want to return will be returned by the async function as the fulfilled value of the promise
 // in this example, we are returning three times from our async function, each one a promise
 // behind the scenes, the images are already being loaded
+// we need to get these image elements out of the promise
+// we could take each promise out of the array and manually await it, but that would create additional work and then that wouldn't be happening in parallel
+// for it to happen in parallel, we use Promise.all, which is perfect for this because it already expects an array of images
+// Promise.all is perfect for this because it already expects an array of images
+// we store the image elements
