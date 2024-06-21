@@ -1787,3 +1787,7 @@ loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 // for it to happen in parallel, we use Promise.all, which is perfect for this because it already expects an array of images
 // Promise.all is perfect for this because it already expects an array of images
 // we store the image elements
+// now the three images load and appear in the console after some time
+// that's why we need to add the parallel class later
+// this worked because in the above loop, the await keyword did its job pausing the execution of the function
+// only after that did Promise.all get the image elements out of the promises array
