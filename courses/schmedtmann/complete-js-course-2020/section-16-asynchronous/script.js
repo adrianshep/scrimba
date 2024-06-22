@@ -1738,9 +1738,11 @@ const loadNPause = async function() {
 const loadAll = async function(imgArr) {
     try {
         const imgs = imgArr.map(async img => await createImage(img));
-        console.log(imgs);
-
+        // console.log(imgs);
         const imgsEl = await Promise.all(imgs);
+        console.log(imgsEl);
+        imgsEl.forEach(img => img.classList.add('parallel'));
+
     } catch(err) {
         console.error(err);
     }
@@ -1791,3 +1793,6 @@ loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 // that's why we need to add the parallel class later
 // this worked because in the above loop, the await keyword did its job pausing the execution of the function
 // only after that did Promise.all get the image elements out of the promises array
+// the next step is to loop over the array and add the parallel class to it
+// we don't want a new array; we want to do something with each of the elements
+// img.classList.add parallel
