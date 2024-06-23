@@ -1796,3 +1796,5 @@ loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
 // the next step is to loop over the array and add the parallel class to it
 // we don't want a new array; we want to do something with each of the elements
 // img.classList.add parallel
+// in the console, all the images load and display side-by-side
+// they start loading all at the same time because of the loop which executes the three callback functions, one after another
