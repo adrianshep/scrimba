@@ -14,3 +14,8 @@
 // in order to download, use and share packages, we use NPM software installed on our computer
 // it's a simple command line interface allowing us to do all that
 // NPM is both a repository in which packages live and a program we use on our computers to install and manage these packages
+// we've written our project code, we divided it into multiple modules and we included some 3rd party modules as well -- the development step is complete
+// when building a real world application, that isn't the end of the story
+// our project now needs to go through a build process, where one big final JS bundle is built
+// that's the final file we will deploy to our web server for production and will be sent to browsers
+// "production" simply means that an application is being used by users in the real world
