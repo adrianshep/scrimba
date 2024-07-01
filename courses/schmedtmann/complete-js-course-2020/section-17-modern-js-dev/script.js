@@ -1,5 +1,4 @@
 
-
 // Modern JavaScript Development
 
 // code used to be written in one or a few big scripts, which would then be sent to a browser
@@ -19,3 +18,11 @@
 // our project now needs to go through a build process, where one big final JS bundle is built
 // that's the final file we will deploy to our web server for production and will be sent to browsers
 // "production" simply means that an application is being used by users in the real world
+// a build process can be very complex; for this description, we will keep it to only two steps
+// in the first step, we bundle all our modules into one big file
+// this is a complex process which can eliminate unused code and compress our code as well
+// this step is important for two reasons:
+// first, older browsers don't support modules at all, so code in a module can't be executed by an older browser
+// second, it improves performance to send fewer files to the browser and have the bundling step compress our code
+// in the second step, we transpile and polyfill, which is coverting all modern JS syntax and features back to old ES5 syntax, so that even older browsers can understand our code without it breaking
+// this is usually done with a tool called Babel
