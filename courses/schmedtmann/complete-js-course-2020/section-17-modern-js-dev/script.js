@@ -26,3 +26,11 @@
 // second, it improves performance to send fewer files to the browser and have the bundling step compress our code
 // in the second step, we transpile and polyfill, which is coverting all modern JS syntax and features back to old ES5 syntax, so that even older browsers can understand our code without it breaking
 // this is usually done with a tool called Babel
+// after these two steps, we end up with the final JS bundle ready to be deployed on a server for production
+// we don't perform these steps ourselves, but use a special tool to implement the build process for us
+// the most common build tools are webpack and Parcel
+// these are called JS bundlers because they take our raw code and transform it into a JS bundle
+// webpack is the more popular one but it can be difficult and confusing to set up -- a lot of stuff needs to be configured manually by us in order to make it work properly
+// Parcel is a zero-configuration bundler, which works right out of the box
+// we don't have to write any set-up code to use it
+// these development tools are also available on NPM
