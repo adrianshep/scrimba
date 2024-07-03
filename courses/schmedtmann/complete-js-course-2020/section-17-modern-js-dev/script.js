@@ -34,3 +34,10 @@
 // Parcel is a zero-configuration bundler, which works right out of the box
 // we don't have to write any set-up code to use it
 // these development tools are also available on NPM
+// we will use the Parcel JS bundler later in this section, downloading and managing our tools using NPM, just as professional developers do who write JS applications
+
+
+// An Overview of Modules in JS
+
+// a module is a reusable piece of code that encapsulates implementation details
+// not always the case, but a module is usually a standalone file
