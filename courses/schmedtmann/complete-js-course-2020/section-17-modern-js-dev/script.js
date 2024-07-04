@@ -41,3 +41,12 @@
 
 // a module is a reusable piece of code that encapsulates implementation details
 // not always the case, but a module is usually a standalone file
+// in addition to code, a module can also have imports and exports
+// we can export simple values or even entire functions out of a module
+// whatever we export from a module is called the public API
+// this is just like classes, where we can also expose a public API for other codes to consume
+// in the case of modules, this public API is consumed by importing values into a module
+// just as we can export values out of modules, we can aslo import values from other modules
+// these modules are then called dependencies of the importing module, because the code in the importing module cannot work without the code from the external module
+// this logic is true for all modules in all programming languages, not just in JS
+// modules are a pattern developers have been using in all programming languages for decaades
