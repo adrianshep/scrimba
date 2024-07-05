@@ -50,3 +50,8 @@
 // these modules are then called dependencies of the importing module, because the code in the importing module cannot work without the code from the external module
 // this logic is true for all modules in all programming languages, not just in JS
 // modules are a pattern developers have been using in all programming languages for decaades
+// we can write code without modules -- we've been doing that up to this point -- but only because our applications have been very simple
+// as a code base grows bigger and bigger, however, there start to be many advantages to using modules
+// first, modules make it really easy to compose software
+// modules are small building blocks we can put together in order to build complex applications
+// digital camera example: smaller components are assembled to create a complex, highly functioning product
