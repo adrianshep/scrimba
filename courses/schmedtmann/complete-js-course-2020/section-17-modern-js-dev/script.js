@@ -55,3 +55,7 @@
 // first, modules make it really easy to compose software
 // modules are small building blocks we can put together in order to build complex applications
 // digital camera example: smaller components are assembled to create a complex, highly functioning product
+// another benefit of these discrete camera modules is that each of them can be developed in isolation from one another
+// one engineer can be working on the lens and another on the screen and yet another on the controller
+// best thing about this is that each engineer can work on their module without understanding what the other engineers are doing or even how the entire camera finally works itself
+// this makes it really easy to collaborate as a larger team
