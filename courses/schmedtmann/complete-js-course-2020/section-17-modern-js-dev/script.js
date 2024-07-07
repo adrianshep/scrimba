@@ -58,4 +58,8 @@
 // another benefit of these discrete camera modules is that each of them can be developed in isolation from one another
 // one engineer can be working on the lens and another on the screen and yet another on the controller
 // best thing about this is that each engineer can work on their module without understanding what the other engineers are doing or even how the entire camera finally works itself
-// this makes it really easy to collaborate as a larger team
+// this makes it really easy to collaborate with a larger team
+// modules make it very easy to abstract our code
+// we can use modules to implement low level code, then other modules, which don't care about those low level details, can import those abstractions and use them
+// in the camera example, the screen module, for instance, doesn't care about the low level implementation details of the controller module
+// without knowing how it works, the screen module can import the controller and use it to control other parts of the camera -- that's the power of abstraction
