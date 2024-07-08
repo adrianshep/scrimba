@@ -63,3 +63,6 @@
 // we can use modules to implement low level code, then other modules, which don't care about those low level details, can import those abstractions and use them
 // in the camera example, the screen module, for instance, doesn't care about the low level implementation details of the controller module
 // without knowing how it works, the screen module can import the controller and use it to control other parts of the camera -- that's the power of abstraction
+// modules naturally lead to a more organized code base
+// breaking up our code into separate, isolated and obstructed modules will automatically organize our code and make it easier to understand
+// this alone is a huge benefit
