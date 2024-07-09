@@ -66,3 +66,6 @@
 // modules naturally lead to a more organized code base
 // breaking up our code into separate, isolated and obstructed modules will automatically organize our code and make it easier to understand
 // this alone is a huge benefit
+// finally, modules allow us to easily reuse the same code in a project and even across multiple projects
+// for example, if we us the module to implement several mathematical functions in a certain project, and if we then need the same functions in the next project, all we need to do is to copy that model to the new project
+// in the camera example, the manufacturer could now use the exact same lens or the exact same screen in different camera models because they nicely abstracted these components into self-contained reusable modules
