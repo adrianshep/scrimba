@@ -69,3 +69,9 @@
 // finally, modules allow us to easily reuse the same code in a project and even across multiple projects
 // for example, if we us the module to implement several mathematical functions in a certain project, and if we then need the same functions in the next project, all we need to do is to copy that model to the new project
 // in the camera example, the manufacturer could now use the exact same lens or the exact same screen in different camera models because they nicely abstracted these components into self-contained reusable modules
+
+// modules specifically in JS
+// As of ES6, JS has a native, built-in module system
+// we did have modules before ES6, but we had to implement ourselves or use external libraries
+// ES6 modules are modules that are actually stored in files and each file is one module
+// if scripts are usually also files, let's compare these two types of files to understand the huge differences between old school scripts and modern ES6 modules
