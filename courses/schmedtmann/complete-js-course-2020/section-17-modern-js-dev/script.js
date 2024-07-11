@@ -73,5 +73,9 @@
 // modules specifically in JS
 // As of ES6, JS has a native, built-in module system
 // we did have modules before ES6, but we had to implement ourselves or use external libraries
-// ES6 modules are modules that are actually stored in files and each file is one module
+// ES6 modules are modules that are actually stored in files, one module per file
 // if scripts are usually also files, let's compare these two types of files to understand the huge differences between old school scripts and modern ES6 modules
+// first difference, in modules, all top level variables are scoped to the module
+// variables, therefore, are private to the module by default
+// the only way an outside module can access a value that's inside a module is by exporting that value
+// if we don't export, then no one from the outside can see the variable
