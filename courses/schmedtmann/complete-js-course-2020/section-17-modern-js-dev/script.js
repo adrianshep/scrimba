@@ -79,3 +79,6 @@
 // variables, therefore, are private to the module by default
 // the only way an outside module can access a value that's inside a module is by exporting that value
 // if we don't export, then no one from the outside can see the variable
+// in scripts, on the other hand, all top level variables are always global
+// this can lead to problems such as global namespace pollution, where multiple scripts try to declare variables in the same name and then these variables collide
+// private variables are the solution to this problem, which is why ES6 modules have been implemented like this
