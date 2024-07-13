@@ -81,4 +81,6 @@
 // if we don't export, then no one from the outside can see the variable
 // in scripts, on the other hand, all top level variables are always global
 // this can lead to problems such as global namespace pollution, where multiple scripts try to declare variables in the same name and then these variables collide
-// private variables are the solution to this problem, which is why ES6 modules have been implemented like this
+// private variables are the solution to this problem, which is why ES6 modules implemented them this way
+// ES6 are always executed in strict mode; no more need to manually declare strict mode
+// scripts are executed in sloppy mode by default
