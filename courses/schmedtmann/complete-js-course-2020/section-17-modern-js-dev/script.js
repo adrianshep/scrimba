@@ -83,4 +83,6 @@
 // this can lead to problems such as global namespace pollution, where multiple scripts try to declare variables in the same name and then these variables collide
 // private variables are the solution to this problem, which is why ES6 modules implemented them this way
 // ES6 are always executed in strict mode; no more need to manually declare strict mode
-// scripts are executed in sloppy mode by default
+// scripts are executed in "sloppy" mode by default
+// the this kw is always undefined at the top level
+// in scripts, it points at the window object
