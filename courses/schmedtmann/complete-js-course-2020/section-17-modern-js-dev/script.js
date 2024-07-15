@@ -86,3 +86,9 @@
 // scripts are executed in "sloppy" mode by default
 // the this kw is always undefined at the top level
 // in scripts, it points at the window object
+// with modules, we can import and export values between them using the ES6 import and export syntax
+// in regular scripts, importing and exporting values in completely impossible
+// an important note about imports and exports: they can only happen at the top level, outside of any function or any if block
+// also, all imports are hoisted
+// no matter where in the code you're importing values, the imports statement will be moved to the top of the file
+// in practice, importing values is always the first thing that happens in a module
