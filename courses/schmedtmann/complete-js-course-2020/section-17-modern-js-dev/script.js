@@ -92,3 +92,4 @@
 // also, all imports are hoisted
 // no matter where in the code you're importing values, the imports statement will be moved to the top of the file
 // in practice, importing values is always the first thing that happens in a module
+// in order to link a module to an HTML file, we need to use the script tag with the type attribute set to "module" instead of a plain script tag
