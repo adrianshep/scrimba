@@ -93,3 +93,7 @@
 // no matter where in the code you're importing values, the imports statement will be moved to the top of the file
 // in practice, importing values is always the first thing that happens in a module
 // in order to link a module to an HTML file, we need to use the script tag with the type attribute set to "module" instead of a plain script tag
+// modules always download asynchronously
+// this is true for a module loaded from HTML as well as for modules loaded by importing one into another using the import syntax
+// regular scripts download by default in a blocking, synchronous way
+// unless we use the async or defer attributes on the script tag
