@@ -97,3 +97,15 @@
 // this is true for a module loaded from HTML as well as for modules loaded by importing one into another using the import syntax
 // regular scripts download by default in a blocking, synchronous way
 // unless we use the async or defer attributes on the script tag
+
+// Behind the Scenes: How Modules Import Other Modules
+
+// analyze this code example:
+
+// import { rand } from './math.js';
+// import { showDice } from './dom.js';
+// const dice = rand(1, 6, 2);
+// showDice(dice);
+
+// we're importing a value called rand from the math.js module and showDice from the dom.js module
+
