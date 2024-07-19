@@ -108,4 +108,6 @@
 // showDice(dice);
 
 // we're importing a value called rand from the math.js module and showDice from the dom.js module
-
+// when executing code, the first step is to parse it, meaning read it without executing it
+// it's at that moment that imports are hoisted
+// the whole process of importing modules happens before the code in the main module is executed
