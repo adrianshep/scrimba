@@ -111,3 +111,9 @@
 // when executing code, the first step is to parse it, meaning read it without executing it
 // it's at that moment that imports are hoisted
 // the whole process of importing modules happens before the code in the main module is executed
+// in the example, index.js module imports the math and dom modules in a synchronous way
+// that means that only after all the imported modules have been downloaded and executed will the main index.js module be executed
+// this is only possible because of top level imports and exports
+// that's because, if we only import and export values outside of any code that needs to be executed, then the engine can become aware of all the imports and exports during the parsing phase, while the code is still being read and before it begins to be executed
+// if we were allowed to import a module inside of a function, that function would first have to be executed before the import could happen
+// in which case, modules could not be imported in a synchronous way -- the importing module would have to be executed first
