@@ -117,3 +117,7 @@
 // that's because, if we only import and export values outside of any code that needs to be executed, then the engine can become aware of all the imports and exports during the parsing phase, while the code is still being read and before it begins to be executed
 // if we were allowed to import a module inside of a function, that function would first have to be executed before the import could happen
 // in which case, modules could not be imported in a synchronous way -- the importing module would have to be executed first
+// why do we want modules to be loaded in a synchronous way? isn't synchronous bad?
+// synchronously is the easiest way we can do things like bundling and dead code elimination, that is, deleting code that isn't necessary
+// this is very important in large projects with hundreds of modules, and that includes third party modules from which we usuall only want a small piece of code and not the entire contents
+// by knowing all dependencies between modules before execution, bundlers like webpack and Parcel can join multiple modules together and eliminate that code
