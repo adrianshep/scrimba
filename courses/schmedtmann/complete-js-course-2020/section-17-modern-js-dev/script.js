@@ -119,5 +119,18 @@
 // in which case, modules could not be imported in a synchronous way -- the importing module would have to be executed first
 // why do we want modules to be loaded in a synchronous way? isn't synchronous bad?
 // synchronously is the easiest way we can do things like bundling and dead code elimination, that is, deleting code that isn't necessary
-// this is very important in large projects with hundreds of modules, and that includes third party modules from which we usuall only want a small piece of code and not the entire contents
+// this is very important in large projects with hundreds of modules, and that includes third party modules from which we usually only want a small piece of code and not the entire contents
 // by knowing all dependencies between modules before execution, bundlers like webpack and Parcel can join multiple modules together and eliminate that code
+// this is why we can only import and export outside of any code that needs to be executed
+// after the parsing process, HIAS figures out which modules it needs to import
+// these modules are then downloaded from the server
+// and the downloading itself happens in an asynchronous way
+// rand and showDice may download from the math and dom modules at the same time
+// it is only the importing operation itself that happens synchronously
+// after a module arrives, it's also parsed and the module's exports are linked to the imports in index.js
+// for example, the math module exports a function called rand and this export is then connected to the rand import in the index.js module
+// this connection is a life connection
+// exported values are not copied to imports
+// instead, the import is a reference to the exported value
+// when the vaule changes in the exporting module then the same value alos changes in the importing module
+// this is unique to ES6 modules -- other module systems don't work like this, but JS modules do
