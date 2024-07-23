@@ -131,6 +131,8 @@
 // for example, the math module exports a function called rand and this export is then connected to the rand import in the index.js module
 // this connection is a life connection
 // exported values are not copied to imports
-// instead, the import is a reference to the exported value
-// when the vaule changes in the exporting module then the same value alos changes in the importing module
+// instead, the import is a reference to the exported value, like a pointer
+// when the vaule changes in the exporting module then the same value also changes in the importing module
 // this is unique to ES6 modules -- other module systems don't work like this, but JS modules do
+// with this, the process of importing modules is finally finished
+// it's time for the importing module to be finally executed as well; index.js, in this example
