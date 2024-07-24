@@ -136,3 +136,12 @@
 // this is unique to ES6 modules -- other module systems don't work like this, but JS modules do
 // with this, the process of importing modules is finally finished
 // it's time for the importing module to be finally executed as well; index.js, in this example
+
+// Exporting and Importing in ES6 Modules
+
+// start with simplest scenario: import a module without importing any value
+// we start with script.js, but to create a new module have to create a new file
+// we will use shoppingCart.js
+// for module names, the convention is to use camelCase
+
+// Importing module
