@@ -145,3 +145,11 @@
 // for module names, the convention is to use camelCase
 
 // Importing module
+import './shoppingCart.js';
+console.log('Importing module');
+
+// Uncaught SynTax Error: cannot use import statement outside a module
+// why is this happening?
+// remember from the last lecture, when we want to connect a module to the HTML file, we need to specify the type attribute
+// have to add to index.html
+// <script type="module" defer src="script.js"></script>
