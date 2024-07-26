@@ -153,3 +153,14 @@ console.log('Importing module');
 // remember from the last lecture, when we want to connect a module to the HTML file, we need to specify the type attribute
 // have to add to index.html
 // <script type="module" defer src="script.js"></script>
+
+// console log in script.js:
+// Exporting module     shoppingCart.js:2
+// Importing module           script.js:3
+
+// the first log is the exporting module
+// only then is the importing module logged
+// the code in the importing module is parsed and, before it is executed, the modules that it imports are executed first
+// remember that all the importing statements are hoisted to the top of the code
+// in the same vein, when we write code, we put the import statements at the top of it
+// note the lack of use of strict mode here, because all modules are executed in strict mode by default
