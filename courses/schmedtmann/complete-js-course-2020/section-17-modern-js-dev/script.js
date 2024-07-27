@@ -142,11 +142,7 @@
 // start with simplest scenario: import a module without importing any value
 // we start with script.js, but to create a new module have to create a new file
 // we will use shoppingCart.js
-// for module names, the convention is to use camelCase
-
-// Importing module
-import './shoppingCart.js';
-console.log('Importing module');
+// for module names, the convetion is to use camelCase
 
 // Uncaught SynTax Error: cannot use import statement outside a module
 // why is this happening?
@@ -164,3 +160,21 @@ console.log('Importing module');
 // remember that all the importing statements are hoisted to the top of the code
 // in the same vein, when we write code, we put the import statements at the top of it
 // note the lack of use of strict mode here, because all modules are executed in strict mode by default
+// define variables in shopping cart module
+// shipping cost equals 10
+// empty cart (array)
+// variables declared inside of a module, like the two mentioned, are scoped to this module
+// inside a module, the module itself is the top level scope
+// by default, this means that all top level variables are private inside of this variabe
+// unlike traditional scripts, which would put all of these variables in the global scope
+// which is why we cannot do this:
+// console.log(shippingCost);
+// "shippingCost" is not defined
+// shippingCost and cart variables are scoped to the current module; we can only use them here
+
+// Importing module
+import './shoppingCart.js';
+console.log('Importing module');
+
+const shippingCost = 10;
+const cart = [];
