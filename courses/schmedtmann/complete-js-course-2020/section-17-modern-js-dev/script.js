@@ -171,10 +171,11 @@
 // console.log(shippingCost);
 // "shippingCost" is not defined
 // shippingCost and cart variables are scoped to the current module; we can only use them here
+// variables that are declared inside of a module, just like shippingCost and cart are in shoppingCart.js, are scoped to their module
+// inside a module, the module itself is like the top level scope
+// by default, this means that all top level variables are private inside of this variable
+// if we want to use them here, in script.js, we will have to use exports
 
 // Importing module
 import './shoppingCart.js';
 console.log('Importing module');
-
-const shippingCost = 10;
-const cart = [];
