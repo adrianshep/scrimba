@@ -176,6 +176,12 @@
 // by default, this means that all top level variables are private inside of this variable
 // if we want to use them here, in script.js, we will have to use exports
 
+// in ES6, there are two types of exports, named and default
+// named imports are the simplest way of exporting something from a module
+// all we have to do is put "export" in front of anything we may want to export
+// say we want to create a method here "add to cart" and it should be a function that takes a product and the quantity of it
+// then pushes a new object to the cart array
+
 // Importing module
 import './shoppingCart.js';
 console.log('Importing module');
