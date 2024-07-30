@@ -181,7 +181,10 @@
 // all we have to do is put "export" in front of anything we may want to export
 // say we want to create a method here "add to cart" and it should be a function that takes a product and the quantity of it
 // then pushes a new object to the cart array
+// this variable is private inside its module, but if we want to export it so that we may import it into another module, all we have to do is write export before it
+// this creates a named export from this module
+// now we can import that variable here, we just have to write it with the exact same name in curly braces
 
 // Importing module
-import './shoppingCart.js';
+import { addToCart } from "./shoppingCart"; './shoppingCart.js';
 console.log('Importing module');
