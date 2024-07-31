@@ -183,8 +183,14 @@
 // then pushes a new object to the cart array
 // this variable is private inside its module, but if we want to export it so that we may import it into another module, all we have to do is write export before it
 // this creates a named export from this module
-// now we can import that variable here, we just have to write it with the exact same name in curly braces
+/ now we can import that variable here, we just have to write it with the exact, same name in curly braces
+// now we are able to call this function as if it was defined in this same scope
+// we add 5 breads to the shopping cart
+// console logs "5 bread added to cart" -- it works
 
 // Importing module
 import { addToCart } from "./shoppingCart"; './shoppingCart.js';
 console.log('Importing module');
+// console.log(shippingCost);
+
+addToCart('bread', 5);
