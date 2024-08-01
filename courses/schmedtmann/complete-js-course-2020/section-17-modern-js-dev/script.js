@@ -187,6 +187,9 @@
 // now we are able to call this function as if it was defined in this same scope
 // we add 5 breads to the shopping cart
 // console logs "5 bread added to cart" -- it works
+// that log is coming from the addToCart function that is defined in the shoppingCart module
+// exports always need to happen in the top level code -- it wouldn't work if you put an if statement, for example, before export const addToCart
+// you would get an unexpected token export
 
 // Importing module
 import { addToCart } from "./shoppingCart"; './shoppingCart.js';
