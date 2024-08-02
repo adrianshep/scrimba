@@ -190,6 +190,11 @@
 // that log is coming from the addToCart function that is defined in the shoppingCart module
 // exports always need to happen in the top level code -- it wouldn't work if you put an if statement, for example, before export const addToCart
 // you would get an unexpected token export
+// can export multiple things from a module using named exports
+// that is the main use case of named exports, exporting multiple things
+// declare variables in shoppingCart, totalPrice and totalQuantity
+// add those variable names to export's curly braces
+// and import the variables here using the same names, in this case using console log
 
 // Importing module
 import { addToCart } from "./shoppingCart"; './shoppingCart.js';
@@ -197,3 +202,4 @@ console.log('Importing module');
 // console.log(shippingCost);
 
 addToCart('bread', 5);
+console.log(totalPrice, totalQuantity);
