@@ -195,11 +195,17 @@
 // declare variables in shoppingCart, totalPrice and totalQuantity
 // add those variable names to export's curly braces
 // and import the variables here using the same names, in this case using console log
+// now we can get access to these values in this main importing module
+// we can change the name of the inputs as well in this importing module
+// rename totalPrice, for example, to price
 
 // Importing module
-import { addToCart } from "./shoppingCart"; './shoppingCart.js';
+import { addToCart, totalPrice, totalQuantity }
+// import { addToCart, price, totalQuantity } 
+from "./shoppingCart"; './shoppingCart.js';
 console.log('Importing module');
 // console.log(shippingCost);
 
 addToCart('bread', 5);
 console.log(totalPrice, totalQuantity);
+// console.log(price, totalQuantity);
