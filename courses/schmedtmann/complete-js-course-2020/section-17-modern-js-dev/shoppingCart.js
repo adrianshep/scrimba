@@ -13,3 +13,4 @@ const totalPrice = 237;
 const totalQuantity = 23;
 
 export { totalPrice, totalQuantity };
+// export { totalPrice, totalQuantity as tq };
