@@ -198,6 +198,9 @@
 // now we can get access to these values in this main importing module
 // we can change the name of the inputs as well in this importing module
 // rename totalPrice, for example, to price
+// we can also do that in exports
+// in shoppingCart we could write "totalQuantity as tq"
+// in script, we then would write tq in place of totalQuantity
 
 // Importing module
 import { addToCart, totalPrice, totalQuantity }
@@ -209,3 +212,4 @@ console.log('Importing module');
 addToCart('bread', 5);
 console.log(totalPrice, totalQuantity);
 // console.log(price, totalQuantity);
+// console.log(price, tq);
