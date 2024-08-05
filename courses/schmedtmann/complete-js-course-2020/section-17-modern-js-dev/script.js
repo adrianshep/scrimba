@@ -201,15 +201,22 @@
 // we can also do that in exports
 // in shoppingCart we could write "totalQuantity as tq"
 // in script, we then would write tq in place of totalQuantity
+// we can take importing even further, importing all the exports of a module at the same time
+// "import" and * (which means everything)
+// and we give a name, Shopping Cart, with a capital S, a bit like a class name
+// that's the convention when we import everything into an object like this
+// this will create a namespace for all of the values exported from that module
+// make sure the .js is in place as VS Code removes it by default
 
 // Importing module
-import { addToCart, totalPrice, totalQuantity }
+// import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // import { addToCart, price, totalQuantity } 
-from "./shoppingCart"; './shoppingCart.js';
+// addToCart('bread', 5);
+// console.log(totalPrice, totalQuantity);
+// console.log(price, totalQuantity);
+// console.log(price, tq);
+
 console.log('Importing module');
 // console.log(shippingCost);
 
-addToCart('bread', 5);
-console.log(totalPrice, totalQuantity);
-// console.log(price, totalQuantity);
-// console.log(price, tq);
+import * as ShoppingCart from './shoppingCart.js';
