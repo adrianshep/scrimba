@@ -207,6 +207,11 @@
 // that's the convention when we import everything into an object like this
 // this will create a namespace for all of the values exported from that module
 // make sure the .js is in place as VS Code removes it by default
+// whenever we want to use something that was exported like the addToCart function, we take it from this object
+// we use Shopping Cart with addToCart to add five breads
+// this module is now exporting a public API, just like a class
+// it's as if this object was created from a class and now has these methods and properties, like ShoppingCart.totalPrice
+// so that's the other named export from this module
 
 // Importing module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
@@ -220,3 +225,5 @@ console.log('Importing module');
 // console.log(shippingCost);
 
 import * as ShoppingCart from './shoppingCart.js';
+ShoppingCart.addToCart('bread', 5);
+console.log(ShoppingCart.totalPrice);
