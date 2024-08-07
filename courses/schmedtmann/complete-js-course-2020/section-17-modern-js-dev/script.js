@@ -211,7 +211,9 @@
 // we use Shopping Cart with addToCart to add five breads
 // this module is now exporting a public API, just like a class
 // it's as if this object was created from a class and now has these methods and properties, like ShoppingCart.totalPrice
-// so that's the other named export from this module
+// which is another named export from this module
+// we are not trying to replace classes with modules, merely point out the similarities
+// we can say that module exports constitute a kind of a public API because everything else stays private inside of the modules
 
 // Importing module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
