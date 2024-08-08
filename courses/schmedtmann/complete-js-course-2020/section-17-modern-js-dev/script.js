@@ -177,13 +177,14 @@
 // if we want to use them here, in script.js, we will have to use exports
 
 // in ES6, there are two types of exports, named and default
-// named imports are the simplest way of exporting something from a module
+
+// Named Imports are the simplest way of exporting something from a module
 // all we have to do is put "export" in front of anything we may want to export
 // say we want to create a method here "add to cart" and it should be a function that takes a product and the quantity of it
 // then pushes a new object to the cart array
 // this variable is private inside its module, but if we want to export it so that we may import it into another module, all we have to do is write export before it
 // this creates a named export from this module
-/ now we can import that variable here, we just have to write it with the exact, same name in curly braces
+// now we can import that variable here, we just have to write it with the exact, same name in curly braces
 // now we are able to call this function as if it was defined in this same scope
 // we add 5 breads to the shopping cart
 // console logs "5 bread added to cart" -- it works
@@ -196,7 +197,7 @@
 // add those variable names to export's curly braces
 // and import the variables here using the same names, in this case using console log
 // now we can get access to these values in this main importing module
-// we can change the name of the inputs as well in this importing module
+// we can change the name of the imports as well in this importing module
 // rename totalPrice, for example, to price
 // we can also do that in exports
 // in shoppingCart we could write "totalQuantity as tq"
@@ -229,3 +230,12 @@ console.log('Importing module');
 import * as ShoppingCart from './shoppingCart.js';
 ShoppingCart.addToCart('bread', 5);
 console.log(ShoppingCart.totalPrice);
+
+// Default Exports
+// we use default exports when we only want to export on thing per module
+// as per shoppingCart.js, there is no name involved at all
+// we are simply exporting this value
+// we will then import the default export, no matter what it's called and it's not called anything
+// (usually not advisable to import the same module twice)
+
+import add from './shoppingCart.js'
