@@ -14,3 +14,8 @@ const totalQuantity = 23;
 
 export { totalPrice, totalQuantity };
 // export { totalPrice, totalQuantity as tq };
+
+export default function (product, quantity) {
+    createImageBitmap.push( { product, quantity } );
+    console.log(`${quantity} ${product} added to cart`);
+}
