@@ -236,6 +236,14 @@ console.log(ShoppingCart.totalPrice);
 // as per shoppingCart.js, there is no name involved at all
 // we are simply exporting this value
 // we will then import the default export, no matter what it's called and it's not called anything
+// we can give it any name here that we want
 // (usually not advisable to import the same module twice)
+// let's add two pizzas
+// and, if we want, we can have default and named exports all at the same time
+// however, in practice, we usually never mix named and default exports in the same module -- it isn't desirable and helps reduce complexity
+// the preferred style is to just one default export per module and then import as we did originally
 
 import add from './shoppingCart.js'
+// import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+add('pizza', 2);
+console.log(price);
