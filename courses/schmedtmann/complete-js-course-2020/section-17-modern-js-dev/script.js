@@ -242,6 +242,8 @@ console.log(ShoppingCart.totalPrice);
 // and, if we want, we can have default and named exports all at the same time
 // however, in practice, we usually never mix named and default exports in the same module -- it isn't desirable and helps reduce complexity
 // the preferred style is to just one default export per module and then import as we did originally
+// that's the reason why it's easier to import a default export
+// here we don't even need to use the curly braces -- the designers intended that
 
 import add from './shoppingCart.js'
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
