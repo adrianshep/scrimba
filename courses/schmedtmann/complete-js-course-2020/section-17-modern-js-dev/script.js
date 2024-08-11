@@ -244,8 +244,18 @@ console.log(ShoppingCart.totalPrice);
 // the preferred style is to just one default export per module and then import as we did originally
 // that's the reason why it's easier to import a default export
 // here we don't even need to use the curly braces -- the designers intended that
+// proof that imports have a live connection to exports
+// start by exporting cart array from shoppingCart.js
+// we are exporting cart as an empty array, but watch what happens when we add a few more items in script
+// to make this work, we need to mix a default and named export
+// when we log the cart, we do not see that empty object that we exported; rather, we have this array with the items we just added to the cart using the add function
+// import, therefore, is not simply a copy of the value we exported here
 
-import add from './shoppingCart.js'
+import add, { cart } from './shoppingCart.js';
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+// console.log(price);
 add('pizza', 2);
-console.log(price);
+add('bread', 5);
+add('apples', 4);
+
+console.log(cart);
