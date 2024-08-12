@@ -250,6 +250,10 @@ console.log(ShoppingCart.totalPrice);
 // to make this work, we need to mix a default and named export
 // when we log the cart, we do not see that empty object that we exported; rather, we have this array with the items we just added to the cart using the add function
 // import, therefore, is not simply a copy of the value we exported here
+// as we call this function that we exported from the other module, we keep pushing objects to that array
+// so we are mutating that array here, in this import odule, and can see that in the console
+// therefore, it is the same cart object behind the scenes with a live connection to both modules, not a copy, in which case we could not get anything into that array
+// which means both modules point to the same place in memory
 
 import add, { cart } from './shoppingCart.js';
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
