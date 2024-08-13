@@ -263,3 +263,13 @@ add('bread', 5);
 add('apples', 4);
 
 console.log(cart);
+
+
+// Top-Level Await (ES2022)
+
+// briefly return to asynchronous JS as there's been an important cahnge in ES2022
+// we can now use the await kw outside of async functions in modules
+// we call this top-level await
+// this only works in modules; will fail in a normal script
+// near top of index.html file, we have our type set to "module":
+// <script type="module" defer src="script.js"></script>
