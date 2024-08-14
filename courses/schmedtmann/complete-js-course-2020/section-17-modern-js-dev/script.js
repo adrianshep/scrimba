@@ -273,3 +273,10 @@ console.log(cart);
 // this only works in modules; will fail in a normal script
 // near top of index.html file, we have our type set to "module":
 // <script type="module" defer src="script.js"></script>
+// this is required to make top-level await work
+// to demonstrate top-level await, let's do a simple fetch request
+// a fetch function is what we do to an HTTP or AJAX request
+// use an API with fake data called JSONPlaceholder
+// at the URL, we can get fake data about posts, comments, albums, etc.
+
+fetch('https://jsonplaceholder.typicode.com/posts');
