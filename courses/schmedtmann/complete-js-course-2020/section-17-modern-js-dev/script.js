@@ -278,5 +278,10 @@ console.log(cart);
 // a fetch function is what we do to an HTTP or AJAX request
 // use an API with fake data called JSONPlaceholder
 // at the URL, we can get fake data about posts, comments, albums, etc.
+// await the result and then save it into a variable
+// remember that we need another await to parse the data as JSON
+// then we can log the data to the console
 
-fetch('https://jsonplaceholder.typicode.com/posts');
+const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+const data = await res.json();
+console.log(data);
