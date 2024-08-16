@@ -281,6 +281,11 @@ console.log(cart);
 // await the result and then save it into a variable
 // remember that we need another await to parse the data as JSON
 // then we can log the data to the console
+// log reveals an array of 100 posts where each of them is an object
+// we see that the await kw is working outside of an async function
+// before, we would have to write async function something and then the function body
+// async function x() {}
+// with top-level await in modules, that is no longer necessary
 
 const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 const data = await res.json();
