@@ -286,6 +286,13 @@ console.log(cart);
 // before, we would have to write async function something and then the function body
 // async function x() {}
 // with top-level await in modules, that is no longer necessary
+// while this is very useful, it's importnat to understand that this blocks the execution of the entire module now
+// sometimes, this is not what we want
+// demonstration by logging 'Something' afterwards and making the request a bit slower by clicking on throttling and using 3G in the network tab
+// you can see it starts fetching, doing the work, and only after that logging 'Something' to the console
+// so the await kw, now outside of an async function, is blocking the execution of this entire module, which we had never seen before
+// although useful in some situations, many times can also be harmful, especially running a really long taks
+// use this new superpower with great caution
 
 const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 const data = await res.json();
