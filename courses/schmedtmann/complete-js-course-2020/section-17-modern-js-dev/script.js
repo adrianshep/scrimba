@@ -294,6 +294,17 @@ console.log(cart);
 // although useful in some situations, many times can also be harmful, especially running a really long taks
 // use this new superpower with great caution
 
-const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-const data = await res.json();
-console.log(data);
+// above illustrates how top-level await works but it's a bit too simple
+// to get a bit more real, many times we have an async function that we want to return some data
+// let's create a function called getLastPost -- will do the fetch request and only return the very last post
+
+// const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// const data = await res.json();
+// console.log(data);
+
+const getLastPost = async function() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await res.json();
+}
+
+getLastPost();
