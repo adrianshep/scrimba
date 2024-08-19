@@ -297,6 +297,10 @@ console.log(cart);
 // above illustrates how top-level await works but it's a bit too simple
 // to get a bit more real, many times we have an async function that we want to return some data
 // let's create a function called getLastPost -- will do the fetch request and only return the very last post
+// make sure to remove 3G throttling from network tab
+// network speed is pretty fast now
+// now we want to return an object from this function which contains the title and the body
+// to return a new object with the title and body of "data" where each is the last element in the array, we use the new ES2022 at method
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
@@ -305,6 +309,9 @@ console.log(cart);
 const getLastPost = async function() {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
-}
+    console.log(data);
+
+    return { title: data.at(-1).title, text: data.at(-1).body };
+};
 
 getLastPost();
