@@ -301,6 +301,11 @@ console.log(cart);
 // network speed is pretty fast now
 // now we want to return an object from this function which contains the title and the body
 // to return a new object with the title and body of "data" where each is the last element in the array, we use the new ES2022 at method
+// let's try to save that returned value in a variable called lastPost
+// if you remember the previous section, you will remember that this won't work
+// if you log lastPost, you'll see that it's actually a promise, not the object we were expecting
+// calling an async function, which the function here clearly is, will always return a promise, not the actual data itself
+// because at the time we are running this line of code, the data has not yet arrived, there is only that pending promise
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
@@ -314,4 +319,4 @@ const getLastPost = async function() {
     return { title: data.at(-1).title, text: data.at(-1).body };
 };
 
-getLastPost();
+const lastPost = getLastPost();
