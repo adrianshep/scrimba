@@ -306,8 +306,11 @@ console.log(cart);
 // if you log lastPost, you'll see that it's actually a promise, not the object we were expecting
 // calling an async function, which the function here clearly is, will always return a promise, not the actual data itself
 // because at the time we are running this line of code, the data has not yet arrived, there is only that pending promise
-// workaround to get the data object insead of the promise is to use a regular promise
-// now we when we log we get the boject with the title and the text
+// workaround to get the data object instead of the promise is to use a regular promise
+// now when we log we get the object with the title and the text
+// however, this isn't very clean, so we can use top-level for this instead
+// lastPost2 will be the result of awaiting getLastPost function
+// this is were top-level await can get quite useful
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
@@ -324,4 +327,8 @@ const getLastPost = async function() {
 // const lastPost = getLastPost();
 // console.log(getLastPost);
 
-getLastPost.then(last => console.log(last));
+// not very clean
+// getLastPost.then(last => console.log(last));
+
+const lastPost2 = await getLastPost;
+console.log(lastPost2);
