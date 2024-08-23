@@ -310,7 +310,9 @@ console.log(cart);
 // now when we log we get the object with the title and the text
 // however, this isn't very clean, so we can use top-level for this instead
 // lastPost2 will be the result of awaiting getLastPost function
-// this is were top-level await can get quite useful
+// this is where top-level await can get quite useful
+// there is an important implication of using top-level await:
+// if one module imports a module that has a top-level await, then the importing module will wait for the imported module to finish the blocking code
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
