@@ -313,6 +313,9 @@ console.log(cart);
 // this is where top-level await can get quite useful
 // there is an important implication of using top-level await:
 // if one module imports a module that has a top-level await, then the importing module will wait for the imported module to finish the blocking code
+// this sounds more complicated than it actually is
+// as an example, let's add some blocking code to the exported shoppingCart module
+// once again, to see the effect, we should throttle down the request to a slow 3G
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
