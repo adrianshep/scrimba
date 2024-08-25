@@ -316,6 +316,15 @@ console.log(cart);
 // this sounds more complicated than it actually is
 // as an example, let's add some blocking code to the exported shoppingCart module
 // once again, to see the effect, we should throttle down the request to a slow 3G
+// in the log, we see the order of events:
+// the shopping cart is imported
+// we start immediately fetching users
+// only after the fetch is completed do we get the second logging to the console
+// only after that is the code in the importing module, script.js, executed
+// we can see that the code in script.js has to wait for the code in shoppigCart.js to finish
+// the top-level await we have here is not only blocking execution in the exporting module, it's also blocking in the importing module
+// using top-level await, so await outside of any async function, will block the entire moduel in a way we really couldn't block code execution before
+// therefore, top-level await is a helpful tool but also one that needs to be used with great care
 
 // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 // const data = await res.json();
