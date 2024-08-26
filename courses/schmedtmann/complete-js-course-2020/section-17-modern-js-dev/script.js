@@ -346,3 +346,14 @@ const getLastPost = async function() {
 
 const lastPost2 = await getLastPost;
 console.log(lastPost2);
+
+
+// The Module Pattern
+
+// the pattern we used to use to implement modules in JS
+// you will still see it around and it's a good application of many things we've been learning
+// the purpose of the module pattern is to:
+// encapsulate functionality
+// have private data
+// expose a public API
+// the best way to achieve all that is by using a function, because they give us private data by default and allow us to return values which can become a public API
