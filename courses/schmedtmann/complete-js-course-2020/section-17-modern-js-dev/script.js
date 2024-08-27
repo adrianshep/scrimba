@@ -365,5 +365,8 @@ console.log(lastPost2);
 // its only purpose is to create a new scope and return data just once
 
 (function() {
-
+    const cart = [];
+    const shippingCost = 10;
+    const totalPrice = 237;
+    const totalQuantity = 23;
 }());
