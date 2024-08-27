@@ -357,3 +357,13 @@ console.log(lastPost2);
 // have private data
 // expose a public API
 // the best way to achieve all that is by using a function, because they give us private data by default and allow us to return values which can become a public API
+// how the module pattern is implemented:
+// start by writing a function, usually an IIFE, an immediately invoked function expression
+// because we don't have to call it separately
+// and we can also ensure that it's only called once
+// it's very importnat that the function is only created once because the goal is to not reause code by running it multiple times
+// its only purpose is to create a new scope and return data just once
+
+(function() {
+
+}());
