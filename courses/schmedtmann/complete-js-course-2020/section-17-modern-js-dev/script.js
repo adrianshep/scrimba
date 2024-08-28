@@ -363,10 +363,17 @@ console.log(lastPost2);
 // and we can also ensure that it's only called once
 // it's very importnat that the function is only created once because the goal is to not reause code by running it multiple times
 // its only purpose is to create a new scope and return data just once
+// add variables
+// can use addToCart from shoppingCart.js with the export, of course
 
 (function() {
     const cart = [];
     const shippingCost = 10;
     const totalPrice = 237;
     const totalQuantity = 23;
+
+    const addToCart = function (product, quantity) {
+        cart.push( {product, quantity} );
+        console.log(`${quantity} ${product} added to cart`);
+    };
 }());
