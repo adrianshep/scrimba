@@ -361,10 +361,15 @@ console.log(lastPost2);
 // start by writing a function, usually an IIFE, an immediately invoked function expression
 // because we don't have to call it separately
 // and we can also ensure that it's only called once
-// it's very importnat that the function is only created once because the goal is to not reause code by running it multiple times
+// it's very important that the function is only created once because the goal is to not reuse code by running it multiple times
 // its only purpose is to create a new scope and return data just once
 // add variables
-// can use addToCart from shoppingCart.js with the export, of course
+// can use addToCart from shoppingCart.js without the export, of course
+// rename to orderStock
+// add console log 'ordered from supplier'
+// all of this data is private because it is inside the scope of the function
+// all we have to do is return some of these in order to return a public API
+// to do that, we return an object which contains things we want to make public here
 
 (function() {
     const cart = [];
@@ -372,8 +377,15 @@ console.log(lastPost2);
     const totalPrice = 237;
     const totalQuantity = 23;
 
-    const addToCart = function (product, quantity) {
+    const orderStock = function (product, quantity) {
         cart.push( {product, quantity} );
-        console.log(`${quantity} ${product} added to cart`);
+        console.log(`${quantity} ${product} ordered from supplier`);
+
+        return {
+            addToCart,
+            cart,
+            totalPrice,
+            totalQuantity,
+        };
     };
 }());
