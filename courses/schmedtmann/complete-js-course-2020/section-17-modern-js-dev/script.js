@@ -370,6 +370,8 @@ console.log(lastPost2);
 // all of this data is private because it is inside the scope of the function
 // all we have to do is return some of these in order to return a public API
 // to do that, we return an object which contains things we want to make public here
+// we want to add to the public API the addToCart function and also the cart array and total price and quantity
+// we could have also defined all of these here, right in the object, as properties and methods, but it's a little bit cleaner to define everything outside of it and then to create an object containing everything we want to expose to the public
 
 (function() {
     const cart = [];
