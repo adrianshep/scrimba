@@ -372,8 +372,11 @@ console.log(lastPost2);
 // to do that, we return an object which contains things we want to make public here
 // we want to add to the public API the addToCart function and also the cart array and total price and quantity
 // we could have also defined all of these here, right in the object, as properties and methods, but it's a little bit cleaner to define everything outside of it and then to create an object containing everything we want to expose to the public
+// however, we are not storing this returned object anywhere
+// if we run this right now, then this object disappears into nothing
+// we fix that by assigning the result of running this IIFE to a new variable
 
-(function() {
+const ShoppingCart2 = (function() {
     const cart = [];
     const shippingCost = 10;
     const totalPrice = 237;
@@ -389,5 +392,4 @@ console.log(lastPost2);
             totalPrice,
             totalQuantity,
         };
-    };
 }());
