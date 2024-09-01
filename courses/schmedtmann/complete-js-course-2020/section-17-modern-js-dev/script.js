@@ -375,6 +375,8 @@ console.log(lastPost2);
 // however, we are not storing this returned object anywhere
 // if we run this right now, then this object disappears into nothing
 // we fix that by assigning the result of running this IIFE to a new variable
+// we call this as before as ShoppingCart2 adding four apples and two pizzas to the cart and it works
+// as the console is the global scope, we can't see anything as we are still inside of a module and everything in it is private to it
 
 const ShoppingCart2 = (function() {
     const cart = [];
@@ -392,4 +394,8 @@ const ShoppingCart2 = (function() {
             totalPrice,
             totalQuantity,
         };
+    };
 }());
+
+ShoppingCart2.addToCart('apple', 4);
+ShoppingCart2.addToCart('pizza', 2);
