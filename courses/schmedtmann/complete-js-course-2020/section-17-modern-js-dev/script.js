@@ -377,6 +377,13 @@ console.log(lastPost2);
 // we fix that by assigning the result of running this IIFE to a new variable
 // we call this as before as ShoppingCart2 adding four apples and two pizzas to the cart and it works
 // as the console is the global scope, we can't see anything as we are still inside of a module and everything in it is private to it
+// so how does all this work?
+// how are we able, for example, to have access to the cart variable and even manipulate it, eve if the IIFE retunred a long time ago?
+// we executed that function only once in the beginning and then returned this object and assigned it to this variable
+// the answer is closures
+// closures allow a function to have access to all the variables that were present at its birth
+// the cart function never loses connection to its birthplace, which all of that functions scope and it contains the cart
+// so the addToCart function can still access that cart variable
 
 const ShoppingCart2 = (function() {
     const cart = [];
