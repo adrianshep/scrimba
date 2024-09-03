@@ -384,6 +384,10 @@ console.log(lastPost2);
 // closures allow a function to have access to all the variables that were present at its birth
 // the cart function never loses connection to its birthplace, which all of that functions scope and it contains the cart
 // so the addToCart function can still access that cart variable
+// the reason this works is NOT because the cart variable is in this object, because we're not even using this.cart
+// it works because the birthplace of the function contains cart
+// if we add shippingCost to the function, it no longer exists elsewhere but was present in the function's birthplace, so it works
+
 
 const ShoppingCart2 = (function() {
     const cart = [];
@@ -393,7 +397,7 @@ const ShoppingCart2 = (function() {
 
     const orderStock = function (product, quantity) {
         cart.push( {product, quantity} );
-        console.log(`${quantity} ${product} ordered from supplier`);
+        console.log(`${quantity} ${product} ordered from supplier, shipping cost is ${shippingCost}`);
 
         return {
             addToCart,
