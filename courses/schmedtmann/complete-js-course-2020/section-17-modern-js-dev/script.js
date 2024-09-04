@@ -387,7 +387,12 @@ console.log(lastPost2);
 // the reason this works is NOT because the cart variable is in this object, because we're not even using this.cart
 // it works because the birthplace of the function contains cart
 // if we add shippingCost to the function, it no longer exists elsewhere but was present in the function's birthplace, so it works
-
+// this is how the module pattern works well, and has been for a long time for developers, long before ES6 modules existed in JS
+// the problem is that if we want one module per file, like we have with ES6 modules, we would have to create different scrips and link all of them in the HTML file
+// and that then creates a few more problems -- we have to be careful with the order in which we declare them in HTML
+// and we would have all of the variables in a global scope
+// and, finally, we couldn't bunde them together using a module bundler, and using a module bundler in very important in JS
+// so the module pattern works quite well but has some limitations and that's why native modules were added to JS in ES6
 
 const ShoppingCart2 = (function() {
     const cart = [];
