@@ -415,3 +415,11 @@ const ShoppingCart2 = (function() {
 
 ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
+
+
+// CommonJS Modules
+
+// besides native ES modules, there are other module systems that have been used by JS in the past
+// they weren't native JS so relied on external implementations
+// two examples are: AMD modules and CommonJS modules
+// CommonJS modules are worth taking a look at
