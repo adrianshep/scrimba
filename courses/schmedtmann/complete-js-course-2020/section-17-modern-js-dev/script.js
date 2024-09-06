@@ -423,3 +423,11 @@ ShoppingCart2.addToCart('pizza', 2);
 // they weren't native JS so relied on external implementations
 // two examples are: AMD modules and CommonJS modules
 // CommonJS modules are worth taking a look at
+// they're important to us because they have been used in Node.js for nearly its entire existence
+// only very recently have ES modules been implemented in Node.js
+// remembert, Node.js is a way of running JS on a web server outside of a browser
+// the big consequence of this is that almost all the modules in the npm repository in the beginning of this section, all these modules that we can use in our own code, still use the CommonJS module system
+// the reason is that npm was originally only inteded for node which uses CommonJS
+// only later did npm become the standard repository for the whole JS world
+// so now we are stuck with CommonJS
+// and therefore there is a lot of CommonJS still around
