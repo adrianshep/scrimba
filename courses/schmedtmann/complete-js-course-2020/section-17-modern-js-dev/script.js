@@ -431,3 +431,15 @@ ShoppingCart2.addToCart('pizza', 2);
 // only later did npm become the standard repository for the whole JS world
 // so now we are stuck with CommonJS
 // and therefore there is a lot of CommonJS still around
+
+// let's see what this looks like: we'll pretend we want to export something from this module
+// just like ES6 modules, in CommonJS, one file is one module
+// and we exports something from a module using export dot and then the name of the export
+// here we'll say addToCart, and then whatever we want to export after
+// this is not going to work in the browser, but it would work in Node.js
+// the export ks is an important object in Node.js
+
+export.addToCart = function (product, quantity) {
+    cart.push( {product, quantity} );
+    console.log(`${quantity} ${product} ordered from supplier, shipping cost is ${shippingCost}`);
+};
