@@ -437,9 +437,15 @@ ShoppingCart2.addToCart('pizza', 2);
 // and we exports something from a module using export dot and then the name of the export
 // here we'll say addToCart, and then whatever we want to export after
 // this is not going to work in the browser, but it would work in Node.js
-// the export ks is an important object in Node.js
+// the export kw is an important object in Node.js
+// if we want to import something, it would be pretty similar to ES modules
+// although from here we will call a require function that isn't defined in our browser environment but is in Node.js as part of the CommonJS specification
 
+// Export
 export.addToCart = function (product, quantity) {
     cart.push( {product, quantity} );
     console.log(`${quantity} ${product} ordered from supplier, shipping cost is ${shippingCost}`);
 };
+
+// Import
+const { addToCart } = require('./shoppingCart.js');
