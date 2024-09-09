@@ -440,6 +440,9 @@ ShoppingCart2.addToCart('pizza', 2);
 // the export kw is an important object in Node.js
 // if we want to import something, it would be pretty similar to ES modules
 // although from here we will call a require function that isn't defined in our browser environment but is in Node.js as part of the CommonJS specification
+// in summation, there are different module systems in the word of JS and Common JS is particularly important among them
+// in the long run, ES6 modules will probably replace of these different module systems
+// but it may be a long while before we get there
 
 // Export
 export.addToCart = function (product, quantity) {
