@@ -452,3 +452,12 @@ export.addToCart = function (product, quantity) {
 
 // Import
 const { addToCart } = require('./shoppingCart.js');
+
+
+// A Brief Introduction to the Command Line
+
+// before we can use a tool like Parcel.js, we need to first learn a bit about the command line
+// all the build tools available on npm only work in the command line
+// the foundation of the command line: moving around in the file system, creating files and folders, copying files, etc.
+// important as a web developer that you know how to do these basic things using a terminal or a command prompt
+// no serious web developer can ilve without the command line -- it's part of the job
