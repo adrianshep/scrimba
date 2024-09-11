@@ -460,4 +460,9 @@ const { addToCart } = require('./shoppingCart.js');
 // all the build tools available on npm only work in the command line
 // the foundation of the command line: moving around in the file system, creating files and folders, copying files, etc.
 // important as a web developer that you know how to do these basic things using a terminal or a command prompt
-// no serious web developer can ilve without the command line -- it's part of the job
+// no serious web developer can live without the command line -- it's part of the job
+// on Mac, open up Terminal
+// on Windows, right click on Start button and select the Command Prompt -- what the terminal is called on Windows
+// if you're on Linux, you likely already know ow to use the terminal and do all this stuff
+// many times as a web developer you will use a separate window like the terminal, but since we're in VS Code already and it has an integrated terminal, we will use that
+// on Windows, it probably won't say bash the way it will on Unix-based systems like Mac or Linux, because the command line works a little bit differently
