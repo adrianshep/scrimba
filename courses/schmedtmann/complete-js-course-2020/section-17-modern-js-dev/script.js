@@ -466,3 +466,7 @@ const { addToCart } = require('./shoppingCart.js');
 // if you're on Linux, you likely already know ow to use the terminal and do all this stuff
 // many times as a web developer you will use a separate window like the terminal, but since we're in VS Code already and it has an integrated terminal, we will use that
 // on Windows, it probably won't say bash the way it will on Unix-based systems like Mac or Linux, because the command line works a little bit differently
+// most commands, however, are the same across these versions
+// with any command line, you are always in a folder
+// the beauty of VS Code is that, when you open a terminal, you are always in the project folder itself
+// from that location in the file system, you can move up and down using commands
