@@ -470,3 +470,27 @@ const { addToCart } = require('./shoppingCart.js');
 // with any command line, you are always in a folder
 // the beauty of VS Code is that, when you open a terminal, you are always in the project folder itself
 // from that location in the file system, you can move up and down using commands
+// first command:
+// ls (in Mac/Unix-based systems; dir in Windows, which stands for "directory")
+// this will then show you the contents of the current folder
+// next command:
+// cd - means change directory
+// with it, we can up and down the file tree
+// to go up the tree:
+// cd ..
+// shows folders and files in the next file up
+// to go into one of those folders or files:
+// cd section-17 (follow cd with partial folder or file name) then hit tab
+// VS Code will auto-complete the name of the folder or file you want
+// then ls
+// which shows all the folders and files in the current folder
+// clean.js index.html script.js shoppingCart.js
+
+/*
+in terminal:
+
+~/courses/schmedtmann/complete-js-course-2020 (master *) 
+$ ls
+$ cd
+$ cd ..
+*/
