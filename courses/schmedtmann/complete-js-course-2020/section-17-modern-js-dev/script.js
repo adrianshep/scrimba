@@ -485,6 +485,11 @@ const { addToCart } = require('./shoppingCart.js');
 // then ls
 // which shows all the folders and files in the current folder
 // clean.js index.html script.js shoppingCart.js
+// to move up not one but two levels:
+// cd ../..
+// to clear the console so that everything disappears except for the prompt:
+// clear
+// or hit the command key
 
 /*
 in terminal:
@@ -493,4 +498,6 @@ in terminal:
 $ ls
 $ cd
 $ cd ..
+$ cd ../..
+$ clear
 */
