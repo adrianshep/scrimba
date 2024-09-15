@@ -490,6 +490,14 @@ const { addToCart } = require('./shoppingCart.js');
 // to clear the console so that everything disappears except for the prompt:
 // clear
 // or hit the command key
+// to create a folder:
+// mkdir foldername
+// using ls command, you can then see the folder and also see it in the file system
+// to create a file:
+// touch (on Mac) or edit (on Windows)
+// touch filename
+// the files are empty when they're created
+// see them with ls command
 
 /*
 in terminal:
@@ -500,4 +508,7 @@ $ cd
 $ cd ..
 $ cd ../..
 $ clear
+$ mkdir TEST
+$ touch index.html
+$ touch script.js
 */
