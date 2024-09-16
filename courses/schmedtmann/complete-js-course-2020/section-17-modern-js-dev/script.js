@@ -498,6 +498,13 @@ const { addToCart } = require('./shoppingCart.js');
 // touch filename
 // the files are empty when they're created
 // see them with ls command
+// to open live server:
+// live-server
+// to cancel live server:
+// Ctrl + C
+// to access previous commands:
+// press up arrow key as many times as you want to see past commands
+// and down key to see more recent commands
 
 /*
 in terminal:
