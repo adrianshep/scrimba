@@ -505,6 +505,11 @@ const { addToCart } = require('./shoppingCart.js');
 // to access previous commands:
 // press up arrow key as many times as you want to see past commands
 // and down key to see more recent commands
+// can add multiple files all at once
+// this is useful when you need to add multiple modules at once
+// touch jonas.js bankers.js mapty.js
+// to delete files, use rm on Mac and del on Windows
+// rm script.js jonas.js
 
 /*
 in terminal:
