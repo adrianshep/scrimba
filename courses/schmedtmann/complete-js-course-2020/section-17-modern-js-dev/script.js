@@ -510,6 +510,9 @@ const { addToCart } = require('./shoppingCart.js');
 // touch jonas.js bankers.js mapty.js
 // to delete files, use rm on Mac and del on Windows
 // rm script.js jonas.js
+// to move a file to a folder, use command mv then the name of the file to be moved and then the name of the location to which it is to be moved:
+// mv mapty.js ../
+// the ../ represents the parent folder location
 
 /*
 in terminal:
