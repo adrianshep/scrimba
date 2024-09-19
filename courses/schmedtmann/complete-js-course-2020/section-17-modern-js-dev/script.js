@@ -513,6 +513,14 @@ const { addToCart } = require('./shoppingCart.js');
 // to move a file to a folder, use command mv then the name of the file to be moved and then the name of the location to which it is to be moved:
 // mv mapty.js ../
 // the ../ represents the parent folder location
+// to delete a folder:
+// rmdir
+// stands for remove directory
+// on a Mac, this only works for empty directories
+// another way to remove a directory:
+// rm -R filename
+// use rm again and then specify a flag (an option) which we write with a dash and then use a specific symbol or letter
+// R stands for recursive
 
 /*
 in terminal:
