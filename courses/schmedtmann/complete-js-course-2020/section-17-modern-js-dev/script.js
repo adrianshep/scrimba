@@ -521,6 +521,7 @@ const { addToCart } = require('./shoppingCart.js');
 // rm -R filename
 // use rm again and then specify a flag (an option) which we write with a dash and then use a specific symbol or letter
 // R stands for recursive
+// command recursively deletes all the files and then the directory itself
 
 /*
 in terminal:
