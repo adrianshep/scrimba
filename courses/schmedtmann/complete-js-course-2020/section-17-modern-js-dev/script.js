@@ -536,3 +536,13 @@ $ mkdir TEST
 $ touch index.html
 $ touch script.js
 */
+
+
+// Introduction to NPM 
+
+// Node Package Manager is both a software on our computer and a package repository
+// why we need something like NPM:
+// why do need a way of managing packages or dependencies in our projects?
+// before NPM, we used external libraries right in our HTML -- script tags
+// this would then expose a global variable we could use
+// using Mapty as an example, in its index.html file, we included leaflet.js using a script tag before our own script so that it could then use the global variable exposed by this library
