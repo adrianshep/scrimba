@@ -546,3 +546,8 @@ $ touch script.js
 // before NPM, we used external libraries right in our HTML -- script tags
 // this would then expose a global variable we could use
 // using Mapty as an example, in its index.html file, we included leaflet.js using a script tag before our own script so that it could then use the global variable exposed by this library
+// this creates some problems, at least in a big project with a big team -- it's just not manageable
+// first, it doesn't make sense having the HTML loading all of JS, which is really messy
+// second, many times we would download a library file directly to our computer, like a jQuery file for example, but whenever a new version would come out, we would manually have to go to the site, download the new version and change the file in our system manually, then include it again with some other name and version number
+// third, before NPM, there wasn't a single repository that contained all the packages we might need, which made it worse to manage and download from all the different libraries we would need
+// we really needed to manage our dependencies in a more modern and better way -- hence NPM
