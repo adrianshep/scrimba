@@ -550,4 +550,13 @@ $ touch script.js
 // first, it doesn't make sense having the HTML loading all of JS, which is really messy
 // second, many times we would download a library file directly to our computer, like a jQuery file for example, but whenever a new version would come out, we would manually have to go to the site, download the new version and change the file in our system manually, then include it again with some other name and version number
 // third, before NPM, there wasn't a single repository that contained all the packages we might need, which made it worse to manage and download from all the different libraries we would need
-// we really needed to manage our dependencies in a more modern and better way -- hence NPM
+/// we needed to manage our dependencies in a more modern and better way -- hence NPM
+// start by checking if we have NPM installed:
+// in terminal:
+// npm -v
+// will check for and return the number of the version
+// anything greater than 6.x.x is good
+// if you don't have it, go to nodejs.org to download and install the latest version
+// in each project where we want to use NPM we start by initializing it:
+// npm init
+// this will then asks us a few questions in order to create a package.json file
