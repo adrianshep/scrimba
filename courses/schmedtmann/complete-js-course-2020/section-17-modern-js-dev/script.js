@@ -559,4 +559,15 @@ $ touch script.js
 // if you don't have it, go to nodejs.org to download and install the latest version
 // in each project where we want to use NPM we start by initializing it:
 // npm init
-// this will then asks us a few questions in order to create a package.json file
+// this will then ask us a few questions (and offer default values) in order to create a package.json file:
+// package name:
+// version:
+// description:
+// entry point: (script.js)
+// test command:
+// git repository:
+// keywords:
+// author:
+// license:
+// for each question pressing enter key will use whatever default value is in the parenthesis
+// we end up with a special file called package.json
