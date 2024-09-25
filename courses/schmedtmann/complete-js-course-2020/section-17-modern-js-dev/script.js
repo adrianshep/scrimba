@@ -571,3 +571,6 @@ $ touch script.js
 // license:
 // for each question pressing enter key will use whatever default value is in the parenthesis
 // we end up with a special file called package.json
+// this is a file NPM creates for our project
+// it stores the entire configuration of our project
+// it will become interesting in a moment
