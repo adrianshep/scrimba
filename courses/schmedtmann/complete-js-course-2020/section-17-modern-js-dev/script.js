@@ -574,3 +574,10 @@ $ touch script.js
 // this is a file NPM creates for our project
 // it stores the entire configuration of our project
 // it will become interesting in a moment
+// let's install the Leaflet library we used before, this time using NPM
+// find Leaflet documentation page online
+// find NPM installation instructions there
+// write npm to run the NPM program, then install, then the name of the package:
+// npm install leaflet
+// a shorter version of the same thing is:
+// npm i leaflet
