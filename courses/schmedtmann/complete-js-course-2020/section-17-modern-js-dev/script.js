@@ -581,3 +581,11 @@ $ touch script.js
 // npm install leaflet
 // a shorter version of the same thing is:
 // npm i leaflet
+// two things happen:
+// in our package json file, a new field is created for dependencies
+// the dependency we have now is leaflet in its x.x.x version
+// we also now have a folder called node_modules
+// it contains the leaflet folder
+// it has some 15,000 lines of code
+// this folder contains everything about the leaflet library that we need to include in our page, everything about this package
+// the more packages we install, they will all get stored in the node_modules folder
