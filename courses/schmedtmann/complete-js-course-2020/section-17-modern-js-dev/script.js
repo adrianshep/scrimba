@@ -589,3 +589,6 @@ $ touch script.js
 // it has some 15,000 lines of code
 // this folder contains everything about the leaflet library that we need to include in our page, everything about this package
 // the more packages we install, they will all get stored in the node_modules folder
+// if we want to use the Leaflet library, it won't be easy without a module bundler
+// that's because the library uses the Common JS module system which we can't directly import into our code
+// we could only do that if later we use a module bundler, but for now we are not
