@@ -592,3 +592,13 @@ $ touch script.js
 // if we want to use the Leaflet library, it won't be easy without a module bundler
 // that's because the library uses the Common JS module system which we can't directly import into our code
 // we could only do that if later we use a module bundler, but for now we are not
+
+// Installing and Importing Lodash
+// one of the most popular JS libraries
+// a collection of useful functions for arrays, objects, dates and more
+//  a lot of functions that could or should be included in JS but are not
+// people instead implemeneted them in Lodash and can now use them
+// install:
+// not looking for normal version of Lodash as that one uses Common JS and we can't use it without a module bundler
+// instead, we will use a special version that is called Lodash ES
+// npm i lodash-es
