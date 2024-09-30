@@ -602,3 +602,10 @@ $ touch script.js
 // not looking for normal version of Lodash as that one uses Common JS and we can't use it without a module bundler
 // instead, we will use a special version that is called Lodash ES
 // npm i lodash-es
+// Lodash will appear in our dependencies
+// we now have one file for each of the methods available in Lodash -- there are a lot of them
+// include the one for cloning objects -- cloneDeep.js
+// look into cloneDeep.js file, which shows it uses export default cloneDeep
+// as a default export we could give it any name we want -- we will still call it cloneDeep
+// and then the path:
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
