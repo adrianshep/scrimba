@@ -609,3 +609,16 @@ $ touch script.js
 // as a default export we could give it any name we want -- we will still call it cloneDeep
 // and then the path:
 // import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// remember that it's very hard to copy a nested object
+// let's create one here:
+// we have a cart in here, in itself an array which contains some objects
+// we have a user, which is also an object
+const state = {
+    cart: [
+        {product: 'bread', quantity: 5},
+        {product: 'pizza', quantity: 5},
+    ],
+    user: { loggedIn: true },
+};
+const stateClone = Object.assign({}, state); 
+// let's see what happens when we copy this deeply nested object using JS
