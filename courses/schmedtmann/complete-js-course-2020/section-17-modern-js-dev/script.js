@@ -622,3 +622,13 @@ const state = {
 };
 const stateClone = Object.assign({}, state); 
 // let's see what happens when we copy this deeply nested object using JS
+// state clone and we use object assign to create a copy of an object
+// so we create an empty object and then we merge it with the state
+const stateClone = Object.assign({}, state); 
+// console.log(stateClone);
+// looks exactly the same as the state
+// however, what happens when we change one of the nested objects in there?
+// if we say state user logged in is set to false, we see the copy is also false
+state.user.loggedIn = false;
+console.log(stateClone);
+// using object assign is a lot of work when we want to manually create a deep copy or clone
