@@ -632,3 +632,9 @@ const stateClone = Object.assign({}, state);
 state.user.loggedIn = false;
 console.log(stateClone);
 // using object assign is a lot of work when we want to manually create a deep copy or clone
+// we can instead use the function that Lodash gives us that someone battle-tested and implemented for us already
+const stateDeepClone = cloneDeep(state);
+console.log(stateClone);
+// this version of the object shows false
+console.log(stateDeepClone);
+// while this deep one shows true
