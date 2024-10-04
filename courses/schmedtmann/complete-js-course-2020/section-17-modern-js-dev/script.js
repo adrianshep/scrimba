@@ -638,3 +638,12 @@ console.log(stateClone);
 // this version of the object shows false
 console.log(stateDeepClone);
 // while this deep one shows true
+// so this is a good solution we got from NPM for a deep clone copying problem
+// we used a piece of open source software to solve a recurring problem in JS
+
+// going back to the package json file:
+// say you want to move your project to another computer or share it with another developer or even check it in a version control tool like Git
+//  in all of these scenarios, you should never include the node_modules folder
+// in a real project, that folder will be really, really huge
+// it's possible for that folder to have tens of thousands of files in it which will slow you down
+// it also doesn't make sense to send these files that are already in NPM when you can get them from there
