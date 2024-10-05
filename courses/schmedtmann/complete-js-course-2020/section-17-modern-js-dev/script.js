@@ -647,3 +647,9 @@ console.log(stateDeepClone);
 // in a real project, that folder will be really, really huge
 // it's possible for that folder to have tens of thousands of files in it which will slow you down
 // it also doesn't make sense to send these files that are already in NPM when you can get them from there
+// simulate this by deleting the node_modules folder
+// now cloneDeep no longer works anymore
+// there is a very easy way to get it back:
+// run npm install or npm i command without any package name
+// NPM will seek out the package json file, look at all the dependencies and reinstall them
+// importing packages by specifying their entire path is not practical at all, however, so it's finally time to use Parcel to fix this
