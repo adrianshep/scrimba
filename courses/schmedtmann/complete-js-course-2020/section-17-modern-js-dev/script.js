@@ -664,3 +664,11 @@ console.log(stateDeepClone);
 // so we will learn how to use Parcel
 // it's another build tool which os also on NPM
 // so we will use NPM to install it
+// to install, we now have a different dependency:
+// npm i parcel --save-dev
+// hit enter and watch it install
+// dev dependency is a special category of npm packages that are only needed in the development phase of a project
+// used for testing, building, and local development
+// they are not required for running an application in production
+// a dev dependency is like a tool we need to build our application but not one we actually include in our code
+// it therefore appears in its own field in our package json file
