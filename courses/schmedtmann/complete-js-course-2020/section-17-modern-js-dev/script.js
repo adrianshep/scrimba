@@ -653,3 +653,14 @@ console.log(stateDeepClone);
 // run npm install or npm i command without any package name
 // NPM will seek out the package json file, look at all the dependencies and reinstall them
 // importing packages by specifying their entire path is not practical at all, however, so it's finally time to use Parcel to fix this
+
+
+// Bundling with Parcel and NPM Scripts
+
+// the module bundler we're going to use in this course is called Parcel
+// it's super fast and easy to use and, even more importantly, it works out of the box without any configuration
+// you may have heard of Webpack, which is probably the most popular bundler, especially in the world of React
+// however, it's too complex to use in a course like this
+// so we will learn how to use Parcel
+// it's another build tool which os also on NPM
+// so we will use NPM to install it
