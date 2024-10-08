@@ -672,3 +672,6 @@ console.log(stateDeepClone);
 // they are not required for running an application in production
 // a dev dependency is like a tool we need to build our application but not one we actually include in our code
 // it therefore appears in its own field in our package json file
+// to use Parel, we do it in the terminal as Parcel is another command line interface
+// however, we cannot run Parcel like this -- it won't work on account of the command not being found
+// the command line won't work with locally installed packages, which is how Parcel was installed
