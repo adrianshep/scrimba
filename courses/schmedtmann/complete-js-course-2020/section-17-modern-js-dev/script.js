@@ -675,3 +675,9 @@ console.log(stateDeepClone);
 // to use Parel, we do it in the terminal as Parcel is another command line interface
 // however, we cannot run Parcel like this -- it won't work on account of the command not being found
 // the command line won't work with locally installed packages, which is how Parcel was installed
+// in order to use Parcel in the console, we have two options: we can use NPX or NPM scripts
+// NPX is an application built into a NPM
+// we can use it to run the same command we tried to run earlier, but this time it will work
+// npx parcel index.html
+// above is the normal command and the option we pass into Parcel is the entry point
+// in this case, our entry point is index.html because that is where we include our script.js, the file we want to bundle up
