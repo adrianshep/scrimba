@@ -681,3 +681,12 @@ console.log(stateDeepClone);
 // npx parcel index.html
 // above is the normal command and the option we pass into Parcel is the entry point
 // in this case, our entry point is index.html because that is where we include our script.js, the file we want to bundle up
+// in our script.js, we are also including the cloneDeep module from Lodash
+// we will also put back the code so that we are importing our shoppingCart module from before
+// import add, { cart } from './shoppingCart.js';
+// for this example, the goal of using Parcel is to bundle these three modules together
+// run:
+// npx parcel index.html
+// as Parcel runs, it starts a new development server on the URL that appears in the console (http://localhost:1234)
+// clicking it opens a new tab
+// in addition to bundling, Parcel also does the same job as our live server
