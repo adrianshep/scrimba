@@ -4,7 +4,7 @@
 // code used to be written in one or a few big scripts, which would then be sent to a browser
 // currently, we divide our projects into multiple modules that can share data between themselves
 // this makes our code more organized and maintainable
-// a great thing about modules is that we can also inclue third party modules in our code
+// a great thing about modules is that we can also include third party modules in our code
 // there are thousands of open source modules which we call packages that developers share on the NPM repository
 // we can use these packages for free in our own code
 // for example, the React framework or jQuery, or even the Leaflet library that we used in our Mapty project
@@ -690,3 +690,14 @@ console.log(stateDeepClone);
 // as Parcel runs, it starts a new development server on the URL that appears in the console (http://localhost:1234)
 // clicking it opens a new tab
 // in addition to bundling, Parcel also does the same job as our live server
+// the difference is that the live server is on port 8080 and the new one is on port 1234
+// the raw IP address is 127.0.0.1; local host is the easier name
+// troubleshooting errors running this command
+// open new tab in console by clicking + in console tool bar
+// close unneeded live server by entering control c -- we don't need it as we now have Parcel performing the same function
+// if you had an error installing Parcel, you can try installing it with sudo, which will give you more permissions
+// sudo npm i parcel
+// if that doesn't fix it, you should reinstall exactly the same version as you're using
+// read the exact version in the package json file
+// if it indicates say version 1.12.4 then you can NPM install exactly that version
+// npm i parcel@1.12.4
