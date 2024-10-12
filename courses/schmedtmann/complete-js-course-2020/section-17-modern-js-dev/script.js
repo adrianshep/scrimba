@@ -701,3 +701,16 @@ console.log(stateDeepClone);
 // read the exact version in the package json file
 // if it indicates say version 1.12.4 then you can NPM install exactly that version
 // npm i parcel@1.12.4
+// if that still doesn't fix it, then before using this command, try uninstalling it first
+// npm uninstall parcel
+// then reinstall Parcel
+// you should have no more errors then
+// we do have one error coming from our code
+// "parcelRequire is not defined"
+// in index.html, we still have script type "module"
+// however, Parcel creates a script
+// we are no longer using a module but are back to using a regular script
+// that is important because modules don't work on older browsers
+// remove 'type="module"' from script at top of index.html
+// save it so Parcel can rebuild the application
+// now the error is gone
