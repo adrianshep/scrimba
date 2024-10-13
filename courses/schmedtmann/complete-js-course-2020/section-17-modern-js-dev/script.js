@@ -714,3 +714,9 @@ console.log(stateDeepClone);
 // remove 'type="module"' from script at top of index.html
 // save it so Parcel can rebuild the application
 // now the error is gone
+// what Parcel did here:
+// it created a dist folder -- for distribution -- which we will send to production
+// we will send the code in this folder to our final users
+// it created a new index.html and a bunch of JS files
+// it is no longer the one we built for ourselves
+// the new script is the bundle itself
