@@ -718,5 +718,16 @@ console.log(stateDeepClone);
 // it created a dist folder -- for distribution -- which we will send to production
 // we will send the code in this folder to our final users
 // it created a new index.html and a bunch of JS files
-// it is no longer the one we built for ourselves
-// the new script is the bundle itself
+// it is script.(alphanumericstring).js
+// this new script is the bundle itself
+// when we examine this new script file we see that it includes some of the stuff we have in our other modules:
+// 'Importing module'
+// the cloneDeep function
+// a lot of code created by Parcel
+// in real world programming, we will not be looking at this code
+// this is just to show that all of it is now there
+// all the cod we had before spread across multiple modules is now all in this script, which was the goal we had
+// unused code has probably not yet been removed, but we will leave that for later
+// that will come in the build step
+// right now we are in the development step
+// in order for us to be able to check the code during development, it will not compress everything
