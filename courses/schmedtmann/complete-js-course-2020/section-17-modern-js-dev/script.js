@@ -731,3 +731,14 @@ console.log(stateDeepClone);
 // that will come in the build step
 // right now we are in the development step
 // in order for us to be able to check the code during development, it will not compress everything
+// whenever we now save this file, it will reload, just as it did before with our live server
+// in Parcel, we can activate something even better, which is called hot module replacement
+// we can write in the code:
+// if(module.hot) {
+//     module.hot.accept()
+//     }
+// this code that only Parcel understands
+// it won't make it into our final bundle because the browser won't understand any of it
+// hot module reloading means that whenever we change one fo the modules, it will then trigger a rebuild
+// but that new modified bundle with automatically get injected into the browser without triggering a whole page reload
+// it will be most helpful for maintaining state on our page whenever we are testing something
