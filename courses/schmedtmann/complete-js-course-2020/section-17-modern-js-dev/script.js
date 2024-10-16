@@ -742,3 +742,5 @@ console.log(stateDeepClone);
 // hot module reloading means that whenever we change one fo the modules, it will then trigger a rebuild
 // but that new modified bundle with automatically get injected into the browser without triggering a whole page reload
 // it will be most helpful for maintaining state on our page whenever we are testing something
+/ in our Bankist application, for example, whenever we reloaded the page, we needed to log into the application again
+// with Parcel, that won't happen as the page won't reload and the state will be maintained
