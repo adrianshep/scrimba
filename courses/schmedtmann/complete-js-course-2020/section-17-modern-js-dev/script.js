@@ -744,3 +744,10 @@ console.log(stateDeepClone);
 // it will be most helpful for maintaining state on our page whenever we are testing something
 / in our Bankist application, for example, whenever we reloaded the page, we needed to log into the application again
 // with Parcel, that won't happen as the page won't reload and the state will be maintained
+// we first included cloneDeep from Lodash in the code like so:
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// this is quite cumbersome
+// that's why in all module bundlers there is no need to specify the entire path to any module
+// instead, with Parcel, we can write:
+// import cloneDeep from 'lodash-es';
+// Parcel will then find the path to this module and import it, which is a lot more useful than before
