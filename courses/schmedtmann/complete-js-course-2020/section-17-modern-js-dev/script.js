@@ -750,4 +750,12 @@ console.log(stateDeepClone);
 // that's why in all module bundlers there is no need to specify the entire path to any module
 // instead, with Parcel, we can write:
 // import cloneDeep from 'lodash-es';
-// Parcel will then find the path to this module and import it, which is a lot more useful than before
+// all we need to say is that we want to include the Lodash library
+// Parcel will then find the path to this module and import it without us having to tie up the entire parth to there
+// this is a lot more useful than before and works with all kinds of assets:
+// HTML, CSS, SAS files, images, and all kinds of modules
+// not only ESX modules, this will work with CommonJS modules
+// instead of importing an -es version of Lodash, we simply import it like this:
+// import cloneDeep from 'lodash';
+// just a regular version of Lodash
+// Parcel is smart enough to then automatically install this package here
