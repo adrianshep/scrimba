@@ -759,3 +759,14 @@ console.log(stateDeepClone);
 // import cloneDeep from 'lodash';
 // just a regular version of Lodash
 // Parcel is smart enough to then automatically install this package here
+// that way we can use all the modules available on NPM and which still use the older module format
+// the cart keeps growing and growing
+// we are adding the same products over and over again -- bread, apples, pizza
+// this is the observable result of hot module replacement: the state being maintained whenever we reload the page
+// we first executed Parcel by entering:
+// npx parcel index.html
+// there is a second way to execute Parcel by using NPM script
+// NPM scripts are another way of running locally installed packages in the command line
+// they allow us to automate repetitive tasks
+// we then don't have to write npx parcel etc. every time we want to use it
+// we can simply create a script
