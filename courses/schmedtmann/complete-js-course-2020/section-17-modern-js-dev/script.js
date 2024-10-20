@@ -768,5 +768,15 @@ console.log(stateDeepClone);
 // there is a second way to execute Parcel by using NPM script
 // NPM scripts are another way of running locally installed packages in the command line
 // they allow us to automate repetitive tasks
-// we then don't have to write npx parcel etc. every time we want to use it
-// we can simply create a script
+// we then don't have to write npx parcel etc. in the command line every time we want to use it
+// we can simply create a script in package json:
+// "scripts": {
+//  "start": "parcel index.html"
+// }
+// we write the name of the script in double quotes
+// the default here is "start"
+// the script is simply "parcel index.html"
+// we can't write this command directly on the command line, be we can write it in the NPM script
+// in the console, we can now run this command:
+// npm run start
+// it's doing the same thing as before but now we have a simple command whenever we want to start Parcel whenever we want to start developing
