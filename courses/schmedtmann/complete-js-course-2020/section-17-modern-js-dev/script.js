@@ -780,3 +780,14 @@ console.log(stateDeepClone);
 // in the console, we can now run this command:
 // npm run start
 // it's doing the same thing as before but now we have a simple command whenever we want to start Parcel whenever we want to start developing
+// when we are done developing our project, it is time to build the final bundle
+// a bundle that is compressed and from which dead code has been eliminated
+// for that we use another Parcel command in package json scripts:
+// "scripts": {
+//  "start": "parcel index.html",
+//  "build": "parcel build index.html"
+// }
+// in the command line:
+// npm run build
+// because this action is doing a lot more work behind the scenes, it may take some time to complete
+// in the console we get a nice output with the sizes of everything
