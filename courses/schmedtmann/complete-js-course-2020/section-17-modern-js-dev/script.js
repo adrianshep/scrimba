@@ -791,3 +791,10 @@ console.log(stateDeepClone);
 // npm run build
 // because this action is doing a lot more work behind the scenes, it may take some time to complete
 // in the console we get a nice output with the sizes of everything
+// looking in our dist folder, we see that the HTML looks different
+// it is compressed now
+// we can ship this script to the browser and to our users
+// if we look closer at the HTML script itself, we again see that it is very different
+// everything is compressed into an unreadable mess
+// the compression delivers a lot more performance than the script we had before
+// that is why Parcel does this for us
