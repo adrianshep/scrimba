@@ -798,3 +798,11 @@ console.log(stateDeepClone);
 // everything is compressed into an unreadable mess
 // the compression delivers a lot more performance than the script we had before
 // that is why Parcel does this for us
+// we can install packages globally:
+// npm i parcel -g
+// the g stands for global
+// this is the manner in which we installed the live server package
+// because of that, we were then able to use live server in every directory on our computer
+// the big difference between globally and locally installed packages, especially tools like Parcel or live server, is that we can use the global tools directly in the command line without the intermediate step of an npm script
+// most of these tools, however, advise developers to install them locally so they can always be in the latest, up to date version
+// Jonas recommends that too
