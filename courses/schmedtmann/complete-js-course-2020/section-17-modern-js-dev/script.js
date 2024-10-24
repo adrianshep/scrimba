@@ -806,3 +806,15 @@ console.log(stateDeepClone);
 // the big difference between globally and locally installed packages, especially tools like Parcel or live server, is that we can use the global tools directly in the command line without the intermediate step of an npm script
 // most of these tools, however, advise developers to install them locally so they can always be in the latest, up to date version
 // Jonas recommends that too
+
+
+// Configuring Babel and Polyfilling
+
+// now that we hav activated bundling, it's time to configure Babel to transpile our modern code back to ES5 code
+// this is still important even years since the new ES6 standard was released
+// many users out there are stuck on Windows XP or Windows 7 computers and can't upgrade their old browsers
+// we want our applications to work for everyone, so we need to keep everyone in mind
+// the good news is that Parcel automatically uses Babel to transpile our code
+// we can configure Babel a lot if we want to, defining exactly what browsers should be supported, but that's a lot of work which we don't want
+// instead, Parcel makes some very good decisions for us by default
+// we will mainly just go with these defaults
