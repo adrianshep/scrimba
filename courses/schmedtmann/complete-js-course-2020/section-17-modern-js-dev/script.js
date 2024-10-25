@@ -818,3 +818,14 @@ console.log(stateDeepClone);
 // we can configure Babel a lot if we want to, defining exactly what browsers should be supported, but that's a lot of work which we don't want
 // instead, Parcel makes some very good decisions for us by default
 // we will mainly just go with these defaults
+// a very broad and general overview of how Bable works from its website babeljs.io:
+// Babel works with plugins and presets that can be configured
+// a plugin is specific JS feature that we want to transpile (to convert)
+// for example, let's say we only want to convert arrow functions back to ES5 but leave everything else in ES6, for example, const and var declarations
+// usually that doesn't make sense because we want to transpile everything at the same time
+// instead of using single plugins for each of these features, Babel uses preset
+// a present is a bunch of plugins bundles together
+// by default, Parcel is going to use the preset-env
+// preset-env will automatically select with JS features should be compiled based on browser support
+// this will happen automatically
+// out of the box, Babel will convert all features so only browsers that are barely used anymore with market share of less than 0.25% will not be supported by transpiling with this preset
