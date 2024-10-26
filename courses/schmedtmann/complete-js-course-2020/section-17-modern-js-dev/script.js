@@ -829,3 +829,11 @@ console.log(stateDeepClone);
 // preset-env will automatically select with JS features should be compiled based on browser support
 // this will happen automatically
 // out of the box, Babel will convert all features so only browsers that are barely used anymore with market share of less than 0.25% will not be supported by transpiling with this preset
+// run npm start script again:
+// npm run start
+// now we can look at our final script.alphanumeric.output:
+// our previous one was compressed which was not helpful
+// right away we can see that ES6 is no longer there:
+// var instead of const
+// concat method instead of template literal
+// everything we used from ES6 is now gone
