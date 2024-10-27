@@ -837,3 +837,21 @@ console.log(stateDeepClone);
 // var instead of const
 // concat method instead of template literal
 // everything we used from ES6 is now gone
+// something important:
+// let's write some code which isn't part of this preset 
+// this preset -env only includes final features that are already part of the language having passed the four stages of the AGMA process
+// previously we used class fields, which at them time of recording were only at Stage Three
+// let's see how we could transpile class fields as well with a simple example here
+// in script.js:
+// class Person {
+//  greeting = 'Hey';
+//  constructor(name) {
+//      this.name = name;
+//      console.log(`${this.greeting}, ${this.name}); 
+//  }
+// }
+// const jonas = new Person('Jonas');
+// apparently, this does work now
+// searching the code for Person we can see that class has been converted to ES5 so the class kw is nowhere to be found anymore
+// our entire code was converted to this
+// previously, we had to include a plugin for class properties as it was still an experimental feature
