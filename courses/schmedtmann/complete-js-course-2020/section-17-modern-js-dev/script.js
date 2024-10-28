@@ -854,4 +854,9 @@ console.log(stateDeepClone);
 // apparently, this does work now
 // searching the code for Person we can see that class has been converted to ES5 so the class kw is nowhere to be found anymore
 // our entire code was converted to this
-// previously, we had to include a plugin for class properties as it was still an experimental feature
+// previously, in order to make the code work, we had to include a class-properties plugin as it was still an experimental feature
+// that's no longer necessary
+// another experimental plugin:
+// nullish-coalescing-operator
+// console.log('Jonas' ?? null);
+// this one works now as well
