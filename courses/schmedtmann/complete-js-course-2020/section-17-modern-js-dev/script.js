@@ -860,3 +860,8 @@ console.log(stateDeepClone);
 // nullish-coalescing-operator
 // console.log('Jonas' ?? null);
 // this one works now as well
+// use the ES6 find method to find products in a cart that are entered more at least twice:
+// console.log(cart.find(el=>el.quantity >= 2));
+// use "el.quantity >= 2" to search for the code
+// when we find it, we see that the arrow function we had is gone and has been replaced by a regular function
+// however, the ES6 find method is still here: it has not been converted to ES5
