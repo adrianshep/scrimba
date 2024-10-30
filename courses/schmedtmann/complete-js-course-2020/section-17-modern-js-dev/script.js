@@ -865,3 +865,14 @@ console.log(stateDeepClone);
 // use "el.quantity >= 2" to search for the code
 // when we find it, we see that the arrow function we had is gone and has been replaced by a regular function
 // however, the ES6 find method is still here: it has not been converted to ES5
+// same is true with other programming
+// promises, for example:
+// Promise.resolve('TEST').then(x => console.log(x));
+// this immediately resolved promise works because our browser understands ES6
+// it is also not converted to ES5
+// that is because Babel can only transpile ES6 syntax: arrow functions, classes, const, spread operator, etc.
+// things that have an equivalent way of writing them in ES5: the arrow function can be written in a different syntax
+// Babel can write function instead of that
+// it can convert const to var
+// the same, however, is not true for really new features that were added to JS such as find and promise -- these cannot be transpiled
+// only syntax is easy to convert and easy to compile
