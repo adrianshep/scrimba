@@ -876,3 +876,19 @@ console.log(stateDeepClone);
 // it can convert const to var
 // the same, however, is not true for really new features that were added to JS such as find and promise -- these cannot be transpiled
 // only syntax is easy to convert and easy to compile
+// however, all hope is not lost
+// for these added features such as promises or all the array methods like find and a bunch of other stuff, we can polyfill them
+// Babel used to do polyfilling out of the box some time ago
+// recently they started recommending another library
+// we now have to manually import data
+// core-js is the name of the library
+// and we usually only want to import a part of it called Stable
+// import 'core-js/stable';
+// Parcel is usually smart enough to install this automatically
+// to manually install it:
+// npm i core-js
+// we're starting to see that these things change all the time
+// even Jonas gets confused sometimes over why certain things used to work but now work differently
+// the good thing is you don't have to really understand all of this
+// it's more like a recipe you follow
+// with time, that will become a routine and simple
