@@ -892,3 +892,9 @@ console.log(stateDeepClone);
 // the good thing is you don't have to really understand all of this
 // it's more like a recipe you follow
 // with time, that will become a routine and simple
+// the code we had before is still there, still the same
+// find and promise have not been replaced
+// polyfilling recreates the find function and makes it available in this bundle so that the code can then use it
+// search for Array.prototype, where all array methods are, and then Array.prototype.find
+// finding it, we see that Babel uses weird create methods
+// these will implement Array.prototype.find as well as find index, every filter map and also for each (even though these are not ES6 but for some reason are polyfilled here)
