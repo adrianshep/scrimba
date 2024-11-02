@@ -898,3 +898,10 @@ console.log(stateDeepClone);
 // search for Array.prototype, where all array methods are, and then Array.prototype.find
 // finding it, we see that Babel uses weird create methods
 // these will implement Array.prototype.find as well as find index, every filter map and also for each (even though these are not ES6 but for some reason are polyfilled here)
+// polyfill is going to polyfill everything, even if we don't need it
+// findIndex, every and some methods are also polyfilled, although we're not using them
+// we could cherry-pick the features we do want to polyfill
+// it's more work, but it can greatly reduce bundle size
+// to cherry-pick:
+// import 'core-js/stable/array/find'
+// now only the find method appears polyfilled
