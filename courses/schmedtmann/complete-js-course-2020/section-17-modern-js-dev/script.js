@@ -905,3 +905,7 @@ console.log(stateDeepClone);
 // to cherry-pick:
 // import 'core-js/stable/array/find'
 // now only the find method appears polyfilled
+// you can do the same for promise:
+// import 'core-js/stable/promise';
+// that's going to be a lot of work which we usually don't do
+// but it is possible if you are really worried about your bundle size
