@@ -909,3 +909,11 @@ console.log(stateDeepClone);
 // import 'core-js/stable/promise';
 // that's going to be a lot of work which we usually don't do
 // but it is possible if you are really worried about your bundle size
+// finally, there is one feature not polyfilled by core-js/stable
+// we always need to install one more package:
+// npm i regenerator-runtime
+// and then include it in the code:
+// for polyfilling async functions
+// import 'regenerator-runtime/runtime';
+// confusing, but it's a recipe we have to follow
+// usually we include imports at the top of the file, but in this case we can leave them lower down because they will be hoisted anyway
