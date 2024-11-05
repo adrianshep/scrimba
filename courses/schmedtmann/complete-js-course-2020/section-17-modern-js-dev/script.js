@@ -917,3 +917,13 @@ console.log(stateDeepClone);
 // import 'regenerator-runtime/runtime';
 // confusing, but it's a recipe we have to follow
 // usually we include imports at the top of the file, but in this case we can leave them lower down because they will be hoisted anyway
+
+
+// Writing Clean and Modern JS
+
+// you should write readable code
+// write code so that others can understand it
+// write code so that you can understand it a year later
+// avoid too clever and overcomplicated solutions, code that might make you feel like very smart as a developer but also make your code very confusing and unreadable
+// use descriptive variable names: what they contain
+// use descriptive function names: what they do
