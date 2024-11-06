@@ -921,9 +921,15 @@ console.log(stateDeepClone);
 
 // Writing Clean and Modern JS
 
-// you should write readable code
+// Write Readable Code
 // write code so that others can understand it
 // write code so that you can understand it a year later
 // avoid too clever and overcomplicated solutions, code that might make you feel like very smart as a developer but also make your code very confusing and unreadable
 // use descriptive variable names: what they contain
 // use descriptive function names: what they do
+
+// General
+// use DRY (don't repeat yourself) principle (refactor your code)
+// don't pollute global namespace; instead, encapsulate you data into functions, classes or modules
+// never use var; use const, and only if you want to change a variable, let
+// use strong (triple: === and !==) type checks over double, which do not perform type checks
