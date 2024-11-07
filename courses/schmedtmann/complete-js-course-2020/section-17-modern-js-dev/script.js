@@ -933,3 +933,15 @@ console.log(stateDeepClone);
 // don't pollute global namespace; instead, encapsulate you data into functions, classes or modules
 // never use var; use const, and only if you want to change a variable, let
 // use strong (triple: === and !==) type checks over double, which do not perform type checks
+
+// Functions
+// Generally, functions should only do one thing
+// may have to break this rule, but you should try to write small functions that only do one thing but do it really well
+// Don't use more than 3 functions parameters in a function
+// in line with previous guideline, as a function doing only one thing won't need many parameters
+// Use default parameters whenever possible
+// Generally, return same data type as received
+// if you receive two or three numbers as an input to a function, then you will want to return a number as well, so it makes more sense when you consume the function later
+// again, a rule you can break, but better to keep it in mind
+// Use arrow functions when they make code more readable
+// one great use case is in the callback functions of array methods
