@@ -945,3 +945,12 @@ console.log(stateDeepClone);
 // again, a rule you can break, but better to keep it in mind
 // Use arrow functions when they make code more readable
 // one great use case is in the callback functions of array methods
+
+// Object-Oriented Programming
+// Use ES6 classes in order to implement OOP in JS
+// Encapsulate data that shouldn't be accessible from the outside the class so that you don't mutate it
+// you will probably need to manipulate some data that's in the class, but for that you should implement a public API -- a few methods that can manipulate the data as you want it to be manipulated
+// Implement method chaining where it will make sense
+// it will make your methods way easier to use for you and for other developers on your team
+// Do not use arrow functions as methods in regular objects as you won't get access to the this kws of those objects
+// even if your'e not using the this kw in a method, by avoiding arrow methods in these situations you'll get into the habit of not committing this mistake
