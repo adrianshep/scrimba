@@ -954,3 +954,11 @@ console.log(stateDeepClone);
 // it will make your methods way easier to use for you and for other developers on your team
 // Do not use arrow functions as methods in regular objects as you won't get access to the this kws of those objects
 // even if your'e not using the this kw in a method, by avoiding arrow methods in these situations you'll get into the habit of not committing this mistake
+
+// Avoid Nested Code
+// nested meaning writing code inside of blocks inside of other blocks -- really bad for readability
+// Use early return (guard clauses) in case some condition is not met
+// Use ternary (conditional) or logical operators instead of if (which creates a new code block)
+// Use multiple ifs instead of if/else-if
+// Avoid for and for of loops, use array methods instead such as map, filter and reduce
+// Avoid callback-based asynchronous APIs
