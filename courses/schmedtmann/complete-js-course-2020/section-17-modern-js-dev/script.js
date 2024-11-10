@@ -962,3 +962,10 @@ console.log(stateDeepClone);
 // Use multiple ifs instead of if/else-if
 // Avoid for and for of loops, use array methods instead such as map, filter and reduce
 // Avoid callback-based asynchronous APIs
+
+// Asynchronous Code
+// Consume promises with async/await for best readability
+// not using the then and catch methods, because these actually require callback functions which will introduce even more nested code
+// Whenever possible, run promises in parallel using the Promise.all combinator function
+// when you have two Promises that can run at the same time -- Promises that do not depend on each other -- running them in parallel will make the application a little faster for your users 
+// Handle errors and promise rejections
