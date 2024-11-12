@@ -1042,3 +1042,15 @@ var budget = [
     console.log(output);
   };
   */
+
+// open up console where Parcel is still running
+// stop it with Control + C
+// open up index.html and comment out the inclusion of script.js
+// in its place:
+// <script defer src="clean.js"> </script>
+// in console run:
+// live-server
+// we will run Live Server over instead of Parcel because now there is nothing to bundle
+// all we want is to look at our code in a very simple way
+// we can close the Parcel tab which runs on Port 1234
+// instead look at Port 8080 where Liver Server is running
