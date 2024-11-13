@@ -1053,4 +1053,11 @@ var budget = [
 // we will run Live Server over instead of Parcel because now there is nothing to bundle
 // all we want is to look at our code in a very simple way
 // we can close the Parcel tab which runs on Port 1234
-// instead look at Port 8080 where Liver Server is running
+// instead look at Port 8080 where Live Server is running
+// next, we analyze the code we want to fix
+// a very simple budget application which has an object called budget
+// it contains a few objects, each of them an entry in the budget
+// each has a value, a description, and a user who created the entry
+// a negative value is an expense, for groceries for example
+// a positive value is for income from salary or fee paid or proceeds from a sale
+// down lower, we have a simple object which contains spending limits per user
