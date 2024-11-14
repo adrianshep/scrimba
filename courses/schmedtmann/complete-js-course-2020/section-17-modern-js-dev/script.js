@@ -1061,3 +1061,7 @@ var budget = [
 // a negative value is an expense, for groceries for example
 // a positive value is for income from salary or fee paid or proceeds from a sale
 // down lower, we have a simple object which contains spending limits per user
+// lower still, we have a function, "add," to add a new entry to expenses
+// here we see the first of bad practices -- a function name that isn't descriptive of what it does
+// to fix it, we'll rename the function "addName"
+// change it by selecting a "var" and then pressing Command + D (Add Next Occurrence) to select all occurrences of "var"
