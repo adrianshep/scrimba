@@ -1065,3 +1065,7 @@ var budget = [
 // here we see the first of bad practices -- a function name that isn't descriptive of what it does
 // to fix it, we'll rename the function "addName"
 // change it by selecting a "var" and then pressing Command + D (Add Next Occurrence) to select all occurrences of "var"
+// check function
+// will check the budget to see if any of the expenses submitted are over the defined limit
+// if an expense is, the function will flag it by adding a limit string to a new flag property on the budget entry
+// addExpense checks if the new expense is below the limit
