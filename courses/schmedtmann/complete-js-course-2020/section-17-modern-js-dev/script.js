@@ -1069,3 +1069,9 @@ var budget = [
 // will check the budget to see if any of the expenses submitted are over the defined limit
 // if an expense is, the function will flag it by adding a limit string to a new flag property on the budget entry
 // addExpense checks if the new expense is below the limit
+// big expenses function
+// logs all big expenses
+// we pass in the limit and the funciton will go through all the expenses and log the big ones in a particular way
+// if we call the function using 1000 as the limit:
+// bigExpenses(1000);
+// the function only prints only the emoji for each expense that is 1000 or over
