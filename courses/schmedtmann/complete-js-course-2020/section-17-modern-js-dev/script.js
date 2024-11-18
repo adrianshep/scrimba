@@ -1081,3 +1081,7 @@ var budget = [
 //  var lim;
 //  should be converted to:
 // let lim;
+// fixing limits name:
+// isn't really meaningful
+// Command + D to select all occurrences of limits and change to spendingLimits
+// makes the code more readable and easily understandable, especially when we look at it in the future
