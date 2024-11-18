@@ -1075,3 +1075,9 @@ var budget = [
 // if we call the function using 1000 as the limit:
 // bigExpenses(1000);
 // the function only prints only the emoji for each expense that is 1000 or over
+// fixing var kws
+// select one, then Command + D to select the rest, changing them to const
+// only one should not be left as a const:
+//  var lim;
+//  should be converted to:
+// let lim;
