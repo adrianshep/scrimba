@@ -1085,3 +1085,12 @@ var budget = [
 // isn't really meaningful
 // Command + D to select all occurrences of limits and change to spendingLimits
 // makes the code more readable and easily understandable, especially when we look at it in the future
+// console error messages for these lines of code:
+// const check = function() {
+//  for (const el of budget) {
+//      const lim
+// here, const needs to be let 
+// and here, too:
+// const bigExpenses = function(limit) {
+//  const output = '';
+// the const output should be let output
