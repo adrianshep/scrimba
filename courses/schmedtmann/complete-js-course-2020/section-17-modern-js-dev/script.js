@@ -1094,3 +1094,13 @@ var budget = [
 // const bigExpenses = function(limit) {
 //  const output = '';
 // the const output should be let output
+// next, we this check:
+// if (!user) user = 'jonas';
+// this is like setting a default parameter
+// if, according to the check, the user is not set, it should then be set to 'jonas'
+// it does work: when "Pizza" is added without the third argument -- which is the user -- the user is automatically set to 'jonas'
+// however, whenever possible, we should use native language features, in this case, default parameters
+// remove if user check statement and for:
+// const addExpense = function(value, description, user)
+// set the default parameter:
+// const addExpense = function(value, description, user = 'jonas')
