@@ -1104,3 +1104,26 @@ var budget = [
 // const addExpense = function(value, description, user)
 // set the default parameter:
 // const addExpense = function(value, description, user = 'jonas')
+// fixing ugly nested code:
+/*
+var lim;
+if (limits[user]) {
+    lim = limits[user];
+  } else {
+    lim = 0;
+  }
+*/
+// it looks like it was written by a complete beginner
+// instead of using nested code and huge if/else statement with all of the block in it, let's use a nice and declarative ternary operator
+// change lim to limit for variable name, as lim isn't descriptive
+// analyze first what happens here:
+// the function receives a user, then we check if there is a property with the name of user in spendingLimits
+// if the default argument here is jonas, then there is a spendingLimits.jonas
+// in this case, the limit will be set to that value, 1500
+// otherwise, if the name doesn't exist, the limit will be zero
+// therefore, the expense will not be added in this check
+// if jay is trying to add a new expense, the limit of jay will be zero, since jay doesn't exist as a default argument, therefore he won't be able to add any expense
+/* 
+const limit
+
+*/
