@@ -1123,7 +1123,8 @@ if (limits[user]) {
 // otherwise, if the name doesn't exist, the limit will be zero
 // therefore, the expense will not be added in this check
 // if jay is trying to add a new expense, the limit of jay will be zero, since jay doesn't exist as a default argument, therefore he won't be able to add any expense
+// replace above let lim with:
 /* 
-const limit
-
+const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 */
+// we check if user exists; if it does we then return it; otherwise, we just return zero
