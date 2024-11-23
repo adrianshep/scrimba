@@ -1128,3 +1128,9 @@ if (limits[user]) {
 const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 */
 // we check if user exists; if it does we then return it; otherwise, we just return zero
+// change lim to limit:
+/*
+  if (value <= limit) {
+      budget.push({ value: -value, description: description, user: user });
+    }
+*/
