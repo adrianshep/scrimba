@@ -1134,3 +1134,14 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
       budget.push({ value: -value, description: description, user: user });
     }
 */
+// the ternary works fine but we can make it even more clever
+// we shouldn't write code so clever that we can't understand it
+// use code here that is clever in a way that's not too bad: optional chaining
+// const limit = spendingLimits?.[user] ?? 0;
+// we can even use this with record? notations
+// we ask for the user property, if there is one with this name (jonas, in this example), then spendingLimits?.[user] will become that value
+// if not it will be undefined
+// in this case, set to zero
+// for this, we use the knowledge coalescing operator introduced in ES2020
+// huge additions to the JS langauge that are used all the time, so a good idea to get used to writing code like this
+// our result will be exactly the same
