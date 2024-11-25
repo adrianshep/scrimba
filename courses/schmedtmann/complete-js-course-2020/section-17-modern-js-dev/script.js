@@ -1145,3 +1145,5 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 // for this, we use the knowledge coalescing operator introduced in ES2020
 // huge additions to the JS langauge that are used all the time, so a good idea to get used to writing code like this
 // our result will be exactly the same
+// in the case that the value is below the limit, a new object is then created and pushed to the budget array
+// the value will be negative -- all the expenses are negative while the incomes are positive
