@@ -1147,3 +1147,8 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 // our result will be exactly the same
 // in the case that the value is below the limit, a new object is then created and pushed to the budget array
 // the value will be negative -- all the expenses are negative while the incomes are positive
+// we can improve the above code where description equals description and user equals user, which isn't necessary
+// with enhanced object literal syntax, we don't need to repeat that
+// if the property name is the same as the variable name, we can change the above to:
+// ({ value: -value, description, user });
+// and the result will be the same
