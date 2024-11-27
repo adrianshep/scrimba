@@ -1152,3 +1152,16 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 // if the property name is the same as the variable name, we can change the above to:
 // ({ value: -value, description, user });
 // and the result will be the same
+// this function checks all the expenses to see if any of them exceeds the spending limit:
+/*
+const check = function () {
+    for (const el of budget) {
+        let lim;
+        if (limits[el.user]) {
+          lim = limits[el.user];
+        } else {
+          lim = 0;
+        }
+*/
+// the name is not ideal, so let's call it:
+// const checkExpenses = function ()
