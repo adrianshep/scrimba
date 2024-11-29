@@ -1157,8 +1157,8 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 const check = function () {
     for (const entry of budget) {
         let lim;
-        if (limits[entry.user]) {
-          lim = limits[entry.user];
+        if (spendinglimits[entry.user]) {
+          lim = spendinglimits[entry.user];
         } else {
           lim = 0;
         }
@@ -1167,3 +1167,8 @@ const check = function () {
 // const checkExpenses = function ()
 // this function loops over all of the entries in the budget which are called el for element
 // change el to entry, for budget entry -- that makes more sense
+// we get the spending limit from the spendingLimits object
+// no user is passed in but the username is obtained from each of the budget entries
+// above code is very similar to the code we replaced with the ternary
+// therefore we can replace it with this ternary:
+// const limit = spendingLimits?.[entry.user] ?? 0;
