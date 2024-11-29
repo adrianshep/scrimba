@@ -1155,13 +1155,15 @@ const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 // this function checks all the expenses to see if any of them exceeds the spending limit:
 /*
 const check = function () {
-    for (const el of budget) {
+    for (const entry of budget) {
         let lim;
-        if (limits[el.user]) {
-          lim = limits[el.user];
+        if (limits[entry.user]) {
+          lim = limits[entry.user];
         } else {
           lim = 0;
         }
 */
 // the name is not ideal, so let's call it:
 // const checkExpenses = function ()
+// this function loops over all of the entries in the budget which are called el for element
+// change el to entry, for budget entry -- that makes more sense
