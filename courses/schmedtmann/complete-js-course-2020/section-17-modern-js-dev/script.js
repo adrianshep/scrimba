@@ -1172,3 +1172,7 @@ const check = function () {
 // above code is very similar to the code we replaced with the ternary
 // therefore we can replace it with this ternary:
 // const limit = spendingLimits?.[entry.user] ?? 0;
+// we can improve this a little bit more, because this code is essentially the same as the previous ternary
+// remembering the DRY principle -- we do not want to repeat ourselves -- we should refactor this code into its own getLimit function
+// for simpler functions, it makes sense to use an arrow funciton
+// const getLimit = user => spendingLimits?.[user] ?? 0;
