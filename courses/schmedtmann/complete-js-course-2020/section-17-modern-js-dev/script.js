@@ -1176,3 +1176,11 @@ const check = function () {
 // remembering the DRY principle -- we do not want to repeat ourselves -- we should refactor this code into its own getLimit function
 // for simpler functions, it makes sense to use an arrow funciton
 // const getLimit = user => spendingLimits?.[user] ?? 0;
+// however, we can get rid of this above block of code entirely because the only thing we have in the loop is the one declaration
+// the ugly braces can be removed too:
+/*
+const checkExpenses = function() {
+  for (const entry of budget)
+    if (entry.value < -getLimit(entry.user)) entry.flag = 'limit';
+};
+*/
