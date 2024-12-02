@@ -1184,3 +1184,8 @@ const checkExpenses = function() {
     if (entry.value < -getLimit(entry.user)) entry.flag = 'limit';
 };
 */
+// we can do the same here, taking:
+// const limit = getLimit(user);
+// and putting it here:
+// if (value <= getLimit(user)) {
+//  budget.push({ value: -value, description, user });
