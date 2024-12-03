@@ -1189,3 +1189,6 @@ const checkExpenses = function() {
 // and putting it here:
 // if (value <= getLimit(user)) {
 //  budget.push({ value: -value, description, user });
+// the bigExpenses function logs a string to the console
+// therefore, let's improve its name to:
+// const logBigExpenses = function(limit)
