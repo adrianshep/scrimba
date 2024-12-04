@@ -1192,3 +1192,15 @@ const checkExpenses = function() {
 // the bigExpenses function logs a string to the console
 // therefore, let's improve its name to:
 // const logBigExpenses = function(limit)
+// the limit in this function seems like it might apply spending, but it doesn't
+// it's an arbitrary limit we pass in to see any expenses greater than its value
+// let's rename it bigLimit
+/*
+const logBigExpenses = function(bigLimit)
+  let output = '';
+  for (const el of budget) {
+    if (el.value <= -bigLimit) {
+      output += el.description.slice(-2) + ' / ';
+    }
+  }
+*/
