@@ -1204,3 +1204,6 @@ const logBigExpenses = function(bigLimit)
     }
   }
 */
+// change above el to entry:
+// for (const entry of budget) {
+//  if (entry.value <= -bigLimit) {
