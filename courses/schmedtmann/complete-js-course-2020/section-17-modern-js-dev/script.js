@@ -1207,3 +1207,16 @@ const logBigExpenses = function(bigLimit)
 // change above el to entry:
 // for (const entry of budget) {
 //  if (entry.value <= -bigLimit) {
+// we can transform the below string into a template literal:
+/*  
+    if (entry.value <= -bigLimit) {
+      output += entry.description.slice(-2) + ' / ';
+      // emojis are 2 characters
+    }
+
+    // now becomes:
+      output += `${entry.description.slice(-2)}
+*/
+// an observation: we are taking the emoji out of the string which is entry.description by getting the last two characters
+// this is because emojis count as two characters
+// if the (-2) were instead (-1), the console log would show a weird character instead of the emoji
