@@ -1220,3 +1220,7 @@ const logBigExpenses = function(bigLimit)
 // an observation: we are taking the emoji out of the string which is entry.description by getting the last two characters
 // this is because emojis count as two characters
 // if the (-2) were instead (-1), the console log would show a weird character instead of the emoji
+// the below line is a small hack:
+// output = output.slice(0, -2);
+// it removes the terminal / in the console log
+// we'll use it for now and fix it in a future lecture
