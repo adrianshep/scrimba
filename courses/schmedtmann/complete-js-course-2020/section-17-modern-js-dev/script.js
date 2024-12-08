@@ -1224,3 +1224,11 @@ const logBigExpenses = function(bigLimit)
 // output = output.slice(0, -2);
 // it removes the terminal / in the console log
 // we'll use it for now and fix it in a future lecture
+// getting rid of the "ugly" if by transforming it into a ternary operator
+// we do that by adding something to the output conditionally
+// in case the entry value is less than the limit, we want to add this
+// otherwise, we don't want to add anything, so, just an empty string
+//     for (const entry of budget)
+//      output += 
+//        entry.value <= -bigLimit ? `${entry.description.slice(-2)} / ` : '';
+// this looks better, is more declarative and more readable
