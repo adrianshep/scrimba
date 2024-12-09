@@ -1232,3 +1232,9 @@ const logBigExpenses = function(bigLimit)
 //      output += 
 //        entry.value <= -bigLimit ? `${entry.description.slice(-2)} / ` : '';
 // this looks better, is more declarative and more readable
+
+
+// Declarative and Functional JavaScript Principles
+
+// there is currently a major trend and shift towards declarative code and functional programming in JS
+// there are two paradigms for writing code in programming: imperative and declarative
