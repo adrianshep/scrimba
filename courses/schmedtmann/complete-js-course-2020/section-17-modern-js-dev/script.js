@@ -1238,3 +1238,15 @@ const logBigExpenses = function(bigLimit)
 
 // there is currently a major trend and shift towards declarative code and functional programming in JS
 // there are two paradigms for writing code in programming: imperative and declarative
+// whenever we write imperative code, we need to explain to the computer how to do certain things, every single step the computer needs to follow in order to achieve a certain result
+// using the example of someone baking a cake, we would tell them exactly the step-by-step recipe they would follow in order to arrive at a baked cake in the end
+// bringing it back to code, we'll use the example of trying to double the R array:
+/*
+const arr = [2, 4, 6, 8];
+const doubled = [];
+for (let i = 0; i < arr.length; i++)
+  doubled[i] = arr[i] * 2;
+*/
+// this is a purely imperative way of writing that:
+// telling the computer to create an empty array, to create a counter starting at zero, then increasing the counter until we reach the length of the original array, then how we store the new result in each new position of the array
+// we give the computer a lot of steps in order for us to achieve the result of doubling that R array
