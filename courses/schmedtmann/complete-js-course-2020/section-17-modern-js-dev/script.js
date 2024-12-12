@@ -1257,5 +1257,11 @@ for (let i = 0; i < arr.length; i++)
 const arr = [2, 4, 6, 8];
 const doubled = arr.map(n => n * 2);
 */
-// we are simply telling the computer to map the origina array onto a new one and doubling all its elements
+// we are simply telling the computer to map the original array onto a new one and doubling all its elements
 // the detailed steps in the imperative example have been abstracted away
+// more and more, this is how modern JS code is being written
+// the declarative paradigm is a very popular one
+// it has given rise to a sub-paradigm called functional programming
+// it is a declarative paradigm
+// it is based on the idea of writing software by combining multiple so-called pure functions while avoiding side effects and mutating data
+// we've been using it all along without calling it out
