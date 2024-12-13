@@ -1265,3 +1265,4 @@ const doubled = arr.map(n => n * 2);
 // it is a declarative paradigm
 // it is based on the idea of writing software by combining multiple so-called pure functions while avoiding side effects and mutating data
 // we've been using it all along without calling it out
+// Side effect: modification (mutation) of any data outside of the (scope of a) function (mutating external variables, logging to console, writing to DOM, etc.)
