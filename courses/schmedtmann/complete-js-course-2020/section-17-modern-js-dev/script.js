@@ -1267,3 +1267,10 @@ const doubled = arr.map(n => n * 2);
 // we've been using it all along without calling it out
 // Side effect: modification (mutation) of any data outside of the (scope of a) function (mutating external variables, logging to console, writing to DOM, etc.)
 // Pure function: function without side effects. Does not depend on external variables nor does it manipulate them. Given the same inputs, always return the same outputs.
+// functional programming is about avoiding mutating data; we do this by using something called immutability
+// in functional programming, state, which means data, is never modified
+// in an application, we will have an object in it to keep track of all the data we need to use in the applications -- that is called state
+// in functional programming, that state is never modified
+// instead, we copy that object with that state, the copy is then mutated and can then be returned but the original state is never touched
+// the big upside of immutability is that it makes it so much easier to keep track of how data flows through our entire application
+// overall, we can write better code with fewer bugs that is more readable, which is the goal of functional programming
