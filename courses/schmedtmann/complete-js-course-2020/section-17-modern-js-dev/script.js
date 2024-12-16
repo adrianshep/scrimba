@@ -1274,3 +1274,6 @@ const doubled = arr.map(n => n * 2);
 // instead, we copy that object with that state, the copy is then mutated and can then be returned but the original state is never touched
 // the big upside of immutability is that it makes it so much easier to keep track of how data flows through our entire application
 // overall, we can write better code with fewer bugs that is more readable, which is the goal of functional programming
+// functional programming is a huge paradigm that is really difficult to implement in practice
+// it is nonetheless very important to know some of its principles -- side effects, pure functions, immutability, as many of the popular libraries, such as React and Redux, are built around them
+// in React, for example, the state is completely immutable, so to learn it, understanding that concept is paramount to using it properly
