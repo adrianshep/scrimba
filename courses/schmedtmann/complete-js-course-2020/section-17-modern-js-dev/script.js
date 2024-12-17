@@ -1277,3 +1277,6 @@ const doubled = arr.map(n => n * 2);
 // functional programming is a huge paradigm that is really difficult to implement in practice
 // it is nonetheless very important to know some of its principles -- side effects, pure functions, immutability, as many of the popular libraries, such as React and Redux, are built around them
 // in React, for example, the state is completely immutable, so to learn it, understanding that concept is paramount to using it properly
+// some principles, such as pure functions or side effects, can be easier to implement in our own code
+// we can mix imperative and declarative programming in our own code -- we don't to be 100% declarative, 100% of making our code completely functional
+// we can start using some of the functional programming techniques in our own code base
