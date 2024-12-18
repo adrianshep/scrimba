@@ -1280,3 +1280,5 @@ const doubled = arr.map(n => n * 2);
 // some principles, such as pure functions or side effects, can be easier to implement in our own code
 // we can mix imperative and declarative programming in our own code -- we don't to be 100% declarative, 100% of making our code completely functional
 // we can start using some of the functional programming techniques in our own code base
+// for example, we can try to avoid data mutations as often as possible
+// not always possible, not even really necessary, but these are mainly suggestions that will create better, cleaner and more readable code
