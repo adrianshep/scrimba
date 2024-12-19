@@ -1282,3 +1282,8 @@ const doubled = arr.map(n => n * 2);
 // we can start using some of the functional programming techniques in our own code base
 // for example, we can try to avoid data mutations as often as possible
 // not always possible, not even really necessary, but these are mainly suggestions that will create better, cleaner and more readable code
+// always prefer built-in methods or functions that don't produce side effects over the ones that do 
+// this is very important for data transformations
+// for these, you should use methods such as .map(), .filter(), and .reduce()
+// these three methods are present in all functional programming languages
+// they are very important in implementing more functional and declarative code
