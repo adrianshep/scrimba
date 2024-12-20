@@ -1287,3 +1287,6 @@ const doubled = arr.map(n => n * 2);
 // for these, you should use methods such as .map(), .filter(), and .reduce()
 // these three methods are present in all functional programming languages
 // they are very important in implementing more functional and declarative code
+// finally, you can try to avoid side effects in functions you write yourself
+// again, not always possible, and not always necessary either
+// the application, at some point, needs to do something: display something on the DOM, log something to the console, or create some kind of a side effect
