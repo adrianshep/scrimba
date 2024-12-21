@@ -1290,3 +1290,10 @@ const doubled = arr.map(n => n * 2);
 // finally, you can try to avoid side effects in functions you write yourself
 // again, not always possible, and not always necessary either
 // the application, at some point, needs to do something: display something on the DOM, log something to the console, or create some kind of a side effect
+// functional programming is only a part of writing declarative code
+// to write more declarative code, you should use:
+// array and object destructuring whenever that's possible
+// the spread operator
+// the ternary operator
+// and template literals
+// all of these are more about telling the code what to do and not the precise steps it should follow to do so
