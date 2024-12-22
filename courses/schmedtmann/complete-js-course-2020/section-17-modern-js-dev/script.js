@@ -1297,3 +1297,11 @@ const doubled = arr.map(n => n * 2);
 // the ternary operator
 // and template literals
 // all of these are more about telling the code what to do and not the precise steps it should follow to do so
+
+
+// Let's Fix Some Bad Code Part 2
+
+// focus on 3 big areas of functional JS:
+// 1) immutability
+// 2) side effects
+// 3) making data transformations using pure functions such as map, filter, and reduce
