@@ -1305,3 +1305,17 @@ const doubled = arr.map(n => n * 2);
 // 1) immutability
 // 2) side effects
 // 3) making data transformations using pure functions such as map, filter, and reduce
+
+// 1) immutability: in JS there's a way to make a data structure -- an array or object -- immutable
+// const spendingLimits = {
+//  jonas: 1500,
+//  matilda: 100
+// };
+// becomes:
+// const spendingLimits = Object.freeze ({
+//  jonas: 1500,
+//  matilda: 100
+// });
+// we call the function Object.freeze()
+// into that function we pass in the object we want to make immutable
+// doing so with spendingLimits means we can no longer put any new properties into it
