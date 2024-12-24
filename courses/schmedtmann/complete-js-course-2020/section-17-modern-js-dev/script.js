@@ -1319,3 +1319,9 @@ const doubled = arr.map(n => n * 2);
 // we call the function Object.freeze()
 // into that function we pass in the object we want to make immutable
 // doing so with spendingLimits means we can no longer put any new properties into it
+// this works best in strict mode, so make sure to activate it on Line 1 of your script:
+// 'use strict';
+// what happens, then, when we try to add a new property:
+// spendingLimits.jay = 200;
+// with 'use strict' will result in logging of an error:
+// "Uncaught TypeError: Cannot add property jay, object is not extensible"
