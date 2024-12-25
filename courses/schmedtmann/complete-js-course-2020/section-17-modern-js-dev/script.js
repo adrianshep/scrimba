@@ -1325,3 +1325,7 @@ const doubled = arr.map(n => n * 2);
 // spendingLimits.jay = 200;
 // with 'use strict' will result in logging of an error:
 // "Uncaught TypeError: Cannot add property jay, object is not extensible"
+// as an array is also an object, we can also use Object.freeze on it:
+// const budget = Object.freeze([]) 
+// we start running into trouble here because lower in the code we are trying to push something into the array, but that's no longer possible because we've made it immutable by using Object.freeze()
+// so now this code is no longer working
