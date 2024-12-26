@@ -1329,3 +1329,12 @@ const doubled = arr.map(n => n * 2);
 // const budget = Object.freeze([]) 
 // we start running into trouble here because lower in the code we are trying to push something into the array, but that's no longer possible because we've made it immutable by using Object.freeze()
 // so now this code is no longer working
+// we cannot add new elements to this object now -- that was the reason for the error we saw
+// however, Object.freeze() only freezes the first level of the object
+// it's not a deep freeze, because we can still change objects inside of the object
+// for example:
+// budget[0].value = 10000;
+// the value will indeed change
+// what you cannot do, however, is add a completely new element:
+// budget[9] = 'jonas';
+// that will not work -- no new element is added to the array
