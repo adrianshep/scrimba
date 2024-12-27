@@ -1338,3 +1338,9 @@ const doubled = arr.map(n => n * 2);
 // what you cannot do, however, is add a completely new element:
 // budget[9] = 'jonas';
 // that will not work -- no new element is added to the array
+// there are third-party libraries which implement a deep freeze, but we'll not use them in this example
+// why does this function create this error and how do we fix it?
+// right now, addExpense is trying to mutate the outside object budget
+// in other words, this function has a side effect -- something outside of the function is manipulated or the function does something other than simply returning a value
+// a function that produces a side effect is called an impure function
+// addExpense is an impure functions as it is attempting to manipulate and mutate this budget object located outside of it
