@@ -1344,3 +1344,5 @@ const doubled = arr.map(n => n * 2);
 // in other words, this function has a side effect -- something outside of the function is manipulated or the function does something other than simply returning a value
 // a function that produces a side effect is called an impure function
 // addExpense is an impure functions as it is attempting to manipulate and mutate this budget object located outside of it
+// how do we fix that?
+// first, as a good practice, we should always pass all the data a function depends on into the function so that it doesn't have to reach for it into the outer scope
