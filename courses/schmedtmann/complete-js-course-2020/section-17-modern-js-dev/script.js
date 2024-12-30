@@ -1349,3 +1349,16 @@ const doubled = arr.map(n => n * 2);
 // second, the function should not change any of these values, mutate them
 // that's the reason we made this object immutable, so we cannot by accident mutate this object
 // remember that the solution is to create and return that copy of the state, of the data
+// we will start here:
+// const addExpense = function (value, description, user = 'jonas') {
+//  user = user.toLowerCase()
+// first thing, we pass in a variable called state and another called limits:
+/* const addExpense = function (
+    state,
+    limits,
+    value, 
+    description, 
+    user = 'jonas'
+  ) {
+*/
+// state will be the budget object and limits will be the spending limits
