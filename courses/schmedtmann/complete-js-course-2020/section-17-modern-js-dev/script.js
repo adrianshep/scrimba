@@ -1346,3 +1346,6 @@ const doubled = arr.map(n => n * 2);
 // addExpense is an impure functions as it is attempting to manipulate and mutate this budget object located outside of it
 // how do we fix that?
 // first, as a good practice, we should always pass all the data a function depends on into the function so that it doesn't have to reach for it into the outer scope
+// second, the function should not change any of these values, mutate them
+// that's the reason we made this object immutable, so we cannot by accident mutate this object
+// remember that the solution is to create and return that copy of the state, of the data
