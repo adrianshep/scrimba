@@ -1362,3 +1362,13 @@ const doubled = arr.map(n => n * 2);
   ) {
 */
 // state will be the budget object and limits will be the spending limits
+// we will pass all of that into all three of the function calls:
+/*
+add(budget, spendingLimits, 10, 'Pizza 🍕');
+add(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
+add(budget, spendingLimits, 200, 'Stuff', 'Jay');
+*/
+// this does not fix the error but we are working in the right direction
+// we should not, as per a previous lecture, pass in more than three arguments into a function
+// here we have five parameters but sometimes it's not a big deal to break those rules
+// we could also pass in one object of options, but let's keep it simple here
