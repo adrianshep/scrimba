@@ -1372,3 +1372,12 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // we should not, as per a previous lecture, pass in more than three arguments into a function
 // here we have five parameters but sometimes it's not a big deal to break those rules
 // we could also pass in one object of options, but let's keep it simple here
+// below, we are clearly manipulating the user variable:
+// user = user.toLowerCase()
+// as we learned previously, we should avoid these data mutations whenever possible
+// instead, let's create a new variable:
+// const cleanUser = user.toLowerCase()
+// this is the whole reason why 'Matilda' with the capital M still works
+// without this piece of code, it wouldn't work because Matilda is uppercase while above, in the object, it is lowercase
+// the uppercase would therefore not be found while searching for the lowercase
+// therefore, we will always convert everything to lowercase so it then corresponds to the object keys we have above
