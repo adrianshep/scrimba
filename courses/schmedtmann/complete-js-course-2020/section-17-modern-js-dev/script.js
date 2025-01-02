@@ -1381,3 +1381,13 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // without this piece of code, it wouldn't work because Matilda is uppercase while above, in the object, it is lowercase
 // the uppercase would therefore not be found while searching for the lowercase
 // therefore, we will always convert everything to lowercase so it then corresponds to the object keys we have above
+// we now change user to cleanUser:
+// if (value <= getLimit(cleanUser)) {
+//  budget.push({ value: -value, description, user: cleanUser });
+//  }
+// };
+// we want to replace this manipulating of the object by creating a new object based on the state we receive:
+// budget.push ({})
+// we want, instead, to return an empty array  and we use the spread operator to put all of the elements of the state in it
+// return [...state]
+// this effectively creates a copy of this state array
