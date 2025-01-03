@@ -1391,3 +1391,6 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // we want, instead, to return an empty array  and we use the spread operator to put all of the elements of the state in it
 // return [...state]
 // this effectively creates a copy of this state array
+// now all we need to do is add the object which we had before:
+// return [...state, { value: -value, description, user: cleanUser }];
+// now, calling the addExpense function will no logner mutate the budget object
