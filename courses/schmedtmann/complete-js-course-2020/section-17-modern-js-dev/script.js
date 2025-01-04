@@ -1393,4 +1393,7 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // this effectively creates a copy of this state array
 // now all we need to do is add the object which we had before:
 // return [...state, { value: -value, description, user: cleanUser }];
-// now, calling the addExpense function will no logner mutate the budget object
+// now, calling the addExpense function will no longer mutate the budget object
+// therefore, if we want to do something with the new budget, we will need to store that somewhere
+// const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
+// logging newBudget1 to console shows that it works
