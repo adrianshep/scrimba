@@ -1397,3 +1397,8 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // therefore, if we want to do something with the new budget, we will need to store that somewhere
 // const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
 // logging newBudget1 to console shows that it works
+// what happends if this: 
+// if (value <= getLimit(clean User)) {}
+// turns out to be false and the below code doesn't run?
+// return [...state, { value: -value, description, user: cleanUser }];
+// test it by making pizza very expensive -- 10000 -- and we now get undefined, which isn't good
