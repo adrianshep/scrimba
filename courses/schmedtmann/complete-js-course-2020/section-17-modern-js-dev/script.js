@@ -1397,8 +1397,15 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // therefore, if we want to do something with the new budget, we will need to store that somewhere
 // const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
 // logging newBudget1 to console shows that it works
-// what happends if this: 
+// what happens if this: 
 // if (value <= getLimit(clean User)) {}
 // turns out to be false and the below code doesn't run?
 // return [...state, { value: -value, description, user: cleanUser }];
 // test it by making pizza very expensive -- 10000 -- and we now get undefined, which isn't good
+// in this case, what should we return?
+// we should return the original state, so the original budget
+// in that case, addExpense will always return something: either the original budget or the one with the new expense added to it
+// to clean up the code, we'll use the ternary operator as it is a lot more declarative than the old school if-else statement
+// we'll move the return in front
+// return value <= getLimit(cleanUser) ? 
+//  [...state, { value: -value, description, user: cleanUser }] : state;
