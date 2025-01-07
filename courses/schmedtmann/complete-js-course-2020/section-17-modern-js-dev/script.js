@@ -1409,3 +1409,10 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // we'll move the return in front
 // return value <= getLimit(cleanUser) ? 
 //  [...state, { value: -value, description, user: cleanUser }] : state;
+// it now updates our budget in a functional way
+// the function no longer produces side effects -- it is now a pure function
+// the next addExpense call is:
+// addExpense(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
+// should we pass budget into this one?
+// we shouldn't, because this one will then act on the original budget
+// the previous expense we just added won't be in there
