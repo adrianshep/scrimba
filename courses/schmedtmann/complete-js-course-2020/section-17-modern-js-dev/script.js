@@ -1416,3 +1416,15 @@ add(budget, spendingLimits, 200, 'Stuff', 'Jay');
 // should we pass budget into this one?
 // we shouldn't, because this one will then act on the original budget
 // the previous expense we just added won't be in there
+// how we solve this is to pass in the result of the previous operation, newBudget1:
+/*
+const newBudget1 = addExpense(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
+const newBudget2 = addExpense(
+  newBudget1, 
+  spendingLimits, 
+  100, 
+  'Going to movies 🍿', 
+  'Matilda'
+  );
+*/
+// in the real world, we would use something called composing and a technique called currying to create this chain of operations
