@@ -1428,3 +1428,9 @@ const newBudget2 = addExpense(
   );
 */
 // in the real world, we would use something called composing and a technique called currying to create this chain of operations
+// here we need all of these intermediate variables to create a new budget
+// we call this once, store the result in a new variable
+// for the next call, we use that previous variable
+// then, again, in the next call, we use that previous variable again
+// it would be nice to automatically use the previous result for the next operation
+// in a real world, big, functional application, we would use composing to create one function to perform all of these operation at once
