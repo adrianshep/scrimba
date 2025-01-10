@@ -1434,3 +1434,15 @@ const newBudget2 = addExpense(
 // then, again, in the next call, we use that previous variable again
 // it would be nice to automatically use the previous result for the next operation
 // in a real world, big, functional application, we would use composing to create one function to perform all of these operation at once
+
+// Data Transformations
+/*
+const checkExpenses = function() {
+  for (const entry of budget)
+    if (entry.value < -getLimit(entry.user)) entry.flag = 'limit';
+};
+*/
+// above, we have a for-of loop we can easily transform into a function
+// it loops over all of the entries in the budget
+// it loops over an array and in each iteration the current entry is one of these entry objects
+// this loop will update each of the objects to contain the flag attribute whenever a value is over the limit
