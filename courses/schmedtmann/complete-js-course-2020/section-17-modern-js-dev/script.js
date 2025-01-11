@@ -1446,3 +1446,15 @@ const checkExpenses = function() {
 // it loops over all of the entries in the budget
 // it loops over an array and in each iteration the current entry is one of these entry objects
 // this loop will update each of the objects to contain the flag attribute whenever a value is over the limit
+// this function is an impure one because it manipulates the object itself
+// therefore, let's transform this function into a pure one
+// we want to pass in all the data the function depends upon, in this case, Budget3, so newBudget3
+// getLimit uses the spending limits from the outer scope, which is something we do not want
+// let's add the limits as another parameter, limis and user
+// from:
+// const getLimit = user => spendingLimits?.[user] ?? 0;
+// to:
+// const getLimit = (limits, user) => limits?.[user] ?? 0;
+// then pass in the limits here:
+// return value <= getLimit(limits cleanUser) ?? [...state, { value: -value, descriptions, user: cleanUser }] : state;
+// now the function no longer depends upon any external variable, it can do its work without having to look up on the scope chain
