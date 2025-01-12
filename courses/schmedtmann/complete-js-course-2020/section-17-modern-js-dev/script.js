@@ -1458,3 +1458,19 @@ const checkExpenses = function() {
 // then pass in the limits here:
 // return value <= getLimit(limits cleanUser) ?? [...state, { value: -value, descriptions, user: cleanUser }] : state;
 // now the function no longer depends upon any external variable, it can do its work without having to look up on the scope chain
+// let's do the same here:
+/* 
+const checkExpenses = function() {
+  for (const entry of newBudget3)
+    if (entry.value < -getLimit(entry.user)) entry.flag = 'limit';
+};
+*/
+// we want to receive a state which we will call state to keep it neutral, as before
+// then calling it limits once again
+// we want, again, to pass in limits and then the user itself
+/* 
+const checkExpenses = function(state, limits) {
+  for (const entry of newBudget3)
+    if (entry.value < -getLimit(limits, entry.user)) entry.flag = 'limit';
+};
+*/
