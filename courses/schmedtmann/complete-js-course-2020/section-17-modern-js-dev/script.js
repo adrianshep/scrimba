@@ -1474,3 +1474,21 @@ const checkExpenses = function(state, limits) {
     if (entry.value < -getLimit(limits, entry.user)) entry.flag = 'limit';
 };
 */
+// let's replace this entire loop:
+/*
+  for (const entry of newBudget3)
+    if (entry.value < -getLimit(limits, entry.user)) entry.flag = 'limit';
+*/
+// and instead loop over the state using one of our data transformation functions
+// we to keep an array of the same size and to add a property
+// we don't want to filter or reduce anything
+// so it makes sense to use the map method here which will create a new object, a new array
+// that's in the spirit of functional code and immutability
+// not mutating the state, but creating a new one based on the original one
+/* 
+const checkExpenses = function(state, limits) {
+  return state.map(entry => {
+    
+    })
+};
+*/
