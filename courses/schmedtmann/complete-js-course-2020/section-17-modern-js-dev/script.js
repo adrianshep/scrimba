@@ -1488,7 +1488,16 @@ const checkExpenses = function(state, limits) {
 /* 
 const checkExpenses = function(state, limits) {
   return state.map(entry => {
-    
-    })
+    return entry.value < -getLimit(limits, entry, user) ? { ...entry, flag: 'limit' } : entry;
+    });
 };
 */
+// let's create a function block above and think about what we want to do
+// right now inside this callback, each entry is one of these objects
+// we do not want to mutate them
+// instead, when this condition is true - when the value is less than the limit - we want to copy the object and add the new property onto it
+// previously, we copied the entire array and added a new object
+// above, we will copy the entire entry object and add the flag property to it
+// we will make the code nicely declarative by using the ternary operator
+// if this condition is true, if the value is above the limit, we want to return the original object copied and add the new flag 'limit' property
+// otherwise, we want to return the original entry
