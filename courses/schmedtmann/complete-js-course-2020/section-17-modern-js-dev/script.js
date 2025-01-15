@@ -1501,3 +1501,8 @@ const checkExpenses = function(state, limits) {
 // we will make the code nicely declarative by using the ternary operator
 // if this condition is true, if the value is above the limit, we want to return the original object copied and add the new flag 'limit' property
 // otherwise, we want to return the original entry
+// to check out the result, we need to store the results in a variable
+// we'll call this one finalBudget as we won't create any new budget following it
+// const finalBudget = checkExpenses(newBudget3, spendingLimits);
+// logging finalBudget shows that flag is set to 'limit,' so it worked 
+// and, we didn't manipulate any object - we created a copy and then added the property to it
