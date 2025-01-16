@@ -1489,7 +1489,7 @@ const checkExpenses = function(state, limits) {
 const checkExpenses = function(state, limits) {
   return state.map(entry => {
     return entry.value < -getLimit(limits, entry, user) ? { ...entry, flag: 'limit' } : entry;
-    });
+  });
 };
 */
 // let's create a function block above and think about what we want to do
@@ -1506,3 +1506,6 @@ const checkExpenses = function(state, limits) {
 // const finalBudget = checkExpenses(newBudget3, spendingLimits);
 // logging finalBudget shows that flag is set to 'limit,' so it worked 
 // and, we didn't manipulate any object - we created a copy and then added the property to it
+// above, you might not be used to seeing the return in the map callback function, but that's because we have the function block there
+// remember, in the map function, whatever is returned from the callback will be the element in the same position of the new array
+// that's why we need the return there
