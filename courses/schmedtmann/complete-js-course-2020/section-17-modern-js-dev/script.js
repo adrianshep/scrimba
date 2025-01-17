@@ -1509,3 +1509,15 @@ const checkExpenses = function(state, limits) {
 // above, you might not be used to seeing the return in the map callback function, but that's because we have the function block there
 // remember, in the map function, whatever is returned from the callback will be the element in the same position of the new array
 // that's why we need the return there
+// we can also simplify all of this
+// let's transform checkExpenses into an arrow function
+// leave the two state and limits parameters in place
+// we don't need the return
+// we can get rid of the braces and second return as well
+// we don't need the semicolon after entry
+/* 
+const checkExpenses = (state, limits) =>
+  state.map(entry =>
+    entry.value < -getLimit(limits, entry.user) ? { ...entry, flag 'limit' } : entry
+  );
+*/ 
