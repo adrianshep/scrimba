@@ -1521,3 +1521,9 @@ const checkExpenses = (state, limits) =>
     entry.value < -getLimit(limits, entry.user) ? { ...entry, flag 'limit' } : entry
   );
 */ 
+// important to note once more that we transformed this into a pure function
+// it does not mutate anything because the map method returns a brand new array
+// we give this function an array and it then creates a new one by mapping over the original one, which creates the array
+// and in each position of the array, we either return a copy of the original entry plus the flag property
+// or we simply return the original entry as it was
+// our function is pure and does not create any side effect nor does it manipulate anything
