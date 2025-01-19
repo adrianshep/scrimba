@@ -1527,3 +1527,18 @@ const checkExpenses = (state, limits) =>
 // and in each position of the array, we either return a copy of the original entry plus the flag property
 // or we simply return the original entry as it was
 // our function is pure and does not create any side effect nor does it manipulate anything
+// our final function:
+/*
+const logBigExpenses = function(bigLimit) {
+  let output = '';
+  for (const entry of budget)
+    out +=
+      entry.value <= -bigLimit ? `${entry.description.slice(-2)} / ` : '';
+
+    output = output.slice(0, -2);
+};
+*/
+// we have a for loop; inside it we are constantly manipulating or mutating its output variable
+// that goes against the spirit of immutability
+// immutability is not just for objects and arrays; it also goes for regular variaables
+// in functional code, you will probably never see the let variable
