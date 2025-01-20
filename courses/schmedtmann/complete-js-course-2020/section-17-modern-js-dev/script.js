@@ -1542,3 +1542,15 @@ const logBigExpenses = function(bigLimit) {
 // that goes against the spirit of immutability
 // immutability is not just for objects and arrays; it also goes for regular variaables
 // in functional code, you will probably never see the let variable
+// data transformation functions for arrays and also for strings
+// the current code we're going to rewrite is imperative
+// it says, create an empty variable
+// then we manually said it should loope over all the entries in the budget array
+// whenever we had a big expense, it should then add the emoji to the output variable, a string
+// a better way of doing this
+// output should be renamed bigExpenses, a better name
+/*
+const logBigExpenses = function(bigLimit) {
+  const bigExpenses
+}:
+*/
