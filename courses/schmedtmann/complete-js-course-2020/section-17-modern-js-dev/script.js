@@ -1549,8 +1549,10 @@ const logBigExpenses = function(bigLimit) {
 // whenever we had a big expense, it should then add the emoji to the output variable, a string
 // a better way of doing this
 // output should be renamed bigExpenses, a better name
+// then we want to create a string containing only the emoji
+// starting with the filter, entry and the condition are going to be the same
 /*
 const logBigExpenses = function(bigLimit) {
-  const bigExpenses
+  const bigExpenses = state.filter(entry => entry.value <= -bigLimit);
 }:
 */
