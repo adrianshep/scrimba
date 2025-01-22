@@ -1551,8 +1551,17 @@ const logBigExpenses = function(bigLimit) {
 // output should be renamed bigExpenses, a better name
 // then we want to create a string containing only the emoji
 // starting with the filter, entry and the condition are going to be the same
+// now we need to get the emojis that are in here out, then create a string based on the result
+// we have an array of two with emojis, but now we want to create an array of two only with the emojis
+// we'll use map for that
+// we want entry.description, then take the last two characters as before
+// then we join and have a functional version
 /*
 const logBigExpenses = function(bigLimit) {
-  const bigExpenses = state.filter(entry => entry.value <= -bigLimit);
-}:
+  const bigExpenses = state
+  .filter(entry => entry.value <= -bigLimit)
+  .map(entry => entry.description.slice(-2))
+  .join(' / ');
+};
+logBigExpenses(finalBudget, 500);
 */
