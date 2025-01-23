@@ -1565,3 +1565,19 @@ const logBigExpenses = function(bigLimit) {
 };
 logBigExpenses(finalBudget, 500);
 */
+// we can do this in another way
+// instead of map and join, we can do it in one go using reduce
+// reduce: taking all the values in an array and creating a value out of them, reducing them to just one
+// in this case, what we want is our string -- that's going to be the accumulator
+// then we have the current value and then the callback, and then the initial value, which going to be an empty string
+// we want to return the previous string plus the current string
+// we need to say .description.slice
+// and add the separator
+/*
+const logBigExpenses = function(state, bigLimit) {
+  const bigExpenses = state
+  .filter(entry => entry.value <= -bigLimit)
+  .reduce((str, cur) => `${str} / ${cur.description.slice(-2)}`, '');
+};
+logBigExpenses(finalBudget, 500);
+*/
