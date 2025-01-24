@@ -1581,3 +1581,6 @@ const logBigExpenses = function(state, bigLimit) {
 };
 logBigExpenses(finalBudget, 500);
 */
+// logging to console, this version has an initial slash before the emojis
+// removing '' does not solve the problem -- it replaces the initial slash and the first emoji following it with [object Object], which is no good
+// only solution seems to be to not use the reduce version
