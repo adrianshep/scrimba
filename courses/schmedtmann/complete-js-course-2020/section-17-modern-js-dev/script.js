@@ -1584,3 +1584,11 @@ logBigExpenses(finalBudget, 500);
 // logging to console, this version has an initial slash before the emojis
 // removing '' does not solve the problem -- it replaces the initial slash and the first emoji following it with [object Object], which is no good
 // only solution seems to be to not use the reduce version
+// in conclusion, the logBigExpenses function is not pure
+// it's an impure function because it creates a side effect by having the console.log in it
+// all console.logs, in point of fact, are impure because they do something in the console
+// in this case, they create something in the console, they create input/output
+// of course, any program needs to have some side effects, because otherwise what's the of the program in the first place?
+// if we didn't have all of the console.logs, how would we even know that the program was running at all?
+// we always need some side effects, but in functional programming we try to push these as far to the edge or the end of our program as possible
+// without having them all over the place polluting our application
