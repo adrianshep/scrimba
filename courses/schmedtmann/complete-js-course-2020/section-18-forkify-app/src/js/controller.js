@@ -12,3 +12,12 @@ const timeout = function (s) {
 // https://forkify-api.jonas.io
 
 ///////////////////////////////////////
+
+
+// Forkify App
+
+// Project Overview and Planning
+
+// this application is all about searching for recipes and displaying them in the user interface
+// enter "pizza" into search field and left sidebar appears with results
+// when there are more than ten results, they get divided up into multiple pages with pagination functionality allowing you to move from page to page
