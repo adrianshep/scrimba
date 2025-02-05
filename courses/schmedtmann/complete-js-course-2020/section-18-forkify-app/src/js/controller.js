@@ -23,4 +23,7 @@ const timeout = function (s) {
 // when there are more than ten results, they get divided up into multiple pages with pagination functionality allowing you to move from page to page
 // clicking on recipe in sidebar, it displays in center right of page
 // cooking time, number of servings, ingredients list, the link to the recipe source page are all displayed
-// amount of servings desired can be increased and decreased which then revised the quantities in the ingredients list
+// number of servings desired can be increased and decreased which then revised the quantities in the ingredients list
+// we can also bookmark recipes -- click on the bookmark icon and now the recipe appears in the bookmarks panel dropping down from the top nav bar
+// clicking on the bookmark icon after the bookmarked recipe is displayed removes it from the bookmarks list
+// if there are no bookmarks, clicking on the nav bar bookmark icon will display an alert message of that fact
