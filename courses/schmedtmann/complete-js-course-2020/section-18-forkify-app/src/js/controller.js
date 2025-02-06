@@ -27,3 +27,8 @@ const timeout = function (s) {
 // we can also bookmark recipes -- click on the bookmark icon and now the recipe appears in the bookmarks panel dropping down from the top nav bar
 // clicking on the bookmark icon after the bookmarked recipe is displayed removes it from the bookmarks list
 // if there are no bookmarks, clicking on the nav bar bookmark icon will display an alert message of that fact
+// we can also add recipes
+// click on add recipes button in top nav bar
+// pops open a recipe window with fields for recipe data
+// additionally, all recipes a user uploads themselves will only be visible to them
+// such recipes will have an icon attached to them indicating the user's ownership
