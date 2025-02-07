@@ -31,4 +31,7 @@ const timeout = function (s) {
 // click on add recipes button in top nav bar
 // pops open a recipe window with fields for recipe data
 // additionally, all recipes a user uploads themselves will only be visible to them
-// such recipes will have an icon attached to them indicating the user's ownership
+// such recipes will have an icon attached to them indicating the user themself created it
+// also, when you search a term in the app that is related to the recipe you created, it should return that recipe at the top of the results list
+// this is because each recipe is associated with a particular fixed developer API key
+// we will understand that by the end of the section
