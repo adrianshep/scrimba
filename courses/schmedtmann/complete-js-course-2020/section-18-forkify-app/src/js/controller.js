@@ -35,3 +35,9 @@ const timeout = function (s) {
 // also, when you search a term in the app that is related to the recipe you created, it should return that recipe at the top of the results list
 // this is because each recipe is associated with a particular fixed developer API key
 // we will understand that by the end of the section
+
+// User Stories
+// a description of the app's functionality from a user's perspective
+// writing these, we have to put ourselves in the shoes of our users
+// all the user storie put together will provide a clear picture of how the whole application is going to work
+// based on these stories, we'll be able to implement our app's features
