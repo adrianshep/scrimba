@@ -41,3 +41,7 @@ const timeout = function (s) {
 // writing these, we have to put ourselves in the shoes of our users
 // all the user storie put together will provide a clear picture of how the whole application is going to work
 // based on these stories, we'll be able to implement our app's features
+// let's say that we are now the project manager for Forkify and don't yet have the final version of the project
+// the first user story could be:
+// I want to search for recipes so I can find new ideas for meals
+// user story format: as a (type of user), I want to (action) so that (benefit)
