@@ -45,3 +45,7 @@ const timeout = function (s) {
 // the first user story could be:
 // I want to search for recipes so I can find new ideas for meals
 // user story format: as a (type of user), I want to (action) so that (benefit)
+// second user story:
+// I want to be able to update the number of servings so that I can cook a meal for a different number of people
+// third user story:
+// I want to be able to bookmarks recipes so that I can review them later
