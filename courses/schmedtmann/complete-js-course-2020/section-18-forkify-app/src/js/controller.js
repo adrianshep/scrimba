@@ -49,3 +49,7 @@ const timeout = function (s) {
 // I want to be able to update the number of servings so that I can cook a meal for a different number of people
 // third user story:
 // I want to be able to bookmarks recipes so that I can review them later
+// fourth user story:
+// I want to be able to create my own recipes so I have the all organized in the same app
+// fifth user story:
+// I want to be able to see my bookmarks and own recipes when I come back to the app so I can safely close the app after cooking
