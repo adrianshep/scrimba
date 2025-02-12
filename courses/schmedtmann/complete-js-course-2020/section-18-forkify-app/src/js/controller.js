@@ -53,3 +53,9 @@ const timeout = function (s) {
 // I want to be able to create my own recipes so I have the all organized in the same app
 // fifth user story:
 // I want to be able to see my bookmarks and own recipes when I come back to the app so I can safely close the app after cooking
+// we can now use these user stories to come up with the features that we'll need in the application
+// first user story features:
+// user wants to search for recipes:
+// app should have search functionality -- an input field which will send requests to an API with the searched keywords
+// app should display the results with pagination, to make it more user-friendly
+// app needs to display the selected recipe with relevant data such as cooking time, servings, and ingredients
