@@ -59,3 +59,5 @@ const timeout = function (s) {
 // app should have search functionality -- an input field which will send requests to an API with the searched keywords
 // app should display the results with pagination, to make it more user-friendly
 // app needs to display the selected recipe with relevant data such as cooking time, servings, and ingredients
+// second user story feature:
+// app needs functionality that will update the ingredient quantities according to changes made by the user to the number of servings
