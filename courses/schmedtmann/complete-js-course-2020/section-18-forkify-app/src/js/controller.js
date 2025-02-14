@@ -61,3 +61,5 @@ const timeout = function (s) {
 // app needs to display the selected recipe with relevant data such as cooking time, servings, and ingredients
 // second user story feature:
 // app needs functionality that will update the ingredient quantities according to changes made by the user to the number of servings
+// third user story feature:
+// app needs bookmarking functionality that displays a list of all bookmarked recipes
