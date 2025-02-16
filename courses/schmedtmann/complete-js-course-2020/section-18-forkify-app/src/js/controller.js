@@ -67,3 +67,7 @@ const timeout = function (s) {
 // app should allow the user to upload their own recipes
 // app should automatically bookmark these user recipes
 // app should only allow a user to see their own recipes, not those of other users
+// this feature could ber implemented in a complex fashion, but we will keep it very simple by associating a user's recipes to an API key
+// fifth user story features
+// app should be able to store bookmark data in local storage
+// app should, whenever the page loads, display all the saved bookmarks in local storage for reading
