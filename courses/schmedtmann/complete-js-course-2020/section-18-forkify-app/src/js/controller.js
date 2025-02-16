@@ -63,3 +63,7 @@ const timeout = function (s) {
 // app needs functionality that will update the ingredient quantities according to changes made by the user to the number of servings
 // third user story feature:
 // app needs bookmarking functionality that displays a list of all bookmarked recipes
+// fourth user story features:
+// app should allow the user to upload their own recipes
+// app should automatically bookmark these user recipes
+// app should only allow a user to see their own recipes, not those of other users
