@@ -71,3 +71,9 @@ const timeout = function (s) {
 // fifth user story features
 // app should be able to store bookmark data in local storage
 // app should, whenever the page loads, display all the saved bookmarks in local storage for reading
+// we take the above list of unstructured features and put it into a nicely structured flowchart
+// this will allow us to plan how the application will work exactly
+// to start simply, we will only flowchart the first three features
+// as always, we will focus on events
+// the first event should be the user searching for a recipe
+// when a user searches for a certain recipe, we need to asynchronously load the search results from our API and, once the results are in, we render them in our application
