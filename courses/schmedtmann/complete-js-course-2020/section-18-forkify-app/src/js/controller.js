@@ -77,3 +77,7 @@ const timeout = function (s) {
 // as always, we will focus on events
 // the first event should be the user searching for a recipe
 // when a user searches for a certain recipe, we need to asynchronously load the search results from our API and, once the results are in, we render them in our application
+// however, we won't render all the search results as that would be overwhelming
+// instead, we will render pagination buttons in order to hide at least part of the search results across other pages
+// when a user clicks one of the pagination buttons, it will then render the search results of that page
+// it will also render new pagination buttons: if we're on Page 2, the backward button will link to Page 1 search results and the forward button will link to Page 3 results
