@@ -84,3 +84,5 @@ const timeout = function (s) {
 // finally, we need the logic to display the recipe
 // when a user selects a recipe, we need to asynchronously load all the recipe data from the API
 // once the data has arrived, we render the recipe to the user interface
+// we will do the same whenever the page loads with a recipe ID in the URL
+// in both cases, we will load the recipe
