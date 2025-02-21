@@ -86,3 +86,8 @@ const timeout = function (s) {
 // once the data has arrived, we render the recipe to the user interface
 // we will do the same whenever the page loads with a recipe ID in the URL
 // in both cases, we will load the recipe
+// these are the core, most important features of the application:
+// searching for recipes, rendering those search results, and rendering the individual recipe selected
+// these will take us half the next section to implement
+// we will start, however, with only the third feature, the recipe display
+// this will allow us to implement some functionality and also play around with the applications a little bit without thinking about the architecture and its rigid structure
