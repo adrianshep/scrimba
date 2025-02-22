@@ -91,3 +91,17 @@ const timeout = function (s) {
 // these will take us half the next section to implement
 // we will start, however, with only the third feature, the recipe display
 // this will allow us to implement some functionality and also play around with the applications a little bit without thinking about the architecture and its rigid structure
+
+
+// Forkify App: Building a Recipe from API
+
+// structure of project files:
+// index.html on its own
+// all the rest of the files -- four assets -- are in the src folder
+// in the src folder are images, JS, and Sass
+// for JS, we have controller.js
+// Sass is a better way of writing CSS
+// has some nice additional features which make writing CSS for a large scale application a lot easier
+// browsers don't understand Sass, so it has to be converted to CSS
+// Parcel is going to do that for us
+// the rest of the files are images and flowcharts and a small architecture diagram
