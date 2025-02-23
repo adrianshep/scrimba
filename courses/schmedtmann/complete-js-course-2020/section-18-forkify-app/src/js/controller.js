@@ -105,3 +105,11 @@ const timeout = function (s) {
 // browsers don't understand Sass, so it has to be converted to CSS
 // Parcel is going to do that for us
 // the rest of the files are images and flowcharts and a small architecture diagram
+// open up a new terminal
+// we initialize a new project by writing npm init
+// this command will create a package .json file
+// this project should simply be called Forkify version 1.0.0
+// description: Recipe application
+// test command, git repository, keywords don't matter
+// entry point: index.html
+// author: your name
