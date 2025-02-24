@@ -113,3 +113,9 @@ const timeout = function (s) {
 // test command, git repository, keywords don't matter
 // entry point: index.html
 // author: your name
+// set up Parcel in npm scripts with index.html as our entry point:
+// scripts: start: "parcel index.html"
+// also add our build script, the command we're going to run at the end when we're already building the application:
+// scripts: build: "parcel build index.html"
+// in some projects, we don't have an html file, in which case the entry point can be a JS file
+// it can also be in a different folder -- we can specify all that in the Parcel command
