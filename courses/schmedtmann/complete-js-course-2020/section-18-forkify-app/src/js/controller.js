@@ -119,3 +119,12 @@ const timeout = function (s) {
 // scripts: build: "parcel build index.html"
 // in some projects, we don't have an html file, in which case the entry point can be a JS file
 // it can also be in a different folder -- we can specify all that in the Parcel command
+// to run Parcel, we need to install it
+// previously, we installed Parcel by writing npm install Parcel as a dev dependency like this:
+// $ npm i parcel -D
+// this would install the latest version of Parcel available on npm
+// however, Parcel 2 is almost ready, so we want to use the beta version of it now so that the full version of Parcel 2 may be used in the future
+// if Parcel 2 was already out, we would write:
+// $ npm i parcel@2
+// as it's just a beta version, we write @next and add it as a dev dependency:
+// $ npm i parcel@next -D
