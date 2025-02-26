@@ -128,3 +128,11 @@ const timeout = function (s) {
 // $ npm i parcel@2
 // as it's just a beta version, we write @next and add it as a dev dependency:
 // $ npm i parcel@next -D
+// should show up in package.json as:
+// devDependencies: parcel: ^2.0.0-beta.x
+// wheter beta or not, for this section, Parcel needs to be 2-something
+// we start Parcel by running our npm script, npm run start
+// the start script in npm is a special one for which you do not need the word run:
+// $ npm start
+// will call our start script in package.json:
+// scripts: start: parcel index.html
