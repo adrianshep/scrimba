@@ -136,3 +136,11 @@ const timeout = function (s) {
 // $ npm start
 // will call our start script in package.json:
 // scripts: start: parcel index.html
+// start script is installing Sass, for which we get an error
+// we quit the installation with control C
+// then:
+// $ npm install
+// and this will install Sass for us
+// if there is still an error with Sass here, try installing Sass using the exact same version number
+// $ npm install Sass 1.26.10
+// if you're still running into problems with Sass or Parcel, take a look at the FAQ in the GitHub repo
