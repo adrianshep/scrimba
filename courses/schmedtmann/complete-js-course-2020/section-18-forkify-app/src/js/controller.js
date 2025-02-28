@@ -144,3 +144,17 @@ const timeout = function (s) {
 // if there is still an error with Sass here, try installing Sass using the exact same version number
 // $ npm install Sass 1.26.10
 // if you're still running into problems with Sass or Parcel, take a look at the FAQ in the GitHub repo
+// having run npm start, we now have a modules folder containing many modules
+// we also have a distribution folder
+// everything is in one folder:
+// our index.html, the compiled version of our controller script
+// we have an actual CSS files and we can see all our images
+// if we take a look at our index.html:
+// it has replaced the controller.js in the source
+// there is also the SCSS file
+// Parcel knows it needs to compile the Sass file to CSS, so it included that file in the distribution folder and replaced the link to the actual final CSS file
+// the same is true of all the images:
+// Parcel copied all the images to the distribution folder and gave them a new name and replaced their source in the html
+// everything we will develop will be in the source folder and only what we then see in the browser will be coming from the distribution folder
+// this is the logic of having a module bundler: it takes our raw source code and compiles it into a nice package in a folder ready to ship to browsers
+// (if you're using Parcel v2 (NOT beta version), please defer with type="module")
