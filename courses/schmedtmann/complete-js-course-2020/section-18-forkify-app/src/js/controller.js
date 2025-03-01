@@ -158,3 +158,12 @@ const timeout = function (s) {
 // everything we will develop will be in the source folder and only what we then see in the browser will be coming from the distribution folder
 // this is the logic of having a module bundler: it takes our raw source code and compiles it into a nice package in a folder ready to ship to browsers
 // (if you're using Parcel v2 (NOT beta version), please defer with type="module")
+
+// we can think about our controller and think about making our first API call
+// we can open our page by clicking the link in the console
+// when we open our developer tools, we have nothing there as we don't yet have any code
+// let us log something to the console to see that our Parcel setup is working
+
+// console.log('TEST');
+
+// in the console, we can see that it already built a new version and that TEST appears
