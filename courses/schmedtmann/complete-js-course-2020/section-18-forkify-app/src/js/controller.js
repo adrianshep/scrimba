@@ -167,3 +167,10 @@ const timeout = function (s) {
 // console.log('TEST');
 
 // in the console, we can see that it already built a new version and that TEST appears
+// with everything working, let us now make our first API call
+// for this project, Jonas developed his own API so that it wouldn't be dependent on any third party services:
+// https://forkify-api.jonas.io
+// any good API will have documentation; the above is the documentation for the Forkify API version 2
+// search terms in this API are limited to those on the list, but should be enough to test the applications
+// you can onlh make 100 API requests per hour in order not to overload Jonas's servers
+// the API key is what we will need to upload our own recipes
