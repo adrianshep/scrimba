@@ -174,3 +174,10 @@ const timeout = function (s) {
 // search terms in this API are limited to those on the list, but should be enough to test the applications
 // you can onlh make 100 API requests per hour in order not to overload Jonas's servers
 // the API key is what we will need to upload our own recipes
+// main URLs or routes of this API:
+// to start, we'll focus on the simple one to get one single recipe
+// the path of this part of the API is this:
+// https://forkify-api.jonas.io/api/v2/recipes/:id
+// if we click on the example of a single recipe API in the documentation, we see the keys and corresponding values for it
+// https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886
+// for now, this is the URL we will use in our code to get exactly this recipe into our application
