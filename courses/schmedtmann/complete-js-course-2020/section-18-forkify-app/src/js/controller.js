@@ -181,3 +181,17 @@ const timeout = function (s) {
 // if we click on the example of a single recipe API in the documentation, we see the keys and corresponding values for it
 // https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886
 // for now, this is the URL we will use in our code to get exactly this recipe into our application
+// as always, to make an Ajax request to an API, we use the fetch function
+// fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+// let's create some function around this, an async function so we can use async await
+// let's call it showRecipe
+// as always we use a try catch
+// and if there is an error, we want to alert that error -- very simple error handling for now
+// and now let's await this and store the result in the the res variable, which stand for response
+// const showRecipe = aysnc function() {
+//  try {
+//      await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886')
+//       } catch (err) {
+//          alert (err)
+//          }
+// }
