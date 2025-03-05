@@ -188,10 +188,20 @@ const timeout = function (s) {
 // as always we use a try catch
 // and if there is an error, we want to alert that error -- very simple error handling for now
 // and now let's await this and store the result in the the res variable, which stand for response
+// keep in mind that using the fetch function here will return a promise
+// and, since we are in an async function, we can await that promise
+// meaning, we will stop the code execution here, which isn't a problem as an async functions only run in the background anyway
+// we are not blocking our main thread of execution here
+// once we have that result, we then need to convert it to json
+// we'll create a data variable and then await the response json
+// the json method is available on all the response objects, and a response object is exactly what the fetch function here returns
+// we can then call json on that response, which returns another promise which we have to await again
+// in the end, we get our data stored to that variable
 // const showRecipe = aysnc function() {
 //  try {
-//      await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886')
+//      const res = await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+//         const data = await res.json();
 //       } catch (err) {
 //          alert (err)
 //          }
-// }
+// };
