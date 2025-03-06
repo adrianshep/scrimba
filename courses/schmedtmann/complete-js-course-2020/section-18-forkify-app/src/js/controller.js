@@ -197,11 +197,18 @@ const timeout = function (s) {
 // the json method is available on all the response objects, and a response object is exactly what the fetch function here returns
 // we can then call json on that response, which returns another promise which we have to await again
 // in the end, we get our data stored to that variable
+// call the function and console log the response and the data
 // const showRecipe = aysnc function() {
 //  try {
 //      const res = await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
 //         const data = await res.json();
+//         console.log(res, data);
 //       } catch (err) {
 //          alert (err)
 //          }
 // };
+// showRecipe();
+// we already have a result:
+// first is the response, this returns a response object
+// but then we get the status, which is success, and the data itself
+// inside of the data, we get the recipe: cooking time, the ID, the ingredients, the publisher, servings, and so forth
