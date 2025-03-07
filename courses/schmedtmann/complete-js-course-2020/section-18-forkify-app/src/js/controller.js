@@ -212,3 +212,14 @@ const timeout = function (s) {
 // first is the response, this returns a response object
 // but then we get the status, which is success, and the data itself
 // inside of the data, we get the recipe: cooking time, the ID, the ingredients, the publisher, servings, and so forth
+// we started by assuming we will have success with our call
+// let's try a call with a wrong ID, one that doesn't exist on the server
+// in console, we get "bad request"
+// in the response, we see ok is set to false
+// this is what we're going to use:
+// when ok is set to false, it means that there was some kind of error in the fetch
+// we can use that to create our own errors
+// more from the response: is says "fail"
+// also a message of invalid_id and then the ID that we provided
+// the API returns a nice error message -- let's use that
+// "bad request" is not a very informative error message; it's way better to use the one the API has returned to us
