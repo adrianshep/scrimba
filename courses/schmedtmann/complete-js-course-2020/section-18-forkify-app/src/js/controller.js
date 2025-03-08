@@ -223,3 +223,22 @@ const timeout = function (s) {
 // also a message of invalid_id and then the ID that we provided
 // the API returns a nice error message -- let's use that
 // "bad request" is not a very informative error message; it's way better to use the one the API has returned to us
+// that is at .message of this object
+// we can say if res.ok is false -- if the response is not okay -- then we want to throw a new error
+// then we can use the .message property already coming from the data, from the response of the server
+// the ok property is stored in the response itself
+// let's also provide the status code which is at res.status
+
+// const showRecipe = aysnc function() {
+//  try {
+//      const res = await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+//         const data = await res.json();
+// 
+//         if(!res.ok) throw new Error(`${data.message} (${res.status})`)
+// 
+//         console.log(res, data);
+//       } catch (err) {
+//          alert (err)
+//          }
+// };
+// showRecipe();
