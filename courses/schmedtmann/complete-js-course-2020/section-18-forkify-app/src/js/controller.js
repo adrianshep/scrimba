@@ -228,6 +228,9 @@ const timeout = function (s) {
 // then we can use the .message property already coming from the data, from the response of the server
 // the ok property is stored in the response itself
 // let's also provide the status code which is at res.status
+// we want to create a new object based on this object that has better variable names
+// we have, for example, these underscores which are very unusual in JS
+// let's create a new recipe variable which should be data
 
 // const showRecipe = aysnc function() {
 //  try {
@@ -237,6 +240,7 @@ const timeout = function (s) {
 //         if(!res.ok) throw new Error(`${data.message} (${res.status})`)
 // 
 //         console.log(res, data);
+//         let recipe = data.data.recipe;
 //       } catch (err) {
 //          alert (err)
 //          }
