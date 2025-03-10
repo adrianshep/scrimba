@@ -231,6 +231,9 @@ const timeout = function (s) {
 // we want to create a new object based on this object that has better variable names
 // we have, for example, these underscores which are very unusual in JS
 // let's create a new recipe variable which should be data
+// since we have let recipe = data.data.recipe, that is, recipe on both sides, we can use destructuring:
+// let {recipe} = data.data
+// we used let for the recipe variable so we can create a new recipe object based on it
 
 // const showRecipe = aysnc function() {
 //  try {
@@ -240,7 +243,18 @@ const timeout = function (s) {
 //         if(!res.ok) throw new Error(`${data.message} (${res.status})`)
 // 
 //         console.log(res, data);
-//         let recipe = data.data.recipe;
+//         let {recipe} = data.data;
+//         recipe = {
+//          id: recipe.id,
+//          title: recipe.title,
+//          publisher: recipe.publisher,
+//          sourceUrl: recipe.source_url,
+//          image: recipe.image_url,
+//          servings: recipe.servings,
+//          cookingTime: recipe.cooking_time,
+//          ingredients: recipe.ingredients,
+//          }
+// 
 //       } catch (err) {
 //          alert (err)
 //          }
