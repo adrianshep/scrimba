@@ -260,3 +260,13 @@ const timeout = function (s) {
 //          }
 // };
 // showRecipe();
+
+// in the console, we see our recipe, just received from the server, nicely formatted
+// the path:
+// https://forkify-api.jonas.io/api/v2/recipes/
+// will take us to all the recipes there are for a certain search query
+// https://forkify-api.jonas.io/api/v2/recipes/?search=pizza
+// above route is for all pizza recipes
+// the query is set to pizza after the question mark
+// this is a very common format for sending variables over your URLs
+// search is like a variable and pizza is the value
