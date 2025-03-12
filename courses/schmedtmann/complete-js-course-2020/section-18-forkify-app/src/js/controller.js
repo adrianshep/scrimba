@@ -13,7 +13,6 @@ const timeout = function (s) {
 
 ///////////////////////////////////////
 
-
 // Forkify App
 
 // Project Overview and Planning
@@ -112,6 +111,7 @@ const timeout = function (s) {
 // description: Recipe application
 // test command, git repository, keywords don't matter
 // entry point: index.html
+// if you're using Parcel v2, remove entry point line entirely
 // author: your name
 // set up Parcel in npm scripts with index.html as our entry point:
 // scripts: start: "parcel index.html"
@@ -228,6 +228,8 @@ const timeout = function (s) {
 // then we can use the .message property already coming from the data, from the response of the server
 // the ok property is stored in the response itself
 // let's also provide the status code which is at res.status
+// we already get an error alert window because of the catch error that gets thrown in the try block
+// let's format the data a bit more nicely
 // we want to create a new object based on this object that has better variable names
 // we have, for example, these underscores which are very unusual in JS
 // let's create a new recipe variable which should be data
@@ -235,6 +237,7 @@ const timeout = function (s) {
 // let {recipe} = data.data
 // we used let for the recipe variable so we can create a new recipe object based on it
 
+// 1) Loading recipe
 // const showRecipe = aysnc function() {
 //  try {
 //      const res = await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
@@ -255,6 +258,102 @@ const timeout = function (s) {
 //          ingredients: recipe.ingredients,
 //          }
 // 
+// 2) Rendering recipe
+/* const markup = `
+            <figure class="recipe__fig">
+          <img src="src/img/test-1.jpg" alt="Tomato" class="recipe__img" />
+          <h1 class="recipe__title">
+            <span>Pasta with tomato cream sauce</span>
+          </h1>
+        </figure>
+
+        <div class="recipe__details">
+          <div class="recipe__info">
+            <svg class="recipe__info-icon">
+              <use href="src/img/icons.svg#icon-clock"></use>
+            </svg>
+            <span class="recipe__info-data recipe__info-data--minutes">45</span>
+            <span class="recipe__info-text">minutes</span>
+          </div>
+          <div class="recipe__info">
+            <svg class="recipe__info-icon">
+              <use href="src/img/icons.svg#icon-users"></use>
+            </svg>
+            <span class="recipe__info-data recipe__info-data--people">4</span>
+            <span class="recipe__info-text">servings</span>
+
+            <div class="recipe__info-buttons">
+              <button class="btn--tiny btn--increase-servings">
+                <svg>
+                  <use href="src/img/icons.svg#icon-minus-circle"></use>
+                </svg>
+              </button>
+              <button class="btn--tiny btn--increase-servings">
+                <svg>
+                  <use href="src/img/icons.svg#icon-plus-circle"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="recipe__user-generated">
+            <svg>
+              <use href="src/img/icons.svg#icon-user"></use>
+            </svg>
+          </div>
+          <button class="btn--round">
+            <svg class="">
+              <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="recipe__ingredients">
+          <h2 class="heading--2">Recipe ingredients</h2>
+          <ul class="recipe__ingredient-list">
+            <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">1000</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">g</span>
+                pasta
+              </div>
+            </li>
+
+            <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">0.5</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">cup</span>
+                ricotta cheese
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="recipe__directions">
+          <h2 class="heading--2">How to cook it</h2>
+          <p class="recipe__directions-text">
+            This recipe was carefully designed and tested by
+            <span class="recipe__publisher">The Pioneer Woman</span>. Please check out
+            directions at their website.
+          </p>
+          <a
+            class="btn--small recipe__btn"
+            href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+            target="_blank"
+          >
+            <span>Directions</span>
+            <svg class="search__icon">
+              <use href="src/img/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+*/ `;
 //       } catch (err) {
 //          alert (err)
 //          }
@@ -270,3 +369,17 @@ const timeout = function (s) {
 // the query is set to pizza after the question mark
 // this is a very common format for sending variables over your URLs
 // search is like a variable and pizza is the value
+
+
+// Rendering the Recipe
+
+// after loading the recipe data from our API, let's now ender it in our application
+// we'll go to our HTML file to get the template for that
+// we want the recipe class which is the whole gray container that will contain the rendered recipe
+// Empty container has shows this message:
+// Start by searching for a recipe or an ingredient. Have fun!
+// there's also code for a loading spinner, for an error, and for the recipe itself
+// loading the recipe was step one and now rendering it will be step two
+// for now, we are doing this like a really big function
+// once we start thinking about the architecture, we will then break up the code into functions and modules and classes
+// for now, as always, we will start by creating a big template literal so we can replace all the data in it as we need
