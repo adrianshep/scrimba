@@ -383,3 +383,6 @@ const timeout = function (s) {
 // for now, we are doing this like a really big function
 // once we start thinking about the architecture, we will then break up the code into functions and modules and classes
 // for now, as always, we will start by creating a big template literal so we can replace all the data in it as we need
+// we switch in the data we need:
+// replace string with recipe.image, whose property is a URL pointing to the location of the image on the Forkify API server
+// the recipe title we will use in place of the text string and as an alt text of the image
