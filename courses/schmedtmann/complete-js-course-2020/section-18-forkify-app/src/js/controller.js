@@ -261,9 +261,9 @@ const timeout = function (s) {
 // 2) Rendering recipe
 /* const markup = `
             <figure class="recipe__fig">
-          <img src="src/img/test-1.jpg" alt="Tomato" class="recipe__img" />
+          <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img" />
           <h1 class="recipe__title">
-            <span>Pasta with tomato cream sauce</span>
+            <span>${recipe.title}</span>
           </h1>
         </figure>
 
@@ -272,14 +272,14 @@ const timeout = function (s) {
             <svg class="recipe__info-icon">
               <use href="src/img/icons.svg#icon-clock"></use>
             </svg>
-            <span class="recipe__info-data recipe__info-data--minutes">45</span>
+            <span class="recipe__info-data recipe__info-data--minutes">${recipe.cookingTime}</span>
             <span class="recipe__info-text">minutes</span>
           </div>
           <div class="recipe__info">
             <svg class="recipe__info-icon">
               <use href="src/img/icons.svg#icon-users"></use>
             </svg>
-            <span class="recipe__info-data recipe__info-data--people">4</span>
+            <span class="recipe__info-data recipe__info-data--people">${recipe.servings}</span>
             <span class="recipe__info-text">servings</span>
 
             <div class="recipe__info-buttons">
@@ -386,3 +386,5 @@ const timeout = function (s) {
 // we switch in the data we need:
 // replace string with recipe.image, whose property is a URL pointing to the location of the image on the Forkify API server
 // the recipe title we will use in place of the text string and as an alt text of the image
+// then we have the clock icon, so the 45 is the cooking time -- we replace it with ${recipe.cookingTime}
+// further down we have servings; the static 4 will be replaced with data coming from the recipe object, recipe.servings
