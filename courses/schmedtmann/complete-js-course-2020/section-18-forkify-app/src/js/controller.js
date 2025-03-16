@@ -353,7 +353,9 @@ const timeout = function (s) {
             </svg>
           </a>
         </div>
-*/ `;
+        `;
+        recipeContainer.insertAdjacentHTML('afterbegin', markup);
+*/ 
 //       } catch (err) {
 //          alert (err)
 //          }
@@ -391,3 +393,10 @@ const timeout = function (s) {
 // right now we have two list elements for the static ingredients example, one element for each ingredient, but we'll tackle that later
 // we change recipe publisher to recipe.publisher
 // with the source URL, we have the URL of the recipe itself, where it comes from -- we replace that with recipe.sourceUrl
+// before we can see the result, we need to insert this HTML into our DOM
+// for that, we can use the insert adjacent HTML method which we need to apply to the parent element
+// that's already selected in the uppermost part of the code, the element with the class of recipe
+// it's the div element called recipe container where we want to attach the HTML markup
+// so recipeContainer.insertAdjacentHTML('afterbegin', markup);
+// as a first child and then the markup variable we just created
+// this should now render the recipe in the user interface except for the ingredients which, for now, will still be the old ones
