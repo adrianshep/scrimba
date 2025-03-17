@@ -354,6 +354,7 @@ const timeout = function (s) {
           </a>
         </div>
         `;
+        recipeContainer.innerHTML = '';
         recipeContainer.insertAdjacentHTML('afterbegin', markup);
 */ 
 //       } catch (err) {
@@ -400,3 +401,10 @@ const timeout = function (s) {
 // so recipeContainer.insertAdjacentHTML('afterbegin', markup);
 // as a first child and then the markup variable we just created
 // this should now render the recipe in the user interface except for the ingredients which, for now, will still be the old ones
+// the recipe is displaying nicely already
+// although there is still the message from the no recipes saved start of the program
+// and all of the icons are missing
+// we'll start with removing the message
+// before we insert any new markup, we need to get rid of the markup that is already there
+// let's simply use recipeContainer.innerHTML and set it to nothing:
+// recipeContainer.innerHTML = '';
