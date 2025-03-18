@@ -408,3 +408,12 @@ const timeout = function (s) {
 // before we insert any new markup, we need to get rid of the markup that is already there
 // let's simply use recipeContainer.innerHTML and set it to nothing:
 // recipeContainer.innerHTML = '';
+// now the previous markup is gone
+// let's now worry about the ingredients
+// we'll need to loop over the ingredients array
+// for each, we should create a markup
+// we take recipe.ingredients and then loop over that using an array method
+// in the end, the expression we need here has to return a string of HTML
+// our array method need to return something, therefore, and that means foreach is not the way to go
+// instead, we will use map which returns a new array of the same length which, in the end, we'll be able to join
+// ${recipe.ingredients.map()}
