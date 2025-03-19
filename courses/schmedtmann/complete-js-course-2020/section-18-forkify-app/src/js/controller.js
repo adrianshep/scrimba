@@ -417,3 +417,23 @@ const timeout = function (s) {
 // our array method need to return something, therefore, and that means foreach is not the way to go
 // instead, we will use map which returns a new array of the same length which, in the end, we'll be able to join
 // ${recipe.ingredients.map()}
+// now we can loop over the array by specifying a callback function
+// each element is going to be called ingredient
+// then we can replace a string
+/* 
+${recipe.ingredients.map(ing => {
+    return `
+        <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">1000</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">g</span>
+                pasta
+              </div>
+            </li>
+    `
+    })}
+*/ 
+ 
