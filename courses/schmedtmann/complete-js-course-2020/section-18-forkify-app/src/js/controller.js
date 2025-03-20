@@ -427,13 +427,15 @@ ${recipe.ingredients.map(ing => {
               <svg class="recipe__icon">
                 <use href="src/img/icons.svg#icon-check"></use>
               </svg>
-              <div class="recipe__quantity">1000</div>
+              <div class="recipe__quantity">${ing.quantity}</div>
               <div class="recipe__description">
-                <span class="recipe__unit">g</span>
-                pasta
+                <span class="recipe__unit">${ing.unit}</span>
+                ${ing.description}}
               </div>
             </li>
     `
     })}
 */ 
- 
+// let's think about the data here
+// each array element is an object which has quantity, unit, and description
+// we can say ing.quantity, ing.unit, and finally, instead of pasta, ing.description
