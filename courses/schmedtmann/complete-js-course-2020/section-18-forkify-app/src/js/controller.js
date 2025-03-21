@@ -433,9 +433,14 @@ ${recipe.ingredients.map(ing => {
                 ${ing.description}}
               </div>
             </li>
-    `
-    })}
+    `;
+    }).join('')}
 */ 
 // let's think about the data here
 // each array element is an object which has quantity, unit, and description
 // we can say ing.quantity, ing.unit, and finally, instead of pasta, ing.description
+// now we have an array in which each element wil contain this markup corresponding to an ingredient
+// all we need to do now is to transform that array of strings into one big string
+// we can take the result of this map which is that array and call join on it:
+//    }).join('')}
+// when we save this, then our eight ingredients render in HTML
