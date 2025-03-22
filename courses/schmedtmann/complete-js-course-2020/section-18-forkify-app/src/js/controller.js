@@ -444,3 +444,23 @@ ${recipe.ingredients.map(ing => {
 // we can take the result of this map which is that array and call join on it:
 //    }).join('')}
 // when we save this, then our eight ingredients render in HTML
+// switching out the API URL in the fetch renders the other recipe
+// the one thing still missing is the icons
+// why is that?
+// the page displayed in the browser is the HTML from the dist folder
+// all the images and assets have been coming from that folder, including icons
+// icons have been coming from the icon.svg file
+// now, however, the icons are coming from the icons.96fe577f.svg file -- icon search, for example
+// however, in our template literal, we are still writing the old path to the icons: src/img/icons.svg#icon-clock, for example
+// right now, JS won't be able to find this
+// in the dist folder there is no source/image folder in which there is icons.svg as that only exists in our source folder, where we are developing the application
+// when we are shipping the application already, we using the data from the dist folder instead
+// we need, therefore, a way to tell our JS that the icons file is no longer the former one but the latter
+// we can do that with Parcel by importing the icons file
+// we go to the top of our file, where like to keep all the imports
+// in Parcel, we can import all kinds of assets besides JS files, including images
+// let's import what we'll call icons, but the name can be anything we want
+// we need to find a path to the original icons file from where we are in controller.js
+// exactly the way we browse the file tree in the terminal:
+// we need to go up to the parent folder and to the source folder, the parent of js, and from there, we can go into images and then icons.svg
+// import icons from '../img/icons.svg'
