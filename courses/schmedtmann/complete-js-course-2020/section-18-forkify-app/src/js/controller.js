@@ -459,8 +459,13 @@ ${recipe.ingredients.map(ing => {
 // we can do that with Parcel by importing the icons file
 // we go to the top of our file, where like to keep all the imports
 // in Parcel, we can import all kinds of assets besides JS files, including images
+// if you are running Parcel 1:
 // let's import what we'll call icons, but the name can be anything we want
 // we need to find a path to the original icons file from where we are in controller.js
 // exactly the way we browse the file tree in the terminal:
 // we need to go up to the parent folder and to the source folder, the parent of js, and from there, we can go into images and then icons.svg
 // import icons from '../img/icons.svg'
+// if you are running Parcel 2:
+// it works almost the same way
+// for any static assets that aren't programming files -- images, videos, sound files -- we need to write url: then the path to the file
+// import icons from 'url:../img/icons.svg'
