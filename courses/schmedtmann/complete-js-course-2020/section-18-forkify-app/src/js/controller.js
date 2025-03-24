@@ -469,3 +469,13 @@ ${recipe.ingredients.map(ing => {
 // it works almost the same way
 // for any static assets that aren't programming files -- images, videos, sound files -- we need to write url: then the path to the file
 // import icons from 'url:../img/icons.svg'
+// when logged, icons is revealed to be nothing more than the path to the new icons file:
+// http://localhost:1234/icons.96fc577f.svg
+// in the path, the local host is our dist folder
+// in that dist folder, the 96fc577f icons file -- is the one we need
+// everywhere in the rest of our code where it says "icons," we have the old path
+// we want to replace it with the new path
+// we select all of them using Commmand or Control+D
+// if that doesn't work, you can use Control+F to find each occurrence
+// we can delete them all and replace them with the new icons variable
+// when we render the HTML, we see all the icons are back
