@@ -479,3 +479,19 @@ ${recipe.ingredients.map(ing => {
 // if that doesn't work, you can use Control+F to find each occurrence
 // we can delete them all and replace them with the new icons variable
 // when we render the HTML, we see all the icons are back
+// adding a loading spinner, a very common pattern seen in applications
+// we will create an external function at the top of the code that will be generic so we may reuse it
+// replace old icons path with new
+// we add HTML to the DOM as a child of the parent element
+/* 
+const renderSpinner = function(parentEl) {
+    const markup = `
+        <div class="spinner">
+            <svg>
+                <use href="${icons}#icon-loader"></use>
+            </svg>
+        </div>
+    `;
+    parentEl.insertAdjacentHTML('afterbegin', markup);
+}
+*/
