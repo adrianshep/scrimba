@@ -495,3 +495,8 @@ const renderSpinner = function(parentEl) {
     parentEl.insertAdjacentHTML('afterbegin', markup);
 }
 */
+// why this is going to work:
+// in the CSS, we see that the icon inside the spinner class has a rotation animation that keeps going forever
+// that's the infinite attribute in the animation property
+// Jonas created this rotation animation manually using key frames
+// it rotates the element to 360 degrees
