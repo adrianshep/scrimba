@@ -500,3 +500,8 @@ const renderSpinner = function(parentEl) {
 // that's the infinite attribute in the animation property
 // Jonas created this rotation animation manually using key frames
 // it rotates the element to 360 degrees
+// before we insert the above code, we should clear the parent element
+// as before, we set the inner HTML to nothing
+// parentEl.innerHTML = '';
+// then we render the spinner:
+// renderSpinner(recipeContainer);
