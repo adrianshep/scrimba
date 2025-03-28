@@ -505,3 +505,9 @@ const renderSpinner = function(parentEl) {
 // parentEl.innerHTML = '';
 // then we render the spinner:
 // renderSpinner(recipeContainer);
+// for testing it in the console, the slow 3G setting will allow the spinner to appear a bit longer
+// to finish this section, we will add polyfills for ES6 features to our code base
+// to do that, we install some special packages called npm core-js
+// we can install multiple packages at the same time by appending "regenerator-runtime":
+// $ npm i core-js regenerator-runtime
+// in package.json, they should show up under dependencies: core-js and regenerator-runtime
