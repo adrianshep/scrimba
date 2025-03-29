@@ -511,3 +511,10 @@ const renderSpinner = function(parentEl) {
 // we can install multiple packages at the same time by appending "regenerator-runtime":
 // $ npm i core-js regenerator-runtime
 // in package.json, they should show up under dependencies: core-js and regenerator-runtime
+// then we import them at the top of our file below 'import icons from...'
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
+// 'regenerator-runtime/runtime' is for polyfilling async/await
+// core-js/stable is for polyfilling everything else
+// we could cherry-pick some features and only import those, but it's simpler to polyfill everything
+// when we test in the console, we see that everything is working
