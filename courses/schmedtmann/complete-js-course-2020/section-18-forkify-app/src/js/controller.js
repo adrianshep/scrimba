@@ -518,3 +518,10 @@ const renderSpinner = function(parentEl) {
 // core-js/stable is for polyfilling everything else
 // we could cherry-pick some features and only import those, but it's simpler to polyfill everything
 // when we test in the console, we see that everything is working
+
+
+// Listening for Load and Hashchange Events
+
+// let's now add some event listeners to our application and simulate that we already have some search results in place
+// going by our flowchart, we already implemented the loading of a recipe and the rendering of it
+// now we want to hook up two event listeners so the recipe is loaded upon either of the two events happening: the user selects recipe from the results list or the page loads with recipe ID
