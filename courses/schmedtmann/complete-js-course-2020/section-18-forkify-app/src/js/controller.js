@@ -525,3 +525,8 @@ const renderSpinner = function(parentEl) {
 // let's now add some event listeners to our application and simulate that we already have some search results in place
 // going by our flowchart, we already implemented the loading of a recipe and the rendering of it
 // now we want to hook up two event listeners so the recipe is loaded upon either of the two events happening: the user selects recipe from the results list or the page loads with recipe ID
+// clicking on a recipe, its URL contains a hash symbol #
+// everything that comes after the # symbol is called the hash
+// whenever that hash changes, a new recipe is going to be loaded
+// that changing of the hash is an event for which we can listen
+// we can listen for that hash-change event, take the hash, then from there take the ID, then load the recipe with that ID
