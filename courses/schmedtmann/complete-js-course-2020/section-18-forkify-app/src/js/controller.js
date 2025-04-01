@@ -530,3 +530,11 @@ const renderSpinner = function(parentEl) {
 // whenever that hash changes, a new recipe is going to be loaded
 // that changing of the hash is an event for which we can listen
 // we can listen for that hash-change event, take the hash, then from there take the ID, then load the recipe with that ID
+// to start, we need a way of triggering a change of the hash
+// we can do that by adding a fake link in the search results in index.html:
+// <a href="#alphanumericstring1">RECIPE 1</a>
+// now there is a very small link on the HTML page that, when clicked, changes the hash
+// we add a second one:
+// <a href="#alphanumericstring2">RECIPE 2</a>
+// clicking either of these changes the hash
+// we can listen for that change with an event listener
