@@ -537,4 +537,9 @@ const renderSpinner = function(parentEl) {
 // we add a second one:
 // <a href="#alphanumericstring2">RECIPE 2</a>
 // clicking either of these changes the hash
-// we can listen for that change with an event listener
+// we can listen for that change with an event listener at the bottom of the controller.js code
+// the name of the event is 'hashchange'
+// window.addEventListener('hashchange');
+// the function we want to run then is showRecipe
+// we will remove it from just above and only run it whenever that hash changes:
+// window.addEventListener('hashchange', showRecipe);
