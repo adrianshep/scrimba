@@ -543,3 +543,22 @@ const renderSpinner = function(parentEl) {
 // the function we want to run then is showRecipe
 // we will remove it from just above and only run it whenever that hash changes:
 // window.addEventListener('hashchange', showRecipe);
+// the next step is to get the recipe ID from the hash
+// regardless of which sidebar link the user clicks, the same recipe will load as the same ID is hard coded in them
+// instead, we want to show the recipes corresponding to unique IDs
+// we want to get the ID dynamically from the hash
+// we can do that from inside the try
+// the ID is window.location, the entire URL, and from there we take the hash
+// try {
+//  const id = window.location.hash;
+// }
+// if we log the id, we see:
+// #5ed6604591c37cdc854bc886
+// which is the ID preceded by the hash symbol
+// we want to remove that first character that is the hash symbol, starting to read from the string at the first position
+// we can do that with the slice method, starting at one and going all the way to the end
+//  const id = window.location.hash.slice(1);
+// instead of hard-coding the ID, we use:
+// const res = await fetch(
+//  `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
+// );
