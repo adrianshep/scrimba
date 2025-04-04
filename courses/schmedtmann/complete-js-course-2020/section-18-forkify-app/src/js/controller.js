@@ -562,3 +562,18 @@ const renderSpinner = function(parentEl) {
 // const res = await fetch(
 //  `https://forkify-api.herokuapp.com/api/v2/recipes/${id}`
 // );
+// what happens if we take the entire URL, copy it, and try to open it in another tab?
+// no recipe shows up at all
+// we opened the page, but this time, the hash didn't change nor did we change it
+// so we also want to listen for the load event, that is, the event of the entire page loading
+// we add a new addEventListener by copying the original addEventListener and replacing 'hashchange' with 'load':
+// window.addEventListener('load', showRecipe);
+// but this would create unnecessary duplicate code
+// we can do both event listens at the same time
+// imagine the difficulty if you had ten events for which you wanted to listen
+// instead, we can do an array which contains the two events, 'hashchange' and 'load'
+// we can loop over this array and do something using forEach
+// in this array, each element is an event, ev for short
+// then we add window.addEventListener and then the event and then the handler function
+// in the first iteration, the ev will be hashchange and, in the second, it will be load:
+// ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
