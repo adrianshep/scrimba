@@ -577,3 +577,14 @@ const renderSpinner = function(parentEl) {
 // then we add window.addEventListener and then the event and then the handler function
 // in the first iteration, the ev will be hashchange and, in the second, it will be load:
 // ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+
+
+// The MVC Architecture
+
+// we've already implemented part of the Forkify application, but at this point it has no structure
+// it's now time to address this project's architecture and software architecture in general
+// why do we even need an architecture when we build software?
+// first, the architecture will give our project the structure in which we can then write the code
+// structure means how we organize and divide the code into different modules, classes, and functions
+// all these hold our code together and give it structure
+
