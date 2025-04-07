@@ -587,4 +587,7 @@ const renderSpinner = function(parentEl) {
 // first, the architecture will give our project the structure in which we can then write the code
 // structure means how we organize and divide the code into different modules, classes, and functions
 // all these hold our code together and give it structure
-
+// the second reason is maintainability
+// when we build a project we always need to think about the future and keep in mind that the project is never really finished
+// we will always need to change things about the project in the future and we will need to maintain it
+// and that only works if the project is nicely structured
