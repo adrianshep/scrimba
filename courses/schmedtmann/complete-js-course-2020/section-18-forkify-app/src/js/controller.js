@@ -591,3 +591,6 @@ const renderSpinner = function(parentEl) {
 // when we build a project we always need to think about the future and keep in mind that the project is never really finished
 // we will always need to change things about the project in the future and we will need to maintain it
 // and that only works if the project is nicely structured
+// plus, we might want to add new features to the project, which brings us to the third reason, expandability
+// this is the ability to easily add new features in the future, which is only possible with a good structure and a good overall architecture
+// the perfect architecture is one allowing for all three of these characteristics of structure, maintainability, and expandability
