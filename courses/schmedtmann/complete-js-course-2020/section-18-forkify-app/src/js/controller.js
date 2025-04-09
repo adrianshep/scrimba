@@ -594,3 +594,14 @@ const renderSpinner = function(parentEl) {
 // plus, we might want to add new features to the project, which brings us to the third reason, expandability
 // this is the ability to easily add new features in the future, which is only possible with a good structure and a good overall architecture
 // the perfect architecture is one allowing for all three of these characteristics of structure, maintainability, and expandability
+// in order to achieve that perfect architecture, we can create our own from scratch, as we did in the Mapty project
+// however, that only works with a really small project
+// when a project grows more complex, it will be very hard to achieve a good architecture for it on our own
+// instead, we can opt for a well-established architectural pattern that developers have been using for years and even decades
+// exmaples are: Model View Controller, Model View Presenter, Flux, and many others
+// we will do that here with the Forkify project, as it's a bit more complex than the Mapty project
+// these days, in modern web development, many developers use a framework like React, Angular, Vue or Svelte to take care of the architecture for them
+// in those cases, developers don't have to think a lot about architectures on their own
+// this is a good idea at a certain point, especially for large scale applications
+// however, it's very important that you really know JS before switching to these frameworks, including how to implement an architecture by yourself
+// this will make it much easier to learn React or Vue or whatever framework you choose later
