@@ -605,3 +605,5 @@ const renderSpinner = function(parentEl) {
 // this is a good idea at a certain point, especially for large scale applications
 // however, it's very important that you really know JS before switching to these frameworks, including how to implement an architecture by yourself
 // this will make it much easier to learn React or Vue or whatever framework you choose later
+// wherever it comes from and whoever develops it, there are some components that any architecture must have:
+// business logic, state, an HTTP library, application logic, and presentation logic
