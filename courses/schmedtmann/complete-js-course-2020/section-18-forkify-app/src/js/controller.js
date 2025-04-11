@@ -607,3 +607,10 @@ const renderSpinner = function(parentEl) {
 // this will make it much easier to learn React or Vue or whatever framework you choose later
 // wherever it comes from and whoever develops it, there are some components that any architecture must have:
 // business logic, state, an HTTP library, application logic, and presentation logic
+// business logic:
+// all the code that solves the actual business problem
+// the code direclty related to what the business does and what it needs
+// if your business is WhatsApp, your business logic will include sending messages
+// if your business is a bank, its business logic will cover how to store transactions
+// if your business is a budget manager, your business logic will include calculating taxes
+// business logic is the logic that solves the problem the business was created to solve in the first place
