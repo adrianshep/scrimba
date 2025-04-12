@@ -614,3 +614,13 @@ const renderSpinner = function(parentEl) {
 // if your business is a bank, its business logic will cover how to store transactions
 // if your business is a budget manager, your business logic will include calculating taxes
 // business logic is the logic that solves the problem the business was created to solve in the first place
+// state:
+// one of the most important aspects of any web application
+// this is what stores all the data about the application's front end that is running in the browser
+// should store any data you might fetch from an API or data a user inputs or what page a user is currently vieiwing, and so on
+// this data should be the single source of truth, which should be kept in sync with the user interface
+// meaning, if some data changes in the state, the user interface should reflect that
+// also true the other way around, if something changes in the UI, the state should aslo change
+// storing and displaying data and keeping everything in sync is one of the most difficult tasks when building web apps
+// that's why there are many state management libraries like Redux or MobX
+// in this project, we'll keep things very simple and use a simple object to store our entire state
