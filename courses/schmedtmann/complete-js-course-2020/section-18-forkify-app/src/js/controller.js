@@ -624,3 +624,7 @@ const renderSpinner = function(parentEl) {
 // storing and displaying data and keeping everything in sync is one of the most difficult tasks when building web apps
 // that's why there are many state management libraries like Redux or MobX
 // in this project, we'll keep things very simple and use a simple object to store our entire state
+// HTTP library:
+// responsible for making and receiving AJAX requests
+// we've been doing that using the fetch function and we'll keep doing that here
+// most real world apps needs some interaction with the web, so the use of a library is optional but almost always necessary
