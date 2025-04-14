@@ -627,4 +627,9 @@ const renderSpinner = function(parentEl) {
 // HTTP library:
 // responsible for making and receiving AJAX requests
 // we've been doing that using the fetch function and we'll keep doing that here
-// most real world apps needs some interaction with the web, so the use of a library is optional but almost always necessary
+// most real world apps need some interaction with the web, so the use of a library is optional but almost always necessary
+// application logic (router):
+// this is code concerned only with the implementation of the application itself
+// the technical aspects of the applications which are not directly related to the underlying business problem
+// for example, application logic includes handling of UI events and naviation on the page
+// that's why this component is often also called a router, mapping actions to the user's navigation
