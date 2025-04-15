@@ -633,3 +633,6 @@ const renderSpinner = function(parentEl) {
 // the technical aspects of the applications which are not directly related to the underlying business problem
 // for example, application logic includes handling of UI events and naviation on the page
 // that's why this component is often also called a router, mapping actions to the user's navigation
+// presentation logic (UI layer):
+// all about the visible part of the application
+// presentation logic is responsible for displaying the application state on the user interface in order to keep everything in sync
