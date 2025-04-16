@@ -636,3 +636,10 @@ const renderSpinner = function(parentEl) {
 // presentation logic (UI layer):
 // all about the visible part of the application
 // presentation logic is responsible for displaying the application state on the user interface in order to keep everything in sync
+// any good architecture has a way of separating all of these components instead of mixing them all together in one big file
+// model view controller
+// a well-established architecture or pattern containing three parts that we're going to use in this project
+// the view is for the presentation logic, the part of the app interacting with the user
+// the model is all about the app's data, which is why it usually contains the state and also the business logic that manipulates the state
+// it also contains the HTTP library that might get some data from the web, from an API or some back end
+// these two should be kept closely together
