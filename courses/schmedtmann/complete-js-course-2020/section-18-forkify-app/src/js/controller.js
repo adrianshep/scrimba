@@ -641,5 +641,9 @@ const renderSpinner = function(parentEl) {
 // a well-established architecture or pattern containing three parts that we're going to use in this project
 // the view is for the presentation logic, the part of the app interacting with the user
 // the model is all about the app's data, which is why it usually contains the state and also the business logic that manipulates the state
-// it also contains the HTTP library that might get some data from the web, from an API or some back end
+// it also contains the HTTP library that might get data from the web, from an API or some back end
 // these two should be kept closely together
+// the controller contains the application logic
+// it sits between the model and the view, creating a bridge between them where they would otherwise know nothing about one another
+// a significant goal of the MVC pattern is to separate business logic from application logic, which makes developing the application so much easier
+// as a consequence, we need something to connect these two parts, and that is the controller
