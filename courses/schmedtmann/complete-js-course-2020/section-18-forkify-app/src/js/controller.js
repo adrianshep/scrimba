@@ -647,3 +647,7 @@ const renderSpinner = function(parentEl) {
 // it sits between the model and the view, creating a bridge between them where they would otherwise know nothing about one another
 // a significant goal of the MVC pattern is to separate business logic from application logic, which makes developing the application so much easier
 // as a consequence, we need something to connect these two parts, and that is the controller
+// let's take a look at a typical flow of actions and data as soon as an event happens in the user interface, like a click, for example
+// to start, the controller will handle that event, because handling an event is doing something in the application, which is clearly a part of application logic
+// this handling might involve updating the user interface and asking the model for some data
+// we can say that the controller dispatches tasks to the model and to the view -- it controls and orchestrates this entire action and, in fact, the whole application itself
