@@ -651,3 +651,6 @@ const renderSpinner = function(parentEl) {
 // to start, the controller will handle that event, because handling an event is doing something in the application, which is clearly a part of application logic
 // this handling might involve updating the user interface and asking the model for some data
 // we can say that the controller dispatches tasks to the model and to the view -- it controls and orchestrates this entire action and, in fact, the whole application itself
+// asking the model for some data might involve an AJAX request to the web, which is exactly what the model does
+// when the data arrives, the controller takes that data and sends it to the view
+// the view will render that data to the user interface and finish this whole cycle
