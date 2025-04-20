@@ -654,3 +654,9 @@ const renderSpinner = function(parentEl) {
 // asking the model for some data might involve an AJAX request to the web, which is exactly what the model does
 // when the data arrives, the controller takes that data and sends it to the view
 // the view will render that data to the user interface and finish this whole cycle
+// in the diagram, dotted arrows represent data flow between different components of the architecture
+// the solid arrows represent actual function calls and module imports
+// we can see that it's only the controller which imports and calls functions from the model and from the view, but never the other way around
+// as previously mentioned, the model and view stand alone from one another completely and don't import one another
+// they don't even import the controller nor do they even know that the controller exists
+// the sit and wait to get some instructions (which will come from the controller)
