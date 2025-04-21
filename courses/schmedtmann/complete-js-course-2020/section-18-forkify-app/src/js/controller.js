@@ -659,4 +659,11 @@ const renderSpinner = function(parentEl) {
 // we can see that it's only the controller which imports and calls functions from the model and from the view, but never the other way around
 // as previously mentioned, the model and view stand alone from one another completely and don't import one another
 // they don't even import the controller nor do they even know that the controller exists
-// the sit and wait to get some instructions (which will come from the controller)
+// they sit and wait to get some instructions (which will come from the controller)
+// let's see how this MVC architecture applies to the part of the Forkify app we've already implemented
+// user selects recipe and page loads with recipe ID events are associated with the controller
+// loading the recipe happens in the model
+// the controller calls some function that is in the model
+// the model then asynchronously gets the recipe data from the API
+// once that data arrives, the controller asks for it, receives it, and sends it to the view
+// the view renders the recipe on the screen
