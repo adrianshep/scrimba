@@ -667,3 +667,9 @@ const renderSpinner = function(parentEl) {
 // the model then asynchronously gets the recipe data from the API
 // once that data arrives, the controller asks for it, receives it, and sends it to the view
 // the view renders the recipe on the screen
+// this MVC architecture flowchart is still quite abstract because it is what we will implement, now how we will implement
+// an implementation diagram of our MVC architecture, only about loading and rendering a recipe, shows:
+// model and controller are implemented in a module, while recipe view is a class
+// when the user click on a search result, there is a control recipes function in the controller that will handle the event
+// this controller will instruct the recipe view to render a loading spinner while the user interface waits for the data to arrive
+// in the meantime, the controller also calls the load recipes function in the model to fetch the recipe data from the Forkfiy API
