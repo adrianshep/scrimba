@@ -673,3 +673,6 @@ const renderSpinner = function(parentEl) {
 // when the user click on a search result, there is a control recipes function in the controller that will handle the event
 // this controller will instruct the recipe view to render a loading spinner while the user interface waits for the data to arrive
 // in the meantime, the controller also calls the load recipes function in the model to fetch the recipe data from the Forkfiy API
+// now the model also contains a big state object that we export from the model
+// this state will also contain all sorts of data, such as the current recipe, search results, bookmarks, etc.
+// as the data arrives, it will be stored in this state object
