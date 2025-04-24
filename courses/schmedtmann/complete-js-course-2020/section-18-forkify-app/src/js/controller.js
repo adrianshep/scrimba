@@ -676,3 +676,4 @@ const renderSpinner = function(parentEl) {
 // now the model also contains a big state object that we export from the model
 // this state will also contain all sorts of data, such as the current recipe, search results, bookmarks, etc.
 // as the data arrives, it will be stored in this state object
+// the controller then reaches into the state object, grabs the recipe data, and finally calls the render method on the recipe view with that data
