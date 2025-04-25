@@ -677,3 +677,10 @@ const renderSpinner = function(parentEl) {
 // this state will also contain all sorts of data, such as the current recipe, search results, bookmarks, etc.
 // as the data arrives, it will be stored in this state object
 // the controller then reaches into the state object, grabs the recipe data, and finally calls the render method on the recipe view with that data
+
+
+// Refactoring for MVC
+
+// we'll start by creating the necessary new files so we can split up our code between them
+// inside of src and js, let's create a new file called model.js
+// this will be the module within which we write our entire model
