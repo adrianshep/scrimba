@@ -684,3 +684,9 @@ const renderSpinner = function(parentEl) {
 // we'll start by creating the necessary new files so we can split up our code between them
 // inside of src and js, let's create a new file called model.js
 // this will be the module within which we write our entire model
+// for the view we will actually need multiple views, one for each feature
+// now we're working on displaying the recipe, so this one will be called recipeView
+// let's create a new folder for the view in order to not clutter our js folder
+// in controller.js, we'll have one big module for all the controllers
+// then one big file for all the models, for the recipe, for search, for bookmarks
+// but for the views, we'll have one model for each of the different views
