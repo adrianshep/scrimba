@@ -690,3 +690,10 @@ const renderSpinner = function(parentEl) {
 // in controller.js, we'll have one big module for all the controllers
 // then one big file for all the models, for the recipe, for search, for bookmarks
 // but for the views, we'll have one model for each of the different views
+// one reason for this is that the views are much bigger files
+// we don't want a file with 500 lines of code
+// we could split up the model and the controller, but that would make this project confusing to follow
+// let's start with the model
+// we going to have a big state object
+// inside, it will contain an object for recipes, search, and bookmarks
+// starting with the recipe, there will be a function for loading it that will be called controlRecipes, which will sit between loading the recipe and rendering it using the view
