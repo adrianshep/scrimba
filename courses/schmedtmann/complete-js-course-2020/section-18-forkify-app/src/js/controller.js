@@ -697,3 +697,5 @@ const renderSpinner = function(parentEl) {
 // we going to have a big state object
 // inside, it will contain an object for recipes, search, and bookmarks
 // starting with the recipe, there will be a function for loading it that will be called controlRecipes, which will sit between loading the recipe and rendering it using the view
+// remember that the controller sits between the model and the view and acts as a kind of bridge
+// in our model, let's create that state object and in it the recipe, which is also an empty object in the beginning
