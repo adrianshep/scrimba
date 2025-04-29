@@ -699,3 +699,8 @@ const renderSpinner = function(parentEl) {
 // starting with the recipe, there will be a function for loading it that will be called controlRecipes, which will sit between loading the recipe and rendering it using the view
 // remember that the controller sits between the model and the view and acts as a kind of bridge
 // in our model, let's create that state object and in it the recipe, which is also an empty object in the beginning
+// then we will export this state so that we can use it in the controller
+// let's also create the loadRecipe function
+// we also export it so we can use it in the controller
+// this function will be responsible for fetching the recipe data from our Forkify API
+// this will be an async function
