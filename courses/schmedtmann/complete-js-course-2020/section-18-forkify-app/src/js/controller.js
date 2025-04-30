@@ -704,3 +704,8 @@ const renderSpinner = function(parentEl) {
 // we also export it so we can use it in the controller
 // this function will be responsible for fetching the recipe data from our Forkify API
 // this will be an async function
+// grab previous code that is concerned with getting the data
+// it starts with where we fetch the recipe from the API
+// the code for rendering the spinner has nothing to do with the business logic so we will save it for the presentation logic where it will go into the view
+// and getting the ID also isn't business logic
+// it's more about the application logic, making the application work, so we'll keep it that part in place
