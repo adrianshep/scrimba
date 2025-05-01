@@ -709,3 +709,11 @@ const renderSpinner = function(parentEl) {
 // the code for rendering the spinner has nothing to do with the business logic so we will save it for the presentation logic where it will go into the view
 // and getting the ID also isn't business logic
 // it's more about the application logic, making the application work, so we'll keep it that part in place
+// adjustments to getting the data code:
+// we don't now which ID to fetch
+// we should pass that ID into this function
+// the controller will get that ID so when it calls the model and the loadRecipe funciton, the ID can pass into it from there
+// recipe should now be state.recipe
+// let becomes const
+// log state.recipe instead of recipe
+// when the state objecct is going to get updated by loadRecipe, that state is also updated in the controller which imports the state
