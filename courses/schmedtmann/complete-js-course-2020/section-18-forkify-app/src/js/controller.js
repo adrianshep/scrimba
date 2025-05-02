@@ -717,3 +717,11 @@ const renderSpinner = function(parentEl) {
 // let becomes const
 // log state.recipe instead of recipe
 // when the state objecct is going to get updated by loadRecipe, that state is also updated in the controller which imports the state
+// this will work because there is a live connection between the export and the imports
+// let's now import all of that into here
+// we import at the very top of controller code
+// from the model we want to import everything
+// we have a few named exports -- there are named and default exports, and these are named explicitly
+// in our case, we can simply import everything and call model
+// so here in the controller we will end up with model.state and model.loadRecipe imported from:
+// import * as model from '/model.js';
