@@ -725,3 +725,17 @@ const renderSpinner = function(parentEl) {
 // in our case, we can simply import everything and call model
 // so here in the controller we will end up with model.state and model.loadRecipe imported from:
 // import * as model from '/model.js';
+
+// back to loading the recipe
+// spinner should be outside/above:
+// if (!id) return:
+// renderSpinner(recipeContainer);
+
+// let's call the actual function, model.loadRecipe and pass in the ID
+// this is an async function and therefore will return a promise
+// therefore, we have to await that promise before we can move to the next step in the execution of this async function
+// this is the exact situation of one async funciton calling another async function
+// remember, an async function will return a promise we need to handle whenever we call it
+// that is, if we want to get some result out of it, or if we want to stop the execution in the function calling another async function
+// 1) Loading recipe
+// model.loacReipe(id);
