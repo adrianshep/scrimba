@@ -738,4 +738,6 @@ const renderSpinner = function(parentEl) {
 // remember, an async function will return a promise we need to handle whenever we call it
 // that is, if we want to get some result out of it, or if we want to stop the execution in the function calling another async function
 // 1) Loading recipe
-// model.loacReipe(id);
+// model.loadRecipe(id);
+
+// add some error-handling to model as well
