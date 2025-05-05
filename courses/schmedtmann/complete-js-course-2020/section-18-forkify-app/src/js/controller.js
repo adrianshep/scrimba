@@ -741,3 +741,10 @@ const renderSpinner = function(parentEl) {
 // model.loadRecipe(id);
 
 // add some error-handling to model as well
+// try up top and all the way, catch the error and alert is as well
+// remember that this loadRecipe function doesn't return anything
+// therefore, we are not storing any result in a new variable
+// instead, we will get access to the state.recipe that will be manipulated right here
+// you can see that this loadRecipe function is clearly not a pure function
+// it has the side effect of manipulating this state variable outside of it
+// there are different ways of avoiding that, but they're a lot of work and it's just not worth it in this case
