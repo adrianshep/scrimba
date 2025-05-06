@@ -748,3 +748,10 @@ const renderSpinner = function(parentEl) {
 // you can see that this loadRecipe function is clearly not a pure function
 // it has the side effect of manipulating this state variable outside of it
 // there are different ways of avoiding that, but they're a lot of work and it's just not worth it in this case
+// we now have access to model.state.recipe
+// in order to see if everything still works, let's store that recipe into the recipe variable so we can then render it using the code we already have
+// so, temporarily, recipe, then we destructure it
+// const { recipe } = model.state;
+// when we run the Forkify app and reload, we see that it's working
+// it's important to keep checking this when we are refactoring code
+
