@@ -755,3 +755,8 @@ const renderSpinner = function(parentEl) {
 // when we run the Forkify app and reload, we see that it's working
 // it's important to keep checking this when we are refactoring code
 
+// now comes the recipeView
+// we need to set up the view
+// it will be a class called recipeView because later we will also have a parent class called View which will contain a couple of methods that all the view should inherit
+// using classes makes all of this very simple to implement
+// also, we want each view to have a few private methods and properties, and classes make that really easy to implement as well
