@@ -760,3 +760,12 @@ const renderSpinner = function(parentEl) {
 // it will be a class called recipeView because later we will also have a parent class called View which will contain a couple of methods that all the view should inherit
 // using classes makes all of this very simple to implement
 // also, we want each view to have a few private methods and properties, and classes make that really easy to implement as well
+
+// now comes the recipeView
+// we need to set up the view
+// it will be a class called RecipeView because later we will also have a parent class called View which will contain a couple of methods that all the view should inherit
+// using classes makes all of this very simple to implement
+// also, we want each view to have a few private methods and properties, and classes make that really easy to implement as well
+// one of the private properties we want each of these classes to have is the parentElement
+// we want to set it equal to the recipe container
+// it will make it really easy to render the spinner and to render success or error messages or to render the recipe itself
