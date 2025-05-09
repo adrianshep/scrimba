@@ -769,3 +769,8 @@ const renderSpinner = function(parentEl) {
 // one of the private properties we want each of these classes to have is the parentElement
 // we want to set it equal to the recipe container
 // it will make it really easy to render the spinner and to render success or error messages or to render the recipe itself
+// next, we want to export something from this recipeView module
+// we might export the entire class so then in the controller we'd have to import that class and create a new object out of that, a new RecipeView object
+// however, in that situation it might be possible to create more than one view and we would never want that
+// also, it would add unnecessary work to the controller, which we want to keep as simple as possible
+// in order to avoid all that, we'll create the object here and then export it so no one from outside this class will have access to anything other than the object
