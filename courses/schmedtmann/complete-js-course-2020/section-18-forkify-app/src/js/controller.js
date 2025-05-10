@@ -774,3 +774,5 @@ const renderSpinner = function(parentEl) {
 // however, in that situation it might be possible to create more than one view and we would never want that
 // also, it would add unnecessary work to the controller, which we want to keep as simple as possible
 // in order to avoid all that, we'll create the object here and then export it so no one from outside this class will have access to anything other than the object
+// so all we do is to export default and then a new RecipeView
+// we don't pass any data in and therefore doen't even need any constructor
