@@ -776,3 +776,8 @@ const renderSpinner = function(parentEl) {
 // in order to avoid all that, we'll create the object here and then export it so no one from outside this class will have access to anything other than the object
 // so all we do is to export default and then a new RecipeView
 // we don't pass any data in and therefore doen't even need any constructor
+// then we import here in controller.js and we can give it any name
+// calling it recipeView makes the most sense
+// then views and then recipeView.js:
+// import * as model from './model.js';
+// import recipeView from './views/recipeView.js';
