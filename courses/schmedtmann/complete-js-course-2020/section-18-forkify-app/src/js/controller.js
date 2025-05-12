@@ -781,3 +781,13 @@ const renderSpinner = function(parentEl) {
 // then views and then recipeView.js:
 // import * as model from './model.js';
 // import recipeView from './views/recipeView.js';
+// how do we pass any data into the recipeView?
+// because we're not creating the new object ourselves, we can't pass any data in like with a constructor, because we've created the object in the RecipeView module already
+// actually, that was on purpose, so we can create a method called render
+// we want to call recipeView.render
+// then all we do is pass in the data which will be model.state.recipe:
+// recipeView.render(model.state.recipe);
+// render is a very common name for methods
+// in React, for example, it is also called render
+// render is also a very descripting name for what is going to happen
+
