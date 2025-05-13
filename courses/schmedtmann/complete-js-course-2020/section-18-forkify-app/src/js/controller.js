@@ -789,5 +789,8 @@ const renderSpinner = function(parentEl) {
 // recipeView.render(model.state.recipe);
 // render is a very common name for methods
 // in React, for example, it is also called render
-// render is also a very descripting name for what is going to happen
-
+// render is also a very descriptive name for what is going to happen
+// if we did export the entire class, then here we would have to do:
+// const recipeView = new recipeView(model.state.recipe);
+// we would have to pass in the data via model.state.recipe whenever we created a new recipe
+// this would be possible, but the nice render method is a lot more descriptive and cleaner for all the reasons previously stated
