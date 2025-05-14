@@ -794,3 +794,9 @@ const renderSpinner = function(parentEl) {
 // const recipeView = new recipeView(model.state.recipe);
 // we would have to pass in the data via model.state.recipe whenever we created a new recipe
 // this would be possible, but the nice render method is a lot more descriptive and cleaner for all the reasons previously stated
+// this render method will now accept data and store it into the object
+// let's add the public render method in recipeView
+// this is part of the public API
+// this receives data and will then set it to #data
+// the recipeView render method and its two properties are something that all the views are going to have in common, and will be beautiful to work with
+
