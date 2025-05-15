@@ -799,4 +799,6 @@ const renderSpinner = function(parentEl) {
 // this is part of the public API
 // this receives data and will then set it to #data
 // the recipeView render method and its two properties are something that all the views are going to have in common, and will be beautiful to work with
-
+// now we'll do something with this data, which is to render it
+// we want to take markup code from above, cut it, and paste it into our view
+// because our render method will later be common to all views, we will not put the cut markup code there but just below it
