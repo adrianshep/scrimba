@@ -802,3 +802,8 @@ const renderSpinner = function(parentEl) {
 // now we'll do something with this data, which is to render it
 // we want to take markup code from above, cut it, and paste it into our view
 // because our render method will later be common to all views, we will not put the cut markup code there but just below it
+// however, each view will render different HTML
+// we will simply have a method that generates that HTML so the render method can then render it, #generateMarkup
+// this will be a private method and since we're using Babel here, we can already us this syntax
+// the code that's going to generate this markup variable can immediately be returned
+
