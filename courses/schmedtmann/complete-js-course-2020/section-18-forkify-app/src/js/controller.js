@@ -806,4 +806,14 @@ const renderSpinner = function(parentEl) {
 // we will simply have a method that generates that HTML so the render method can then render it, #generateMarkup
 // this will be a private method and since we're using Babel here, we can already us this syntax
 // the code that's going to generate this markup variable can immediately be returned
-
+// this is not going to do anything yet because what is the recipe in this case?
+// it's nothing, as it's not defined at all
+// where is the data in this case?
+// it's in #data
+// let's take a look at our controller start from the beginning
+// the recipe is loaded here:
+// await model.loadRecipe(id);
+// that will then be stored in the state object
+// then we take model.state.recipe, the data we just received in the above step, and that data is passed into the render method
+// the render method then takes that data and stores it inside of this.#data
+// this is so we can use that data all over the place inside of this object
