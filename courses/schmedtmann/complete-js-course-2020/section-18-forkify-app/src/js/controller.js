@@ -817,3 +817,6 @@ const renderSpinner = function(parentEl) {
 // then we take model.state.recipe, the data we just received in the above step, and that data is passed into the render method
 // the render method then takes that data and stores it inside of this.#data
 // this is so we can use that data all over the place inside of this object
+// by the way, this is exactly what we have in the architecture diagram.
+// inside of controlRecipes, the loadRecipe function is called, then the recipe data goes into the state
+// then that data passes right through the controller and goes into the render method, which then, in turn, calls generateMarkup
