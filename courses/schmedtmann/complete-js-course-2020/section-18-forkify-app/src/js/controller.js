@@ -820,3 +820,6 @@ const renderSpinner = function(parentEl) {
 // by the way, this is exactly what we have in the architecture diagram.
 // inside of controlRecipes, the loadRecipe function is called, then the recipe data goes into the state
 // then that data passes right through the controller and goes into the render method, which then, in turn, calls generateMarkup
+// we've concluded that the recipe data is located in this.#data
+// we will therefore copy it and then replace all the occurrences of recipe in the code
+// we'll hit Command + D and replae all recipe. with this.#data.
