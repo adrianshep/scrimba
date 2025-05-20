@@ -823,3 +823,9 @@ const renderSpinner = function(parentEl) {
 // we've concluded that the recipe data is located in this.#data
 // we will therefore copy it and then replace all the occurrences of recipe in the code
 // we'll hit Command + D and replae all recipe. with this.#data.
+// below the newly pasted-in code we have:
+// recipeContainer.innerHTML = '';
+// recipeContainer.insertAdjacentHTML('afterbegin', markup);
+// which isn't supposed to be here because all the larger function does is to return an HTML string
+// it'll be the render method that'll be responsible for putting the HTML onto the page
+// so we'll move that code snippet up to the render method
