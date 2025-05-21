@@ -829,3 +829,5 @@ const renderSpinner = function(parentEl) {
 // which isn't supposed to be here because all the larger function does is to return an HTML string
 // it'll be the render method that'll be responsible for putting the HTML onto the page
 // so we'll move that code snippet up to the render method
+// let's say that the markup is this.#generateMarkup
+// we've got some errors here but we are still refactoring, so let's not mind about that
