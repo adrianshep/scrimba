@@ -831,3 +831,8 @@ const renderSpinner = function(parentEl) {
 // so we'll move that code snippet up to the render method
 // let's say that the markup is this.#generateMarkup
 // we've got some errors here but we are still refactoring, so let's not mind about that
+// now that we have our markup, we need to put it on the page
+// we need to start by clearing the parentElement
+// let's create a small method for that and get into the habit of abstracting some code
+// we can say this.#parentElement.innerHMTL and set it to empty
+// this method will be reusable for all the views that have a parentElement property like this one
