@@ -836,3 +836,7 @@ const renderSpinner = function(parentEl) {
 // let's create a small method for that and get into the habit of abstracting some code
 // we can say this.#parentElement.innerHMTL and set it to empty
 // this method will be reusable for all the views that have a parentElement property like this one
+// we can now call that method with this.#clear;
+// we can now remove recipeContainer.innerHTML = '';
+// and to finish, we can finally render that HTML to the page by swapping in this.#parentElement for recipeContainer:
+// this.#parentElement.insertAdjacentHTML('afterbegin', markup);
