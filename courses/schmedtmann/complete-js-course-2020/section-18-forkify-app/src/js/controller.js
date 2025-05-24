@@ -840,3 +840,26 @@ const renderSpinner = function(parentEl) {
 // we can now remove recipeContainer.innerHTML = '';
 // and to finish, we can finally render that HTML to the page by swapping in this.#parentElement for recipeContainer:
 // this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+// this is now a nice, small function:
+/*
+const showRecipe = async function() {
+  try {
+    const id = window.location.hash.slice(1);
+    console.log(id);
+
+    if (!id) return;
+    renderSpinner(recipeContainer);
+
+    // 1) Loading recipe
+    await model.loadRecipe(id);
+
+    // 2) Rendering recipe
+    recipeView.render(model.state.recipe);
+  } catch(err) {
+      alert(err);
+    }
+};
+
+['hashchange, 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+
+*/
