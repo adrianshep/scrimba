@@ -841,8 +841,9 @@ const renderSpinner = function(parentEl) {
 // and to finish, we can finally render that HTML to the page by swapping in this.#parentElement for recipeContainer:
 // this.#parentElement.insertAdjacentHTML('afterbegin', markup);
 // this is now a nice, small function:
+// rename showRecipe controlRecipes
 /*
-const showRecipe = async function() {
+const controlRecipes = async function() {
   try {
     const id = window.location.hash.slice(1);
     console.log(id);
@@ -860,6 +861,6 @@ const showRecipe = async function() {
     }
 };
 
-['hashchange, 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+['hashchange, 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
 
 */
