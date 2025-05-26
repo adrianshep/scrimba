@@ -864,3 +864,6 @@ const controlRecipes = async function() {
 ['hashchange, 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
 
 */
+// what we're missing is to export the renderSpinner into the view
+// it has nothing to do with the controller and so it belongs in the view
+// cut the renderSpinner function from the controller and paste it into recipeView
