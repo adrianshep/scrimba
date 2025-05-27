@@ -867,3 +867,5 @@ const controlRecipes = async function() {
 // what we're missing is to export the renderSpinner into the view
 // it has nothing to do with the controller and so it belongs in the view
 // cut the renderSpinner function from the controller and paste it into recipeView
+// renderSpinner is not a function but a public method
+// the controller can then call this method here as it starts fetching the data
