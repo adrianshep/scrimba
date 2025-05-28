@@ -869,3 +869,6 @@ const controlRecipes = async function() {
 // cut the renderSpinner function from the controller and paste it into recipeView
 // renderSpinner is not a function but a public method
 // the controller can then call this method here as it starts fetching the data
+// we also now have the beauty of the parentElement already being inside of the object
+// remove parentEl as input of renderSpinner function
+// replace parentEl in inner and insert with this.#parentElement
