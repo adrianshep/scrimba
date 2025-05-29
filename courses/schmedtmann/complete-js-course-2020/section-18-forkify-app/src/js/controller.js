@@ -872,3 +872,5 @@ const controlRecipes = async function() {
 // we also now have the beauty of the parentElement already being inside of the object
 // remove parentEl as input of renderSpinner function
 // replace parentEl in inner and insert with this.#parentElement
+// the icons variable is not defined in the recipeView module
+// need to move it from the controller into recipeView
