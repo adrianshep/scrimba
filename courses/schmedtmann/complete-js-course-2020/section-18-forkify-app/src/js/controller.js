@@ -878,3 +878,8 @@ const controlRecipes = async function() {
 // remember that we no longer need to pass in parentElement
 // if (!id) return;
 // recipeView.renderSpinner();
+// we have recipeView and then renderSpinner which we know will automatically render the spinner on the recipeView
+// the same will later be the case with other views
+// for example, we will have a renderSpinner on the bookmarks view
+// we call these same methods on all the views and they act on whatever view for which we're calling them
+// this works so nicely as an architecture because we have the parentElement and the data property in the RecipeView class in recipeView.js
