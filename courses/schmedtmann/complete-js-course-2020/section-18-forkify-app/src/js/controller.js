@@ -883,3 +883,10 @@ const controlRecipes = async function() {
 // for example, we will have a renderSpinner on the bookmarks view
 // we call these same methods on all the views and they act on whatever view for which we're calling them
 // this works so nicely as an architecture because we have the parentElement and the data property in the RecipeView class in recipeView.js
+// testing to see if this works reveals errors
+// Parcel is letting us know about a big one, the failure to resolve the import icons url in recipeView:
+// import icons from 'url:../img/icons.svg';
+// it makes sense there is an error with it as it this view is now in a different folder
+// we're only going on folder up, which puts us in the js folder
+// we need to go into the images folder, which is one more level up, like this:
+// import icons from 'url:../../img/icons.svg';
