@@ -890,3 +890,8 @@ const controlRecipes = async function() {
 // we're only going on folder up, which puts us in the js folder
 // we need to go into the images folder, which is one more level up, like this:
 // import icons from 'url:../../img/icons.svg';
+// we have a bug; in the webpage appears:
+// ${(_CLASSPRIVATEFIELDGET(THIS, _DATA).TITLE)}
+// results from not calling the two private methods in recipeView.js
+// const markup = this.#generateMarkup();
+// this.#clear();
