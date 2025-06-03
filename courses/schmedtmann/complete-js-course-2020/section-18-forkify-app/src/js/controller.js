@@ -895,3 +895,11 @@ const controlRecipes = async function() {
 // results from not calling the two private methods in recipeView.js
 // const markup = this.#generateMarkup();
 // this.#clear();
+
+// we should change the form of recipe quantities
+// currently in decimal form: 1.5 tablespoons of X
+// looks nicer if it's in standard form: 1 1/2 tablespoon
+// for that, we'll use an external library which will easily do this conversion for us
+// google npm fractional
+// using this package, you can create new fractions based on decimal numbers and do all kinds of multiplying, dividing, even converting them to a string
+// we will convert each number to a fraction and then convert them into a string
