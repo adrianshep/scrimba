@@ -903,3 +903,7 @@ const controlRecipes = async function() {
 // google npm fractional
 // using this package, you can create new fractions based on decimal numbers and do all kinds of multiplying, dividing, even converting them to a string
 // we will convert each number to a fraction and then convert them into a string
+// this is how we install it via the terminal in recipeView.js:
+// npm install fractional
+// add to imports:
+// import fractional from 'fractional';
