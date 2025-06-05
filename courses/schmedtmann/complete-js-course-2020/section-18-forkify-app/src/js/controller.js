@@ -907,3 +907,10 @@ const controlRecipes = async function() {
 // npm install fractional
 // add to imports:
 // import fractional from 'fractional';
+// we see, again, that for any libraries or packages we import from npm, we don't need to specify their path
+// all we have to do is write their name and then what they export:
+// import (name of export) from 'name of import';
+// in our case, we're exporting Fraction:
+// import Fraction from 'franctional';
+// because many npm packages are still using CommonJS, you'll see that the npm fractional page recommends:
+// var Fraction = require('fractional').Fraction
