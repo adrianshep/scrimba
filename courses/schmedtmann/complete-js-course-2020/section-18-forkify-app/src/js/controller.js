@@ -914,3 +914,6 @@ const controlRecipes = async function() {
 // import Fraction from 'franctional';
 // because many npm packages are still using CommonJS, you'll see that the npm fractional page recommends:
 // var Fraction = require('fractional').Fraction
+// let's now use Fraction in recipeView.js by having it precede ing.quantity:
+// <div class="recipe__quantity">${new Fraction.Fraction ing.quantity}</div>
+// we use Fraction.Fraction because it is inside of Fraction where the Fraction function is located
