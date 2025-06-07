@@ -911,9 +911,14 @@ const controlRecipes = async function() {
 // all we have to do is write their name and then what they export:
 // import (name of export) from 'name of import';
 // in our case, we're exporting Fraction:
-// import Fraction from 'franctional';
+// import Fraction from 'fractional';
 // because many npm packages are still using CommonJS, you'll see that the npm fractional page recommends:
 // var Fraction = require('fractional').Fraction
 // let's now use Fraction in recipeView.js by having it precede ing.quantity:
 // <div class="recipe__quantity">${new Fraction.Fraction ing.quantity}</div>
 // we use Fraction.Fraction because it is inside of Fraction where the Fraction function is located
+// to make this a bit nicer, we can use destructuring right at the top of recipeView.js:
+// import {Fraction} from 'fractional';
+// then, as per documentation:
+// <div class="recipe__quantity">${new Fraction(ing.quantity).toString}</div>
+// can see that when Fraction was destructured it became the actual function
