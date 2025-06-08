@@ -922,3 +922,8 @@ const controlRecipes = async function() {
 // then, as per documentation:
 // <div class="recipe__quantity">${new Fraction(ing.quantity).toString}</div>
 // can see that when Fraction was destructured it became the actual function
+// for recipe ingredient cilantro, this error appears using Fraction:
+// quantity reads "NaN NaN/NaN"
+// this is because previously we had null for a value
+// we need to check if the number does exist: if it does, do this; if it doesn't, put an empty string there
+// <div class="recipe__quantity">${ ing.quantity ? new Fraction(ing.quantity).toString() : '' }</div>
