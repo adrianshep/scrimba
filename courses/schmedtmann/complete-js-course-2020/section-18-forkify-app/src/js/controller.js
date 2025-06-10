@@ -927,3 +927,6 @@ const controlRecipes = async function() {
 // this is because previously we had null for a value
 // we need to check if the number does exist: if it does, do this; if it doesn't, put an empty string there
 // <div class="recipe__quantity">${ ing.quantity ? new Fraction(ing.quantity).toString() : '' }</div>
+// refactor larger function and move to bottom of code
+// call it #generateMarkupIngredient
+// it will then receive (ing), the ingredient
