@@ -930,3 +930,8 @@ const controlRecipes = async function() {
 // refactor larger function and move to bottom of code
 // call it #generateMarkupIngredient
 // it will then receive (ing), the ingredient
+// inside the map, we can then call #generateMarkupIngredient()
+// let's copy it because VS Code doesn't really understand private methods yet
+// ${this.#data.ingredients.map(this.#generateMarkupIngredient).join('')}
+// we've successfully refactored this part
+// we're also now done refactoring the entire code we had to the model-view-controller architecture
