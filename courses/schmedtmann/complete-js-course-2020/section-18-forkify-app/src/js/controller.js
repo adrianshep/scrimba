@@ -935,3 +935,15 @@ const controlRecipes = async function() {
 // ${this.#data.ingredients.map(this.#generateMarkupIngredient).join('')}
 // we've successfully refactored this part
 // we're also now done refactoring the entire code we had to the model-view-controller architecture
+
+
+// Helpers and Configuration Files
+
+// many real world applications have two special modules that are completely independent of the rest of the architecture
+// these are a module for project configuration
+// and a module for some general helpr functions that will be useful across the entire project
+// let's implement these modules in our own project
+
+// Configuration Module
+// in our JS folder we create a new file called config.js
+helpers config files: create config.js
