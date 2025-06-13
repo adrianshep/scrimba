@@ -946,4 +946,6 @@ const controlRecipes = async function() {
 
 // Configuration Module
 // in our JS folder we create a new file called config.js
-helpers config files: create config.js
+// this file will hold all the variables that should be constants that will be reused across the project
+// this configuration file (hence the name config) will allow us to easily configure our project by simply changing some of the data that is in it
+// of course, we do not want to put all the variables into this file, only the ones that are responsible for defining some important data about the application itself
