@@ -949,3 +949,6 @@ const controlRecipes = async function() {
 // this file will hold all the variables that should be constants that will be reused across the project
 // this configuration file (hence the name config) will allow us to easily configure our project by simply changing some of the data that is in it
 // of course, we do not want to put all the variables into this file, only the ones that are responsible for defining some important data about the application itself
+// for example, the API URL (currently in model.js) we will reuse in multiple places across this project, for getting search data or uploading a recipe to the server
+// imagine that at some point the URL needs to be changed, as a version 3.0 may be released
+// as always, we don't want to have to change that everywhere, just have a variable which contains the URL which we can then reuse
