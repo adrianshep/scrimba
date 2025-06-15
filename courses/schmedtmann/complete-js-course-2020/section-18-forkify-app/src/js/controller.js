@@ -952,3 +952,9 @@ const controlRecipes = async function() {
 // for example, the API URL (currently in model.js) we will reuse in multiple places across this project, for getting search data or uploading a recipe to the server
 // imagine that at some point the URL needs to be changed, as a version 3.0 may be released
 // as always, we don't want to have to change that everywhere, just have a variable which contains the URL which we can then reuse
+// let's cut the URL from model.js
+// you might argue that we can create a variable in model.js, but then we would have all these configuration variables spread across multiple modules, so it's way easeir to have them in one central location
+// we'll call the config.js one const API_URL
+// we'll export it from there
+// with API_URL we're using uppercase as this is a constant that will never change
+// using uppercase for that kind of variable is common practice, especially in a configuration file like this
