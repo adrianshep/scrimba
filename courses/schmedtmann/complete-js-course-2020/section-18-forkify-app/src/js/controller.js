@@ -958,3 +958,11 @@ const controlRecipes = async function() {
 // we'll export it from there
 // with API_URL we're using uppercase as this is a constant that will never change
 // using uppercase for that kind of variable is common practice, especially in a configuration file like this
+// another great candidate for being a configuration variable is going to be the API key generated from the documentation page
+// for now, let's import the API URL into the model
+// remember that in modle we have a named import and later we'll have more
+// we could import them all at the same time as config:
+// import * as config
+// but this time we prefer to import them one by one with their actual name
+// we do that by using curly braces and the name of the variable and then config is in the same folder:
+// import { API_URL } from './config.js';
