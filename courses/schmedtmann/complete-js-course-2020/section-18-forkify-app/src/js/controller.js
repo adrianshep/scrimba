@@ -966,3 +966,6 @@ const controlRecipes = async function() {
 // but this time we prefer to import them one by one with their actual name
 // we do that by using curly braces and the name of the variable and then config is in the same folder:
 // import { API_URL } from './config.js';
+// in model.js, under loadRecipe we can now place API_URL into the fetch:
+// const res = await fetch(`${API_URL}/${id}`);
+// and our application should now be back to working
