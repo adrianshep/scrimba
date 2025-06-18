@@ -969,3 +969,7 @@ const controlRecipes = async function() {
 // in model.js, under loadRecipe we can now place API_URL into the fetch:
 // const res = await fetch(`${API_URL}/${id}`);
 // and our application should now be back to working
+
+// Helpers Module
+// a new file called helpers.js for helper functions
+// this file will be a central container for functions we reuse over and over in our project
