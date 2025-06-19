@@ -973,3 +973,6 @@ const controlRecipes = async function() {
 // Helpers Module
 // a new file called helpers.js for helper functions
 // this file will be a central container for functions we reuse over and over in our project
+// one great candidate is a function that will get JSON and include some error handling
+// this function will be very similar to what we did in the async JS section, an async function that will also do the fetching and converting to JSON all in one step
+// with this, we abstract all this functionality into one nice function we can then use all over our project
