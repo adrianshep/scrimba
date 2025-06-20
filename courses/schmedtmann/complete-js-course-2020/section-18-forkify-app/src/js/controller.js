@@ -976,3 +976,6 @@ const controlRecipes = async function() {
 // one great candidate is a function that will get JSON and include some error handling
 // this function will be very similar to what we did in the async JS section, an async function that will also do the fetching and converting to JSON all in one step
 // with this, we abstract all this functionality into one nice function we can then use all over our project
+// we can reuse this function for all kinds of URLs
+// let's now put all of this into a try block and then catch the error
+
