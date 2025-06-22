@@ -978,4 +978,7 @@ const controlRecipes = async function() {
 // with this, we abstract all this functionality into one nice function we can then use all over our project
 // we can reuse this function for all kinds of URLs
 // let's now put all of this into a try block and then catch the error
-
+// what are we going to do with the error here?
+// let's say we want to handle the error in this function, right in model.js where we will actually use the getJSON method
+// so, in model.js, we will import using the exact variable name
+// import { getJSON } from './helpers.js';
