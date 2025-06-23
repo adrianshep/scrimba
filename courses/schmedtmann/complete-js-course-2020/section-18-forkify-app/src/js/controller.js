@@ -982,3 +982,5 @@ const controlRecipes = async function() {
 // let's say we want to handle the error in this function, right in model.js where we will actually use the getJSON method
 // so, in model.js, we will import using the exact variable name
 // import { getJSON } from './helpers.js';
+// let's use getJSON here:
+// const data will be await getJSON and then the same URL
