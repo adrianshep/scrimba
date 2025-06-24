@@ -984,3 +984,5 @@ const controlRecipes = async function() {
 // import { getJSON } from './helpers.js';
 // let's use getJSON here:
 // const data will be await getJSON and then the same URL
+// there's still something missing here which is to return the data from this function
+// return data;
