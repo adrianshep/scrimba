@@ -986,3 +986,5 @@ const controlRecipes = async function() {
 // const data will be await getJSON and then the same URL
 // there's still something missing here which is to return the data from this function
 // return data;
+// just as we had in the last lesson, we have one async function -- load recipe -- calling another async function, getJSON
+// this data (in helpers.js), therefore, will be the resolved value of the promise that the getJSON function returns (from model.js)
