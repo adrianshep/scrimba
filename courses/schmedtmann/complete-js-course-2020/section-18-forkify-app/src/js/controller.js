@@ -988,3 +988,8 @@ const controlRecipes = async function() {
 // return data;
 // just as we had in the last lesson, we have one async function -- load recipe -- calling another async function, getJSON
 // this data (in helpers.js), therefore, will be the resolved value of the promise that the getJSON function returns (from model.js)
+// in model.js, for error handling, let's say we want not to alert but to log the error in the console
+// and we want to do it in a special way so we can see which errors are our own by using emoji to make the error visible
+// console.error(`${err} 💥💥💥💥`);
+// remember that the error is actually occurring in the getJSON function in helpers.js and not in model.js
+// this is temporary error handling we will improve dramatically in the coming lectures
