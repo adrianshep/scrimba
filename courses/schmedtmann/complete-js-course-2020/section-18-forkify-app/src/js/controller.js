@@ -993,3 +993,10 @@ const controlRecipes = async function() {
 // console.error(`${err} 💥💥💥💥`);
 // remember that the error is actually occurring in the getJSON function in helpers.js and not in model.js
 // this is temporary error handling we will improve dramatically in the coming lectures
+// when an error occurrs in the getJSON function in helpers.js, the promise that function returns is still being fulfilled 
+// it's a successful promise even if an error resulted from it being run
+// to demonstrate, if you enter an invalid URL in the app, the error returned in the console will be:
+// (invalid URL) 400 (Bad Request) helpers.js:5
+// the log shows the actual error happening at helpers.js:11
+// however, this is not where we want to handle that error
+// we want to handle it in model.js
