@@ -1000,3 +1000,10 @@ const controlRecipes = async function() {
 // the log shows the actual error happening at helpers.js:11
 // however, this is not where we want to handle that error
 // we want to handle it in model.js
+// instead of this error message:
+// console.error(`${err} 💥💥💥💥`);
+// which is a consequence of the first error, we'd like to get the error message inside of the model
+// we do it by re-throwing the error
+// we have to use throw, then take the error object we already have and and throw this new error:
+// throw err;
+// with this, the promise being returned from getJSON will actually reject
