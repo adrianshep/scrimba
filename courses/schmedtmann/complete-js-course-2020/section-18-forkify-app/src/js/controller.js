@@ -1007,3 +1007,5 @@ const controlRecipes = async function() {
 // we have to use throw, then take the error object we already have and and throw this new error:
 // throw err;
 // with this, the promise being returned from getJSON will actually reject
+// when we try the invalid URL again, we get the same error message in the console we had before, but right in model.js where we want it:
+// Error: Invalid _id: (invalid URL) (400) 💥💥💥💥  model.js:27
