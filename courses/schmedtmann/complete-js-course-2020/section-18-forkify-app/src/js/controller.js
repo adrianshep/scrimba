@@ -1010,4 +1010,20 @@ const controlRecipes = async function() {
 // when we try the invalid URL again, we get the same error message in the console we had before, but right in model.js where we want it:
 // Error: Invalid _id: (invalid URL) (400) 💥💥💥💥  model.js:27
 // we propagated the error down from one async function to the other by re-throwing the error in the helpers.js catch block
-// we will come back to this in a future lesson
+// this is very important to be able to do and we will come back to it in a future lesson
+// to finish, let's make our getJSON asynch function in helpers.js more robust and more real world by adding a time out
+// that is, setting a time beyond which the request fails
+// this is important to prevent really bad internet connections keeping this fetch running forever
+// we can take the starter code from the previous async JS section higher up here in controller.js
+/*
+const timeout = function (s) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error(`Request took too long! Timeout after ${s} second`));
+    }, s * 1000);
+  });
+};
+*/
+// in place, this will return a new promise which will reject after a certain number of seconds
+// we will have a race between this timeout promise (taking whatever number of seconds we pass into it) and the fetch function responsible for getting the data
+// whichever one completes first will win the race
