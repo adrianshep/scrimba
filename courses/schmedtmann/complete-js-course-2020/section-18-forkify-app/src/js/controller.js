@@ -1027,3 +1027,6 @@ const timeout = function (s) {
 // in place, this will return a new promise which will reject after a certain number of seconds
 // we will have a race between this timeout promise (taking whatever number of seconds we pass into it) and the fetch function responsible for getting the data
 // whichever one completes first will win the race
+// to put that into code, that works by using Promise.race which takes in two promises
+// the first will be the fetch url and the second will be the time out with a ceratin number of seconds
+// let's test 0.5 for the seconds
