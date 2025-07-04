@@ -1030,3 +1030,4 @@ const timeout = function (s) {
 // to put that into code, that works by using Promise.race which takes in two promises
 // the first will be the fetch url and the second will be the time out with a ceratin number of seconds
 // let's test 0.5 for the seconds
+// repeated error stems from not calling Promise.race
