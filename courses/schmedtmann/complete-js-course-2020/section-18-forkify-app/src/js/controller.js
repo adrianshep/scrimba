@@ -1030,4 +1030,10 @@ const timeout = function (s) {
 // to put that into code, that works by using Promise.race which takes in two promises
 // the first will be the fetch url and the second will be the time out with a ceratin number of seconds
 // let's test 0.5 for the seconds
-// repeated error stems from not calling Promise.race
+// repeated error stems from not calling Promise.race, now corrected
+// to test the 0.5 seconds timeout, slow the network speed, and now the request takes too long after half a second
+// what happened: after half a second passed, the promise rejected with "Request took too long!" message
+// re Promice.race, remember that as soon as any of these promises in the reace rejects or fulfills, that promise will become the winner
+// the rejected promise will trigger the catch block
+// that error will then be throw again in helpers.js
+// then it will makes its into the load recipe function in model.js and be handled down here with the four explosion emojis error message
