@@ -1037,3 +1037,9 @@ const timeout = function (s) {
 // the rejected promise will trigger the catch block
 // that error will then be throw again in helpers.js
 // then it will makes its into the load recipe function in model.js and be handled down here with the four explosion emojis error message
+// let's set the timeout to a more realistic value, 10 seconds
+// if we insert that, it will be magic number or value -- one that seems to appear out of nowhere
+// someone reading the code and finding the 10 will not understand what it's doing
+// this is the perfect candidate for a configuration value
+// if we want to change that value at a later date we can do that through the config file:
+// export const TIMEOUT_SEC = 10;
