@@ -1038,8 +1038,14 @@ const timeout = function (s) {
 // that error will then be throw again in helpers.js
 // then it will makes its into the load recipe function in model.js and be handled down here with the four explosion emojis error message
 // let's set the timeout to a more realistic value, 10 seconds
-// if we insert that, it will be magic number or value -- one that seems to appear out of nowhere
+// if we insert that, it will be a "magic" number or value -- one that seems to appear out of nowhere
 // someone reading the code and finding the 10 will not understand what it's doing
 // this is the perfect candidate for a configuration value
 // if we want to change that value at a later date we can do that through the config file:
 // export const TIMEOUT_SEC = 10;
+// we then import that file from config.js into helpers.js
+// we create a named import and use curly braces
+// we can then use the timeout second constant
+// anyone who is going to read this code will now see that this is one of the configuration values because
+// A) it's in uppercase
+// and B) because it's now a variable, and therefore no longer a static magic number
