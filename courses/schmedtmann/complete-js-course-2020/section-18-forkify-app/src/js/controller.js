@@ -1049,3 +1049,14 @@ const timeout = function (s) {
 // anyone who is going to read this code will now see that this is one of the configuration values because
 // A) it's in uppercase
 // and B) because it's now a variable, and therefore no longer a static magic number
+
+
+// Publisher-Subscriber Pattern
+// how we can listen for and handle events in our MVC architecture by using the Publisher-Subscriber Pattern
+// analyzing the code we have so far:
+// ['hashchange], 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
+// we're listening for the hashchange and load events in the controller which doesn't make a lot of sense
+// everything related to the DOM, to the view, should be inside the view
+// imagine we were handling a click event on some DOM element -- listening for that should for sure go into the view
+// dealing with the hashchange and load events has more to do with DOM manipulation or the DOM itself than with the controller
+// we therefore need a way of putting this logic into a recipe view
