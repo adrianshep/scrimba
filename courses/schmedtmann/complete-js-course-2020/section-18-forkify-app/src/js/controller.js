@@ -1060,3 +1060,9 @@ const timeout = function (s) {
 // imagine we were handling a click event on some DOM element -- listening for that should for sure go into the view
 // dealing with the hashchange and load events has more to do with DOM manipulation or the DOM itself than with the controller
 // we therefore need a way of putting this logic into a recipe view
+// however, the function we use to handle these events is sitting inside of this controller module
+// we have a problem here: 
+// we don't want this code here but in the view:
+// ['hashchange], 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
+// however, in the above code, we DO need the controller function controlRecipes
+// but we do NOT want to put the const controlRecipes function in view.js
