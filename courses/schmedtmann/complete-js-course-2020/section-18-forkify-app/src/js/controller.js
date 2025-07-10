@@ -1066,3 +1066,6 @@ const timeout = function (s) {
 // ['hashchange], 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
 // however, in the above code, we DO need the controller function controlRecipes
 // but we do NOT want to put the const controlRecipes function in view.js
+// recapping previous lessons, we want to handle events in the controller because otherwise we'd have application logic in the view, which we don't want
+// on the other hand, we want to listen for events in the view, because otherwise we'd need DOM elements in the controller, meaning presentation logic in the controller, which would be wrong for our MVC implementation
+// event listeners should be attached to DOM elements in the view, but evens should be handled by controller functions in the controller module
