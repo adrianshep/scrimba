@@ -1069,3 +1069,10 @@ const timeout = function (s) {
 // recapping previous lessons, we want to handle events in the controller because otherwise we'd have application logic in the view, which we don't want
 // on the other hand, we want to listen for events in the view, because otherwise we'd need DOM elements in the controller, meaning presentation logic in the controller, which would be wrong for our MVC implementation
 // event listeners should be attached to DOM elements in the view, but evens should be handled by controller functions in the controller module
+// looking at the architecture diagram, we have the controlRecipes function in the controller and we have a special method in the view, the addHandlerRender
+// we might think it's very easy to connect these two functions
+// why not simply call the controlRecipes functions right from the view whenever an event occurs?
+// that isn't possible because of the way we set up the architecture
+// the view doesn't know anything about the controller
+// it doesn't import the controller, so we can't call any of the functions that are in the controller from the view
+// it only works the other way around and therefore it's more complex than this
