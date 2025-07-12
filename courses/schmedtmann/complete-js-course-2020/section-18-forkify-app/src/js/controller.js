@@ -1076,3 +1076,22 @@ const timeout = function (s) {
 // the view doesn't know anything about the controller
 // it doesn't import the controller, so we can't call any of the functions that are in the controller from the view
 // it only works the other way around and therefore it's more complex than this
+
+// fortunately there is a good solution: the Publisher-Subscriber Design pattern
+// design patterns in programming are standard solutions to certain kinds of problems
+// in the P-S pattern, we have a publisher --  which is some code -- that knows when to react
+// in this case, that's going to be the addHandlerRender function because it will contain the addEventListener method
+// therefore, it will know when to react to the event
+// on the other hand, we have a subscriber, which is code that wants to react
+// this code should be executed when the event happens
+// in this case, the controlRecipes function we already have in our controller
+// remember, the publisher doesn't yet know the subscriber exists because the subscriber is in the controller that the view can't access
+// finally, the solution to the problem:
+// we can now subscribe to the publisher by passing in the subscriber function as an argument
+// in practice, that means as soon as the program loads, the init function is called, which in turn immediately calls the addHandlerRender function from the view
+// this is possible because the controller does import both the view and the model
+// as we call addHandlerRender, we pass in controlRecipes as an argument -- we susbcribe controlRecipes to addHandlerRender
+// at this point, the two functions are finally connected
+// now addHandlerRender listens for events using the addEventListener method as always
+// as soon as the event happens, controlRecipes function willbe called as the callback funciton of addEventListener
+// in other words, as soon as the publisher publishes an event, the subscriber will get called
