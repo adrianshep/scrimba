@@ -1095,3 +1095,10 @@ const timeout = function (s) {
 // now addHandlerRender listens for events using the addEventListener method as always
 // as soon as the event happens, controlRecipes function willbe called as the callback funciton of addEventListener
 // in other words, as soon as the publisher publishes an event, the subscriber will get called
+// this allows us to keep the handler in the controller and the listener in the view, everything nicely separated
+// let's implement all of this
+// cut this code from controller and create a new method with it in recipeView.js:
+// ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, controlRecipes));
+// since we don't know about controlRecipes, swap out handler for it
+// and that's it for the function
+// this isn't a private method because it needs to be part of the public API of this object so we can call it in the controller
