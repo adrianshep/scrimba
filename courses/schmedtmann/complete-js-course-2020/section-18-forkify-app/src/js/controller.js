@@ -1102,3 +1102,10 @@ const timeout = function (s) {
 // since we don't know about controlRecipes, swap out handler for it
 // and that's it for the function
 // this isn't a private method because it needs to be part of the public API of this object so we can call it in the controller
+// let's create an init function at the bottom of the code first then call it:
+/* 
+const init = function() {
+  recipeView.addHandlerRender(controlRecipes);
+};
+init();
+*/
