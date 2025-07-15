@@ -1109,3 +1109,13 @@ const init = function() {
 };
 init();
 */
+
+
+// Implementing Error and Success Messages
+
+// let's now implement real world error handling in our application
+// instead of always logging errors to the console
+// the error we'll work with is using a false ID that can't be found on the server
+// currently, we get our error message, invalid ID, the ID itself, plus the status code in the console
+// the real world way of handling an error is to display a message in the user interface so the user can know what's going on
+// error handling will mean displaying an error message in the view
