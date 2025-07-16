@@ -1119,3 +1119,19 @@ init();
 // currently, we get our error message, invalid ID, the ID itself, plus the status code in the console
 // the real world way of handling an error is to display a message in the user interface so the user can know what's going on
 // error handling will mean displaying an error message in the view
+// up until now we have been handling the error in the model
+// handling has meant logging the error to the console with small emoji
+// this current strategy isn't correct and isn't happening in the correct place
+// if we want to display something in the view, that code should be in the view and not in the model
+// therefore, let's go back to our code in the view and implement a new method there responsible for displaying that error message
+// first, we grab the HTML element code from index that has the class of error:
+/*
+<!-- <div class="error">
+            <div>
+              <svg>
+                <use href="src/img/icons.svg#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>No recipes found for your query. Please try again!</p>
+          </div> -->
+*/
