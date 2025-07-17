@@ -1135,3 +1135,9 @@ init();
             <p>No recipes found for your query. Please try again!</p>
           </div> -->
 */
+// we'll put this in the view after the spinner
+// renderError() {}
+// as always when we create some new markup, let's create a new markup variable
+// remember, we need to replace src/img/icons.svg with the ${icons} variable
+// and we want to have a custom message, not hard-coded, but passed into this method
+// let's add a parameter for that
