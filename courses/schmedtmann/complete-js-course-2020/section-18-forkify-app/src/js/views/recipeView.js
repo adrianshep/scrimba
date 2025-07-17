@@ -28,10 +28,23 @@ class RecipeView {
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
 
+renderError(message) {
+  const markup = `
+    <div class="error">
+      <div>
+          <svg>
+            <use href="${icons}#icon-alert-triangle"></use>
+          </svg>
+      </div>
+      <p>${message}</p>
+    </div>
+  `
+}
+
 addHandlerRender(handler) {
     ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, handler));
 }
-    
+
     #generateMarkup() {
         // const markup = `
             return `
