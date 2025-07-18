@@ -24,7 +24,7 @@ class RecipeView {
                 </svg>
             </div>
         `;
-        this.#parentElement.innerHTML = '';
+        this.#clear();
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
 
@@ -39,6 +39,8 @@ renderError(message) {
       <p>${message}</p>
     </div>
   `
+  this.#clear();
+  this.#parentElement.insertAdjacentHTML('afterbegin', markup);
 }
 
 addHandlerRender(handler) {
