@@ -1141,3 +1141,9 @@ init();
 // remember, we need to replace src/img/icons.svg with the ${icons} variable
 // and we want to have a custom message, not hard-coded, but passed into this method
 // let's add a parameter for that
+// let's clear the parent element
+// we should use this combination in renderError and renderSpinner above it:
+// this.#clear();
+// this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+// the code will be the same for each method
+// the abstraction of this.#clear() makes it a lot cleaner in the code
