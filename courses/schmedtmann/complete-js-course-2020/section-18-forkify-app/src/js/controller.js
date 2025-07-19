@@ -1147,3 +1147,19 @@ init();
 // this.#parentElement.insertAdjacentHTML('afterbegin', markup);
 // the code will be the same for each method
 // the abstraction of this.#clear() makes it a lot cleaner in the code
+
+// right now, in the model, we are handling the error like this:
+// console.error(`${err} 💥💥💥💥`);
+// that isn't what we want, though
+// we want a way of getting this error into the view
+// the model and the view are only connected by the controller
+// it'll be the controller that will call the recipeView
+// it'll be in the catch block of controlRecipes in the controller:
+/*
+recipeView.render(model.state.recipe);
+} catch (err) {
+  console.log(err);
+  recipeView.renderError();  
+}
+*/
+// so, recipeView.rendereError() and then some message
