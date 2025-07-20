@@ -1162,4 +1162,22 @@ recipeView.render(model.state.recipe);
   recipeView.renderError();  
 }
 */
-// so, recipeView.rendereError() and then some message
+// so, recipeView.renderError() and then some message
+// but what is this message going to look like?
+// from where are we going to get it?
+// because we have the same problem as before:
+// in the helpers functions, whenever we got this error:
+/*
+if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+    return data;
+    } catch(err) {
+        throw err;
+    }
+*/
+// it wasn't automatically propagated down to this async function in model.js:
+// const data = await getJSON(`${API_URL}/${id}`); 
+// which was actually calling the getJSON function
+// we therefore had to re-throw the error in helpers.js to mark the whole promise as rejected so we could get into the model.js catch block
+// now we're here again with the same problem
+// if we get an error in model.js, then the whole loadRecipe promise will also not get rejected 
+// and we'll never enter the recipe.render catch block in controller.js
