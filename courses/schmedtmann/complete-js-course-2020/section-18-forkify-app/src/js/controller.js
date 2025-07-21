@@ -1181,3 +1181,9 @@ if (!res.ok) throw new Error(`${data.message} (${res.status})`);
 // now we're here again with the same problem
 // if we get an error in model.js, then the whole loadRecipe promise will also not get rejected 
 // and we'll never enter the recipe.render catch block in controller.js
+// we will have to do the same thing as before which is to throw the error in model.js again:
+/*
+console.error(`${err} 💥💥💥💥`);
+throw err;
+*/
+// with this, we'll then have access to the exact same error object
