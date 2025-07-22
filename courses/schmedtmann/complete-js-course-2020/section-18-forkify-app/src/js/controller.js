@@ -1187,3 +1187,21 @@ console.error(`${err} 💥💥💥💥`);
 throw err;
 */
 // with this, we'll then have access to the exact same error object
+// between console.error and throw, we'll now have access to the exact same error object which we didn't previously
+// we can use the same thing in controller.js as well, changing:
+/*
+recipeView.render(model.state.recipe);
+} catch (err) {
+  console.error(err);
+  recipeView.renderError();
+}
+*/
+// to (removing the console.log):
+/*
+recipeView.render(model.state.recipe);
+} catch (err) {
+  recipeView.renderError(`${err} 💥💥💥💥`);
+}
+*/
+// here, now, our error handling is complete
+// we now hae a way of rendering it to the user interface and will be able to access the exact same error we got access to in the load recipe function
