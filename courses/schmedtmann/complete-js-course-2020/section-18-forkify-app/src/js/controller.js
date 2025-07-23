@@ -1204,4 +1204,9 @@ recipeView.render(model.state.recipe);
 }
 */
 // here, now, our error handling is complete
-// we now hae a way of rendering it to the user interface and will be able to access the exact same error we got access to in the load recipe function
+// we now have a way of rendering it to the user interface and will be able to access the exact same error we got access to in the load recipe function
+// however, the error message we now get is not meaningful and therefore not that useful to anyone using this application
+// let's create a more meaningful one, something like, we couldn't find that recipe, please try another one
+// how should we pass in that message here?
+// via recipeView.renderError()?
+// no, the error message should be an intrinsic property of the view itself
