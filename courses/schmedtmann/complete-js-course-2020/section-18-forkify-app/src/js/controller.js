@@ -1210,3 +1210,7 @@ recipeView.render(model.state.recipe);
 // how should we pass in that message here?
 // via recipeView.renderError()?
 // no, the error message should be an intrinsic property of the view itself
+// cut it from controller
+// in the view, under class RecipeView, we'll add another private field:
+// #errorMessage = 'We could not find that recipe. Please try another one!';
+// then, in the view under renderError, we'll pass in a message or, if none, set a default, which will be the above message
