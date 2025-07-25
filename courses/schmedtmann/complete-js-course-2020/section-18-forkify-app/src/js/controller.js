@@ -1214,3 +1214,8 @@ recipeView.render(model.state.recipe);
 // in the view, under class RecipeView, we'll add another private field:
 // #errorMessage = 'We could not find that recipe. Please try another one!';
 // then, in the view under renderError, we'll pass in a message or, if none, set a default, which will be the above message
+// in the catch portion of the code, we don't pass anything
+// by doing so, we are back to having no code in our controller that is regarded as belonging to the view
+// instead, the message is then by default set to the error message, which we have set as the error message for the entire object
+// we now have a nice, robust error handling strategy we'll be able to use for other errors in the future
+// for example, when there aren't any search results for some search terms
