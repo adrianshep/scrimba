@@ -1219,3 +1219,24 @@ recipeView.render(model.state.recipe);
 // instead, the message is then by default set to the error message, which we have set as the error message for the entire object
 // we now have a nice, robust error handling strategy we'll be able to use for other errors in the future
 // for example, when there aren't any search results for some search terms
+
+// let's implement a method in recipeView.js for success messages
+// it will be called renderMessage and have the class of message:
+/*
+renderMessage(message = this.#message) {
+  const markup = `
+    <div class="message">
+      <div>
+        <svg>
+          <use href="${icons}#icon-smile"></use>
+        </svg>
+      </div>
+      <p>${message}</p>
+    </div>
+  `;
+}
+*/
+// the icon will be different than previously: #icon-smile, rather than alert
+// at the top of the code, under class RecipeView, we will add:
+// #message = '';
+// for now, it'll remain empty as we don't yet have or need a success message
