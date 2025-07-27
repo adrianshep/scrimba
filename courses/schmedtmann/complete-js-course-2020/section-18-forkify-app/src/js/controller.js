@@ -1240,3 +1240,9 @@ renderMessage(message = this.#message) {
 // at the top of the code, under class RecipeView, we will add:
 // #message = '';
 // for now, it'll remain empty as we don't yet have or need a success message
+
+
+// Implementing Search Results - Part 1
+
+// handling the event of a user searching for recipes
+// loading those search results and rendering them
