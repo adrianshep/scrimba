@@ -1246,3 +1246,9 @@ renderMessage(message = this.#message) {
 
 // handling the event of a user searching for recipes
 // loading those search results and rendering them
+// as we focus on user searches, and loading and rendering those search results, we need to implement the model, the view, and the controller binding everything together
+// usually it's easiest to start with the data -- the model -- which means starting to make API calls in order to load search results
+// once we have that part working, we can then render the results onscreen and also care about the actual event
+// let's go to the model and start implementing the search functionality
+// as before, we going to create a function that will be exported so it can be used by the controller:
+// export const loadSearchResults
