@@ -1251,4 +1251,8 @@ renderMessage(message = this.#message) {
 // once we have that part working, we can then render the results onscreen and also care about the actual event
 // let's go to the model and start implementing the search functionality
 // as before, we going to create a function that will be exported so it can be used by the controller:
-// export const loadSearchResults
+/*
+export const loadSearchResults = async function(query) {}
+*/
+// since it will be performing AJAX calls, it's going to be an async function
+// because the function will be called by the controller, it'll be the controller telling the function for what it will search, passing a query like string which can be pulled into the API calls
