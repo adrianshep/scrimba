@@ -1,4 +1,4 @@
-// import { async } from 'regenerator-runtime';
+import { async } from 'regenerator-runtime';
 import { API_URL } from './config.js';
 import { getJSON } from './helpers.js';
 
@@ -24,7 +24,11 @@ export const loadRecipe = async function(id) {
         console.log(state.recipe);
     } catch (err) {
         // Temporary error handling
-        console.error(`${err} 💥💥💥💥`);        
+        console.error(`${err} 💥💥💥💥`);
         throw err;
     }
 };
+
+export const loadSearchResults = async function(query) {
+    
+}
