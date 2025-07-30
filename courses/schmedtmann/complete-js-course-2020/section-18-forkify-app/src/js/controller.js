@@ -1255,4 +1255,7 @@ renderMessage(message = this.#message) {
 export const loadSearchResults = async function(query) {}
 */
 // since it will be performing AJAX calls, it's going to be an async function
-// because the function will be called by the controller, it'll be the controller telling the function for what it will search, passing a query like string which can be pulled into the API calls
+// because the function will be called by the controller, it'll be the controller telling the function for what it will search, passing a query-like string which can be pulled into the API calls
+// we'll need a try catch block
+// in the catch block we'll do the same as before, logging the error and then throwing it
+// so that eventually we'll be able to us it in the controller
