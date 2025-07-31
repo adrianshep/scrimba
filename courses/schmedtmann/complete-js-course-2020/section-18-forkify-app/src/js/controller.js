@@ -1258,4 +1258,10 @@ export const loadSearchResults = async function(query) {}
 // because the function will be called by the controller, it'll be the controller telling the function for what it will search, passing a query-like string which can be pulled into the API calls
 // we'll need a try catch block
 // in the catch block we'll do the same as before, logging the error and then throwing it
-// so that eventually we'll be able to us it in the controller
+// so that eventually we'll be able to use it in the controller
+// let's implement the functionality
+// let's go back to our documentations page where we get all recipes
+// making a get request to this path
+// the way we add a search paramenter is with a question mark and then search equals, in our case, pizza, and that is the search query
+// we can already see the results for pizza
+// this is the URL we need to call in our AJAX request
