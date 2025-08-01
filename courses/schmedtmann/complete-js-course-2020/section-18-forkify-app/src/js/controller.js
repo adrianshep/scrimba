@@ -1265,3 +1265,9 @@ export const loadSearchResults = async function(query) {}
 // the way we add a search paramenter is with a question mark and then search equals, in our case, pizza, and that is the search query
 // we can already see the results for pizza
 // this is the URL we need to call in our AJAX request
+// in model, we can, as before, use the get JSON method
+// that will fetch the data and convert it to JSON and create an error if something goes wrong in the process
+// get JSON returns a promise
+// we await that here and store it in data, as always
+// then we add the URL in a template literal
+// const data = await getJSON(`https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza`)
