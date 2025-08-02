@@ -1271,3 +1271,10 @@ export const loadSearchResults = async function(query) {}
 // we await that here and store it in data, as always
 // then we add the URL in a template literal
 // const data = await getJSON(`https://forkify-api.herokuapp.com/api/v2/recipes?search=pizza`)
+// now we have to replace everything in it to make this work
+// the first thing is to replace the URL with the API URL we already have in our configuration file
+// API URL already includes recipes
+// usually a URL also ends in a slash, so we add the slash to the URL in the config file and take it out in model
+// const data = await getJSON('${API_URL}${id}');
+// then ?search will be followed by our query:
+// const data = await getJSON(`${API_URL}?search=${query}`)
