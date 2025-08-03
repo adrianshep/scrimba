@@ -1278,3 +1278,8 @@ export const loadSearchResults = async function(query) {}
 // const data = await getJSON('${API_URL}${id}');
 // then ?search will be followed by our query:
 // const data = await getJSON(`${API_URL}?search=${query}`)
+// in model, let's call the function and see what we get:
+// loadSearchResults('pizza');
+// the logged data result we get is coming from model line 35
+// we'll want to take this data and store it into our state making changes to it first
+// we will create some new objects based on the data we receive here
