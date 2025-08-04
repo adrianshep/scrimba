@@ -1281,5 +1281,13 @@ export const loadSearchResults = async function(query) {}
 // in model, let's call the function and see what we get:
 // loadSearchResults('pizza');
 // the logged data result we get is coming from model line 35
+// we aren't getting back the complete recipe object in the console
+// it's only some of the data so we can display it in the search results without the unneeeded elements like ingredients
 // we'll want to take this data and store it into our state making changes to it first
 // we will create some new objects based on the data we receive here
+// in model, we start with:
+// data.data.recipes
+// this is the array of all the objects
+// now we want to create a new array which contains the new objects where the property names are different
+// let's map over this and each element is going to be a recipe:
+// data.data.recipes.map(rec => {})
