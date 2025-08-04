@@ -31,7 +31,12 @@ export const loadRecipe = async function(id) {
 
 export const loadSearchResults = async function(query) {
     try {
-        const data = await getJSON(`${API_URL}?search=${query}`)
+        const data = await getJSON(`${API_URL}?search=${query}`);
+
+        data.data.recipes.map(rec => {
+            
+        })
+
     } catch (err) {
         console.error(`${err} 💥💥💥💥`);
         throw err;
