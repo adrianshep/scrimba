@@ -1290,4 +1290,16 @@ export const loadSearchResults = async function(query) {}
 // this is the array of all the objects
 // now we want to create a new array which contains the new objects where the property names are different
 // let's map over this and each element is going to be a recipe:
-// data.data.recipes.map(rec => {})
+// here we will return a new object, copying code from above: id, title, publisher, and image url
+// recipe becomes rec
+// this will return an array of new objects
+/* 
+data.data.recipes.map(rec => {
+  return {
+    id: rec.id,
+    title: rec.title,
+    publisher: rec.publisher,
+    image: rec.image_url
+  }
+})
+*/
