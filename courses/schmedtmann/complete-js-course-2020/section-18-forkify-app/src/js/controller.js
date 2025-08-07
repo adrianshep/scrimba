@@ -1303,3 +1303,19 @@ data.data.recipes.map(rec => {
   }
 })
 */
+// where should we store it?
+// in model, we'll put it into our state
+// the state contains all the data we need to build our application
+// let's call this one search
+// all the data about the application might as well include the search query itself
+// let's create a new object then specify the query which we'll start as an empty string
+// then the results, starting as an empty array
+/*
+export const state = {
+  recipe: {},
+  search: {
+    query: '',
+    results: []
+  }
+};
+*/
