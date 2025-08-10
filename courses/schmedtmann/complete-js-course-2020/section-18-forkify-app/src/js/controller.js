@@ -1322,3 +1322,10 @@ export const state = {
 // the state should contain all the data about the application
 // in this case, we might not even need the query data for now, but it's a good idea to already store it in the state for the day we may need it
 // for example, we might want to add some analytics in the future to find out which queries are mode the most
+// first, we will set:
+/* 
+try {
+  state.search.query = query;
+*/
+// then we'll store the data:
+// state.search.query = data.data.recipes.map
