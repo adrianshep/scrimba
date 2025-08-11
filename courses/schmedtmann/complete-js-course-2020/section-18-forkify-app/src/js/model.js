@@ -35,18 +35,16 @@ export const loadRecipe = async function(id) {
 
 export const loadSearchResults = async function(query) {
     try {
+        state.search.query = query;
+
         const data = await getJSON(`${API_URL}?search=${query}`);
 
-        data.data.recipes.map(rec => {
+        state.search.results = data.data.recipes.map(rec => {
             return {
-                data.data.recipes.map(rec => {
-                    return {
-                      id: rec.id,
-                      title: rec.title,
-                      publisher: rec.publisher,
-                      image: rec.image_url
-                    }
-                  })
+                id: rec.id,
+                title: rec.title,
+                publisher: rec.publisher,
+                image: rec.image_url
                 
             }
         });
@@ -54,4 +52,4 @@ export const loadSearchResults = async function(query) {
         console.error(`${err} 💥💥💥💥`);
         throw err;
     }
-}
+};
