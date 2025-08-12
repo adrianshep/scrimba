@@ -1329,3 +1329,9 @@ try {
 */
 // then we'll store the data:
 // state.search.query = data.data.recipes.map
+// let's see if everything worked:
+// console.log(state.search.results);
+// we find that we have exactly the kind of array we had before
+// the imaage URL we had before is indeed called image
+// everything has the same format as before
+// we want everything to have the same names throughout the entire application
