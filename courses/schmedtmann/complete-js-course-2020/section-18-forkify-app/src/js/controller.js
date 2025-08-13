@@ -1335,3 +1335,15 @@ try {
 // the imaage URL we had before is indeed called image
 // everything has the same format as before
 // we want everything to have the same names throughout the entire application
+// we want to call this function in the controller
+// in the controller, then, we will create a new function above const init = function () that will be like a new controller
+// this one will also need to be an asynchronous function
+// as always, we'll add a try catch block and log the error
+/*
+const controlSearchResults = async function() {
+  try {
+  } catch(err) {
+      console.log(err);
+    }
+}
+*/
