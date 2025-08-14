@@ -1339,9 +1339,15 @@ try {
 // in the controller, then, we will create a new function above const init = function () that will be like a new controller
 // this one will also need to be an asynchronous function
 // as always, we'll add a try catch block and log the error
+// here, in try, we want to call the loadSearchResults we just built with model.loadSearchResults
+// here, too, we'll need to pass in the query but, for now, we'll do that manually
+// we also need to await this
+// but we don't store any results because, like the loadRecipe function, this one also doesn't return anything
+// it only manipulates the state
 /*
 const controlSearchResults = async function() {
   try {
+    await model.loadSearchResults('pizza')
   } catch(err) {
       console.log(err);
     }
