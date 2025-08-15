@@ -1353,3 +1353,20 @@ const controlSearchResults = async function() {
     }
 }
 */
+// we should be able to console.log the error in the controller and still get access to the results
+// first, we need to call this function:
+// console.log(state.search.results)
+// later, we'll hook this up to an event listener
+// we get status not defined because it needs to be model.state.search.results
+// and now our log show 59 search results for pizza
+/*
+const controlSearchResults = async function() {
+  try {
+    await model.loadSearchResults('pizza')
+    console.log(model.state.search.results);
+  } catch(err) {
+      console.log(err);
+    }
+};
+controlSearchResults();
+*/
