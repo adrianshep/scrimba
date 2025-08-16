@@ -1370,3 +1370,8 @@ const controlSearchResults = async function() {
 };
 controlSearchResults();
 */
+// instead of only searching for pizza, we want to get our query from the input field on the website search page
+// we also want to start the process of loading the search results
+// we only want that to happend when the search button is clicked
+// let's create a view only for the search part -- the search field, the search button -- and then another, different view to render the search results
+// it's a good idea to keep every view really focused, especially as they're in different places
