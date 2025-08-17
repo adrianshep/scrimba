@@ -1375,3 +1375,10 @@ controlSearchResults();
 // we only want that to happend when the search button is clicked
 // let's create a view only for the search part -- the search field, the search button -- and then another, different view to render the search results
 // it's a good idea to keep every view really focused, especially as they're in different places
+// this view isn't going to render anything
+// instead, it will give us the content of the search input field
+// getting that input data has to do with the DOM
+// so it should be in a view and not in a controller, correct?
+// if we want to be lazy, we could select the element we want, get the value, and then use that as our query, but this is clearly about the DOM
+// in order to follow our architecture, we'll create a new view: searchView.js
+// just as before, we'll create a class called SearchView
