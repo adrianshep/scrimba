@@ -1382,3 +1382,6 @@ controlSearchResults();
 // if we want to be lazy, we could select the element we want, get the value, and then use that as our query, but this is clearly about the DOM
 // in order to follow our architecture, we'll create a new view: searchView.js
 // just as before, we'll create a class called SearchView
+// we won't export that class but rather an instance, so an object created by that class
+// without passing in any data:
+// export default new SearchView();
