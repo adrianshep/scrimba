@@ -1385,3 +1385,10 @@ controlSearchResults();
 // we won't export that class but rather an instance, so an object created by that class
 // without passing in any data:
 // export default new SearchView();
+
+// as before, we'll have a parent element
+// we'll set that to #parentEl = document.querySelector();
+// in the HTML, we have the entire form called search which has the input field and the search button -- this is the element to select, the one with the class of search, so .search
+// we'll set that to #parentEl = document.querySelector('.search');
+// again, this class isn't going to render anything
+// all we want is to get the query and eventually to listen for the click event on the button
