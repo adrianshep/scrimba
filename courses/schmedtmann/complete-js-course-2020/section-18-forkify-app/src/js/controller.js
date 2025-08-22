@@ -1392,3 +1392,13 @@ controlSearchResults();
 // we'll set that to #parentEl = document.querySelector('.search');
 // again, this class isn't going to render anything
 // all we want is to get the query and eventually to listen for the click event on the button
+// let's create a method we will call from the controller called getQuery
+// all this will do is return this.#parentElement -- that's going to be the search
+// from there, we want to select the input field with the class search__field
+// we'll select this child element using a querySelector
+// then simply get the value of that
+/*
+ getQuery() {
+  return.this.#parentEl.querySelector('.search__field')
+ }
+*/
