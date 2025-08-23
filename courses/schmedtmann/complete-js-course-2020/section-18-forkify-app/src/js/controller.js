@@ -1399,6 +1399,6 @@ controlSearchResults();
 // then simply get the value of that
 /*
  getQuery() {
-  return.this.#parentEl.querySelector('.search__field')
+  return.this.#parentEl.querySelector('.search__field').value;
  }
 */
