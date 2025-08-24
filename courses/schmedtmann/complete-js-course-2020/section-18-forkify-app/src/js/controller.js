@@ -1402,3 +1402,12 @@ controlSearchResults();
   return.this.#parentEl.querySelector('.search__field').value;
  }
 */
+// we could have written this exact same code here in the controller instead of in searchView
+// but that wouldn't make any sense, as the controller isn't concerned about the DOM at all
+// we don't want to have any DOM elements in the controller; in fact, we don't even want to know what the DOM looks like
+// to get the searchView into the controller, we can add, third from the top of the code:
+/*
+import * as model from './model.js';
+import recipeView from './views/recipeView.js;
+import searchView from './views/searchView.js;
+*/
