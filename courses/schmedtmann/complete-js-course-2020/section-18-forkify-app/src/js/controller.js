@@ -1411,3 +1411,22 @@ import * as model from './model.js';
 import recipeView from './views/recipeView.js;
 import searchView from './views/searchView.js;
 */
+
+// then we can get that query by saying searchView.getQuery();
+// of course, there may be no query, in which case, let's add aanother guard clause
+// if no query, return immediately: 
+// if(!query) return;
+/*
+const controlSearchResults = async function() {
+  try {
+    const query = searchView.getQuery();
+    if(!query) return;
+
+    await model.loadSearchResults('pizza')
+    console.log(model.state.search.results);
+  } catch(err) {
+      console.log(err);
+    }
+};
+controlSearchResults();
+*/
