@@ -1430,3 +1430,8 @@ const controlSearchResults = async function() {
 };
 controlSearchResults();
 */
+// because the controller function runs right in the beginning when the application loads, before there is a search value, there can be no result
+// in order to make this work, we need to listen for the event of clicking the search button or submitting the search form
+// only on those events do we want to call this controller function
+// in order to do that, we'll once again use the publisher subscriber pattern, which we did here:
+// recipeView.addHandlerRender(controlRecipes);
