@@ -1435,3 +1435,12 @@ controlSearchResults();
 // only on those events do we want to call this controller function
 // in order to do that, we'll once again use the publisher subscriber pattern, which we did here:
 // recipeView.addHandlerRender(controlRecipes);
+// we will listen for the event in searchView and then pass the controller function -- the handler function -- into the method we'll build here
+// so this addHandler, a search method, is going to be the publisher and the search results function is going to be the subscriber
+/*
+  getQuery() {
+    return.this.#parentEl.querySelector('.search__field').value;
+  }
+
+  addHandlerSearch(){}
+*/
