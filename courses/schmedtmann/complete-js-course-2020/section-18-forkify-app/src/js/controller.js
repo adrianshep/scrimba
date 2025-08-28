@@ -1437,10 +1437,15 @@ controlSearchResults();
 // recipeView.addHandlerRender(controlRecipes);
 // we will listen for the event in searchView and then pass the controller function -- the handler function -- into the method we'll build here
 // so this addHandler, a search method, is going to be the publisher and the search results function is going to be the subscriber
+// we'll take our parent element and add the event listener to it
+// we won't be listening to the submit button but the entire form for the submit event
+// this will then work no matter if the user clicks the submit button or hits enter while typing the query
 /*
   getQuery() {
     return.this.#parentEl.querySelector('.search__field').value;
   }
 
-  addHandlerSearch(){}
+  addHandlerSearch(){
+    this.#parentEl.addEventListener('submit');
+  }
 */
