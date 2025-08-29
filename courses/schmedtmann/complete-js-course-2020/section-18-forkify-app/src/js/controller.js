@@ -1440,12 +1440,16 @@ controlSearchResults();
 // we'll take our parent element and add the event listener to it
 // we won't be listening to the submit button but the entire form for the submit event
 // this will then work no matter if the user clicks the submit button or hits enter while typing the query
+// we can't call the handler immediately as we need to first prevent the default action -- otherwise, the page is going to reload
+// so, e.preventDefault();
 /*
   getQuery() {
     return.this.#parentEl.querySelector('.search__field').value;
   }
 
   addHandlerSearch(){
-    this.#parentEl.addEventListener('submit');
+    this.#parentEl.addEventListener('submit', function(e) {
+      e.preventDefault();
+    });
   }
 */
