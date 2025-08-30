@@ -1442,6 +1442,7 @@ controlSearchResults();
 // this will then work no matter if the user clicks the submit button or hits enter while typing the query
 // we can't call the handler immediately as we need to first prevent the default action -- otherwise, the page is going to reload
 // so, e.preventDefault();
+// only after that can we call the handler function
 /*
   getQuery() {
     return.this.#parentEl.querySelector('.search__field').value;
@@ -1450,6 +1451,7 @@ controlSearchResults();
   addHandlerSearch(){
     this.#parentEl.addEventListener('submit', function(e) {
       e.preventDefault();
+      handler();
     });
   }
 */
