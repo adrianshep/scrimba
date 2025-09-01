@@ -1455,3 +1455,12 @@ controlSearchResults();
     });
   }
 */
+// all we have to do now is call this method in pass in that function
+// let's do that at the beginning:
+/*
+const init = function() {
+  recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
+};
+init();
+*/
