@@ -1464,3 +1464,5 @@ const init = function() {
 };
 init();
 */
+// in the HTML search field, if we try 'pizza', we get 59 data as search results, the exact same ones we had previously
+// if we try 'avocado', we get 39 search results all with 'avocado' in the title
