@@ -1466,3 +1466,14 @@ init();
 */
 // in the HTML search field, if we try 'pizza', we get 59 data as search results, the exact same ones we had previously
 // if we try 'avocado', we get 39 search results all with 'avocado' in the title
+// after we submit the search, we should clear out the search field
+// let's add another small method for that in the view, below getQuery()
+// this encapsulates it nicely inside of searchView
+// for simplicity, as it's barely one line of code, it could be in the controller,but we want to keep everything separated
+// that will make it so much easier and better to add features in the future
+// then we set getQuery() to empty:
+/*
+  clearInput() {
+    this.#parentEl.querySelector('.search__field').value = '';
+  }
+*/
