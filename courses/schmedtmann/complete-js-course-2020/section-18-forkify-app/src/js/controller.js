@@ -1495,3 +1495,12 @@ const controlSearchResults = async function() {
       console.log(err);
     }
 };
+// right now our rendering is only a console.log
+// but in 1) when we get a search query, we can immediately also clear it afterwards
+// or, in fact, in order to keep this controller even simpler, we can do that right in the getQuery method in searchView.js
+// we can make this clearInput method private, so we're not going to use it outside
+/* 
+  #clearInput() {
+      this.#parentEl.querySelector('search__field').value = '';
+  }
+*/
