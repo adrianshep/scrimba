@@ -1504,3 +1504,10 @@ const controlSearchResults = async function() {
       this.#parentEl.querySelector('search__field').value = '';
   }
 */
+// call the clear input method:
+/*
+  getQuery() {
+    return.this.#parentEl.querySelector('.search__field').value;
+    this.#clearInput();
+  }
+*/
