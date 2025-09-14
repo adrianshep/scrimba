@@ -1513,3 +1513,7 @@ const controlSearchResults = async function() {
     return query;
   }
 */
+// in the HTML page search field, we enter "pasta"
+// the field is then cleared
+// and in the console we then get 45 results about pasta, so it works fine
+// in the next section, we will implement a second view that will render all the search results in the HTML page sidebar
