@@ -1517,3 +1517,11 @@ const controlSearchResults = async function() {
 // the field is then cleared
 // and in the console we then get 45 results about pasta, so it works fine
 // in the next section, we will implement a second view that will render all the search results in the HTML page sidebar
+
+
+// Implementing Search Results - Part 2
+
+// let's now render the search results by creating a new view
+// we want to create a resultsView
+// this will contain a render we can call with the search results -- that's the data that will be taken in 
+// we also want to have a render method which will render the data to our user interface
