@@ -1525,3 +1525,5 @@ const controlSearchResults = async function() {
 // we want to create a resultsView
 // this will contain a render we can call with the search results -- that's the data that will be taken in 
 // we also want to have a render method which will render the data to our user interface
+// we'll create the resultsView.js
+// and, within it, the class Results View
