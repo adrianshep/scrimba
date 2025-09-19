@@ -1527,3 +1527,8 @@ const controlSearchResults = async function() {
 // we also want to have a render method which will render the data to our user interface
 // we'll create the resultsView.js
 // and, within it, the class Results View
+// this view will be similar to recipeView.js
+// we'll have a parentElement, data, messages
+// we'll need the same render method, renderSpinner
+// we'll need to display the spinner while the data is being fetched, in this case, the search results
+// we might also need to render an error
