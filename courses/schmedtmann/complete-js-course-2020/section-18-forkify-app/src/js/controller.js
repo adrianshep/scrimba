@@ -1532,3 +1532,5 @@ const controlSearchResults = async function() {
 // we'll need the same render method, renderSpinner
 // we'll need to display the spinner while the data is being fetched, in this case, the search results
 // we might also need to render an error
+// it's time to create a parent class
+// this will allow us to reuse all current methods on all view, that is, on all objects created through all the view classes
