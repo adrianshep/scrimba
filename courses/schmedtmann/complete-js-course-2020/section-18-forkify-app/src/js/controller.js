@@ -1534,3 +1534,4 @@ const controlSearchResults = async function() {
 // we might also need to render an error
 // it's time to create a parent class
 // this will allow us to reuse all current methods on all view, that is, on all objects created through all the view classes
+// therefore, in views, create View.js
