@@ -1535,3 +1535,6 @@ const controlSearchResults = async function() {
 // it's time to create a parent class
 // this will allow us to reuse all current methods on all view, that is, on all objects created through all the view classes
 // therefore, in views, create View.js
+// in View, let's create a new class called View and immediately export it
+// let's make it a default export
+// we'll be exporting the class itself because we're not going to create anh instances of this view -- we'll only use it as a partent class
