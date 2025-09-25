@@ -1537,4 +1537,6 @@ const controlSearchResults = async function() {
 // therefore, in views, create View.js
 // in View, let's create a new class called View and immediately export it
 // let's make it a default export
-// we'll be exporting the class itself because we're not going to create anh instances of this view -- we'll only use it as a partent class
+// we'll be exporting the class itself because we're not going to create any instances of this view -- we'll only use it as a parent class of all the other child views
+// in recipeView, let's import that parent class at the very top:
+// import View from './View.js';
