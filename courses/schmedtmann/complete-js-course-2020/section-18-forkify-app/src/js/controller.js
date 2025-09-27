@@ -1540,3 +1540,10 @@ const controlSearchResults = async function() {
 // we'll be exporting the class itself because we're not going to create any instances of this view -- we'll only use it as a parent class of all the other child views
 // in recipeView, let's import that parent class at the very top:
 // import View from './View.js';
+// don't even need the .js at the end, but nice to keep it there for consistency
+// from recipeView to View, we can copy everything that should be common to all the views of that parent class
+// one thing that needs to be changed:
+// with Parcel and Babel, inheritance between truly private fields and methods doesn't reallly work yet
+// it was nice to use the native JS way of protected methods and properties, but we can't really use it anymoe
+// might be possible in the future, but for now, we have to go back to protected fields and methods:
+// swap out ".#" for "._"
