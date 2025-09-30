@@ -1547,3 +1547,11 @@ const controlSearchResults = async function() {
 // it was nice to use the native JS way of protected methods and properties, but we can't really use it anymoe
 // might be possible in the future, but for now, we have to go back to protected fields and methods:
 // swap out ".#" for "._"
+// and change method names from # to _, from truly private to only protected using the underscore convention
+// we'll be extracting the View class elements from the RecipeView class
+// we'll need all the render methods
+// everything except methods for generating the markup because that will be unique for every single view
+// also the handler will be unique to each view
+// after creating View, rendering a spinner, for example, will be really easy
+// all the view will have that method and be able to call it thanks to the parentElement property in each view
+// it will know to which element it should attach the spinner because the parentElement will be unique to every single view
