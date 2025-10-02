@@ -1554,4 +1554,7 @@ const controlSearchResults = async function() {
 // also the handler will be unique to each view
 // after creating View, rendering a spinner, for example, will be really easy
 // all the view will have that method and be able to call it thanks to the parentElement property in each view
-// it will know to which element it should attach the spinner because the parentElement will be unique to every single view
+// it will know too which element it should attach the spinner because the parentElement will be unique to every single view
+// move searchView renders to View
+// now in recipeView need to extend RecipeView:
+// class Recipe View extends View
