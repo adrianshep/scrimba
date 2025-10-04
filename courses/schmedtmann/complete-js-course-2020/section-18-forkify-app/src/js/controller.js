@@ -1558,3 +1558,5 @@ const controlSearchResults = async function() {
 // move searchView renders to View
 // now in recipeView need to extend RecipeView:
 // class Recipe View extends View
+// as icons is not defined in View, we'll have to:
+// import icons from 'url:../../img/icons.svg';
