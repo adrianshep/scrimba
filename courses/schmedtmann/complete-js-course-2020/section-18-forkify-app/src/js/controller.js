@@ -1560,3 +1560,7 @@ const controlSearchResults = async function() {
 // class Recipe View extends View
 // as icons is not defined in View, we'll have to:
 // import icons from 'url:../../img/icons.svg';
+
+// without any code yet in the resultsView, we'll already be able to add a spinner to the search results
+// first, we need to import the View
+// import View from './View.js';
