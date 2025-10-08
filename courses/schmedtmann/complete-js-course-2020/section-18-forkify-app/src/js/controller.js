@@ -1564,3 +1564,5 @@ const controlSearchResults = async function() {
 // without any code yet in the resultsView, we'll already be able to add a spinner to the search results
 // first, we need to import the View
 // import View from './View.js';
+// ResultsView is just another child class of View:
+// class ResultsView extends View {}
