@@ -1565,4 +1565,9 @@ const controlSearchResults = async function() {
 // first, we need to import the View
 // import View from './View.js';
 // ResultsView is just another child class of View:
-// class ResultsView extends View {}
+// parentElement should be the results element in the index, an unordered list
+/* 
+class ResultsView extends View {
+  _parentEl = document.querySelector('.results');
+}
+*/
