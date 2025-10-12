@@ -1571,3 +1571,6 @@ class ResultsView extends View {
   _parentEl = document.querySelector('.results');
 }
 */
+// then, in resultsView.js, we have to export default as before and a new instance of this view
+// this way, there can only be one ResultsView
+// export default new ResultsView();
