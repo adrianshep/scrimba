@@ -1574,3 +1574,5 @@ class ResultsView extends View {
 // then, in resultsView.js, we have to export default as before and a new instance of this view
 // this way, there can only be one ResultsView
 // export default new ResultsView();
+// then, here in the controller, we can immediately import that without having to create the instance manually:
+// import resultsView from './views/resultsView.js';
