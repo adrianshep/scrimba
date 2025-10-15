@@ -1576,3 +1576,11 @@ class ResultsView extends View {
 // export default new ResultsView();
 // then, here in the controller, we can immediately import that without having to create the instance manually:
 // import resultsView from './views/resultsView.js';
+// now we should be able to display the spinner
+// let'd do that at the very beginning:
+/*
+const controlSearchResults = async function()  
+  try {
+  resultsView.renderSpinner();
+  }
+*/
