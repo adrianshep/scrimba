@@ -1584,3 +1584,9 @@ const controlSearchResults = async function()
   resultsView.renderSpinner();
   }
 */
+// parentEl is incorrect; should be parentElement spelled out, so to correct:
+/* 
+class ResultsView extends View {
+  _parentElement = document.querySelector('.results');
+}
+*/
