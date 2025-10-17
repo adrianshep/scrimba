@@ -1590,3 +1590,9 @@ class ResultsView extends View {
   _parentElement = document.querySelector('.results');
 }
 */
+// now we have a nicely loading spinner with our search results
+// all without writing any new code as it's now inheriting that method from its parent class
+// if we log the resultsView and enter a search term in the HTML, we can see the whole prototype chain in the console
+// we see the parent element
+// we don't have any methods already in the class, but we do in the parent class:
+// render, renderError, Spinner, and Message
