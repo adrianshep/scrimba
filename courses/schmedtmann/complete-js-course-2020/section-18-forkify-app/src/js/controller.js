@@ -1596,3 +1596,13 @@ class ResultsView extends View {
 // we see the parent element
 // we don't have any methods already in the class, but we do in the parent class:
 // render, renderError, Spinner, and Message
+
+// it's time to create the generateMarkup method in the resultsView
+// all the child views should have this method in the View as the render method relies on that
+// this.generateMarkup needs to exist in order for the render method to be able to create the markup and insert that HTML into the DOM
+// let's create that as a template literal in resultsView:
+/*
+  _generateMarkup() {
+    return
+  }
+*/
