@@ -1600,9 +1600,26 @@ class ResultsView extends View {
 // it's time to create the generateMarkup method in the resultsView
 // all the child views should have this method in the View as the render method relies on that
 // this.generateMarkup needs to exist in order for the render method to be able to create the markup and insert that HTML into the DOM
-// let's create that as a template literal in resultsView:
+// let's create that preview as a template literal in resultsView:
 /*
   _generateMarkup() {
-    return
+    return `
+      <li class="preview">
+            <a class="preview__link preview__link--active" href="#23456">
+              <figure class="preview__fig">
+                <img src="src/img/test-1.jpg" alt="Test" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+                <p class="preview__publisher">The Pioneer Woman</p>
+                <div class="preview__user-generated">
+                  <svg>
+                    <use href="src/img/icons.svg#icon-user"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+    `
   }
 */
