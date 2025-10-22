@@ -1601,6 +1601,12 @@ class ResultsView extends View {
 // all the child views should have this method in the View as the render method relies on that
 // this.generateMarkup needs to exist in order for the render method to be able to create the markup and insert that HTML into the DOM
 // let's create that preview as a template literal in resultsView:
+// we need to put our data here, but where are those search results?
+// with all of the structure, it might be hard to follow where it is
+// we'll start by calling the render method and logging the search results
+// additionally, we also want resultsView.render because like renderSpinner, resultsView also inherits render
+// then, into that, we pass whatever we want to be rendered in the controller:
+// resultsView.render(model.state.search.results);
 /*
   _generateMarkup() {
     return `
