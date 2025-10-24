@@ -1635,3 +1635,6 @@ render(data) {
   this._data = data;
 }
 */
+// if, in resultsView, we log this._data, we should see that it is taking the data from the search results
+// we also see something appearing: the pre-formatted HMTL, since the method there is already returning it
+// and the view then takes that data and renders it in the user interface
