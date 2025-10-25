@@ -1638,3 +1638,9 @@ render(data) {
 // if, in resultsView, we log this._data, we should see that it is taking the data from the search results
 // we also see something appearing: the pre-formatted HMTL, since the method there is already returning it
 // and the view then takes that data and renders it in the user interface
+// let's now create this method
+// this is an array, so we'll need to loop over it
+// in fact, we don't want to simply return this, but we want to return a whole string containing one of these elements for each of the search results in the array
+// we'll return this._data and then map over it
+// we did that before with the ingredients where, at the end, we joined everything together so there would be a string we returned
+// return this._data.map().join('');
