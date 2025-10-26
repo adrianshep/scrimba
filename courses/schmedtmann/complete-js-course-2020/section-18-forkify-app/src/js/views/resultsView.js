@@ -4,6 +4,8 @@ class ResultsView extends View {
     _parentEl = document.querySelector('.results');
 
     _generateMarkup() {
+        return this._data.map().join('');
+        
         return `
             <li class="preview">
             <a class="preview__link preview__link--active" href="#23456">
