@@ -1644,3 +1644,27 @@ render(data) {
 // we'll return this._data and then map over it
 // we did that before with the ingredients where, at the end, we joined everything together so there would be a string we returned
 // return this._data.map().join('');
+// we could put this code into the map function, but instead, we'll create another method down here to make this cleaner
+// we move the return preview code from _generateMarkup() to here:
+/* 
+_generateMarkupPreview() {
+  return `
+      <li class="preview">
+            <a class="preview__link preview__link--active" href="#23456">
+              <figure class="preview__fig">
+                <img src="src/img/test-1.jpg" alt="Test" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+                <p class="preview__publisher">The Pioneer Woman</p>
+                <div class="preview__user-generated">
+                  <svg>
+                    <use href="src/img/icons.svg#icon-user"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+    `;
+}
+*/
