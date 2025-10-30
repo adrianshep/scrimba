@@ -3,7 +3,7 @@ import View from './View.js';
 class ResultsView extends View {
     _parentEl = document.querySelector('.results');
 
-    _generateMarkup() {
+    _generateMarkup(result) {
         return this._data.map().join('');
     }
 
