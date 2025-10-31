@@ -1670,3 +1670,5 @@ _generateMarkupPreview() {
 */
 // first, we need to pass in the result:
 // _generateMarkupPreview(result.id)
+// then we set up the result.id:
+// <a class="preview__link preview__link--active" href="#${result.id}">
