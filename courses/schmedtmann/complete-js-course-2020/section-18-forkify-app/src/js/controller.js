@@ -1672,3 +1672,5 @@ _generateMarkupPreview() {
 // _generateMarkupPreview(result.id)
 // then we set up the result.id:
 // <a class="preview__link preview__link--active" href="#${result.id}">
+// then the result.image:
+// <img src="${result.image}" alt="Test">
