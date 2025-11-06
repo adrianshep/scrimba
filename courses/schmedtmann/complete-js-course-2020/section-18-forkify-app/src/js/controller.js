@@ -1674,3 +1674,5 @@ _generateMarkupPreview() {
 // <img src="${result.image}" alt="Test">
 // the result.title:
 // <h4 class="preview__title">${result.title}</h4>
+// then here the publisher:
+// <p class="preview__publisher">${result.publisher}</p>
