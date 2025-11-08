@@ -1676,3 +1676,6 @@ _generateMarkupPreview() {
 // <h4 class="preview__title">${result.title}</h4>
 // then here the publisher:
 // <p class="preview__publisher">${result.publisher}</p>
+// we'll need to replace the icons in all of them, too:
+// first, we'll import them:
+// import icons from 'url:../../img/icons.svg';
