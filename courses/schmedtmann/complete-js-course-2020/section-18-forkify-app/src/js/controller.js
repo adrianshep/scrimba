@@ -1679,3 +1679,9 @@ _generateMarkupPreview() {
 // we'll need to replace the icons in all of them, too:
 // first, we'll import them:
 // import icons from 'url:../../img/icons.svg';
+// then we'll place them here:
+// <use href="${icons}#icon-user"></use>
+// testing this, we see that it works:
+// we now get exactly the recipe on which we're clicking
+// for example, when Pizza Casserole is clicked, the ID in the URL is changed
+// as is the recipe appearing in the HTML view
