@@ -1685,3 +1685,7 @@ _generateMarkupPreview() {
 // we now get exactly the recipe on which we're clicking
 // for example, when Pizza Casserole is clicked, the ID in the URL is changed
 // as is the recipe appearing in the HTML view
+// to fix icon, we need to take away this class of active in _generateMarkupPreview from:
+// <a class="preview__link preview__link--active" href="#23456">
+// leaving:
+// <a class="preview__link" href="#23456">
