@@ -1688,4 +1688,13 @@ _generateMarkupPreview() {
 // to fix icon, we need to take away this class of active in _generateMarkupPreview from:
 // <a class="preview__link preview__link--active" href="#23456">
 // leaving:
-// <a class="preview__link" href="#23456">
+// <a class="preview__link" href="${result.id}">
+// we also need to take away this class for now:
+/*
+  <div class="preview__user-generated">
+    <svg>
+      <use href="src/img/icons.svg#icon-user"></use>
+    </svg>
+  </div>
+</div>
+*/
