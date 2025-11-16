@@ -1698,3 +1698,5 @@ _generateMarkupPreview() {
   </div>
 </div>
 */
+// <img src="${result.image}" alt="${result.title}" />
+// <h4 class="preview__title">${result.title}</h4>
