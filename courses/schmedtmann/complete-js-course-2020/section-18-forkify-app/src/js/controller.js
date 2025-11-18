@@ -1700,3 +1700,11 @@ _generateMarkupPreview() {
 */
 // <img src="${result.image}" alt="${result.title}" />
 // <h4 class="preview__title">${result.title}</h4>
+
+// we see the state we had here before is gone, so let's activate the hot module reloading right below the last import in the controller
+// remember with parcel we can do this:
+/* 
+if (module.hot) {
+  module.hot.accept();
+}
+*/
