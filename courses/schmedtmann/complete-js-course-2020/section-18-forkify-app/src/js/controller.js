@@ -1708,3 +1708,11 @@ if (module.hot) {
   module.hot.accept();
 }
 */
+
+// as state now persists, we can delete the user icon from the recipeView:
+/*
+            <svg>
+              <use href="src/img/icons.svg#icon-user"></use>
+            </svg>
+*/
+// with state persisting, we will not be re-rendering what's already in place
