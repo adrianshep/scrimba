@@ -106,9 +106,9 @@ addHandlerRender(handler) {
           </div>
 
           <div class="recipe__user-generated">
-            <svg>
-              <use href="src/img/icons.svg#icon-user"></use>
-            </svg>
+            // <svg>
+            //   <use href="src/img/icons.svg#icon-user"></use>
+            // </svg>
           </div>
           <button class="btn--round">
             <svg class="">
