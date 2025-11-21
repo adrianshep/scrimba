@@ -1716,3 +1716,10 @@ if (module.hot) {
             </svg>
 */
 // with state persisting, we will not be re-rendering what's already in place
+
+// what happens when we search for something that doesn't exist?
+// enter "fsfsdfsfdef"
+// we still get a success
+// we also still get the data, but the recipe array is now empty
+// the array is also empty coming from the state
+// in this case, we want to render an error message saying there is no result for that query
