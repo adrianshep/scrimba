@@ -1725,3 +1725,5 @@ if (module.hot) {
 // in this case, we want to render an error message saying there is no result for that query
 // we start by creating an error message in resultsView below _parentElement saying there was no result for that query:
 // _errorMessage = 'No recipe found for your query! Please try again ;)';
+// how will we display this errorMessage on the parentElement?
+// we could do that here in generateMarkup by checking if the array is empty, and if it is, rendering the errorMessage
