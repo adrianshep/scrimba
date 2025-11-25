@@ -1727,3 +1727,9 @@ if (module.hot) {
 // _errorMessage = 'No recipe found for your query! Please try again ;)';
 // how will we display this errorMessage on the parentElement?
 // we could do that here in generateMarkup by checking if the array is empty, and if it is, rendering the errorMessage
+
+// however, we can also do that directly in the render method in the View, automatically, right as we receive the data -- that makes more sense
+// so, right when the render method is first called and first receives the data, we can immediately check if the data exists
+// up unitl now, we only assumed there was data with which we can generate some markup
+// as always, it's a good idea to check if the data exists
+// that's ture no matter if we receive a simple object or an entire array of objects, which is the case of the results
