@@ -1730,6 +1730,10 @@ if (module.hot) {
 
 // however, we can also do that directly in the render method in the View, automatically, right as we receive the data -- that makes more sense
 // so, right when the render method is first called and first receives the data, we can immediately check if the data exists
-// up unitl now, we only assumed there was data with which we can generate some markup
+// up until now, we only assumed there was data with which we can generate some markup
 // as always, it's a good idea to check if the data exists
-// that's ture no matter if we receive a simple object or an entire array of objects, which is the case of the results
+// that's true no matter if we receive a simple object or an entire array of objects, which is the case of the results
+// let's add a guard clause in View directly under render(data):
+// if (!data) return this.renderError();
+// if there's no data, we want to immediately return and render the error -- we can do all that in one line
+// we don't have to pass in any message because we automatically get the message from this._errorMessage
