@@ -1737,3 +1737,14 @@ if (module.hot) {
 // if (!data) return this.renderError();
 // if there's no data, we want to immediately return and render the error -- we can do all that in one line
 // we don't have to pass in any message because we automatically get the message from this._errorMessage
+
+// however, with our current case, this check isn't enough because we do, in fact, get data
+// it's just an empty array, so in this case we want to treat the empty array as though we received no data
+// current set-up only works for undefined and null
+// now we want to check if the received data is an array and is empty
+// we do that by saying if there is no data or if the data is an array and it's empty
+// we use a helper function on the Array constructor, isAarry, to check that out
+// if it's an array and its data.length is zero, exit this function immediately and render the error
+/*
+if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
+*/
