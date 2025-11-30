@@ -1748,3 +1748,6 @@ if (module.hot) {
 /*
 if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError();
 */
+
+// testing in HTML app with pizza as search term works, as there are results
+// testing with sadsafsdfdf as search term also works, as there are no results but we get our error message of "No recipes found for your query! Please try again ;)"
