@@ -1755,3 +1755,12 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // we implemented the event that the user searches
 // we asynchronously loaded the search results and rendered them to our user interface
 // with that, we're done
+
+
+// Implementing Pagination - Part 1
+
+// we have 59 results for the search term pizza but they're all displayed at once
+// not user friendly at all
+// in our demo application, we only have 10 results on a page
+// we can then go to the next page and get the next 10 results
+// that's what we have to figure out how to create
