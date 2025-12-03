@@ -1764,3 +1764,9 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // in our demo application, we only have 10 results on a page
 // we can then go to the next page and get the next 10 results
 // that's what we have to figure out how to create
+// let's think about what we have to do here
+// remember, it's the control search results function that are responsible for rendering the search results here:
+// model.states.search.results
+// let's create a function that will take in the page we want to render and then only return the results we want to render on that page
+// let's call this new function getSearchResultsPage in the model and also export it:
+// export const getSearchResultsPage 
