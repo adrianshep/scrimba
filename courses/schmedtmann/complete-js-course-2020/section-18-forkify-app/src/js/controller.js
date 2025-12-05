@@ -1770,3 +1770,6 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // let's create a function that will take in the page we want to render and then only return the results we want to render on that page
 // let's call this new function getSearchResultsPage in the model and also export it:
 // export const getSearchResultsPage 
+// this isn't going to be an async function because we already have the search results loaded at this point
+// when we call this function, all we want is to reach into the state and get the data for the page being requested
+// export const getSearchResultsPage = function(page) {}
