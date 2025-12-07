@@ -1773,3 +1773,12 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // this isn't going to be an async function because we already have the search results loaded at this point
 // when we call this function, all we want is to reach into the state and get the data for the page being requested
 // export const getSearchResultsPage = function(page) {}
+// what we will return is a part of the results, which is the array above in the model
+// and then we want to return only a part of it, so that's a slice
+// for the first page, we want to return results one to ten
+// in zero-based array numbering, that's zero to nine
+/*
+export const getSearchResultsPage = function(page) {
+  return state.search.results.slice(0, 9)
+}
+*/
