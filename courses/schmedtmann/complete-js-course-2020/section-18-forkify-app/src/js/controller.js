@@ -1777,8 +1777,15 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // and then we want to return only a part of it, so that's a slice
 // for the first page, we want to return results one to ten
 // in zero-based array numbering, that's zero to nine
+// we're not going to hard code these values -- we can calculate them based on the page
+// we'll create a start variable set to zero for now
+// and we'll create an end variable set to nine
 /*
 export const getSearchResultsPage = function(page) {
+
+  const start = 0;
+  const end = 9;
+
   return state.search.results.slice(0, 9)
 }
 */
