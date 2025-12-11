@@ -1777,7 +1777,6 @@ if (!data || (Array.isArray(data) && data.length === 0)) return this.renderError
 // and then we want to return only a part of it, so that's a slice
 // for the first page, we want to return results one to ten
 // in zero-based array numbering, that's zero to nine
-// we're not going to hard code these values -- we can calculate them based on the page
 // we'll create a start variable set to zero for now
 // and we'll create an end variable set to nine
 /*
@@ -1788,4 +1787,17 @@ export const getSearchResultsPage = function(page) {
 
   return state.search.results.slice(0, 9)
 }
+*/
+// we don't want to hard code these values
+// rather, we want to calculate them based on the page
+// we want to start at a certain point and end at a certain point
+// but we want to calculate these values dynamically
+// the easiest way is to take the page number, subtract one, then multiply it by the number of results we want on the page
+// if we request page one, that's one minus ones, zero, and zero times 10 is zero
+// for the end parameter, page one times 10 is 10, and the slice method doesn't include the last value we pass in, so 10 gets us to nine
+/*
+const start = (page - 1)
+const end = page * 10;
+
+return state.search.results.slice(start, end);
 */
