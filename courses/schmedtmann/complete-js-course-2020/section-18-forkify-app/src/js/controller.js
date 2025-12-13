@@ -1801,3 +1801,16 @@ const end = page * 10;
 
 return state.search.results.slice(start, end);
 */
+// now let's refactor this code
+// this is important data about our application and so should go into the state
+// let's call that resultsPerPage and set it to 10:
+/*
+export const state = {
+  recipe: {},
+  search: {
+    query '',
+    results: [],
+    resultsPerPage: 10,
+    },
+};
+*/
