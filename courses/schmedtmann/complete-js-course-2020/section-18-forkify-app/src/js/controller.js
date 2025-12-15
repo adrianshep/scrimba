@@ -1814,3 +1814,5 @@ export const state = {
     },
 };
 */
+// below, instead of 10, we'll have:
+// const end = page * state.search.resultsPerPage;
