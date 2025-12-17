@@ -1816,3 +1816,7 @@ export const state = {
 */
 // below, instead of 10, we'll have:
 // const end = page * state.search.resultsPerPage;
+// we can do even better, as the 10 value for resultsPerPage in the state above look like a magic number, coming out of nowhere
+// in our configuration file, we can create another constant to export that value
+// if, at some future point, we want to change the results we want per page, we can come to the config file and do that
+// export const RES_PER_PAGE = 10;
