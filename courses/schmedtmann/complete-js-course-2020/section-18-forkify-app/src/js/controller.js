@@ -1820,3 +1820,5 @@ export const state = {
 // in our configuration file, we can create another constant to export that value
 // if, at some future point, we want to change the results we want per page, we can come to the config file and do that
 // export const RES_PER_PAGE = 10;
+// let's import this into model
+// import { API_URL, RES_PER_PAGE }
