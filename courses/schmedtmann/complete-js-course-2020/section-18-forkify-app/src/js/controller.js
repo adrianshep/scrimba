@@ -1822,3 +1822,7 @@ export const state = {
 // export const RES_PER_PAGE = 10;
 // let's import this into model
 // import { API_URL, RES_PER_PAGE }
+// back in our controller, previously we pulled results this way:
+// resultsView.render(model.state.search.results);
+// now, we only want some results, so we can call the new function we created to start wit page one:
+// resultsView.render(model.getSearchResultsPage(1));
