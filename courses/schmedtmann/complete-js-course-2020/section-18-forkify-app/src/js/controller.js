@@ -1826,3 +1826,5 @@ export const state = {
 // resultsView.render(model.state.search.results);
 // now, we only want some results, so we can call the new function we created to start wit page one:
 // resultsView.render(model.getSearchResultsPage(1));
+// when we now test this with a live search, instead of 59 results, we now only get 10
+// be aware, if you don't see a change in the results with this test, you may need to stop and start Parcel
