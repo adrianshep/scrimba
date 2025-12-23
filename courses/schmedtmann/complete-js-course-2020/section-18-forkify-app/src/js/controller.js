@@ -1828,3 +1828,5 @@ export const state = {
 // resultsView.render(model.getSearchResultsPage(1));
 // when we now test this with a live search, instead of 59 results, we now only get 10
 // be aware, if you don't see a change in the results with this test, you may need to stop and start Parcel
+// testing pages two and three returns new results
+// may have to turn off hot module reload to give run a clean test
