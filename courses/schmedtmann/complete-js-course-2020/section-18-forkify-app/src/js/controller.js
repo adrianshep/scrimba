@@ -1830,3 +1830,9 @@ export const state = {
 // be aware, if you don't see a change in the results with this test, you may need to stop and start Parcel
 // testing pages two and three returns new results
 // may have to turn off hot module reload to give run a clean test
+// to finish this part, in model, we should store the incoming page number in the state because later it'll be important, when we display the page number, to know which page we're on
+/*
+export const getSearchResultsPage = function (page) {
+  state.search.page = page;
+}
+*/
