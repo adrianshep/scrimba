@@ -1836,3 +1836,15 @@ export const getSearchResultsPage = function (page) {
   state.search.page = page;
 }
 */
+// we can set the page to one by default
+/*
+export const state = {
+  recipe: {},
+  search: {
+    query: '',
+    results: [],
+    page: 1,
+    resultsPerPage: RES_PER_PAGE,
+  }
+};
+*/
