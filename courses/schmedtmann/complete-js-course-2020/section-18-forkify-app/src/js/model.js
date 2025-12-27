@@ -6,7 +6,9 @@ export const state = {
     recipe: {},
     search: {
         query: '',
-        results: []
+        results: [],
+        page: 1,
+        resultsPerPage: RES_PER_PAGE,
       }
 };
 
