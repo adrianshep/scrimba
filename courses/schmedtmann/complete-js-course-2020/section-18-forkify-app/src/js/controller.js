@@ -1848,3 +1848,10 @@ export const state = {
   }
 };
 */
+// finally, we can make this even better by saying that by default, the page should be that default
+// if we don't pass anything into the page, the page will become the default
+/*
+export const getSearchResultsPage = function (page = state.search.page) {
+  state.search.page = page;
+}
+*/
