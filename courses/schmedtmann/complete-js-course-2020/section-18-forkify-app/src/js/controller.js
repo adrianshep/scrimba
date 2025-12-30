@@ -1855,3 +1855,6 @@ export const getSearchResultsPage = function (page = state.search.page) {
   state.search.page = page;
 }
 */
+// in controller, then, we can remove the 1 we had before:
+// resultsView.render(model.getSearchResultsPage());
+// and we still get our 10 results upon entering our search term
