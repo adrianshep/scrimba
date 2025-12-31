@@ -1858,3 +1858,14 @@ export const getSearchResultsPage = function (page = state.search.page) {
 // in controller, then, we can remove the 1 we had before:
 // resultsView.render(model.getSearchResultsPage());
 // and we still get our 10 results upon entering our search term
+
+
+// Implementing Pagination - Part 2
+
+// we will finish building the pagination feature
+// let's think about some different scenarios
+// the buttons we want to render in the app are not always the same
+// in our first scenario, we're on page one; therefore, only the next button is showing -- there is no button to go back
+// second scenari: if we had less than 10 results -- only one search results page -- there's be no buttons ata all
+// third scenario: on another page that isn't the first, we'd have a button to go back and another to go forward
+// fourth scenario: if we're on the last page of the search results, then we only have a back button
