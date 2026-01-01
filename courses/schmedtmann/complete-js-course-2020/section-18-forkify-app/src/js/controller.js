@@ -1869,3 +1869,5 @@ export const getSearchResultsPage = function (page = state.search.page) {
 // second scenari: if we had less than 10 results -- only one search results page -- there's be no buttons ata all
 // third scenario: on another page that isn't the first, we'd have a button to go back and another to go forward
 // fourth scenario: if we're on the last page of the search results, then we only have a back button
+// since we have to account for all of these different scenarios, let's implement a new view for this pagination
+// in views, we create a new file called paginationView.js
