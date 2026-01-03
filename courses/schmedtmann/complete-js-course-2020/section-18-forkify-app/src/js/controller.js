@@ -1871,3 +1871,12 @@ export const getSearchResultsPage = function (page = state.search.page) {
 // fourth scenario: if we're on the last page of the search results, then we only have a back button
 // since we have to account for all of these different scenarios, let's implement a new view for this pagination
 // in views, we create a new file called paginationView.js
+// let's copy code to it from resultsView to modify:
+/*
+import View from './View.js';
+import icons from 'url:../../img/icons.svg';
+
+class PaginationView extends View {
+    _parentEl = document.querySelector('.pagination');
+}
+*/
