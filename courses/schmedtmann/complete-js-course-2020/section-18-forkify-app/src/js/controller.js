@@ -1880,3 +1880,17 @@ class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 }
 */
+// the div element with a class of pagination already contains the template with back and next page buttons
+// for now, let's complete the setup
+// just as all other classes, we have to have  a generate markup method here
+// this is the method the render method will call in order to generate the markup of the view we're working on
+// every view that renders something to the user interface needs a generate markup method
+/*
+class PaginationView extends View {
+    _parentEl = document.querySelector('.pagination');
+
+    _generateMarkup() {
+    
+    }
+}
+*/
