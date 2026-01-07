@@ -1890,7 +1890,14 @@ class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 
     _generateMarkup() {
-    
+      // Page 1 and there are other pages
+
+      // Page 1 and there are no other pages
+
+      // Last page
+
+      // Other page
     }
 }
 */
+// we'll now account for the four scenarios in generateMarkup
