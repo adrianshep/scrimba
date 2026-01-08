@@ -1901,3 +1901,15 @@ class PaginationView extends View {
 }
 */
 // we'll now account for the four scenarios in generateMarkup
+// what data do we need to figure out if we're on page one and if there are other pages?
+// we'll need the entire search object from the state object in model
+// it contains all the search results, the current page, and the resulsts per page
+// we'll need all this data to compute which buttons should be displayed
+/*
+search: {
+  query: '',
+  results: [],
+  page: 1,
+  resultsPerPage: RES_PER_PAGE,
+}
+*/
