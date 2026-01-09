@@ -1913,3 +1913,7 @@ search: {
   resultsPerPage: RES_PER_PAGE,
 }
 */
+// in controller, let's call the render function so we can parse the data we need and can then use it
+// when do we actually want to display the pagination?
+// right at the moment we're also displaying the search results
+// we get the search query, load the search results, render the results, then also render the initial pagination buttons
