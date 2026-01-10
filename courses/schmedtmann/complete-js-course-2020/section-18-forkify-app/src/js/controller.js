@@ -1917,3 +1917,5 @@ search: {
 // when do we actually want to display the pagination?
 // right at the moment we're also displaying the search results
 // we get the search query, load the search results, render the results, then also render the initial pagination buttons
+// we need to export this view from paginationView so we can import it into the controller:
+// export default new PaginationView();
