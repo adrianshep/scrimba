@@ -1919,3 +1919,4 @@ search: {
 // we get the search query, load the search results, render the results, then also render the initial pagination buttons
 // we need to export this view from paginationView so we can import it into the controller:
 // export default new PaginationView();
+// import PaginationView from './views/paginationView.js';
