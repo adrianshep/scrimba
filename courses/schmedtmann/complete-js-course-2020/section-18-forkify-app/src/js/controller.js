@@ -1920,3 +1920,5 @@ search: {
 // we need to export this view from paginationView so we can import it into the controller:
 // export default new PaginationView();
 // import PaginationView from './views/paginationView.js';
+// that view has a render method on it that we put into the controller:
+// paginationView.render(model.state.search);
