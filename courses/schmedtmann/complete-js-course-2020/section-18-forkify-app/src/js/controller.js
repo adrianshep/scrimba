@@ -1922,3 +1922,4 @@ search: {
 // import PaginationView from './views/paginationView.js';
 // that view has a render method on it that we put into the controller:
 // paginationView.render(model.state.search);
+// now, through the magic of the view class, we now get access to this data we just passed in, this._data = data, which is now the entire search results object 
