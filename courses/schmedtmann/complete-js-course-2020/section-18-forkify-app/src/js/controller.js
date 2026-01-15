@@ -1923,3 +1923,8 @@ search: {
 // that view has a render method on it that we put into the controller:
 // paginationView.render(model.state.search);
 // now, through the magic of the view class, we now get access to this data we just passed in, this._data = data, which is now the entire search results object 
+// in order to figure out if we're on page one and there are other pages, we need to know how many pages there are
+// so, in paginationView under _generateMarkup, we'll compute that
+// we need the number of results divided by the number of results per page
+// for example, 60 results with 10 results per page would mean six pages
+// const numPages
