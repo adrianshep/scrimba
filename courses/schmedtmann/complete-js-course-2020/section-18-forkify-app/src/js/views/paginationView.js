@@ -5,7 +5,8 @@ class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 
     _generateMarkup() {
-    
+        const numPages
+
     }
 }
 
