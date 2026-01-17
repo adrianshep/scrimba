@@ -1927,4 +1927,7 @@ search: {
 // so, in paginationView under _generateMarkup, we'll compute that
 // we need the number of results divided by the number of results per page
 // for example, 60 results with 10 results per page would mean six pages
-// const numPages
+// the number of results comes from this._data.results
+// results (in model) is the entire array that contains all the search results
+// we then divide that by results per page, the configuration constant that we previously set to 10
+// const numPages = this._data.results / this._data.resultsPerPage
