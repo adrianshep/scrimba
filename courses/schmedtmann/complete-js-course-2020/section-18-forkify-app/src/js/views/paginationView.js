@@ -5,7 +5,7 @@ class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 
     _generateMarkup() {
-        const numPages
+        const numPages = this._data.results / this._data.resultsPerPage
 
     }
 }
