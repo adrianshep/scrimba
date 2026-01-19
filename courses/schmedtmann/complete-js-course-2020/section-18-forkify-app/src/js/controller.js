@@ -1931,3 +1931,6 @@ search: {
 // results (in model) is the entire array that contains all the search results
 // we then divide that by results per page, the configuration constant that we previously set to 10
 // const numPages = this._data.results / this._data.resultsPerPage
+// when we log numPages to the console, we get NaN, not a number -- why?
+// upon examination, this._data.results is the entire array, whereas what we want is the numerical value of the length of the array:
+// const numPages = this._data.results.length / this._data.resultsPerPage
