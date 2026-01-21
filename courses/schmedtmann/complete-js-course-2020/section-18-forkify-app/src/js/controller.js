@@ -1934,3 +1934,6 @@ search: {
 // when we log numPages to the console, we get NaN, not a number -- why?
 // upon examination, this._data.results is the entire array, whereas what we want is the numerical value of the length of the array:
 // const numPages = this._data.results.length / this._data.resultsPerPage
+// when we log this, we get 5.9 pages, which we want to rund the next highest integer
+// for that we use Math.ceil to make the 5.9 six
+// const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
