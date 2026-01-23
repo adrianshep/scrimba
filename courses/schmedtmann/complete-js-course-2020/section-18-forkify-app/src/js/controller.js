@@ -1937,3 +1937,6 @@ search: {
 // when we log this, we get 5.9 pages, which we want to rund the next highest integer
 // for that we use Math.ceil to make the 5.9 six
 // const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
+// let's do a check here
+// if(this._data.page === 1);
+// in paginationView, if we're currently on page one, it's very important that we actually have the current page in this state whenever the getSearchResultsPage method is being called with some value
