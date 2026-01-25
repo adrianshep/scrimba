@@ -1940,3 +1940,7 @@ search: {
 // let's do a check here
 // if(this._data.page === 1);
 // in paginationView, if we're currently on page one, it's very important that we actually have the current page in this state whenever the getSearchResultsPage method is being called with some value
+// we're testing if we're on page one and there are other pages
+// that means the current page needs to be less than the number of pages, or
+// the number pages, numPages, is greater than one, which is our first check
+// if(this._data.page === 1 && numPages > 1);
