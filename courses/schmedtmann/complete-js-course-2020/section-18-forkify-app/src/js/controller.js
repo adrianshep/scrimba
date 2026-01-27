@@ -1944,3 +1944,8 @@ search: {
 // that means the current page needs to be less than the number of pages, or
 // the number pages, numPages, is greater than one, which is our first check
 // if(this._data.page === 1 && numPages > 1);
+// let's return this string of page 1 and others because we know that this will then get printed
+/* 
+if(this._data.page === 1 && numPages > 1);
+  return 'page 1, others';
+*/
