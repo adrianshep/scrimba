@@ -1946,6 +1946,7 @@ search: {
 // if(this._data.page === 1 && numPages > 1);
 // let's return this string of page 1 and others because we know that this will then get printed
 /* 
-if(this._data.page === 1 && numPages > 1);
+if(this._data.page === 1 && numPages > 1) {
   return 'page 1, others';
+  }
 */
