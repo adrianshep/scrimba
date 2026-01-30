@@ -1950,3 +1950,14 @@ if(this._data.page === 1 && numPages > 1) {
   return 'page 1, others';
   }
 */
+// being on the last page means that the current page is the same as the number of pages
+// so data.page is equal to the number of pages
+/* 
+if(this._data.page === 1 && numPages > 1) {
+  return 'page 1, others';
+  }
+
+  if(this._data.page === numPages) {}
+*/
+// in the current exmaple we have six pages
+//  if the current page is number six, that means we're on the last page
