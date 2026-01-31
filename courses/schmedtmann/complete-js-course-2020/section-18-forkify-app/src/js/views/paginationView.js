@@ -10,6 +10,10 @@ class PaginationView extends View {
         if(this._data.page === 1 && numPages > 1) {
             return 'page 1, others';
             }
+
+        if(this._data.page === numPages) {
+
+        }
     }
 }
 
