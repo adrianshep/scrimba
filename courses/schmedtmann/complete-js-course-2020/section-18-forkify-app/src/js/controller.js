@@ -1961,3 +1961,9 @@ if(this._data.page === 1 && numPages > 1) {
 */
 // in the current exmaple we have six pages
 //  if the current page is number six, that means we're on the last page
+// so let's then return last page:
+/*
+  if(this._data.page === numPages) {
+    return 'last page'
+  }
+*/
