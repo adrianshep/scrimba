@@ -1970,6 +1970,6 @@ if(this._data.page === 1 && numPages > 1) {
 // and the other page: means that the current page is less than the number of pages
 /*
   if(this._data.page < numPages) {
-    
+    return 'other page'
   }
 */
