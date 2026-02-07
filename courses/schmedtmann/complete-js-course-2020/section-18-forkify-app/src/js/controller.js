@@ -1973,3 +1973,6 @@ if(this._data.page === 1 && numPages > 1) {
     return 'other page'
   }
 */
+// if none of the above scenarios is met, that means we are on page one and there are no other pages
+// in which case, we can only return one page
+// return 'only 1 page'
