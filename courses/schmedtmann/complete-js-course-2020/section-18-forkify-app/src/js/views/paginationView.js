@@ -18,6 +18,8 @@ class PaginationView extends View {
         if(this._data.page < numPages) {
             return 'other page'
         }
+
+        return 'only 1 page'
     }
 }
 
