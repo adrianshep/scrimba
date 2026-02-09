@@ -1976,3 +1976,9 @@ if(this._data.page === 1 && numPages > 1) {
 // if none of the above scenarios is met, that means we are on page one and there are no other pages
 // in which case, we can only return one page
 // return 'only 1 page'
+// in the case of the 'last page' calculation
+// if(this._data.page === numPages)
+// but that's not really true
+// if we only had one, numPages would be one, then all the above would be true, so numPages also needs to be greather than one
+// if(this._data.page === numPages && numPages > 1)
+// to return 'last page'
