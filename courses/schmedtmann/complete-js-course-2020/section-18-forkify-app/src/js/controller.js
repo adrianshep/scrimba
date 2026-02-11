@@ -1982,3 +1982,6 @@ if(this._data.page === 1 && numPages > 1) {
 // if we only had one, numPages would be one, then all the above would be true, so numPages also needs to be greather than one
 // if(this._data.page === numPages && numPages > 1)
 // to return 'last page'
+// if we test being on page 2 using:
+// resultsView.render(model.getSearchResultsPage(2));
+// we then see other page rendered in the application when we enter in a search term
