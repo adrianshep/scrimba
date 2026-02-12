@@ -1985,3 +1985,19 @@ if(this._data.page === 1 && numPages > 1) {
 // if we test being on page 2 using:
 // resultsView.render(model.getSearchResultsPage(2));
 // we then see other page rendered in the application when we enter in a search term
+
+// now let's create the markup
+// grab from HTML the code for going to the previous page
+// we want this, for example, when we need that one button when we're on the last page
+/*
+if(this._data.page === numPages && numPages > 1) {
+  return `
+    <button class="btn--inline pagination__btn--prev">
+      <svg class="search__icon">
+        <use href="src/img/icons.svg#icon-arrow-left"></use>
+      </svg>
+      <span>Page 1</span>
+    </button>
+  `;
+}
+*/
