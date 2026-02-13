@@ -12,7 +12,15 @@ class PaginationView extends View {
             }
 
         if(this._data.page === numPages && numPages > 1) {
-            return 'last page'
+            return `
+                <button class="btn--inline pagination__btn--prev">
+                    <svg class="search__icon">
+                        <use href="src/img/icons.svg#icon-arrow-left"></use>
+                    </svg>
+                <span>Page 1</span>
+            </button>
+        `;
+
         }
 
         if(this._data.page < numPages) {
