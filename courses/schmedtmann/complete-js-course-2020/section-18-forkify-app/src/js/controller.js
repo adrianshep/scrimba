@@ -2001,3 +2001,8 @@ if(this._data.page === numPages && numPages > 1) {
   `;
 }
 */
+// what is the page we want to go to here?
+// <span>Page (number)</span>
+// we need this number
+// that page is the current page minus one, so:
+// <span>Page ${this._data.page - 1}</span>
