@@ -17,7 +17,7 @@ class PaginationView extends View {
                     <svg class="search__icon">
                         <use href="src/img/icons.svg#icon-arrow-left"></use>
                     </svg>
-                <span>Page 1</span>
+                <span>Page ${this._data.page - 1}</span>
             </button>
         `;
 
