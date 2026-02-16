@@ -2006,3 +2006,6 @@ if(this._data.page === numPages && numPages > 1) {
 // we need this number
 // that page is the current page minus one, so:
 // <span>Page ${this._data.page - 1}</span>
+
+// we're using this._data.page a lot, so let's store it in a variable, below _generateMarkup() near the top of paginationView:
+// const curPage = this._data.page;
