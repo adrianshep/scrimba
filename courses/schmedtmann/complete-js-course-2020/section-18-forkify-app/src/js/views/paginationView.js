@@ -5,6 +5,7 @@ class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 
     _generateMarkup() {
+        const curPage = this._data.page;
         const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
 
         if(this._data.page === 1 && numPages > 1) {
