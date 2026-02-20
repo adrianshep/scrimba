@@ -2010,3 +2010,6 @@ if(this._data.page === numPages && numPages > 1) {
 // we're using this._data.page a lot, so let's store it in a variable, below _generateMarkup() near the top of paginationView:
 // const curPage = this._data.page;
 // let's replace this._data.page with curPage everywhere
+
+// replace the icons:
+// <use href="${icons}#icon-arrow-left"></use>
