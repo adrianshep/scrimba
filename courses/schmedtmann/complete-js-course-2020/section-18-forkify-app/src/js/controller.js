@@ -2013,3 +2013,15 @@ if(this._data.page === numPages && numPages > 1) {
 
 // replace the icons:
 // <use href="${icons}#icon-arrow-left"></use>
+
+// on Page 1, we need the opposite
+// only one button, but one that takes us to the next page
+// grab markup from index:
+/*
+<button class="btn--inline pagination__btn--next">
+  <span>Page 3</span>
+  <svg class="search__icon">
+    <use href="src/img/icons.svg#icon-arrow-right"></use>
+  </svg>
+</button>
+*/
