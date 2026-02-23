@@ -2025,3 +2025,15 @@ if(this._data.page === numPages && numPages > 1) {
   </svg>
 </button>
 */
+/*
+if(this._data.page === numPages && numPages > 1) {
+  return `
+    <button class="btn--inline pagination__btn--next">
+      <span>Page 3</span>
+      <svg class="search__icon">
+        <use href="src/img/icons.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
+  `;
+}
+*/
