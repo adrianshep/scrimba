@@ -14,14 +14,13 @@ class PaginationView extends View {
 
         if(curPage === numPages && numPages > 1) {
             return `
-                <button class="btn--inline pagination__btn--prev">
+                <button class="btn--inline pagination__btn--next">
+                    <span>Page ${curPage + 1}</span>
                     <svg class="search__icon">
-                        <use href="${icons}#icon-arrow-left"></use>
-                    </svg>
-                <span>Page ${curPage - 1}</span>
-            </button>
-        `;
-
+                        <use href="${icons}#icon-arrow-right"></use>
+                </svg>
+                </button>
+            `;
         }
 
         if(curPage < numPages) {
