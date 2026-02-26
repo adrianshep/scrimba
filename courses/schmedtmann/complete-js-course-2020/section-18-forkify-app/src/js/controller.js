@@ -2049,3 +2049,18 @@ if(this._data.page === numPages && numPages > 1) {
   `;
 }
 */
+
+// for the Other page, we want to have the markup for both buttons
+// first the button to go back:
+/*
+if(curPage < numPages) {
+  return `
+    <button class="btn--inline pagination__btn--prev">
+      <svg class="search__icon">
+        <use href="${icons}#icon-arrow-left"></use>
+      </svg>
+      <span>${curPage - 1}</span>
+    </button>
+  `;
+}
+*/
