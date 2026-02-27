@@ -24,7 +24,14 @@ class PaginationView extends View {
         }
 
         if(curPage < numPages) {
-            return 'other page'
+            return `
+                <button class="btn--inline pagination__btn--prev">
+                    <svg class="search__icon">
+                        <use href="${icons}#icon-arrow-left"></use>
+                    </svg>
+                    <span>${curPage - 1}</span>
+                </button>
+            `;
         }
 
         return 'only 1 page'
