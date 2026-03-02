@@ -2084,3 +2084,9 @@ if(curPage < numPages) {
   `;
 }
 */
+
+// and then we're on Page 1 when we return nothing because we don't want to render any button
+// if there are no other pages, there's nowhere to go
+/*
+return 'only 1 page'
+*/
