@@ -40,7 +40,7 @@ class PaginationView extends View {
         `;
     }
         
-    return 'only 1 page'
+        return 'only 1 page'
     }
 }
 
