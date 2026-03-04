@@ -2090,3 +2090,8 @@ if(curPage < numPages) {
 /*
 return 'only 1 page'
 */
+
+// testing:
+// page 1 renders Page 2 button
+// page 4 renders Page 3 back and Page 5 forward buttons
+// last page renders only Page 5 back button and no forward button
