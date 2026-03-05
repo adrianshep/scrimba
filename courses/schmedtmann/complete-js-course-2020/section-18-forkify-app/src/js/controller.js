@@ -2095,3 +2095,10 @@ return 'only 1 page'
 // page 1 renders Page 2 button
 // page 4 renders Page 3 back and Page 5 forward buttons
 // last page renders only Page 5 back button and no forward button
+
+// next, we need to add an event listener to the buttons so we can go to them and see them displayed
+// button code is common across these scenarios and could be refactored via generate markup button method, but that will be left as a personal challenge
+// here we'll go straight to adding the event listener
+// as before in recipeView, we'll be using the publisher subscriber pattern
+// we'll create a publisher -- a function that is listening for the event -- which receives a handler function, in our case a controller 
+// we'll then be able to listen for the vent in the view where it makes sense, while being able to handle the event from the controller
