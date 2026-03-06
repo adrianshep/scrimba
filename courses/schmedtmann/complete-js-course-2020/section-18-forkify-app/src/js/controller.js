@@ -2102,3 +2102,8 @@ return 'only 1 page'
 // as before in recipeView, we'll be using the publisher subscriber pattern
 // we'll create a publisher -- a function that is listening for the event -- which receives a handler function, in our case a controller 
 // we'll then be able to listen for the vent in the view where it makes sense, while being able to handle the event from the controller
+// let's add that method here:
+/* 
+addHandlerClick(handler) {
+}
+*/
