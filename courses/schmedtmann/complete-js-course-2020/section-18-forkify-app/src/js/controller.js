@@ -2107,3 +2107,10 @@ return 'only 1 page'
 addHandlerClick(handler) {
 }
 */
+// here we're going to use event delegation because there are going to be two buttons but we won't want to listen to each individually
+// instead, we'll add the event listener to the common parent element
+/* 
+addHandlerClick(handler) {
+  this._parentElement.addEventListener()
+}
+*/
