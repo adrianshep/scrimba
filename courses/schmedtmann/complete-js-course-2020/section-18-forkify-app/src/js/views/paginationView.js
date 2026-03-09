@@ -4,7 +4,9 @@ import icons from 'url:../../img/icons.svg';
 class PaginationView extends View {
     _parentEl = document.querySelector('.pagination');
 
-    addHandlerClick(handler) {} 
+    addHandlerClick(handler) {
+        this._parentElement.addEventListener()
+    } 
 
     _generateMarkup() {
         const curPage = this._data.page;
