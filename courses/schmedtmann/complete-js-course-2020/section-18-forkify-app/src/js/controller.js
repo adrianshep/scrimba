@@ -2114,3 +2114,11 @@ addHandlerClick(handler) {
   this._parentElement.addEventListener()
 }
 */
+// this time we're listening for a click
+// and we have a function, because we can't immediately call the handler coming in because, first, we need to figure out which button was clicked based on the event
+/* 
+addHandlerClick(handler) {
+  this._parentElement.addEventListener('click', function(e) {
+  })
+}
+*/
