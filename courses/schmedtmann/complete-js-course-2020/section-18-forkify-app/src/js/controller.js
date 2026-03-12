@@ -2122,3 +2122,15 @@ addHandlerClick(handler) {
   })
 }
 */
+// so that's event delegation
+// we create a button element and select the closest button element to the clicked element
+// if the clicked element is the e.target we then use closest, which is an amazing method
+// here we will look for the element with the class btn--inline
+// the closest method is a bit like query selector, only instead of searching down the tree for childern it looks up for parents
+/*
+addHandlerClick(handler) {
+  this._parentElement.addEventListener('click', function(e) {
+    const btn = e.target.closest('btn--inline')
+  })
+}
+*/
