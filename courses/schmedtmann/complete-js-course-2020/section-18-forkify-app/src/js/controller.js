@@ -2134,3 +2134,11 @@ addHandlerClick(handler) {
   })
 }
 */
+
+// to see that this works, let's now create our controller above const init
+// this controller will be executed whenever a click happens on one of the buttons
+/*
+const controlPagination = function() {
+  console.log('Pag controller');
+}
+*/
