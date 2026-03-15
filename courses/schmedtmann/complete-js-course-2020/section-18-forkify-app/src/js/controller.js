@@ -2142,3 +2142,6 @@ const controlPagination = function() {
   console.log('Pag controller');
 }
 */
+// to const init we'll now add:
+// paginationView.addHandlerClick();
+// calling addHandlerClick in paginationView will, in turn, call addEventListener so we can start listening for the click event on this._parentElement
