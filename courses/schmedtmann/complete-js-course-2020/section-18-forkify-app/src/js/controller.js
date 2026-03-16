@@ -2145,3 +2145,10 @@ const controlPagination = function() {
 // to const init we'll now add:
 // paginationView.addHandlerClick();
 // calling addHandlerClick in paginationView will, in turn, call addEventListener so we can start listening for the click event on this._parentElement
+// test through addHandlerClick in paginationView:
+// add console.log(btn)
+// add handler();
+// then, when you click on previous page button in the HTML:
+// we're still on that previous page
+// btn element logs to the console
+// the handler function ran which then also logged 'Pag controller' to the console
