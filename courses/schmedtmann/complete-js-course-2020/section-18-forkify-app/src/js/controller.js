@@ -2152,3 +2152,8 @@ const controlPagination = function() {
 // we're still on that previous page
 // btn element logs to the console
 // the handler function ran which then also logged 'Pag controller' to the console
+
+// problem: when we click on the page 5 button, how will JS know it shoulld display the results of page number 5?
+// we need to establish a connection between the DOM and our code
+// we can do that using custon data attributes
+// we can create a data attribute on each of the buttons indicating which page we want to display
