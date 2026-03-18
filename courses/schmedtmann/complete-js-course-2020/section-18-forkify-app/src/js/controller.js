@@ -2153,7 +2153,19 @@ const controlPagination = function() {
 // btn element logs to the console
 // the handler function ran which then also logged 'Pag controller' to the console
 
-// problem: when we click on the page 5 button, how will JS know it shoulld display the results of page number 5?
+// problem: when we click on the page 5 button, how will JS know it should display the results of page number 5?
 // we need to establish a connection between the DOM and our code
-// we can do that using custon data attributes
+// we can do that using custom data attributes
 // we can create a data attribute on each of the buttons indicating which page we want to display
+// for Page 1 and there are other pages:
+/*
+        if(curPage === 1 && numPages > 1) {
+            return `
+              <button data-goto="${curPage - 1}" class="btn--inline pagination___btn--next">
+                <span>Page ${curPage + 1}</span>
+                <svg class="search__icon">
+                <use href="${icons}#icon-arrow-right"></use>
+                </svg>
+              </button>
+            }
+*/
