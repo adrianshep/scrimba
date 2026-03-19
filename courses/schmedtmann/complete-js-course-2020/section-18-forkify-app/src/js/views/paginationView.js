@@ -16,7 +16,13 @@ class PaginationView extends View {
         const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
 
         if(curPage === 1 && numPages > 1) {
-            return 'page 1, others';
+            return `
+              <button data-goto="${curPage - 1}" class="btn--inline pagination___btn--next">
+                <span>Page ${curPage + 1}</span>
+                <svg class="search__icon">
+                    <use href="${icons}#icon-arrow-right"></use>
+                </svg>
+              </button>
             }
 
         if(curPage === numPages && numPages > 1) {
