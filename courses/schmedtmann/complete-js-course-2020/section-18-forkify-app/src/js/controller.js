@@ -2169,3 +2169,17 @@ const controlPagination = function() {
               </button>
             }
 */
+
+// for last page it is:
+/*
+        if(curPage === numPages && numPages > 1) {
+            return `
+              <button data-goto="${curPage - 1}" class="btn--inline pagination___btn--prev">
+                <svg class="search__icon">
+                  <use href="${icons}#icon-arrow-left"></use>
+                </svg>
+                <span>Page ${curPage - 1}</span>
+              </button>
+            `;
+          }
+*/
