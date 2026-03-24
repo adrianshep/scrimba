@@ -2203,3 +2203,6 @@ const controlPagination = function() {
         `;
     }
 */
+
+// we can get that number by setting up in paginationView under addHandlerClick(handler):
+// const goToPage = bthn.dataset.goto;
