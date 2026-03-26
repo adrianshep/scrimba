@@ -2206,3 +2206,6 @@ const controlPagination = function() {
 
 // we can get that number by setting up in paginationView under addHandlerClick(handler):
 // const goToPage = bthn.dataset.goto;
+
+// first, we need another guard clause -- if there is no button, return immediately -- under const btn in paginationView:
+// if (btn) return;
