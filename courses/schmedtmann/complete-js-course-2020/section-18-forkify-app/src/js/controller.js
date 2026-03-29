@@ -2209,3 +2209,12 @@ const controlPagination = function() {
 
 // first, we need another guard clause -- if there is no button, return immediately -- under const btn in paginationView:
 // if (btn) return;
+
+// we can take the number, pass it back to the controller
+// then, in the controller, we can finally use it to render the results on the page we want using the getResultsPage method:
+/*
+const goToPage = +btn.dataset.goto;
+
+handler(goToPage);
+*/
+// we start in paginationView by passing 
