@@ -2218,3 +2218,10 @@ const goToPage = +btn.dataset.goto;
 handler(goToPage);
 */
 // we start in paginationView by passing 
+
+// our handler in the controller now needs to accept this value (above const init function):
+/* 
+const controlPagination = function(goToPage) {
+
+}
+*/
