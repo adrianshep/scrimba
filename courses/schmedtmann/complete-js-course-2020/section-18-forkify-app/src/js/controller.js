@@ -2225,3 +2225,9 @@ const controlPagination = function(goToPage) {
 
 }
 */
+
+// finally, what should happen in the UI once we click the Page 5 button?
+// we should get the search results for Page 5 rendered
+// new buttons should be rendered, too
+// the bottom left button should change to Page 4
+// the bottom right to Page 6
