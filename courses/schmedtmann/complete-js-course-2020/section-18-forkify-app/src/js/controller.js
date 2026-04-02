@@ -2231,3 +2231,13 @@ const controlPagination = function(goToPage) {
 // new buttons should be rendered, too
 // the bottom left button should change to Page 4
 // the bottom right to Page 6
+
+// to render new results and new pagination buttons in the controller:
+/* 
+const controlPagination = function(goToPage) {
+  
+  resultsView.render(model.getSearchResultsPage(goToPage));
+
+  paginationView.render(model.state.search);
+};
+*/
