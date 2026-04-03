@@ -2241,3 +2241,5 @@ const controlPagination = function(goToPage) {
   paginationView.render(model.state.search);
 };
 */
+// when we get search results with this new page, say 4, then in the model state.search.page gets updated with that new value
+// state.search.object is then different and that is the object we then parse into rendering the new pagination
