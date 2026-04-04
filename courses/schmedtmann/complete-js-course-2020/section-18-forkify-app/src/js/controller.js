@@ -2242,4 +2242,7 @@ const controlPagination = function(goToPage) {
 };
 */
 // when we get search results with this new page, say 4, then in the model state.search.page gets updated with that new value
-// state.search.object is then different and that is the object we then parse into rendering the new pagination
+// state.search.object is then different and that is the object we then pass into rendering the new pagination
+
+// this works because render will overwrite the markup that we there previously
+// that's because we have the clear method in place in the view
