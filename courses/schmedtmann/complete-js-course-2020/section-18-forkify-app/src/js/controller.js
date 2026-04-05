@@ -2246,3 +2246,9 @@ const controlPagination = function(goToPage) {
 
 // this works because render will overwrite the markup that we there previously
 // that's because we have the clear method in place in the view
+
+// let's clean up the code a little in paginationView:
+/*
+            const goToPage = +btn.dataset.goto;
+            handler(goToPage);
+*/
