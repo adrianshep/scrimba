@@ -2252,3 +2252,11 @@ const controlPagination = function(goToPage) {
             const goToPage = +btn.dataset.goto;
             handler(goToPage);
 */
+
+
+// Project Planning 2
+
+// core functionality is what we see in our flowchart:
+// search functionality, displaying pagination, displaying any selected recipe
+// let's thinkg about how we'll implement our next features
+// based on our user stories, our next feature was a functionality for changing the servings of a displayed recipe
