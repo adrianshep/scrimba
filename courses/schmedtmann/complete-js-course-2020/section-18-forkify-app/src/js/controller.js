@@ -2258,5 +2258,8 @@ const controlPagination = function(goToPage) {
 
 // core functionality is what we see in our flowchart:
 // search functionality, displaying pagination, displaying any selected recipe
-// let's thinkg about how we'll implement our next features
+// let's think about how we'll implement our next features
 // based on our user stories, our next feature was a functionality for changing the servings of a displayed recipe
+// should be quite easy:
+// all we have to do is listen for and handle events on the change servings buttons
+// then update the recipe and render it again
