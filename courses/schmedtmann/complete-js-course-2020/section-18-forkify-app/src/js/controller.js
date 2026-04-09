@@ -2263,3 +2263,11 @@ const controlPagination = function(goToPage) {
 // should be quite easy:
 // all we have to do is listen for and handle events on the change servings buttons
 // then update the recipe and render it again
+
+// the next feature is the bookmarking functionality
+// a little bit more complex to implement
+// whenver the user bookmarks a recipe we want to then render that bookmark in a special bookmarks panel
+// we also want to update the button in the recipe and rerender the recipe
+// whenever a user clicks a bookmark that's the other event that we want to render that a recipe has been clicked
+// here will need two events
+// we want to be able to store this personalized bookmark data in the browser and read it back when the page is loaded the next time
