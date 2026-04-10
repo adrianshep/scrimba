@@ -2271,3 +2271,4 @@ const controlPagination = function(goToPage) {
 // whenever a user clicks a bookmark that's the other event that we want to render that a recipe has been clicked
 // here will need two events
 // we want to be able to store this personalized bookmark data in the browser and read it back when the page is loaded the next time
+// whenever there's a new bookmark, we store all it with all the other bookmarks in local storage, then we load all the bookmarks back from local storage and render them
