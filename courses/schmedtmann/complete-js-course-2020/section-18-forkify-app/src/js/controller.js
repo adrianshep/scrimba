@@ -2282,3 +2282,10 @@ const controlServings = function() {
 
 }
 */
+// we keep calling these functions "controllers" because we're using the model-view-controller pattern
+// they could be called handlers, because in the end that's what they are -- event handlers that will run whenever some event happens
+// in this case, this controller will be executed when the user clicks one of the HTML buttons to increase or decrease the servings
+// that will increase the other numbers in the recipe and adjust all of the ingredients
+// the controller will be very simple
+// we'll have to make it update the recipe servings in the state, update the underlying the data
+// then update the recipe view
