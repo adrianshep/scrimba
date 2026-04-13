@@ -2289,3 +2289,5 @@ const controlServings = function() {
 // the controller will be very simple
 // we'll have to make it update the recipe servings in the state, update the underlying the data
 // then update the recipe view
+// then update the recipe view as that view will be affected by controlling the servings
+// in this case, we have no servings view, because these buttons and everything that happens when we click on them is already in the recipe view
