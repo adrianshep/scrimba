@@ -2291,3 +2291,11 @@ const controlServings = function() {
 // then update the recipe view
 // then update the recipe view as that view will be affected by controlling the servings
 // in this case, we have no servings view, because these buttons and everything that happens when we click on them is already in the recipe view
+// in the model we'd like to have a method which does that for us
+// as always, we don't want to manipulate data in the controller
+// instead, we delegate that task to the model, which is all about the data
+// in model, we'll want to have a method called update servings into which we can pass the new servings:
+/*
+(in controller)
+model.updateServings(6);
+*/
