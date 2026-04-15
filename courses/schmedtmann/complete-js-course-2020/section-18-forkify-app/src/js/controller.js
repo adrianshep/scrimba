@@ -2299,3 +2299,9 @@ const controlServings = function() {
 (in controller)
 model.updateServings(6);
 */
+// let's now go to the model and implement this (at the bottom):
+/*
+export const updateServings = function(newServings) {}
+*/
+// this function will take in the number of new serivngs
+// then reach into the state and the recipe ingredients then change the quantity of each ingredient
