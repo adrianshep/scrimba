@@ -2305,3 +2305,15 @@ export const updateServings = function(newServings) {}
 */
 // this function will take in the number of new serivngs
 // then reach into the state and the recipe ingredients then change the quantity of each ingredient
+
+// each ingredient is an object and contains the quantity
+// we want to do something for each of these ingredients, but we don't want a new array
+// in each iteration of the foreach loop we have the current ingredient
+// ing.quantity should become something new
+/*
+export const updateServings = function(newServings) {
+  state.recipe.ingredients.foreach(ing => {
+    ing.quantity = 
+    });
+};
+*/
