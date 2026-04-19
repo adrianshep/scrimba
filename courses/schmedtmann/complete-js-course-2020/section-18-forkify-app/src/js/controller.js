@@ -2317,3 +2317,12 @@ export const updateServings = function(newServings) {
     });
 };
 */
+// how do we calculate this new quantity?
+// new quantity equals old quantity times new servings divided by old servings
+/*
+export const updateServings = function(newServings) {
+  state.recipe.ingredients.foreach(ing => {
+    ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
+    });
+};
+*/
