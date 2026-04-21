@@ -2326,3 +2326,8 @@ export const updateServings = function(newServings) {
     });
 };
 */
+// now that are changing all the ingredients, in order to finish, we also need to update the servings in the state
+// if we tried to update the servings twice, by the second time, we'd still be using the old value of the two servings
+// so we need to update the value in state
+// we are doing it at the end of the function because otherwise we couldn't preserve this original value in state.recipe.servings
+// state.recipe.servings = newServings;
