@@ -66,7 +66,9 @@ return state.search.results.slice(start, end);
 };
 
 export const updateServings = function(newServings) {
-  state.recipe.ingredients.foreach(ing => {
+    state.recipe.ingredients.foreach(ing => {
     ing.quantity = (ing.quantity * newServings) / state.recipe.servings; 
     });
+
+    state.recipe.servings = newServings;
 };
