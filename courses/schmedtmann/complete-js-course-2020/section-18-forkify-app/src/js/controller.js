@@ -2331,3 +2331,9 @@ export const updateServings = function(newServings) {
 // so we need to update the value in state
 // we are doing it at the end of the function because otherwise we couldn't preserve this original value in state.recipe.servings
 // state.recipe.servings = newServings;
+
+// then we need to update the recipe view
+// we will overwrite the complete recipe, basically, render it again
+// exaclty, what we had higher up in the code in control recipes, taking the recipe out of the state and then rendering it
+// (just above const init in controller)
+// recipeView.render(model.state.recipe);
