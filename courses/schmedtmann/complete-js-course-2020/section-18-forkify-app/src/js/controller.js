@@ -2337,3 +2337,10 @@ export const updateServings = function(newServings) {
 // exaclty, what we had higher up in the code in control recipes, taking the recipe out of the state and then rendering it
 // (just above const init in controller)
 // recipeView.render(model.state.recipe);
+// correct foreach to forEach:
+/*
+export const updateServings = function(newServings) {
+  state.recipe.ingredients.forEach(ing => {
+    ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
+    });
+};
