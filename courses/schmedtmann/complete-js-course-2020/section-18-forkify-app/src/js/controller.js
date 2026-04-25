@@ -2344,3 +2344,12 @@ export const updateServings = function(newServings) {
     ing.quantity = (ing.quantity * newServings) / state.recipe.servings;
     });
 };
+
+// secondary problem:
+// not taking into account the async nature of our application
+// we're trying to control the servings after registering handler functions
+// as of that time, though, no recipe has yet arrived from the API, so state.recipe is not yet defined
+// we're then trying to read ingredients from a recipe that doesn't exist
+// this is a great demonstration of a pitfall of working with Asynchronous JS
+// solution is to test after we control the recipes, following:
+// recipeView.render(model.state.recipe);
