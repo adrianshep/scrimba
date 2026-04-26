@@ -2353,3 +2353,8 @@ export const updateServings = function(newServings) {
 // this is a great demonstration of a pitfall of working with Asynchronous JS
 // solution is to test after we control the recipes, following:
 // recipeView.render(model.state.recipe);
+
+// we want the controller to run whenever we click one of the buttons in the recipe view
+// we'll create a new event listener in the recipe view where these buttons already exists
+// in recipeView, under addHandlerRender, we'll create a new method:
+// addHandlerUpdateServings(handler) {}
