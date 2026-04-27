@@ -1,4 +1,4 @@
-simport View from './View.js';
+import View from './View.js';
 
 import icons from 'url:../../img/icons.svg';
 import {Fraction} from 'fractional';
@@ -8,6 +8,14 @@ class RecipeView extends View {
     _data;
     _errorMessage = 'We could not find that recipe. Please try another one!';
     _message = '';
+
+    addHandlerRender(handler) {
+      ['hashchange', 'load'].forEach => window.addEventListener(ev, handler);
+    }
+
+    addHandlerUpdateServings(handler) {
+
+    }
 
     render(data) {
         this._data = data;
@@ -110,6 +118,7 @@ addHandlerRender(handler) {
             //   <use href="src/img/icons.svg#icon-user"></use>
             // </svg>
           </div>
+
           <button class="btn--round">
             <svg class="">
               <use href="src/img/icons.svg#icon-bookmark-fill"></use>
