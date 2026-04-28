@@ -2357,4 +2357,14 @@ export const updateServings = function(newServings) {
 // we want the controller to run whenever we click one of the buttons in the recipe view
 // we'll create a new event listener in the recipe view where these buttons already exists
 // in recipeView, under addHandlerRender, we'll create a new method:
-// addHandlerUpdateServings(handler) {}
+/* 
+addHandlerUpdateServings(handler) {
+  this._parentElement.addEventListener('click', function(e) {
+    const btn = e.target.closest('.btn--tiny')
+  })
+}
+*/
+// best way is to once again do event delegation
+// we already have the parent element and can listen for events on it, then check if the click target is one of its buttons
+// with event.target, the clicked element, we use the closest method, looking for elements with the button tiny class
+// thsi is important because the user might click on the svg element instead of the button itself, and the closest method look for the closes tiny button
