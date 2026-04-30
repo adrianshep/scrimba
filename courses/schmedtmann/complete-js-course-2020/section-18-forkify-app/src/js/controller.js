@@ -2368,3 +2368,12 @@ addHandlerUpdateServings(handler) {
 // we already have the parent element and can listen for events on it, then check if the click target is one of its buttons
 // with event.target, the clicked element, we use the closest method, looking for elements with the button tiny class
 // thsi is important because the user might click on the svg element instead of the button itself, and the closest method look for the closes tiny button
+// if we're clicking outside of any of these buttons, then this closest method won't return an element but will return null -- we need to check for that, like before: if no button, then return
+/* 
+addHandlerUpdateServings(handler) {
+  this._parentElement.addEventListener('click', function(e) {
+    const btn = e.target.closest('.btn--tiny');
+    if (!btn) return;
+  })
+}
+*/
