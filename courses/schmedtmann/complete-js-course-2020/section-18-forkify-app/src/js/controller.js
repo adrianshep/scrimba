@@ -2380,4 +2380,4 @@ addHandlerUpdateServings(handler) {
 // now we need to connect this with a controller
 // in controller, under const init and regit below recipeView.addHandlerRender:
 // recipeView.addHandlerUpdateServings(controlServings);
-// call handler in recipeView following if (!btn) re
+// call handler in recipeView following if (!btn) return
