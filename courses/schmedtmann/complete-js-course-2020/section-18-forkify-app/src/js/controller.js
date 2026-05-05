@@ -2381,3 +2381,12 @@ addHandlerUpdateServings(handler) {
 // in controller, under const init and regit below recipeView.addHandlerRender:
 // recipeView.addHandlerUpdateServings(controlServings);
 // call handler in recipeView following if (!btn) return
+
+// we don't want this controller to be the source for what should be the next number of servings
+// that should come from the view because that's where the user is updating the servings
+// to keep the controller as flexible as possible we can pass in newServings into updateServings
+/*
+const controlServings = function (newServings) {
+  model.updateServings(newServings);
+}
+*/
