@@ -2390,3 +2390,11 @@ const controlServings = function (newServings) {
   model.updateServings(newServings);
 }
 */
+// in the function, how will we determine the new servings:
+// once again, we'll need to connect the user interface with the code
+// for that, we ue the special data properties
+// we'll go to our buttons in recipeView and add a new property so we can read the value from the add event listener of that property
+// we want the current servings minus one
+/*
+<button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings - 1 }">
+*/
