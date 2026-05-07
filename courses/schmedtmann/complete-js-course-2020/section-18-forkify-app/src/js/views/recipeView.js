@@ -104,7 +104,8 @@ addHandlerRender(handler) {
             <span class="recipe__info-text">servings</span>
 
             <div class="recipe__info-buttons">
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings - 1 
+              }">
                 <svg>
                   <use href="src/img/icons.svg#icon-minus-circle"></use>
                 </svg>
