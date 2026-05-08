@@ -2398,3 +2398,7 @@ const controlServings = function (newServings) {
 /*
 <button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings - 1 }">
 */
+// for the other button:
+/*
+<button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings + 1 }">
+*/
