@@ -110,7 +110,7 @@ addHandlerRender(handler) {
                   <use href="src/img/icons.svg#icon-minus-circle"></use>
                 </svg>
               </button>
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings + 1 }">
                 <svg>
                   <use href="src/img/icons.svg#icon-plus-circle"></use>
                 </svg>
