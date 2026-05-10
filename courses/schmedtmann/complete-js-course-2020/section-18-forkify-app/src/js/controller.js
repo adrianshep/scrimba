@@ -2402,3 +2402,7 @@ const controlServings = function (newServings) {
 /*
 <button class="btn--tiny btn--increase-servings" data-update-to="${this._data.servings + 1 }">
 */
+// change confusing name of both buttons from:
+// "btn--tiny btn--increase-servings"
+// to:
+// "btn--tiny btn--update-servings"
