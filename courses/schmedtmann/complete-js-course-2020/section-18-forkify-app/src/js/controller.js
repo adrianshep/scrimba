@@ -2406,3 +2406,6 @@ const controlServings = function (newServings) {
 // "btn--tiny btn--increase-servings"
 // to:
 // "btn--tiny btn--update-servings"
+// btn__tiny is a class that is about styling and btn--update-servings is about functionality
+// let's use the latter instead in addHandler UpdateServings:
+// const btn = e.target.closest('.btn--update-servings');  
