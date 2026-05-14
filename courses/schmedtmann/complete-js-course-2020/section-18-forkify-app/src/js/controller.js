@@ -2409,3 +2409,7 @@ const controlServings = function (newServings) {
 // btn__tiny is a class that is about styling and btn--update-servings is about functionality
 // let's use the latter instead in addHandler UpdateServings:
 // const btn = e.target.closest('.btn--update-servings');  
+
+// now we can read that value:
+// const updateTo = btn.dataset.updateTo;
+// it's in camelCase because when there's a dash in the property name, that will be converted to camelCase notation
