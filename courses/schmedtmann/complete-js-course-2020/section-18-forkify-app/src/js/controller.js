@@ -2415,3 +2415,5 @@ const controlServings = function (newServings) {
 // it's in camelCase because when there's a dash in the property name, that will be converted to camelCase notation
 // we can use destructuring to make the code cleaner:
 // const { updateTo } = btn.dataset;
+// we need to convert btn.dataset to a number:
+// const { updateTo } = +btn.dataset;
