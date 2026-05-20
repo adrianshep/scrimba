@@ -2417,3 +2417,5 @@ const controlServings = function (newServings) {
 // const { updateTo } = btn.dataset;
 // we need to convert btn.dataset to a number:
 // const { updateTo } = +btn.dataset;
+// above produces undefined in console, so have to remove destructuring:
+// const updateTo - +btn.dataset.updateTo;
