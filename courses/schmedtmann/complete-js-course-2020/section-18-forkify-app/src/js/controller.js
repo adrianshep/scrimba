@@ -2419,3 +2419,6 @@ const controlServings = function (newServings) {
 // const { updateTo } = +btn.dataset;
 // above produces undefined in console, so have to remove destructuring:
 // const updateTo - +btn.dataset.updateTo;
+
+// button to reduce number of servings keeps going to and below zero -- handler needs a check on that condition
+// if (updateTo > 0) handler(updateTo);
