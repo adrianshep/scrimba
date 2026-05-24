@@ -2422,3 +2422,6 @@ const controlServings = function (newServings) {
 
 // button to reduce number of servings keeps going to and below zero -- handler needs a check on that condition
 // if (updateTo > 0) handler(updateTo);
+
+// let's restore the destructuring we had previously:
+// const { updateTo } = btn.dataset;
