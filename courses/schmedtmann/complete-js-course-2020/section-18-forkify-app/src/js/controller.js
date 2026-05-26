@@ -2425,3 +2425,5 @@ const controlServings = function (newServings) {
 
 // let's restore the destructuring we had previously:
 // const { updateTo } = btn.dataset;
+// as updateTo is now a string, we'll convert that here:
+// if (+updateTo > 0) handler(+updateTo);
