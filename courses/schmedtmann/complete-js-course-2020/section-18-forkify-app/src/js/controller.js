@@ -2427,3 +2427,9 @@ const controlServings = function (newServings) {
 // const { updateTo } = btn.dataset;
 // as updateTo is now a string, we'll convert that here:
 // if (+updateTo > 0) handler(+updateTo);
+
+// challenge:
+// we're still updating entire view at once by rendering it again
+// this takes time, especially downloading the image
+// in the next lecture, we'll develop a simple algorithm to only update the DOM in where we want to update the markup:
+// only the numbers of servings and quantitities, or example, leaving everything else
