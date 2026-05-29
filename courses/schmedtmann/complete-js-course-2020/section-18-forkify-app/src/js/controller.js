@@ -2433,3 +2433,8 @@ const controlServings = function (newServings) {
 // this takes time, especially downloading the image
 // in the next lecture, we'll develop a simple algorithm to only update the DOM in where we want to update the markup:
 // only the numbers of servings and quantitities, or example, leaving everything else
+
+
+// Developing a DOM Updating Algorithm
+
+// having to re-render the entire view and all of its HMTL elements will create unnecessary work and put too much strain on the browser
