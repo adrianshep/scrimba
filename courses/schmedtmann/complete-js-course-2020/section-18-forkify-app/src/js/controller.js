@@ -2438,3 +2438,10 @@ const controlServings = function (newServings) {
 // Developing a DOM Updating Algorithm
 
 // having to re-render the entire view and all of its HMTL elements will create unnecessary work and put too much strain on the browser
+/ let's create an update method we can use in this situation
+// instead of calling the render method in the controller, we want to call the update method
+// in place of:
+// recipeView.render(model.state.recipe);
+// we create:
+// recipeView.update(model.state.recipe);
+// the update will still need all the data like the render, but it'll only update text and DOM attributes without re-rendering the entire view
