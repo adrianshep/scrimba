@@ -2445,3 +2445,6 @@ const controlServings = function (newServings) {
 // we create:
 // recipeView.update(model.state.recipe);
 // the update will still need all the data like the render, but it'll only update text and DOM attributes without re-rendering the entire view
+// we want this update method available in all the views as we'll use it in multiple situations in our project, not just to update the servings
+// we'll call it update and it will receive some data:
+// update(data) {}
