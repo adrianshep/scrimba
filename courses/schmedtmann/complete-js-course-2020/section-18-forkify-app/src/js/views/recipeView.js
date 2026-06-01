@@ -31,7 +31,9 @@ class RecipeView extends View {
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
 
-    update(data) {}
+    update(data) {
+        
+    }
 
     _clear() {
         this._parentElement.innerHTML = '';
