@@ -2448,3 +2448,14 @@ const controlServings = function (newServings) {
 // we want this update method available in all the views as we'll use it in multiple situations in our project, not just to update the servings
 // we'll call it update and it will receive some data:
 // update(data) {}
+
+// let's grab the check from render and also the new data
+// because, once we update the data, we then want the view's data to become that new data
+/* 
+update(data) {
+  if (!data || (Array.isArrya(data) && data.length === 0))
+    return this.renderError();
+
+  this._data = data;
+}
+*/
