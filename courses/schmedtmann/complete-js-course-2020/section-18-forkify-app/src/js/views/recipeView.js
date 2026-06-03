@@ -32,8 +32,11 @@ class RecipeView extends View {
     }
 
     update(data) {
-        
-    }
+      if (!data || (Array.isArrya(data) && data.length === 0))
+        return this.renderError();
+
+    this._data = data;
+}
 
     _clear() {
         this._parentElement.innerHTML = '';
