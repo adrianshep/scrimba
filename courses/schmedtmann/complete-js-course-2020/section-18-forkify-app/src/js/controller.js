@@ -2459,3 +2459,10 @@ update(data) {
   this._data = data;
 }
 */
+// we also need to generate some new markup as if we want to render a new view, even though we're just going to update the markup
+// we still need the entire markup to compare to the old one
+// in this method, we'll create new markup but not render it:
+/* 
+  this._data = data;
+  const newMarkup = this._generateMarkup;
+*/
