@@ -35,7 +35,8 @@ class RecipeView extends View {
       if (!data || (Array.isArrya(data) && data.length === 0))
         return this.renderError();
 
-    this._data = data;
+      this._data = data;
+      const newMarkup = this._generateMarkup;
 }
 
     _clear() {
