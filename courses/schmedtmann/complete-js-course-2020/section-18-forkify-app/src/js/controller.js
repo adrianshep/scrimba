@@ -2466,3 +2466,9 @@ update(data) {
   this._data = data;
   const newMarkup = this._generateMarkup;
 */
+// comparing the new HTML to the previous HTML, we'll only change the text and attributes that have changed from the old version to the new
+// the markup we now have is just a string
+// it will be very difficult to compare it to the DOM elements we have on the page
+// to fix that, we can use a nice trick to convert this markup string to the DOM object that's living in the memory that we can use for comparison with the actual on the page
+// let's first create newDOM:
+// const newDOM = document
