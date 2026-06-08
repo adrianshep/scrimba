@@ -2472,3 +2472,5 @@ update(data) {
 // to fix that, we can use a nice trick to convert this markup string to the DOM object that's living in the memory that we can use for comparison with the actual on the page
 // let's first create newDOM:
 // const newDOM = document
+// then we need to call a function called createRange:
+// const newDOM = document.createRange();
