@@ -38,7 +38,7 @@ class RecipeView extends View {
       this._data = data;
       const newMarkup = this._generateMarkup;
 
-      const newDOM = document;
+      const newDOM = document.createRange();
 }
 
     _clear() {
