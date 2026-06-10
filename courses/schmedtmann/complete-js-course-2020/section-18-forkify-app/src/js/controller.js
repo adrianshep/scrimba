@@ -2474,3 +2474,5 @@ update(data) {
 // const newDOM = document
 // then we need to call a function called createRange:
 // const newDOM = document.createRange();
+// on the range we've created we then call another method called createContextualFragment:
+// const newDOM = document.createRange().createContextualFragment();
