@@ -2476,3 +2476,6 @@ update(data) {
 // const newDOM = document.createRange();
 // on the range we've created we then call another method called createContextualFragment:
 // const newDOM = document.createRange().createContextualFragment();
+// this is where we then pass in the string off markup, like a string of HTML:
+// const newDOM = document.createRange().createContextualFragment(newMarkup);
+// this method will then convert that string into real DOM node objects
