@@ -38,7 +38,8 @@ class RecipeView extends View {
       this._data = data;
       const newMarkup = this._generateMarkup;
 
-      const newDOM = document.createRange().createContextualFragment();
+      
+      const newDOM = document.createRange().createContextualFragment(newMarkup);
 }
 
     _clear() {
