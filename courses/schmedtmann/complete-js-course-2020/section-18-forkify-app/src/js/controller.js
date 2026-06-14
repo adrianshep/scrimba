@@ -2479,3 +2479,8 @@ update(data) {
 // this is where we then pass in the string off markup, like a string of HTML:
 // const newDOM = document.createRange().createContextualFragment(newMarkup);
 // this method will then convert that string into real DOM node objects
+// newDOM will become like a big object, a virtual DOM
+// not on the page, but in our computer memory
+// we can use that DOM as if it were a real one and do something like this:
+// we can create newElements that is the newDOM on which we call querySelectorAll and select all the elements in there
+// const newElements = newDOM.querySelectorAll('*');
