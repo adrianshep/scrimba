@@ -40,6 +40,7 @@ class RecipeView extends View {
 
       
       const newDOM = document.createRange().createContextualFragment(newMarkup);
+      const newElements = newDOM.querySelectorAll('*');
 }
 
     _clear() {
