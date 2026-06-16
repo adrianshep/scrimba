@@ -2484,3 +2484,7 @@ update(data) {
 // we can use that DOM as if it were a real one and do something like this:
 // we can create newElements that is the newDOM on which we call querySelectorAll and select all the elements in there
 // const newElements = newDOM.querySelectorAll('*');
+
+// in order to compare the elements in the actual, on-the-page DOM to the one in memory, we first have to get the actual DOM's elements into our code
+// let's select them and call them current elements:
+// cost curElements = this._parentElement.querySelectorAll('*');
