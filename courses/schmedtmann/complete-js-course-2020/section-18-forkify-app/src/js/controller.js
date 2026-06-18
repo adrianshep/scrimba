@@ -2488,3 +2488,9 @@ update(data) {
 // in order to compare the elements in the actual, on-the-page DOM to the one in memory, we first have to get the actual DOM's elements into our code
 // let's select them and call them current elements:
 // cost curElements = this._parentElement.querySelectorAll('*');
+
+// as const newElements returned a node list, we want to convert new and curElements into a real array using Array.from():
+/*
+const newElements = Array.from(newDOM.querySelectorAll('*'));
+const curElements = Array.from(this._parentElement.querySelectorAll('*'));
+*/
