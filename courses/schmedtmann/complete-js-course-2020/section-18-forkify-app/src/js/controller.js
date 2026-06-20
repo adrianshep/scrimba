@@ -2494,3 +2494,14 @@ update(data) {
 const newElements = Array.from(newDOM.querySelectorAll('*'));
 const curElements = Array.from(this._parentElement.querySelectorAll('*'));
 */
+
+// let's now compare newElements and curElements one by one
+// we're going to loop over the newElements array
+// in its callback function we'll have the current element as newEl and we'll also need access to the current index so we can grab the current element from this arry
+// we'll need to loop over the two arrays at the same time
+// for that, we'll need the index so we can say the current element is equal to current elements at position i
+/*
+newElements.forEach((newEl, i) => {
+  const curEl = curElements[i];
+  });
+*/
