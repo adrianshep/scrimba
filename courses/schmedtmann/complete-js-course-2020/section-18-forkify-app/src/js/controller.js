@@ -2487,7 +2487,7 @@ update(data) {
 
 // in order to compare the elements in the actual, on-the-page DOM to the one in memory, we first have to get the actual DOM's elements into our code
 // let's select them and call them current elements:
-// cost curElements = this._parentElement.querySelectorAll('*');
+// const curElements = this._parentElement.querySelectorAll('*');
 
 // as const newElements returned a node list, we want to convert new and curElements into a real array using Array.from():
 /*
@@ -2505,3 +2505,5 @@ newElements.forEach((newEl, i) => {
   const curEl = curElements[i];
   });
 */
+// how will we compare these two elements, current element and new element?
+// there's a handy method available on all nodes: isEqualNode()
