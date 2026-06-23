@@ -2507,3 +2507,11 @@ newElements.forEach((newEl, i) => {
 */
 // how will we compare these two elements, current element and new element?
 // there's a handy method available on all nodes: isEqualNode()
+// let's use this node to our advantage
+// if the new element is not equal to the current element, then we want to change the text content off the current element to the text content of the new
+// this updates our DOM only in places where it has changed
+/*
+if (!newEl.isEqualNode(curEl)) {
+  curEl.textContent = newEl.textContent;
+}
+*/
