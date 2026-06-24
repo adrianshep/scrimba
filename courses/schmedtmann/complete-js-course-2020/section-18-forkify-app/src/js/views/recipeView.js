@@ -45,6 +45,10 @@ class RecipeView extends View {
 
       newElements.forEach((newEl, i) => {
         const curEl = curElements[i];
+
+        if (!newEl.isEqualNode(curEl)) {
+          curEl.textContent = newEl.textContent;
+        }
       });
     }
 
