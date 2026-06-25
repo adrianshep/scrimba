@@ -2515,3 +2515,18 @@ if (!newEl.isEqualNode(curEl)) {
   curEl.textContent = newEl.textContent;
 }
 */
+
+// this poses a problem now
+// the current code replaces the entire container, which doesn't work
+// we need to find a way of determining if an element only contains text as that is the only thing we want to replace
+// there is a very nice property available on all nodes called nodeValue
+// its value will be null if the node is an element, but if it is text then we'll get that content
+// so, new element with first child node selected
+// this will return a node
+// only the first child node will, if it is text, have some kind of thext here, so the text should not be empty yet different from an empty string
+// let's also trim any white space here
+/*
+if (!newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim() !== '') {
+  curEl.textContent = newEl.textContent;
+}
+*/
