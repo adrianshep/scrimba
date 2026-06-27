@@ -2530,3 +2530,10 @@ if (!newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim() !== '') {
   curEl.textContent = newEl.textContent;
 }
 */
+// let's add some optional chaining as the first child might not always exist:
+/*
+if (
+  !newEl.isEqualNode(curEl) && 
+  newEl.firstChild?.nodeValue.trim() !== ''
+)
+*/
