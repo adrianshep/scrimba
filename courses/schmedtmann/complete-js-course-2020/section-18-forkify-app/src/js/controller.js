@@ -2537,3 +2537,18 @@ if (
   newEl.firstChild?.nodeValue.trim() !== ''
 )
 */
+
+// whenever an element changes, we also want to change its attributes
+// let's do that here as well, but not in the conditional block which only executes on elements that contain text
+// instead, we only want to change the attributes when the new element is different from the current one
+/*
+// updates changed TEXT
+if (
+  !newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim() !== ''
+) {
+  curEl.textContent = newEl.textContent;
+}
+
+// updates changed ATTRIBUTES
+  if(!newEL.isEqualNode(curEl))
+*/
