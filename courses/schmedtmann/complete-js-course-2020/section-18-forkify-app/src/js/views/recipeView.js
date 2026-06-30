@@ -46,11 +46,16 @@ class RecipeView extends View {
       newElements.forEach((newEl, i) => {
         const curEl = curElements[i];
 
+        // updates changed TEXT
         if (
-          !newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== ''
+          !newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim() !== ''
         ) {
           curEl.textContent = newEl.textContent;
         }
+
+        // updates changed ATTRIBUTES
+        if(!newEL.isEqualNode(curEl))
+
       });
     }
 
