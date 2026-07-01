@@ -2552,3 +2552,11 @@ if (
 // updates changed ATTRIBUTES
   if(!newEL.isEqualNode(curEl))
 */
+// we can use the attributes property on an element
+// let's convert the object to an array then loop over it and copy all the attributes from one element to the other
+// for each of the elements we want to set the attribute using that method
+/*
+  if(!newEL.isEqualNode(curEl))
+    Array.rom(newEl.attributes).forEach(attr => curEl.setAttribute(attr.name, attr.value)
+  );
+*/
