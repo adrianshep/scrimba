@@ -55,7 +55,8 @@ class RecipeView extends View {
 
         // updates changed ATTRIBUTES
         if(!newEL.isEqualNode(curEl))
-
+          Array.rom(newEl.attributes).forEach(attr => curEl.setAttribute(attr.name, attr.value)
+          );
       });
     }
 
