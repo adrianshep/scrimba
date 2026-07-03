@@ -2560,3 +2560,7 @@ if (
     Array.rom(newEl.attributes).forEach(attr => curEl.setAttribute(attr.name, attr.value)
   );
 */
+
+// next feature: when a recipe is selected in the sidebar by clicking on it, we want it to stay selected even when the cursor moves off of it
+// we can now use the update algorithm to update the entire sidebar list of search results whenever we click on one of the results
+// we start with the results view, where we'll need the logic of marking the current recipe
