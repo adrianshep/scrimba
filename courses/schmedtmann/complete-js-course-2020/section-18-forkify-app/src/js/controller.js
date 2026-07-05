@@ -2567,9 +2567,13 @@ if (
 // the selected link (result) gets a special class: preview__link--active
 // we want to give that class to the anchor element if result.id is the same as the id in the current URL
 // we start by determining that id which is at window.location.hash
-// we want to take everything except the first element:
+// we can write a simple template literal here
+// if the result.id is the same as the current id, then the result of this expression should become this class name
+// otherwise, an empty string
 /*
-_generateMarkupPreview(result) {
-  const id = window.location.hash.slice(1);
-
- */
+return `
+  <li class="preview">
+    <a class="preview__link" ${
+      result.id === id ?  'preview__link--active' : ''
+    }
+*/
