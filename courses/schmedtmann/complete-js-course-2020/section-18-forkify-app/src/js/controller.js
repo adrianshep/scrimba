@@ -2577,3 +2577,6 @@ return `
       result.id === id ?  'preview__link--active' : ''
     }
 */
+// in the controller we want to:
+// 0) Update results view to mark selected search result
+// resultsView.update(model.getSearchResultsPage());
