@@ -2580,3 +2580,4 @@ return `
 // in the controller we want to:
 // 0) Update results view to mark selected search result
 // resultsView.update(model.getSearchResultsPage());
+// we could use .render instead of .update with much of the same functionality, except that the images would flicker again following the clicking of an element as they had all been re-rendered
