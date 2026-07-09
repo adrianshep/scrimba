@@ -2581,3 +2581,13 @@ return `
 // 0) Update results view to mark selected search result
 // resultsView.update(model.getSearchResultsPage());
 // we could use .render instead of .update with much of the same functionality, except that the images would flicker again following the clicking of an element as they had all been re-rendered
+
+// when the page is reloaded, no recipes appear in the sidebar
+// our application is trying to update that view
+// if the page loads with an id, the recipe will load too, even without a search preceding it
+// in view, the update(data) method has a check that needs removing so the update isn't being called with an empty array rendering an error
+// directly below update(data) we'll remove:
+/*
+  if(!data || (Array.isArray(data) && data.length === 0))
+    return this.renderError();
+*/
