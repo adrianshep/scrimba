@@ -2591,3 +2591,10 @@ return `
   if(!data || (Array.isArray(data) && data.length === 0))
     return this.renderError();
 */
+
+
+// Implementing Bookmarks - Part 1
+
+// we'll be adding a handler to the recipe so the user can bookmark the recipe
+// that will render or update the recipe via the bookmark button
+// to create this, we'll need to implement a lot of stuff
