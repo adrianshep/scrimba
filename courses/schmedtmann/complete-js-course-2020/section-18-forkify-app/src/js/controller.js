@@ -2598,3 +2598,10 @@ return `
 // we'll be adding a handler to the recipe so the user can bookmark the recipe
 // that will render or update the recipe via the bookmark button
 // to create this, we'll need to implement a lot of stuff
+
+// a small bug to fix:
+// page back and forward buttons don't change their numbers after a new recipe search has been returned
+// in model, when search results are loaded (loadSearchResults), the state is set to 1
+// when we move to another page, the variable gets updated but the state is never reset to 1
+// to fix this in model, just before catch (err):
+// state.search.page = 1;
