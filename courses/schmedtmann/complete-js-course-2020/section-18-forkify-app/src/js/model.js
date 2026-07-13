@@ -27,7 +27,7 @@ export const loadRecipe = async function(id) {
             cookingTime: recipe.cooking_time,
             ingredients: recipe.ingredients,
         };
-        console.log(state.recipe);
+      state.search.page = 1;  
     } catch (err) {
         // Temporary error handling
         console.error(`${err} 💥💥💥💥`);
