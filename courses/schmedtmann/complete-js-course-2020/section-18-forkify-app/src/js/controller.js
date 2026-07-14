@@ -2605,3 +2605,8 @@ return `
 // when we move to another page, the variable gets updated but the state is never reset to 1
 // to fix this in model, just before catch (err):
 // state.search.page = 1;
+
+// with that bug fixed, we'll add a new function in model that we'll use from the controller
+// this will receive a recipe and set it as a bookmark
+// at the bottom of model.js:
+// export const addBookmark = function()
