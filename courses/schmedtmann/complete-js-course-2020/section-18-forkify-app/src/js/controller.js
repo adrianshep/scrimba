@@ -2610,3 +2610,9 @@ return `
 // this will receive a recipe and set it as a bookmark
 // at the bottom of model.js:
 // export const addBookmark = function()
+// we don't yet have an array for recipe bookmarks in model
+// adding a bookmark means pushing a recipe into this array
+/*
+},
+bookmarks: [],
+*/
