@@ -2616,3 +2616,10 @@ return `
 },
 bookmarks: [],
 */
+// now push the recipe object in the array:
+/*
+export const addBookmark = function(recipe){
+  //  Add bookmark
+  state.bookmarks.push(recipe);
+}
+*/
