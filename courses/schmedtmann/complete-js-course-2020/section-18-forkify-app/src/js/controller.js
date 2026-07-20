@@ -2623,3 +2623,15 @@ export const addBookmark = function(recipe){
   state.bookmarks.push(recipe);
 }
 */
+// mark current recipe as bookmark
+// this then allows us to display this current recipe as bookmarked in the recipe view
+// setting a new property on this recipe object
+/*
+export const addBookmark = function(recipe){
+  //  Add bookmark
+  state.bookmarks.push(recipe);
+
+  // Mark current recipe as bookmark
+  if(recipe.id === state.recipe.id) state.recipe.bookmarked = true;
+};
+*/
