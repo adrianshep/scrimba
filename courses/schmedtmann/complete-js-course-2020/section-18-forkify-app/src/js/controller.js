@@ -2635,3 +2635,11 @@ export const addBookmark = function(recipe){
   if(recipe.id === state.recipe.id) state.recipe.bookmarked = true;
 };
 */
+
+// let's create a controller for adding a new bookmark
+// above const init = function()
+/*
+const controlAddBookmark = function() {
+  model.addBookmark(model.state.recipe);
+}
+*/
