@@ -2643,3 +2643,10 @@ const controlAddBookmark = function() {
   model.addBookmark(model.state.recipe);
 }
 */
+// we need a way of calling this controller function
+// it should happen when we click on the bookmark button
+// the icon for it is wrong
+// in recipe view:
+// <use href="${icons}#icon-bookmark-fill">
+// should be:
+// <use href="${icons}#icon-bookmark">
