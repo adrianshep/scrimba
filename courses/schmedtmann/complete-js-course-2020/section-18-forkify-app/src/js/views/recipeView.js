@@ -158,7 +158,7 @@ addHandlerRender(handler) {
 
           <button class="btn--round">
             <svg class="">
-              <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+              <use href="${icons}#icon-bookmark"></use>
             </svg>
           </button>
         </div>
