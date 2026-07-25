@@ -2650,3 +2650,6 @@ const controlAddBookmark = function() {
 // <use href="${icons}#icon-bookmark-fill">
 // should be:
 // <use href="${icons}#icon-bookmark">
+
+// the parent element is a button whose class="btn--round"
+let's add another class to it, "btn--bookmark"
