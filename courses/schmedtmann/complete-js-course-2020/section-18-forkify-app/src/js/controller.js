@@ -2652,4 +2652,13 @@ const controlAddBookmark = function() {
 // <use href="${icons}#icon-bookmark">
 
 // the parent element is a button whose class="btn--round"
-let's add another class to it, "btn--bookmark"
+// let's add another class to it, "btn--bookmark"
+// now we want to listen for clicks on this element
+// however, to keep this view simple, we won't select this element directly
+// instead, we'll again do event delegations
+// let's add another function above _generateMarkup():
+/*
+addHandlerAddBookmark(handler) {
+
+}
+*/
