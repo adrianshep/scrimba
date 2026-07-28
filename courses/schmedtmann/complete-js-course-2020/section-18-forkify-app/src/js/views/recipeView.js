@@ -21,8 +21,13 @@ class RecipeView extends View {
         if (+updateTo > 0) handler(+updateTo);
 
         handler();
-  })
-}
+      });
+    }
+
+    addHandlerAddBookmark(handler) {
+
+    }
+
 
     render(data) {
         this._data = data;
