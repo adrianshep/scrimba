@@ -2662,3 +2662,10 @@ addHandlerAddBookmark(handler) {
 
 }
 */
+// this will receive a handler function
+// in this case, the controller created a moment ago
+/*
+addHandlerAddBookmark(handler) {
+  this._parentElement.addEventListener('click', function(e) {})
+}
+*/
