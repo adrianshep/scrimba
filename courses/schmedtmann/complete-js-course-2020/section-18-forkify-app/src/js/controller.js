@@ -2669,3 +2669,14 @@ addHandlerAddBookmark(handler) {
   this._parentElement.addEventListener('click', function(e) {})
 }
 */
+// this is necessary because the button with this button bookmark class we're trying to select doesn't exist at the time the application and page are loaded
+// and it's impossible to add an event listener to an element that doesn't exist
+// this is another great use case for event delegation
+// we'll listen for the event on a parent element then try to figure out if the click actually happened on the element we're looking for
+/*
+addHandlerAddBookmark(handler) {
+  this._parentElement.addEventListener('click', function(e) {
+    const btn = e.target.closest('.btn--bookmark');
+  })
+}
+*/
