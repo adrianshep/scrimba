@@ -2690,3 +2690,13 @@ addHandlerAddBookmark(handler) {
   });
 }
 */
+// now, in the controller, we have to call this method:
+/*
+const init = function() {
+  recipeView.addHandlerRender(controlRecipes);
+  recipeView.addHandlerUpdateServings(controlServings);
+  recipeView.addHandlerAddBookmark(controlAddBookmark);
+  recipeView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
+}
+*/
