@@ -2700,3 +2700,5 @@ const init = function() {
   paginationView.addHandlerClick(controlPagination);
 }
 */
+// now we want to go back to our view and say, if bookmarked is true, then render the fill bookmark icon, and if not, then nothing:
+// <use href="${icons}#icon-bookmark${this._data.bookmarked ? '-fill' : '' }"></use>
