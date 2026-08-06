@@ -2702,3 +2702,14 @@ const init = function() {
 */
 // now we want to go back to our view and say, if bookmarked is true, then render the fill bookmark icon, and if not, then nothing:
 // <use href="${icons}#icon-bookmark${this._data.bookmarked ? '-fill' : '' }"></use>
+
+// finally, to make this work, we have to update the entire recipe in the controller
+// this is why we created the update method earlier
+// without it, we'd have to update the entire view
+// with it, we only update the the element that has changed, model.state.recipe:
+/*
+const controlAddBookmark = function() {
+  model.addBookmark(model.state.recipe);
+  recipeView.update(model.state.recipe);
+};
+*/
