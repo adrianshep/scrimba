@@ -2713,3 +2713,11 @@ const controlAddBookmark = function() {
   recipeView.update(model.state.recipe);
 };
 */
+
+// currently in the app, if we create more than one bookmark, the bookmarks will be gone and bookmarked will no longer be set to true
+// as we load each new recipe, it's happening from scratch, loaded from the API
+// we're not loading the recipe from the bookmarks
+// we will now use the data we store in the bookmarks array and the state to mark any recipe we set as bookmarked, if it's already in the bookmarks array
+// in the model, where we have our recipe loading function, we get all this data and store it in the state
+// we can now check if there's already a recipe with the same ID in the bookmarks state
+// if there is, we'll set the current recipe we just loaded from the API as bookmarked true
