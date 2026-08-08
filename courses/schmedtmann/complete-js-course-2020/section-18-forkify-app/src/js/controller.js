@@ -2721,3 +2721,13 @@ const controlAddBookmark = function() {
 // in the model, where we have our recipe loading function, we get all this data and store it in the state
 // we can now check if there's already a recipe with the same ID in the bookmarks state
 // if there is, we'll set the current recipe we just loaded from the API as bookmarked true
+// let's use the some method for arrays which returns true or false, great for doing an if check like this
+// in this case, some means any
+// this method will loop over an array and then return true if any of them has true for the condition we specify here
+// if there's any bookmark which has bookmark.id equal to the id we just received, then we want the current recipe -- which is state.recipe -- to be bookmarked, so bookmark equal to true
+// and otherwise, false
+/*
+if (state.bookmarks.some(bookmark => bookmark.id === id))
+  state.recipe.bookmarked = true;
+else state.recipe.bookmarked = false;
+*/
