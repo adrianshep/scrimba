@@ -2731,3 +2731,8 @@ if (state.bookmarks.some(bookmark => bookmark.id === id))
   state.recipe.bookmarked = true;
 else state.recipe.bookmarked = false;
 */
+
+// when we click on the bookmark button in the app a second time, we want to remove it from the bookmarks
+// we need another method or function in our model that will remove a bookmark, delete the ID of that recipe from the bookmarks array
+// this is a common pattern in programming: adding something, we get the entire set of data; deleting something, we only get the ID
+// export const deleteBookmark = function(id) {}
