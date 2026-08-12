@@ -2736,3 +2736,11 @@ else state.recipe.bookmarked = false;
 // we need another method or function in our model that will remove a bookmark, delete the ID of that recipe from the bookmarks array
 // this is a common pattern in programming: adding something, we get the entire set of data; deleting something, we only get the ID
 // export const deleteBookmark = function(id) {}
+// we want to delete the recipe with that particular ID from the bookmarks array
+// we use the splice method, for which we'll need the index where the element is located in the array, and then how many items we want to delete:
+/*
+export const deleteBookmark = function(id) {
+
+  state.bookmarks.splice(index, 1);
+}
+*/
