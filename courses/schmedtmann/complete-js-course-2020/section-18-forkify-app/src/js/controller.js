@@ -2744,3 +2744,12 @@ export const deleteBookmark = function(id) {
   state.bookmarks.splice(index, 1);
 }
 */
+// we can calculate the index by using our old friend the find index method
+// we're looking for the element whose ID is equal to the ID that's been passed in
+// there will be one bookmark for which that condition is true
+/*
+export const deleteBookmark = function(id) {
+  const index = state.bookmarks.findIndex(el => el.id === id);
+  state.bookmarks.splice(index, 1);
+}
+*/
