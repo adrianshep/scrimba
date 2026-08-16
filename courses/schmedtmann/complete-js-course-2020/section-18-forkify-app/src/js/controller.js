@@ -2753,3 +2753,10 @@ export const deleteBookmark = function(id) {
   state.bookmarks.splice(index, 1);
 }
 */
+// for the element for which this condition is true, its index will be returned
+// we'll then take that index and delete (splice) it from the array
+// finally, let's mark the current recipe as not a bookmark anymore
+/*
+// Mark current recipe as NOT bookmarked
+if (recipe.id === state.recipe.id) state.recipe.bookmarked = false;
+*/
