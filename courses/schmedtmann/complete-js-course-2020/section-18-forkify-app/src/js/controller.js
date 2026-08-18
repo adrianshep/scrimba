@@ -2760,3 +2760,16 @@ export const deleteBookmark = function(id) {
 // Mark current recipe as NOT bookmarked
 if (recipe.id === state.recipe.id) state.recipe.bookmarked = false;
 */
+// now we need to use this function, as always, only in the controller
+// the controlAddBookmark function will be executed whenever we click on the bookmark button
+// we now need to control what exactly should happen in that case
+// when do we want to add a bookmark?
+// only when the recipe is not yet bookmarked
+// if recipe bookmarked is false, then bookmark it
+// if true, delete the bookmark
+/*
+const controlAddBookmark = function() {
+  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+  if (model.state.recipe.bookmarked) model.deleteBookmark(model.state.recipe.id);
+}
+*/
