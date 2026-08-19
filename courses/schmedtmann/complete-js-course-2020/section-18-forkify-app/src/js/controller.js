@@ -2773,3 +2773,8 @@ const controlAddBookmark = function() {
   if (model.state.recipe.bookmarked) model.deleteBookmark(model.state.recipe.id);
 }
 */
+// bug that needs correcting -- should be id instead of recipe.id
+/*
+// Mark current recipe as NOT bookmarked
+if (id === state.recipe.id) state.recipe.bookmarked = false;
+*/
