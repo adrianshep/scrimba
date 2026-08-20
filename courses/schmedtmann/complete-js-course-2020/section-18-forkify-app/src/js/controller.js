@@ -2778,3 +2778,11 @@ const controlAddBookmark = function() {
 // Mark current recipe as NOT bookmarked
 if (id === state.recipe.id) state.recipe.bookmarked = false;
 */
+// code now mistakenly deleting new bookmark
+// correction requires adding else:
+/*
+const controlAddBookmark = function() {
+  if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
+  else model.deleteBookmark(model.state.recipe.id);
+}
+*/
