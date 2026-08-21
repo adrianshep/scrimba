@@ -2786,3 +2786,9 @@ const controlAddBookmark = function() {
   else model.deleteBookmark(model.state.recipe.id);
 }
 */
+
+
+// implement bookmarks 2
+
+// we will finish implementing the bookmarking functionality
+// the only thing still missing is, when we bookmark a recipe, we want that recipe to display in the bookmarks panel
