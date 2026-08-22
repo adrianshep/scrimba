@@ -2792,3 +2792,5 @@ const controlAddBookmark = function() {
 
 // we will finish implementing the bookmarking functionality
 // the only thing still missing is, when we bookmark a recipe, we want that recipe to display in the bookmarks panel
+
+// to create the bookmarks view code, we can copy all the markup code we have in the results view
