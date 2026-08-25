@@ -2794,3 +2794,11 @@ const controlAddBookmark = function() {
 // the only thing still missing is, when we bookmark a recipe, we want that recipe to display in the bookmarks panel
 
 // to create the bookmarks view code, we can copy all the markup code we have in the results view
+// rename class and export BookmarksView
+// we also need to change the parent element, which in this case will be the unordered list called bookmarks_list
+/*
+class BookmarksView extends View {
+    _parentEl = document.querySelector('.bookmarks_list');
+    _errorMessage = 'No recipe found for your query! Please try again ;)';
+    _message = '';
+*/
