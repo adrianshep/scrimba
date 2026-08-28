@@ -3,7 +3,7 @@ import icons from 'url:../../img/icons.svg';
 
 class BookmarksView extends View {
     _parentEl = document.querySelector('.bookmarks_list');
-    _errorMessage = 'No recipe found for your query! Please try again ;)';
+    _errorMessage = 'No bookmarks yet. Find a nice recipe and bookmark it ;)';
     _message = '';
 
     _generateMarkup(result) {
