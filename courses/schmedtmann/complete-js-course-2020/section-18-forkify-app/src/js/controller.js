@@ -2803,3 +2803,5 @@ class BookmarksView extends View {
     _errorMessage = 'No bookmarks yet. Find a nice recipe and bookmark it ;)';
     _message = '';
 */
+// let's now include this in the controller, below import paginationView:
+// import bookmarksView from './view/bookmarksView.js';
