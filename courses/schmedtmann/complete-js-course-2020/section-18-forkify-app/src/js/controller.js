@@ -2805,3 +2805,10 @@ class BookmarksView extends View {
 */
 // let's now include this in the controller, below import paginationView:
 // import bookmarksView from './view/bookmarksView.js';
+// whenever a new bookmark is added, we want to render the bookmarks view with all the bookmarks in the bookmarks array
+// we have this render method and know we can call it on all views
+// we add this under const controlAddBookmark
+/*
+// 3) Render bookmarks
+bookmarksView.render(model.state.bookmarks)
+*/
