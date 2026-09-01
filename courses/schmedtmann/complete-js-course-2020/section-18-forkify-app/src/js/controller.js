@@ -2815,3 +2815,8 @@ bookmarksView.render(model.state.bookmarks)
 // due to a bug -- inability to select a just-bookmarked recipe -- each time we display a recipe, we should update the upper-right bookmarks panel so we can select or highlight the current recipe
 // let's do that in the controlRecipes function, under resultsView.update:
 // bookmarksView.update(model.state.bookmarks);
+
+// we need to fix the fact that resultsView and bookmarksView generate the same markup
+// we will implement a view that is kind of a parent to these two called previewView after the class name "preview"
+// it can then contain all of the methods
+// in the generate markup of previewView, we can the use resultsView and bookmarksView
