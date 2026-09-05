@@ -2820,3 +2820,9 @@ bookmarksView.render(model.state.bookmarks)
 // we will implement a view that is kind of a parent to these two called previewView after the class name "preview"
 // it can then contain all of the methods
 // in the generate markup of previewView, we can the use resultsView and bookmarksView
+// it won't have an error message, nor is the parent element important -- we can set it to an empty string:
+/*
+class PreviewView extends View {
+    _parentEl = '';
+
+*/
