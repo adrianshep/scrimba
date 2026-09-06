@@ -2,9 +2,7 @@ import View from './View.js';
 import icons from 'url:../../img/icons.svg';
 
 class PreviewView extends View {
-    _parentEl = document.querySelector('.results');
-    _errorMessage = 'No recipe found for your query! Please try again ;)';
-    _message = '';
+    _parentEl = '';
 
     _generateMarkup(result) {
         return this._data.map().join('');
