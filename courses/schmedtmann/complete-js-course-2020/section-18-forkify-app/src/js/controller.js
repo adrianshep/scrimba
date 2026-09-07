@@ -2826,3 +2826,8 @@ class PreviewView extends View {
     _parentEl = '';
 
 */
+// remove this markup as we don't need any of it:
+/*     _generateMarkup(result) {
+        return this._data.map().join('');
+    }
+*/
