@@ -3,9 +3,6 @@ import icons from 'url:../../img/icons.svg';
 
 class PreviewView extends View {
     _parentEl = '';
-
-    _generateMarkup(result) {
-        return this._data.map().join('');
     }
 
     _generateMarkupPreview(result) {
