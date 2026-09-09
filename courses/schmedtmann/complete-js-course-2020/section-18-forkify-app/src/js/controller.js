@@ -2831,3 +2831,4 @@ class PreviewView extends View {
         return this._data.map().join('');
     }
 */
+// the preview view will only generate the markup for one of these preview elements
