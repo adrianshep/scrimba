@@ -2832,3 +2832,10 @@ class PreviewView extends View {
     }
 */
 // the preview view will only generate the markup for one of these preview elements
+// in bookmarks view, we now get rid of this method:
+/*
+_generateMarkupPreview(result) {
+...
+  `:
+}
+*/
