@@ -2839,3 +2839,7 @@ _generateMarkupPreview(result) {
   `:
 }
 */
+// now here comes the magic
+// we'll use the previewView as a kind of child view of the bookmarksView and resultsView
+// we'll import previewView below import View:
+// import previewView from './previewView.js';
