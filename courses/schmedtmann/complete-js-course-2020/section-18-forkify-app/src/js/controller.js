@@ -2843,3 +2843,8 @@ _generateMarkupPreview(result) {
 // we'll use the previewView as a kind of child view of the bookmarksView and resultsView
 // we'll import previewView below import View:
 // import previewView from './previewView.js';
+// as the render method on bookmarksView is called, it will set the data on the bookmarksView and then generate the markup
+// when it calls the generateMarkup method in bookmarksView, it will get access to this._data, which we will then map over
+// for each bookmark, we'll then want to render a preview
+// however, we actually need to return a string from the generateMarkup method
+// so that in the view, it can insert that markup into the DOM
