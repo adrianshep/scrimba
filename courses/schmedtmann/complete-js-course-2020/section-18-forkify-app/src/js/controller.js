@@ -2848,3 +2848,6 @@ _generateMarkupPreview(result) {
 // for each bookmark, we'll then want to render a preview
 // however, we actually need to return a string from the generateMarkup method
 // so that in the view, it can insert that markup into the DOM
+// however, by having render in bookmarksView, preview.js, previewView.js will try to render some markup, so that's not going to work
+// in View.js, we will add a second parameter to render called render which by default will be set to true
+// render(data, render = true)
