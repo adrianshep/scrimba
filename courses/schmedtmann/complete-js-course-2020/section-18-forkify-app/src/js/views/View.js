@@ -2,6 +2,11 @@ import icons from 'url:../../img/icons.svg';
 // search results 2: import icons into View
 export default class View {
     _data;
+
+    render(data, render = true) {
+      if (!data || (Array.isArray(data) && data.length === 0))
+        return this.renderError();
+    }
     
     update(data) {
       this._data = data;
