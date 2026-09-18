@@ -2851,3 +2851,8 @@ _generateMarkupPreview(result) {
 // however, by having render in bookmarksView, preview.js, previewView.js will try to render some markup, so that's not going to work
 // in View.js, we will add a second parameter to render called render which by default will be set to true
 // render(data, render = true)
+// if render is true, all stays the same
+// if render is false, which we're about to set up, we will return the markup that was just generated
+// why don't we simply call generate markup itself without messing with the whole render method?
+// because we still need to set the data property to the data we passed in in the previewView
+// then, in previewView, we can the this kw
