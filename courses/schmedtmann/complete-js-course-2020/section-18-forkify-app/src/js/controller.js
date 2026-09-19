@@ -2855,4 +2855,5 @@ _generateMarkupPreview(result) {
 // if render is false, which we're about to set up, we will return the markup that was just generated
 // why don't we simply call generate markup itself without messing with the whole render method?
 // because we still need to set the data property to the data we passed in in the previewView
-// then, in previewView, we can the this kw
+// then, in previewView, we can use the this kw
+// in previewView, we need to replace resut with this._data
