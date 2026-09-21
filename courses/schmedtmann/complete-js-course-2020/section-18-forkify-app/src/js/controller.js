@@ -2856,4 +2856,9 @@ _generateMarkupPreview(result) {
 // why don't we simply call generate markup itself without messing with the whole render method?
 // because we still need to set the data property to the data we passed in in the previewView
 // then, in previewView, we can use the this kw
-// in previewView, we need to replace resut with this._data
+// in previewView, we need to replace result with this._data
+// and in bookmarksView we want to render it and set the render parameter to false
+/*
+    _generateMarkup(result) {
+        return this._data.map(bookmark => previewView.reader(bookmark, false)).join('');
+*/
