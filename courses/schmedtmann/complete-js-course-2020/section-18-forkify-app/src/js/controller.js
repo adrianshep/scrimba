@@ -2862,3 +2862,5 @@ _generateMarkupPreview(result) {
     _generateMarkup(result) {
         return this._data.map(bookmark => previewView.reader(bookmark, false)).join('');
 */
+// in View, this code will be triggered by the false render parameter:
+// if (!render) return markup;
