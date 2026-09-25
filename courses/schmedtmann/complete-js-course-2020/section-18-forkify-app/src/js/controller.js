@@ -2864,3 +2864,7 @@ _generateMarkupPreview(result) {
 */
 // in View, this code will be triggered by the false render parameter:
 // if (!render) return markup;
+
+// then, all the _generateMarkup() code in bookmarksView will become a string
+// in the end, we'll end up with an array of strings
+// because off map, we then join all off those strings together and end up with a big string with all the markup we want to render
