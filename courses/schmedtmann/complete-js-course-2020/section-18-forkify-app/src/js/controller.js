@@ -2868,3 +2868,10 @@ _generateMarkupPreview(result) {
 // then, all the _generateMarkup() code in bookmarksView will become a string
 // in the end, we'll end up with an array of strings
 // because off map, we then join all off those strings together and end up with a big string with all the markup we want to render
+
+// we need to copy the code from bookmarksView and put it in resultsView:
+/*
+    _generateMarkup(result) {
+        return this._data.map(bookmark => previewView.reader(bookmark, false)).join('');
+    }
+*/
