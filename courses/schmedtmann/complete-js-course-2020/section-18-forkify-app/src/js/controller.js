@@ -2875,3 +2875,9 @@ _generateMarkupPreview(result) {
         return this._data.map(bookmark => previewView.reader(bookmark, false)).join('');
     }
 */
+// change bookmark to result in new code
+/*
+    _generateMarkup(result) {
+        return this._data.map(result => previewView.reader(result, false)).join('');
+    }
+*/
