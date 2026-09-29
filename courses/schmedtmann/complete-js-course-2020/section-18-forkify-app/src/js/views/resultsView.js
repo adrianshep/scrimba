@@ -7,7 +7,7 @@ class ResultsView extends View {
     _message = '';
 
     _generateMarkup(result) {
-        return this._data.map(bookmark => previewView.reader(bookmark, false)).join('');
+        return this._data.map(result => previewView.reader(result, false)).join('');
     }
 }
 
