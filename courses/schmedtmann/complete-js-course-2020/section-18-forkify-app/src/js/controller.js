@@ -2881,3 +2881,5 @@ _generateMarkupPreview(result) {
         return this._data.map(result => previewView.reader(result, false)).join('');
     }
 */
+// import previewView from bookmarksView into resultsView, below View:
+// import previewView from './previewView.js';
