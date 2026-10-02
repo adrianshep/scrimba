@@ -2883,3 +2883,8 @@ _generateMarkupPreview(result) {
 */
 // import previewView from bookmarksView into resultsView, below View:
 // import previewView from './previewView.js';
+
+// now these two views, resultsView and bookmarksView, are essentially the same thing
+// the only difference is that they have different parent elements and different error messages
+// their main functionality, the way they generate the markup, is essentially the same for both
+// in order to encapsulate that, we created another chid class in previeView
