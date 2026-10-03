@@ -2888,3 +2888,8 @@ _generateMarkupPreview(result) {
 // the only difference is that they have different parent elements and different error messages
 // their main functionality, the way they generate the markup, is essentially the same for both
 // in order to encapsulate that, we created another chid class in previeView
+
+// to finish the bookmarks, we want them to persist between page loads
+// right now, when a page is reloaded, any bookmark that was set up disappears entirely
+// in the next section, we'll be entering our bookmarks data in local storage
+// then, as we load the page, we'll be getting that data back
