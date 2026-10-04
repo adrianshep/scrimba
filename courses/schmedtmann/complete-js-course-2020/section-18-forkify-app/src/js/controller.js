@@ -2893,3 +2893,15 @@ _generateMarkupPreview(result) {
 // right now, when a page is reloaded, any bookmark that was set up disappears entirely
 // in the next section, we'll be entering our bookmarks data in local storage
 // then, as we load the page, we'll be getting that data back
+// to finish the bookmarks, we want them to persist between page loads
+// right now, when a page is reloaded, any bookmark that was set up disappears entirely
+// in the next lecture, we'll be entering our bookmarks data in local storage
+// then, as we load the page, we'll be getting that data back
+
+// Storing Bookmarks with Local Storage
+
+// in this lecture, we'll make the bookmarks data persist across page loads
+// for that we're going to use local storage
+// when should bookmarks be stored?
+// whenever a user bookmarks or unbookmarks a recipe
+// in either case, the current bookmarks array needs to be store locally
