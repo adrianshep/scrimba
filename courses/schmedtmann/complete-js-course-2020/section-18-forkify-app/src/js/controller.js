@@ -2905,3 +2905,15 @@ _generateMarkupPreview(result) {
 // when should bookmarks be stored?
 // whenever a user bookmarks or unbookmarks a recipe
 // in either case, the current bookmarks array needs to be store locally
+
+// in model, let's add a function which we can then call on these two functions
+// we don't need to export this one as we simply call it in the other two functions
+// we call it persistBookmarks
+// we give the item the name 'bookmarks'
+// we need to set a string calling it JSON.stringify
+// the object we want to convert to a string is state.bookmarks
+/*
+const persistBookmarks = function() {
+  localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
+}
+*/
