@@ -2917,3 +2917,6 @@ const persistBookmarks = function() {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 }
 */
+
+// now we call this function in these two places:
+// persistBookmarks();
