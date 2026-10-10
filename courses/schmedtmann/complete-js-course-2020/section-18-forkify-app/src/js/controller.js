@@ -2920,3 +2920,13 @@ const persistBookmarks = function() {
 
 // now we call this function in these two places:
 // persistBookmarks();
+
+// with bookmarks data in local storage, that doesn't mean it will magically show up in the application -- we haven't written any of that code yet
+// when the page gets loaded, we want to run a method that renders the bookmarks
+// the first step is getting the bookmarks out of local storage and into our code
+// we'll write an initialization function in model:
+/*
+const init = function() {
+  localStorage.getItem('bookmarks')
+}
+*/
