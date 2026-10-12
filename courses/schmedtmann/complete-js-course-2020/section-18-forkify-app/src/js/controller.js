@@ -2930,3 +2930,13 @@ const init = function() {
   localStorage.getItem('bookmarks')
 }
 */
+
+// then we need to store that somewhere
+// we don't want to store it directly in our state because this data may not be defined -- we may have nothing in storage
+// so only if there is storage do we want state.bookmarks to be JSON.parse to conver the string back to an object
+/*
+const init = function() {
+  const storage = localStorage.getItem('bookmarks');
+  if (storage) state.bookmarks = JSON.parse(storage);
+};
+*/
