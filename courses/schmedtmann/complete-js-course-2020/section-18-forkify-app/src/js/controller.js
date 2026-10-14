@@ -2940,3 +2940,10 @@ const init = function() {
   if (storage) state.bookmarks = JSON.parse(storage);
 };
 */
+
+// to remove a bug that is happening here, we need to add this code to bookmarksView after class BookmarkView extends View:
+/*
+addHandlerRender(handler) {
+  window.addEventListener('load', handler);
+}
+*/
