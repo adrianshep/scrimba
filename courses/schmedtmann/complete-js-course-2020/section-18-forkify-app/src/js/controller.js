@@ -2947,3 +2947,10 @@ addHandlerRender(handler) {
   window.addEventListener('load', handler);
 }
 */
+
+// at the bottom of controller, let's create the handler function:
+/*
+const controlBookmarks = function() {
+  bookmarksView.render(model.state.bookmarks)
+}
+*/
