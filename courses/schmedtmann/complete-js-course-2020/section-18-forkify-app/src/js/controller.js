@@ -2954,3 +2954,6 @@ const controlBookmarks = function() {
   bookmarksView.render(model.state.bookmarks)
 }
 */
+
+// now we add this at the top of const init:
+// bookmarksView.addHandlerRender(controlBookmarks);
