@@ -2957,3 +2957,12 @@ const controlBookmarks = function() {
 
 // now we add this at the top of const init:
 // bookmarksView.addHandlerRender(controlBookmarks);
+
+// finally, in model, let's add a quick function for debugging
+// clearBookmarks, which, during development, will do just that:
+/*
+const clearBookmarks = function() {
+  localStorage.clear('bookmarks');
+};
+clearBookmarks();
+*/
