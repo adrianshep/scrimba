@@ -2966,3 +2966,5 @@ const clearBookmarks = function() {
 };
 clearBookmarks();
 */
+
+// to run clearBookmarks successfully, init() needs to be commented out first
