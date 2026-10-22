@@ -2968,3 +2968,11 @@ clearBookmarks();
 */
 
 // to run clearBookmarks successfully, init() needs to be commented out first
+
+
+// Project Planning III
+
+// let's discuss our next step in implementing this project
+// at this point, we've implemented all the features from steps one through seven
+// only steps eight, nine, and 10 are left to complete
+// they are all about the user being able to upload their own recipes
