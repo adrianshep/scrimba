@@ -2976,3 +2976,9 @@ clearBookmarks();
 // at this point, we've implemented all the features from steps one through seven
 // only steps eight, nine, and 10 are left to complete
 // they are all about the user being able to upload their own recipes
+// whenever the user clicks the ad recipe button that's in the menu bar, we want to display a recipe editor
+// like a model window containing a form which will pop up
+// on that form we'll have to bind an event handler
+// when the use submits that form to create a new recipe, we want to asynchronously upload it to the API
+// we also want to render that recipe and add it to the user's bookmarks
+// finally, all this will be set up so that only the user that uploaded a recipe will be able to see it -- that recipe will belong to that user
