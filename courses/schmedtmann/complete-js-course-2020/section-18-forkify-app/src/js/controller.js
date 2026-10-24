@@ -2982,3 +2982,9 @@ clearBookmarks();
 // when the use submits that form to create a new recipe, we want to asynchronously upload it to the API
 // we also want to render that recipe and add it to the user's bookmarks
 // finally, all this will be set up so that only the user that uploaded a recipe will be able to see it -- that recipe will belong to that user
+
+// Uploading a New Recipe - Part 1
+
+// let's start with feature that uploads a new recipe and the ability to open the model window which contains the form for adding the new recipe
+// in the demo version, we click add recipe which opens the form
+// then we click the x or outside the form to close that window
