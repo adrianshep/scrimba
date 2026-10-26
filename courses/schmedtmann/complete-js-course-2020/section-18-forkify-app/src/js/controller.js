@@ -2988,3 +2988,5 @@ clearBookmarks();
 // let's start with feature that uploads a new recipe and the ability to open the model window which contains the form for adding the new recipe
 // in the demo version, we click add recipe which opens the form
 // then we click the x or outside the form to close that window
+
+// copy and paste code from paginationView.js into addRecipeView.js to edit
