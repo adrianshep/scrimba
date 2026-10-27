@@ -2990,3 +2990,15 @@ clearBookmarks();
 // then we click the x or outside the form to close that window
 
 // copy and paste code from paginationView.js into addRecipeView.js to edit
+// edit code:
+/*
+import View from './View.js';
+import icons from 'url:../../img/icons.svg';
+
+class AddRecipeView extends View {
+    _parentElement = document.querySelector('.pagination');
+
+    _generateMarkup() {}
+}
+export default new AddRecipeView();
+*/
