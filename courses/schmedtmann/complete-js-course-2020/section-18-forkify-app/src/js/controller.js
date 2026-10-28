@@ -3002,3 +3002,8 @@ class AddRecipeView extends View {
 }
 export default new AddRecipeView();
 */
+
+// this view will be different from the other views because we already have the HTML for it in index.html
+// the form we want to display is already in index.html
+// so showing the window and the overlay will be as simple as removing the hidden class from both of these elements
+// the main element in which we're interested is the upload element
