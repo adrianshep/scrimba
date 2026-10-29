@@ -3007,3 +3007,11 @@ export default new AddRecipeView();
 // the form we want to display is already in index.html
 // so showing the window and the overlay will be as simple as removing the hidden class from both of these elements
 // the main element in which we're interested is the upload element
+// let's make it the parent element of AddRecipeView:
+/*
+class AddRecipeView extends View {
+    _parentElement = document.querySelector('.upload');
+
+    _generateMarkup() {}
+}
+*/
