@@ -6035,3 +6035,7 @@ class AddRecipeView extends View {
 */
 // add '.add-recipe-window' as selector
 // add '.overlay' as selector
+
+// now we need the button to click to open the window the button to click to close it
+// the button to open the window we grab from index.html:
+// _btnOpen = document.querySelector('.nave__btn--add-recipe');
