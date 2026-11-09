@@ -6,9 +6,10 @@ class AddRecipeView extends View {
 
     _window = document.querySelector('.add-recipe-window');
     _overlay = document.querySelector('.overlay');
-    _btnOpen = document.querySelector('.nave__btn--add-recipe');
+    _btnOpen = document.querySelector('.nav__btn--add-recipe');
+    _btnClose = document.querySelector('.btn--close-modal');
 
     _generateMarkup() {}
 }
 
-export default new AddRecipeView();
+export default new AddRecipeView(); 
