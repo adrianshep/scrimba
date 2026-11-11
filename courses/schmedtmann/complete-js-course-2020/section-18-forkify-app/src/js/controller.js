@@ -6041,3 +6041,9 @@ class AddRecipeView extends View {
 // _btnOpen = document.querySelector('.nav__btn--add-recipe');
 // then the button to close the window:
 // _btnClose = document.querySelector('.btn--close-modal'); 
+
+// now let's listen for the events of the open and close buttons being clicked
+// as always, we'll do that in a method called addHandler something, in this case:
+/*
+addHandlerShowWindow() {}
+*/
