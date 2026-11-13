@@ -6047,3 +6047,10 @@ class AddRecipeView extends View {
 /*
 addHandlerShowWindow() {}
 */
+
+// here we will want to select the button off a click:
+/*
+addHandlerShowWindow() {
+  this._btnOpen.addEventListener('click', function() {})
+}
+*/
