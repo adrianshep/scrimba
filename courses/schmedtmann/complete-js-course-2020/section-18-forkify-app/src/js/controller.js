@@ -6054,3 +6054,18 @@ addHandlerShowWindow() {
   this._btnOpen.addEventListener('click', function() {})
 }
 */
+
+// when the click happens, what do we want to do?
+// we want to take the overlay in the window and remove the hidden class
+// so that's this.overlay.classList.rem
+// however, instead of .rem to remove, we can also use toggle
+// toggle will add the class if it isn't there and will remove the class if it is there
+// this will make it a lot easier to reuse this class
+/*
+addHandlerShowWindow() {
+  this._btnOpen.addEventListener('click', function() {
+    this._overlay.classList.toggle('hidden');
+    this._window.classList.toggle('hidden');
+  });
+}
+*/
