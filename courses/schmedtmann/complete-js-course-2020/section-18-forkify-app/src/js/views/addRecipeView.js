@@ -10,8 +10,11 @@ class AddRecipeView extends View {
     _btnClose = document.querySelector('.btn--close-modal');
 
     addHandlerShowWindow() {
-        this._btnOpen.addEventListener('click', function() {})
-}
+        this._btnOpen.addEventListener('click', function() {
+            this._overlay.classList.toggle('hidden');
+            this._window.classList.toggle('hidden');
+        });
+    }
 
     _generateMarkup() {}
 }
