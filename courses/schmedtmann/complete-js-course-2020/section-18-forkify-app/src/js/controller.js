@@ -6072,5 +6072,12 @@ addHandlerShowWindow() {
 
 // we want this to be called as soon as the page loads
 // in this case, this has nothing to do with any controller because there is nothing special happening here that the controller needs to tell us about
-// when this this click happens on the button open, the window will show
+// when this click happens on the button open, the window will show
 // the controller doesn't need to be involved in any of this and therefore we can run this funciton as soon as this object is created
+// so we're going to add a constructor method
+// since this is a child class, we need to start by calling super
+/*
+constructor() {
+  super();
+}
+*/
