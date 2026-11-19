@@ -6081,3 +6081,12 @@ constructor() {
   super();
 }
 */
+// only after that can we use the this kw
+// then this.addHandlerShow Window
+// this is only going to be used inside of this class, so let's add an underscore to mark it as protected:
+/*
+constructor() {
+  super();
+  this._addHandlerShow Window();
+}
+*/
