@@ -11,6 +11,7 @@ class AddRecipeView extends View {
 
     constructor() {
         super();
+        this._addHandlerShow Window();
     }
 
     addHandlerShowWindow() {
