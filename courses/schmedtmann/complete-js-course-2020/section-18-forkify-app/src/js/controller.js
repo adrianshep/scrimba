@@ -6090,3 +6090,6 @@ constructor() {
   this._addHandlerShow Window();
 }
 */
+// while the controller does not have any role in showing this window directly, we still have to import the addRecipeView object at the top of its code
+// otherwise, this object will never be created:
+// import addRecipeView from './views/addRecipeView.js';
