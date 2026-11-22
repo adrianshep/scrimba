@@ -6093,3 +6093,8 @@ constructor() {
 // while the controller does not have any role in showing this window directly, we still have to import the addRecipeView object at the top of its code
 // otherwise, this object will never be created:
 // import addRecipeView from './views/addRecipeView.js';
+// reloading, we get a class list undefined -- a bug
+// the error is that we're using the this kw inside of a handler
+// the this kw inside of a handler function points to the element to which that listener is attached
+// in this case, btnOpen
+// let's export the entire addEventListener function into another method calling it with the correct this kw bound to it
