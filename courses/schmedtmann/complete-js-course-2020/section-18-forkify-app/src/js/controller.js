@@ -6098,3 +6098,11 @@ constructor() {
 // the this kw inside of a handler function points to the element to which that listener is attached
 // in this case, btnOpen
 // let's export the entire addEventListener function into another method calling it with the correct this kw bound to it
+// we want to call this toggleWindow()
+// the this below points to the current object because, otherwise, the this kws inside of this function would be the button to which the event listener is attached
+/*
+toggleWindow() {
+  this._overlay.classList.toggle('hidden');
+  this._window.classList.toggle('hidden');
+}
+*/
