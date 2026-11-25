@@ -6106,3 +6106,10 @@ toggleWindow() {
   this._window.classList.toggle('hidden');
 }
 */
+// now all we have to do is to close that form when we click this button or click outside the window
+/*
+_addHandlerHideWindow() {
+  this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
+  this._overlay.addEventListener('click', this.toggleWindow.bind(this));
+}
+*/
