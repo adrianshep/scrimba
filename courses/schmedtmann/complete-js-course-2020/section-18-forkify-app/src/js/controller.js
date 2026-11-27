@@ -6113,3 +6113,15 @@ _addHandlerHideWindow() {
   this._overlay.addEventListener('click', this.toggleWindow.bind(this));
 }
 */
+
+// next, let's handle the upload button on the form
+// when we click it, we need to get all the data out of the form
+// the data that's already filling it comes from the the HTML as a preset for developing purposes
+// let's create a method to handle the click on that button which is the form submission
+// we'll listen or an even right on the parent element which is the upload itself
+/*
+addHandlerUpload() {
+  this._parentElement.addEventListener('submit', function() {})
+}
+*/
+// by the end, we'll remove it
